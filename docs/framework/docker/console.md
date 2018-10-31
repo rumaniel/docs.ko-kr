@@ -4,12 +4,12 @@ description: 기존 .NET Framework 콘솔 응용 프로그램을 가져와 Windo
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: f5a38ac63db969a58e920ea79bf4bf10bcfcf64f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bf21357efc234ea99836b190ce34c70f2644ea6a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193332"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200576"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>Windows 컨테이너에서 콘솔 응용 프로그램 실행
 
@@ -46,7 +46,7 @@ Docker 사이트에서 [Docker 개요](https://docs.docker.com/engine/understand
 Windows 컨테이너는 [Windows 10 1주년 업데이트](https://www.microsoft.com/en-us/software-download/windows10/) 또는 [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server)에서 지원됩니다.
 
 > [!NOTE]
->Windows Server 2016을 사용하는 경우 Windows용 Docker 설치 관리자에서 해당 기능을 사용하도록 설정되지 않기에, 수동으로 컨테이너를 사용하도록 설정해야 합니다. OS에 대한 업데이트가 모두 실행되었는지 확인한 다음 [컨테이너 호스트 배포](https://msdn.microsoft.com/virtualization/windowscontainers/deployment/deployment) 문서의 지침에 따라 컨테이너 및 Docker 기능을 설치합니다.
+>Windows Server 2016을 사용하는 경우 Windows용 Docker 설치 관리자에서 해당 기능을 사용하도록 설정되지 않기에, 수동으로 컨테이너를 사용하도록 설정해야 합니다. OS에 대한 업데이트가 모두 실행되었는지 확인한 다음 [컨테이너 호스트 배포](/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server) 문서의 지침에 따라 컨테이너 및 Docker 기능을 설치합니다.
 
 Windows 컨테이너를 지원하려면 Windows용 Docker 버전 1.12 베타 26 이상이 있어야 합니다. 기본적으로 Docker는 Linux 기반 컨테이너를 사용합니다. 시스템 트레이에서 Docker 아이콘을 마우스 오른쪽 단추로 클릭하고 **Windows 컨테이너로 전환**을 선택하여 Windows 컨테이너로 전환합니다. Docker에서 변경 프로세스가 실행되며 다시 시작해야 할 수도 있습니다.
 

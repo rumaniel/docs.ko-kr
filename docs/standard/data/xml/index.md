@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f286d0f64478bfc46ca207086e4a6b918ee47b5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b5c774d566766936ebe043f264040ce26b8e9e3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33576092"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202961"
 ---
 # <a name="xml-documents-and-data"></a>XML 문서 및 데이터
 .NET Framework에서 XML 인식 응용 프로그램을 쉽게 작성할 수 있도록 하는 종합적이고 통합된 클래스 집합을 제공합니다. 다음 네임스페이스의 클래스에서는 XML 구문 분석 및 작성, 메모리에서의 XML 데이터 편집, 데이터 유효성 검사 및 XSLT 변형을 지원합니다.  
@@ -35,7 +35,7 @@ ms.locfileid: "33576092"
   
 -   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> 클래스의 스키마는 [W3C XML 스키마 1장: 구조](https://www.w3.org/TR/xmlschema-1/) 및 [XML 스키마 2장: 데이터 형식](https://www.w3.org/TR/xmlschema-2/) 권장 사항을 지원합니다.  
   
--   <xref:System.Xml.Xsl?displayProperty=nameWithType> 네임스페이스의 클래스는 [W3C XSLT 1.0](http://www.w3.org/TR/xslt) 권장 사항을 준수하는 XSLT 변환을 지원합니다.  
+-   <xref:System.Xml.Xsl?displayProperty=nameWithType> 네임스페이스의 클래스는 [W3C XSLT 1.0](https://www.w3.org/TR/xslt) 권장 사항을 준수하는 XSLT 변환을 지원합니다.  
   
  .NET Framework의 XML 클래스는 다음과 같은 이점을 제공합니다.  
   
@@ -43,11 +43,11 @@ ms.locfileid: "33576092"
   
 -   **확장성** .NET Framework의 XML 클래스는 추상 기본 클래스와 가상 메서드를 사용하여 확장 가능합니다. 예를 들어, 캐시 스트림을 로컬 디스크에 저장하는 <xref:System.Xml.XmlUrlResolver> 클래스의 파생 클래스를 만들 수 있습니다.  
   
--   **플러그형 아키텍처** .NET Framework는 구성 요소를 서로 이용할 수 있고, 구성 요소 간에 데이터를 스트리밍할 수 있는 아키텍처를 제공합니다. 예를 들어 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체와 같은 데이터 저장소는 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 변환할 수 있고, 출력이 다른 저장소로 스트리밍되거나 웹 서비스에서 스트림으로 반환됩니다.  
+-   **플러그형 아키텍처** .NET Framework는 구성 요소를 서로 이용할 수 있고, 구성 요소 간에 데이터를 스트리밍할 수 있는 아키텍처를 제공합니다. 예를 들어 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체와 같은 데이터 저장소는 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 변형할 수 있고, 출력이 다른 저장소로 스트리밍되거나 웹 서비스에서 스트림으로 반환됩니다.  
   
 -   **성능.** 응용 프로그램 성능 개선을 위해 .NET Framework의 일부 XML 클래스는 다음과 같은 특징을 가진 스트리밍 기반 모델을 지원합니다.  
   
-    -   앞으로만 이동 가능한 풀 모델 구문 분석을 위한 최소 캐시(<xref:System.Xml.XmlReader>)  
+    -   앞으로만 이동 가능한 끌어오기 모델 구문 분석을 위한 최소 캐시(<xref:System.Xml.XmlReader>)  
   
     -   앞으로만 이동 가능한 유효성 검사(<xref:System.Xml.XmlReader>)  
   

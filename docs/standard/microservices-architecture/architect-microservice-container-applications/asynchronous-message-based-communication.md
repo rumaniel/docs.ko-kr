@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: 5fb5d2f9f4f63ee885752a5dcc45cc45f71dc32f
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 865966a70f18c9023e4c733d82ea90aba9478753
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106410"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50135377"
 ---
 # <a name="asynchronous-message-based-communication"></a>비동기 메시지 기반 통신
 
@@ -19,7 +19,7 @@ ms.locfileid: "37106410"
 
 메시지는 헤더(식별 또는 보안 정보 같은 메타데이터)와 본문으로 구성됩니다. 메시지는 일반적으로 AMQP 같은 비동기 프로토콜을 통해 전송됩니다.
 
-마이크로 서비스 커뮤니티에서의 이러한 유형의 통신을 위해 선호하는 인프라는 SOA에 사용되는 오케스트레이터 및 대형 브로커와는 다른 간단한 메시지 브로커입니다. 간단한 메시지 브로커의 인프라를 일반적으로 "단순," RabbitMQ 또는 Azure 서비스 버스 클라우드의에서 확장 가능한 서비스 버스와 같은 간단한 구현과 함께 메시지 브로커를 으로만 작동 합니다. 이 시나리오에서 대부분의 "스마트"한 생각은 메시지를 생산하고 소모하는 끝점 곧 마이크로 서비스에 여전히 존재합니다.
+마이크로 서비스 커뮤니티에서의 이러한 유형의 통신을 위해 선호하는 인프라는 SOA에 사용되는 오케스트레이터 및 대형 브로커와는 다른 간단한 메시지 브로커입니다. 간단한 메시지 브로커의 인프라를 일반적으로 "단순," RabbitMQ 또는 Azure 서비스 버스 클라우드의에서 확장 가능한 서비스 버스와 같은 간단한 구현과 함께 메시지 브로커를 으로만 작동 합니다. 이 시나리오에서 대부분의 "스마트"한 생각은 메시지를 생산하고 소모하는 엔드포인트 곧 마이크로 서비스에 여전히 존재합니다.
 
 가능한 한 준수하려고 노력해야 하는 또 다른 규칙은 내부 서비스 간에 비동기 메시징만을 사용하고 또한 클라이언트 앱에서 프런트 엔드 서비스(API 게이트웨이 + 첫 번째 수준의 마이크로 서비스)까지만 동기 통신(HTTP 같은)을 사용하는 것입니다.
 
@@ -89,7 +89,7 @@ ms.locfileid: "37106410"
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 -   **게시/구독 채널**
-    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **Udi Dahan. 명확한 CQRS**
     [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)

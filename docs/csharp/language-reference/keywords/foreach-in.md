@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: d84c68eb102d55b31ba20a6b6b5c01b96963924d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 675e6b7fa925fe1822c2fc321d79afd13b5e4c51
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524251"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347685"
 ---
 # <a name="foreach-in-c-reference"></a>foreach, in(C# 참조)
 
@@ -47,7 +47,7 @@ C# 7.3부터는 열거자의 `Current` 속성이 [참조 반환 값](../../progr
 
 ## <a name="see-also"></a>참고 항목
 
-- [foreach 문(C# 언어 사)](/dotnet/csharp/language-reference/language-specification/statements#the-foreach-statement)
+- [foreach 문(C# 언어 사)](~/_csharplang/spec/statements.md#the-foreach-statement)
 - [배열에 foreach 사용](../../programming-guide/arrays/using-foreach-with-arrays.md)
 - [for](for.md)
 - [반복 문](iteration-statements.md)

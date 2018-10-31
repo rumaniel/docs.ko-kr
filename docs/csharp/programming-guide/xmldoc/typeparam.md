@@ -8,11 +8,11 @@ helpviewer_keywords:
 - typeparam C# XML tag
 ms.assetid: 9b99d400-e911-4e55-99c6-64367c96aa4f
 ms.openlocfilehash: ec19060008c1c06c54c89dbddee7d24001bcdebc
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47207511"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187116"
 ---
 # <a name="lttypeparamgt-c-programming-guide"></a>&lt;typeparam&gt;(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  

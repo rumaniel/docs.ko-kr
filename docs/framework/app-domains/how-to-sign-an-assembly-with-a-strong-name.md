@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2c30799a-a826-46b4-a25d-c584027a6c67
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45f8ad3bd9226ffd821fc792cdd4d0a6dac1a414
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 5d46694d772aed7e92f95cc26da86985d4f8b0ff
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744631"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50191066"
 ---
 # <a name="how-to-sign-an-assembly-with-a-strong-name"></a>방법: 강력한 이름으로 어셈블리 서명
 강력한 이름으로 어셈블리에 서명하는 여러 가지 방법이 있습니다.  
@@ -98,9 +98,9 @@ al /out:MyAssembly.dll MyModule.netmodule /keyfile:sgKey.snk
     ```  
   
 ## <a name="see-also"></a>참고 항목  
- [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
- [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
- [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
- [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)  
- [어셈블리 및 매니페스트 서명 관리](/visualstudio/ide/managing-assembly-and-manifest-signing)  
- [프로젝트 디자이너, 서명 페이지](https://msdn.microsoft.com/library/0k50fs3b)
+- [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)  
+- [방법: 공개/개인 키 쌍 만들기](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)  
+- [Al.exe(어셈블리 링커)](../../../docs/framework/tools/al-exe-assembly-linker.md)  
+- [어셈블리 서명 연기](../../../docs/framework/app-domains/delay-sign-assembly.md)  
+- [어셈블리 및 매니페스트 서명 관리](/visualstudio/ide/managing-assembly-and-manifest-signing)  
+- [프로젝트 디자이너, 서명 페이지](/visualstudio/ide/reference/signing-page-project-designer)

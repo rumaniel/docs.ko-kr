@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd6f14f89d143edd03f8b5d028ec84315b2f2e97
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 5e91441f593b7533026d5980f8cf39fb5a3d5b71
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47203292"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193073"
 ---
 # <a name="how-to-load-assemblies-into-an-application-domain"></a>방법: 응용 프로그램 도메인에 어셈블리 로드
 응용 프로그램 도메인에 어셈블리를 로드하는 방법에는 여러 가지가 있습니다. <xref:System.Reflection.Assembly?displayProperty=nameWithType> 클래스의 `static`(Visual Basic에서는 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 메서드를 사용하는 것이 좋습니다. 어셈블리를 로드할 수 있는 다른 방법은 다음과 같습니다.  
@@ -47,9 +47,9 @@ ms.locfileid: "47203292"
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
- [응용 프로그램 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)  
- [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)  
- [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)  
- [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
- [응용 프로그램 도메인 및 어셈블리](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)
+- <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>  
+- [응용 프로그램 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)  
+- [리플렉션](../../../docs/framework/reflection-and-codedom/reflection.md)  
+- [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)  
+- [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)  
+- [응용 프로그램 도메인 및 어셈블리](https://msdn.microsoft.com/library/433b04ae-4ba8-4849-9dbd-79194f240346)

@@ -4,12 +4,12 @@ description: 리프트 앤 시프트 및 Azure 클라우드 및이 전자책을 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: b8c293730b0921924584359ffad32efd2b83a19b
-ms.sourcegitcommit: dfc8aa44246a97f4611cc441d9ef71b03cc31260
+ms.openlocfilehash: 0cfb052daa41264ae00d48906477eae99ea159d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49413941"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200087"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure 클라우드 및 Windows 컨테이너를 사용 하 여 기존.NET 응용 프로그램 현대화 (2 판)
 
@@ -25,7 +25,7 @@ Copyright © 2018 by Microsoft Corporation
 
 All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 서면 허가 없이는 어떠한 형식이나 방법으로도 복제할 수 없습니다.
 
-이 책은 Microsoft의 여러 채널을 통해 사용할 수 있는 전자는 책 (전자책)의 형태로 무료로 같은 <http://dot.net/architecture>합니다.
+이 책은 Microsoft의 여러 채널을 통해 사용할 수 있는 전자는 책 (전자책)의 형태로 무료로 같은 <https://dot.net/architecture>합니다.
 
 이 책에 관한 질문이 있는 경우 [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com?subject=Feedback%20for%20.NET%20Container%20&%20Microservices%20Architecture%20book)으로 이메일을 보내 주세요.
 
@@ -72,7 +72,7 @@ All rights reserved. 이 가이드의 내용 중 어떤 부분도 게시자의 �
 
 그림 1-1에서는 증분 단계로 기존.NET 응용 프로그램을 클라우드로 이동하는 경우에 취할 수 있는 경로를 보여 줍니다.
 
- ![기존 .NET 응용 프로그램 및 서비스의 현대화 경로](./media/image1-1.png)
+ ![기존 .NET 응용 프로그램 및 서비스의 현대화 경로](./media/image1-1.png)
 
 > **그림 1-1**. 기존 .NET 응용 프로그램 및 서비스의 현대화 경로
 

@@ -9,14 +9,12 @@ helpviewer_keywords:
 - -rootnamespace compiler option [Visual Basic]
 - rootnamespace compiler option [Visual Basic]
 ms.assetid: e9245edf-6bef-420d-a7c7-324117752783
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 13bce09ca9fd1ae9ebb919a9245d8ccf87fbde1d
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2c7fb6c88477899a0cf08a467e8f23d687b90c90
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002608"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201901"
 ---
 # <a name="-rootnamespace"></a>-rootnamespace
 모든 형식 선언에 대한 네임스페이스를 지정합니다.  

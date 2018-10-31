@@ -3,11 +3,11 @@ title: '핵심 통신: HTTP-HTTPS 전송 채널'
 ms.date: 03/30/2017
 ms.assetid: 6c0a23c9-a663-461c-bdab-58b4d3e23642
 ms.openlocfilehash: 4c4a2537ae615943ffac299a8c8cd00c67094360
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50045407"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198226"
 ---
 # <a name="core-communications-httphttps-transport-channels"></a>핵심 통신: HTTP/HTTPS 전송 채널
 이 항목에서는 Windows Communication Foundation (WCF) 전송 HTTP/HTTPS 채널에서 생성 된 모든 예외를 나열 합니다.  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cfe1f76cfe489095dfa996bce8005d2777966b7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 940bd8b7fe0be79ea6448b1eab69359bdb92fdc9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43748092"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198174"
 ---
 # <a name="64-bit-applications"></a>64비트 응용 프로그램
 응용 프로그램을 컴파일할 때 Windows 64비트 운영 체제에서 네이티브 응용 프로그램으로 실행되거나 WOW64(Windows 64비트 기반 Windows 32비트)를 통해 실행되도록 지정할 수 있습니다. WOW64는 32비트 응용 프로그램이 64비트 시스템에서 실행되도록 하는 호환성 환경입니다. WOW64는 Windows 운영 체제의 모든 64비트 버전에 포함됩니다.  
@@ -49,7 +49,7 @@ ms.locfileid: "43748092"
   
 -   64비트 버전 CLR을 다운로드하는 방법에 대한 자세한 내용은 MSDN 웹 사이트에서 [.NET Framework 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=50953)를 참조하세요.  
   
--   64비트 응용 프로그램을 만들기 위한 Visual Studio 지원에 대한 자세한 내용은 [Visual Studio 개발 환경 64비트 지원](https://msdn.microsoft.com/library/b08ff3ad-c6fd-468f-94d5-01a61aab6833)을 참조하세요.  
+-   64비트 응용 프로그램을 만들기 위한 Visual Studio 지원에 대한 자세한 내용은 [Visual Studio 개발 환경 64비트 지원](/visualstudio/ide/visual-studio-ide-64-bit-support)을 참조하세요.  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>64비트 응용 프로그램을 만들기 위한 컴파일러 지원  
  기본적으로 .NET Framework를 사용하여 32비트 또는 64비트 컴퓨터에서 응용 프로그램을 빌드할 때 응용 프로그램은 64비트 컴퓨터에서 WOW64를 통해서가 아니라 네이티브 응용 프로그램으로 실행됩니다. 다음 표에는 Visual Studio 컴파일러를 사용하여 네이티브로 실행되거나, WOW64를 통해 실행되거나, 실행에 두 방법을 모두 사용하는 64비트 응용 프로그램을 만드는 방법을 설명하는 문서가 나와 있습니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "43748092"
 |--------------|---------------------|  
 |Visual Basic|[/platform (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/platform.md)|  
 |Visual C#|[-platform(C# 컴파일러 옵션)](~/docs/csharp/language-reference/compiler-options/platform-compiler-option.md)|  
-|Visual C++|**/clr:safe**를 사용하여 플랫폼 제약 없는 MSIL(Microsoft intermediate language) 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](/cpp/build/reference/clr-common-language-runtime-compilation)을 참조하세요.<br /><br /> Visual C++에는 각 64비트 운영 체제에 대한 별도의 컴파일러가 포함됩니다. Visual C++를 사용하여 64비트 Windows 운영 체제에서 실행되는 네이티브 응용 프로그램을 만드는 방법에 대한 자세한 내용은 [64비트 프로그래밍](https://msdn.microsoft.com/library/h2k70f3s\(v=vs.80\))을 참조하세요.|  
+|Visual C++|**/clr:safe**를 사용하여 플랫폼 제약 없는 MSIL(Microsoft intermediate language) 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [/clr(공용 언어 런타임 컴파일)](/cpp/build/reference/clr-common-language-runtime-compilation)을 참조하세요.<br /><br /> Visual C++에는 각 64비트 운영 체제에 대한 별도의 컴파일러가 포함됩니다. Visual C++를 사용하여 64비트 Windows 운영 체제에서 실행되는 네이티브 응용 프로그램을 만드는 방법에 대한 자세한 내용은 [64비트 프로그래밍](/cpp/build/configuring-programs-for-64-bit-visual-cpp)을 참조하세요.|  
   
 ## <a name="determining-the-status-of-an-exe-file-or-dll-file"></a>.exe 파일 또는 .dll 파일 상태 확인  
  .exe 파일이나 .dll 파일을 특정 플랫폼 또는 WOW64에서만 실행해야 하는지를 확인하려면 [CorFlags.exe(CorFlags 변환 도구)](../../docs/framework/tools/corflags-exe-corflags-conversion-tool.md)를 옵션없이 사용합니다. CorFlags.exe를 사용하여 .exe 파일이나 .dll 파일의 플랫폼 상태를 변경할 수도 있습니다. Visual Studio 어셈블리의 CLR 헤더에서 주 런타임 버전은 2로 설정되고 부 런타임 버전 번호는 5로 설정됩니다. 부 런타임 버전이 0으로 설정된 응용 프로그램은 레거시 응용 프로그램으로 처리되고 항상 WOW64를 통해 실행됩니다.  

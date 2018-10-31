@@ -17,14 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: fd85bc88-e06c-467d-a30d-9fd7cffcfca1
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f4ab27a8e6cc5bd38620148b130823070e5102fa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 386b9d3cf0342784c09ed8fc7a815a242924b068
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198451"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194958"
 ---
 # <a name="using-an-asynchronous-client-socket"></a>비동기 클라이언트 소켓 사용
 비동기 클라이언트 소켓은 네트워크 작업이 완료될 때까지 기다리는 동안 응용 프로그램을 일시 중단하지 않습니다. 대신, 표준 .NET Framework 비동기 프로그래밍 모델을 사용하여 응용 프로그램이 원래 스레드에서 계속 실행되는 동안 한 스레드에서 네트워크 연결을 처리합니다. 비동기 소켓은 네트워크를 많이 사용하거나 계속하기 전에 네트워크 작업이 완료될 때까지 기다릴 수 없는 응용 프로그램에 적합합니다.  

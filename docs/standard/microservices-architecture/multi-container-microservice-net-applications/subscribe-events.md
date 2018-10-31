@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/11/2017
-ms.openlocfilehash: 6cc5563f93915d1516e5a5f22a104012c1bb85d6
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 5e53e0a3578c19b09f5327f444d1a5c013ad4cd9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106579"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50194074"
 ---
 # <a name="subscribing-to-events"></a>이벤트 구독
 
@@ -152,7 +152,7 @@ CQRS 방식을 사용하는 경우와 같은 고급 마이크로 서비스의 �
 
 다음 코드는 복수의 DbContext 개체가 포함된 단일 트랜잭션을 만드는 방법을 보여줍니다. 첫 번째 컨텍스트는 업데이트되는 원본 데이터와 관련되어 있고 두 번째 컨텍스트는 IntegrationEventLog 테이블과 관련되어 있습니다.
 
-단, 아래 예제 코드의 트랜잭션은 코드를 실행할 때 데이터베이스 접속에 문제가 있을 경우 복원되지 않습니다. 이러한 상황은 Azure SQL DB와 같이 서버 간 데이터베이스를 이동할 수 있는 클라우드 기반 시스템에서 발생할 수 있습니다. 복수 컨텍스트에 걸쳐 복원 가능한 트랜잭션을 구현하는 방법은 이 가이드의 뒷부분에 나오는 [복원 엔터티 프레임워크 코어 SQL 접속 구현](#implementing_resilient_EFCore_SQL_conns) 섹션을 참조하십시오.
+단, 아래 예제 코드의 트랜잭션은 코드를 실행할 때 데이터베이스 접속에 문제가 있을 경우 복원되지 않습니다. 이러한 상황은 Azure SQL DB와 같이 서버 간 데이터베이스를 이동할 수 있는 클라우드 기반 시스템에서 발생할 수 있습니다. 복수 컨텍스트에 걸쳐 복원 가능한 트랜잭션을 구현하는 방법은 이 가이드의 뒷부분에 나오는 [복원 엔터티 프레임워크 코어 SQL 접속 구현](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md) 섹션을 참조하십시오.
 
 다음 예는 명확한 설명을 위해 단일 코드로 전체 프로세스를 보여줍니다. 하지만 eShopOnContainers 구현은 실제로 리팩터링되었으며 이 논리를 복수의 클래스로 나누어 쉽게 관리할 수 있도록 했습니다.
 
@@ -183,7 +183,7 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUp
   catalogItem = productToUpdate; 
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if !(raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent) 
   {
       await _catalogContext.SaveChangesAsync();
   }
@@ -317,7 +317,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 ### <a name="additional-resources"></a>추가 자료
 
 -   **NServiceBus를 사용하여 포크된 eShopOnContainers(특정 소프트웨어)**
-    [*http://go.particular.net/eShopOnContainers*](http://go.particular.net/eShopOnContainers)
+    [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
 -   **이벤트 기반 메시징**
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
@@ -326,7 +326,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 -   **게시-구독 채널**
-    [*http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](http://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+    [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 -   **바인딩된 컨텍스트 간 통신**
     [*https://msdn.microsoft.com/library/jj591572.aspx*](https://msdn.microsoft.com/library/jj591572.aspx)

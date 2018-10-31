@@ -2,12 +2,12 @@
 title: 비동기 프로그램의 제어 흐름(C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 49123dde51acaa82a2d8fa7d27fdf27087675034
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c4f1213eb9162985170c8eb1176fe01d8c721d2e
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586781"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347957"
 ---
 # <a name="control-flow-in-async-programs-c"></a>비동기 프로그램의 제어 흐름(C#)
 
@@ -47,7 +47,7 @@ public partial class MainWindow : Window
         // TWO
         HttpClient client = new HttpClient();
         Task<string> getStringTask =
-            client.GetStringAsync("http://msdn.microsoft.com");
+            client.GetStringAsync("https://msdn.microsoft.com");
 
         // THREE
         string urlContents = await getStringTask;
@@ -212,7 +212,7 @@ Length of the downloaded string: 33946.
                 resultsTextBox.Text += "\r\n           Calling HttpClient.GetStringAsync.\r\n";
 
                 // GetStringAsync returns a Task<string>.
-                Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");
+                Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");
 
                 resultsTextBox.Text += "\r\nTHREE: Back in AccessTheWebAsync.\r\n" +
                     "           Task getStringTask is started.";
@@ -287,7 +287,7 @@ Length of the downloaded string: 33946.
  `client.GetStringAsync` 메서드는 `AccessTheWebAsync`의 `getStringTask` 변수에 할당된 문자열의 작업을 반환합니다. 예제 프로그램의 다음 줄은 `client.GetStringAsync` 호출 및 할당을 보여 줍니다.
 
 ```csharp
-Task<string> getStringTask = client.GetStringAsync("http://msdn.microsoft.com");
+Task<string> getStringTask = client.GetStringAsync("https://msdn.microsoft.com");
 ```
 
  작업은 결국 실제 문자열을 생성하기 위한 `client.GetStringAsync`의 약속으로 간주할 수 있습니다. 그리고 `client.GetStringAsync`의 약속된 문자열을 사용하지 않는 작업이 `AccessTheWebAsync`에 있는 경우 `client.GetStringAsync`가 대기하는 동안 해당 작업이 계속될 수 있습니다. 예제에서 "THREE" 레이블이 지정된 다음 출력 줄은 독립 작업을 수행할 기회를 나타냅니다.
@@ -311,7 +311,7 @@ string urlContents = await getStringTask;
  await 식은 `client.GetStringAsync`가 반환될 때까지 `AccessTheWebAsync`를 일시 중단합니다. 그리고 제어는 `AccessTheWebAsync`의 호출자, `startButton_Click`으로 반환됩니다.
 
 > [!NOTE]
-> 일반적으로 즉시 비동기 메서드에 대한 호출을 기다립니다. 예를 들어 다음 할당은 `getStringTask`를 만들고 기다리는 이전 코드를 대체할 수 있습니다. `string urlContents = await client.GetStringAsync("http://msdn.microsoft.com");`.
+> 일반적으로 즉시 비동기 메서드에 대한 호출을 기다립니다. 예를 들어 다음 할당은 `getStringTask`를 만들고 기다리는 이전 코드를 대체할 수 있습니다. `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`.
 >
 > 이 항목에서 await 연산자는 나중에 프로그램을 통해 제어 흐름을 표시하는 출력 줄을 수용하기 위해 적용됩니다.
 

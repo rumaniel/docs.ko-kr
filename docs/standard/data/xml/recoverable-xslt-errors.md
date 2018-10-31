@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f7630b9a233db009b6095abc8d833870c1f33d8
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46581936"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50202987"
 ---
 # <a name="recoverable-xslt-errors"></a>복구할 수 있는 XSLT 오류
 W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가 특정 상황을 처리하는 방법을 결정할 수 있는 영역이 포함되어 있습니다. 이러한 영역은 임의 동작으로 간주됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 XSLT 1.0 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. XSLT 1.0 권장 사항에서는 일부 문제점에 대해 프로세서가 오류로부터 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.  
@@ -22,7 +22,7 @@ W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가
   
 -   오류는 이 조건에 대해 예외가 발생함을 나타냅니다.  
   
--   [W3C XSLT(XSL 변환) 버전 1.0 권장 사항](http://www.w3.org/TR/xslt) 및 [W3C XSLT(XSL 변환) 버전 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/)에서 섹션 참조를 찾을 수 있습니다.  
+-   [W3C XSLT(XSL 변환) 버전 1.0 권장 사항](https://www.w3.org/TR/xslt) 및 [W3C XSLT(XSL 변환) 버전 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/)에서 섹션 참조를 찾을 수 있습니다.  
   
 |XSLT 조건|단원|XslCompiledTransform 동작|  
 |--------------------|-------------|-----------------------------------|  

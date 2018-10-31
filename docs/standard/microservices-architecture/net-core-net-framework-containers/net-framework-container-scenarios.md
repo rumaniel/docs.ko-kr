@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: 9e1ff03421f1a5d23878c74f13423cec9625c4c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 128801fbe49a3f7618b1cedc814b7663d57df624
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609983"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195335"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
 
@@ -23,9 +23,9 @@ ms.locfileid: "45609983"
 
 ## <a name="using-third-party-net-libraries-or-nuget-packages-not-available-for-net-core"></a>.NET Core에 사용할 수 없는 타사 .NET 라이브러리 또는 NuGet 패키지 사용
 
-타사 라이브러리는 [.NET 표준](https://docs.microsoft.com/dotnet/articles/standard/library)을 빠르게 수용하여 .NET Core를 포함한 모든 .NET 계열에서 코드 공유를 사용할 수 있게 합니다. .NET Standard 라이브러리 2.0 이상에서는 서로 다른 프레임워크 간의 API 표면 호환성이 상당히 증가하였으며, .NET Core 2.x에서는 응용 프로그램이 기존 .NET Framework 라이브러리를 직접 참조할 수도 있습니다([호환 shim](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20) 참조).
+타사 라이브러리는 [.NET 표준](../../net-standard.md)을 빠르게 수용하여 .NET Core를 포함한 모든 .NET 계열에서 코드 공유를 사용할 수 있게 합니다. .NET Standard 라이브러리 2.0 이상에서는 서로 다른 프레임워크 간의 API 표면 호환성이 상당히 증가하였으며, .NET Core 2.x에서는 응용 프로그램이 기존 .NET Framework 라이브러리를 직접 참조할 수도 있습니다([호환 shim](https://github.com/dotnet/standard/blob/master/docs/netstandard-20/README.md#net-framework-461-supporting-net-standard-20) 참조).
 
-또한 Windows의 .NET Standard 2.0에 사용할 수 있는 API 노출을 확장하기 위해 2017년 11월에 [Windows 호환성 팩](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack)이 릴리스되었습니다. 이 팩을 사용하면 수정 사항이 거의 없거나 전혀 없이 Windows에서 실행하도록 대부분의 기존 코드를 .NET Standard 2.x에 다시 컴파일할 수 있습니다.
+또한 Windows의 .NET Standard 2.0에 사용할 수 있는 API 노출을 확장하기 위해 2017년 11월에 [Windows 호환성 팩](../../../core/porting/windows-compat-pack.md)이 릴리스되었습니다. 이 팩을 사용하면 수정 사항이 거의 없거나 전혀 없이 Windows에서 실행하도록 대부분의 기존 코드를 .NET Standard 2.x에 다시 컴파일할 수 있습니다.
 
 그러나 .NET Standard 2.0 및 .NET Core 2.1 이후의 뛰어난 발전에도 불구하고 특정 NuGet 패키지에서 Windows를 실행해야 하고 .NET Core를 지원하지 않는 경우가 있을 수도 있습니다. 이러한 패키지가 응용 프로그램에 매우 중요한 경우 Windows 컨테이너에서 .NET Framework를 사용해야 합니다.
 
@@ -37,7 +37,7 @@ ms.locfileid: "45609983"
 
 -   ASP.NET Web Forms. 이 기술은 .NET Framework에서만 사용할 수 있습니다. 현재 .NET Core에 ASP.NET Web Forms를 적용할 계획은 없습니다.
 
--   WCF 서비스. .NET Core에서 WCF 서비스를 사용할 수 있는 [WCF-클라이언트 라이브러리](https://github.com/dotnet/wcf)가 있더라도(2017년 중순 기준) WCF 서버 구현은 .NET Framework에서만 사용할 수 있습니다. 이 시나리오는 .NET Core의 향후 릴리스에 대해 고려할 수 있으며, 이 경우 [Windows 호환성 팩](https://docs.microsoft.com/dotnet/core/porting/windows-compat-pack)에 일부 API를 포함하도록 고려되고 있습니다.
+-   WCF 서비스. .NET Core에서 WCF 서비스를 사용할 수 있는 [WCF-클라이언트 라이브러리](https://github.com/dotnet/wcf)가 있더라도(2017년 중순 기준) WCF 서버 구현은 .NET Framework에서만 사용할 수 있습니다. 이 시나리오는 .NET Core의 향후 릴리스에 대해 고려할 수 있으며, 이 경우 [Windows 호환성 팩](../../../core/porting/windows-compat-pack.md)에 일부 API를 포함하도록 고려되고 있습니다.
 
 -   워크플로 관련 서비스. Windows WF(Workflow Foundation), 워크플로 서비스(단일 서비스의 WCF + WF) 및 WCF Data Services(이전의 ADO.NET Data Services)는 .NET Framework에서만 사용할 수 있습니다. 현재 .NET Core로 가져올 계획은 없습니다.
 
@@ -54,16 +54,16 @@ ms.locfileid: "45609983"
 ### <a name="additional-resources"></a>추가 자료
 
 -   **.NET Core 가이드**  
-    [https://docs.microsoft.com/dotnet/articles/core/index](https://docs.microsoft.com/dotnet/articles/core/index)
+    [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
 -   **.NET Framework에서 .NET Core로 이식**  
-    [https://docs.microsoft.com/dotnet/articles/core/porting/index](https://docs.microsoft.com/dotnet/articles/core/porting/index)
+    [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
 -   **Docker 가이드의 .NET Framework**  
-    [https://docs.microsoft.com/dotnet/articles/framework/docker/](https://docs.microsoft.com/dotnet/articles/framework/docker/)
+    [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
 
 -   **.NET 구성 요소 개요**  
-    [*https://docs.microsoft.com/dotnet/standard/components*](../../components.md)
+    [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
 
 

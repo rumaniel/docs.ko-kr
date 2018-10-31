@@ -6,11 +6,11 @@ helpviewer_keywords:
 - nullable types [C#], identifying
 ms.assetid: d4b67ee2-66e8-40c1-ae9d-545d32c71387
 ms.openlocfilehash: f9957568d3c68f60cc9286718be9f5a496f876e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47400545"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48261344"
 ---
 # <a name="how-to-identify-a-nullable-type-c-programming-guide"></a>방법: nullable 형식 식별(C# 프로그래밍 가이드)
 

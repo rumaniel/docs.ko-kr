@@ -7,12 +7,12 @@ helpviewer_keywords:
 - numeric conversions [C#], implicit
 - types [C#], implicit numeric conversions
 ms.assetid: 72eb5a94-0491-48bf-8032-d7ebfdfeb8d8
-ms.openlocfilehash: e46816fc8f3a6ff71dcba3561098d3cfce1e1054
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c3c0153a0ae3e07839822c8bb978b1a09277bd53
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44213266"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188705"
 ---
 # <a name="implicit-numeric-conversions-table-c-reference"></a>암시적 숫자 변환 표(C# 참조)
 
@@ -48,7 +48,7 @@ ms.locfileid: "44213266"
   byte b = 300;   // CS0031: Constant value '300' cannot be converted to a 'byte'
   ```
 
-암시적 변환에 대한 자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [암시적 변환](/dotnet/csharp/language-reference/language-specification/conversions#implicit-conversions) 섹션을 참조하세요.
+암시적 변환에 대한 자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [암시적 변환](~/_csharplang/spec/conversions.md#implicit-conversions) 섹션을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 

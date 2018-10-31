@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 139d4cb1-5972-40f4-bdd8-1ce68e4dfb80
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c999b6c391294a05eb7fae1d1f076f1d52b8c5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9536b53531d3ee7575a51b8702b34b57338b4f8b
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391653"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50040909"
 ---
 # <a name="deploying-net-framework-applications"></a>.NET Framework 응용 프로그램 배포
 .NET Framework 설명서의 이 섹션에서는 어셈블리를 로드하고, 어셈블리 참조를 확인하고, 네이티브 이미지 생성을 통해 응용 프로그램의 성능을 향상시키는 지침을 포함하여 .NET Framework 응용 프로그램 배포에 대한 중요한 정보를 제공합니다.  
@@ -25,4 +25,4 @@ ms.locfileid: "33391653"
  <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [개발 가이드](../../../docs/framework/development-guide.md)
+- [개발 가이드](../../../docs/framework/development-guide.md)

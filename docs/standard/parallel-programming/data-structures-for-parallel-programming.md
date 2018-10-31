@@ -8,11 +8,11 @@ ms.assetid: bdc82f2f-4754-45a1-a81e-fe2e9c30cef9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6453e9983086dcb5b97ec134db9d74160d7a47cf
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47399926"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836475"
 ---
 # <a name="data-structures-for-parallel-programming"></a>병렬 프로그래밍을 위한 데이터 구조
 .NET Framework 버전 4에서는 동시 컬렉션 클래스, 간단한 동기화 기본 요소 및 초기화 지연 관련 형식을 포함하여 병렬 프로그래밍에서 유용한 여러 가지 새로운 형식을 소개합니다. 이러한 형식을 작업 병렬 라이브러리 및 PLINQ를 포함한 다중 스레드 응용 프로그램 코드와 함께 사용할 수 있습니다.  

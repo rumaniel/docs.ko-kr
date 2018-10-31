@@ -11,14 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4b8fa55375de5057eca92591cbf4d9da628a3f85
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 257f417fa573577ca8e8ceb4edc9c4f481af1f72
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193806"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50192449"
 ---
 # <a name="how-to-configure-network-tracing"></a>방법: 네트워크 추적 구성
 응용 프로그램 또는 컴퓨터 구성 파일은 형식과 네트워크 추적의 내용을 결정하는 설정을 유지합니다. 이 절차를 수행하기 전에 추적이 활성화되어야 합니다. 추적을 사용하는 방법에 대한 자세한 내용은 [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)을 참조하세요.  
@@ -102,4 +100,4 @@ ms.locfileid: "47193806"
  [네트워크 추적 해석](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
  [.NET Framework의 네트워크 추적](../../../docs/framework/network-programming/network-tracing.md)  
  [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)  
- [계측 및 추적 소개](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+ [응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

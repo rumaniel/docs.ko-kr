@@ -3,11 +3,11 @@ title: MsmqIntegrationBindingElement
 ms.date: 03/30/2017
 ms.assetid: eaaa7651-e6e5-4fae-9dad-c1867d38b586
 ms.openlocfilehash: ff8cc5797c25680d257c8d142425538c75dbf044
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "49415109"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205076"
 ---
 # <a name="msmqintegrationbindingelement"></a>MsmqIntegrationBindingElement
 MsmqIntegrationBindingElement  

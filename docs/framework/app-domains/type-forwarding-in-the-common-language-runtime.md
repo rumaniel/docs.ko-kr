@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 51f8ffa3-c253-4201-a3d3-c4fad85ae097
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d25bac953ff68422a1dddc54bdb01b4b4f241cbb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7ad6c87dcec55a332bced00370fe6ea888508793
+ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664529"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50134922"
 ---
 # <a name="type-forwarding-in-the-common-language-runtime"></a>공용 언어 런타임의 형식 전달
 형식 전달을 사용하면 원본 어셈블리를 사용하는 응용 프로그램을 다시 컴파일하지 않고도 형식을 다른 어셈블리로 이동할 수 있습니다.  
@@ -44,9 +44,9 @@ ms.locfileid: "45664529"
   
 3.  해당 형식이 현재 들어 있는 어셈블리를 컴파일합니다.  
   
-4.  해당 형식이 있었던 어셈블리를 현재 해당 형식이 들어 있는 어셈블리에 대한 참조를 사용하여 다시 컴파일합니다. 예를 들어, 명령줄에서 C# 파일을 컴파일할 경우 [/reference (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) 옵션을 사용하여 해당 형식이 들어 있는 어셈블리를 지정합니다. C++의 경우 소스 파일에서 [#using](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a) 지시문을 사용하여 해당 형식이 들어 있는 어셈블리를 지정합니다.  
+4.  해당 형식이 있었던 어셈블리를 현재 해당 형식이 들어 있는 어셈블리에 대한 참조를 사용하여 다시 컴파일합니다. 예를 들어, 명령줄에서 C# 파일을 컴파일할 경우 [/reference (C# Compiler Options)](~/docs/csharp/language-reference/compiler-options/reference-compiler-option.md) 옵션을 사용하여 해당 형식이 들어 있는 어셈블리를 지정합니다. C++의 경우 소스 파일에서 [#using](/cpp/preprocessor/hash-using-directive-cpp) 지시문을 사용하여 해당 형식이 들어 있는 어셈블리를 지정합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
- [형식 전달(C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
- [#using 지시문](https://msdn.microsoft.com/library/870b15e5-f361-40a8-ba1c-c57d75c8809a)
+- <xref:System.Runtime.CompilerServices.TypeForwardedToAttribute>  
+- [형식 전달(C++/CLI)](/cpp/windows/type-forwarding-cpp-cli)  
+- [#using 지시문](/cpp/preprocessor/hash-using-directive-cpp)

@@ -17,14 +17,12 @@ helpviewer_keywords:
 - Internet, sockets
 - client sockets
 ms.assetid: 945d00c6-7202-466c-9df9-140b84156d43
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: edc65f46b69ef3b72092c0182529b9127cc25911
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8036421f937385edbaefb8df4ee3915798084c64
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199700"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192436"
 ---
 # <a name="using-a-synchronous-client-socket"></a>동기 클라이언트 소켓 사용
 동기 클라이언트 소켓은 네트워크 작업이 완료되는 동안 응용 프로그램을 일시 중단합니다. 동기 소켓은 네트워크를 작업에 많이 사용하는 응용 프로그램에 적합하지 않지만 다른 응용 프로그램의 네트워크 서비스에 대한 간단한 액세스를 가능하게 합니다.  

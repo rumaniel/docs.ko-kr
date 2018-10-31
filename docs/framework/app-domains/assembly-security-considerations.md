@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b5439c1-f3d5-4529-bd69-01814703d067
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f78df1a85bacae3019fe27857731174796d8a311
-ms.sourcegitcommit: 3d42e1d73e21c35c540dd4adbea23efcbe1b8b0a
+ms.openlocfilehash: 8d83da6e995c35de650c496c5792e55b05dd9095
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/20/2018
-ms.locfileid: "36270424"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50088795"
 ---
 # <a name="assembly-security-considerations"></a>어셈블리 보안 고려 사항
 <a name="top"></a> 어셈블리를 빌드할 때 어셈블리를 실행하는 데 필요한 권한을 지정할 수 있습니다. 어셈블리에 대한 특정 권한 부여 여부는 증명 정보를 바탕으로 합니다.  
@@ -63,6 +63,6 @@ ms.locfileid: "36270424"
  강력한 이름 지정과 [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)를 사용하는 서명은 무결성을 보장하므로 이 두 가지 형식의 어셈블리 증명 정보에 기반하여 기본 코드 액세스 보안 정책을 설정할 수 있습니다. 강력한 이름을 지정하고 [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)로 서명하는 경우 인증서와 디지털 서명을 통해 무결성을 보장합니다. 언급된 모든 기술, 즉 해시 확인, 강력한 이름 지정, [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)를 통한 서명 등은 어셈블리가 어떤 방식으로든 변경되지 않도록 하는 데 사용됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)  
- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)
+- [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)  
+- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [SignTool.exe(서명 도구)](../../../docs/framework/tools/signtool-exe.md)

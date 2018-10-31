@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램을 위한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 12/12/2017
-ms.openlocfilehash: 6003252d7e87428c7f954b57c3b67a041e3f3b15
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 663515e0a863ef703006df0f96b4bc8a2976ca78
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106478"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205297"
 ---
 # <a name="implementing-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
 
@@ -39,7 +39,7 @@ EF Core를 소개하는 내용은 이미 Microsoft 설명서에 있으므로 여
 
 ## <a name="infrastructure-in-entity-framework-core-from-a-ddd-perspective"></a>DDD 관점에서 본 Entity Framework Core의 인프라
 
-DDD 관점에서 본 EF의 중요한 기능은 POCO 도메인 엔터티를 사용하는 기능으로, EF 용어로는 POCO *코드 중심 엔터티*라고 합니다. POCO 도메인 엔터티를 사용하는 경우 도메인 모델 클래스는 [지속성 무시](http://deviq.com/persistence-ignorance/) 및 [인프라 무시](https://ayende.com/blog/3137/infrastructure-ignorance) 원칙에 따라 지속성을 무시합니다.
+DDD 관점에서 본 EF의 중요한 기능은 POCO 도메인 엔터티를 사용하는 기능으로, EF 용어로는 POCO *코드 중심 엔터티*라고 합니다. POCO 도메인 엔터티를 사용하는 경우 도메인 모델 클래스는 [지속성 무시](https://deviq.com/persistence-ignorance/) 및 [인프라 무시](https://ayende.com/blog/3137/infrastructure-ignorance) 원칙에 따라 지속성을 무시합니다.
 
 DDD 패턴마다 엔터티 클래스 자체 내의 도메인 동작과 규칙을 캡슐화해야만 컬렉션에 액세스할 때 고정, 유효성 검사 및 규칙을 제어할 수 있습니다. 따라서 DDD에서 자식 엔터티 또는 값 개체 컬렉션에 대한 공용 액세스를 허용하는 것은 좋지 않습니다. 그 대신, 속성 컬렉션을 업데이트할 수 있는 방법 및 시기 그리고 속성 컬렉션 업데이트가 발생할 때 수행할 동작 및 작업을 제어하는 메서드를 노출하는 것이 좋습니다.
 
@@ -400,7 +400,7 @@ public abstract class BaseSpecification<T> : ISpecification<T>
 }
 ```
 
-다음 사양은 장바구니의 ID 또는 장바구니가 속한 구매자의 ID가 지정된 단일 장바구니 엔터티를 로드합니다. 장바구니의 항목 컬렉션을 [즉시 로드](https://docs.microsoft.com/en-us/ef/core/querying/related-data)합니다.
+다음 사양은 장바구니의 ID 또는 장바구니가 속한 구매자의 ID가 지정된 단일 장바구니 엔터티를 로드합니다. 장바구니의 항목 컬렉션을 [즉시 로드](https://docs.microsoft.com/ef/core/querying/related-data)합니다.
 
 ```csharp
 // SAMPLE QUERY SPECIFICATION IMPLEMENTATION
@@ -467,7 +467,7 @@ public IEnumerable<T> List(ISpecification<T> spec)
     [*https://docs.microsoft.com/ef/core/modeling/shadow-properties*](https://docs.microsoft.com/ef/core/modeling/shadow-properties)
 
 -   **사양 패턴**
-    [*http://deviq.com/specification-pattern/*](http://deviq.com/specification-pattern/)
+    [*https://deviq.com/specification-pattern/*](https://deviq.com/specification-pattern/)
     
 
 >[!div class="step-by-step"]

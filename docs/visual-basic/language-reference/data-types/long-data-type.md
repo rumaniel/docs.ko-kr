@@ -20,14 +20,12 @@ helpviewer_keywords:
 - data types [Visual Basic], assigning
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0b3970aad08f2be98d175b4175ef06711bcaf609
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 040306b49bbf6b0f30556309457510ca873d8a74
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43876792"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197225"
 ---
 # <a name="long-data-type-visual-basic"></a>Long 데이터 형식 (Visual Basic)
 

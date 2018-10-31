@@ -3,13 +3,13 @@ title: dotnet new 명령 - .NET Core CLI
 description: dotnet new 명령은 지정된 템플릿을 기반으로 새 .NET Core 프로젝트를 만듭니다.
 author: mairaw
 ms.author: mairaw
-ms.date: 07/31/2018
-ms.openlocfilehash: 396c4ddf09854fa4582226bdb1422f8c929e459b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/24/2018
+ms.openlocfilehash: 56d76f1dd54097f9cf20129d74057235290c273c
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208635"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188206"
 ---
 # <a name="dotnet-new"></a>dotnet new
 
@@ -65,27 +65,27 @@ dotnet new [-h|--help]
 
 명령에는 템플릿의 기본 목록이 포함되어 있습니다. `dotnet new -l`을 사용하여 사용 가능한 템플릿 목록을 가져옵니다. 다음 표에는 .NET Core SDK 2.1.300과 함께 사전 설치된 템플릿이 나와 있습니다. 템플릿의 기본 언어는 대괄호 안에 표시됩니다.
 
-|템플릿 설명                          | 템플릿 이름   | 언어     |
-|----------------------------------------------|-----------------|---------------|
-| 콘솔 응용 프로그램                          | `console`       | [C#], F#, VB  |
-| 클래스 라이브러리                                | `classlib`      | [C#], F#, VB  |
-| 단위 테스트 프로젝트                            | `mstest`        | [C#], F#, VB  |
-| xUnit 테스트 프로젝트                           | `xunit`         | [C#], F#, VB  |
-| Razor 페이지                                   | `page`          | [C#]          |
-| MVC ViewImports                              | `viewimports`   | [C#]          |
-| MVC ViewStart                                | `viewstart`     | [C#]          |
-| ASP.NET Core 비어 있음                           | `web`           | [C#], F#      |
-| ASP.NET Core 웹앱(모델-뷰-컨트롤러) | `mvc`           | [C#], F#      |
-| ASP.NET Core 웹앱                         | `razor`         | [C#]          |
-| ASP.NET Core(Angular 사용)                    | `angular`       | [C#]          |
-| ASP.NET Core(React.js 사용)                   | `react`         | [C#]          |
-| ASP.NET Core(React.js 및 Redux 사용)         | `reactredux`    | [C#]          |
-| ASP.NET Core 웹 API                         | `webapi`        | [C#], F#      |
-| Razor 클래스 라이브러리                          | `razorclasslib` | [C#]          |
-| global.json 파일                             | `globaljson`    |               |
-| NuGet 구성                                 | `nugetconfig`   |               |
-| 웹 구성                                   | `webconfig`     |               |
-| 솔루션 파일                                | `sln`           |               |
+|템플릿 설명                          | 템플릿 이름    | 언어     |
+|----------------------------------------------|------------------|---------------|
+| 콘솔 응용 프로그램                          | `console`        | [C#], F#, VB  |
+| 클래스 라이브러리                                | `classlib`       | [C#], F#, VB  |
+| 단위 테스트 프로젝트                            | `mstest`         | [C#], F#, VB  |
+| xUnit 테스트 프로젝트                           | `xunit`          | [C#], F#, VB  |
+| Razor 페이지                                   | `page`           | [C#]          |
+| MVC ViewImports                              | `viewimports`    | [C#]          |
+| MVC ViewStart                                | `viewstart`      | [C#]          |
+| ASP.NET Core 비어 있음                           | `web`            | [C#], F#      |
+| ASP.NET Core 웹앱(모델-뷰-컨트롤러) | `mvc`            | [C#], F#      |
+| ASP.NET Core 웹앱                         | `razor`, `webapp`| [C#]          |
+| ASP.NET Core(Angular 사용)                    | `angular`        | [C#]          |
+| ASP.NET Core(React.js 사용)                   | `react`          | [C#]          |
+| ASP.NET Core(React.js 및 Redux 사용)         | `reactredux`     | [C#]          |
+| ASP.NET Core 웹 API                         | `webapi`         | [C#], F#      |
+| Razor 클래스 라이브러리                          | `razorclasslib`  | [C#]          |
+| global.json 파일                             | `globaljson`     |               |
+| NuGet 구성                                 | `nugetconfig`    |               |
+| 웹 구성                                   | `webconfig`      |               |
+| 솔루션 파일                                | `sln`            |               |
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 

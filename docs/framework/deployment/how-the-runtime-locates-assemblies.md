@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f8ed5cce3e0c9e22679f54b13c84ea422f2100d
-ms.sourcegitcommit: 6c480773ae896f45af4671fb3e26611a50e4dd81
+ms.openlocfilehash: 54ca80e83511d6120669df634ae34ca0bf486bf3
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/09/2018
-ms.locfileid: "35251066"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453452"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>런타임에서 어셈블리를 찾는 방법
 .NET Framework 응용 프로그램을 성공적으로 배포하려면 공용 언어 런타임이 응용 프로그램을 구성하는 어셈블리를 찾아서 바인딩하는 방법을 이해해야 합니다. 기본적으로 런타임은 응용 프로그램 빌드 시 사용된 정확한 버전의 어셈블리로 바인딩을 시도합니다. 이 기본 동작은 구성 파일 설정으로 재정의할 수 있습니다.  
@@ -215,7 +215,7 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
 -   참조된 어셈블리 이름: myAssembly  
   
--   응용 프로그램 루트 디렉터리: http://www.code.microsoft.com  
+-   응용 프로그램 루트 디렉터리: `http://www.code.microsoft.com`  
   
 -   구성 파일의 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 요소가 지정하는 것: bin  
   
@@ -223,13 +223,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
   
  이 경우 런타임은 다음과 같은 URL을 검색합니다.  
   
- http://www.code.microsoft.com/de/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly.dll`
   
- http://www.code.microsoft.com/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/de/myAssembly/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly.dll`
   
- http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll  
+ `http://www.code.microsoft.com/bin/de/myAssembly/myAssembly.dll`
   
 ##### <a name="multiple-assemblies-with-the-same-name"></a>동일한 이름을 가진 여러 어셈블리  
  다음 예제에서는 여러 어셈블리를 동일한 이름으로 구성하는 방법을 보여 줍니다.  
@@ -245,8 +245,8 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="other-locations-probed"></a>검색되는 기타 위치  
  현재 바인딩 컨텍스트를 사용하여 어셈블리 위치를 결정할 수도 있습니다. 이러한 경우는 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드가 사용될 때 및 COM interop 시나리오에서 자주 발생합니다. 어셈블리가 <xref:System.Reflection.Assembly.LoadFrom%2A> 메서드를 사용하여 다른 어셈블리를 참조하는 경우 호출 어셈블리의 위치는 참조된 어셈블리를 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 일치 항목이 있으면 해당 어셈블리가 로드됩니다. 일치 항목이 없으면 런타임이 해당 검색 의미 체계를 계속하고 Windows Installer에 어셈블리를 제공하도록 쿼리합니다. 바인딩 요청과 일치하는 어셈블리가 제공되지 않으면 예외가 발생합니다. 이 예외는 형식이 참조된 경우 관리 코드의 <xref:System.TypeLoadException> 이거나, 로드되는 어셈블리가 없는 경우 <xref:System.IO.FileNotFoundException> 입니다.  
   
- 예를 들어 Assembly1이 Assembly2를 참조하고 Assembly1이 http://www.code.microsoft.com/utils에서 다운로드된 경우 해당 위치는 Assembly2.dll을 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 런타임은 http://www.code.microsoft.com/utils/Assembly2.dll과 http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll의 어셈블리를 탐지합니다. Assembly2가 이러한 위치 중 하나에  없으면 런타임에서 Windows Installer를 쿼리합니다.  
+ 예를 들어 Assembly1이 Assembly2를 참조하고 Assembly1이 `http://www.code.microsoft.com/utils`에서 다운로드된 경우 해당 위치는 Assembly2.dll을 찾을 수 있는 위치에 대한 힌트로 간주됩니다. 런타임은 `http://www.code.microsoft.com/utils/Assembly2.dll`과 `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll`의 어셈블리를 탐지합니다. Assembly2가 이러한 위치 중 하나에  없으면 런타임에서 Windows Installer를 쿼리합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [최선의 어셈블리 로드 방법](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
- [배포](../../../docs/framework/deployment/index.md)
+- [최선의 어셈블리 로드 방법](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)  
+- [배포](../../../docs/framework/deployment/index.md)

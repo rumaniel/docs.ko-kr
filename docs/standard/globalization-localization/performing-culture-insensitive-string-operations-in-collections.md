@@ -18,11 +18,11 @@ ms.assetid: 5cdc9396-a64b-4615-a1cd-b605db4c5983
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0e458f45fea8e2207ced930daebf10e653901fa7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208661"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582803"
 ---
 # <a name="performing-culture-insensitive-string-operations-in-collections"></a>컬렉션에서 Culture를 구분하지 않는 문자열 작업 수행
 <xref:System.Collections> 네임스페이스에는 기본적으로 문화권 구분 동작을 제공하는 클래스 및 멤버가 있습니다. <xref:System.Collections.CaseInsensitiveComparer> 및 <xref:System.Collections.CaseInsensitiveHashCodeProvider> 클래스의 기본 생성자는 <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> 속성을 사용하여 새 인스턴스를 초기화합니다. <xref:System.Collections.Specialized.CollectionsUtil.CreateCaseInsensitiveHashtable%2A?displayProperty=nameWithType> 메서드의 모든 오버로드는 기본적으로 `Thread.CurrentCulture` 속성을 사용하여 <xref:System.Collections.Hashtable> 클래스의 새 인스턴스를 만듭니다. <xref:System.Collections.ArrayList.Sort%2A?displayProperty=nameWithType> 메서드의 오버로드는 기본적으로 `Thread.CurrentCulture`를 사용하여 문화권 구분 정렬을 수행합니다. 문자열이 키로 사용될 경우 <xref:System.Collections.SortedList>의 정렬 및 조회는 `Thread.CurrentCulture`의 영향을 받을 수 있습니다. `Collections` 네임스페이스의 이러한 클래스 및 메서드에서 문화권을 구분하는 결과를 얻으려면 이 섹션에 제공된 사용 권장 사항을 따릅니다.  

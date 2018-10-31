@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 255c7e068cc83b7dcb9489eeeda5ce33be983c81
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a8519f7ecfc430aaa9b888f9239f669e6e54eb02
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522093"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50192748"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework의 개요
 
@@ -93,9 +93,9 @@ Windows Forms 클래스는 Windows GUI 개발을 매우 단순하게 하는 다�
 
 ## <a name="see-also"></a>참고 항목
 
-[시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)   
-[설치 가이드](../../../docs/framework/install/index.md)   
-[개발 가이드](../../../docs/framework/development-guide.md)   
-[도구](../../../docs/framework/tools/index.md)   
-[.NET Framework 샘플](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
-[.NET Framework 클래스 라이브러리](https://go.microsoft.com/fwlink/?LinkID=227195)
+- [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)   
+- [설치 가이드](../../../docs/framework/install/index.md)   
+- [개발 가이드](../../../docs/framework/development-guide.md)   
+- [도구](../../../docs/framework/tools/index.md)   
+- [.NET Framework 샘플](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+- [.NET Framework 클래스 라이브러리](https://go.microsoft.com/fwlink/?LinkID=227195)

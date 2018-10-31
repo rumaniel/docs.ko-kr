@@ -4,12 +4,12 @@ description: dotnet nuget push 명령은 서버에 패키지를 푸시하고 게
 author: karann-msft
 ms.author: mairaw
 ms.date: 09/04/2018
-ms.openlocfilehash: 23d27cef29008955850f9ed9f4a8baed9e7ad982
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: b9c0fad886cd1234325c58bf61b1a010bce421d9
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45610011"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50200028"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 
@@ -179,9 +179,9 @@ dotnet nuget push [-h|--help]
 
 `dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a`
 
-사용자 지정 푸시 소스 `http://customsource`에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
+사용자 지정 푸시 소스 `https://customsource`에 *foo.nupkg*를 푸시하여 API 키를 지정합니다.
 
-`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s http://customsource/`
+`dotnet nuget push foo.nupkg -k 4003d786-cc37-4004-bfdf-c4f3e8ef9b3a -s https://customsource/`
 
 기본 푸시 소스 *foo.nupkg*를 푸시합니다.
 

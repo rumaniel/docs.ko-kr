@@ -6,11 +6,11 @@ ms.assetid: 920cfe3b-d525-4bb2-abf6-9431651f9cf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 39e8afd8c22ca757141d2a7b556b115f8380e731
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47205579"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48847492"
 ---
 # <a name="resolving-external-xslt-style-sheets-and-documents"></a>외부 XSLT 스타일시트 및 문서 확인
 다음과 같이 변환 중에 외부 리소스를 확인해야 하는 몇 가지 경우가 있습니다.  
@@ -35,13 +35,13 @@ ms.locfileid: "47205579"
 |--------------------------------------|-------------------|  
 |<xref:System.Xml.Xsl.XslTransform.Load%2A> 중에 스타일시트 찾기|스타일시트가 자격 증명을 요구하는 리소스에 있는 경우 <xref:System.Xml.Xsl.XslTransform.Load%2A>를 매개 변수로 사용하는 오버로드된 <xref:System.Xml.XmlResolver> 메서드를 지정합니다.|  
 |<xref:System.Xml.Xsl.XslTransform.Load%2A> 중에 `<xsl:include>` 또는 `<xsl:import>` 확인|매개 변수로 <xref:System.Xml.Xsl.XslTransform.Load%2A>를 사용하는 오버로드된 <xref:System.Xml.XmlResolver> 메서드를 지정합니다. <xref:System.Xml.XmlResolver>를 사용하여 `import` 또는 `include` 문에서 참조하는 스타일시트를 로드합니다. `null`로 전달하는 경우에는 외부 리소스가 확인되지 않습니다.|  
-|변환 중에 모든 `document()` 함수 확인|<xref:System.Xml.XmlResolver> 인수를 사용하는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드를 통해 변환 중에 <xref:System.Xml.XmlResolver>를 지정합니다.|  
+|변형 중에 모든 `document()` 함수 확인|<xref:System.Xml.XmlResolver> 인수를 사용하는 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드를 통해 변환 중에 <xref:System.Xml.XmlResolver>를 지정합니다.|  
   
  `document()` 함수는 입력 스트림에서 제공하는 초기 XML 데이터뿐 아니라 스타일시트의 다른 XML 리소스도 검색합니다. 이 함수를 사용하면 어느 위치에 있는 XML 데이터도 포함시킬 수 있으므로 <xref:System.Xml.XmlResolver> 메서드에 `null` 값이 제공된 <xref:System.Xml.Xsl.XslTransform.Transform%2A>는 `document()` 함수가 실행되지 않도록 합니다. `document()` 함수를 사용하려면 적절한 권한을 설정하고 <xref:System.Xml.Xsl.XslTransform.Transform%2A>를 매개 변수로 사용하는 <xref:System.Xml.XmlResolver> 메서드를 사용합니다.  
   
  <xref:System.Xml.Xsl.XslTransform.Load%2A> 메서드 및 이 메서드에서 <xref:System.Xml.XmlResolver>를 사용하는 방법에 대한 자세한 내용은 <xref:System.Xml.Xsl.XslTransform.Load%28System.String%2CSystem.Xml.XmlResolver%29?displayProperty=nameWithType>를 참조하세요.  
   
- <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드가 호출되면 로드 시 제공된 증명 정보에 따라 권한이 판별되어 해당 권한 집합이 전체 변환 프로세스에 지정됩니다. `document()` 함수에서 해당 권한 집합에 없는 권한을 요구하는 작업을 시작하려고 하면 예외가 throw됩니다.  
+ <xref:System.Xml.Xsl.XslTransform.Transform%2A> 메서드가 호출되면 로드 시 제공된 증명 정보에 따라 권한이 판별되어 해당 권한 집합이 전체 변형 프로세스에 지정됩니다. `document()` 함수에서 해당 권한 집합에 없는 권한을 요구하는 작업을 시작하려고 하면 예외가 throw됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 

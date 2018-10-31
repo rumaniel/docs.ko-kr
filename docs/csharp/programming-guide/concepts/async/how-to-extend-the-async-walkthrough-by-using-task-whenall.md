@@ -2,12 +2,12 @@
 title: '방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 241bd6baf0c1133ba7603da433a7cdf8d36748c0
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: e809ea3c2b2bcc0f547dd53280835a83f52e079b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260245"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188042"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>방법: Task.WhenAll을 사용하여 비동기 연습 확장(C#)
 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> 메서드를 사용하여 [연습: async 및 await를 사용하여 웹에 액세스(C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)에서 비동기 솔루션의 성능을 향상할 수 있습니다. 이 메서드는 작업 컬렉션으로 표시되는 여러 개의 비동기 작업을 비동기적으로 기다립니다.  
@@ -106,7 +106,7 @@ ms.locfileid: "44260245"
      이전 절차의 `ProcessURLAsync` 메서드와 차이점은 <xref:System.Net.Http.HttpClient> 인스턴스 `client`를 사용한다는 것입니다.  
   
     ```csharp  
-    async Task<int> ProcessURL(string url, HttpClient client)  
+    async Task<int> ProcessURLAsync(string url, HttpClient client)  
     {  
         byte[] byteArray = await client.GetByteArrayAsync(url);  
         DisplayResults(url, byteArray);  
@@ -143,7 +143,7 @@ ms.locfileid: "44260245"
     ```csharp  
     // Create a query.  
     IEnumerable<Task<int>> downloadTasksQuery =   
-        from url in urlList select ProcessURL(url, client);  
+        from url in urlList select ProcessURLAsync(url, client);  
   
     // Use ToArray to execute the query and start the download tasks.  
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
@@ -253,16 +253,16 @@ namespace AsyncExampleWPF_WhenAll
         {  
             List<string> urls = new List<string>   
             {   
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",  
-                "http://msdn.microsoft.com/library/hh290136.aspx",  
-                "http://msdn.microsoft.com/library/ee256749.aspx",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",  
+                "https://msdn.microsoft.com/library/hh290136.aspx",  
+                "https://msdn.microsoft.com/library/ee256749.aspx",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             };  
             return urls;  
         }  
@@ -305,8 +305,8 @@ namespace AsyncExampleWPF_WhenAll
             // is designed to be used with a monospaced font, such as  
             // Lucida Console or Global Monospace.  
             var bytes = content.Length;  
-            // Strip off the "http://".  
-            var displayURL = url.Replace("http://", "");  
+            // Strip off the "https://".  
+            var displayURL = url.Replace("https://", "");  
             resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
   
         }  
@@ -357,7 +357,7 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
   
             // Create a query.  
             IEnumerable<Task<int>> downloadTasksQuery =   
-                from url in urlList select ProcessURL(url, client);  
+                from url in urlList select ProcessURLAsync(url, client);  
   
             // Use ToArray to execute the query and start the download tasks.  
             Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
@@ -400,21 +400,21 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
         {  
             List<string> urls = new List<string>   
             {   
-                "http://msdn.microsoft.com",  
-                "http://msdn.microsoft.com/library/hh290136.aspx",  
-                "http://msdn.microsoft.com/library/ee256749.aspx",  
-                "http://msdn.microsoft.com/library/hh290138.aspx",  
-                "http://msdn.microsoft.com/library/hh290140.aspx",  
-                "http://msdn.microsoft.com/library/dd470362.aspx",  
-                "http://msdn.microsoft.com/library/aa578028.aspx",  
-                "http://msdn.microsoft.com/library/ms404677.aspx",  
-                "http://msdn.microsoft.com/library/ff730837.aspx"  
+                "https://msdn.microsoft.com",  
+                "https://msdn.microsoft.com/library/hh290136.aspx",  
+                "https://msdn.microsoft.com/library/ee256749.aspx",  
+                "https://msdn.microsoft.com/library/hh290138.aspx",  
+                "https://msdn.microsoft.com/library/hh290140.aspx",  
+                "https://msdn.microsoft.com/library/dd470362.aspx",  
+                "https://msdn.microsoft.com/library/aa578028.aspx",  
+                "https://msdn.microsoft.com/library/ms404677.aspx",  
+                "https://msdn.microsoft.com/library/ff730837.aspx"  
             };  
             return urls;  
         }  
   
         // The actions from the foreach loop are moved to this async method.  
-        async Task<int> ProcessURL(string url, HttpClient client)  
+        async Task<int> ProcessURLAsync(string url, HttpClient client)  
         {  
             byte[] byteArray = await client.GetByteArrayAsync(url);  
             DisplayResults(url, byteArray);  
@@ -427,8 +427,8 @@ namespace AsyncExampleWPF_HttpClient_WhenAll
             // is designed to be used with a monospaced font, such as  
             // Lucida Console or Global Monospace.  
             var bytes = content.Length;  
-            // Strip off the "http://".  
-            var displayURL = url.Replace("http://", "");  
+            // Strip off the "https://".  
+            var displayURL = url.Replace("https://", "");  
             resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);  
         }  
     }  

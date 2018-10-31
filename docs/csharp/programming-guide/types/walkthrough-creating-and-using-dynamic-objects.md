@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic objects
 - dynamic objects [C#]
 ms.assetid: 568f1645-1305-4906-8625-5d77af81e04f
-ms.openlocfilehash: 79e7ef99d9d21eb161d8981e166963df7dd57be5
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8134a7c7c1f2c4e6432dd19889faf796a9284553
+ms.sourcegitcommit: fd8d4587cc26e53f0e27e230d6e27d828ef4306b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858901"
+ms.lasthandoff: 10/16/2018
+ms.locfileid: "49347970"
 ---
 # <a name="walkthrough-creating-and-using-dynamic-objects-c-and-visual-basic"></a>연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)
 
@@ -99,12 +99,12 @@ ms.locfileid: "43858901"
     ```  
     List of customers and suppliers  
   
-    Supplier: Lucerne Publishing (http://www.lucernepublishing.com/)  
+    Supplier: Lucerne Publishing (https://www.lucernepublishing.com/)  
     Customer: Preston, Chris  
     Customer: Hines, Patrick  
     Customer: Cameron, Maria  
-    Supplier: Graphic Design Institute (http://www.graphicdesigninstitute.com/)   
-    Supplier: Fabrikam, Inc. (http://www.fabrikam.com/)   
+    Supplier: Graphic Design Institute (https://www.graphicdesigninstitute.com/)   
+    Supplier: Fabrikam, Inc. (https://www.fabrikam.com/)   
     Customer: Seubert, Roxanne  
     Supplier: Proseware, Inc. (http://www.proseware.com/)   
     Customer: Adolphi, Stephan  

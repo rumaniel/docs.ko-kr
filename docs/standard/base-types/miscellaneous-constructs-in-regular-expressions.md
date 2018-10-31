@@ -13,11 +13,11 @@ ms.assetid: 7d10d11f-680f-4721-b047-fb136316b4cd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8956726915ebe1c0b1c7654e62e2e28620274b4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47205134"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836286"
 ---
 # <a name="miscellaneous-constructs-in-regular-expressions"></a>정규식의 기타 구문
 .NET의 정규식에는 세 가지 기타 언어 구문이 포함됩니다. 한 구문에서는 정규식 패턴 중간에 특정 일치 옵션을 사용하거나 사용하지 않도록 설정할 수 있습니다. 나머지 두 구문에서는 정규식에 주석을 포함할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.locfileid: "47205134"
  `(?imnsx-imnsx)` 구문에서 정의한 정규식 옵션의 변경 내용은 포함 그룹의 끝까지 계속 적용됩니다.  
   
 > [!NOTE]
->  `(?imnsx-imnsx:`*subexpression*`)` 그룹화 구문은 하위 식에 대해 동일한 기능을 제공합니다. 자세한 내용은 [그룹화 구문](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
+>  `(?imnsx-imnsx:`*subexpression*`)` 그룹화 구문은 하위 식에 대해 동일한 기능을 제공합니다. 자세한 내용은 [Grouping Constructs](../../../docs/standard/base-types/grouping-constructs-in-regular-expressions.md)을 참조하세요.  
   
  다음 예제에서는 `i`, `n` 및 `x` 옵션을 통해 대/소문자 구분 안 함 및 명시적 캡처를 사용하고 정규식 중간의 정규식 패턴에 있는 공백을 무시합니다.  
   

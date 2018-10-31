@@ -2,12 +2,12 @@
 title: C#의 컬렉션 반복
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: d8a39569df517dffa8ff4b2f638f089f420e44c7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47436266"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50191196"
 ---
 # <a name="iterators-c"></a>반복기(C#)
 
@@ -342,7 +342,7 @@ C#에서 "yield"는 예약어가 아니며 `return` 또는 `break` 키워드 앞
 
 반복기는 <xref:System.Collections.IEnumerator.Reset%2A?displayProperty=nameWithType> 메서드를 지원하지 않습니다. 처음부터 다시 반복하려면 새 반복기를 가져와야 합니다. 반복기 메서드에 의해 반환된 반복기에서 <xref:System.Collections.IEnumerator.Reset%2A>를 호출하면 <xref:System.NotSupportedException>가 throw됩니다.
 
-자세한 내용은 [C# 언어 사양](../../../csharp/language-reference/language-specification/index.md)을 참조하세요.
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/classes.md#iterators)을 참조하세요.
 
 ## <a name="use-of-iterators"></a>반복기 사용
 

@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: fea695be-617c-4977-9567-140e820436fc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fb7b096a6e9bf0f71649f260c4097d5e25476957
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 77f29cb14af90854fa18f421acbeb701928bcd76
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44210960"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50034367"
 ---
 # <a name="xslt-security-considerations"></a>XSLT 보안 고려 사항
 XSLT 언어에는 강력하며 유연성 있는 풍부한 기능이 있습니다. 이러한 기능은 유용하지만 외부 소스에서 악용할 수도 있습니다. XSLT를 안전하게 사용하려면 XSLT를 사용할 때 발생하는 보안 문제 유형을 이해하고 이러한 위험 요소를 완화하기 위한 기본적인 전략을 알아야 합니다.  
@@ -26,7 +26,7 @@ XSLT 언어에는 강력하며 유연성 있는 풍부한 기능이 있습니다
  <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 사용하여 확장 개체를 추가합니다. 확장 개체를 지원하려면 FullTrust 권한 집합이 필요합니다. 이 권한 집합은 확장명 개체 코드를 실행할 때 권한 높이기가 일어나지 않도록 합니다. FullTrust 권한 없이 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 메서드를 호출하려고 시도하면 보안 예외가 throw됩니다.  
   
 ### <a name="style-sheet-scripts"></a>스타일시트 스크립트  
- `msxsl:script` 확장 요소를 사용하여 스타일시트에 스크립트를 포함할 수 있습니다. 스크립트 지원은 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 선택적 기능으로 기본적으로 비활성화되어 있습니다. 스크립트를 활성화하려면 <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> 속성을 `true`로 설정하고 <xref:System.Xml.Xsl.XsltSettings> 개체를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드에 전달합니다.  
+ `msxsl:script` 확장명 요소를 사용하여 스타일시트에 스크립트를 포함할 수 있습니다. 스크립트 지원은 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스의 선택적 기능으로 기본적으로 비활성화되어 있습니다. 스크립트를 활성화하려면 <xref:System.Xml.Xsl.XsltSettings.EnableScript%2A?displayProperty=nameWithType> 속성을 `true`로 설정하고 <xref:System.Xml.Xsl.XsltSettings> 개체를 <xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 메서드에 전달합니다.  
   
 #### <a name="guidelines"></a>지침  
  신뢰할 수 있는 소스에서 스타일시트를 가져온 경우에만 스크립팅을 활성화합니다. 스타일시트의 소스를 확인할 수 없는 경우 또는 신뢰할 수 있는 소스에서 스타일시트를 가져오지 않은 경우 XSLT 설정 인수에 대해 `null`을 전달합니다.  
@@ -60,4 +60,4 @@ XSLT 언어에는 강력하며 유연성 있는 풍부한 기능이 있습니다
 
 - [XSLT 변환](../../../../docs/standard/data/xml/xslt-transformations.md)  
 - [XSLT 처리 중 외부 리소스 확인](../../../../docs/standard/data/xml/resolving-external-resources-during-xslt-processing.md)  
-- [코드 액세스 보안](https://msdn.microsoft.com/library/23a20143-241d-4fe5-9d9f-3933fd594c03)
+- [코드 액세스 보안](../../../../docs/framework/misc/code-access-security.md)

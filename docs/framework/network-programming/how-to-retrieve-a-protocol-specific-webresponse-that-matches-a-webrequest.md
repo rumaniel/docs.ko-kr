@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d8c90785-f16b-42a5-8439-ed2f731b2ba8
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2a72e57156903c9d436a49aaf6da596868af4003
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f1da226fb62c55f37183404765430c094f1cd63f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47454871"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188276"
 ---
 # <a name="how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest"></a>방법: WebRequest와 일치하는 프로토콜 관련 WebResponse 검색
 이 예제에서는 WebRequest와 일치하는 프로토콜별 WebResponse를 검색하는 방법을 보여 줍니다.  

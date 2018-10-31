@@ -18,14 +18,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 65bd172d184b1346000c2bc84cb888dfab28bb61
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 812fbd0a3f12f9b44e419986b5f3198d95d1e3a7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47459778"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199645"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>.NET Framework의 네트워크 추적
 .NET Framework의 네트워크 추적은 메서드 호출에 대한 정보와 관리되는 응용 프로그램에서 생성된 네트워크 트래픽 정보에 대한 액세스를 제공합니다. 이 기능은 개발 도중 응용 프로그램을 디버깅하고 배포된 응용 프로그램을 분석할 때 유용합니다. 네트워크 추적에서 제공된 출력은 개발 단계 및 프로덕션 환경에서 여러 가지 사용 시나리오를 지원하도록 사용자 지정할 수 있습니다.  
@@ -41,4 +39,4 @@ ms.locfileid: "47459778"
  [네트워크 추적 사용](../../../docs/framework/network-programming/enabling-network-tracing.md)  
  [방법: 네트워크 추적 구성](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)  
  [네트워크 추적 해석](../../../docs/framework/network-programming/interpreting-network-tracing.md)  
- [계측 및 추적 소개](https://msdn.microsoft.com/library/e924e57c-33cf-4b0e-9e7f-a45d13e38f2c)
+[응용 프로그램 추적 및 조율](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

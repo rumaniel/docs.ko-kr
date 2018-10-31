@@ -6,18 +6,18 @@ title: .NET 설명서
 description: C#, Visual Basic 및 F#을 사용하는 모든 플랫폼에서 .NET을 사용하여 다양한 응용 프로그램을 만드는 방법을 알아보세요. API 참조, 샘플 코드, 자습서 등을 찾아보세요.
 ms.custom: updateeachrelease
 ms.date: 06/21/2018
-ms.openlocfilehash: dd07b771f267eb2c022b1e0b8de02aca5b0c7a5c
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 658c464cd7871306c7172e06c7041517ccea5ffe
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837471"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183583"
 ---
 <div id="main" class="v2">
     <div class="container">
         <ul class="cardsY panelContent featuredContent">
             <li>
-                <a href="/dotnet/csharp/quick-starts">
+                <a href="/dotnet/csharp/tutorials/intro-to-csharp/">
                     <div class="cardSize">
                         <div class="cardPadding">
                             <div class="card">
@@ -172,7 +172,7 @@ ms.locfileid: "48837471"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">C# 가이드</a></h3>
-                                                <p><a href="/dotnet/csharp/quick-starts">빠른 시작</a></p>
+                                                <p><a href="/dotnet/csharp/tutorials/intro-to-csharp">C# 학습</a></p>
                                                 <p><a href="/dotnet/csharp/getting-started">시작</a></p>
                                                 <p><a href="/dotnet/csharp/tour-of-csharp">C# 둘러보기</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">C# 언어 참조</a></p>

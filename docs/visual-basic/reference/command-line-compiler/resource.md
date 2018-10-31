@@ -10,11 +10,11 @@ helpviewer_keywords:
 - resource compiler option [Visual Basic]
 ms.assetid: eee2f227-91f2-4f2b-a9d6-1c51c5320858
 ms.openlocfilehash: ca9aea526d1039c09883696ed2a35ed930c92872
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044790"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199021"
 ---
 # <a name="-resource-visual-basic"></a>-리소스 (Visual Basic)
 관리되는 리소스를 어셈블리에 포함합니다.  

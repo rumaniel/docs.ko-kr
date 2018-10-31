@@ -4,12 +4,12 @@ description: 감정 예측을 통해 적절한 작업을 수행하는 방법을 
 ms.date: 06/04/2018
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 7d2935fafe9dbad28205c8a896d97d80474a686f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: fd0a1ad246c6d50db35e3d0f0332a82b256902c1
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47436143"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453166"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>자습서: 감정 분석 이진 분류 시나리오에서 ML.NET 사용
 
@@ -175,11 +175,11 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="ingest-the-data"></a>데이터 수집
 
-데이터 로드, 데이터 처리/기능화 및 모델을 포함할 <xref:Microsoft.ML.LearningPipeline>의 새 인스턴스를 초기화합니다. 다음 코드를 `Train` 메서드의 첫 번째 줄로 추가합니다.
+데이터 로드, 데이터 처리/기능화 및 모델을 포함할 <xref:Microsoft.ML.Legacy.LearningPipeline>의 새 인스턴스를 초기화합니다. 다음 코드를 `Train` 메서드의 첫 번째 줄로 추가합니다.
 
 [!code-csharp[LearningPipeline](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#5 "Create a learning pipeline")]
 
-<xref:Microsoft.ML.Data.TextLoader> 개체는 파이프라인의 첫 번째 부분이며 학습 파일 데이터를 로드합니다.
+<xref:Microsoft.ML.Legacy.Data.TextLoader> 개체는 파이프라인의 첫 번째 부분이며 학습 파일 데이터를 로드합니다.
 
 [!code-csharp[TextLoader](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#6 "Add a text loader to the pipeline")]
 
@@ -187,13 +187,13 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 데이터 전처리 및 정리는 데이터 집합이 기계 학습에 효과적으로 사용되기 전에 수행되는 중요한 작업입니다. 원시 데이터는 종종 정리되지 않고 불안정하며 값이 누락될 수 있습니다. 이러한 모델링 작업 없이 데이터를 사용하면 잘못된 결과를 얻을 수 있습니다. ML.NET의 변환 파이프라인을 사용하면 학습 또는 테스트 전에 데이터에 적용되는 사용자 지정 변환 집합을 작성할 수 있습니다. 변환의 기본 목적은 데이터 기능화입니다. 변환 파이프라인의 장점은 변환 파이프라인 정의 후에 파이프라인을 저장하여 테스트 데이터에 적용하는 것입니다.
 
-<xref:Microsoft.ML.Transforms.TextFeaturizer>를 적용하여 `SentimentText` 열을 기계 학습 알고리즘에 사용되는 `Features`라는 [숫자 벡터](../resources/glossary.md#numerical-feature-vector)로 변환합니다. 이것이 전처리/기능화 단계입니다. ML.NET에서 사용 가능한 추가 구성 요소를 사용하면 모델에서 더 나은 결과를 얻을 수 있습니다. `TextFeaturizer`를 다음 코드 줄로 파이프라인에 추가합니다.
+<xref:Microsoft.ML.Legacy.Transforms.TextFeaturizer>를 적용하여 `SentimentText` 열을 기계 학습 알고리즘에 사용되는 `Features`라는 [숫자 벡터](../resources/glossary.md#numerical-feature-vector)로 변환합니다. 이것이 전처리/기능화 단계입니다. ML.NET에서 사용 가능한 추가 구성 요소를 사용하면 모델에서 더 나은 결과를 얻을 수 있습니다. `TextFeaturizer`를 다음 코드 줄로 파이프라인에 추가합니다.
 
 [!code-csharp[TextFeaturizer](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#7 "Add a TextFeaturizer to the pipeline")]
 
 ## <a name="choose-a-learning-algorithm"></a>학습 알고리즘 선택
 
-<xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier> 개체는 이 파이프라인에서 사용할 의사 결정 트리 학습자입니다. 기능화 단계와 비슷하게 ML.NET에서 사용 가능한 다양한 학습자를 시도하고 매개 변수를 변경하면 다른 결과가 생성됩니다. 튜닝의 경우 <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.NumLeaves> 및 <xref:Microsoft.ML.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs> 같은 [하이퍼 매개 변수](../resources/glossary.md#hyperparameter)를 설정합니다. 이러한 하이퍼 매개 변수는 모델에 영향을 주기 전에 설정되며 모델별로 다릅니다. 성능을 위해 의사 결정 트리를 튜닝하는 데 사용되므로 값이 클수록 성능에 부정적인 영향을 줄 수 있습니다.
+<xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier> 개체는 이 파이프라인에서 사용할 의사 결정 트리 학습자입니다. 기능화 단계와 비슷하게 ML.NET에서 사용 가능한 다양한 학습자를 시도하고 매개 변수를 변경하면 다른 결과가 생성됩니다. 튜닝의 경우 <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumTrees>, <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.NumLeaves> 및 <xref:Microsoft.ML.Legacy.Trainers.FastTreeBinaryClassifier.MinDocumentsInLeafs> 같은 [하이퍼 매개 변수](../resources/glossary.md#hyperparameter)를 설정합니다. 이러한 하이퍼 매개 변수는 모델에 영향을 주기 전에 설정되며 모델별로 다릅니다. 성능을 위해 의사 결정 트리를 튜닝하는 데 사용되므로 값이 클수록 성능에 부정적인 영향을 줄 수 있습니다.
 
 `Train` 메서드에 다음 코드를 추가합니다.
 
@@ -201,7 +201,7 @@ public static async Task<PredictionModel<SentimentData, SentimentPrediction>> Tr
 
 ## <a name="train-the-model"></a>모델 학습
 
-로드되고 변환된 데이터 집합을 기반으로 <xref:Microsoft.ML.PredictionModel%602> 모델을 학습시킵니다. `pipeline.Train<SentimentData, SentimentPrediction>()`은 파이프라인을 학습시킵니다(데이터를 로드하고 기능화기 및 학습자를 학습시킴). 이 문제가 발생할 때까지 실험이 실행되지 않습니다.
+로드되고 변환된 데이터 집합을 기반으로 <xref:Microsoft.ML.Legacy.PredictionModel%602> 모델을 학습시킵니다. `pipeline.Train<SentimentData, SentimentPrediction>()`은 파이프라인을 학습시킵니다(데이터를 로드하고 기능화기 및 학습자를 학습시킴). 이 문제가 발생할 때까지 실험이 실행되지 않습니다.
 
 `Train` 메서드에 다음 코드를 추가합니다.
 
@@ -239,15 +239,15 @@ public static void Evaluate(PredictionModel<SentimentData, SentimentPrediction> 
 
 [!code-csharp[CallEvaluate](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#12 "Call the Evaluate method")]
 
-<xref:Microsoft.ML.Data.TextLoader> 클래스는 동일한 스키마를 사용하여 새 테스트 데이터 집합을 로드합니다. 이 데이터 집합을 품질 검사로 사용하여 모델을 평가할 수 있습니다. `Evaluate` 메서드에 다음 코드를 추가합니다.
+<xref:Microsoft.ML.Legacy.Data.TextLoader> 클래스는 동일한 스키마를 사용하여 새 테스트 데이터 집합을 로드합니다. 이 데이터 집합을 품질 검사로 사용하여 모델을 평가할 수 있습니다. `Evaluate` 메서드에 다음 코드를 추가합니다.
 
 [!code-csharp[LoadText](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#13 "Load the test dataset")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationEvaluator> 개체는 지정된 데이터 집합을 사용하여 `PredictionModel`에 대한 품질 메트릭을 계산합니다. 해당 메트릭을 확인하려면 다음 코드를 사용하여 `Evaluate` 메서드의 다음 줄로 평가자를 추가합니다.
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationEvaluator> 개체는 지정된 데이터 집합을 사용하여 `PredictionModel`에 대한 품질 메트릭을 계산합니다. 해당 메트릭을 확인하려면 다음 코드를 사용하여 `Evaluate` 메서드의 다음 줄로 평가자를 추가합니다.
 
 [!code-csharp[BinaryEvaluator](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#14 "Create the binary evaluator")]
 
-<xref:Microsoft.ML.Models.BinaryClassificationMetrics>에는 이진 분류 평가자가 계산한 전체 메트릭이 포함됩니다. 모델의 품질을 확인하기 위해 이러한 메트릭을 표시하려면 먼저 메트릭을 가져와야 합니다. 다음 코드를 추가합니다.
+<xref:Microsoft.ML.Legacy.Models.BinaryClassificationMetrics>에는 이진 분류 평가자가 계산한 전체 메트릭이 포함됩니다. 모델의 품질을 확인하기 위해 이러한 메트릭을 표시하려면 먼저 메트릭을 가져와야 합니다. 다음 코드를 추가합니다.
 
 [!code-csharp[CreateMetrics](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#15 "Evaluate the model and create metrics")]
 
@@ -283,7 +283,7 @@ public static void Predict(PredictionModel<SentimentData, SentimentPrediction> m
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#18 "Create test data for predictions")]
 
-이제 모델이 있으므로 <xref:Microsoft.ML.PredictionModel.Predict%2A?displayProperty=nameWithType> 메서드를 사용하여 댓글 데이터의 긍정적 또는 부정적 감정을 예측하는 데 모델을 사용할 수 있습니다. 예측을 가져오려면 새 데이터에서 `Predict`를 사용합니다. 입력 데이터는 문자열이고 모델은 기능화를 포함합니다. 파이프라인은 학습 및 예측 중에 동기화됩니다. 특별히 예측을 위해 전처리/기능화 코드를 작성할 필요가 없고 동일한 API가 배치 및 일회성 예측을 둘 다 처리합니다.
+이제 모델이 있으므로 <xref:Microsoft.ML.Legacy.PredictionModel.Predict%2A?displayProperty=nameWithType> 메서드를 사용하여 댓글 데이터의 긍정적 또는 부정적 감정을 예측하는 데 모델을 사용할 수 있습니다. 예측을 가져오려면 새 데이터에서 `Predict`를 사용합니다. 입력 데이터는 문자열이고 모델은 기능화를 포함합니다. 파이프라인은 학습 및 예측 중에 동기화됩니다. 특별히 예측을 위해 전처리/기능화 코드를 작성할 필요가 없고 동일한 API가 배치 및 일회성 예측을 둘 다 처리합니다.
 
 [!code-csharp[Predict](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#19 "Create predictions of sentiments")]
 

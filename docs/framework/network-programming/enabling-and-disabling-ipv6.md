@@ -2,14 +2,12 @@
 title: IPv6 사용 및 사용 안 함
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f63d62c7605d32dfbe97193f8aed53f0fc547cff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9dbbbbb522628de81be3d3d1382867de99c570d0
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195622"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183089"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>IPv6 사용 및 사용 안 함
 IPv6 프로토콜을 사용하려면 IPv6을 지원하는 운영 체제 버전을 실행 중인지 확인하고 운영 체제와 네트워킹 클래스가 제대로 구성되어 있는지 확인합니다.  

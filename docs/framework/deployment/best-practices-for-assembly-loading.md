@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 68d1c539-6a47-4614-ab59-4b071c9d4b4c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b05ec604f8493ba773d9de9af19acc70c023b8bf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9c43f75dc17d49fe34094829387673b0f1f1d028
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394155"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201584"
 ---
 # <a name="best-practices-for-assembly-loading"></a>최선의 어셈블리 로드 방법
 이 문서에서는 <xref:System.InvalidCastException>, <xref:System.MissingMethodException> 및 다른 오류를 발생시킬 수 있는 형식 ID 문제를 방지하는 방법을 설명합니다. 이 문서에서는 다음 권장 사항을 설명합니다.  
@@ -164,9 +164,10 @@ ms.locfileid: "33394155"
   
  이러한 어셈블리를 로드하는 데는 <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다. 이제 어셈블리가 검색 경로에 있으므로 어셈블리는 로드 소스 컨텍스트가 아닌 기본 로드 컨텍스트에 로드됩니다. 하지만 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 메서드로 전환하고 전체 어셈블리 표시 이름을 제공하여 올바른 버전이 항상 사용되는지 확인하는 것이 좋습니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>  
- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>  
- [추가 기능 및 확장성](../../../docs/framework/add-ins/index.md)
+## <a name="see-also"></a>참고 항목
+
+- <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.LoadFile%2A?displayProperty=nameWithType>
+- <xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>
+- [추가 기능 및 확장성](../../../docs/framework/add-ins/index.md)

@@ -4,14 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - cache [.NET Framework], configuring
 ms.assetid: 3f694a1c-de5d-47cf-a6eb-cfc369fb8a9f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: a7fe54911755863adc6a9b2bd91eff5cad9f9d4e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 12814a7b44f925960ddf00c3a52b2d8c78257de7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193046"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50049531"
 ---
 # <a name="configuring-caching-in-network-applications"></a>네트워크 응용 프로그램에서 캐싱 구성
 캐싱을 구성하려면 응용 프로그램 또는 <xref:System.Net.WebRequest> 수준에서 캐시 정책을 지정해야 합니다. 다음 항목에서는 캐싱을 사용하도록 응용 프로그램 및 요청을 구성하는 방법을 보여 주는 코드 예제를 제공합니다.  

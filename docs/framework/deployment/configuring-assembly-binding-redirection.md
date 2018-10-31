@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d266cbd8-bf91-41d1-baf0-afbc481a741f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04743dc7a0fc821f2e3b94929e2384eb25c69f2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3abf42790757708b235b3eab82ea9a11ff545215
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387187"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50182868"
 ---
 # <a name="configuring-assembly-binding-redirection"></a>어셈블리 바인딩 리디렉션 구성
 기본적으로 응용 프로그램에서는 응용 프로그램을 컴파일하는 데 사용된 런타임 버전과 함께 제공된 .NET Framework 어셈블리 집합을 사용합니다. 응용 프로그램 구성 파일에서 [\<assemblyBinding>](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md) 요소에 대해 **appliesTo** 특성을 사용하여 어셈블리 바인딩 참조를 .NET Framework 어셈블리의 특정 버전으로 리디렉션할 수 있습니다. 이 선택적 특성은 .NET Framework 버전을 사용하여 특성이 적용되는 버전을 지정합니다. **appliesTo** 특성이 지정되지 않으면 **\<assemblyBinding>** 요소는 .NET Framework의 모든 버전에 적용됩니다.  
@@ -58,4 +58,4 @@ ms.locfileid: "33387187"
  어셈블리 바인딩이 리디렉션이 발생하는지를 확인하여 구성 파일이 사용되고 있는지를 확인할 수 있습니다. [어셈블리 바인딩 로그 뷰어(Fuslogvw.exe)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md)를 사용하여 로드되고 있는 어셈블리를 확인합니다. 모든 어셈블리 바인드를 확인하려면 레지스트리에서 **ForceLog**에 대한 항목을 설정해야 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

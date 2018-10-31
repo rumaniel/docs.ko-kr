@@ -5,14 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8848c7e-f5c5-4d42-b86d-9951ff8f4146
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f008cf82b80e29f8fe741034a0e820b5eae5b0ba
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c883321d74bb4309f483604d51057390d00189e6
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193766"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50043018"
 ---
 # <a name="how-to-access-http-specific-properties"></a>방법: HTTP 관련 속성에 액세스
 이 샘플은 HTTP **Keep-alive** 동작을 끄고 웹 서버에서 프로토콜 버전 번호를 가져오는 방법을 보여 줍니다.  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6ab205ad12b60651443e0fc409e890ea93168ebd
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: e9c40b68a67219cd8f24874780281023974886e4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848077"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201020"
 ---
 # .NET Framework의 새로운 기능<a name="introduction"></a>
 
@@ -162,7 +162,7 @@ End Function
 
 **임시 키에 대한 지원**
 
-필요에 따라 PFX 가져오기는 하드 드라이브를 무시하고 메모리에서 직접 개인 키를 로드할 수 있습니다. 새로운 <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> 플래그가 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 생성자 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나에 지정되는 경우 개인 키는 임시 키로 로드됩니다. 이렇게 하면 키가 디스크에 표시되지 않습니다. 단,
+필요에 따라 PFX 가져오기는 하드 드라이브를 무시하고 메모리에서 직접 개인 키를 로드할 수 있습니다. 새로운 <xref:System.Security.Cryptography.X509Certificates.X509KeyStorageFlags.EphemeralKeySet?displayProperty=nameWithType> 플래그가 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 생성자 또는 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2.Import%2A?displayProperty=nameWithType> 메서드의 오버로드 중 하나에 지정되는 경우 개인 키는 임시 키로 로드됩니다. 이렇게 하면 키가 디스크에 표시되지 않습니다. 단,
 
 - 키가 디스크에 유지되지 않으므로 이 플래그로 로드된 인증서는 X509Store에 추가하기에 적합하지 않습니다.
 
@@ -182,7 +182,7 @@ End Function
 
 **CryptoStream을 삭제한 후 래핑된 스트림이 열려있음**
 
-.NET Framework 4.7.2부터 <xref:System.Security.Cryptography.CryptoStream> 클래스에는 <xref:System.Security.Cryptography.CryptoStream.Dispose%2A>가 래핑된 스트림을 닫지 않도록 허용하는 추가 생성자가 있습니다. <xref:System.Security.Cryptography.CryptoStream> 인스턴스를 삭제한 후 래핑된 스트림을 연 상태로 두려면 새로운 <xref:System.Security.Cryptography.CryptoStream> 생성자를 다음과 같이 호출합니다.
+.NET Framework 4.7.2부터 <xref:System.Security.Cryptography.CryptoStream> 클래스에는 <xref:System.Security.Cryptography.CryptoStream.Dispose%2A>가 래핑된 스트림을 닫지 않도록 허용하는 추가 생성자가 있습니다. <xref:System.Security.Cryptography.CryptoStream> 인스턴스를 삭제한 후 래핑된 스트림을 연 상태로 두려면 새로운 <xref:System.Security.Cryptography.CryptoStream> 생성자를 다음과 같이 호출합니다.
 
 ```csharp
 var cStream = new CryptoStream(stream, transform, mode, leaveOpen: true);
@@ -321,15 +321,15 @@ c.SameSite = SameSiteMode.Lax
 
 ```xml
 <configuration>
-  <configSections>
-    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/> 
-  </configSections>
-  <SqlColumnEncryptionEnclaveProviders>
-    <providers>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection,System.Data,Version=4.0.0.0,Culture=neutral,PublicKeyToken=b77a5c561934e089"/> 
+  </configSections>
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
       <add name="Azure" type="Microsoft.SqlServer.Management.AlwaysEncrypted.AzureEnclaveProvider,MyApp"/>
       <add name="HGS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.HGSEnclaveProvider,MyApp" />
-    </providers>
-  </SqlColumnEncryptionEnclaveProviders >
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders >
 </configuration>
 ```
 
@@ -347,13 +347,13 @@ enclave 기반 Always Encrypted의 기본 흐름은 다음과 같습니다.
 
 **원본 제공 ResourceDictionaries 찾기**
 
-.NET Framework 4.7.2부터 진단 도우미는 지정된 원본 URI에서 만든 <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>를 찾을 수 있습니다. (이는 프로덕션 응용 프로그램이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) 사용자는 Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미를 사용하면 변경 사항이 실행 중인 응용 프로그램에 적용될 수 있도록 ResourceDictionary를 편집할 수 있습니다. 이를 수행하기 위한 한 단계는 실행 중인 응용 프로그램이 편집 중인 사전에서 만든 모든 ResourceDictionaries를 찾는 것입니다. 예를 들어 응용 프로그램이 지정된 원본 URI에서 해당 콘텐츠가 복사된 ResourceDictionary를 선언할 수 있습니다.
+.NET Framework 4.7.2부터 진단 도우미는 지정된 소스 URI에서 만든  <xref:System.Windows.Xps.Packaging.IXpsFixedPageReader.ResourceDictionaries>를 찾을 수 있습니다. (이는 프로덕션 응용 프로그램이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) 사용자는 Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미를 사용하면 변경 사항이 실행 중인 응용 프로그램에 적용될 수 있도록 ResourceDictionary를 편집할 수 있습니다. 이를 수행하기 위한 한 단계는 실행 중인 응용 프로그램이 편집 중인 사전에서 만든 모든 ResourceDictionaries를 찾는 것입니다. 예를 들어 응용 프로그램이 지정된 원본 URI에서 해당 콘텐츠가 복사된 ResourceDictionary를 선언할 수 있습니다.
 
 ```xml
 <ResourceDictionary Source="MyRD.xaml">
 ```
 
-*MyRD.xaml*에서 원래 태그를 편집하는 진단 도우미는 새로운 기능을 사용하여 사전을 찾을 수 있습니다. 이 기능은 새 정적 메서드인 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>에서 구현됩니다. 다음 코드에 표시된 것처럼 진단 도우미는 원래 태그를 식별하는 절대 URI를 사용하여 새 메서드를 호출합니다.
+*MyRD.xaml* 에서 원래 태그를 편집하는 진단 도우미는 새로운 기능을 사용하여 사전을 찾을 수 있습니다. 이 기능은 새 정적 메서드인 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetResourceDictionariesForSource%2A?displayProperty=nameWithType>에서 구현됩니다. 다음 코드에 표시된 것처럼 진단 도우미는 원래 태그를 식별하는 절대 URI를 사용하여 새 메서드를 호출합니다.
 
 ```csharp
 IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(new Uri("pack://application:,,,/MyApp;component/MyRD.xaml"));
@@ -362,11 +362,11 @@ IEnumerable<ResourceDictionary> dictionaries = ResourceDictionaryDiagnostics.Get
 Dim dictionaries As IEnumerable(Of ResourceDictionary) = ResourceDictionaryDiagnostics.GetResourceDictionariesForSource(New Uri("pack://application:,,,/MyApp;component/MyRD.xaml"))
 ```
 
-메서드는 <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) 환경 변수가 설정된 경우 외에는 빈 열거를 반환합니다.
+메서드는  <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  환경 변수가 설정된 경우 외에는 빈 열거를 반환합니다.
 
 **ResourceDictionary 소유자 찾기**
 
-.NET Framework 4.7.2부터 진단 도우미는 지정된 <xref:Windows.UI.Xaml.ResourceDictionary>의 소유자를 찾을 수 있습니다. (이는 프로덕션 응용 프로그램이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) <xref:Windows.UI.Xaml.ResourceDictionary>를 변경할 때마다 WPF는 변경 사항의 영향을 받을 수도 있는 모든 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 참조를 자동으로 찾습니다.
+.NET Framework 4.7.2부터 진단 도우미는 지정된 <xref:Windows.UI.Xaml.ResourceDictionary>의 소유자를 찾을 수 있습니다. (이는 프로덕션 응용 프로그램이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) <xref:Windows.UI.Xaml.ResourceDictionary>를 변경할 때마다 WPF는 변경 사항의 영향을 받을 수도 있는 모든 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 참조를 자동으로 찾습니다.
 
 Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조를 처리하기 위해 이를 확장할 수 있습니다. 이 프로세스의 첫 번째 단계는 사전의 소유자를 찾는 것입니다. 즉, `Resources` 속성이 사전을 참조하는 모든 개체를 찾습니다(<xref:System.Windows.ResourceDictionary.MergedDictionaries?displayProperty=nameWithType> 속성을 통해 직접 또는 간접적). `Resources` 속성이 있는 각 기본 형식을 위한 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics?displayProperty=nameWithType> 클래스에서 구현된 세 개의 새로운 정적 메서드는 이 단계를 지원합니다.
 
@@ -376,11 +376,11 @@ Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우�
 
 - [`public static IEnumerable<Application> GetApplicationOwners(ResourceDictionary dictionary);`](xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.GetApplicationOwners%2A)
 
-이러한 메서드는 <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) 환경 변수가 설정된 경우 외에는 빈 열거를 반환합니다.
+이러한 메서드는  <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  환경 변수가 설정된 경우 외에는 빈 열거를 반환합니다.
 
 **StaticResource 참조 찾기**
 
-이제 진단 도우미는 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조가 확인될 때마다 알림을 받을 수 있습니다. (이는 프로덕션 응용 프로그램이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 해당 값이 <xref:Windows.UI.Xaml.ResourceDictionary> 변경 내용에 포함된 경우 리소스의 모든 사용을 업데이트해야 할 수도 있습니다. WPF는 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 참조에 대해 이를 자동으로 수행하지만, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조에 대해서는 의도적으로 수행하지 않습니다. .NET Framework 4.7.2부터 진단 도우미는 이러한 알림을 사용하여 정적 리소스의 해당 사용을 찾을 수 있습니다.
+이제 진단 도우미는 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조가 확인될 때마다 알림을 받을 수 있습니다. (이는 프로덕션 응용 프로그램이 아닌 진단 도우미에서 사용하기 위한 기능입니다.) Visual Studio의 “편집하며 계속하기” 기능과 같은 진단 도우미는 해당 값이 <xref:Windows.UI.Xaml.ResourceDictionary> 변경 내용에 포함된 경우 리소스의 모든 사용을 업데이트해야 할 수도 있습니다. WPF는 [DynamicResource](../wpf/advanced/dynamicresource-markup-extension.md) 참조에 대해 이를 자동으로 수행하지만, [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조에 대해서는 의도적으로 수행하지 않습니다. .NET Framework 4.7.2부터 진단 도우미는 이러한 알림을 사용하여 정적 리소스의 해당 사용을 찾을 수 있습니다.
 
 알림은 새로운 <xref:System.Windows.Diagnostics.ResourceDictionaryDiagnostics.StaticResourceResolved?displayProperty=nameWithType> 이벤트에 의해 구현됩니다.
 
@@ -392,7 +392,7 @@ public static event EventHandler<StaticResourceResolvedEventArgs> StaticResource
 Public Shared Event StaticResourceResolved As EventHandler(Of StaticResourceResolvedEventArgs)
 ```
 
-이 이벤트는 런타임이 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조를 확인할 때마다 발생합니다. <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> 인수는 해상도를 설명하고 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조를 호스트하는 개체 및 속성과 해상도에 사용되는 <xref:Windows.UI.Xaml.ResourceDictionary> 및 키를 나타냅니다.
+이 이벤트는 런타임이 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조를 확인할 때마다 발생합니다. <xref:System.Windows.Diagnostics.StaticResourceResolvedEventArgs> 인수는 해상도를 설명하고 [StaticResource](../wpf/advanced/staticresource-markup-extension.md) 참조를 호스트하는 개체 및 속성과 해상도에 사용되는  <xref:Windows.UI.Xaml.ResourceDictionary> 및 키를 나타냅니다.
 
 ```csharp
 public class StaticResourceResolvedEventArgs : EventArgs
@@ -407,7 +407,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 }
 ```
 
-이벤트는 <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A) 환경 변수가 설정된 경우 외에는 발생하지 않습니다(및 해당 `add` 접근자는 무시됨).
+이벤트는  <xref:System.Windows.Diagnostics.VisualDiagnostics>가 활성화되고 [`ENABLE_XAML_DIAGNOSTICS_SOURCE_INFO`](xref:System.Windows.Diagnostics.VisualDiagnostics.GetXamlSourceInfo%2A)  환경 변수가 설정된 경우 외에는 발생하지 않고 해당 `add` 접근자는 무시됩니다.
 
 #### <a name="clickonce"></a>ClickOnce
 
@@ -415,7 +415,7 @@ Windows Forms, WPF(Windows Presentation Foundation) 및 VSTO(Visual Studio Tools
 
 ```xml
 <windowsSettings>
-   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
+   <dpiAware xmlns="http://schemas.microsoft.com/SMI/2005/WindowsSettings">true</dpiAware>
 </windowsSettings>
 ```
 
@@ -517,7 +517,7 @@ ASP.NET은 23개 이벤트가 포함된 미리 정의된 파이프라인의 요�
 - [Windows Forms](#wf47)
 - [WPF(Windows Presentation Foundation)](#WPF47)
 
-.NET Framework 4.7에 추가된 새 API 목록은 GitHub에서 [.NET Framework 4.7 API 변경 내용](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)을 참조하세요. .NET Framework 4.7의 향상된 기능 및 버그 수정 목록은 GitHub에서 [.NET Framework 4.7 변경 내용 목록](http://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)을 참조하세요.  자세한 내용은 .NET 블로그에서 [.NET Framework 4.7 알림](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)을 참조하세요.
+.NET Framework 4.7에 추가된 새 API 목록은 GitHub에서 [.NET Framework 4.7 API 변경 내용](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)을 참조하세요. .NET Framework 4.7의 향상된 기능 및 버그 수정 목록은 GitHub에서 [.NET Framework 4.7 변경 내용 목록](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)을 참조하세요.  자세한 내용은 .NET 블로그에서 [.NET Framework 4.7 알림](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)을 참조하세요.
 
 <a name="Core47" />
 
@@ -725,11 +725,11 @@ public interface ISessionStateModule : IHttpModule {
 <a name="Strings" />
 
 ### <a name="character-categories"></a>문자 범주
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]의 문자는 [유니코드 표준 버전 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/)을 기반으로 분류됩니다. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]의 문자는 유니코드 6.3 문자 범주를 기반으로 분류됩니다.
+ [!INCLUDE[net_v462](../../../includes/net-v462-md.md)]의 문자는 [유니코드 표준 버전 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)을 기반으로 분류됩니다. [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 및 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)]의 문자는 유니코드 6.3 문자 범주를 기반으로 분류됩니다.
 
  유니코드 8.0 지원은 <xref:System.Globalization.CharUnicodeInfo> 클래스에 의한 문자 분류와 해당 클래스를 사용하는 유형 및 메서드로 제한됩니다. 여기에는 <xref:System.Globalization.StringInfo> 클래스, 오버로드된 <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> 메서드, .NET Framework 정규식 엔진에서 인식되는 [문자 클래스](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)가 포함됩니다.  문자 및 문자열 비교와 정렬은 이 변경의 영향을 받지 않으며, 기본 운영 체제, Windows 7 시스템 또는 .NET Framework에서 제공하는 문자 데이터를 계속해서 사용합니다.
 
- 문자 범주를 유니코드 6.0에서 유니코드 7.0으로 변경하려면 유니코드 컨소시엄 웹 사이트에서 [유니코드 표준, 버전 7.0.0](http://www.unicode.org/versions/Unicode7.0.0/)을 참조하십시오. 유니코드 7.0에서 유니코드 8.0으로 변경하려면 유니코드 컨소시엄 웹 사이트에서 [유니코드 표준, 버전 8.0.0](http://www.unicode.org/versions/Unicode8.0.0/)을 참조하십시오.
+ 문자 범주를 유니코드 6.0에서 유니코드 7.0으로 변경하려면 유니코드 컨소시엄 웹 사이트에서 [유니코드 표준, 버전 7.0.0](https://www.unicode.org/versions/Unicode7.0.0/)을 참조하십시오. 유니코드 7.0에서 유니코드 8.0으로 변경하려면 유니코드 컨소시엄 웹 사이트에서 [유니코드 표준, 버전 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/)을 참조하십시오.
 
 <a name="Crypto462" />
 
@@ -1223,7 +1223,7 @@ SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠
 
      MVC, Web API 및 웹 페이지가 MVC 6이라는 단일 프레임워크로 통합됩니다. Visual Studio 2015 이상의 도구를 통해 ASP.NET Core 앱을 빌드합니다. 기존 응용 프로그램도 새로운 .NET Framework에서 작동하지만 MVC 6 또는 SignalR 3을 사용하는 앱을 빌드하려면 Visual Studio 2015 이상의 프로젝트 시스템을 사용해야 합니다.
 
-     자세한 내용은 [ASP.NET Core](http://go.microsoft.com/fwlink/?LinkId=518238)를 참조하세요.
+     자세한 내용은 [ASP.NET Core](/aspnet/core/)를 참조하세요.
 
 - **ASP.NET 업데이트**
 
@@ -1247,18 +1247,18 @@ SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠
 
     - **HTTP/2 지원(Windows 10)**
 
-         [HTTP/2](http://www.wikipedia.org/wiki/HTTP/2)는 더 나은 연결 사용률(클라이언트와 서버 간 왕복 횟수 감소)을 제공하여 사용자의 웹 페이지 로딩 대기 시간을 줄여주는 새 버전의 HTTP 프로토콜입니다.  이 프로토콜은 단일 환경의 일부로 요청되는 여러 아티팩트에 최적화되었으므로 웹 페이지(서비스 대비)가 HTTP/2에서 가장 많은 혜택을 얻을 수 있습니다. .NET Framework 4.6의 ASP.NET에는 HTTP/2 지원이 추가되었습니다. 여러 레이어에 네트워킹 기능이 있기 때문에 HTTP/2를 사용하려면 Windows, IIS 및 ASP.NET에 새로운 기능이 필요했습니다. ASP.NET과 함께 HTTP/2를 사용하려면 Windows 10에서 실행해야 합니다.
+         [HTTP/2](https://www.wikipedia.org/wiki/HTTP/2)는 더 나은 연결 사용률(클라이언트와 서버 간 왕복 횟수 감소)을 제공하여 사용자의 웹 페이지 로딩 대기 시간을 줄여주는 새 버전의 HTTP 프로토콜입니다.  이 프로토콜은 단일 환경의 일부로 요청되는 여러 아티팩트에 최적화되었으므로 웹 페이지(서비스 대비)가 HTTP/2에서 가장 많은 혜택을 얻을 수 있습니다. .NET Framework 4.6의 ASP.NET에는 HTTP/2 지원이 추가되었습니다. 여러 레이어에 네트워킹 기능이 있기 때문에 HTTP/2를 사용하려면 Windows, IIS 및 ASP.NET에 새로운 기능이 필요했습니다. ASP.NET과 함께 HTTP/2를 사용하려면 Windows 10에서 실행해야 합니다.
 
          또한 HTTP/2는 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> API를 사용하는 Windows 10 UWP(유니버설 Windows 플랫폼) 앱에서 지원되며 기본적으로 설정되어 있습니다.
 
-         ASP.NET 응용 프로그램의 [PUSH_PROMISE](http://http2.github.io/http2-spec/#PUSH_PROMISE) 기능 사용 방법을 제공하기 위해 두 개의 오버로드(<xref:System.Web.HttpResponse.PushPromise%28System.String%29> 및 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>)와 함께 새 메서드가 <xref:System.Web.HttpResponse> 클래스에 추가되었습니다.
+         ASP.NET 응용 프로그램의 [PUSH_PROMISE](https://http2.github.io/http2-spec/#PUSH_PROMISE) 기능 사용 방법을 제공하기 위해 두 개의 오버로드(<xref:System.Web.HttpResponse.PushPromise%28System.String%29> 및 <xref:System.Web.HttpResponse.PushPromise%28System.String%2CSystem.String%2CSystem.Collections.Specialized.NameValueCollection%29>)와 함께 새 메서드가 <xref:System.Web.HttpResponse> 클래스에 추가되었습니다.
 
         > [!NOTE]
         > ASP.NET Core는 HTTP/2를 지원하는 반면 PUSH PROMISE 기능에 대한 지원은 아직 추가되지 않았습니다.
 
          브라우저와 웹 서버(Windows의 IIS)가 모든 작업을 수행합니다. 사용자를 위해 직접 힘든 작업을 수행할 필요가 없습니다.
 
-         대부분의 [주요 브라우저가 HTTP/2를 지원](http://www.wikipedia.org/wiki/HTTP/2)하므로 서버에서 지원할 경우 HTTP/2 지원은 사용자에게 도움이 될 수 있습니다.
+         대부분의 [주요 브라우저가 HTTP/2를 지원](https://www.wikipedia.org/wiki/HTTP/2)하므로 서버에서 지원할 경우 HTTP/2 지원은 사용자에게 도움이 될 수 있습니다.
 
     - **토큰 바인딩 프로토콜 지원**
 
@@ -1681,7 +1681,7 @@ SqlClient는 이제 자동으로 AlwaysOn AG(가용성 그룹)에 대한 더 빠
 
  Visual Studio 2013의 .NET Framework 응용 프로그램 디버깅 시 개선된 기능은 다음과 같습니다.
 
-- Visual Studio 디버거에서 값 반환. Visual Studio 2013에서 관리되는 응용 프로그램을 디버깅하면 자동 창에 메서드에 대한 반환 형식 및 값이 표시됩니다. 이 정보는 데스크톱, Windows 스토어 및 Windows Phone 응용 프로그램에서 사용할 수 있습니다. 자세한 내용은 MSDN 라이브러리의 [메서드 호출의 반환 값 검사](https://msdn.microsoft.com/library/e3245b37-8e2e-4200-ba84-133726e95f1f\(v=vs.120\).aspx)를 참조하십시오.
+- Visual Studio 디버거에서 값 반환. Visual Studio 2013에서 관리되는 응용 프로그램을 디버깅하면 자동 창에 메서드에 대한 반환 형식 및 값이 표시됩니다. 이 정보는 데스크톱, Windows 스토어 및 Windows Phone 응용 프로그램에서 사용할 수 있습니다. 자세한 내용은 [메서드 호출의 반환 값 검사](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn32325728%v=vs.120%29)를 참조하세요.
 
 - 64비트 응용 프로그램의 편집하며 계속하기. Visual Studio 2013은 데스크톱, Windows 스토어 및 Windows Phone용 64비트 관리되는 응용 프로그램의 편집하며 계속하기 기능을 지원합니다. 기존 제한은 32비트 응용 프로그램과 64비트 응용 프로그램에서 그대로 적용됩니다. [지원되는 코드 변경 내용(C#)](/visualstudio/debugger/supported-code-changes-csharp) 문서의 마지막 섹션을 참조하십시오.
 

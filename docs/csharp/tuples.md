@@ -3,12 +3,12 @@ title: 튜플 형식 - C# 가이드
 description: C#의 명명되지 않은 튜플 형식과 명명된 튜플 형식에 대한 자세한 정보
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: b0c838791e640c9813005b8a32d009153a794c14
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 572e926b6345fc27278f78d1faf2e3b27f017f2e
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509448"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50186033"
 ---
 # <a name="c-tuple-types"></a>C# 튜플 형식 #
 
@@ -92,7 +92,7 @@ C# 7.3부터 튜플 형식에서는 `==` 및 `!=` 연산자를 지원합니다. 
 
 [!code-csharp[TupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#Equality "Testing tuples for equality")]
 
-튜플 같음 테스트를 더 간편하게 만드는 몇 가지 규칙이 있습니다. 튜플 같음은 다음 코드에서처럼 튜플 중 하나가 Null 가능 튜플인 경우 [해제 변환](language-reference/language-specification/index.md)을 수행합니다.
+튜플 같음 테스트를 더 간편하게 만드는 몇 가지 규칙이 있습니다. 튜플 같음은 다음 코드에서처럼 튜플 중 하나가 Null 가능 튜플인 경우 [해제 변환](~/_csharplang/spec/conversions.md#lifted-conversion-operators)을 수행합니다.
 
 
 [!code-csharp[NullableTupleEquality](../../samples/snippets/csharp/tuples/tuples/program.cs#NullableEquality "Comparing Tuples and nullable tuples")]

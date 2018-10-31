@@ -3,16 +3,16 @@ title: C#의 새로운 기능 - C# 가이드
 description: C# 언어 진화 과정
 ms.date: 11/13/2017
 ms.assetid: 77deec51-a14d-46d4-9bb3-faf449477149
-ms.openlocfilehash: 399550178a12ff520dff033f0f1dc4a7cdfb9591
-ms.sourcegitcommit: c217b067985905cb21eafc5dd9a83568d7ff4e45
+ms.openlocfilehash: b079c21ee90a797b038b96ae68123a538464c382
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/22/2018
-ms.locfileid: "36314674"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201441"
 ---
 # <a name="whats-new-in-c"></a>C#의 새로운 기능 #
 
-이 페이지는 C# 언어의 각 주요 릴리스에서 새로운 기능에 대해 설명합니다. 다음 링크는 각 릴리스에 추가된 주요 기능에 대한 자세한 정보를 제공합니다.
+이 페이지는 C# 언어의 각 주요 릴리스에서 새로운 기능에 대해 설명합니다. 링크된 문서에서는 각 릴리스에 추가된 주요 기능을 자세히 설명합니다. 출시되거나 공개 미리 보기 상태의 릴리스된 새 기능 관련 정보를 확인할 수 있습니다. 예정된 릴리스에서 고려되는 기능을 비롯한 자세한 언어 기능 상태는 GitHub의 [dotnet/roslyn 리포지토리에서](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) 확인할 수 있습니다.
 
 > [!IMPORTANT]
 > C# 언어는 일부 기능의 경우 *표준 라이브러리*의 형식 및 메서드를 사용합니다. 한 가지 예는 예외 처리입니다. 모든 `throw` 문 또는 식은 throw된 개체가 <xref:System.Exception>에서 파생되는지 확인합니다. 마찬가지로 모든 `catch`는 발견되는 형식이 <xref:System.Exception>에서 파생되는지 확인합니다. 각 버전은 새 요구 사항을 추가할 수 있습니다. 이전 환경에서 최신 언어 기능을 사용하려면 특정 라이브러리를 설치해야 합니다. 이러한 종속성은 각 특정 버전에 대한 페이지에서 설명합니다. 이 종속성의 배경은 [언어 및 라이브러리 간 관계](relationships-between-language-and-library.md)에서 자세히 알아볼 수 있습니다. 

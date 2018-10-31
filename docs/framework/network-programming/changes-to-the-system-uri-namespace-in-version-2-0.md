@@ -2,14 +2,12 @@
 title: 버전 2.0에서 System.Uri 네임스페이스 변경 내용
 ms.date: 03/30/2017
 ms.assetid: 35883fe9-2d09-4d8b-80ca-cf23a941e459
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 97decd9054dfcdfc41204bf7683aebb95096e9d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 987010b8367069e8089df3f809d23f258bb68f2b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47194925"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188438"
 ---
 # <a name="changes-to-the-systemuri-namespace-in-version-20"></a>버전 2.0에서 System.Uri 네임스페이스 변경 내용
 

@@ -15,11 +15,11 @@ ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05b53016712f75e45636979d77bfd27116ce8e14
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47235324"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48850663"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>다른 비동기 패턴 및 형식과의 Interop
 .NET Framework 1.0에서는 <xref:System.IAsyncResult> 또는 [Begin/End](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)패턴이라고도 하는 `Begin/End` 패턴이 도입되었습니다.  .NET Framework 2.0에서는 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)이 추가되었습니다.  .NET Framework 4부터 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 이 APM과 EAP를 둘 다 대체하지만 이전 패턴에서 마이그레이션 루틴을 쉽게 빌드할 수 있는 기능을 제공합니다.  
@@ -99,7 +99,7 @@ ms.locfileid: "47235324"
  [!code-csharp[Conceptual.AsyncInterop#12](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Wait1.cs#12)]
  [!code-vb[Conceptual.AsyncInterop#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Wait1.vb#12)]  
   
- 이 메서드를 통해 비동기 메서드에서 기존 <xref:System.Threading.WaitHandle> 구현을 사용할 수 있습니다.  예를 들어 특정 시간에 실행되는 비동기 작업 수를 제한하려는 경우 세마포(<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 개체)를 활용할 수 있습니다.  세마포 개수를 *N* 으로 초기화하고, 작업을 수행하려는 시간 동안 세마포에서 대기한 다음 작업이 완료되면 세마포를 해제하여 동시에 실행되는 작업 수를 *N*개로 제한할 수 있습니다.  
+ 이 메서드를 통해 비동기 메서드에서 기존 <xref:System.Threading.WaitHandle> 구현을 사용할 수 있습니다.  예를 들어 특정 시간에 실행되는 비동기 작업 수를 제한하려는 경우 세마포( <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> 개체)를 활용할 수 있습니다.  세마포 개수를 *N* 으로 초기화하고, 작업을 수행하려는 시간 동안 세마포에서 대기한 다음 작업이 완료되면 세마포를 해제하여 동시에 실행되는 작업 수를 *N*개로 제한할 수 있습니다.  
   
  [!code-csharp[Conceptual.AsyncInterop#13](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.AsyncInterop/cs/Semaphore1.cs#13)]
  [!code-vb[Conceptual.AsyncInterop#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.AsyncInterop/vb/Semaphore1.vb#13)]  
@@ -117,4 +117,4 @@ ms.locfileid: "47235324"
 
 - [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
 - [작업 기반 비동기 패턴 구현](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
-- [작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)
+- [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

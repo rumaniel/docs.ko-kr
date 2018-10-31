@@ -3,11 +3,11 @@ title: 속성(F#)
 description: 'F # 속성을 개체에 연결 된 값을 나타내는 멤버에 알아봅니다.'
 ms.date: 05/16/2016
 ms.openlocfilehash: 75d21415b44ccc1c26ef5f478d5f5de20c3412e8
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50043649"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197927"
 ---
 # <a name="properties"></a>속성
 

@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램용 .NET 마이크로 �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 07/03/2018
-ms.openlocfilehash: 8cd3564e5240ec5a8783edb336957549be27ea6a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b961ebd186953e614658915c7246e1c83c40e7e9
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47203465"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453154"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>회로 차단기 패턴 구현
 
@@ -56,7 +56,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 }
 ```
 
-위의 코드 예제에서 Http 요청을 다시 시도할 때 5개의 연속된 오류가 발생하면 회로를 차단하거나 열리도록 회로 차단기 정책이 구성되었습니다. 이 경우 회로가 30초 동안 끊깁니다. 이 기간에는 호출이 실제로 배치되는 것이 아니라 회로 차단기에 의해 즉시 실패하게 됩니다.  정책은 [관련 예외 및 HTTP 상태 코드](https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)를 자동으로 오류로 해석합니다.  
+위의 코드 예제에서 Http 요청을 다시 시도할 때 5개의 연속된 오류가 발생하면 회로를 차단하거나 열리도록 회로 차단기 정책이 구성되었습니다. 이 경우 회로가 30초 동안 끊깁니다. 이 기간에는 호출이 실제로 배치되는 것이 아니라 회로 차단기에 의해 즉시 실패하게 됩니다.  정책은 [관련 예외 및 HTTP 상태 코드](https://docs.microsoft.com/aspnet/core/fundamentals/http-requests?view=aspnetcore-2.1#handle-transient-faults)를 자동으로 오류로 해석합니다.  
 
 또한 HTTP 호출을 수행하는 클라이언트 응용 프로그램 또는 서비스와 다른 환경에 배포된 특정 리소스에 문제가 있는 경우 회로 차단기를 사용하여 요청을 대체 인프라로 리디렉션해야 합니다. 이런 식으로 클라이언트 응용 프로그램이 아닌 백엔드 마이크로 서비스에만 영향을 미치는 데이터 센터에서 중단이 발생한 경우, 클라이언트 응용 프로그램이 대체(fallback) 서비스로 리디렉션할 수 있습니다. Polly는 이 [장애 조치(failover) 정책](https://github.com/App-vNext/Polly/wiki/Polly-Roadmap#failover-policy) 시나리오를 자동화하기 위해 새 정책을 계획하고 있습니다. 
 
@@ -96,7 +96,7 @@ eShopOnContainers를 사용하여 회로를 차단하거나 열고, 테스트할
 
 `http://localhost:5103/failing?enable` 
 
-그런 다음, 그림 10-4와 같이 http://localhost:5103/failing URI를 사용하여 상태를 확인할 수 있습니다.
+그런 다음, 그림 10-4와 같이 `http://localhost:5103/failing` URI를 사용하여 상태를 확인할 수 있습니다.
 
 ![](./media/image4.png)
 

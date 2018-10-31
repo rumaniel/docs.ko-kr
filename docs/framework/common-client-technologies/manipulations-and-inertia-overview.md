@@ -2,12 +2,12 @@
 title: 조작 및 관성 개요
 ms.date: 03/30/2017
 ms.assetid: dd31b89b-eab6-45a1-8d0b-11e0eb84b234
-ms.openlocfilehash: 41c22dc305f8ef653705436544ab2342e55ed02a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 6396c174b341b5ae937fa931488ee1bd3a5fcbd5
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521241"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50187821"
 ---
 # <a name="manipulations-and-inertia-overview"></a>조작 및 관성 개요
 *조작*을 통해 사용자는 *조작자*를 사용하여 UI(사용자 인터페이스) 요소를 이동, 회전하고 크기를 조정할 수 있습니다. 조작자는 마우스, 터치 사용 시나리오의 스타일러스 또는 손가락을 나타냅니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "43521241"
   
  조작자 두 개로 조작되는 이미지  
   
- 조작 처리에서는 조작자 하위 집합을 모니터링하고 두 조작자가 독립적으로 작동하지 않고 함께 작동하는 것처럼 해석하는 프레임워크를 제공합니다. 응용 프로그램에서 조작할 각 UI 요소에 대해 하나씩, 동시에 여러 조작 프로세서 개체를 만들 수 있습니다. 조작 프로세서에는 관찰할 입력 장치에 대한 정보가 제공되고 조작 프로세서는 [.NET 이벤트](https://msdn.microsoft.com/library/17sde2xt.aspx)를 통해 조작을 보고합니다.  
+ 조작 처리에서는 조작자 하위 집합을 모니터링하고 두 조작자가 독립적으로 작동하지 않고 함께 작동하는 것처럼 해석하는 프레임워크를 제공합니다. 응용 프로그램에서 조작할 각 UI 요소에 대해 하나씩, 동시에 여러 조작 프로세서 개체를 만들 수 있습니다. 조작 프로세서에는 관찰할 입력 장치에 대한 정보가 제공되고 조작 프로세서는 [.NET 이벤트](../../../docs/standard/events/index.md)를 통해 조작을 보고합니다.  
   
  조작 프로세서에는 조작되는 특정 요소에 대한 정보가 없습니다. 응용 프로그램에서는 응용 프로그램별 요소에 변경 내용을 개별적으로 적용합니다. 예를 들어 응용 프로그램에서는 이미지에 변형을 적용하거나 이미지를 다시 그려서 새 위치에 표시하거나 새로운 크기나 방향으로 표시합니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "43521241"
  UI 요소에 대한 조작자를 추가, 이동 또는 제거할 때 응용 프로그램에서는 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> 메서드를 호출하여 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D> 개체를 업데이트합니다. 조작이 처음 시작되면 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Started> 이벤트가 발생합니다.  
   
 > [!NOTE]
->  조작 처리는 프레임 기반 업데이트 환경에서 더 효율적으로 사용됩니다. Microsoft XNA 응용 프로그램에서 조작 처리를 사용할 경우 XNA 프레임워크는 [Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 메서드를 사용하여 프레임 기반 업데이트를 제공하므로 문제가 되지 않습니다. WinForms와 같은 다른 환경에서는 조작을 수집하고 주기적으로 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> 메서드에 배치로 전송하려면 고유한 프레임 기반 논리를 제공해야 할 수 있습니다.  
+> 조작 처리는 프레임 기반 업데이트 환경에서 더 효율적으로 사용됩니다. Microsoft XNA 응용 프로그램에서 조작 처리를 사용할 경우 XNA 프레임워크는 [Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) 메서드를 사용하여 프레임 기반 업데이트를 제공하므로 문제가 되지 않습니다. WinForms와 같은 다른 환경에서는 조작을 수집하고 주기적으로 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.ProcessManipulators%2A> 메서드에 배치로 전송하려면 고유한 프레임 기반 논리를 제공해야 할 수 있습니다.  
   
  조작자 수나 위치가 변경되면 <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 이벤트가 발생합니다. <xref:System.Windows.Input.Manipulations.ManipulationProcessor2D.Delta> 이벤트 처리기에 전달되는 <xref:System.Windows.Input.Manipulations.Manipulation2DDeltaEventArgs> 개체의 속성은 원점, 크기 조정, 회전 및 변환에서 마지막 이벤트 후에 발생한 변경 내용을 지정합니다. 조작자가 이동할 때, 그리고 조작자가 추가되거나 제거될 때 조작 원점이 변경됩니다. 변환 값은 조작에 포함된 X 또는 Y 이동 정도를 지정합니다.  
   

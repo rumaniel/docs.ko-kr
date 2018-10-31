@@ -6,11 +6,11 @@ ms.assetid: 1e9b55c4-76ad-4f54-8d96-7ce4b4cf1e05
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8a1de8ab10eff88757720a35aa9668125cfbfa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47203097"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48582163"
 ---
 # <a name="namespaces-and-dtds-in-the-dom"></a>DOM의 네임스페이스 및 DTD
 DTD(문서 종류 정의)는 네임스페이스 지원을 어렵게 합니다. 예를 들어, 다음 XML에는 이름에 콜론이 포함되는 기본 특성이 있습니다.  

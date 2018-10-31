@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - client application services, configuring
 ms.assetid: 34a8688a-a32c-40d3-94be-c8e610c6a4e8
-ms.openlocfilehash: a65c216397f240b77eb81f88d8f2a2da122e1ccf
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 6f754a2a66187ac94d31d0d5a3a665c969652d26
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861626"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48846515"
 ---
 # <a name="how-to-configure-client-application-services"></a>방법: 클라이언트 응용 프로그램 서비스 구성
 이 항목에서는 Visual Studio **프로젝트 디자이너**를 사용하여 클라이언트 응용 프로그램 서비스를 사용하도록 설정하고 구성하는 방법을 설명합니다. 클라이언트 응용 프로그램 서비스를 사용하면 기존 [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 응용 프로그램 서비스에서 사용자의 유효성을 검사하고 사용자 역할과 설정을 검색할 수 있습니다. 구성 후에는 [클라이언트 응용 프로그램 서비스 개요](../../../docs/framework/common-client-technologies/client-application-services-overview.md)의 설명에 따라 응용 프로그램 코드에서 사용하도록 설정된 서비스에 액세스할 수 있습니다. [!INCLUDE[ajax_current_short](../../../includes/ajax-current-short-md.md)] 응용 프로그램 서비스에 대한 자세한 내용은 [ASP.NET 응용 프로그램 서비스 개요](https://msdn.microsoft.com/library/1162e529-0d70-44b2-b3ab-83e60c695013)를 참조하세요.  
   
- **프로젝트 디자이너**의 **서비스** 페이지에서 클라이언트 응용 프로그램 서비스를 사용하도록 설정하고 구성할 수 있습니다. **서비스** 페이지에서 프로젝트 App.config 파일의 값을 업데이트합니다. **프로젝트 디자이너**에 액세스하려면 **프로젝트** 메뉴의 **속성** 명령을 사용합니다. **서비스** 페이지에 대한 자세한 내용은 [프로젝트 디자이너, 서비스 페이지](https://msdn.microsoft.com/library/bb398109)를 참조하세요.  
+ **프로젝트 디자이너**의 **서비스** 페이지에서 클라이언트 응용 프로그램 서비스를 사용하도록 설정하고 구성할 수 있습니다. **서비스** 페이지에서 프로젝트 App.config 파일의 값을 업데이트합니다. **프로젝트 디자이너**에 액세스하려면 **프로젝트** 메뉴의 **속성** 명령을 사용합니다. **서비스** 페이지에 대한 자세한 내용은 [프로젝트 디자이너, 서비스 페이지](/visualstudio/ide/reference/services-page-project-designer)를 참조하세요.  
   
  다음 절차에서는 클라이언트 응용 프로그램 서비스에 대한 기본 구성을 수행하는 방법을 설명합니다. 고급 구성 옵션에 대해서는 이후 섹션에서 설명합니다.  
   
@@ -143,7 +143,7 @@ ms.locfileid: "43861626"
 ## <a name="see-also"></a>참고 항목  
  [클라이언트 응용 프로그램 서비스](../../../docs/framework/common-client-technologies/client-application-services.md)  
  [클라이언트 응용 프로그램 서비스 개요](../../../docs/framework/common-client-technologies/client-application-services-overview.md)  
- [프로젝트 디자이너, 서비스 페이지](https://msdn.microsoft.com/library/bb398109)  
+ [프로젝트 디자이너, 서비스 페이지](/visualstudio/ide/reference/services-page-project-designer)  
  [서비스의 고급 설정 대화 상자](/visualstudio/ide/reference/advanced-settings-for-services-dialog-box)  
  [방법: 클라이언트 응용 프로그램 서비스에서 사용자 로그인 구현](../../../docs/framework/common-client-technologies/how-to-implement-user-login-with-client-application-services.md)  
  [연습: 클라이언트 응용 프로그램 서비스 사용](../../../docs/framework/common-client-technologies/walkthrough-using-client-application-services.md)  

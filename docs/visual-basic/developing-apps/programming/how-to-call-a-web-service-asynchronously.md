@@ -5,15 +5,15 @@ helpviewer_keywords:
 - asynchronous calls [Visual Basic]
 - Web services [Visual Basic], accessing
 ms.assetid: ff8046f4-f1f2-4d8b-90b7-95e3f7415418
-ms.openlocfilehash: 8968eaa8edd8dee177906a6c801f2f46c2a740d7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: bf109780f26ce2fa4d5dbaa63832e765970b5cb4
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33589041"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842699"
 ---
 # <a name="how-to-call-a-web-service-asynchronously-visual-basic"></a>방법: 비동기적으로 웹 서비스 호출(Visual Basic)
-이 예제에서는 비동기 메서드 호출의 결과를 검색할 수 있도록 웹 서비스의 비동기 처리기 이벤트에 처리기를 연결합니다. 여기에는 http://www.xmethods.net에 DemoTemperatureService 웹 서비스가 사용되었습니다.  
+이 예제에서는 비동기 메서드 호출의 결과를 검색할 수 있도록 웹 서비스의 비동기 처리기 이벤트에 처리기를 연결합니다. 여기에는 `http://www.xmethods.net`에 DemoTemperatureService 웹 서비스가 사용되었습니다.  
   
  Visual Studio IDE(통합 개발 환경)에서 프로젝트의 웹 서비스를 참조하면, `My.WebServices` 개체에 해당 웹 서비스가 추가되며 IDE에서 지정된 웹 서비스에 액세스하기 위해 클라이언트 프록시 클래스를 생성합니다.  
   
@@ -24,7 +24,7 @@ ms.locfileid: "33589041"
   
 ### <a name="to-call-a-web-service-asynchronously"></a>웹 서비스를 비동기식으로 호출하려면  
   
-1.  http://www.xmethods.net에서 DemoTemperatureService 웹 서비스를 참조합니다. 해당 주소는 다음과 같습니다.  
+1.  `http://www.xmethods.net`에서 DemoTemperatureService 웹 서비스를 참조합니다. 해당 주소는 다음과 같습니다.  
   
     ```  
     http://www.xmethods.net/sd/2001/DemoTemperatureService.wsdl  

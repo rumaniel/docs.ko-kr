@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3667a644253ab52d8421a1d4222e0bf8c03624c1
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0508e9291b089ec7af6a0b41bbc231fdb0701ad6
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751976"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49452992"
 ---
 # <a name="global-assembly-cache"></a>전역 어셈블리 캐시
 공용 언어 런타임이 설치된 각 컴퓨터에는 전역 어셈블리 캐시라는 컴퓨터 수준의 코드 캐시가 있습니다. 전역 어셈블리 캐시에는 컴퓨터의 여러 응용 프로그램에서 공유하도록 특별히 지정된 어셈블리가 저장됩니다.  
@@ -43,6 +43,6 @@ ms.locfileid: "32751976"
  전역 어셈블리 캐시에 배포된 어셈블리에 강력한 이름이 있어야 합니다. 어셈블리가 전역 어셈블리 캐시에 추가되면 어셈블리를 구성하는 모든 파일에 대한 무결성 검사가 수행됩니다. 예를 들어 파일이 변경되었지만 매니페스트가 변경을 반영하지 않는 경우 캐시는 이러한 무결성 검사를 수행하여 어셈블리가 변조되지 않았는지 확인합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [어셈블리 및 전역 어셈블리 캐시 사용](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
- [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)
+- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
+- [어셈블리 및 전역 어셈블리 캐시 사용](../../../docs/framework/app-domains/working-with-assemblies-and-the-gac.md)  
+- [강력한 이름의 어셈블리](../../../docs/framework/app-domains/strong-named-assemblies.md)

@@ -11,11 +11,11 @@ ms.assetid: 318bedf8-7f35-4f00-b34a-2b7b8e3fa315
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 50d601d711579bce2e2651a1efc65d824a50d47a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400701"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48266652"
 ---
 # <a name="application-domain-resource-monitoring"></a>응용 프로그램 도메인 리소스 모니터링
 ARM(응용 프로그램 도메인 리소스 모니터링)을 통해 호스트가 응용 프로그램 도메인별로 CPU 및 메모리 사용량을 모니터링할 수 있습니다. 이는 장기 실행 프로세스에서 많은 응용 프로그램 도메인을 사용하는 ASP.NET과 같은 호스트에 유용합니다. 호스트가 전체 프로세스의 성능에 부정적인 영향을 주는 응용 프로그램의 응용 프로그램 도메인을 언로드할 수 있지만, 이는 문제가 있는 응용 프로그램을 식별할 수 있는 경우에만 가능합니다. ARM은 이러한 결정을 지원하는 데 사용할 수 있는 정보를 제공합니다.  

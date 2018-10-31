@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/26/2017
-ms.openlocfilehash: c071d269977ccecea9a7d4d79da78d7967bb1618
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: 6ff325bb062da2ebff815fc847d2247707a0bf7f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105737"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50188055"
 ---
 # <a name="designing-validations-in-the-domain-model-layer"></a>도메인 모델 레이어에서 유효성 검사 디자인
 
@@ -17,7 +17,7 @@ DDD에서 유효성 검사 규칙을 고정으로 생각할 수 있습니다. �
 
 도메인 엔터티는 항상 유효한 엔터티여야 합니다. 항상 true여야 하는 개체에 대한 특정 수의 고정이 있습니다. 예를 들어 주문 항목 개체는 항상 양의 정수 더하기 아티클 이름 및 가격이어야 하는 수량을 가져야 합니다. 따라서 고정 적용은 도메인 엔터티(특히 집계 루트)의 책임이며 엔터티 개체는 유효하지 않고 존재할 수 없어야 합니다. 고정 규칙은 단순히 계약으로 표시되고 위반될 때 예외 또는 알림이 발생합니다.
 
-이에 대한 이유는 개체가 있어 본 적 없어야 하는 상태에 있으므로 많은 버그가 발생하기 때문입니다. 다음은 [온라인 토론](http://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/)에서 Greg Young의 좋은 설명입니다.
+이에 대한 이유는 개체가 있어 본 적 없어야 하는 상태에 있으므로 많은 버그가 발생하기 때문입니다. 다음은 [온라인 토론](https://jeffreypalermo.com/blog/the-fallacy-of-the-always-valid-entity/)에서 Greg Young의 좋은 설명입니다.
 
 사용자 프로필을 사용하는 SendUserCreationEmailService가 있다고 제안해 보겠습니다. 해당 서비스에서 해당 이름이 Null이 아니라고 어떻게 합리화할 수 있나요? 다시 확인할까요? 또는 확인을 하지 않고 낙관할 가능성이 있습니다. 누군가가 당신에게 보내기 전에 유효성 검사를 고려했기를 희망합니다. 물론 TDD를 사용하여 작성해야 하는 첫 번째 테스트 중 하나는 Null 이름으로 고객에게 보내면 오류를 발생시켜야 한다는 것입니다. 하지만 이러한 종류의 테스트를 계속해서 다시 작성하면 "잠깐, Null이 되는 이름을 허용하지 않았다면 이런 모든 테스트를 하지 않았을텐데"라는 것을 깨닫게 됩니다.
 

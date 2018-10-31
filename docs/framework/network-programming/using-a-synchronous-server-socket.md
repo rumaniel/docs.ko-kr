@@ -17,14 +17,12 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 - Internet, sockets
 ms.assetid: d1ce882e-653e-41f5-9289-844ec855b804
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 2e79c9a75e4513be91af1104195af3614b49092d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9880766641be618a6a0f54ded501cf6f6e95e128
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47398552"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50034360"
 ---
 # <a name="using-a-synchronous-server-socket"></a>동기 서버 소켓 사용
 동기 서버 소켓은 소켓에 연결 요청이 수신될 때까지 응용 프로그램 실행을 일시 중단합니다. 동기 서버 소켓은 네트워크를 작업에 많이 사용하는 응용 프로그램에 적합하지 않지만 간단한 네트워크 응용 프로그램에는 적합할 수 있습니다.  

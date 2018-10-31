@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 0c098d0697dff3e1e772c348597a84ac9d262104
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 393d755276e281e923dfe3e52b5d3e9afdae38dd
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085318"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50183713"
 ---
 # <a name="async-in-depth"></a>비동기에 대한 자세한 설명
 
@@ -44,7 +44,7 @@ public Task<string> GetHtmlAsync()
     // Execution is synchronous here
     var client = new HttpClient();
     
-    return client.GetStringAsync("http://www.dotnetfoundation.org");
+    return client.GetStringAsync("https://www.dotnetfoundation.org");
 }
 ```
 
@@ -58,7 +58,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
     
     // Execution of GetFirstCharactersCountAsync() is yielded to the caller here
     // GetStringAsync returns a Task<string>, which is *awaited*
-    var page = await client.GetStringAsync("http://www.dotnetfoundation.org");
+    var page = await client.GetStringAsync("https://www.dotnetfoundation.org");
     
     // Execution resumes when the client.GetStringAsync task completes,
     // becoming synchronous again.

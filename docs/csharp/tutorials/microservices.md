@@ -3,12 +3,12 @@ title: Docker에서 호스트되는 마이크로 서비스 - C#
 description: Docker 컨테이너에서 실행되는 ASP.NET Core 서비스를 만드는 방법 알아보기
 ms.date: 06/08/2017
 ms.assetid: 87e93838-a363-4813-b859-7356023d98ed
-ms.openlocfilehash: 1f4b38243beb1210b1374bd701fac66b2fa72cc5
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: b1f7159a222ab4d68715844e9997ca922676bc80
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37106352"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454488"
 ---
 # <a name="microservices-hosted-in-docker"></a>Docker에서 호스트되는 마이크로 서비스
 
@@ -41,7 +41,7 @@ Docker 설치를 위한 추가 작업은 ASP.NET Core 응용 프로그램에 해
 Windows, Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다.
 선호하는 코드 편집기를 설치해야 합니다. 아래 설명에서는 오픈 소스 플랫폼 간 편집기인 [Visual Studio Code](https://code.visualstudio.com/)를 사용합니다. 그러나 익숙한 어떤 도구도 사용 가능합니다.
 
-또한 Docker 엔진을 설치해야 합니다. 사용하는 플랫폼에 대한 지침을 보려면 [Docker 설치 페이지](http://www.docker.com/products/docker)를 참조하세요.
+또한 Docker 엔진을 설치해야 합니다. 사용하는 플랫폼에 대한 지침을 보려면 [Docker 설치 페이지](https://docs.docker.com/install/overview/)를 참조하세요.
 Docker는 여러 Linux 배포판, macOS 또는 Windows에 설치할 수 있습니다. 위에 참조된 페이지에는 사용 가능한 각 설치에 대한 섹션이 포함되어 있습니다.
 
 ## <a name="create-the-application"></a>응용 프로그램 만들기

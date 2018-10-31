@@ -8,16 +8,16 @@ helpviewer_keywords:
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 author: Xansky
 ms.author: mhopkins
-ms.openlocfilehash: 1ca4e0f0e0d88004d6c2059af4c774c916efd5ac
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 1ae62cca72831b0319243acd9c5bf7a2b86138c3
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035073"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50205271"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>List 컨트롤 형식에 대한 UI 자동화 지원
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+>  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에 대한 최신 정보는 [Windows 자동화 API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)를 참조하세요.  
   
  이 항목에서는 List 컨트롤 형식에 대한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 지원 정보를 제공합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]에서, 컨트롤 형식은 <xref:System.Windows.Automation.AutomationElement.ControlTypeProperty> 속성을 사용하기 위해 컨트롤이 충족해야 하는 조건 집합입니다. 이 조건에는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리 구조, [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 값, 컨트롤 패턴에 대한 특정 지침이 포함됩니다.  
   
@@ -36,21 +36,19 @@ ms.locfileid: "48035073"
   
  List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 컨트롤 뷰는 다음과 같이 구성되어 있습니다.  
   
--   목록 컨트롤 내에 있는 0개 이상의 항목(항목 개수는 List Item 또는 Data Item 컨트롤 형식에 따라 다름)  
+- (항목 목록 Item 또는 Data Item 컨트롤 형식에 기반 할 수 있습니다) 목록 컨트롤 내에서 0 개 이상의 항목입니다.
   
--   목록 컨트롤 내에서 0개 이상의 그룹 컨트롤  
+- 목록 컨트롤 내에서 0 개 이상의 그룹 컨트롤입니다.
   
--   0, 1 또는 2개의 스크롤 막대 컨트롤  
+- 0, 1 개 또는 두 스크롤 막대 컨트롤입니다.
   
--  
+List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐츠 뷰는 다음과 같이 구성되어 있습니다.  
   
- List 컨트롤 형식(예: 목록 컨트롤)을 구현하는 컨트롤의 콘텐츠 뷰는 다음과 같이 구성되어 있습니다.  
+- (항목 목록 Item 또는 Data Item 컨트롤 형식에 기반 할 수 있습니다) 목록 컨트롤 내에서 0 개 이상의 항목입니다.
   
--   목록 컨트롤 내에 있는 0개 이상의 항목(항목 개수는 List Item 또는 Data Item 컨트롤 형식에 따라 다름)  
-  
--   목록 컨트롤 내에서 0개 이상의 그룹  
-  
- 함께 그룹화된 항목 외에 계층 관계가 있는 항목은 목록 컨트롤 항목에 포함되지 않아야 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 항목의 자식이 있는 경우 목록 컨테이너는 Tree 컨트롤 형식을 기반으로 해야 합니다.  
+- 목록 컨트롤 내에서 0 개 이상의 그룹입니다.
+
+함께 그룹화된 항목 외에 계층 관계가 있는 항목은 목록 컨트롤 항목에 포함되지 않아야 합니다. [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 항목의 자식이 있는 경우 목록 컨테이너는 Tree 컨트롤 형식을 기반으로 해야 합니다.  
   
  목록 컨트롤 내에서 선택 가능한 항목은 목록 컨트롤의 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 트리에 있는 하위 항목에서 사용할 수 있습니다. 목록 컨트롤 내의 모든 항목은 같은 선택 그룹에 속해야 합니다. 목록에서 선택 가능한 항목은 DataItem이 아닌 ListItem 컨트롤 형식으로 노출되어야 합니다.  
   

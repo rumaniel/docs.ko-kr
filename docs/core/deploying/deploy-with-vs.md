@@ -9,11 +9,11 @@ dev_langs:
 - vb
 ms.custom: vs-dotnet
 ms.openlocfilehash: 7a9410ca99f621ee6d0e8b263354ebc536f71a4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47204299"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48584394"
 ---
 # <a name="deploying-net-core-apps-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core 앱 배포
 
@@ -144,7 +144,7 @@ Visual Studio에서 앱을 게시하려면 다음을 수행합니다.
 
       1. **게시** 탭에서 **게시**를 선택합니다. Visual Studio에서 응용 프로그램을 구성하는 파일을 로컬 파일 시스템에 작성합니다.
 
-      1. 이제 **게시** 탭에 단일 프로필 **FolderProfile**이 표시됩니다. 프로필의 구성 설정이 탭의 **요약** 섹션에 표시됩니다. **대상 런타임**은 게시된 런타임을 식별하고, **대상 위치**는 자체 포함 배포의 파일이 작성된 위치를 식별합니다.
+      1. 이제 **게시** 탭에 단일 프로필 **FolderProfile**이 표시됩니다. 프로필의 구성 설정이 탭의 **요약** 섹션에 표시됩니다. 대상 런타임은 게시된 런타임을 식별하고, **대상 위치**는 자체 포함 배포의 파일이 작성된 위치를 식별합니다.
 
       1. Visual Studio는 기본적으로 게시된 모든 파일을 단일 디렉터리에 작성합니다. 편의상, 각 대상 런타임에 대해 별도 프로필을 만들고 게시된 파일을 플랫폼별 디렉터리에 배치하는 것이 좋습니다. 이렇게 하려면 각 대상 플랫폼에 대해 별도 게시 프로필을 만들어야 합니다. 따라서 이제 다음을 수행하여 각 플랫폼용 응용 프로그램을 다시 빌드합니다.
 

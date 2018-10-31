@@ -2,12 +2,12 @@
 title: GamePiece 클래스 만들기
 ms.date: 03/30/2017
 ms.assetid: 37a27a86-ac1c-47be-b477-cb4b819459d3
-ms.openlocfilehash: eb73918cc03e2621d39a98158d40a839dbc69d80
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: f9f08437cda685d2ec1d2d0c8d54d370d9d38341
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857903"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195881"
 ---
 # <a name="creating-the-gamepiece-class"></a>GamePiece 클래스 만들기
 **GamePiece** 클래스는 Microsoft XNA 게임 피스 이미지를 로드하고 게임 피스와 관련된 마우스 상태를 추적하고, 마우스를 캡처하고, 조작 및 관성 처리를 제공하고, 게임 피스가 뷰포트의 제한에 도달할 경우 바운스되는 기능을 제공하는 데 필요한 모든 기능을 캡슐화합니다.  
@@ -25,7 +25,7 @@ ms.locfileid: "43857903"
 ## <a name="class-constructor"></a>클래스 생성자  
  **GamePiece** 클래스에 대한 생성자는 다음 매개 변수를 수락합니다.  
   
--   [SpriteBatch](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.aspx) 형식. 여기에 전달된 참조는 private 멤버 `spriteBatch`에 할당되고, 게임 피스가 렌더링될 때 [SpriteBatch.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.draw.aspx) 메서드에 액세스하는 데 사용됩니다. 또한 [GraphicsDevice](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.spritebatch.graphicsdevice.aspx) 속성은 게임 피스와 연결된 [Texture](https://msdn.microsoft.com/library/microsoft.xna.framework.graphics.texture.aspx) 개체를 만들고, 피스가 바운드될 수 있도록 게임 피스가 창 경계에 도달한 경우를 감지하기 위해 뷰포트의 크기를 가져오는 데 사용됩니다.  
+-   [SpriteBatch](https://docs.microsoft.com/previous-versions/windows/xna/bb199034%28v%3dxnagamestudio.41%29) 형식. 여기에 전달된 참조는 private 멤버 `spriteBatch`에 할당되고, 게임 피스가 렌더링될 때 [SpriteBatch.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196426%28v%3dxnagamestudio.41%29) 메서드에 액세스하는 데 사용됩니다. 또한 [GraphicsDevice](https://docs.microsoft.com/previous-versions/windows/xna/bb197338%28v%3dxnagamestudio.41%29) 속성은 게임 피스와 연결된 [Texture](https://docs.microsoft.com/previous-versions/windows/xna/bb199375%28v%3xnagamestudio.41%29) 개체를 만들고, 피스가 바운드될 수 있도록 게임 피스가 창 경계에 도달한 경우를 감지하기 위해 뷰포트의 크기를 가져오는 데 사용됩니다.  
   
 -   게임 피스에 사용할 이미지의 파일 이름을 지정하는 문자열입니다.  
   
@@ -78,11 +78,11 @@ ms.locfileid: "43857903"
   
  [!code-csharp[ManipulationXNA#_GamePiece_OnInertiaCompleted](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_oninertiacompleted)]  
   
- 지금까지 제공한 논리에서는 실제로 관성 추정이 발생하지 않습니다. 이 작업은 **ProcessInertia** 메서드에서 수행됩니다. 게임 업데이트 루프([Game.Update](https://msdn.microsoft.com/library/microsoft.xna.framework.game.update.aspx) 메서드)에서 반복적으로 호출되는 이 메서드는 *processInertia* 플래그가 `true`로 설정되었는지 확인하고, 설정된 경우 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> 메서드를 호출합니다. 이 메서드를 호출하면 추정이 수행되고 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 이벤트가 발생합니다.  
+ 지금까지 제공한 논리에서는 실제로 관성 추정이 발생하지 않습니다. 이 작업은 **ProcessInertia** 메서드에서 수행됩니다. 게임 업데이트 루프([Game.Update](https://docs.microsoft.com/previous-versions/windows/xna/bb199616%28v%3dxnagamestudio.41%29) 메서드)에서 반복적으로 호출되는 이 메서드는 *processInertia* 플래그가 `true`로 설정되었는지 확인하고, 설정된 경우 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Process%2A> 메서드를 호출합니다. 이 메서드를 호출하면 추정이 수행되고 <xref:System.Windows.Input.Manipulations.InertiaProcessor2D.Delta> 이벤트가 발생합니다.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_ProcessInertia](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_processinertia)]  
   
- Draw 메서드 오버로드 중 하나가 호출될 때까지 게임 피스는 실제로 렌더링되지 않습니다. 이 메서드의 첫 번째 오버로드는 게임 그리기 루프([Game.Draw](https://msdn.microsoft.com/library/microsoft.xna.framework.game.draw.aspx) 메서드)에서 반복적으로 호출됩니다. 이 오버로드는 현재 위치, 회전 및 배율로 게임 피스를 렌더링합니다.  
+ Draw 메서드 오버로드 중 하나가 호출될 때까지 게임 피스는 실제로 렌더링되지 않습니다. 이 메서드의 첫 번째 오버로드는 게임 그리기 루프([Game.Draw](https://docs.microsoft.com/previous-versions/windows/xna/bb196422%28v%3dxnagamestudio.41%29) 메서드)에서 반복적으로 호출됩니다. 이 오버로드는 현재 위치, 회전 및 배율로 게임 피스를 렌더링합니다.  
   
  [!code-csharp[ManipulationXNA#_GamePiece_Draw](../../../samples/snippets/csharp/VS_Snippets_Misc/manipulationxna/cs/gamepiece.cs#_gamepiece_draw)]  
   

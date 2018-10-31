@@ -3,11 +3,11 @@ title: DeliveryRequirementsAttribute
 ms.date: 03/30/2017
 ms.assetid: 40c5435c-a325-4cf8-9dd0-d6e24b4a56a3
 ms.openlocfilehash: 7bfc03299fffc8070a7d8a4b3885706ea861bdf6
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50042898"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198515"
 ---
 # <a name="deliveryrequirementsattribute"></a>DeliveryRequirementsAttribute
 DeliveryRequirementsAttribute  

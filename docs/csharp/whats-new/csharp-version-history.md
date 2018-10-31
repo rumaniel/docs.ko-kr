@@ -3,12 +3,12 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 7a7030eb9479ebae553f3bb4d569c9a9f931db9a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
+ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504415"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49316261"
 ---
 # <a name="the-history-of-c"></a>C#의 역사 #
 
@@ -145,10 +145,10 @@ C# 버전 5.0은 집중된 버전의 언어였습니다. 해당 버전에 대한
 
 최신 주요 버전은 C# 버전 7.0입니다. 이 버전에는 C# 6.0 방식의 혁신적이고 유용한 기능이 있지만 서비스형 컴파일러는 없습니다. 다음은 새 기능 중 일부입니다.
 
-- [외부 변수](http://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
+- [외부 변수](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
 - [튜플 및 분해](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
 - [패턴 일치](./csharp-7.md#pattern-matching)
-- [로컬 함수](http://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [로컬 함수](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
 - [확장된 식 본문 멤버](./csharp-7.md#more-expression-bodied-members)
 - [참조 로컬 및 반환](./csharp-7.md#ref-locals-and-returns)
 

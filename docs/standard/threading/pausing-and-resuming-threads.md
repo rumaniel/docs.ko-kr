@@ -13,11 +13,11 @@ ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b66881a8a42c0c34b5c2119f7404fe7787c8f3f2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47193020"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48836260"
 ---
 # <a name="pausing-and-interrupting-threads"></a>스레드 일시 중지 및 중단
 

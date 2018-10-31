@@ -3,11 +3,11 @@ title: '방법: Visual Basic 또는 C#에서 개체 모델 생성'
 ms.date: 03/30/2017
 ms.assetid: a0c73b33-5650-420c-b9dc-f49310c201ee
 ms.openlocfilehash: 21266ca2d1230a1afc903734d1b4c53b259e50e1
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50036790"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200929"
 ---
 # <a name="how-to-generate-the-object-model-in-visual-basic-or-c"></a>방법: Visual Basic 또는 C#에서 개체 모델 생성 #
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 사용자 프로그래밍 언어의 개체 모델은 관계형 데이터베이스에 매핑됩니다. 두 가지 도구는 자동으로 생성 되는 Visual Basic에 사용할 수 있는 또는 C# 기존 데이터베이스의 메타 데이터에서 모델입니다.  

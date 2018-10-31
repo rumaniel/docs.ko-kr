@@ -5,11 +5,11 @@ helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
 ms.openlocfilehash: 362217b247bd2ab7a2eec2f86cbaaf1a0652a3ad
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47237204"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839607"
 ---
 # <a name="new-operator-c-reference"></a>new 연산자(C# 참조)
 

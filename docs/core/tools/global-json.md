@@ -5,12 +5,12 @@ author: mairaw
 ms.author: mairaw
 ms.date: 07/30/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 8241b3afb518acf237c7b6181085e19576e5ce2f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43778471"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48838080"
 ---
 # <a name="globaljson-overview"></a>global.json 개요
 
@@ -96,12 +96,12 @@ SDK 버전은 현재 다음과 같은 부분으로 구성됩니다.
 ## <a name="troubleshooting-build-warnings"></a>빌드 경고 문제 해결
 
 > [!WARNING]
-> .NET Core SDK의 미리보기 버전으로 작업하고 있습니다. SDK 버전은 현재 프로젝트의 global.json 파일을 통해 정의할 수 있습니다. 자세한 내용은 https://go.microsoft.com/fwlink/?linkid=869452 참조
+> .NET Core SDK의 미리보기 버전으로 작업하고 있습니다. SDK 버전은 현재 프로젝트의 global.json 파일을 통해 정의할 수 있습니다. 자세한 내용은 <https://go.microsoft.com/fwlink/?linkid=869452> 참조
 
 이 경고는 [일치 규칙](#matching-rules) 섹션에서 설명한대로 .NET Core SDK의 미리보기 버전을 사용하여 프로젝트가 컴파일되고 있음을 나타냅니다. .NET Core SDK 버전은 높은 품질의 기록과 약정을 가지고 있습니다. 그러나 미리보기 버전을 사용하지 않으려면 프로젝트 계층 구조에 *global.json* 파일을 추가하여 사용할 SDK 버전을 지정하고 `dotnet --list-sdks`를 사용하여 머신에 설치된 버전을 확인합니다. 새 버전이 릴리스되었을 때 새 버전을 사용하려면 *global.json* 파일을 제거하거나 최신 버전을 사용하도록 업데이트합니다.
 
 > [!WARNING]
-> 스타트업 프로젝트 '{startupProject}'는 '.NETCoreApp' 버전 '{targetFrameworkVersion}' 프레임워크를 대상으로 합니다. 이 버전의 Entity Framework Core .NET 명령줄 도구는 버전 2.0 이상만 지원합니다. 이전 버전의 도구 사용에 대한 자세한 내용은 https://go.microsoft.com/fwlink/?linkid=871254를 참조하세요.
+> 스타트업 프로젝트 '{startupProject}'는 '.NETCoreApp' 버전 '{targetFrameworkVersion}' 프레임워크를 대상으로 합니다. 이 버전의 Entity Framework Core .NET 명령줄 도구는 버전 2.0 이상만 지원합니다. 이전 버전의 도구 사용에 대한 자세한 내용은 <https://go.microsoft.com/fwlink/?linkid=871254>를 참조하세요.
 
 .NET Core SDK 2.1(v. 2.1.300)부터는 `dotnet ef` 명령이 SDK에 포함됩니다. 이 경고는 프로젝트가 EF Core 1.0 또는 1.1을 대상으로 하고 .NET Core SDK 2.1 이상 버전과 호환되지 않음을 나타냅니다. 프로젝트를 컴파일하려면 .NET Core SDK 2.0(v. 2.1.201) 이전 버전을 머신에 설치하고 *global.json* 파일을 사용하여 원하는 SDK 버전을 정의합니다. `dotnet ef` 명령에 대한 자세한 내용은 [EF Core .NET 명령줄 도구](/ef/core/miscellaneous/cli/dotnet)를 참조하세요.
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
 ms.openlocfilehash: 089e31f3aad12c2303619e2a1998d0d6a5a0ad86
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47208778"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48844100"
 ---
 # <a name="params-c-reference"></a>params(C# 참조)
 

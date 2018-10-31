@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3166d6c95532706781188da0c56ebf9022038a50
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f2dc9fccf6718c4edebc26efcdda71b41873a3a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388380"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195244"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>관리되지 않는 DLL 함수 사용
 플랫폼 호출은 Win32 API의 함수와 같이 DLL(동적 연결 라이브러리)에서 구현된 관리되지 않는 함수를 관리 코드가 호출할 수 있도록 하는 서비스입니다. 이 서비스는 내보낸 함수를 찾아서 호출하고 필요에 따라 상호 운용 경계를 가로질러 인수(정수, 문자열, 배열, 구조체 등)를 마샬링합니다.  
@@ -70,8 +70,8 @@ ms.locfileid: "33388380"
   
 4.  컨트롤을 관리되지 않는 함수에 전송합니다.  
   
- 플랫폼 호출은 관리되지 않는 함수에서 생성된 예외를 관리되는 호출자로 throw합니다.  
-  
+ 플랫폼 호출은 관리되지 않는 함수에서 생성된 예외를 관리되는 호출자로 throw합니다.
+
 ## <a name="see-also"></a>참고 항목  
  [비관리 코드와의 상호 운용](../../../docs/framework/interop/index.md)  
  [플랫폼 호출 예제](../../../docs/framework/interop/platform-invoke-examples.md)  

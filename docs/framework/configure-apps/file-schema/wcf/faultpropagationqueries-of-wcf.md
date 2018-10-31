@@ -3,11 +3,11 @@ title: WCF의 &lt;faultPropagationQueries&gt;
 ms.date: 03/30/2017
 ms.assetid: d85f66a7-e7b0-4dbb-83cc-89fa06fc9161
 ms.openlocfilehash: 1db99a8d80fad5c0eca93777d87047b43371d048
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50044413"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50202122"
 ---
 # <a name="ltfaultpropagationqueriesgt-of-wcf"></a>WCF의 &lt;faultPropagationQueries&gt;
 

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 707e73705e5e96e1b0b92976d22f763afef64929
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 90dd72fae71f4283e6eefeb7c878b32e9c155cff
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389254"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454397"
 ---
 # <a name="net-core-and-open-source"></a>.NET Core 및 오픈 소스
 이 항목에서는 .NET Core에 대한 간략한 개요 및 자세한 정보를 찾는 방법을 보여줍니다. .NET Core 주제에 대한 전체 목록은 [.NET Core 가이드](../../core/index.md)를 참조하세요.
@@ -24,7 +24,7 @@ ms.locfileid: "33389254"
   
 -   **플랫폼 간:** .NET Core는 필요한 앱 기능을 구현하고 플랫폼 대상에 관계없이 이 코드를 재사용하기 위한 주요 기능을 제공합니다. 현재 Windows, Linux 및 macOS의 세 개 주요 운영 체제(OS)를 지원합니다. 지원되는 운영 체제 간에 수정하지 않고 실행되는 앱과 라이브러리를 작성할 수 있습니다. 지원되는 운영 체제의 목록을 보려면 [.NET Core roadmap](https://github.com/dotnet/core/blob/master/roadmap.md)(.NET Core 로드맵)을 방문하세요.
   
--   **오픈 소스:** .NET Core는 [.NET Foundation](http://www.dotnetfoundation.org/)에서 관리하는 여러 프로젝트 중 하나이며 [GitHub](https://github.com/)에서 사용 가능합니다.  오픈 소스 프로젝트로서의 .NET Core는 더욱 투명한 개발 프로세스를 장려하고 활동 및 참여 커뮤니티를 촉진합니다.  
+-   **오픈 소스:** .NET Core는 [.NET Foundation](https://www.dotnetfoundation.org/)에서 관리하는 여러 프로젝트 중 하나이며 [GitHub](https://github.com/)에서 사용 가능합니다.  오픈 소스 프로젝트로서의 .NET Core는 더욱 투명한 개발 프로세스를 장려하고 활동 및 참여 커뮤니티를 촉진합니다.  
   
 -   **유연한 배포:** 응용 프로그램을 배포하는 방법은 프레임워크 종속 배포 또는 자체 포함 배포의 두 가지가 있습니다. 프레임워크 종속 배포를 사용하는 경우, 사용자 응용 프로그램 및 제3자 종속 프로그램만 설치되고 사용자의 응용 프로그램이 .NET Core의 시스템 전체 버전에 따라 존재하게 됩니다.  자체 포함 배포를 사용하는 경우, 응용 프로그램을 빌드하는 데 사용된 .NET Core 버전도 응용 프로그램 및 타사 종속 프로그램과 함께 배포되며 다른 버전과 함께 나란히 실행할 수 있습니다.    자세한 내용은 [.NET Core 응용 프로그램 배포](../../core/deploying/index.md)를 참조하십시오.
 
@@ -46,6 +46,6 @@ ms.locfileid: "33389254"
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>참고 항목  
- [.NET Core 홈 페이지](https://www.microsoft.com/net/core)  
- [.NET Core 가이드](../../core/index.md)  
- [ASP.NET Core 설명서](/aspnet/core/)
+- [.NET Core 홈 페이지](https://www.microsoft.com/net/core)  
+- [.NET Core 가이드](../../core/index.md)  
+- [ASP.NET Core 설명서](/aspnet/core/)

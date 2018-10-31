@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ed180baa-dfc6-4c69-a725-46e87edafb27
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f979f3d09079f36d12408d0a82ef58e603da859
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16404b1e4b2f1e4a835eae5c0f86dac4f508d294
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47203179"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192410"
 ---
 # <a name="how-to-read-text-from-a-file"></a>방법: 파일의 텍스트 읽기
 다음 예제에서는 데스크톱 응용 프로그램용 .NET을 사용하여 텍스트 파일에서 텍스트를 동기 또는 비동기적으로 읽는 방법을 보여 줍니다. 두 예제에서는 <xref:System.IO.StreamReader> 클래스의 인스턴스를 만들 때 파일의 상대 또는 절대 경로를 제공합니다. 다음 예제에서는 TestFile.txt라는 파일이 응용 프로그램과 같은 폴더에 있다고 가정합니다.  
@@ -43,9 +43,9 @@ ms.locfileid: "47203179"
 - <xref:System.IO.StreamReader>  
 - <xref:System.IO.File.OpenText%2A?displayProperty=nameWithType>  
 - <xref:System.IO.StreamReader.ReadLine%2A?displayProperty=nameWithType>  
-- [비동기 파일 I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
+- [Asynchronous File I/O](../../../docs/standard/io/asynchronous-file-i-o.md)  
 - [NIB: 방법: 디렉터리 목록 생성 만들기](https://msdn.microsoft.com/library/4d2772b1-b991-4532-a8a6-6ef733277e69)  
-- [Quickstart: Reading and writing files](https://msdn.microsoft.com/library/windows/apps/hh758325.aspx)(빠른 시작: 파일 읽기 및 쓰기)  
+- [Quickstart: Reading and writing files](https://docs.microsoft.com/previous-versions/windows/apps/hh758325%28v=win.10%29)(빠른 시작: 파일 읽기 및 쓰기)  
 - [방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환](../../../docs/standard/io/how-to-convert-between-dotnet-streams-and-winrt-streams.md)  
 - [방법: 새로 만든 데이터 파일 읽기 및 쓰기](../../../docs/standard/io/how-to-read-and-write-to-a-newly-created-data-file.md)  
 - [방법: 로그 파일 열기 및 추가](../../../docs/standard/io/how-to-open-and-append-to-a-log-file.md)  

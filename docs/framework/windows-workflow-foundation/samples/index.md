@@ -3,11 +3,11 @@ title: Windows WF (Workflow) 샘플 설명서
 ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
 ms.openlocfilehash: e451ecd18b68ba42aa2c8a71e394077ee6b492ce
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50033853"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201337"
 ---
 # <a name="windows-workflow-wf-samples"></a>WF(Windows Workflow) 샘플
 

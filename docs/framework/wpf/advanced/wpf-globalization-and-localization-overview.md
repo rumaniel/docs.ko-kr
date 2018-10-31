@@ -5,24 +5,27 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: fcf5b8f872e2f97497ff5387adb755da1832bf8c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e9a9e9295425efaadff4ac1f0b796b2c9a889543
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47424469"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200955"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 전역화 및 지역화 개요
+
 제품을 한 언어로만 제공하면 잠재적 고객 기반이 전 세계 65억 인구의 극히 일부로만 제한됩니다. 전 세계를 대상으로 하는 응용 프로그램을 만들려는 경우 가장 뛰어나고 경제적으로 고객에게 다가갈 수 있는 방법 중 하나는 바로 제품의 비용 효율적인 지역화입니다.  
   
  이 개요에서는 전역화 및 지역화 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다. 전역화는 여러 위치에서 수행되는 응용 프로그램의 디자인 및 개발 작업입니다. 예를 들어 전역화는 여러 문화권의 사용자를 위해 지역화된 사용자 인터페이스와 국가별 데이터를 지원합니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 주석 달기 및 자동 레이아웃, 위성 어셈블리 및 지역화 된 특성을 포함 하 여 전역화 된 디자인 기능을 제공 합니다.
   
- 지역화는 응용 프로그램 리소스를 응용 프로그램에서 지원할 각 문화권에 맞는 지역화된 버전으로 번역하는 작업입니다. 지역화 하는 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 Api를 사용 하는 <xref:System.Windows.Markup.Localizer> 네임 스페이스입니다. 이러한 Api power 합니다 [LocBaml 도구 샘플](https://go.microsoft.com/fwlink/?LinkID=160016) 명령줄 도구입니다. 빌드 LocBaml을 사용 하는 방법에 대 한 정보를 참조 하세요 [응용 프로그램 지역화](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)합니다.    
+ 지역화는 응용 프로그램 리소스를 응용 프로그램에서 지원할 각 문화권에 맞는 지역화된 버전으로 번역하는 작업입니다. 지역화 하는 경우 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 Api를 사용 하는 <xref:System.Windows.Markup.Localizer> 네임 스페이스입니다. 이러한 Api power 합니다 [LocBaml 도구 샘플](https://go.microsoft.com/fwlink/?LinkID=160016) 명령줄 도구입니다. 빌드 LocBaml을 사용 하는 방법에 대 한 정보를 참조 하세요 [응용 프로그램 지역화](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)합니다.
   
-## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF를 위한 최선의 전역화 및 지역화 방법  
+## <a name="best-practices-for-globalization-and-localization-in-wpf"></a>WPF를 위한 최선의 전역화 및 지역화 방법
+
  로 빌드되는 전역화 및 지역화 기능을 최대한 활용할 수 있게 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] UI 디자인 및이 섹션에서는 제공 되는 지역화 관련 팁에 따라 합니다.  
   
-### <a name="best-practices-for-wpf-ui-design"></a>최선의 WPF UI 디자인 방법  
+### <a name="best-practices-for-wpf-ui-design"></a>최선의 WPF UI 디자인 방법
+
  디자인할 때를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 기반 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)], 모범 사례를 구현 하는 것이 좋습니다.  
   
 -   작성 하 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 에서 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 만들지 않도록 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 코드에서. 만들 때 사용자 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 를 사용 하 여 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], 기본 제공 지역화 Api 통해 노출 합니다.  
@@ -39,7 +42,7 @@ ms.locfileid: "47424469"
   
 -   사용 하도록 설정 <xref:System.Windows.Controls.TextBlock.TextWrapping%2A> 에서 <xref:System.Windows.Controls.TextBlock> 클리핑을 피하기 위해.
   
--   설정 된 `xml:lang` 특성입니다. 이 특성에는 특정 요소 및 해당 자식 요소의 문화권을을 설명합니다. 이 속성의 값에서 몇 가지 기능의 동작 변경 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 예를 들어 하이픈 넣기, 맞춤법 검사, 숫자 대체, 복잡한 스크립트 셰이핑 및 글꼴 대체의 동작을 변경합니다. 참조 [WPF의 전역화](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md) 설정에 대 한 자세한 내용은 합니다 [xml: lang XAML 처리](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)합니다.  
+-   `xml:lang` 특성을 설정합니다. 이 특성에는 특정 요소 및 해당 자식 요소의 문화권을을 설명합니다. 이 속성의 값에서 몇 가지 기능의 동작 변경 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 예를 들어 하이픈 넣기, 맞춤법 검사, 숫자 대체, 복잡한 스크립트 셰이핑 및 글꼴 대체의 동작을 변경합니다. 참조 [WPF의 전역화](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md) 설정에 대 한 자세한 내용은 합니다 [xml: lang XAML 처리](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)합니다.  
   
 -   다른 언어에 사용 되는 글꼴을 더욱 효과적으로 제어할를 사용자 지정된 합성 글꼴을 만듭니다. 기본적으로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows\Fonts 디렉터리에서 GlobalUserInterface.composite 글꼴을 사용 합니다.  
   
@@ -47,7 +50,8 @@ ms.locfileid: "47424469"
   
 -   브라우저 외부에서 호스팅되는 독립 실행형 탐색 응용 프로그램을 만들 때 설정 합니다 <xref:System.Windows.Application.StartupUri%2A> 초기 응용 프로그램에 대 한는 <xref:System.Windows.Navigation.NavigationWindow> 대신 페이지 (예를 들어 `<Application StartupUri="NavigationWindow.xaml">`). 이 디자인을 사용 하면 변경할 수 있습니다는 <xref:System.Windows.FlowDirection> 창 및 탐색 모음입니다. 자세한 내용 및 예제를 참조 하세요 [Globalization Homepage 샘플](https://go.microsoft.com/fwlink/?LinkID=159990)합니다.  
   
-### <a name="best-practices-for-wpf-localization"></a>WPF 지역화 모범 사례  
+### <a name="best-practices-for-wpf-localization"></a>WPF 지역화 모범 사례
+
  지역화할 때는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]– 기반된 응용 프로그램 모범 사례를 구현 하는 것이 좋습니다.  
   
 -   지역화 주석을 사용 하 여 지역화 담당자에 대 한 추가 컨텍스트를 제공 합니다.  
@@ -64,25 +68,27 @@ ms.locfileid: "47424469"
   
          생략 하 여 주 어셈블리에서 소스 언어를 포함 하려는 경우는 `<UICulture>` 프로젝트 파일의 태그를 설정 합니다 `UltimateResourceFallback` 위성이 아닌 주 어셈블리와 위치 (예를 들어 `[assembly: NeutralResourcesLanguage("en-US", UltimateResourceFallbackLocation.MainAssembly)]`).  
   
-<a name="workflow_to_localize" />   
-## <a name="localize-a-wpf-application"></a>WPF 응용 프로그램 지역화  
- 지역화 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 몇 가지 옵션이 있습니다. 예를 들어, 응용 프로그램의 지역화 가능한 리소스를 바인딩할 수 있습니다는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 파일, 지역화 가능 텍스트를 resx 테이블에에서 저장 또는 사용 하 여 지역화 담당자가 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일입니다. 이 섹션에서는 몇 가지 이점을 제공 하는 XAML의 BAML 양식을 사용 하는 지역화 워크플로를 설명 합니다.  
+## <a name="localize-a-wpf-application"></a>WPF 응용 프로그램 지역화
+
+지역화 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 몇 가지 옵션이 있습니다. 예를 들어, 응용 프로그램의 지역화 가능한 리소스를 바인딩할 수 있습니다는 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 파일, 지역화 가능 텍스트를 resx 테이블에에서 저장 또는 사용 하 여 지역화 담당자가 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 파일입니다. 이 섹션에서는 몇 가지 이점을 제공 하는 XAML의 BAML 양식을 사용 하는 지역화 워크플로를 설명 합니다.  
   
--   빌드한 후에 지역화할 수 있습니다.  
+-   구성한 후에 지역화할 수 있습니다.  
   
 -   이전 버전의 BAML 양식의 XAML을 지역화된 새 버전의 BAML 양식의 XAML로 업데이트할 수 있으므로 개발과 동시에 지역화를 수행할 수 있습니다.  
   
 -   확인할 수 있습니다 원래 소스 요소와 의미 체계 컴파일 타임에 BAML 양식의 XAML의 컴파일된 형태 이므로 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다.  
   
 ### <a name="localization-build-process"></a>지역화 빌드 프로세스  
- 개발 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 지역화를 위한 빌드 프로세스는 다음과 같습니다.  
+
+개발 하는 경우는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램을 지역화를 위한 빌드 프로세스는 다음과 같습니다.  
   
 -   개발자가 만들고 전역화 합니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 프로젝트 파일에서 개발자 설정 `<UICulture>en-US</UICulture>` 응용 프로그램을 컴파일할 때 있도록 언어 중립적 주 어셈블리가 생성 됩니다. 이 어셈블리에는 지역화 가능한 모든 리소스가 포함된 위성 .resources.dll 파일이 있습니다. 필요에 따라 있습니다 수 소스 언어를 유지할 주 어셈블리에 있으므로 지역화 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 주 어셈블리에서의 추출을 지원 합니다.  
   
 -   파일을 빌드, 컴파일될 때는 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] XAML의 BAML 양식으로 변환 됩니다. 문화권에 중립적인 `MyDialog.exe` 와 문화권에 종속적인 (영어) `MyDialog.resources.dll` 파일이 영어권 고객에 게 릴리스됩니다.  
   
-### <a name="localization-workflow"></a>지역화 워크플로  
- 지역화 프로세스 시작 되지 않은 후 `MyDialog.resources.dll` 파일이 만들어집니다. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소 및 속성의 원래 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 를 사용 하 여 키-값 쌍으로 BAML 양식의 XAML에서 추출 된 합니다 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 에서 <xref:System.Windows.Markup.Localizer>합니다. 지역화 담당자는 키/값 쌍을 사용하여 응용 프로그램을 지역화합니다. 지역화가 완료된 후 새 값에서 새 .resource.dll을 생성할 수 있습니다.  
+### <a name="localization-workflow"></a>지역화 워크플로
+
+지역화 프로세스 시작 되지 않은 후 `MyDialog.resources.dll` 파일이 만들어집니다. [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 요소 및 속성의 원래 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 를 사용 하 여 키-값 쌍으로 BAML 양식의 XAML에서 추출 된 합니다 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 에서 <xref:System.Windows.Markup.Localizer>합니다. 지역화 담당자는 키/값 쌍을 사용하여 응용 프로그램을 지역화합니다. 지역화가 완료된 후 새 값에서 새 .resource.dll을 생성할 수 있습니다.
   
  키-값 쌍의 키는 `x:Uid` 원래에서 개발자가 배치 되는 값 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]합니다. 이러한 `x:Uid` 값을 사용 합니다 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 추적 하 고 지역화 도중 개발자와 지역화 담당자 간에 발생 하는 변경 내용을 병합 합니다. 예를 들어 개발자가 변경 된 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 지역화 담당자가 지역화를 시작한 후 손실 되는 최소한의 변환 작업을 이미 완료 된 지역화 작업과 개발 변경 내용을 병합할 수 있습니다.  
   
@@ -92,11 +98,12 @@ ms.locfileid: "47424469"
   
  ![지역화되지 않은 워크플로](../../../../docs/framework/wpf/advanced/media/localizationworkflow2.png "LocalizationWorkflow2")  
   
-<a name="examples_of_localization" />   
-## <a name="examples-of-wpf-localization"></a>WPF 지역화 예제  
+## <a name="examples-of-wpf-localization"></a>WPF 지역화 예제
+
  이 섹션에는 지역화 된 응용 프로그램을 빌드하고 지역화 하는 방법을 이해할 수 있도록 예가 포함 되어 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.  
   
-#### <a name="run-dialog-box-example"></a>실행 대화 상자 예제  
+#### <a name="run-dialog-box-example"></a>실행 대화 상자 예제
+
  다음 그래픽의 출력을 표시 합니다 **실행** 대화 상자 샘플입니다.  
   
  **영어:**  

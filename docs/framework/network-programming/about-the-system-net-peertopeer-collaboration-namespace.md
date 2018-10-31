@@ -2,14 +2,12 @@
 title: System.Net.PeerToPeer.Collaboration 네임스페이스 정보
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 0b9e95c4ca723166639adf5b93d0811638378470
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9e95dc571bc520c0abd0cf676ce37f383fed84ba
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195760"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50197082"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>System.Net.PeerToPeer.Collaboration 네임스페이스 정보
 <xref:System.Net.PeerToPeer.Collaboration> 네임스페이스는 피어 투 피어 공동 작업 인프라를 사용하여 피어 공동 작업 활동을 구현하는 데 사용되는 클래스 및 API를 제공합니다.  

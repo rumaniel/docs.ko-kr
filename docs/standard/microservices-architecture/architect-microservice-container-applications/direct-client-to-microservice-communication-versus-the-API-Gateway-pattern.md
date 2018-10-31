@@ -4,12 +4,12 @@ description: 컨테이너화된 .NET 응용 프로그램에 대한 .NET 마이�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 06/07/2018
-ms.openlocfilehash: 1aaddc96ee509815da9fc4e6519e1fb454f74b13
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 00763a806c18b45b366068f865f4ecb4c5cd743b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198685"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50183609"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API 게이트웨이 패턴과 클라이언트-마이크로 서비스 간 직접 통신 비교
 
@@ -84,13 +84,13 @@ API 게이트웨이 패턴을 구현할 때는 주의해야 합니다. 일반적
 
 따라서 API 게이트웨이는 비즈니스 경계 및 클라이언트 앱을 기준으로 분리되어야 하며, 모든 내부 마이크로 서비스에서 단일 집계로 작동하지 않아야 합니다.
 
-API 게이트웨이 계층을 여러 API 게이트웨이로 분할할 때 응용 프로그램에 여러 개의 클라이언트 앱이 있으면, 해당 응용 프로그램은 여러 API 게이트웨이 형식을 식별할 때 기본 피벗일 수 있으므로 각 클라이언트 앱의 요구 사항에 대해 서로 다른 외관이 포함될 수 있습니다. 다음 이미지에 나와 있는 것처럼 이 경우의 패턴을 [BFF](http://samnewman.io/patterns/architectural/bff/)(“Backend for Frontend”)라고 합니다. 이 패턴에서 각 API 게이트웨이는 여러 내부 마이크로 서비스의 호출 아래에 있는 특정 어댑터 코드를 구현하여, 클라이언트 폼 팩터를 기반으로 각 클라이언트 앱에 맞춰진 다른 API를 제공할 수 있습니다.
+API 게이트웨이 계층을 여러 API 게이트웨이로 분할할 때 응용 프로그램에 여러 개의 클라이언트 앱이 있으면, 해당 응용 프로그램은 여러 API 게이트웨이 형식을 식별할 때 기본 피벗일 수 있으므로 각 클라이언트 앱의 요구 사항에 대해 서로 다른 외관이 포함될 수 있습니다. 다음 이미지에 나와 있는 것처럼 이 경우의 패턴을 [BFF](https://samnewman.io/patterns/architectural/bff/)(“Backend for Frontend”)라고 합니다. 이 패턴에서 각 API 게이트웨이는 여러 내부 마이크로 서비스의 호출 아래에 있는 특정 어댑터 코드를 구현하여, 클라이언트 폼 팩터를 기반으로 각 클라이언트 앱에 맞춰진 다른 API를 제공할 수 있습니다.
 
 ![여러 사용자 지정 API 게이트웨이를 보여 주는 다이어그램](./media/image13.1.png)
 
 **그림 4-13.1**. 여러 사용자 지정 API 게이트웨이 사용
 
-이전 이미지는 여러 세분화된 API 게이트웨이가 있는 간소화된 아키텍처를 보여 줍니다. 이 경우 각 API 게이트웨이에 대해 식별된 경계는 순수하게 [BFF](http://samnewman.io/patterns/architectural/bff/)(“Backend for Frontend”) 패턴을 기반으로 하므로 클라이언트 앱당 필요한 API에만 기반을 둡니다. 그러나 더 큰 응용 프로그램에서는 더 나아가 비즈니스 경계를 기반으로 추가 API 게이트웨이를 두 번째 피벗으로 만들어야 합니다.
+이전 이미지는 여러 세분화된 API 게이트웨이가 있는 간소화된 아키텍처를 보여 줍니다. 이 경우 각 API 게이트웨이에 대해 식별된 경계는 순수하게 [BFF](https://samnewman.io/patterns/architectural/bff/)(“Backend for Frontend”) 패턴을 기반으로 하므로 클라이언트 앱당 필요한 API에만 기반을 둡니다. 그러나 더 큰 응용 프로그램에서는 더 나아가 비즈니스 경계를 기반으로 추가 API 게이트웨이를 두 번째 피벗으로 만들어야 합니다.
 
 ## <a name="main-features-in-the-api-gateway-pattern"></a>API 게이트웨이 패턴의 주요 기능
 
@@ -168,7 +168,7 @@ Ocelot이 [eShopOnContainers 참조 응용 프로그램](https://github.com/dotn
 
 - **API 게이트웨이 패턴** [*https://docs.microsoft.com/azure/architecture/microservices/gateway*](https://docs.microsoft.com/azure/architecture/microservices/gateway)
 
-- **Aggregation and composition pattern**(집계 및 컴퍼지션 패턴) [*http://microservices.io/patterns/data/api-composition.html*](http://microservices.io/patterns/data/api-composition.html)
+- **Aggregation and composition pattern**(집계 및 컴퍼지션 패턴) [*https://microservices.io/patterns/data/api-composition.html*](https://microservices.io/patterns/data/api-composition.html)
 
 - **Azure API Management** [*https://azure.microsoft.com/services/api-management/*](https://azure.microsoft.com/services/api-management/)
 

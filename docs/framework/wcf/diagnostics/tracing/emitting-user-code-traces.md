@@ -3,11 +3,11 @@ title: 사용자 코드 추적 내보내기
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
 ms.openlocfilehash: 0664c11d8020ee5e712ce6d4843c85a1f30b11a3
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50049167"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200589"
 ---
 # <a name="emitting-user-code-traces"></a>사용자 코드 추적 내보내기
 Windows Communication Foundation (WCF)에서 생성 하는 계측 데이터를 수집 하는 구성에서 추적을 사용 하는 것 외에도 사용자 코드에서 프로그래밍 방식으로 추적을 내보낼 수도 있습니다. 이런 방식으로 계측 데이터를 사전에 작성하여 나중에 진단을 위해 확인할 수 있습니다. 이 항목에서는 이 작업을 수행하는 방법에 대해 설명합니다.  

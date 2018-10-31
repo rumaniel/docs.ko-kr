@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19df26c5-4008-461d-a7d7-18f4506312d2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa204b9ac604cd4e0f2c1ae75e872f6bb5cdaf22
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ac17993a4980e96cbd05fc2523567138e7b56262
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391409"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50196444"
 ---
 # <a name="deploying-the-net-framework"></a>.NET Framework 배포
 .NET Framework 설명서의 이 섹션은 응용 프로그램과 함께 .NET Framework를 설치하려는 개발자 및 네트워크에서 .NET Framework를 배포하려는 관리자를 위한 정보를 제공합니다. 또한 배포에 관련된 활성화 및 다시 시작 문제와 .NET Framework 설치의 진행 상황을 모니터링하는 방법을 설명합니다.  
@@ -37,4 +37,4 @@ ms.locfileid: "33391409"
  CLR 활성화 로그를 보고 디버그하여 응용 프로그램을 올바른 버전의 CLR과 함께 실행할 때 발생할 수 있는 문제를 해결하는 방법을 설명합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [개발 가이드](../../../docs/framework/development-guide.md)
+- [개발 가이드](../../../docs/framework/development-guide.md)

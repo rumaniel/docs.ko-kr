@@ -3,12 +3,12 @@ title: Expression Trees
 description: .NET Core의 식 트리에 대해 알아본 다음 이를 사용하여 검사, 수정 및 실행할 수 있는 구조로 코드를 나타내는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: db35dd99dadc4e49aaaebd5d3782409a206cafc5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214915"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190738"
 ---
 # <a name="expression-trees"></a>Expression Trees
 
@@ -20,7 +20,7 @@ LINQ 쿼리를 만들 때 일반적으로 람다 식을 사용하여 함수 인�
 식 트리는 검사, 수정 또는 실행할 수 있는 구조로 코드를 나타냅니다. 이러한 도구는 런타임에 코드를 조작할 수 있는 강력한 기능을 제공합니다. 실행 중인 알고리즘을 검사하고 새 기능을 삽입하는 코드를 작성할 수 있습니다. 보다 고급 시나리오에서는 실행 중인 알고리즘을 수정하고 C# 식을 다른 형태로 변환하여 다른 환경에서 실행할 수도 있습니다.
 
 식 트리를 사용하는 코드를 이미 작성했을 수 있습니다. Entity Framework의 LINQ API는 LINQ 쿼리 식 패턴에 대한 인수로 식 트리를 허용합니다.
-따라서 [Entity Framework](http://docs.efproject.net/en/latest/)는 C#에서 작성된 쿼리를 데이터베이스 엔진에서 실행되는 SQL로 변환할 수 있습니다. 또 다른 예로 널리 사용되는 .NET 모의 프레임워크인 [Moq](https://github.com/Moq/moq)가 있습니다.
+따라서 [Entity Framework](/ef/)는 C#에서 작성된 쿼리를 데이터베이스 엔진에서 실행되는 SQL로 변환할 수 있습니다. 또 다른 예로 널리 사용되는 .NET 모의 프레임워크인 [Moq](https://github.com/Moq/moq)가 있습니다.
 
 이 자습서의 나머지 섹션에서는 식 트리의 정의를 살펴보고, 식 트리를 지원하는 프레임워크 클래스를 검사하며, 식 트리로 작업하는 방법을 보여 줍니다. 식 트리를 읽는 방법, 식 트리를 만드는 방법, 수정된 식 트리를 만드는 방법, 식 트리로 표시되는 코드를 실행하는 방법 등을 알아봅니다. 자습서를 읽고 나면 이러한 구조를 사용하여 풍부한 적응 알고리즘을 만들 수 있습니다.
 

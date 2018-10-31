@@ -3,12 +3,12 @@ title: Azure에서 F# 사용
 description: 'F #을 사용 하 여 Azure 서비스 사용에 대 한 가이드'
 author: sylvanc
 ms.date: 09/22/2016
-ms.openlocfilehash: 96dec342379b06e997107cc5d6cc05e9fc737452
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 1fbb85a07fc057c1b89a4c4a1ad356066cebf2b8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50033963"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201506"
 ---
 # <a name="using-f-on-azure"></a>Azure에서 F# 사용
 
@@ -40,7 +40,7 @@ Azure Functions 및 F# 사용에 대한 기타 리소스:
 
 ## <a name="using-azure-storage-with-f"></a>F #을 사용 하 여 Azure Storage를 사용합니다. #
 
-Azure Storage는 내구성, 가용성, 확장성을 활용하여 고객의 요구 사항을 충족하는 최신 응용 프로그램을 위한 저장소 서비스의 기본 레이어입니다. F# 프로그램은 다음 문서에 설명된 기술을 사용하여 Azure Storage 서비스를 직접 조작할 수 있습니다.
+Azure Storage는 내구성, 가용성, 확장성을 활용하여 고객의 요구 사항을 충족하는 최신 응용 프로그램을 위한 저장소 서비스의 기본 레이어입니다. F#프로그램은 다음 문서에서 설명한 기술을 사용 하 여 Azure 저장소 서비스에 직접 상호 작용할 수 있습니다.
 
 * [F#을 사용하여 Azure Blob Storage 시작](blob-storage.md)
 * [F#을 사용하여 Azure File Storage 시작](file-storage.md)

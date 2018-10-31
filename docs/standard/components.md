@@ -5,12 +5,12 @@ author: cartermp
 ms.author: mairaw
 ms.date: 08/23/2017
 ms.technology: dotnet-standard
-ms.openlocfilehash: e131ab48b666f2d22d8bd02e41ed76e415a2597d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b98095cd6afd408331ab8c8f6bb15e7741d3073a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47456027"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50189695"
 ---
 # <a name="net-architectural-components"></a>.NET 아키텍처 구성 요소
 
@@ -63,7 +63,7 @@ Mono에 대한 자세한 내용은 [Mono 설명서](https://www.mono-project.com
 
 UWP는 IoT(사물 인터넷)에 대한 최신 터치 가능 Windows 응용 프로그램 및 소프트웨어를 작성하는 데 사용되는 .NET의 구현입니다. PC, 태블릿, 패블릿, 휴대폰, Xbox 등 대상으로 지정할 수 있는 다양한 종류의 장치를 통합하도록 설계되었습니다. UWP는 중앙 집중식 앱 스토어, 실행 환경(AppContainer), Win32 대신 사용할 Windows API 집합(WinRT) 등 많은 서비스를 제공합니다. 앱은 C++, C#, VB.NET 및 JavaScript로 작성할 수 있습니다. C# 및 VB.NET을 사용할 경우 .NET API는 .NET Core에서 제공됩니다.
 
-UWP에 대한 자세한 내용은 [유니버설 Windows 플랫폼 소개](https://docs.microsoft.com/windows/uwp/get-started/universal-application-platform-guide)를 참조하세요.
+UWP에 대한 자세한 내용은 [유니버설 Windows 플랫폼 소개](/windows/uwp/get-started/universal-application-platform-guide)를 참조하세요.
 
 ## <a name="net-runtimes"></a>.NET 런타임
 

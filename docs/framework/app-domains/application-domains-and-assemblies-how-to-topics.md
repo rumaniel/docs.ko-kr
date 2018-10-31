@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2264054e-712e-47e4-8657-1aa1cfec3e3d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b555ad88b90e48da39624686a37898f47d90c1e3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: bed7c6c856c55662b46ff581f007f9df6b67149d
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743097"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50190998"
 ---
 # <a name="application-domains-and-assemblies-how-to-topics"></a>응용 프로그램 도메인 및 어셈블리 방법 항목
 다음 섹션에는 응용 프로그램 도메인 및 어셈블리를 사용한 프로그래밍에 대한 개념 설명서에 나오는 모든 방법 항목에 대한 링크가 있습니다.  
@@ -54,4 +54,4 @@ ms.locfileid: "32743097"
 -   [방법: 어셈블리 내용 보기](../../../docs/framework/app-domains/how-to-view-assembly-contents.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 도메인 및 어셈블리](../../../docs/framework/app-domains/index.md)
+- [응용 프로그램 도메인 및 어셈블리](../../../docs/framework/app-domains/index.md)

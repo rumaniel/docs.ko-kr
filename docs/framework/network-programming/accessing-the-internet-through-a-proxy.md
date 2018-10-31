@@ -12,14 +12,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 32799b14c88ee098e15e0ffa1dfa5aaa585cdc73
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 1c6ca568cae45a54e781c30bf5774015ae09c98a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47421295"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201888"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>프록시를 통해 인터넷 액세스
 사이트가 프록시를 사용하여 인터넷에 대한 액세스를 제공하는 경우 응용 프로그램이 웹 프록시와 통신할 수 있도록 프록시 인스턴스를 구성해야 합니다.  

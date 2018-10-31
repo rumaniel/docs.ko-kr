@@ -7,12 +7,12 @@ ms.date: 09/05/2018
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: a7e810372d831699eae777186385e45fe65cdf45
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47208252"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49454451"
 ---
 # <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>CLI(명령줄 인터페이스) 도구를 사용하여 .NET Core 앱 배포
 
@@ -77,7 +77,7 @@ ms.locfileid: "47208252"
 
 하나 이상의 타사 종속성이 있는 프레임워크 종속 배포를 배포하려면 프로젝트에서 해당 종속성을 사용할 수 있어야 합니다. 다음 두 가지 추가 단계를 수행해야 `dotnet restore`([참고 참조](#dotnet-restore-note)) 명령을 실행할 수 있습니다.
 
-1. 필요한 타사 라이브러리에 대한 참조를 *csproj* 파일의 `<ItemGroup>` 섹션에 추가합니다. 다음 `<ItemGroup>` 섹션에는 [Json.NET](http://www.newtonsoft.com/json)에 대한 종속성이 타사 라이브러리로 포함되어 있습니다.
+1. 필요한 타사 라이브러리에 대한 참조를 *csproj* 파일의 `<ItemGroup>` 섹션에 추가합니다. 다음 `<ItemGroup>` 섹션에는 [Json.NET](https://www.newtonsoft.com/json)에 대한 종속성이 타사 라이브러리로 포함되어 있습니다.
 
       ```xml
       <ItemGroup>

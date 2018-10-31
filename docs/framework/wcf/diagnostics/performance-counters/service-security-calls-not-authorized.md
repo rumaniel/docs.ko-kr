@@ -2,13 +2,12 @@
 title: '서비스: Security Calls Not Authorized'
 ms.date: 03/30/2017
 ms.assetid: 3024b20a-5250-4bd1-a38c-c6d79f89610b
-author: BrucePerlerMS
-ms.openlocfilehash: f90ed5746c8b798e55b7e300ba7ff63bbafdcac4
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: a38b5e0eb467a5cad698fd6e3e01c0adef825d2f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035885"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199047"
 ---
 # <a name="service-security-calls-not-authorized"></a>서비스: Security Calls Not Authorized
 카운터 이름: Security Calls Not Authorized  

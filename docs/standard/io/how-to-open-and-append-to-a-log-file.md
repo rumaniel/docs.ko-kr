@@ -14,11 +14,11 @@ ms.assetid: 74423362-1721-49cb-aa0a-e04005f72a06
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 35a7d481cf82818054a852f7c2e142f615022fcb
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079045"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48848155"
 ---
 # <a name="how-to-open-and-append-to-a-log-file"></a>방법: 로그 파일 열기 및 추가
 <xref:System.IO.StreamWriter> 및 <xref:System.IO.StreamReader>는 스트림에서 문자를 쓰고 문자를 읽습니다. 다음 코드 예제는 입력을 위해 `log.txt` 파일을 열거나, 파일이 존재하지 않는 경우 파일을 만들고 파일의 끝에 정보를 추가합니다. 그러면 파일의 콘텐츠가 디스플레이의 표준 출력에 기록됩니다. 이 예제의 대안으로, 정보를 단일 문자열 또는 문자열 배열로 저장할 수 있으며, <xref:System.IO.File.WriteAllText%2A> 또는 <xref:System.IO.File.WriteAllLines%2A> 메서드를 동일한 기능을 수행하는 데 사용할 수도 있습니다.  

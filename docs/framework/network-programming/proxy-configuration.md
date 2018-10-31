@@ -11,14 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f4ae905b7500a8555691557b264985acf538d075
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: eaabb382a7bbb2cdd19c884fcd8499e626f70d4a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47401253"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50180993"
 ---
 # <a name="proxy-configuration"></a>프록시 구성
 프록시 서버는 리소스에 대한 클라이언트 요청을 처리합니다. 프록시는 해당 캐시에서 요청한 리소스를 반환하거나 리소스가 있는 서버로 요청을 전달할 수 있으며, 원격 서버로 전송되는 요청 수를 줄여 네트워크 성능을 개선할 수 있습니다. 프록시를 사용하여 리소스에 대한 액세스를 제한할 수도 있습니다.  

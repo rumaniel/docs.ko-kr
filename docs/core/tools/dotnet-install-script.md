@@ -4,12 +4,12 @@ description: .NET Core CLI 도구 및 공유 런타임을 설치하는 dotnet-in
 author: blackdwarf
 ms.author: mairaw
 ms.date: 09/11/2017
-ms.openlocfilehash: 8d1c6ebb30bd45575bb61206799c9c3e5c47ff0c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ea14424297dcf1dab8711197bee1d3b3e19879c1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004012"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48837078"
 ---
 # <a name="dotnet-install-scripts-reference"></a>dotnet-install 스크립트 참조
 
@@ -33,8 +33,8 @@ macOS/Linux:
 
 [.NET Core 기본 웹 사이트](https://dot.net)에서 호스팅되는 안정적인 버전을 사용하는 것이 좋습니다. 스크립트에 대한 직접 경로는 다음과 같습니다.
 
-* https://dot.net/v1/dotnet-install.sh(bash, UNIX)
-* https://dot.net/v1/dotnet-install.ps1(Powershell, Windows)
+* <https://dot.net/v1/dotnet-install.sh>(bash, UNIX)
+* <https://dot.net/v1/dotnet-install.ps1>(Powershell, Windows)
 
 이러한 스크립트의 주요 유용성은 자동화 시나리오 및 비관리자 설치입니다. 두 가지 스크립트가 있습니다. 하나는 Windows에서 작동하는 PowerShell 스크립트입니다. 다른 스크립트는 Linux/macOS에서 작동하는 bash 스크립트입니다. 두 스크립트의 동작은 동일합니다. 또한 bash 스크립트는 PowerShell 스위치를 읽으므로 Linux/macOS 시스템에서 스크립트와 함께 PowerShell 스위치를 사용할 수 있습니다.
 
@@ -65,7 +65,7 @@ macOS/Linux:
 
 - `latest` - 채널의 최신 빌드(`-Channel` 옵션과 함께 사용됨)
 - `coherent` - 채널의 일관된 최신 빌드, 안정적인 최신 패키지 조합 사용(분기 이름 `-Channel` 옵션과 함께 사용됨)
-- 특정 빌드 버전을 나타내는 X.Y.Z 형식의 세 부분으로 구성된 버전이며 `-Channel` 옵션을 대체합니다. 예를 들면 `2.0.0-preview2-006120` 같은 형식입니다.
+- 특정 빌드 버전을 나타내는 X.Y.Z 형식의 세 부분으로 구성된 버전이며 `-Channel` 옵션을 대체합니다. `2.0.0-preview2-006120`
 
 생략하면 `-Version`은 `latest`로 기본 설정됩니다.
 

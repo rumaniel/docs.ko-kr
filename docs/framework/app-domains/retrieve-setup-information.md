@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fab54080a529a9b5a93c06a4f249a9c14ecd7af
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0d9341b90f876306ff2e964141c2c729d1cf0e5f
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743890"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50193829"
 ---
 # <a name="retrieving-setup-information-from-an-application-domain"></a>응용 프로그램 도메인에서 설치 정보 검색
 응용 프로그램 도메인의 각 인스턴스는 두 속성과 <xref:System.AppDomainSetup> 정보로 구성됩니다. <xref:System.AppDomain?displayProperty=nameWithType> 클래스를 사용하여 응용 프로그램 도메인에서 설치 정보를 검색할 수 있습니다. 이 클래스는 응용 프로그램 도메인에 대한 구성 정보를 검색하는 여러 멤버를 제공합니다.  
@@ -37,5 +37,5 @@ ms.locfileid: "32743890"
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)  
- [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)
+- [응용 프로그램 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)  
+- [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)

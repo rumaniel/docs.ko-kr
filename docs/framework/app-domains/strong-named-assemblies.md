@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7cbef005c913d818dba23d85404fe0382fe79f4a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6fe3847d9ee4530a776f43c67ac17085a9cd9d7b
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32741947"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50190907"
 ---
 # <a name="strong-named-assemblies"></a>강력한 이름의 어셈블리
 강력한 이름의 어셈블리는 어셈블리에 대한 고유한 ID를 만들어 어셈블리 충돌을 방지할 수 있습니다.  
@@ -43,7 +43,7 @@ ms.locfileid: "32741947"
  강력한 이름의 어셈블리가 제공하는 ID 이점을 원하는 오픈 소스 개발자의 경우 어셈블리와 연관된 개인 키를 소스 제어 시스템에 체크 인할 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)  
- [방법: 강력한 이름으로 어셈블리 서명](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
- [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
- [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
+- [전역 어셈블리 캐시](../../../docs/framework/app-domains/gac.md)  
+- [방법: 강력한 이름으로 어셈블리 서명](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)  
+- [Sn.exe(강력한 이름 도구)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)  
+- [강력한 이름의 어셈블리 만들기 및 사용](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

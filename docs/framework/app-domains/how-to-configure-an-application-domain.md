@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07ea8438-7a34-49f0-a7e8-3d6ff7e4a482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab5a4c5f06e7b1789b9252820374ab1b0aca75be
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 012f0220afa0e444d68af5998fb2492a03a371d8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743409"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183167"
 ---
 # <a name="how-to-configure-an-application-domain"></a>방법: 응용 프로그램 도메인 구성
 <xref:System.AppDomainSetup> 클래스를 사용하여 새 응용 프로그램 도메인에 대한 구성 정보를 공용 언어 런타임에 제공할 수 있습니다. 사용자 고유의 응용 프로그램 도메인을 만들 때 가장 중요한 속성은 <xref:System.AppDomainSetup.ApplicationBase%2A>입니다. 다른 **AppDomainSetup** 속성은 런타임 호스트에서 특정 응용 프로그램 도메인을 구성하는 데 주로 사용됩니다.  
@@ -34,5 +34,5 @@ ms.locfileid: "32743409"
  [!code-vb[ADApplicationBase#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/ADApplicationBase/VB/source2.vb#2)]  
   
 ## <a name="see-also"></a>참고 항목  
- [응용 프로그램 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)  
- [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)
+- [응용 프로그램 도메인으로 프로그래밍](application-domains.md#programming-with-application-domains)  
+- [응용 프로그램 도메인 사용](../../../docs/framework/app-domains/use.md)

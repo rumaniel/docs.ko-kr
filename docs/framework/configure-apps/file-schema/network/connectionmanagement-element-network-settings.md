@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <connectionManagement> element
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
-ms.openlocfilehash: ff2f895ca50f0d16ee9e16406f92b087b03e391e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 7cc5f2a37c0520ee48a10afeb4b9bc83ffd61033
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50049115"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50201545"
 ---
 # <a name="ltconnectionmanagementgt-element-network-settings"></a>&lt;connectionManagement&gt; 요소 (네트워크 설정)
 네트워크 호스트에 대한 최대 연결 수를 지정합니다.  
@@ -70,6 +70,6 @@ ms.locfileid: "50049115"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Net.ServicePoint>  
- <xref:System.Net.ServicePointManager>  
- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.ServicePoint>  
+- <xref:System.Net.ServicePointManager>  
+- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

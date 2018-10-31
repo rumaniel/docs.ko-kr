@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: ce2a63a8-c829-4742-a6ea-72ee5d89f169
 author: mcleblanc
 ms.author: markl
-ms.openlocfilehash: 695ee744bdf2226f0647c4cdf142a2dca4e97a4a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: b77ead51b4e064d223735ca52affdec434e5c818
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033456"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198187"
 ---
 # <a name="ltaddgt-element-for-ltnamedcachesgt"></a>&lt;추가&gt; 요소에 대 한 &lt;namedCaches&gt;
 추가 `namedCache` 항목을 `namedCaches` 메모리 캐시에 대 한 컬렉션입니다.  
@@ -79,4 +79,4 @@ ms.locfileid: "48033456"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [\<namedCaches > 요소 (캐시 설정)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)
+- [\<namedCaches > 요소 (캐시 설정)](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

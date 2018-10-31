@@ -2,12 +2,12 @@
 title: '연습: async 및 await를 사용하여 웹에 액세스(C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: 24ce1e405019ef83ff6bcbb61552d6fc5d911935
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8a97521bae7f5f16841aa4c8e4a157384739ee61
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47455751"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49453283"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>연습: async 및 await를 사용하여 웹에 액세스(C#)
 
@@ -145,16 +145,16 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
     {
         var urls = new List<string>
         {
-            "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",
-            "http://msdn.microsoft.com",
-            "http://msdn.microsoft.com/library/hh290136.aspx",
-            "http://msdn.microsoft.com/library/ee256749.aspx",
-            "http://msdn.microsoft.com/library/hh290138.aspx",
-            "http://msdn.microsoft.com/library/hh290140.aspx",
-            "http://msdn.microsoft.com/library/dd470362.aspx",
-            "http://msdn.microsoft.com/library/aa578028.aspx",
-            "http://msdn.microsoft.com/library/ms404677.aspx",
-            "http://msdn.microsoft.com/library/ff730837.aspx"
+            "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",
+            "https://msdn.microsoft.com",
+            "https://msdn.microsoft.com/library/hh290136.aspx",
+            "https://msdn.microsoft.com/library/ee256749.aspx",
+            "https://msdn.microsoft.com/library/hh290138.aspx",
+            "https://msdn.microsoft.com/library/hh290140.aspx",
+            "https://msdn.microsoft.com/library/dd470362.aspx",
+            "https://msdn.microsoft.com/library/aa578028.aspx",
+            "https://msdn.microsoft.com/library/ms404677.aspx",
+            "https://msdn.microsoft.com/library/ff730837.aspx"
         };
         return urls;
     }
@@ -190,8 +190,8 @@ async/await 기능을 사용하여 비동기 프로그램을 보다 쉽고 직�
         // is designed to be used with a monospaced font, such as
         // Lucida Console or Global Monospace.
         var bytes = content.Length;
-        // Strip off the "http://".
-        var displayURL = url.Replace("http://", "");
+        // Strip off the "https://".
+        var displayURL = url.Replace("https://", "");
         resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
     }
     ```
@@ -507,16 +507,16 @@ namespace AsyncExampleWPF
         {
             List<string> urls = new List<string>
             {
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",
-                "http://msdn.microsoft.com",
-                "http://msdn.microsoft.com/library/hh290136.aspx",
-                "http://msdn.microsoft.com/library/ee256749.aspx",
-                "http://msdn.microsoft.com/library/hh290138.aspx",
-                "http://msdn.microsoft.com/library/hh290140.aspx",
-                "http://msdn.microsoft.com/library/dd470362.aspx",
-                "http://msdn.microsoft.com/library/aa578028.aspx",
-                "http://msdn.microsoft.com/library/ms404677.aspx",
-                "http://msdn.microsoft.com/library/ff730837.aspx"
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",
+                "https://msdn.microsoft.com",
+                "https://msdn.microsoft.com/library/hh290136.aspx",
+                "https://msdn.microsoft.com/library/ee256749.aspx",
+                "https://msdn.microsoft.com/library/hh290138.aspx",
+                "https://msdn.microsoft.com/library/hh290140.aspx",
+                "https://msdn.microsoft.com/library/dd470362.aspx",
+                "https://msdn.microsoft.com/library/aa578028.aspx",
+                "https://msdn.microsoft.com/library/ms404677.aspx",
+                "https://msdn.microsoft.com/library/ff730837.aspx"
             };
             return urls;
         }
@@ -564,8 +564,8 @@ namespace AsyncExampleWPF
             // is designed to be used with a monospaced font, such as
             // Lucida Console or Global Monospace.
             var bytes = content.Length;
-            // Strip off the "http://".
-            var displayURL = url.Replace("http://", "");
+            // Strip off the "https://".
+            var displayURL = url.Replace("https://", "");
             resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
         }
     }
@@ -661,16 +661,16 @@ namespace AsyncExampleWPF
         {
             List<string> urls = new List<string>
             {
-                "http://msdn.microsoft.com/library/windows/apps/br211380.aspx",
-                "http://msdn.microsoft.com",
-                "http://msdn.microsoft.com/library/hh290136.aspx",
-                "http://msdn.microsoft.com/library/ee256749.aspx",
-                "http://msdn.microsoft.com/library/hh290138.aspx",
-                "http://msdn.microsoft.com/library/hh290140.aspx",
-                "http://msdn.microsoft.com/library/dd470362.aspx",
-                "http://msdn.microsoft.com/library/aa578028.aspx",
-                "http://msdn.microsoft.com/library/ms404677.aspx",
-                "http://msdn.microsoft.com/library/ff730837.aspx"
+                "https://msdn.microsoft.com/library/windows/apps/br211380.aspx",
+                "https://msdn.microsoft.com",
+                "https://msdn.microsoft.com/library/hh290136.aspx",
+                "https://msdn.microsoft.com/library/ee256749.aspx",
+                "https://msdn.microsoft.com/library/hh290138.aspx",
+                "https://msdn.microsoft.com/library/hh290140.aspx",
+                "https://msdn.microsoft.com/library/dd470362.aspx",
+                "https://msdn.microsoft.com/library/aa578028.aspx",
+                "https://msdn.microsoft.com/library/ms404677.aspx",
+                "https://msdn.microsoft.com/library/ff730837.aspx"
             };
             return urls;
         }
@@ -681,8 +681,8 @@ namespace AsyncExampleWPF
             // is designed to be used with a monospaced font, such as
             // Lucida Console or Global Monospace.
             var bytes = content.Length;
-            // Strip off the "http://".
-            var displayURL = url.Replace("http://", "");
+            // Strip off the "https://".
+            var displayURL = url.Replace("https://", "");
             resultsTextBox.Text += string.Format("\n{0,-58} {1,8}", displayURL, bytes);
         }
     }

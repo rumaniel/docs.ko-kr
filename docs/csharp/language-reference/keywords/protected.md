@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - protected keyword [C#]
 ms.assetid: 05ce3794-6675-4025-bddb-eaaa0ec22892
-ms.openlocfilehash: f25e692430f876ec384971079d6d0aa2c97e967b
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cc3c8f81edb68fb26be560c8635e30dfd6e7b372
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47205018"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50183180"
 ---
 # <a name="protected-c-reference"></a>protected(C# 참조)
 
@@ -61,4 +61,4 @@ protected 멤버는 해당 클래스 내에서 파생 클래스 인스턴스가 
 - [public](public.md)
 - [private](private.md)
 - [internal](internal.md)
-- [internal virtual 키워드에 대한 보안 문제](https://docs.microsoft.com/en-us/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))
+- [internal virtual 키워드에 대한 보안 문제](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/heyd8kky(v=vs.100))

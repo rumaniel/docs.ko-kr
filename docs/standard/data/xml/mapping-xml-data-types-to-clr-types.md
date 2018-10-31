@@ -5,20 +5,19 @@ ms.technology: dotnet-standard
 ms.assetid: cabdfcad-f359-479b-b71c-8b2fad42ca49
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9cff30147da82896fb3a757ba2fed16d794ec3c9
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a88d5bf99e2d9bb6465413cb5419058014d113a1
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46004051"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48839043"
 ---
 # <a name="mapping-xml-data-types-to-clr-types"></a>CLR 형식에 XML 데이터 형식 매핑
-다음 표에서는 XML 데이터 형식과 CLR(공용 언어 런타임) 형식 간의 기본 매핑에 대해 설명합니다.  
-  
-## <a name="the-following-table-describes-the-default-mappings-of-an-xml-data-type-to-a-clr-type"></a>다음 표에서는 XML 데이터 형식을 CLR 형식으로 매핑하는 기본 매핑에 대해 설명합니다.  
+
+다음 표에서는 XML 데이터 형식과 CLR(공용 언어 런타임) 형식 간의 기본 매핑에 대해 설명합니다.
   
 > [!NOTE]
->  `xs` 및 `xdt` 접두사는 각각 http://www.w3.org/2001/XMLSchema 및 http://www.w3.org/2003/05/xpath-datatypes 네임스페이스 URI로 매핑됩니다.  
+> `xs` 및 `xdt` 접두사는 각각 <https://www.w3.org/2001/XMLSchema> 및 <https://www.w3.org/2003/05/xpath-datatypes> 네임스페이스 URI로 매핑됩니다.
   
 |XML 형식|CLR 형식|  
 |--------------|--------------|  

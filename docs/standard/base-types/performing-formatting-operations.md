@@ -13,11 +13,11 @@ ms.assetid: 36e7e096-4e6c-4cf2-9ab6-68073026ea0e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a1d9f62055b497aa7522d589610c12badb2361d5
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425773"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49123282"
 ---
 # <a name="performing-formatting-operations"></a>서식 지정 작업 수행
 다음 항목은 특정 서식 지정 작업을 수행하기 위한 단계별 지침을 제공합니다.  

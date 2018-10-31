@@ -3,11 +3,11 @@ title: 메시지 로그 보기
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
 ms.openlocfilehash: 5d007efc9667ee5380b69349d6a960554ab0d4fe
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50047503"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50199788"
 ---
 # <a name="viewing-message-logs"></a>메시지 로그 보기
 이 항목에서는 메시지 로그를 볼 수 있는 방법에 대해 설명합니다.  

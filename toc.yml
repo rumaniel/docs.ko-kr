@@ -357,9 +357,9 @@ items:
       tocHref: /dotnet/csharp/
       topicHref: /dotnet/csharp/index
       items:
-      - name: 빠른 시작
-        tocHref: /dotnet/csharp/quick-starts/
-        topicHref: /dotnet/csharp/quick-starts/index
+      - name: C# 소개
+        tocHref: /dotnet/csharp/tutorials/intro-to-csharp/
+        topicHref: /dotnet/csharp/tutorials/intro-to-csharp/index
       - name: 시작
         tocHref: /dotnet/csharp/getting-started/
         topicHref: /dotnet/csharp/getting-started/index
@@ -613,9 +613,9 @@ items:
       - name: 자습서
         tocHref: /dotnet/machine-learning/tutorials/
         topicHref: /dotnet/machine-learning/tutorials/index
-ms.openlocfilehash: d63e7873e2e06d383e16b598e795545a2eb54777
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 01df0256243fde388a7037e8efe7402eca049b44
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337573"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50192852"

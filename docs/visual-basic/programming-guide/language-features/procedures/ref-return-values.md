@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ref returns [Visual Basic]
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
 ms.openlocfilehash: ba649c4beaf3ec70a8c118f823fe8f25651a05a7
-ms.sourcegitcommit: 4621e67f69e7a9503ea93313ff60d69683207889
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49995141"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198304"
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>참조 반환 값 (Visual Basic)에 대 한 지원
 

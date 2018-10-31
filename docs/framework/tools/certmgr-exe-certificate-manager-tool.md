@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a4cb3f126a51d6bf7027edb88b8fec74c6785d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9ad1cbd9da3a6b55dbb23eaf97c10e6090077fd8
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47231559"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198486"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe(인증서 관리자 도구)
 인증서 관리자 도구(Certmgr.exe)를 사용하면 인증서, CTL(인증서 신뢰 목록) 및 CRL(인증서 해지 목록)을 관리할 수 있습니다.  
@@ -54,7 +54,7 @@ ms.locfileid: "47231559"
 |옵션|설명|  
 |------------|-----------------|  
 |**/add**|인증서, CTL 및 CRL을 인증서 저장소에 추가합니다.|  
-|**/all**|**/add** 옵션과 함께 사용하면 모든 항목을 추가합니다. **/del** 옵션과 함께 사용하면 모든 항목을 삭제합니다. **/add** 또는 **/del** 옵션 없이 사용하면 모든 항목을 표시합니다. **/all** 옵션은 **/put**과 함께 사용할 수 없습니다.|  
+|**/all**|**/add** 옵션과 함께 사용하면 모든 항목을 추가합니다. **/del** 옵션과 함께 사용하면 모든 항목을 삭제합니다. /add 또는 **/del** 옵션 없이 사용하면 모든 항목을 표시합니다. **/all** 옵션은 **/put**과 함께 사용할 수 없습니다.|  
 |**/c**|**/add** 옵션과 함께 사용하면 인증서를 추가합니다. **/del** 옵션과 함께 사용하면 인증서를 삭제합니다. **/put** 옵션과 함께 사용하면 인증서를 저장합니다. **/add**, **/del** 또는 **/put** 옵션 없이 사용하면 인증서를 표시합니다.|  
 |**/CRL**|**/add**와 함께 사용하면 CRL을 추가합니다. **/del**과 함께 사용하면 CRL을 삭제합니다. **/put**과 함께 사용하면 CRL을 저장합니다. **/add**, **/del** 또는 **/put** 옵션 없이 사용하면 CRL을 표시합니다.|  
 |**/CTL**|**/add**와 함께 사용하면 CTL을 추가합니다. **/del**과 함께 사용하면 CTL을 삭제합니다. **/put**과 함께 사용하면 CTL을 저장합니다. **/add**, **/del** 또는 **/put** 옵션 없이 사용하면 CTL을 표시합니다.|  
@@ -139,5 +139,5 @@ certmgr /put /c /s my newFile
   
 ## <a name="see-also"></a>참고 항목  
  [도구](../../../docs/framework/tools/index.md)  
- [Makecert.exe(인증서 작성 도구)](https://msdn.microsoft.com/library/b0343f8e-9c41-4852-a85c-f8a0c408cf0d)  
+ [Makecert.exe(인증서 작성 도구)](/windows/desktop/SecCrypto/makecert)  
  [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

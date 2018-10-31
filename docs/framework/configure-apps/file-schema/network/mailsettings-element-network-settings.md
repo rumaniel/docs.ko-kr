@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mailSettings element
 - <mailSettings> element
 ms.assetid: 54f0f153-17e5-4f49-afdc-deadb940c9c1
-ms.openlocfilehash: e23b9e1fdf8a348d0d38575db8112b37c8dd9b69
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 5c7b4d8fae2774fe8e52718fbce91e4bc193c124
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50048764"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198434"
 ---
 # <a name="ltmailsettingsgt-element-network-settings"></a>&lt;mailSettings&gt; 요소 (네트워크 설정)
 메일 보내기 옵션을 구성 합니다.  
@@ -68,5 +68,5 @@ ms.locfileid: "50048764"
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:System.Net.Mail.SmtpClient>  
- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- <xref:System.Net.Mail.SmtpClient>  
+- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
 ms.openlocfilehash: ffdc1dc0f9b5c2ed3b9898d0c71c9b384723fe05
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047893"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50200562"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>두 시퀀스의 합집합 반환
 <xref:System.Linq.Queryable.Union%2A> 연산자를 사용하여 두 시퀀스의 합집합을 반환합니다.  

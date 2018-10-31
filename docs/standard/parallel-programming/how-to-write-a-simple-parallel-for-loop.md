@@ -13,11 +13,11 @@ ms.assetid: 9029ba7f-a9d1-4526-8c84-c88716dba5d4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b2ebf679816684e68a1c13d660ef9fc54e3a175
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47398893"
+ms.lasthandoff: 10/07/2018
+ms.locfileid: "48845995"
 ---
 # <a name="how-to-write-a-simple-parallelfor-loop"></a>방법: 간단한 Parallel.For 루프 작성
 

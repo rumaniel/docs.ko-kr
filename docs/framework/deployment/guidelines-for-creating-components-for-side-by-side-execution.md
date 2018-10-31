@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c540161-6e40-42e9-be92-6175aee2c46a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f45e68d9d340d857bc25b3848bd687e46fd73c52
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2cedcb20ba12e7c362c60d33dfedfa1882eaa7e7
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391035"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50198499"
 ---
 # <a name="guidelines-for-creating-components-for-side-by-side-execution"></a>Side-by-Side 실행용 구성 요소를 만들기 위한 지침
 다음 일반 지침에 따라 Side-by-Side 실행용으로 디자인된 관리되는 응용 프로그램 또는 구성 요소를 만듭니다.  
@@ -63,5 +63,5 @@ ms.locfileid: "33391035"
  [전역 어셈블리 캐시 도구(Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md)를 사용하여 파일 버전 번호만 최신일 경우 어셈블리를 바꿀 수 있습니다. 일반적으로 설치 관리자는 어셈블리 버전 번호가 더 클 경우가 아니면 어셈블리를 통해 설치되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Side-by-Side 실행](../../../docs/framework/deployment/side-by-side-execution.md)  
- [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Side-by-Side 실행](../../../docs/framework/deployment/side-by-side-execution.md)  
+- [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)

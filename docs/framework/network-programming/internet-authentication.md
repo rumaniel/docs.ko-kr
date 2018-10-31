@@ -15,14 +15,12 @@ helpviewer_keywords:
 - NetworkCredential class, about NetworkCredential class
 - client authentication, classes for authentication
 ms.assetid: d342e87c-f672-4660-a513-41a2f2b80c4a
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e0f1ad373f8ec7687b44856a53e1e35b8b6baf8c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 245e94cab61c0c60672476aadb417fc798b30362
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089064"
+ms.lasthandoff: 10/28/2018
+ms.locfileid: "50181045"
 ---
 # <a name="internet-authentication"></a>인터넷 인증
 <xref:System.Net> 클래스는 표준 인터넷 인증 방법인 기본, 다이제스트, 협상, NTLM 및 Kerberos 인증뿐 아니라 직접 만들 수 있는 사용자 지정 방법을 포함한 다양한 클라이언트 인증 메커니즘을 지원합니다.  

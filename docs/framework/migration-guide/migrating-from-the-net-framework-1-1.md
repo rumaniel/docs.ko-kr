@@ -8,11 +8,11 @@ ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 546bb50531e62abafe8ab016e2c138ffa9d8720d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47399887"
+ms.lasthandoff: 10/06/2018
+ms.locfileid: "48842634"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1에서 마이그레이션
 

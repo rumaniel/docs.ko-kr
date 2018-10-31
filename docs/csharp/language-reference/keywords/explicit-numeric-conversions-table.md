@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 22bb2117e7b78596e1fb6af63584f51b066564c9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 948961d19518343c1f8ee14cd48dc33ec72cf23d
+ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47208239"
+ms.lasthandoff: 10/22/2018
+ms.locfileid: "49478928"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>명시적 숫자 변환 표(C# 참조)
 
@@ -61,7 +61,7 @@ ms.locfileid: "47208239"
   
 - `decimal`을 `float` 또는 `double`로 변환할 경우 `decimal` 값을 가장 가까운 `double` 또는 `float` 값으로 반올림합니다.  
   
- 명시적 변환에 대한 자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [명시적 변환](/dotnet/csharp/language-reference/language-specification/conversions#explicit-conversions) 섹션을 참조하세요.
+ 명시적 변환에 대한 자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [명시적 변환](~/_csharplang/spec/conversions.md#explicit-conversions) 섹션을 참조하세요.
   
 ## <a name="see-also"></a>참고 항목
 

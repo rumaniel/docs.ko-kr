@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: bc7143b9f006af20b0bb91203d3093410d4ac0bf
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: aa37e2237ca0cffe7ff2e64aa53739b6ffafd24a
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45609725"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50182752"
 ---
 # <a name="value-types-table-c-reference"></a>값 형식 표(C# 참조)
 
@@ -43,9 +43,9 @@ ms.locfileid: "45609725"
 decimal a = 0.1M;
 ```
 
-[정수 숫자 리터럴](/dotnet/csharp/language-reference/language-specification/lexical-structure#integer-literals)에 접미사가 없는 경우 해당 값을 표시할 수 있는 `int`, `uint`, `long`, `ulong` 형식 중 첫 번째 형식입니다.
+[정수 숫자 리터럴](~/_csharplang/spec/lexical-structure.md#integer-literals)에 접미사가 없는 경우 해당 값을 표시할 수 있는 `int`, `uint`, `long`, `ulong` 형식 중 첫 번째 형식입니다.
 
-[실제 숫자 리터럴](/dotnet/csharp/language-reference/language-specification/lexical-structure#real-literals)에 접미사가 없는 경우 `double` 형식입니다.
+[실제 숫자 리터럴](~/_csharplang/spec/lexical-structure.md#real-literals)에 접미사가 없는 경우 `double` 형식입니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -12,14 +12,12 @@ helpviewer_keywords:
 - security [.NET Framework], Internet
 - permissions [.NET Framework], Internet
 ms.assetid: afb07899-2707-49ab-a57f-e0caf20d0171
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 3e47828f14ffbaac57a43ddbf53094e220acb082
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b57465d4cf89bb38dd5cda70f090f444e52ea819
+ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205095"
+ms.lasthandoff: 10/27/2018
+ms.locfileid: "50195855"
 ---
 # <a name="security-in-network-programming"></a>네트워크 프로그래밍의 보안
 
