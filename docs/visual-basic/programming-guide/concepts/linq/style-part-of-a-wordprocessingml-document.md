@@ -1,13 +1,13 @@
 ---
-title: WordprocessingML 문서 2의 스타일 부분
+title: WordprocessingML 문서 2는 문서의 스타일 부분
 ms.date: 07/20/2015
 ms.assetid: 292cc094-9483-4192-ac3b-a5dc51fbac12
-ms.openlocfilehash: 58767c51595a5a2c4c262df133c393dc700e0b10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e5e0e570fa842fb8a4df59d4b1c02e1169c6878
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907857"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 문서의 스타일 부분
 이 항목에서는 Office Open XML WordprocessingML 문서의 스타일 부분에 대한 예제를 보여 줍니다.  
@@ -140,5 +140,6 @@ ms.locfileid: "33645956"
 </w:styles>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [세부 정보를 Office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>참고자료
+
+- [자세한 내용은 office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

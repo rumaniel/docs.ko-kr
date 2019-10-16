@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5fcb2436d445ce772ad8922e6d0e34cef170c62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ab2a1c0c3f280f115a408adc81a46196eb5a804c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414800"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989146"
 ---
 # <a name="icordebugeditandcontinueerrorinfogettoken-method"></a>ICorDebugEditAndContinueErrorInfo::GetToken 메서드
-`GetToken`는 사용되지 않습니다. 이 메서드를 호출 하지 마십시오.  
+`GetToken`는 사용되지 않습니다. 이 메서드를 호출 하지 마세요.  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

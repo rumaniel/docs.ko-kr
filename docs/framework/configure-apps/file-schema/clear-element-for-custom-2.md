@@ -1,5 +1,5 @@
 ---
-title: '&lt;지우기&gt; NameValueSectionHandler 및 DictionarySectionHandler 요소'
+title: <clear>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/clear
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: a1cbd682faa4c60e50bc3b73b58ef226dd599da2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fbb689db4abc5d59729d9a4d9807a02a0983d40b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358237"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927707"
 ---
-# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<지우기 > NameValueSectionHandler 및 DictionarySectionHandler 요소
+# <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<NameValueSectionHandler 및 DictionarySectionHandler에 대 한 > 요소 지우기
 
 섹션에서 이전에 정의 된 모든 설정을 지웁니다.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<지우기 >**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>구문
 
@@ -38,7 +38,7 @@ ms.locfileid: "33358237"
 
 |     | 설명 |
 | --- | ------------|
-| [**\<sectionName >** 요소](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 설정을 사용 하는 사용자 지정 구성 섹션에 대 한 정의 <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler> 클래스입니다. |
+| [섹션 이름 > 요소  **\<** ](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> 및<xref:System.Configuration.DictionarySectionHandler> 클래스를 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -46,13 +46,13 @@ ms.locfileid: "33358237"
 
 ## <a name="remarks"></a>설명
 
-사용할 수 있습니다는  **\<지우기 >** 모든 설정이 구성 파일 계층 구조에서 더 높은 수준에서 정의 된 응용 프로그램에서 제거할 요소입니다.
+Clear > 요소를 사용  **\<** 하 여 구성 파일 계층 구조에서 상위 수준에 정의 된 응용 프로그램의 모든 설정을 제거할 수 있습니다.
 
 ## <a name="example"></a>예제
 
-이 예제에서는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일을 정의 하 고 사용 하는 방법을 보여 줍니다.는  **\<지우기 >** 에 이전에 정의 된 섹션을 정리 하는 응용 프로그램 구성 파일의 요소는 컴퓨터 구성 파일입니다.
+이 예제에서는 컴퓨터 구성 파일 및 응용 프로그램 구성 파일을 정의 하 고, 응용 프로그램 구성 파일에서  **\<clear >** 요소를 사용 하 여 이전에 컴퓨터 구성에 정의 된 섹션을 지우는 방법을 보여 줍니다. 파일과.
 
-다음 컴퓨터 구성 파일 코드 선언 섹션  **\<mySection >**:
+다음 컴퓨터 구성 파일 코드는  **\<mysection >** 섹션을 선언 합니다.
 
 ```xml
 <!-- Machine.config file -->
@@ -67,7 +67,7 @@ ms.locfileid: "33358237"
 </configuration>
 ```
 
-다음 응용 프로그램 구성 파일 코드에서 모든 설정이 제거  **\<mySection >** 합니다. 응용 프로그램에 선언 된 설정을 검색할 수 없습니다는에  **\<mySection >** 컴퓨터 구성 파일의 섹션입니다.
+다음 응용 프로그램 구성 파일 코드는  **\<mysection >** 의 모든 설정을 제거 합니다. 응용 프로그램은 컴퓨터 구성 파일의  **\<mysection >** 섹션에 있는에서 선언 된 설정을 검색할 수 없습니다.
 
 ```xml
 <!-- Application configuration file -->
@@ -80,8 +80,8 @@ ms.locfileid: "33358237"
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 응용 프로그램 구성 파일을 컴퓨터 구성 파일에 사용할 수 있습니다 (*Machine.config*), 및 *Web.config* 응용 프로그램 디렉터리 수준에서 포함 되지 않은 파일입니다.
+이 요소는 응용 프로그램 구성 파일, 컴퓨터 구성 파일 (machine.config) 및응용 프로그램 디렉터리 수준에 없는 web.config 파일에서 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고자료
 
-[.NET Framework에 대 한 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework에 대 한 구성 파일 스키마](index.md)

@@ -6,18 +6,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e40f17c5-dd12-4c62-9dbf-00ab491382dc
-ms.openlocfilehash: a1f067462361bb123c9d61a1d099c900a6641d6b
-ms.sourcegitcommit: f9e38d31288fe5962e6be5b0cc286da633482873
+ms.openlocfilehash: 670bbc65078e6530cffbcfa7d324c36238014ffb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/27/2018
-ms.locfileid: "37028203"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632815"
 ---
 # <a name="how-to-upload-files-with-ftp"></a>방법: FTP를 사용하여 파일 업로드
 
 이 샘플은 파일을 FTP 서버에 업로드하는 방법을 보여 줍니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 ```csharp
 using System;

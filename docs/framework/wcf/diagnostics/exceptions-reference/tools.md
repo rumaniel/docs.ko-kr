@@ -3,13 +3,14 @@ title: 도구
 ms.date: 03/30/2017
 ms.assetid: 89c907f9-313f-408c-992a-631f1eadf1da
 ms.openlocfilehash: 6c4ada74c2fc6aba84eb1fe46f4d7cdee9978d13
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780746"
 ---
 # <a name="tools"></a>도구
-이 항목에서는 Windows Communication Foundation (WCF) 도구에서 생성 된 모든 예외를 보여 줍니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 도구에서 생성 된 모든 예외를 나열 합니다.  
   
 ## <a name="exception-list"></a>예외 목록  
   
@@ -73,11 +74,11 @@ ms.lasthandoff: 05/04/2018
 |ErrIsNotAnAssembly|지정된 파일을 어셈블리로 로드할 수 없습니다. 이 파일이 .NET 어셈블리인지 확인하십시오.|  
 |ErrInputConflictsWithMode|지정된 옵션에서 읽은 입력이 다른 옵션과 일관되지 않습니다.|  
 |ErrDuplicateValuePassedToTypeArg|지정된 값이 지정된 옵션에 여러 번 전달되었습니다. 각 형식은 한 번만 지정할 수 있습니다.|  
-|ErrInputEPRFileParseError|지정된 XML에서 끝점 참조를 읽을 수 없습니다. XML이 유효하고 형식이 올바른지 확인하십시오.|  
-|ErrCouldNotCreateCodeProvider|에 전달 된 지정된 된 값에 대해 코드 공급자를 만들 수 없습니다는 /{1} 인수입니다. 코드 공급자를 올바르게 설치하고 구성했는지 확인하십시오.|  
+|ErrInputEPRFileParseError|지정된 XML에서 엔드포인트 참조를 읽을 수 없습니다. XML이 유효하고 형식이 올바른지 확인하십시오.|  
+|ErrCouldNotCreateCodeProvider|에 전달 된 지정된 된 값에 대 한 코드 공급자를 만들 수 없습니다는 /{1} 인수입니다. 코드 공급자를 올바르게 설치하고 구성했는지 확인하십시오.|  
 |ErrPathTooLongDirOnly|지정된 결과 경로가 너무 깁니다. 지정된 인수를 검토합니다.|  
 |HelpDataContractSerializer|serialization 및 deserialization을 위해 DataContract Serializer를 사용하는 데이터 형식을 생성합니다.|  
-|ErrUnableToExportEndpoint|어셈블리에 대해 로드된 구성 파일에 있는 지정된 서비스 유형에서 지정된 네임스페이스의 지정된 끝점 이름을 내보내는 동안 오류가 발생했습니다.|  
+|ErrUnableToExportEndpoint|어셈블리에 대해 로드된 구성 파일에 있는 지정된 서비스 유형에서 지정된 네임스페이스의 지정된 엔드포인트 이름을 내보내는 동안 오류가 발생했습니다.|  
 |HelpUsage1|도움말 사용법을 표시합니다.|  
 |HelpUsage2|도움말 사용법을 표시합니다.|  
 |HelpUsage3|도움말 사용법을 표시합니다.|  
@@ -95,7 +96,7 @@ ms.lasthandoff: 05/04/2018
 |ErrInvalidInputPath|지정된 입력 경로가 기존 파일을 참조하지 않으며 유효한 URI가 아닙니다.|  
 |ErrUnableToLoadInputs|로드된 메타데이터를 읽는 동안 오류가 발생했습니다.|  
 |GeneratingSerializer|XML serializer 생성 중...|  
-|HelpToolConfig|응용 프로그램 구성 파일 대신에 사용할 사용자 지정 구성 파일입니다. 이 파일을 사용하면 도구의 구성 파일을 바꾸지 않고 구성 확장을 등록하거나 메타데이터 구성을 변경할 수 있습니다.|  
+|HelpToolConfig|애플리케이션 구성 파일 대신에 사용할 사용자 지정 구성 파일입니다. 이 파일을 사용하면 도구의 구성 파일을 바꾸지 않고 구성 확장을 등록하거나 메타데이터 구성을 변경할 수 있습니다.|  
 |ErrValidateInvalidUse|지정된 옵션과 지정된 또 다른 옵션은 함께 사용할 수 없습니다.|  
 |WrnWSMExFailed|지정된 URI에 WS-Metadata Exchange 오류가 발생했습니다.|  
 |HelpNoconfig|구성을 생성하지 않습니다.|  
@@ -141,7 +142,7 @@ ms.lasthandoff: 05/04/2018
 |ErrCodegenError|지정한 언어로 코드를 생성하는 동안 오류가 발생했습니다.<br /><br /> 이 언어에서 생성 중인 코드 요소 중 일부만 지원합니다. 다른 언어를 사용해야 합니다.|  
 |ErrInputWsdlParseError|지정된 XML을 읽는 동안 WSDL 구문 분석 오류가 발생했습니다. XML이 유효하고 형식이 올바른지 확인하십시오.|  
 |ErrCouldNotCreateInstance|지정된 인수에 전달된 지정된 형식의 인스턴스를 만들 수 없습니다.|  
-|ParametersNamespace|\<문자열, 문자열 >|  
+|ParametersNamespace|\<string,string>|  
 |HelpNostdlib|표준 라이브러리(기본적으로 mscorlib.dll 및 system.servicemodel.dll 참조)를 참조하지 않습니다.|  
 |WrnCannotLoadConfigFileForExport|지정된 위치에서 로드된 구성 파일을 처리하는 동안 오류가 발생했습니다. 이 구성 파일에 정의되어 있는 서비스를 로드할 수 없습니다.|  
 |WrnUnableToLoadContractForExport|계약 형식을 로드하는 동안 오류가 발생했습니다. 지정된 이 형식을 내보낼 수 없습니다.|

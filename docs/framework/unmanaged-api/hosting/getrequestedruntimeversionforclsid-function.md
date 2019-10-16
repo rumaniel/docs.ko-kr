@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8d3a7168ce0ee3484384ae0e2d10ca00367fc9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9dfce10c94e04dcd405e06ab6d0984e64984709e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432861"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779558"
 ---
 # <a name="getrequestedruntimeversionforclsid-function"></a>GetRequestedRuntimeVersionForCLSID 함수
-적절 한 공용 언어 런타임 정보를 가져옵니다 (CLR) 버전 지정 된 클래스에 대 한 `CLSID`합니다.  
+적절 한 공용 언어 런타임 (CLR) 버전 정보가 지정 된 클래스에 대 한 가져옵니다 `CLSID`합니다.  
   
- 이 함수에 더 이상 사용 되지는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.  
+ .NET Framework 4에서이 함수에 사용 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetRequestedRuntimeVersionForCLSID (  
     [in]  REFCLSID   rclsid,   
     [out]  LPWSTR     pVersion,   
@@ -40,42 +40,43 @@ HRESULT GetRequestedRuntimeVersionForCLSID (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `rclsid`  
- [in]  `CLSID` 의 구성 요소입니다.  
+ [in]  `CLSID` 구성 요소입니다.  
   
  `pVersion`  
- [out]  완료 되 면 버전 번호 문자열을 포함 하는 버퍼입니다.  
+ [out]  성공적으로 완료 되는 버전 번호 문자열을 포함 하는 버퍼입니다.  
   
  `cchBuffer`  
  [in]  와이드 문자에서 크기의는 `pVersion` 버퍼입니다.  
   
  `dwLength`  
- [out] 반환된 된 버퍼의 길이 (바이트)를 합니다.  
+ [out] 반환된 된 버퍼의 길이 (바이트) 합니다.  
   
  `dwResolutionFlags`  
  [in]  CLSID_RESOLUTION_FLAGS 값 중 하나입니다. 다음 값이 지원 됩니다.  
   
--   CLSID_RESOLUTION_DEFAULT: (0x0) 해당 기본 interop 동작을 지정 해야 사용 합니다.  
+- CLSID_RESOLUTION_DEFAULT: (0x0) 기본 interop 동작을 사용 해야 함을 지정 합니다.  
   
--   CLSID_RESOLUTION_REGISTERED: (0x1) 레지스트리를 검색 하 고 정책 shim을 지정 해야 적용 됩니다.  
+- CLSID_RESOLUTION_REGISTERED: (0x1) 검색 해야 하는 레지스트리 및 적용할 shim 정책을 지정 합니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|함수 반환 되었습니다.|  
-|E_INVALIDARG|매개 변수 중 하나는 잘못 된 유형 또는 미디어 형식에 있습니다.|  
-|ERROR_INSUFFICIENT_BUFFER|`pVersion` 버퍼를 전체 버전 문자열을 보관할 만큼 크지 않습니다.|  
-|REGDB_E_CLASSNOTREG|등록 된 지정 된 클래스가 없습니다 `CLSID`합니다.|  
-|E_POINTER|`dwLength` 매개 변수가 null 이면 또는 `cchBuffer` 버전 문자열을 저장할 수 있도록 충분히 큰 있지만 `pVersion` null입니다.|  
+|E_INVALIDARG|매개 변수 중 하나에 잘못 된 형식 또는 형식입니다.|  
+|ERROR_INSUFFICIENT_BUFFER|`pVersion` 버퍼가 전체 버전 문자열을 저장할 만큼 충분히 커야 합니다.|  
+|REGDB_E_CLASSNOTREG|지정 된 등록 클래스인 `CLSID`합니다.|  
+|E_POINTER|`dwLength` 이 null 또는 `cchBuffer` 버전 문자열을 포함할 수 있도록 충분히 큰 있지만 `pVersion` null입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>참고자료
+
+- [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

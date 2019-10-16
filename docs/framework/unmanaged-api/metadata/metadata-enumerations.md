@@ -9,11 +9,11 @@ ms.assetid: 711ab251-cfdb-4280-aaa6-9bc1b341cdc3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f92b87cc2748a709361ff2c0c8129db5f7fe6046
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042200"
 ---
 # <a name="metadata-enumerations"></a>메타데이터 열거형
 이 섹션에서는 메타데이터 API에서 사용하는 관리되지 않는 열거형에 대해 설명합니다.  
@@ -26,10 +26,10 @@ ms.locfileid: "33460970"
  어셈블리 참조의 기능을 설명하는 값을 포함합니다.  
   
  [CeeSectionAttr 열거형](../../../../docs/framework/unmanaged-api/metadata/ceesectionattr-enumeration.md)  
- 사용할 섹션의 특성을 지정 하는 값을 제공 된 [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) 인터페이스입니다.  
+ 특성 사용에 대 한 섹션을 지정 하는 값을 제공 합니다 [ICeeGen](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md) 인터페이스입니다.  
   
  [CeeSectionRelocType 열거형](../../../../docs/framework/unmanaged-api/metadata/ceesectionreloctype-enumeration.md)  
- 값의 형식에 영향을을 제공 `reloc` 명령에 대 한 호출에 포함 된는 [iceegen:: Addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md) 메서드.  
+ 값의 형식에 영향을 줄을 제공 `reloc` 명령에 대 한 호출에서 내보낸 합니다 [iceegen:: Addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md) 메서드.  
   
  [COINITICOR 열거형](../../../../docs/framework/unmanaged-api/metadata/coiniticor-enumeration.md)  
  사용 하는 상수를 지정 [CoInitializeCor](../../../../docs/framework/unmanaged-api/hosting/coinitializecor-function.md) 공용 언어 런타임을 초기화할 때.  
@@ -44,7 +44,7 @@ ms.locfileid: "33460970"
  어셈블리 컴파일에 적용되는 메타데이터를 설명하는 값을 포함합니다.  
   
  [CorAttributeTargets 열거형](../../../../docs/framework/unmanaged-api/metadata/corattributetargets-enumeration.md)  
- 특성을 적용하는 데 유효한 응용 프로그램 요소를 지정합니다.  
+ 특성을 적용하는 데 유효한 애플리케이션 요소를 지정합니다.  
   
  [CorCallingConvention 열거형](../../../../docs/framework/unmanaged-api/metadata/corcallingconvention-enumeration.md)  
  관리 코드에서 수행된 호출 규칙의 형식을 설명하는 값을 포함합니다.  
@@ -68,13 +68,13 @@ ms.locfileid: "33460970"
  필드에 대한 메타데이터를 설명하는 값을 포함합니다.  
   
  [CorFileFlags 열거형](../../../../docs/framework/unmanaged-api/metadata/corfileflags-enumeration.md)  
- 에 대 한 호출에 정의 된 파일의 형식을 설명 하는 값이 포함 되어는 [imetadataassemblyemit:: Definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) 메서드.  
+ 에 대 한 호출에 정의 된 파일의 형식을 설명 하는 값을 포함 합니다 [imetadataassemblyemit:: Definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md) 메서드.  
   
  [CorFileMapping 열거형](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)  
- 에 대 한 호출에서 반환 되는 파일 매핑의 형식을 설명 하는 값이 포함 되어는 [imetadatainfo:: Getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) 메서드.  
+ 에 대 한 호출에서 반환 되는 매핑 파일의 형식을 설명 하는 값을 포함 합니다 [imetadatainfo:: Getfilemapping](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-getfilemapping-method.md) 메서드.  
   
  [CorGenericParamAttr 열거형](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md)  
- 설명 하는 값이 포함 되어는 <xref:System.Type> 호출에서 사용된 된 제네릭 형식에 대 한 매개 변수는 [imetadataemit2:: Definegenericparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) 메서드.  
+ 설명 하는 값을 포함 합니다 <xref:System.Type> 호출에서 사용된 된 제네릭 형식에 대 한 매개 변수를 [IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md) 메서드.  
   
  [CorImportOptions 열거형](../../../../docs/framework/unmanaged-api/metadata/corimportoptions-enumeration.md)  
  현재 범위를 벗어난 어셈블리를 가져오는 중의 동작을 제어하는 플래그 값을 포함합니다.  
@@ -116,7 +116,7 @@ ms.locfileid: "33460970"
  메서드 매개 변수의 메타데이터를 설명하는 값을 포함합니다.  
   
  [CorPEKind 열거형](../../../../docs/framework/unmanaged-api/metadata/corpekind-enumeration.md)  
- 에 대 한 호출에서 반환 된 이식 가능한 실행 파일을 설명 하는 값이 포함 되어는 [imetadataimport2:: Getpekind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md) 메서드.  
+ 에 대 한 호출에서 반환 된 이식 가능한 실행 파일을 설명 하는 값을 포함 합니다 [IMetaDataImport2::GetPEKind](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-getpekind-method.md) 메서드.  
   
  [CorPinvokeMap 열거형](../../../../docs/framework/unmanaged-api/metadata/corpinvokemap-enumeration.md)  
  PInvoke 호출의 기능을 설명하는 값을 포함합니다.  
@@ -152,7 +152,7 @@ ms.locfileid: "33460970"
  관리되지 않는 호출 규칙을 설명하는 값을 포함합니다.  
   
  [CorValidatorModuleType 열거형](../../../../docs/framework/unmanaged-api/metadata/corvalidatormoduletype-enumeration.md)  
- 사용 하는 값을 제공 된 [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) 모듈 (.obj 파일 및 PE 파일)의 형식을 지정 하는 인터페이스입니다.  
+ 사용 하는 값을 제공 합니다 [IMetaDataValidate](../../../../docs/framework/unmanaged-api/metadata/imetadatavalidate-interface.md) 모듈 (.obj 파일 및 PE 파일)의 형식을 지정 하는 인터페이스입니다.  
   
  [COUNINITIEE 열거형](../../../../docs/framework/unmanaged-api/metadata/couninitiee-enumeration.md)  
  사용 하는 상수를 지정 [CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md) 공용 언어 런타임을 초기화할 때.  

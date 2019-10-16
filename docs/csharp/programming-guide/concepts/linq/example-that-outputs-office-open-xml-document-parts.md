@@ -2,17 +2,17 @@
 title: Office Open XML 문서 부분을 출력하는 예제(C#)
 ms.date: 07/20/2015
 ms.assetid: 6cd37055-89b4-42e8-bf27-5a29717e35f3
-ms.openlocfilehash: 5dd8e4238ff4015130160b5297f807d79013ce7b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be4c0ba2ce2a007fa6e19a65d7d86854d85851c4
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505673"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485996"
 ---
 # <a name="example-that-outputs-office-open-xml-document-parts-c"></a>Office Open XML 문서 부분을 출력하는 예제(C#)
 이 항목에서는 Office Open XML 문서를 열고 문서 안의 부분에 액세스하는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 Office Open XML 문서를 열고 문서 부분과 스타일 부분을 콘솔에 출력합니다.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
@@ -65,7 +65,3 @@ using (Package wdPackage = Package.Open(fileName, FileMode.Open, FileAccess.Read
     }  
 }  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [Office Open XML WordprocessingML 문서 정보(C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

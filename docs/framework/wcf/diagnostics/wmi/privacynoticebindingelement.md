@@ -2,12 +2,12 @@
 title: PrivacyNoticeBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0cf110b1-e25b-4d67-986b-10cb04dc4826
-ms.openlocfilehash: fdaf30e78b1a74a733753542acd6a41f15f176bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 04c65d0aa589d99766b4ffc8f1550036d2880718
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962970"
 ---
 # <a name="privacynoticebindingelement"></a>PrivacyNoticeBindingElement
 PrivacyNoticeBindingElement  
@@ -48,5 +48,6 @@ class PrivacyNoticeBindingElement : BindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>

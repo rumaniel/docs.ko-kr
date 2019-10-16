@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf92749e1139a85ea2f49fb5d5caff69ce39c24
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 563a2e19c9c254870b3e767253a276a201e631a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458463"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779308"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 메서드
-가비지 컬렉션이 발생 한 후 루트 참조에 대 한 프로파일러를 알립니다. 이 메서드는의 확장은 [icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) 메서드.  
+가비지 수집이 발생 한 후 루트 참조에 대 한 프로파일러를 알립니다. 이 메서드는 확장 합니다 [icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT RootReferences2(  
     [in] ULONG  cRootRefs,  
     [in, size_is(cRootRefs)] ObjectID rootRefIds[],  
@@ -38,42 +38,43 @@ HRESULT RootReferences2(
     [in, size_is(cRootRefs)] UINT_PTR rootIds[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cRootRefs`  
- [in] 에 있는 요소의 수는 `rootRefIds`, `rootKinds`, `rootFlags`, 및 `rootIds` 배열입니다.  
+ [in] 요소 수를 `rootRefIds`, `rootKinds`를 `rootFlags`, 및 `rootIds` 배열입니다.  
   
  `rootRefIds`  
- [in] 개체 Id, 스택에 개체 또는 정적 개체는 각각 참조의 배열입니다. 요소는 `rootKinds` 의 해당 요소를 분류 하는 정보를 제공 하는 배열은 `rootRefIds` 배열입니다.  
+ [in] 스택에 있는 개체 또는 정적 개체를 참조 하는 각 개체 Id의 배열입니다. 요소를 `rootKinds` 의 해당 요소를 분류 하는 정보를 제공 하는 배열은 `rootRefIds` 배열입니다.  
   
  `rootKinds`  
- [in] 배열을 [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) 가비지 수집 루트 형식을 나타내는 값입니다.  
+ [in] 배열을 [COR_PRF_GC_ROOT_KIND](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-kind-enumeration.md) 가비지 컬렉션 루트의 형식을 나타내는 값입니다.  
   
  `rootFlags`  
- [in] 배열을 [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) 가비지 수집 루트의 속성을 설명 하는 값입니다.  
+ [in] 배열을 [COR_PRF_GC_ROOT_FLAGS](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-root-flags-enumeration.md) 가비지 컬렉션 루트의 속성을 설명 하는 값입니다.  
   
  `rootIds`  
- [in] UINT_PTR 값의 배열 값에 따라 가비지 수집 루트에 대 한 추가 정보를 포함 하는 정수를 해당 지점에서 `rootKinds` 매개 변수입니다.  
+ [in] UINT_PTR 배열을 가리키는 값에 따라 가비지 컬렉션 루트에 대 한 추가 정보를 포함 하는 정수 값을 `rootKinds` 매개 변수입니다.  
   
- 루트의 유형이 스택을 인 루트 ID 변수를 포함 하는 함수입니다. 루트 ID가 0 이면 함수는는 명명 되지 않은 함수는 CLR에 내부입니다. 루트의 유형이 핸들 인 경우 가비지 컬렉션 핸들에 대 한 루트 ID가 있습니다. 다른 루트 형식에 대 한 ID는 불투명 값 이므로 무시 해야 합니다.  
+ 루트 형식의 스택을 인 경우 루트 ID 변수를 포함 하는 함수입니다. 해당 루트 ID 0 인 경우 함수는 내부 CLR에 있는 명명 되지 않은 함수입니다. 루트 형식의 대 한 핸들 인 경우 루트 ID 가비지 컬렉션 핸들입니다. 다른 루트 형식에 대 한 ID는 불투명 값을 무시 해야 합니다.  
   
 ## <a name="remarks"></a>설명  
- `rootRefIds`, `rootKinds`, `rootFlags`, 및 `rootIds` 배열은 병렬 배열입니다. 즉, `rootRefIds[i]`, `rootKinds[i]`, `rootFlags[i]`, 및 `rootIds[i]` 모두 동일한 루트를 관련이 있습니다.  
+ 합니다 `rootRefIds`, `rootKinds`를 `rootFlags`, 및 `rootIds` 배열은 병렬 배열입니다. 즉, `rootRefIds[i]`, `rootKinds[i]`를 `rootFlags[i]`, 및 `rootIds[i]` 모두 동일한 루트를 다룹니다.  
   
- 둘 다 `RootReferences` 및 `RootReferences2` 프로파일러에 알리기 위해 호출 됩니다. 프로파일러 됩니다 일반적으로 한 가지 방법은 또는 다른 두만 때문에 구현에 전달 된 정보 `RootReferences2` 전달의 상위 집합 `RootReferences`합니다.  
+ 둘 다 `RootReferences` 고 `RootReferences2` 프로파일러에 알리기 위해 호출 됩니다. 프로파일러는 일반적으로 구현 하나 메서드 또는 다른 하지만 둘 다는 아님 정보 전달 되므로 `RootReferences2` 전달의 상위 집합이 `RootReferences`합니다.  
   
- 항목은 `rootRefIds` 0 되 해당 루트 참조는 null을 의미 하는 관리 되는 힙에 있는 개체를 참조 하지 않습니다.  
+ 항목에 대해 있기 `rootRefIds` 0는 해당 루트 참조를 null 이므로 관리 되는 힙에 있는 개체를 참조 하지 않습니다.  
   
- 반환 된 개체 Id `RootReferences2` 가비지 수집 이전 주소에서 새 주소 개체를 이동 하는 중일 수 있으므로 콜백 하는 동안 유효 하지 않습니다. 그러므로 프로파일러는 `RootReferences2` 호출 중에 개체 검사를 시도하지 않아야 합니다. 때 [icorprofilercallback2:: Garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) 은 호출 개체를 모두 새 위치로 이동 되었고 안전 하 게 검사할 수 있습니다.  
+ 개체 Id가 반환한 `RootReferences2` 가비지 컬렉션 이전 주소에서 개체를 새 주소로 이동 하는 중일 수 있으므로 자체를 콜백 하는 동안 유효 하지 않습니다. 그러므로 프로파일러는 `RootReferences2` 호출 중에 개체 검사를 시도하지 않아야 합니다. 때 [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) 는 호출 개체를 모두 새 위치로 이동 되었습니다 및 안전 하 게 검사할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

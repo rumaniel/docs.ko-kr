@@ -7,44 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
-ms.openlocfilehash: a7729ec3d06ec701cf2194bed5d90b5bed76573a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 4be1ce434eb1e169e8a19b56c92ca1efb48773d2
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398812"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70169080"
 ---
 # <a name="how-to-implement-prioritybinding"></a>방법: PriorityBinding 구현
-<xref:System.Windows.Data.PriorityBinding> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 바인딩 목록을 지정 하 여 작동 합니다. 바인딩 목록은 가장 낮은 우선 순위를 높은 우선 순위에서 정렬 되어 있습니다. 가장 높은 우선 순위 바인딩 값을 반환 하는 경우 성공적으로 처리 될 때 다음 있습니다 되지 목록에 다른 바인딩을 처리 해야 합니다. 우선 순위가 높은 바인딩이 평가할 오래 걸리는 경우 수, 더 높은 우선 순위의 바인딩 값을 성공적으로 반환 될 때까지 다음 우선 순위가 가장 높은 값을 성공적으로 반환 하는 사용 됩니다.  
+<xref:System.Windows.Data.PriorityBinding>의 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 경우 바인딩 목록을 지정 합니다. 바인딩 목록은 우선 순위가 가장 높은 우선 순위로 정렬 됩니다. 우선 순위가 가장 높은 바인딩이 처리 될 때 값을 성공적으로 반환 하는 경우 목록에서 다른 바인딩을 처리할 필요가 없습니다. 우선 순위가 가장 높은 바인딩이 계산 되는 데 시간이 오래 걸릴 수 있습니다. 값을 반환 하는 다음으로 높은 우선 순위는 더 높은 우선 순위의 바인딩이 성공적으로 값을 반환할 때까지 사용 됩니다.  
   
 ## <a name="example"></a>예제  
- 보여 주기 위해 어떻게 <xref:System.Windows.Data.PriorityBinding> 작동 합니다 `AsyncDataSource` 다음 세 가지 속성을 사용 하 여 개체가 생성 되었음을: `FastDP`를 `SlowerDP`, 및 `SlowestDP`합니다.  
+ `FastDP`가 작동 <xref:System.Windows.Data.PriorityBinding> `SlowerDP` `SlowestDP`하는 방법을 시연 하기 위해, 및의 세 가지 속성을 사용 하 여 개체를만들었습니다.`AsyncDataSource`  
   
- get 접근자 `FastDP` 의 값을 반환 합니다 `_fastDP` 데이터 멤버입니다.  
+ 의 `FastDP` get 접근자는 `_fastDP` 데이터 멤버의 값을 반환 합니다.  
   
- get 접근자 `SlowerDP` 의 값을 반환 하기 전에 3 초간 대기 합니다 `_slowerDP` 데이터 멤버입니다.  
+ 의 `SlowerDP` get 접근자는 `_slowerDP` 데이터 멤버의 값을 반환 하기 전에 3 초간 대기 합니다.  
   
- get 접근자 `SlowestDP` 의 값을 반환 하기 전에 5 초간 대기 합니다 `_slowestDP` 데이터 멤버입니다.  
+ 의 `SlowestDP` get 접근자는 `_slowestDP` 데이터 멤버의 값을 반환 하기 전에 5 초 동안 대기 합니다.  
   
 > [!NOTE]
->  이 예제는 데모용으로만 제공됩니다. [!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)] 크기가 커져 느린 필드 집합 보다 속성을 정의 하는 것에 대 한 지침을 권장 합니다. 자세한 내용은 [NIB: 메서드와 속성 간의 선택](https://msdn.microsoft.com/library/55825e8f-7e2e-448a-9505-7217cc91b1af)합니다.  
+> 이 예제는 데모용으로만 제공됩니다. .NET 지침은 필드 집합 보다 느린 크기의 속성을 정의 하는 것에 대해 권장 됩니다. 자세한 내용은 [속성 및 메서드 중에서 선택](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229054(v=vs.100))을 참조 하세요.  
   
- [!code-csharp[PriorityBinding#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
- [!code-vb[PriorityBinding#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
+ [!code-csharp[PriorityBinding#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[PriorityBinding#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PriorityBinding/VisualBasic/AsyncDataSource.vb#1)]  
   
- 합니다 <xref:System.Windows.Controls.TextBlock.Text%2A> 위의 속성이 바인딩된 `AsyncDS` 사용 하 여 <xref:System.Windows.Data.PriorityBinding>:  
+ 속성 <xref:System.Windows.Controls.TextBlock.Text%2A> 은 다음을 사용 하 `AsyncDS` 여 <xref:System.Windows.Data.PriorityBinding>위의에 바인딩합니다.  
   
- [!code-xaml[PriorityBinding#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
+ [!code-xaml[PriorityBinding#2](~/samples/snippets/csharp/VS_Snippets_Wpf/PriorityBinding/CSharp/Window1.xaml#2)]  
   
- 바인딩 엔진에서 처리 하는 경우는 <xref:System.Windows.Data.Binding> 개체를 첫 번째를 사용 하 여 시작 <xref:System.Windows.Data.Binding>에 바인딩된는 `SlowestDP` 속성입니다. 때이 <xref:System.Windows.Data.Binding> 는 처리를 반환 하지 않습니다을 성공적으로 대기 하기 5 초간 하므로 다음 때문에 <xref:System.Windows.Data.Binding> 요소가 처리 됩니다. 다음 <xref:System.Windows.Data.Binding> 값 반환 하지는 성공적으로 3 초 동안 대기 하기 때문입니다. 바인딩 엔진은 다음으로 이동 <xref:System.Windows.Data.Binding> 요소에 바인딩되는 `FastDP` 속성입니다. 이 <xref:System.Windows.Data.Binding> 값 "빠른"를 반환 합니다. <xref:System.Windows.Controls.TextBlock> 이제 값 "빠른"를 표시 합니다.  
+ 바인딩 엔진은 <xref:System.Windows.Data.Binding> 개체를 처리할 때 `SlowestDP` 속성에 바인딩된 첫 번째 <xref:System.Windows.Data.Binding>로 시작 합니다. 이 <xref:System.Windows.Data.Binding> 를 처리 하면 5 초 동안 절전 모드로 전환 되므로 값을 반환 하지 않으므로 다음 <xref:System.Windows.Data.Binding> 요소가 처리 됩니다. 다음 <xref:System.Windows.Data.Binding> 은 3 초 동안 중지 되기 때문에 성공적으로 값을 반환 하지 않습니다. 그러면 바인딩 엔진이 <xref:System.Windows.Data.Binding> `FastDP` 속성에 바인딩된 다음 요소로 이동 합니다. 그러면 <xref:System.Windows.Data.Binding> "Fast value" 값이 반환 됩니다. 이제 <xref:System.Windows.Controls.TextBlock> 에 "Fast value" 값이 표시 됩니다.  
   
- 3 초 경과 후는 `SlowerDP` 속성 "느립니다 Value" 값을 반환 합니다. <xref:System.Windows.Controls.TextBlock> 다음 "느립니다 Value" 값을 표시 합니다.  
+ 3 초가 경과 하면 속성은 `SlowerDP` "느린 값" 값을 반환 합니다. 그런 <xref:System.Windows.Controls.TextBlock> 다음에 "느린 값" 값을 표시 합니다.  
   
- 5 초 경과 후는 `SlowestDP` 속성 "가장 느린 값" 값을 반환 합니다. 해당 바인딩을 먼저 나열 되므로 가장 높은 우선 순위를 갖습니다. <xref:System.Windows.Controls.TextBlock> 이제 "가장 느린 값" 값을 표시 합니다.  
+ 5 초가 경과 하면 속성은 `SlowestDP` "가장 느린 값" 값을 반환 합니다. 이 바인딩은 먼저 나열 되기 때문에 가장 높은 우선 순위를 갖습니다. 이제 <xref:System.Windows.Controls.TextBlock> 에 "가장 느린 값" 값이 표시 됩니다.  
   
- 참조 <xref:System.Windows.Data.PriorityBinding> 바인딩에서 성공적인 반환 값 간주 되는 항목에 대 한 정보에 대 한 합니다.  
+ 바인딩에서 <xref:System.Windows.Data.PriorityBinding> 성공한 반환 값으로 간주 되는 항목에 대 한 자세한 내용은를 참조 하십시오.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>  
- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
+- [데이터 바인딩 개요](data-binding-overview.md)
+- [방법 항목](data-binding-how-to-topics.md)

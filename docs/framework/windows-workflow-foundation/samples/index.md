@@ -2,12 +2,12 @@
 title: Windows WF (Workflow) 샘플 설명서
 ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: e451ecd18b68ba42aa2c8a71e394077ee6b492ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2d36c4d029050fc052f2469134e93125f56da3fa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913876"
 ---
 # <a name="windows-workflow-wf-samples"></a>WF(Windows Workflow) 샘플
 
@@ -20,8 +20,8 @@ ms.locfileid: "50201337"
 
 ## <a name="in-this-section"></a>단원 내용
 
-[응용 프로그램](../../../../docs/framework/windows-workflow-foundation/samples/application.md) -워크플로 응용 프로그램에 관련 된 샘플을 제공 합니다.
+[응용 프로그램](application.md) -워크플로 응용 프로그램에 관련 된 샘플을 제공 합니다.
 
-[기본](../../../../docs/framework/windows-workflow-foundation/samples/basic.md) -기본 Windows WF (Workflow Foundation) 기능을 보여 주는 샘플을 제공 합니다.
+[기본](basic.md) -기본 Windows WF (Workflow Foundation) 기능을 보여 주는 샘플을 제공 합니다.
 
-[시나리오](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md) -Windows WF (Workflow Foundation) 시나리오의 예제를 제공 합니다.
+[시나리오](scenario.md) -Windows WF (Workflow Foundation) 시나리오의 예제를 제공 합니다.

@@ -1,0 +1,236 @@
+### YamlMime:Tutorial
+title: 분기 및 루프 문이 포함된 조건부 논리 알아보기
+metadata:
+  title: 분기 및 루프 - C# 소개 대화형 자습서
+  description: 분기 및 루프에 대한 이 자습서에서는 브라우저를 사용하여 C#을 대화형으로 학습할 수 있습니다. 브라우저에서 바로 C# 코드를 작성하고, 코드를 컴파일하고 실행한 결과를 확인할 수 있습니다.
+  audience: Developer
+  level: Beginner
+  ms.custom: mvc
+  ms.date: 08/24/2018
+  displayType: two-column
+  interactive: csharp
+  nextTutorialHref: list-collection.yml
+  nextTutorialTitle: 목록 컬렉션
+  ms.openlocfilehash: 445017337663aea428af2f8dcd4027d716d05751
+  ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/09/2019
+  ms.locfileid: "72179879"
+items:
+- durationInMinutes: 1
+  content: >
+    이 자습서에서는 변수를 검사하고 해당 변수에 따라 실행 경로를 변경하는 코드를 작성하는 방법에 대해 설명합니다. 브라우저를 사용하여 C#을 대화형으로 작성하고, 코드를 컴파일하고 실행한 결과를 확인합니다. 이 자습서에는 C#에서 분기 및 루프 구문을 살펴보는 일련의 단원이 포함되어 있습니다. 이러한 단원에서는 C# 언어의 기본 사항을 설명합니다.
+- title: if 문을 사용하여 결정하기
+  durationInMinutes: 4
+  content: >
+    대화형 창에서 다음 코드를 실행합니다. 그렇게 하려면 대화형 창에 다음 코드 블록을 입력하고 **실행** 단추를 클릭합니다.
+
+
+    ```csharp
+
+    int a = 5;
+
+    int b = 6;
+
+    if (a + b > 10)
+        Console.WriteLine("The answer is greater than 10.");
+    ```
+
+
+    사용자 환경에서 이를 실행하는 경우 [로컬 버전](branches-and-loops-local.md)에 대한 지침을 따라야 합니다.
+
+
+    합계가 10보다 작도록 `b`의 선언을 수정합니다.
+
+
+    ```csharp
+
+    int b = 3;
+
+    ```
+
+
+    **실행** 단추를 다시 클릭합니다. 답이 10보다 작기 때문에 아무것도 출력되지 않습니다. 테스트하는 **조건**은 false입니다. `if` 문에 대해 가능한 분기 중 하나(true 분기)만 작성했기 때문에 실행할 코드가 없습니다.
+
+
+    > [!TIP]
+
+    > C# (또는 다른 프로그래밍 언어)를 살펴보면서 코드를 작성할 때 실수를 하게 될 것입니다. **컴파일러**는 그러한 오류를 찾아 사용자에게 보고합니다. 출력에 오류 메시지가 포함되어 있으면 예제 코드와 대화형 창의 코드를 자세히 살펴보고 수정 사항을 확인하세요.
+
+    > 이 연습은 C# 코드의 구조를 학습하는 데 도움이 됩니다.
+
+
+    이 첫 번째 샘플에서는 `if`의 기능과 부울 형식을 보여 줍니다. *부울*은 `true` 또는 `false`의 두 값 중 하나를 가질 수 있는 변수입니다. C#은 부울 변수에 대한 특수 형식 `bool`을 정의합니다. `if` 문은 `bool`의 값을 확인합니다. 값이 `true`인 경우 `if` 뒤의 문이 실행됩니다. 그러하지 않으면 건너뜁니다.
+
+
+    조건을 확인하고 해당 조건에 따라 문을 실행하는 이 프로세스는 아주 강력합니다. 더 자세히 살펴보겠습니다.
+
+
+    > [!NOTE]
+
+    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
+- title: if와 else를 함께 사용하기
+  durationInMinutes: 10
+  content: "\ntrue 분기와 false 분기의 여러 코드를 실행하려면 조건이 false일 때 실행되는 `else` 분기를 생성합니다. 다음과 같이 해보세요.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n    Console.WriteLine(\"The answer is greater than 10\");\nelse\n    Console.WriteLine(\"The answer is not greater than 10\");\n```\n\n`else` 키워드 뒤의 문은 테스트하는 조건이 `false`인 경우에만 실행됩니다. `if` 및 `else`를 부울 조건과 결합하면 필요한 모든 기능을 제공합니다.\n\n> [!IMPORTANT]\n> `if` 및 `else` 문 아래의 들여쓰기는 사용자가 보기 편하도록 하기 위함입니다.\n> C# 언어는 들여쓰기 또는 공백을 중요하게 취급하지 않습니다.\n> `if` 또는 `else` 키워드 뒤의 문은 조건에 따라 실행됩니다. 이 자습서의 모든 샘플에서는 문의 제어 흐름을 기준으로 줄을 들여쓰는 일반적인 방법을 따릅니다.\n\n들여쓰기는 중요하지 않기 때문에 `{` 및 `}`를 사용하여 두 개 이상의 문이 조건부로 실행되는 블록의 일부가 되는 시기를 나타내야 합니다. C# 프로그래머는 일반적으로 모든 `if` 및 `else` 절에서 중괄호를 사용합니다. 다음 예제는 방금 작성한 코드와 동일합니다. 연습해 보세요.\n\n```csharp\nint a = 5;\nint b = 3;\nif (a + b > 10)\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n}\n```\n\n> [!TIP]\n> 이 자습서의 나머지 부분에서 코드 샘플에는 일반적인 방법에 따라 모두 중괄호가 포함되어 있습니다.\n\n다음과 같이 더 복잡한 조건을 테스트할 수 있습니다.\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) && (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"And the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"Or the first number is not equal to the second\");\n}\n```\n\n`==` 기호는 같음을 테스트합니다. `==`을 사용하면 같음 테스트가 `a = 5`에서 확인한 할당과 구분됩니다.\n\n`&&`는 “and”를 나타냅니다. true 분기에서 문을 실행하려면 두 조건이 모두 true여야 합니다.  이러한 예제에서는 `{` 및 `}`로 문을 묶으면 각 조건부 분기에 여러 문을 가질 수 있음도 보여 줍니다.\n\n`||`을 사용하여 “or”을 나타낼 수도 있습니다.\n\n```csharp\nint a = 5;\nint b = 3;\nint c = 4;\nif ((a + b + c > 10) || (a == b))\n{\n    Console.WriteLine(\"The answer is greater than 10\");\n    Console.WriteLine(\"Or the first number is equal to the second\");\n}\nelse\n{\n    Console.WriteLine(\"The answer is not greater than 10\");\n    Console.WriteLine(\"And the first number is not equal to the second\");\n}\n```\n\n`a`, `b` 및 `c`의 값을 수정하고 `&&` 및 `||` 간에 전환하여 살펴봅니다. `&&` 및 `||` 연산자가 어떻게 작동하는지 더 잘 이해할 수 있습니다.\n\n> [!NOTE]\n> 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.\n"
+- title: 루프를 사용하여 작업 반복
+  durationInMinutes: 6
+  content: >
+    대규모 프로그램을 만드는 또 다른 중요한 개념은 **루프**입니다. 루프를 사용하여 두 번 이상 실행하려는 문을 반복합니다. 대화형 창에서 다음 코드를 사용해 보세요.
+
+
+    ```csharp
+
+    int counter = 0;
+
+    while (counter < 10)
+
+    {
+      Console.WriteLine($"Hello World! The counter is {counter}");
+      counter++;
+    }
+
+    ```
+
+
+    `while` 문은 조건을 확인하고 `while` 뒤의 문을 실행합니다. 조건이 false가 될 때까지 조건 확인 및 문 실행을 반복합니다.
+
+
+    이 예제에서는 다른 새 연산자가 하나 있습니다. `counter` 변수 뒤의 `++`는 **증가** 연산자입니다. 카운터 값에 1을 더하고 카운터 변수에 해당 값을 저장합니다.
+
+
+    > [!IMPORTANT]
+
+    > 코드를 실행할 때 `while` 루프 조건이 false로 전환되는지 확인합니다. 그러하지 않으면 프로그램이 종료되지 않는 **무한 루프**를 생성합니다. 코드를 실행하는 엔진이 제한 시간을 초과하고 프로그램에서 아무것도 출력하지 않을 것이기 때문에 시연하지 않겠습니다.
+
+
+    `while` 루프는 `while` 뒤에 코드를 실행하기 전에 조건을 테스트합니다. `do` ... `while` 루프는 코드를 먼저 실행한 후 조건을 확인합니다. 예를 들면 다음과 같습니다.
+
+
+    ```csharp
+
+    int counter = 0;
+
+    do
+
+    {
+      Console.WriteLine($"Hello World! The counter is {counter}");
+      counter++;
+    } while (counter < 10);
+
+    ```
+
+
+    이 `do` 루프와 이전 `while` 루프는 동일하게 작동합니다.
+
+
+    마지막 루프 문으로 넘어가겠습니다.
+
+
+    > [!NOTE]
+
+    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
+- title: for 루프 작업
+  durationInMinutes: 5
+  content: >
+    C# 코드에서 볼 수 있는 또 다른 일반적인 루프 문은 `for` 루프입니다. 대화형 창에서 다음 코드를 사용해 보세요.
+
+
+    ```csharp
+
+    for(int counter = 0; counter < 10; counter++)
+
+    {
+      Console.WriteLine($"Hello World! The counter is {counter}");
+    }
+
+    ```
+
+
+    `while` 루프 및 이미 사용한 `do` 루프와 동일한 작업을 수행합니다. `for` 문에는 작동 방식을 제어하는 세 부분이 있습니다.
+
+
+    첫 번째 부분은 **for 이니셜라이저입니다**. `int counter = 0;`은 `counter`가 루프 변수임을 선언하고 첫 번째 값을 `0`으로 설정합니다.
+
+
+    중간 부분은 **for 조건입니다**. `counter < 10`은 이 `for` 루프가 카운터 값이 10보다 작으면 계속 실행됨을 선언합니다.
+
+
+    마지막 부분은 **for 반복기입니다**. `counter++`는 `for` 문 다음의 블록을 실행한 후 루프 변수를 수정하는 방법을 지정합니다. 여기서 `counter`는 블록이 실행될 때마다 1씩 증가하도록 지정합니다.
+
+
+    직접 실습해 보세요. 다음 각각을 시도해 보세요.
+
+
+    - 다른 값으로 시작하도록 이니셜라이저를 변경합니다.
+
+    - 다른 값에서 중지하도록 조건을 변경합니다.
+
+
+    완료하면, 학습한 내용을 토대로 직접 코드를 작성해 보겠습니다.
+
+
+    > [!NOTE]
+
+    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
+- title: 분기 및 루프 결합
+  durationInMinutes: 12
+  content: >
+    이제 C# 언어로 된 `if` 문과 루프 구조를 확인했습니다. C# 코드를 작성하여 3으로 나눌 수 있는, 1에서 20까지의 모든 정수의 합계를 찾을 수 있는지 확인해 보세요.  다음은 몇 가지 힌트입니다.
+
+
+    - `%` 연산자는 나누기 연산의 나머지를 제공합니다.
+
+    - `if` 문은 숫자가 합계의 일부여야 하는지를 확인하는 조건을 제공합니다.
+
+    - `for` 루프는 1에서 20까지의 모든 숫자에 대해 일련의 단계를 반복하는 데 도움이 됩니다.
+
+
+    직접 시도해 보세요. 그런 다음 어떻게 했는지 확인하세요. 힌트로 답에 대해 63을 받아야 합니다.
+
+
+    > [!NOTE]
+
+    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
+- title: 과제 완료
+  durationInMinutes: 1
+  content: >
+    다음과 같은 답을 제시했나요?
+
+
+    ```csharp
+
+    int sum = 0;
+
+    for (int number = 1; number < 21; number++)
+
+    {
+      if (number % 3 == 0)
+      {
+        sum = sum + number;
+      }
+    }
+
+    Console.WriteLine($"The sum is {sum}");
+
+    ```
+
+
+    > [!NOTE]
+
+    > 이 온라인 코딩 환경은 미리 보기 모드로 제공됩니다. 문제가 발생하면 [dotnet/try 리포지토리](https://github.com/dotnet/try/issues)에 보고하세요.
+- title: 지금까지
+  content: >-
+    “분기 및 루프” 대화형 자습서를 완료했습니다. 아래 **목록 모음** 링크를 클릭하여 다음 대화형 자습서를 시작하거나, [.NET 사이트](https://dotnet.microsoft.com/learn/dotnet/hello-world-tutorial/intro)를 방문하여 .NET Core SDK를 다운로드하고 머신에 프로젝트를 만들고 계속 코딩할 수 있습니다. “다음 단계” 섹션은 이 자습서로 돌아옵니다.
+
+
+    다음 항목에서는 해당 개념에 대해 더 자세히 알아볼 수 있습니다.
+
+
+    - [If 및 else 문](../../language-reference/keywords/if-else.md)
+
+    - [While 문](../../language-reference/keywords/while.md)
+
+    - [Do 문](../../language-reference/keywords/do.md)
+
+    - [For 문](../../language-reference/keywords/for.md)

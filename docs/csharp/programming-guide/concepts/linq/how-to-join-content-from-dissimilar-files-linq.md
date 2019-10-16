@@ -2,12 +2,12 @@
 title: '방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: 0984b8fc42a8f242f6adc33e1f3c38d4f6ae94b8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: eb2e5d8e598b7b671afe9271e6e591c5ce0ada2b
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741619"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253544"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)
 
@@ -15,9 +15,9 @@ ms.locfileid: "43741619"
   
 ## <a name="to-create-the-data-files"></a>데이터 파일을 만들려면
   
-1.  다음 줄을 *scores.csv* 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 스프레드시트 데이터를 나타냅니다. 열 1은 학생 ID이고, 열 2-5는 시험 점수입니다.  
+1. 다음 줄을 *scores.csv* 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 스프레드시트 데이터를 나타냅니다. 열 1은 학생 ID이고, 열 2-5는 시험 점수입니다.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -32,9 +32,9 @@ ms.locfileid: "43741619"
     122, 94, 92, 91, 91  
     ```  
   
-2.  다음 줄을 *names.csv* 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 학생의 성, 이름 및 학생 ID를 포함하는 스프레드시트를 나타냅니다.  
+2. 다음 줄을 *names.csv* 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 학생의 성, 이름 및 학생 ID를 포함하는 스프레드시트를 나타냅니다.  
   
-    ```  
+    ```csv  
     Omelchenko,Svetlana,111  
     O'Donnell,Claire,112  
     Mortensen,Sven,113  
@@ -124,15 +124,7 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>코드 컴파일
-
-다음 옵션 중 하나를 대상으로 하는 프로젝트를 만들고 컴파일합니다.
-
-- System.Core.dll에 대한 참조를 포함한 .NET Framework 버전 3.5
-- .NET Framework 버전 4.0 이상
-- .NET Core 버전 1.0 이상
-  
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [LINQ 및 파일 디렉터리(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 및 문자열(C#)](./linq-and-strings.md)
+- [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98cf49714829b4b2f80e0240c2ebde7fa6c280e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ba24f5394ef8fb31d8bfa4e74ac59e7bd4af86d8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425407"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769869"
 ---
 # <a name="corsymaddrkind-enumeration"></a>CorSymAddrKind 열거형
 메모리 주소 유형을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorSymAddrKind  
 {  
     ADDR_IL_OFFSET          = 1,  
@@ -46,21 +46,22 @@ typedef enum CorSymAddrKind
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`ADDR_IL_OFFSET`|가 Microsoft MSIL (intermediate language) 지역 변수 또는 매개 변수 인덱스를 나타냅니다.|  
+|`ADDR_IL_OFFSET`|Microsoft 중간 언어 (MSIL) 로컬 변수 또는 매개 변수 인덱스를 나타냅니다.|  
 |`ADDR_NATIVE_RVA`|모듈에 상대 가상 주소를 나타냅니다.|  
 |`ADDR_NATIVE_REGISTER`|CPU 레지스터를 나타냅니다.|  
-|`ADDR_NATIVE_REGREL`|첫 번째 주소는 레지스터와 두 번째 주소는 오프셋을 나타냅니다.|  
+|`ADDR_NATIVE_REGREL`|첫 번째 주소 레지스터 이며 두 번째 주소 오프셋을 나타냅니다.|  
 |`ADDR_NATIVE_OFFSET`|기본 주소에서의 오프셋을 나타냅니다.|  
-|`ADDR_NATIVE_REGREG`|첫 번째 주소는 하위 부분이 있으면 레지스터의 두 번째 주소는 높은 부분을 나타냅니다.|  
-|`ADDR_NATIVE_REGSTK`|첫 번째 주소는 레지스터의 하위 부분이, 두 번째는 높은 부분 및 세 번째는 오프셋을 나타냅니다.|  
-|`ADDR_NATIVE_STKREG`|첫 번째 주소는 레지스터는 오프셋, 두 번째 및 세 번째는 레지스터의 많은 부분을 나타냅니다.|  
-|`ADDR_BITFIELD`|첫 번째 주소는 필드의 시작 및 두 번째 주소는 필드 길이 나타냅니다.|  
-|`ADDR_NATIVE_ISECTOFFSET`|첫 번째 주소 섹션은 두 번째 주소는 오프셋을 나타냅니다.|  
+|`ADDR_NATIVE_REGREG`|첫 번째 주소를 레지스터의 하위 부분이 이며 두 번째 주소 높은 부분을 나타냅니다.|  
+|`ADDR_NATIVE_REGSTK`|첫 번째 주소는 레지스터의 하위 부분, 두 번째 상위 부분이 이며 세 번째 오프셋을 나타냅니다.|  
+|`ADDR_NATIVE_STKREG`|첫 번째 주소는 레지스터, 두 번째는 오프셋 이며 세 번째 레지스터의 많은 부분을 나타냅니다.|  
+|`ADDR_BITFIELD`|첫 번째 주소 필드의 시작 이며 두 번째 주소 필드의 길이 나타냅니다.|  
+|`ADDR_NATIVE_ISECTOFFSET`|첫 번째 주소 섹션 이며 두 번째 주소 오프셋을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

@@ -2,12 +2,12 @@
 title: TextMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 885e2d7a-3436-4093-bc5f-0a404c62acdc
-ms.openlocfilehash: 2371c38aebe2bd8d6da93d702801556fad986ef9
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 67c1083daa9acfd204d4de50d4e9178b25aafcf0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858392"
 ---
 # <a name="textmessageencodingbindingelement"></a>TextMessageEncodingBindingElement
 TextMessageEncodingBindingElement  
@@ -64,5 +64,6 @@ class TextMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>

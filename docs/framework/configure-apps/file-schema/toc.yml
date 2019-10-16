@@ -1,0 +1,59 @@
+- name: 구성 파일 스키마
+  href: index.md
+  items:
+    - name: <configuration> 요소
+      href: configuration-element.md
+    - name: <assemblyBinding> 요소
+      href: assemblybinding-element-for-configuration.md
+    - name: <linkedConfiguration> 요소
+      href: linkedconfiguration-element.md
+    - name: <configSections> 요소
+      href: configsections-element-for-configuration.md
+    - name: <configSections>에 대한 <clear> 요소
+      href: clear-element-for-configsections.md
+    - name: <configSections>에 대한 <remove> 요소
+      href: remove-element-for-configsections.md
+    - name: <sectionGroup> 요소
+      href: sectiongroup-element-for-configsections.md
+    - name: SingleTagSectionHandler에 대한 사용자 지정 요소
+      href: custom-element-1.md
+    - name: NameValueSectionHandler 및 DictionarySectionHandler에 대한 사용자 지정 요소
+      href: custom-element-2.md
+    - name: <add> 요소
+      href: add-element-for-custom-2.md
+    - name: NameValueSectionHandler 및 DictionarySectionHandler에 대한 <clear> 요소
+      href: clear-element-for-custom-2.md
+    - name: NameValueSectionHandler 및 DictionarySectionHandler에 대한 <remove> 요소
+      href: remove-element-for-custom-2.md
+    - name: <section> 요소
+      href: section-element.md
+    - name: 앱 설정 스키마
+      href: appsettings/index.md
+    - name: 애플리케이션 설정 스키마
+      href: application-settings-schema.md
+    - name: 컴파일러 및 언어 공급자 설정 스키마
+      href: compiler/index.md
+    - name: 구성 섹션 스키마
+      href: configuration-sections-schema.md
+    - name: 암호화 설정 스키마
+      href: cryptography/index.md
+    - name: 네트워크 설정 스키마
+      href: network/index.md
+    - name: 런타임 설정 스키마
+      href: runtime/index.md
+    - name: 시작 설정 스키마
+      href: startup/index.md
+    - name: 추적 및 디버그 설정 스키마
+      href: trace-debug/index.md
+    - name: 웹 설정 스키마
+      href: web/index.md
+    - name: WCF 구성 스키마
+      href: wcf/index.md
+    - name: WCF 지시문 구문
+      href: wcf-directive/index.md
+    - name: WIF 구성 스키마
+      href: windows-identity-foundation/index.md
+    - name: Windows Forms 구성 섹션
+      href: winforms/index.md
+    - name: Windows Workflow Foundation 구성 스키마
+      href: windows-workflow-foundation/index.md

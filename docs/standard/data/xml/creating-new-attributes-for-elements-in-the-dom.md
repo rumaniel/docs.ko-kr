@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: dd6dc920-b011-418a-b3db-f1580a7d9251
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 870e800220031338557792fa612d4a3101e79f90
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 9cbef07e3db294dd4c0ffca1f25c15ec39e6ecf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48024573"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647938"
 ---
 # <a name="creating-new-attributes-for-elements-in-the-dom"></a>DOM에서 요소의 새 특성 만들기
 특성은 노드가 아니라 요소 노드의 속성이며 요소와 연결된 **XmlAttributeCollection**에 포함되어 있으므로 새 특성을 만드는 것은 다른 노드 형식을 만드는 것과 다릅니다. 다음과 같은 여러 가지 방법으로 특성을 만들고 요소를 추가할 수 있습니다.  
   
--   요소 노드를 가져오고 **SetAttribute**를 사용하여 특성을 해당 요소의 특성 컬렉션에 추가합니다.  
+- 요소 노드를 가져오고 **SetAttribute**를 사용하여 특성을 해당 요소의 특성 컬렉션에 추가합니다.  
   
--   **CreateAttribute** 메서드를 사용하여 **XmlAttribute** 노드를 만들고, 요소 노드를 가져온 다음, **SetAttributeNode**를 사용하여 해당 요소의 특성 컬렉션에 노드를 추가합니다.  
+- **CreateAttribute** 메서드를 사용하여 **XmlAttribute** 노드를 만들고, 요소 노드를 가져온 다음, **SetAttributeNode**를 사용하여 해당 요소의 특성 컬렉션에 노드를 추가합니다.  
   
  다음 예제는 **SetAttribute** 메서드를 사용하여 요소에 특성을 추가하는 방법을 보여줍니다.  
   
@@ -122,7 +122,7 @@ doc.DocumentElement.SetAttributeNode(attr);
  기본 특성을 포함하도록 선언된 요소를 만들면 새 기본 특성이 XML DOM(문서 개체 모델)에서 해당 기본값과 함께 만들어지고 해당 요소에 추가됩니다. 이때 기본 특성의 자식 노드도 만들어집니다.  
   
 ## <a name="attribute-child-nodes"></a>특성 자식 노드  
- 특성 노드 값은 자신의 자식 노드가 됩니다. 유효한 자식 노드에는 **XmlText** 노드와 **XmlEntityReference** 노드의 두 가지 형식만 있습니다. **FirstChild** 및 **LastChild**와 같은 메서드에서 이러한 형식의 노드를 자식 노드로 처리한다는 점에서 이러한 형식의 노드는 자식 노드입니다. 자식 노드가 있는 특성의 이와 같은 차이점은 특성이나 특성 자식 노드를 제거하려는 경우에 중요합니다. 자세한 내용은 [DOM의 요소 노드에서 특성 제거](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)를 참조하세요.  
+ 특성 노드 값은 자신의 자식 노드가 됩니다. 유효한 자식 노드에는 다음과 같은 두 가지 유형만 있습니다. **XmlText** 노드 및 **XmlEntityReference** 노드. **FirstChild** 및 **LastChild**와 같은 메서드에서 이러한 형식의 노드를 자식 노드로 처리한다는 점에서 이러한 형식의 노드는 자식 노드입니다. 자식 노드가 있는 특성의 이와 같은 차이점은 특성이나 특성 자식 노드를 제거하려는 경우에 중요합니다. 자세한 내용은 [DOM의 요소 노드에서 특성 제거](../../../../docs/standard/data/xml/removing-attributes-from-an-element-node-in-the-dom.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 

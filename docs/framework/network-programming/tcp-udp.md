@@ -16,15 +16,15 @@ helpviewer_keywords:
 - requesting data from Internet, TCP/UDP
 - Internet, TCP/UDP
 ms.assetid: df29b4b0-49e8-4923-82b9-13150dfc40f5
-ms.openlocfilehash: 987a8aa789d8c4585a58a031c9d920ee5cab45aa
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d35278ab7feb42453b5a0adbc86c47b7ac3ff5ca
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191877"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047106"
 ---
 # <a name="tcp-udp"></a>TCP-UDP
-응용 프로그램은 <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스와 함께 TCP(Transmission Control Protocol) 및 UDP(User Datagram Protocol) 서비스를 사용할 수 있습니다. 이러한 프로토콜 클래스는 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 클래스를 기반으로 빌드되며 데이터 전송의 세부 사항을 처리합니다.  
+애플리케이션은 <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스와 함께 TCP(Transmission Control Protocol) 및 UDP(User Datagram Protocol) 서비스를 사용할 수 있습니다. 이러한 프로토콜 클래스는 <xref:System.Net.Sockets.Socket?displayProperty=nameWithType> 클래스를 기반으로 빌드되며 데이터 전송의 세부 사항을 처리합니다.  
   
  프로토콜 클래스는 **Socket** 클래스의 동기 메서드를 사용하여 상태 정보를 유지 관리하거나 프로토콜 관련 소켓 설정의 세부 정보를 알아야 하는 오버헤드 없이 네트워크 서비스에 대한 쉽고 간단한 액세스를 제공합니다. 비동기 **Socket** 메서드를 사용하려면 <xref:System.Net.Sockets.NetworkStream> 클래스에서 제공하는 비동기 메서드를 사용할 수 있습니다. 프로토콜 클래스에 의해 노출되지 않는 **Socket** 클래스의 기능에 액세스하려면 **Socket** 클래스를 사용해야 합니다.  
   
@@ -32,10 +32,11 @@ ms.locfileid: "50191877"
   
  **UdpClient** 클래스는 바이트 배열을 사용하여 UDP 데이터그램을 보유합니다. <xref:System.Net.Sockets.UdpClient.Send%2A> 메서드를 사용하여 네트워크에 데이터를 보내고 <xref:System.Net.Sockets.UdpClient.Receive%2A> 메서드를 사용하여 들어오는 데이터그램을 받습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [TCP 서비스 사용](../../../docs/framework/network-programming/using-tcp-services.md)  
- [UDP 서비스 사용](../../../docs/framework/network-programming/using-udp-services.md)  
- [네트워크에서 스트림 사용](../../../docs/framework/network-programming/using-streams-on-the-network.md)  
- [비동기 서버 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-server-socket.md)  
- [비동기 클라이언트 소켓 사용](../../../docs/framework/network-programming/using-an-asynchronous-client-socket.md)  
- [응용 프로그램 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)
+## <a name="see-also"></a>참고 항목
+
+- [TCP 서비스 사용](using-tcp-services.md)
+- [UDP 서비스 사용](using-udp-services.md)
+- [네트워크에서 스트림 사용](using-streams-on-the-network.md)
+- [비동기 서버 소켓 사용](using-an-asynchronous-server-socket.md)
+- [비동기 클라이언트 소켓 사용](using-an-asynchronous-client-socket.md)
+- [애플리케이션 프로토콜 사용](using-application-protocols.md)

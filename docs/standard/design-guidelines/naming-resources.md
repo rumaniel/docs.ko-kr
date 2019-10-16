@@ -1,6 +1,6 @@
 ---
 title: 리소스 이름 지정
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - names [.NET Framework], localized resources
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - global applications, naming guidelines
 - international applications, naming guidelines
 ms.assetid: 8b0e97f3-7877-44fd-bc76-e05d36d5d79c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a5b53fc383e6fc9a5f056bab4eabde9979cd734b
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+author: KrzysztofCwalina
+ms.openlocfilehash: 44627aafd9ec779625413a0862412a8f6c408109
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48260682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756886"
 ---
 # <a name="naming-resources"></a>리소스 이름 지정
 지역화할 수 있는 리소스 속성 처럼 특정 개체를 통해 참조할 수, 있으므로 리소스에 대 한 명명 지침 속성 지침 비슷합니다.  
@@ -39,9 +38,9 @@ ms.locfileid: "48260682"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

@@ -1,0 +1,87 @@
+### YamlMime:Landing
+title: ML.NET 설명서
+summary: 오픈 소스 ML.NET을 사용하여 사용자 지정 기계 학습 모델을 개발하고 이를 앱에 연결하는 방법을 알아봅니다. 자습서, 코드 예제 등을 통해 방법이 제시됩니다.
+metadata:
+  title: ML.NET 설명서 - 자습서, API 참조
+  description: 오픈 소스 ML.NET을 사용하여 사용자 지정 기계 학습 모델을 개발하고 이를 앱에 연결하는 방법을 알아봅니다. 자습서, 코드 예제 등을 통해 방법이 제시됩니다.
+  ms.prod: dotnet-ml
+  ms.topic: landing-page
+  ms.collection: collection
+  author: natke
+  ms.author: nakersha
+  ms.date: 10/02/2019
+  ms.openlocfilehash: d31cdb8046444b88a132c63867f590d72e624382
+  ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 10/04/2019
+  ms.locfileid: "71957229"
+landingContent:
+- title: ML.NET 기본 사항
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: ML.NET이란?
+      url: how-does-mldotnet-work.md
+  - linkListType: video
+    links:
+    - text: 기계 학습 기본 사항
+      url: https://channel9.msdn.com/Series/MLNET/MLNET-Machine-Learning-Introduction-1-of-8
+  - linkListType: concept
+    links:
+    - text: 기계 학습 작업 및 알고리즘
+      url: resources/tasks.md
+    - text: 알고리즘을 선택하는 방법
+      url: how-to-choose-an-ml-net-algorithm.md
+- title: 10분 만에 시작
+  linkLists:
+  - linkListType: quickstart
+    links:
+    - text: Visual Studio에서 모델 작성기 설정
+      url: how-to-guides/install-model-builder.md
+    - text: ML.NET API 시작
+      url: https://dotnet.microsoft.com/learn/ml-dotnet/get-started-tutorial/intro
+    - text: Mac OS, Windows 또는 Linux에 CLI 설치
+      url: how-to-guides/install-ml-net-cli.md
+- title: 자습서
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: 웹 사이트 의견 감정 분석(모델 작성기)
+      url: tutorials/sentiment-analysis-model-builder.md
+    - text: 가격 예측( 모델 작성기)
+      url: tutorials/predict-prices-with-model-builder.md
+    - text: 지원 문제 범주화(API)
+      url: tutorials/github-issue-classification.md
+    - text: TensorFlow를 사용하여 이미지 분류(API)
+      url: tutorials/image-classification.md
+    - text: 이미지에서 개체 검색(API)
+      url: tutorials/object-detection-onnx.md
+    - text: 제품 판매의 변칙 검색(API)
+      url: tutorials/sales-anomaly-detection.md
+    - text: 영화 추천기 빌드(API)
+      url: tutorials/movie-recommendation.md
+- title: 방법 가이드
+  linkLists:
+  - linkListType: how-to-guide
+    links:
+    - text: 다양한 소스에서 데이터 로드
+      url: how-to-guides/load-data-ml-net.md
+    - text: 모델 구축에 사용할 데이터 준비
+      url: how-to-guides/prepare-data-ml-net.md
+    - text: 모델 학습 및 평가
+      url: how-to-guides/train-machine-learning-model-ml-net.md
+    - text: 학습된 모델로 예측
+      url: how-to-guides/machine-learning-model-predictions-ml-net.md
+    - text: 학습된 모델 저장 및 로드
+      url: how-to-guides/save-load-machine-learning-models-ml-net.md
+    - text: 모델 재학습
+      url: how-to-guides/retrain-model-ml-net.md
+- title: 참조
+  linkLists:
+  - linkListType: reference
+    links:
+    - text: ML.NET API 참조
+      url: https://docs.microsoft.com/dotnet/api/?view=ml-dotnet
+    - text: ML.NET 샘플
+      url: https://github.com/dotnet/machinelearning-samples

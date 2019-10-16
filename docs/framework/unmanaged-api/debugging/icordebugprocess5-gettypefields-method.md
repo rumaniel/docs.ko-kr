@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 214fc97e41d8d220547a5f8bd28117ff411fa89b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d413b17da0b6f241f9078bfeb3bd035d4d07a81
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418407"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767634"
 ---
 # <a name="icordebugprocess5gettypefields-method"></a>ICorDebugProcess5::GetTypeFields 메서드
 형식에 속하는 필드에 대 한 정보를 제공 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetTypeFields(  
     [in] COR_TYPEID id,  
     [in] ULONG32 celt,  
@@ -38,9 +38,9 @@ HRESULT GetTypeFields(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `id`  
- [in] 해당 필드 정보를 검색할 형식의 식별자입니다.  
+ [in] 식별자 인 필드 정보를 검색할 형식입니다.  
   
  `celt`  
  [in] 수가 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 필드 정보를 검색할 개체입니다.  
@@ -49,20 +49,21 @@ HRESULT GetTypeFields(
  [out] 배열을 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 형식에 속하는 필드에 대 한 정보를 제공 하는 개체입니다.  
   
  `pceltNeeded`  
- [out] 수에 대 한 포인터 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 에 포함 된 개체 `fields`합니다.  
+ [out] 개수에 대 한 포인터 [COR_FIELD](../../../../docs/framework/unmanaged-api/debugging/cor-field-structure.md) 에 포함 된 개체 `fields`합니다.  
   
 ## <a name="remarks"></a>설명  
- `celt` 필드 메서드가 사용 하 여 필드 정보를 가져올 수를 지정 하는 매개 변수 `fields`의 값에 해당 해야는 `COR_TYPE_LAYOUT::numFields` 필드입니다.  
+ `celt` 필드를 채우는 메서드를 사용 하 여 필드 정보를 가져올 수를 지정 하는 매개 변수 `fields`의 값과 일치 해야 합니다 `COR_TYPE_LAYOUT::numFields` 필드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)  
- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebugProcess5 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-interface.md)
+- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

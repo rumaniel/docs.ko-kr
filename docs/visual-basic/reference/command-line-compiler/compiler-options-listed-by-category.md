@@ -4,15 +4,15 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 2723104de8a583dc09f2fcfdd91a4119c5dec6d9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8f09566585c06531a346b0143a6002c2854a0b01
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200968"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182558"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic 컴파일러 옵션 범주별 목록
-Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (IDE) 내에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 기능 범주별으로 정렬 된 Visual Basic 명령줄 컴파일러 옵션의 목록입니다.  
+Visual Basic 명령줄 컴파일러는 Visual Studio IDE (통합 개발 환경) 내에서 프로그램을 컴파일하는 대신 제공 됩니다. 다음은 함수 범주별로 정렬 된 Visual Basic 명령줄 컴파일러 옵션 목록입니다.  
 
 [!INCLUDE[compiler-options](~/includes/compiler-options.md)]
   
@@ -39,10 +39,10 @@ Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (ID
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|XML 파일에 대해 문서 주석을 처리합니다.|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|입력이 동일한 경우 컴파일 간에 이진 콘텐츠가 동일한 어셈블리를 컴파일러에서 출력하도록 합니다.|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](~/includes/compact-md.md)]를 대상으로 하도록 컴파일러를 설정합니다.|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|.NET Compact Framework를 대상으로 하는 컴파일러를 설정 합니다.|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|출력 파일을 지정합니다.|  
-|[/refonly](refonly-compiler-option.md)|참조 어셈블리에만 출력합니다.|
-|[/refout](refout-compiler-option.md)|참조 어셈블리의 출력 경로 지정합니다.|
+|[/refonly](refonly-compiler-option.md)|참조 어셈블리만 출력 합니다.|
+|[/refout](refout-compiler-option.md)|참조 어셈블리의 출력 경로를 지정 합니다.|
 |[-target](../../../visual-basic/reference/command-line-compiler/target.md)|출력의 형식을 지정합니다.|  
   
 ## <a name="net-assemblies"></a>.NET 어셈블리  
@@ -54,7 +54,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (ID
 |[-imports](../../../visual-basic/reference/command-line-compiler/imports.md)|지정된 어셈블리에서 네임스페이스를 가져옵니다.|  
 |[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)|어셈블리에 강력한 이름을 지정하는 키 쌍의 키 컨테이너 이름을 지정합니다.|  
 |[-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)|어셈블리에 강력한 이름을 지정하는 키 또는 키 쌍이 포함된 파일을 지정합니다.|  
-|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|참조 되는 어셈블리의 위치를 지정 합니다 [-참조](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션입니다.|  
+|[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)|[-Reference](../../../visual-basic/reference/command-line-compiler/reference.md) 옵션에서 참조 하는 어셈블리의 위치를 지정 합니다.|  
 |[-reference](../../../visual-basic/reference/command-line-compiler/reference.md)|어셈블리에서 메타데이터를 가져옵니다.|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|모듈이 속할 어셈블리의 이름을 지정합니다.|  
 |`-analyzer`|이 어셈블리에서 분석기를 실행합니다(약식: -a).|  
@@ -83,7 +83,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (ID
   
 |옵션|용도|  
 |---|---|  
-|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|언어 버전을 지정 합니다. 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0입니다.|  
+|[-langversion](../../../visual-basic/reference/command-line-compiler/langversion.md)|언어 버전 지정: 9&#124;9.0&#124;10&#124;10.0&#124;11&#124;11.0.|  
 |[-optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)|명시적 변수 선언이 있어야 합니다.|  
 |[-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)|형식 의미 체계를 엄격하게 확인합니다.|  
 |[-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)|문자열 비교가 이진인지 또는 로캘별 텍스트 의미 체계를 사용해야 하는지를 지정합니다.|  
@@ -95,7 +95,7 @@ Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (ID
 |---|---|  
 |[-define](../../../visual-basic/reference/command-line-compiler/define.md)|조건부 컴파일 기호를 정의합니다.|  
   
-## <a name="resources"></a>자료  
+## <a name="resources"></a>리소스  
   
 |옵션|용도|  
 |---|---|  
@@ -113,21 +113,20 @@ Visual Basic 명령줄 컴파일러는 Visual Studio 통합된 개발 환경 (ID
 |[-codepage](../../../visual-basic/reference/command-line-compiler/codepage.md)|컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.|  
 |[-errorreport](../../../visual-basic/reference/command-line-compiler/errorreport.md)|Visual Basic 컴파일러에서 내부 컴파일러 오류를 보고 하는 방법을 지정 합니다.|  
 |[-highentropyva](../../../visual-basic/reference/command-line-compiler/highentropyva.md)|특정 실행 파일이 높은 엔트로피 ASLR(Address Space Layout Randomization)을 지원하는지 여부를 Windows 커널에 알려줍니다.|  
-|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|포함 하는 클래스를 지정 합니다 `Sub Main` 프로시저를 시작할 때 사용 합니다.|  
+|[-main](../../../visual-basic/reference/command-line-compiler/main.md)|시작할 때 사용할 `Sub Main` 프로시저를 포함 하는 클래스를 지정 합니다.|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Vbc.rsp로 컴파일하지 않습니다.|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|컴파일러에서 표준 라이브러리를 참조하지 않도록 합니다.|  
-|[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|실행 파일에 응용 프로그램 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.|  
+|[-nowin32manifest](../../../visual-basic/reference/command-line-compiler/nowin32manifest.md)|실행 파일에 애플리케이션 매니페스트를 포함하지 않도록 컴파일러에 지시합니다.|  
 |[-platform](../../../visual-basic/reference/command-line-compiler/platform.md)|출력 파일에 대한 컴파일러 대상으로 프로세서 플랫폼을 지정합니다.|  
 |[-recurse](../../../visual-basic/reference/command-line-compiler/recurse.md)|하위 디렉터리에서 컴파일할 소스 파일을 검색합니다.|  
 |[-rootnamespace](../../../visual-basic/reference/command-line-compiler/rootnamespace.md)|모든 형식 선언에 대한 네임스페이스를 지정합니다.|  
 |[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)|Mscorlib.dll 및 Microsoft.VisualBasic.dll의 위치를 지정합니다.|  
 |[-vbruntime](../../../visual-basic/reference/command-line-compiler/vbruntime.md)|컴파일러에서 Visual Basic 런타임 라이브러리에 대한 참조 없이 컴파일하거나 특정 런타임 라이브러리를 참조하여 컴파일하도록 지정합니다.|  
-|[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 응용 프로그램 매니페스트 파일을 식별합니다.|  
+|[-win32manifest](../../../visual-basic/reference/command-line-compiler/win32manifest.md)|프로젝트의 PE(포팅 가능한 실행 파일) 파일에 포함할 사용자 정의 Win32 애플리케이션 매니페스트 파일을 식별합니다.|  
 |`-parallel[+&#124;-]`|동시 빌드(+)를 사용할지 여부를 지정합니다.|  
-|`-checksumalgorithm:<alg>`|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 SHA1(기본값) 또는 SHA256입니다.|  
+|`-checksumalgorithm:<alg>`|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 다음과 같습니다. SHA1(기본값) 또는 SHA256. <br>S h a 1의 충돌 문제로 인해 s h a 1 이상을 권장 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 컴파일러 옵션 사전순 목록](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)  
- [프로젝트 디자이너 소개](https://msdn.microsoft.com/en-us/library/898dd854-c98d-430c-ba1b-a913ce3c73d7(v=vs.100))  
- [사전순 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-alphabetically.md)  
- [범주별 C# 컴파일러 옵션 목록](../../../csharp/language-reference/compiler-options/listed-by-category.md)
+## <a name="see-also"></a>참고 항목
+
+- [Visual Basic 컴파일러 옵션 사전순 목록](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
+- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,5 +1,6 @@
 ---
-title: 숫자 결과 형식 지정 표(C# 참조)
+title: 숫자 결과 형식 지정 표 - C# 참조
+ms.custom: seodec18
 description: C# 표준 숫자 형식 문자열에 대한 자세한 정보
 ms.date: 09/20/2018
 helpviewer_keywords:
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - numeric formatting [C#]
 - String.Format method
 ms.assetid: 120ba537-4448-4c62-8676-7a8fdd98f496
-ms.openlocfilehash: 6f1cb5b49139cf9661e678cfc0ecc884a2749622
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 0f2b5bc54a0e9055d64a95dc229eaadf66687b43
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "47863704"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421960"
 ---
 # <a name="formatting-numeric-results-table-c-reference"></a>숫자 결과 형식 지정 표(C# 참조)
 
@@ -30,7 +31,7 @@ ms.locfileid: "47863704"
 |R 또는 r|라운드트립|`string s = $"{2.5:R}";`|2.5|  
 |X 또는 x|16진수|`string s = $"{250:X}";`<br /><br /> `string s = $"{0xffff:X}";`|FA<br /><br /> FFFF|  
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 형식 지정자를 사용하여 형식 문자열을 만듭니다. 형식 문자열은 `Axx` 형식입니다. 여기서 각 요소는 다음을 나타냅니다.
 
@@ -53,7 +54,6 @@ ms.locfileid: "47863704"
 
 - [C# 참조](../index.md)
 - [C# 프로그래밍 가이드](../../programming-guide/index.md)
-- [형식 참조 테이블](reference-tables-for-types.md)
 - [형식 서식 지정](../../../standard/base-types/formatting-types.md)
 - [복합 형식 지정](../../../standard/base-types/composite-formatting.md)
 - [문자열 보간](../tokens/interpolated.md)

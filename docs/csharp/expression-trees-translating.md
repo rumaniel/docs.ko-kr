@@ -3,12 +3,12 @@ title: 식 트리 변환
 description: 식 트리의 각 노드를 방문하고 해당 식 트리의 수정된 복사본을 작성하는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: bd4aec2ef34e4dc972ae867c6b5070f92dcbc498
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a12c4d7fe9f65d6e9598259de1504b6f9987f38e
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45971898"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70925836"
 ---
 # <a name="translating-expression-trees"></a>식 트리 변환
 
@@ -75,7 +75,7 @@ var addition = Expression.Add(one, two);
 var add2 = Expression.Add(three, four);
 var sum = Expression.Add(addition, add2);
 
-// Declare the delegate, so we can call it 
+// Declare the delegate, so we can call it
 // from itself recursively:
 Func<Expression, int> aggregate = null;
 // Aggregate, return constants, or the sum of the left and right operand.
@@ -90,7 +90,7 @@ Console.WriteLine(theSum);
 ```
 
 코드는 상당히 많지만 개념은 아주 쉽게 이해할 수 있습니다.
-이 코드는 깊이 우선 검색으로 자식을 방문합니다. 상수 노드가 나타나면 방문자는 상수의 값을 반환합니다. 방문자가 두 자식을 방문한 후에 자식은 해당 하위 트리에 대해 계산된 합계를 계산합니다. 이제 더하기 노드에서 해당 합계를 계산할 수 있습니다.
+이 코드는 깊이 우선 검색으로 자식을 방문합니다. 상수 노드가 나타나면 방문자는 상수의 값을 반환합니다. 방문자가 두 자식을 방문한 후에 자식은 해당 하위 트리에 대해 계산된 합계를 계산합니다. 이제 더하기 노드에서 해당 합계를 컴퓨팅할 수 있습니다.
 식 트리의 모든 노드를 방문하면 합계가 계산됩니다. 디버거에서 샘플을 실행하고 실행을 추적하여 실행을 추적할 수 있습니다.
 
 노드가 분석되는 방법 및 트리를 트래버스하여 합계를 계산하는 방법을 더 쉽게 추적할 수 있도록 만들어 보겠습니다. 다음은 매우 많은 추적 정보를 포함하는 집계 메서드의 업데이트된 버전입니다.
@@ -124,7 +124,7 @@ private static int Aggregate(Expression exp)
 
 같은 식에서 이 메서드를 실행하면 다음과 같이 출력됩니다.
 
-```
+```output
 10
 Found Addition Expression
 Computing Left node
@@ -161,7 +161,7 @@ Expression<Func<int> sum1 = () => 1 + (2 + (3 + 4));
 
 이 식을 검사한 출력은 다음과 같습니다.
 
-```
+```output
 Found Addition Expression
 Computing Left node
 Found Constant: 1
@@ -191,7 +191,7 @@ Computed sum: 10
 
 ## <a name="learning-more"></a>자세한 정보
 
-이 샘플에서는 식 트리로 표시되는 알고리즘을 트래버스하고 해석하기 위해 작성하는 코드의 작은 하위 집합을 보여 줍니다. 식 트리를 다른 언어로 변환하는 일반적인 용도의 라이브러리를 작성하는 데 필요한 모든 작업에 대한 자세한 내용은 Matt Warren의 [이 시리즈](https://blogs.msdn.com/b/mattwar/archive/2008/11/18/linq-links.aspx)를 참조하세요. 이 시리즈는 식 트리에서 찾을 수 있는 코드를 변환하는 방법에 대해 상세히 설명합니다.
+이 샘플에서는 식 트리로 표시되는 알고리즘을 트래버스하고 해석하기 위해 작성하는 코드의 작은 하위 집합을 보여 줍니다. 식 트리를 다른 언어로 변환하는 일반적인 용도의 라이브러리를 작성하는 데 필요한 모든 작업에 대한 자세한 내용은 Matt Warren의 [이 시리즈](https://blogs.msdn.microsoft.com/mattwar/2008/11/18/linq-building-an-iqueryable-provider-series/)를 참조하세요. 이 시리즈는 식 트리에서 찾을 수 있는 코드를 변환하는 방법에 대해 상세히 설명합니다.
 
 식 트리의 진정한 기능을 확인하셨길 바랍니다.
 코드 집합을 검사하고, 해당 코드를 원하는 대로 변경하고, 변경된 버전을 실행할 수 있습니다. 식 트리는 변경할 수 없기 때문에 기존 트리의 구성 요소를 사용하여 새 트리를 만들 수 있습니다. 이렇게 하면 수정된 식 트리를 만드는 데 필요한 메모리 양이 최소화됩니다.

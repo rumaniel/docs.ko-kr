@@ -1,17 +1,15 @@
 ---
 title: 공용 형식 시스템 및 공용 언어 사양
 description: CTS(공용 형식 시스템) 및 CLS(공용 언어 사양)를 사용하여 .NET이 여러 언어를 지원할 수 있도록 하는 방법을 알아봅니다.
-author: blackdwarf
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: 992f70cc7c2e55a0a2cfd08e08a3a9f16aad8c8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569550"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664527"
 ---
 # <a name="common-type-system--common-language-specification"></a>공용 형식 시스템 및 공용 언어 사양
 
@@ -23,10 +21,10 @@ ms.locfileid: "33569550"
 
 이 작업을 투명하게 수행하려면 지원되는 모든 형식을 설명하는 일반적인 방법이 있어야 합니다. 이 역할을 담당하는 것이 CTS(공용 형식 시스템)입니다. CTS는 다음과 같은 몇 가지 작업을 수행하도록 작성되었습니다.
 
-*   언어 간 실행을 위한 프레임워크를 설정합니다.
-*   .NET 구현에서 다양한 언어 구현을 지원하는 개체 지향 모델을 제공합니다.
-*   형식으로 작업할 때 모든 언어가 따라야 하는 규칙 집합을 정의합니다.
-*   응용 프로그램 개발에 사용되는 기본 형식(즉, `Boolean`, `Byte`, `Char` 등)이 포함된 라이브러리를 제공합니다.
+* 언어 간 실행을 위한 프레임워크를 설정합니다.
+* .NET 구현에서 다양한 언어 구현을 지원하는 개체 지향 모델을 제공합니다.
+* 형식으로 작업할 때 모든 언어가 따라야 하는 규칙 집합을 정의합니다.
+* 애플리케이션 개발에 사용되는 기본 형식(즉, `Boolean`, `Byte`, `Char` 등)이 포함된 라이브러리를 제공합니다.
 
 CTS는 지원해야 하는 두 가지 종류의 형식, 즉 참조와 값 형식을 정의합니다. 해당 이름이 정의를 가리킵니다.
 
@@ -36,17 +34,17 @@ CTS는 지원해야 하는 두 가지 종류의 형식, 즉 참조와 값 형식
 
 CTS는 각각 특정 의미 체계와 사용법이 있는 여러 형식 범주를 정의합니다.
 
-*   클래스
-*   구조체
-*   열거형
-*   인터페이스
-*   대리자
+* 클래스
+* 구조체
+* 열거형
+* 인터페이스
+* 대리자
 
 CTS는 액세스 한정자, 유효한 형식 멤버, 상속 및 오버로드 작동 방식 등 형식의 다른 모든 속성도 정의합니다. 이러한 내용에 대한 자세한 설명은 이 기초 문서의 범위를 벗어나지만 끝에 있는 [추가 리소스](#more-resources) 섹션에서 해당 항목을 다루는 자세한 콘텐츠의 링크를 사용할 수 있습니다.
 
 ## <a name="common-language-specification"></a>공용 언어 사양
 
-완전한 상호 운용성 시나리오를 사용하려면 코드로 만든 모든 개체가 이 개체(및 해당 _호출자_)를 사용하는 언어에서 몇 가지 공통점을 가지고 있어야 합니다. 다양한 언어가 있으므로 .NET 구현은 CLS(**공용 언어 사양**)에서 이러한 공통점을 지정했습니다. CLS는 일반적인 여러 응용 프로그램에 필요한 기능 집합을 정의합니다. 또한 .NET 구현을 기반으로 하여 구현된 모든 언어에서 지원해야 하는 사항에 대한 정보를 제공합니다.
+완전한 상호 운용성 시나리오를 사용하려면 코드로 만든 모든 개체가 이 개체(및 해당 _호출자_)를 사용하는 언어에서 몇 가지 공통점을 가지고 있어야 합니다. 다양한 언어가 있으므로 .NET 구현은 CLS(**공용 언어 사양**)에서 이러한 공통점을 지정했습니다. CLS는 일반적인 여러 애플리케이션에 필요한 기능 집합을 정의합니다. 또한 .NET 구현을 기반으로 하여 구현된 모든 언어에서 지원해야 하는 사항에 대한 정보를 제공합니다.
 
 CLS는 CTS의 하위 집합입니다. 즉, CLS 규칙이 더 엄격한 경우가 아니면 CTS의 모든 규칙이 CLS에도 적용됩니다. CLS의 규칙만 사용하여 구성 요소가 빌드된 경우 해당 API에 CLS 기능만 표시되며 **CLS 규격**이라고 합니다. 예를 들어 `<framework-librares>`는 .NET 구현에서 지원되는 모든 언어에서 작동해야 하므로 정확히 CLS 규격입니다.
 
@@ -54,5 +52,5 @@ CLS는 CTS의 하위 집합입니다. 즉, CLS 규칙이 더 엄격한 경우가
 
 ## <a name="more-resources"></a>추가 리소스
 
-*   [공용 형식 시스템](./base-types/common-type-system.md)
-*   [공용 언어 사양](language-independence-and-language-independent-components.md)
+* [공용 형식 시스템](./base-types/common-type-system.md)
+* [공용 언어 사양](language-independence-and-language-independent-components.md)

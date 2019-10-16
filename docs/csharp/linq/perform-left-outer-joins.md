@@ -1,20 +1,20 @@
 ---
 title: 왼쪽 외부 조인 수행(C#의 LINQ)
 description: C#에서 LINQ를 사용하여 왼쪽 외부 조인을 수행하는 방법을 알아봅니다.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: f542cee6-3169-4dcf-a631-3a6a79ccd473
-ms.openlocfilehash: 329fe9e17640931c5eb39b33b791a7a77a6f7b89
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cc08a1c8670623a10d1e0bf10221d02037a8d7bc
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506598"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857582"
 ---
 # <a name="perform-left-outer-joins"></a>왼쪽 우선 외부 조인 수행
 
 왼쪽 우선 외부 조인은 두 번째 컬렉션에 상호 연결된 요소가 있는지 여부에 관계없이 첫 번째 컬렉션의 각 요소가 반환되는 조인입니다. LINQ를 통해 그룹 조인의 결과에서 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> 메서드를 호출하여 왼쪽 우선 외부 조인을 수행할 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 그룹 조인의 결과에서 <xref:System.Linq.Enumerable.DefaultIfEmpty%2A> 메서드를 사용하여 왼쪽 우선 외부 조인을 수행하는 방법을 보여 줍니다.
 
@@ -29,8 +29,8 @@ ms.locfileid: "43506598"
 
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Linq.Enumerable.Join%2A>  
-- <xref:System.Linq.Enumerable.GroupJoin%2A>  
-- [내부 조인 수행](perform-inner-joins.md)  
-- [그룹화 조인 수행](perform-grouped-joins.md)  
-- [무명 형식](../programming-guide/classes-and-structs/anonymous-types.md)  
+- <xref:System.Linq.Enumerable.Join%2A>
+- <xref:System.Linq.Enumerable.GroupJoin%2A>
+- [내부 조인 수행](perform-inner-joins.md)
+- [그룹화 조인 수행](perform-grouped-joins.md)
+- [무명 형식](../programming-guide/classes-and-structs/anonymous-types.md)

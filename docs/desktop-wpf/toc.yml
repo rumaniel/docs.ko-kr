@@ -1,0 +1,32 @@
+- name: .NET Core에 대한 Windows Presentation Foundation
+  items:
+    - name: 개요
+      items:
+        - name: WPF란?
+          href: overview/index.md
+    - name: 시작
+      items:
+        - name: WPF 애플리케이션 만들기
+          href: 'https://docs.microsoft.com/visualstudio/get-started/csharp/tutorial-wpf?toc=/dotnet/desktop-wpf/toc.json&bc=/dotnet/breadcrumb/toc.json'
+    - name: 마이그레이션
+      items:
+        - name: .NET Framework와의 차이점
+          href: migration/differences-from-net-framework.md
+        - name: 프레임워크에서 코어로 마이그레이션
+          href: migration/convert-project-from-net-framework.md
+    - name: 기본 사항
+      items:
+        - name: XAML
+          href: fundamentals/xaml.md
+        - name: 리소스 정의
+          href: fundamentals/xaml-resources-define.md
+        - name: 스타일 및 템플릿
+          items:
+            - name: 개요
+              href: fundamentals/styles-templates-overview.md
+            - name: 스타일 만들기 및 적용
+              href: fundamentals/styles-templates-create-apply-style.md
+    - name: 데이터 작업
+      items:
+        - name: 데이터 바인딩 개요
+          href: data/data-binding-overview.md

@@ -3,11 +3,11 @@ title: 1150 - CompensationState
 ms.date: 03/30/2017
 ms.assetid: eb015842-cc5a-47be-bce5-6af39e567723
 ms.openlocfilehash: 61613a27c4d4d8fb0b206246fef25ae87def47a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510683"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923866"
 ---
 # <a name="1150---compensationstate"></a>1150 - CompensationState
 ## <a name="properties"></a>속성  
@@ -17,7 +17,7 @@ ms.locfileid: "33510683"
 |ID|1150|  
 |키워드|WFActivities|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  CompensableActivity에서 상태 변경을 나타냅니다.  

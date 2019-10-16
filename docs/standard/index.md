@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 05/02/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: cbe08d87e90d319c074e85d0157e62fe023cce8c
-ms.sourcegitcommit: 979597cd8055534b63d2c6ee8322938a27d0c87b
+ms.openlocfilehash: ffc63146cde0be5359ee03ea53683220f4996b81
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37105174"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855494"
 ---
 # <a name="net-guide"></a>.NET 가이드
 
@@ -19,7 +19,7 @@ ms.locfileid: "37105174"
 
 ## <a name="new-to-net"></a>.NET을 처음 사용하는 경우
 
-.NET에 대한 대략적인 개요는 [.NET이란?](https://www.microsoft.com/net/learn/what-is-dotnet)을 체크 아웃하세요.
+.NET에 대한 대략적인 개요는 [.NET이란?](https://dotnet.microsoft.com/learn/dotnet/what-is-dotnet)을 확인하세요.
 
 .NET을 처음 사용하는 경우 [시작](get-started.md) 문서를 확인하세요.
 
@@ -35,28 +35,28 @@ ms.locfileid: "37105174"
 
 .NET Standard를 처음 사용하는 경우 [.NET Standard](net-standard.md)를 확인하세요.
 
-## <a name="porting-net-framework-code-to-net-core"></a>.NET Core로 .NET Framework 코드 이식
+## <a name="porting-net-framework-code-to-net-core"></a>.NET Framework 코드를 .NET Core로 이식
 
-응용 프로그램, 서비스 또는 시스템의 일부 구성 요소를 .NET Core로 이식하려는 경우 [.NET Framework에서.NET Core로 이식](../core/porting/index.md)을 확인하세요.
+애플리케이션, 서비스 또는 시스템의 일부 구성 요소를 .NET Core로 이식하려는 경우 [.NET Framework에서.NET Core로 이식](../core/porting/index.md)을 확인하세요.
 
 ## <a name="porting-a-nuget-package-from-net-framework-to-net-standard-or-net-core"></a>.NET Framework에서 .NET Standard 또는 .NET Core로 NuGet 패키지 이식
 
-.NET Standard로 NuGet 패키지를 이식하려는 경우 [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)을 확인하세요.  .NET Standard 및 .NET Core에 대한 도구가 공유되므로 .NET Core뿐만 아니라 .NET Standard로의 이식에 대한 콘텐츠가 서로 관련이 있습니다.
+.NET Standard로 NuGet 패키지를 이식하려는 경우 [.NET Framework에서 .NET Core로 이식](../core/porting/index.md)을 확인하세요.  .NET Standard와 .NET Core 도구는 공통적으로 사용할 수 있으므로 .NET Standard와 .NET Core 이식에 관한 내용은 서로 관련이 있습니다.
 
 ## <a name="interested-in-major-net-concepts"></a>주요 .NET 개념에 관심이 있는 경우
 
-.NET의 주요 개념 중 일부에 관심이 있다면 다음을 확인해 보세요.
+.NET의 주요 개념에 관심이 있다면 다음을 확인해 보세요.
 
 * [.NET 아키텍처 구성 요소](components.md)
 * [.NET Standard](net-standard.md)
-* [기본 상호 운용성](native-interop.md)
+* [기본 상호 운용성](native-interop/index.md)
 * [가비지 수집](garbagecollection/index.md)
 * [.NET의 기본 형식](base-types/index.md)
 * [컬렉션](collections/index.md)
 * [날짜, 시간 및 표준 시간대](datetime/index.md)
 * [비동기 프로그래밍](async.md)
 
-또한 세 가지 주요 .NET 언어에 대해 알아보려면 각 언어 가이드를 확인해 보세요.
+.NET의 세 가지 주요 언어는 다음의 언어별 가이드에서 확인해 보세요.
 
 * [C# 가이드](../csharp/index.md)
 * [F# 가이드](../fsharp/index.md)

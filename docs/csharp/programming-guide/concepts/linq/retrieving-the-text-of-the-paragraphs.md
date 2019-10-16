@@ -2,15 +2,15 @@
 title: 단락의 텍스트 검색(C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 1d23addb4c4c1ea17343585392fbe08fef08568a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 986145fa62722a35d23831a3818b89e63529b85f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582228"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253054"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>단락의 텍스트 검색(C#)
-이 예제는 이전 예제 [단락 및 해당 스타일 검색(C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)을 기반으로 합니다. 이 새 예제에서는 각 단락의 텍스트를 문자열로 검색합니다.  
+이 예제는 이전 예제 [단락 및 해당 스타일 검색(C#)](./retrieving-the-paragraphs-and-their-styles.md)을 기반으로 합니다. 이 새 예제에서는 각 단락의 텍스트를 문자열로 검색합니다.  
   
  이 예제에서는 텍스트를 검색하기 위해 익명 형식의 컬렉션을 반복하는 추가 쿼리를 추가하고 새 멤버 `Text`가 추가된 익명 형식의 새 컬렉션을 프로젝션합니다. 또한 <xref:System.Linq.Enumerable.Aggregate%2A> 표준 쿼리 연산자를 사용하여 여러 문자열을 한 문자열로 연결합니다.  
   
@@ -18,12 +18,12 @@ ms.locfileid: "48582228"
   
  물론 단락, 각 단락의 스타일 및 각 단락의 텍스트를 검색하는 기능이 포함된 단일 쿼리를 작성할 수도 있습니다. 그러나 복잡한 쿼리를 여러 쿼리로 나누면 생성되는 코드가 더욱 모듈화되고 유지 관리가 쉬워지기 때문에 유용한 경우가 많습니다. 또한 쿼리의 일부를 다시 사용해야 하는 경우 쿼리가 이런 방식으로 작성되면 리팩터링하기가 더 쉽습니다.  
   
- 서로 연결된 이러한 쿼리는 [자습서: 여러 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) 항목에서 자세히 살펴본 처리 모델을 사용합니다.  
+ 서로 연결된 이러한 쿼리는 [자습서: 여러 쿼리 연결(C#)](./tutorial-chaining-queries-together.md) 항목에서 자세히 검사된 처리 모델을 사용합니다.  
   
 ## <a name="example"></a>예  
  이 예제에서는 WordprocessingML 문서를 처리하여 요소 노드, 스타일 이름 및 각 단락의 텍스트를 확인합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 새 쿼리는 아래에 있는 코드의 주석에서 호출됩니다.  
   
- 이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)를 참조하세요.  
+ 이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)를 참조하세요.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
@@ -117,9 +117,9 @@ foreach (var p in paraWithText)
     Console.WriteLine("StyleName:{0} >{1}<", p.StyleName, p.Text);  
 ```  
   
- [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)에서 설명하는 문서에 적용할 경우 이 예제의 결과는 다음과 같습니다.  
+ [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)에서 설명하는 문서에 적용할 경우 이 예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -140,9 +140,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>다음 단계  
  다음 예제에서는 <xref:System.Linq.Enumerable.Aggregate%2A> 대신 확장 메서드를 사용하여 여러 문자열을 하나의 문자열로 연결하는 방법을 보여 줍니다.  
   
--   [확장 메서드를 사용하여 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [확장 메서드를 사용하여 리팩터링(C#)](./refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
-- [LINQ to XML에서 지연 실행 및 지연 계산(C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)
+- [자습서: WordprocessingML 문서에서 내용 조작(C#)](./tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [LINQ to XML에서 지연 실행 및 지연 계산(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

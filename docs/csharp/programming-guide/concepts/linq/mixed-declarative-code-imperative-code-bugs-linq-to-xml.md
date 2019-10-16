@@ -2,20 +2,20 @@
 title: 혼합된 선언적 코드-명령적 코드 버그(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: fada62d0-0680-4e73-945a-2b00d7a507af
-ms.openlocfilehash: 56d8140613f3dae7f99c1374634dbd8bdf094a7c
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 30760999a264c81e16104c0c9b112d442ce66121
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086767"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591629"
 ---
 # <a name="mixed-declarative-codeimperative-code-bugs-linq-to-xml-c"></a>혼합된 선언적 코드-명령적 코드 버그(LINQ to XML)(C#)
-[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에는 XML 트리를 직접 수정하는 데 사용할 수 있는 다양한 메서드가 포함되어 있습니다. 요소를 추가 및 삭제하고, 요소의 내용을 변경하고, 특성을 추가하는 등의 작업을 수행할 수 있습니다. 이 프로그래밍 인터페이스는 [XML 트리 수정(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)에 설명되어 있습니다. <xref:System.Xml.Linq.XContainer.Elements%2A>와 같은 축 중 하나를 반복하면서 XML 트리를 수정하면 이상한 버그가 발생할 수 있습니다.  
+[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에는 XML 트리를 직접 수정하는 데 사용할 수 있는 다양한 메서드가 포함되어 있습니다. 요소를 추가 및 삭제하고, 요소의 내용을 변경하고, 특성을 추가하는 등의 작업을 수행할 수 있습니다. 이 프로그래밍 인터페이스는 [XML 트리 수정(LINQ to XML)(C#)](./in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)에 설명되어 있습니다. <xref:System.Xml.Linq.XContainer.Elements%2A>와 같은 축 중 하나를 반복하면서 XML 트리를 수정하면 이상한 버그가 발생할 수 있습니다.  
   
  이 문제를 "할로윈 문제"라고도 합니다.  
   
 ## <a name="definition-of-the-problem"></a>문제에 대한 정의  
- LINQ를 사용하여 컬렉션을 반복하는 코드를 작성하는 경우 선언적 스타일로 코드를 작성할 수 있습니다. 이는 작업을 수행하는 *방법*이 아니라 원하는 *작업*을 설명하는 것과 유사합니다. 1) 첫 번째 요소를 가져오고 2) 특정 조건에 대해 테스트한 다음 3) 요소를 수정하고 4) 요소를 다시 목록에 배치하는 코드를 작성하는 경우 코드는 명령적 코드일 수 있습니다. 즉, 작업을 수행할 *방법*을 컴퓨터에 지시합니다.  
+ LINQ를 사용하여 컬렉션을 반복하는 코드를 작성하는 경우 선언적 스타일로 코드를 작성할 수 있습니다. 이는 작업을 수행하는 *방법*이 아니라 원하는 *작업*을 설명하는 것과 유사합니다. 1\) 첫 번째 요소를 가져오고 2) 특정 조건에 대해 테스트한 다음 3) 요소를 수정하고 4) 요소를 다시 목록에 배치하는 코드를 작성하는 경우 코드는 명령적 코드일 수 있습니다. 즉, 작업을 수행할 *방법*을 컴퓨터에 지시합니다.  
   
  이러한 스타일의 코드를 동일한 작업에서 혼합하면 문제가 발생할 수 있습니다. 다음을 살펴보세요.  
   
@@ -46,7 +46,7 @@ foreach (XElement e in root.Elements())
   
  이 코드는 무한 루프에 들어갑니다. `foreach` 문은 `Elements()` 축을 반복하여 새 요소를 `doc` 요소에 추가합니다. 따라서 방금 추가한 요소도 반복하게 됩니다. 루프를 반복할 때마다 새 개체를 할당하기 때문에 결국 사용 가능한 모든 메모리를 사용하게 됩니다.  
   
- 다음과 같이 <xref:System.Linq.Enumerable.ToList%2A> 표준 쿼리 연산자를 사용하여 컬렉션을 메모리에 가져오는 방법으로 이 문제를 해결할 수 있습니다.  
+ 다음과 같이 <xref:System.Linq.Enumerable.ToList%2A> 표준 쿼리 연산자를 사용하여 컬렉션을 메모리에 끌어오는 방법으로 이 문제를 해결할 수 있습니다.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -97,7 +97,7 @@ Console.WriteLine(root);
 </Root>  
 ```  
   
- 여기에서도 해결 방법은 다음과 같이 <xref:System.Linq.Enumerable.ToList%2A>을 호출하여 컬렉션을 구체화하는 것입니다.  
+ 여기에서도 해결 방법은 다음과 같이 <xref:System.Linq.Enumerable.ToList%2A> ¦ È£ÃâÇÏ © ÄÃ   ÇÀ»   Ã ÈÇÏ Â  ÍÀÔ Ï Ù.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -167,7 +167,4 @@ XElement newRoot = new XElement("Root",
 );  
 Console.WriteLine(newRoot);  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [고급 LINQ to XML 프로그래밍(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+ 

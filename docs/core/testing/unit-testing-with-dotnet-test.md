@@ -4,16 +4,19 @@ description: dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별
 author: ardalis
 ms.author: wiwagn
 ms.date: 11/29/2017
-ms.openlocfilehash: 560ba58076fedbb1174da2cfe93796030aa9d46f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: d85e3e69721d8933565b1c80fb7ed21b2291e60e
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507832"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117291"
 ---
 # <a name="unit-testing-c-in-net-core-using-dotnet-test-and-xunit"></a>dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 C# 단위 테스트
 
 이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="creating-the-source-project"></a>소스 프로젝트 만들기
 
@@ -27,7 +30,7 @@ ms.locfileid: "43507832"
     /PrimeService
 ```
 
-*PrimeService*를 현재 디렉터리로 만들고 [`dotnet new classlib`](../tools/dotnet-new.md)를 실행하여 소스 프로젝트를 만듭니다. *Class1.cs*의 이름을 *PrimeService.cs*로 바꿉니다. TDD(테스트 기반 개발)를 사용하기 위해 먼저 `PrimeService` 클래스의 실패 구현을 만듭니다.
+*PrimeService*를 현재 디렉터리로 만들고 [`dotnet new classlib`](../tools/dotnet-new.md)를 실행하여 소스 프로젝트를 만듭니다. *Class1.cs*의 이름을 *PrimeService.cs*로 바꿉니다. 먼저 다음과 같이 `PrimeService` 클래스의 실패 구현을 만듭니다.
 
 ```csharp
 using System;
@@ -38,7 +41,7 @@ namespace Prime.Services
     {
         public bool IsPrime(int candidate)
         {
-            throw new NotImplementedException("Please create a test first");
+            throw new NotImplementedException("Please create a test first.");
         }
     }
 }
@@ -48,8 +51,8 @@ namespace Prime.Services
 
 [dotnet sln](../tools/dotnet-sln.md) 명령을 실행하여 클래스 라이브러리 프로젝트를 솔루션에 추가합니다.
 
-```
-dotnet sln add .\PrimeService\PrimeService.csproj
+```dotnetcli
+dotnet sln add ./PrimeService/PrimeService.csproj
 ```
 
 ## <a name="creating-the-test-project"></a>테스트 프로젝트 만들기
@@ -65,7 +68,7 @@ dotnet sln add .\PrimeService\PrimeService.csproj
     /PrimeService.Tests
 ```
 
-*PrimeService.Tests* 디렉터리를 현재 디렉터리로 만들고 [`dotnet new xunit`](../tools/dotnet-new.md)를 사용하여 새 프로젝트를 만듭니다. 이 명령은 xUnit을 테스트 라이브러리로 사용하는 테스트 프로젝트를 만듭니다. 생성된 템플릿은 다음 코드와 유사한 *PrimeServiceTests.csproj* 파일에서 Test Runner를 구성합니다.
+*PrimeService.Tests* 디렉터리를 현재 디렉터리로 만들고 [`dotnet new xunit`](../tools/dotnet-new.md)를 사용하여 새 프로젝트를 만듭니다. 이 명령은 [xUnit](https://xunit.github.io/)을 테스트 라이브러리로 사용하는 테스트 프로젝트를 만듭니다. 생성된 템플릿은 다음 코드와 유사한 *PrimeServiceTests.csproj* 파일에서 Test Runner를 구성합니다.
 
 ```xml
 <ItemGroup>
@@ -77,7 +80,7 @@ dotnet sln add .\PrimeService\PrimeService.csproj
 
 테스트 프로제트는 다른 패키지에 단위 테스트를 만들고 실행하도록 요구합니다. 이전 단계의 `dotnet new`는 xUnit 및 xUnit runner를 추가했습니다. 이제 `PrimeService` 클래스 라이브러리를 프로젝트에 다른 종속성으로 추가합니다. [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
-```
+```dotnetcli
 dotnet add reference ../PrimeService/PrimeService.csproj
 ```
 
@@ -98,13 +101,13 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
 
 솔루션에 테스트 프로젝트를 추가하려면 *unit-testing-using-dotnet-test* 디렉터리에서 [dotnet sln](../tools/dotnet-sln.md) 명령을 실행합니다.
 
-```
-dotnet sln add .\PrimeService.Tests\PrimeService.Tests.csproj
+```dotnetcli
+dotnet sln add ./PrimeService.Tests/PrimeService.Tests.csproj
 ```
 
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
 
-TDD 접근 방식에서는 하나의 실패 테스트를 작성하고, 통과시키고, 이 프로세스를 반복해야 합니다. *PrimeService.Tests* 디렉터리에서 *UnitTest1.cs*를 제거하고 새 C# 파일 *PrimeService_IsPrimeShould.cs*를 만듭니다. 다음 코드를 추가합니다.
+하나의 실패 테스트를 작성하고, 테스트가 성공하도록 만듭니다. 이 작업을 반복합니다. *PrimeService.Tests* 디렉터리에서 *UnitTest1.cs*를 제거하고 새 C# 파일 *PrimeService_IsPrimeShould.cs*를 만듭니다. 다음 코드를 추가합니다.
 
 ```csharp
 using Xunit;
@@ -122,7 +125,7 @@ namespace Prime.UnitTests.Services
         }
 
         [Fact]
-        public void ReturnFalseGivenValueOf1()
+        public void IsPrime_InputIs1_ReturnFalse()
         {
             var result = _primeService.IsPrime(1);
 
@@ -143,7 +146,7 @@ public bool IsPrime(int candidate)
     {
         return false;
     }
-    throw new NotImplementedException("Please create a test first");
+    throw new NotImplementedException("Please create a test first.");
 }
 ```
 
@@ -151,7 +154,7 @@ public bool IsPrime(int candidate)
 
 ## <a name="adding-more-features"></a>더 많은 기능 추가
 
-이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다(0, -1). 이러한 사례를 `[Fact]` 특성과 함께 새 테스트로 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 유사한 테스트 모음을 작성하는 데 사용할 수 있는 다른 xUnit 특성이 있습니다.
+이제 하나의 테스트를 통과했으므로 더 작성할 수 있습니다. 소수에 대한 몇 가지 다른 간단한 사례가 있습니다 (0, -1). 이러한 사례를 `[Fact]` 특성과 함께 새 테스트로 추가할 수도 있지만, 이렇게 하면 금방 지루해질 수 있습니다. 유사한 테스트 모음을 작성하는 데 사용할 수 있는 다른 xUnit 특성이 있습니다.
 
 - `[Theory]`는 같은 코드를 실행하지만, 다른 입력 인수가 포함된 테스트 모음을 나타냅니다.
 
@@ -171,4 +174,5 @@ if (candidate < 2)
 
 ### <a name="additional-resources"></a>추가 자료
 
+- [xUnit.net 공식 사이트](https://xunit.github.io)
 - [ASP.NET Core에서 컨트롤러 논리 테스트](/aspnet/core/mvc/controllers/testing)

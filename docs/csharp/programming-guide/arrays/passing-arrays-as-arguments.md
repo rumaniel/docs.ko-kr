@@ -1,15 +1,16 @@
 ---
-title: 배열을 인수로 전달(C# 프로그래밍 가이드)
+title: 배열을 인수로 전달 - C# 프로그래밍 가이드
+ms.custom: seodec18
 ms.date: 07/05/2018
 helpviewer_keywords:
 - arrays [C#], passing as arguments
 ms.assetid: f3a0971e-c87c-4a1f-8262-bc0a3b712772
-ms.openlocfilehash: b2e6c0134af3b5814e9c9321e1486820311aa5c6
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 1538988c1145a19055074b440f04cbaac4ef7aa7
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042428"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54741180"
 ---
 # <a name="passing-arrays-as-arguments-c-programming-guide"></a>배열을 인수로 전달(C# 프로그래밍 가이드)
 
@@ -29,7 +30,7 @@ ms.locfileid: "44042428"
 
 [!code-csharp[CsProgGuideArrays#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#35)]
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 다음 예제에서는 문자열 배열이 초기화되고 문자열에 대한 `DisplayArray` 메서드에 인수로 전달됩니다. 메서드가 배열 요소를 표시합니다. 다음으로 `ChangeArray` 메서드는 배열 요소를 반대로 전환한 다음, `ChangeArrayElements` 메서드는 배열의 처음 세 요소를 수정합니다. 각 메서드가 반환된 후 `DisplayArray` 메서드는 배열을 값으로 전달해도 배열 요소가 변경되지 않는다는 것을 보여줍니다.
 
@@ -49,7 +50,7 @@ ms.locfileid: "44042428"
 
 [!code-csharp[csProgGuideArrays#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideArrays/CS/Arrays.cs#32)]
 
-### <a name="example"></a>예
+### <a name="example"></a>예제
 
 다음 예제에서는 정수의 2차원 배열이 초기화되고 `Print2DArray` 메서드에 전달됩니다. 메서드가 배열 요소를 표시합니다.
 
@@ -57,8 +58,8 @@ ms.locfileid: "44042428"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../index.md)  
-- [배열](index.md)  
-- [1차원 배열](single-dimensional-arrays.md)  
-- [다차원 배열](multidimensional-arrays.md)  
-- [가변 배열](jagged-arrays.md)  
+- [C# 프로그래밍 가이드](../index.md)
+- [배열](index.md)
+- [1차원 배열](single-dimensional-arrays.md)
+- [다차원 배열](multidimensional-arrays.md)
+- [가변 배열](jagged-arrays.md)

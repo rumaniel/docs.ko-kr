@@ -1,15 +1,16 @@
 ---
-title: 포인터 형식(C# 프로그래밍 가이드)
+title: 포인터 형식 - C# 프로그래밍 가이드
+ms.custom: seodec18
 ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 2950d92f877a7e99734267a3071b2bcb25ce1023
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4d0801cd81e00c84be278b44730058798b0acfa9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509280"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588199"
 ---
 # <a name="pointer-types-c-programming-guide"></a>포인터 형식(C# 프로그래밍 가이드)
 
@@ -20,16 +21,7 @@ type* identifier;
 void* identifier; //allowed but not recommended
 ```
 
-포인터 형식에서 `*` 전에 지정된 형식은 **referrent 형식**이라고 합니다. referrent 형식은 다음과 같은 형식일 수 있습니다.
-
-- 모든 정수 형식: [sbyte](../../language-reference/keywords/sbyte.md), [byte](../../language-reference/keywords/byte.md), [short](../../language-reference/keywords/short.md), [ushort](../../language-reference/keywords/ushort.md), [int](../../language-reference/keywords/int.md), [uint](../../language-reference/keywords/uint.md), [long](../../language-reference/keywords/long.md), [ulong](../../language-reference/keywords/ulong.md).
-- 모든 부동 소수점 형식: [float](../../language-reference/keywords/float.md), [double](../../language-reference/keywords/double.md).
-- [char](../../language-reference/keywords/char.md).
-- [bool](../../language-reference/keywords/bool.md).
-- [decimal](../../language-reference/keywords/decimal.md).
-- 모든 [enum](../../language-reference/keywords/enum.md) 형식
-- 임의의 포인터 형식 `void**`과 같은 식이 허용됩니다.
-- 관리되지 않는 형식의 필드만 포함하는 임의의 사용자 정의 구조체 형식
+포인터 형식에서 `*` 앞에 지정된 형식을 **참조 형식**이라고 합니다. [비관리형 형식](../../language-reference/builtin-types/unmanaged-types.md)만 참조 형식일 수 있습니다.
 
 포인터 형식은 [개체](../../language-reference/keywords/object.md)에서 상속되지 않으며 포인터 형식과 `object`는 서로 변환되지 않습니다. 또한 boxing과 unboxing은 포인터를 지원하지 않습니다. 그러나 다른 포인터 형식 간의 변환 및 포인터 형식과 정수 형식 사이의 변환은 허용됩니다.
 
@@ -44,7 +36,7 @@ int *p1, *p2, *p3;   // Invalid in C#
 
 `myType*` 형식의 포인터 변수 값은 `myType` 형식의 변수 주소입니다. 다음은 포인터 형식 선언의 예제입니다.
 
-|예제|설명|
+|예|설명|
 |-------------|-----------------|
 |`int* p`|`p`는 정수에 대한 포인터입니다.|
 |`int** p`|`p`는 정수에 대한 포인터를 가리키는 포인터입니다.|
@@ -60,7 +52,7 @@ int* myVariable;
 
 여기서 `*myVariable` 식은 `int`에 포함된 주소에 있는 `myVariable` 변수를 가리킵니다.
 
-[fixed 문](../../language-reference/keywords/fixed-statement.md) 및 [포인터 변환](../../programming-guide/unsafe-code-pointers/pointer-conversions.md) 항목에 포인터에 대한 몇 가지 예제가 나와 있습니다. 다음 예제는 `unsafe` 키워드 및 `fixed` 문을 사용하고 정수 포인터를 증분하는 방법을 보여줍니다.  이 코드를 실행하려면 콘솔 응용 프로그램의 주 함수에 붙여 넣습니다. 이러한 예제는 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 컴파일러 옵션 집합으로 컴파일되어야 합니다.
+[fixed 문](../../language-reference/keywords/fixed-statement.md) 및 [포인터 변환](./pointer-conversions.md) 항목에 포인터에 대한 몇 가지 예제가 나와 있습니다. 다음 예제는 `unsafe` 키워드 및 `fixed` 문을 사용하고 정수 포인터를 증분하는 방법을 보여줍니다.  이 코드를 실행하려면 콘솔 애플리케이션의 주 함수에 붙여 넣습니다. 이러한 예제는 [-unsafe](../../language-reference/compiler-options/unsafe-compiler-option.md) 컴파일러 옵션 집합으로 컴파일되어야 합니다.
 
 [!code-csharp[Using pointer types](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#5)]
 
@@ -72,30 +64,28 @@ int* myVariable;
 
 다음 표에서는 안전하지 않은 컨텍스트에서 포인터에 대해 수행할 수 있는 연산자와 문을 보여 줍니다.
 
-|연산자/문|사용|
+|연산자/문|기능|
 |-------------------------|---------|
-|*|포인터 간접 참조를 수행합니다.|
-|->|포인터를 통해 구조체 멤버에 액세스합니다.|
-|[]|포인터를 인덱싱합니다.|
+|`*`|포인터 간접 참조를 수행합니다.|
+|`->`|포인터를 통해 구조체 멤버에 액세스합니다.|
+|`[]`|포인터를 인덱싱합니다.|
 |`&`|변수 주소를 가져옵니다.|
-|++ 및 --|포인터를 증가 및 감소시킵니다.|
-|+ 및 -|포인터 연산을 수행합니다.|
-|==, !=, \<, >, \<= 및 >=|포인터를 비교합니다.|
-|`stackalloc`|스택에 메모리를 할당합니다.|
-|`fixed` 문|해당 주소를 찾을 수 있도록 임시로 변수를 고정합니다.|
+|`++` 및 `--`|포인터를 증가 및 감소시킵니다.|
+|`+` 및 `-`|포인터 연산을 수행합니다.|
+|`==`, `!=`, `<`, `>`, `<=` 및 `>=`|포인터를 비교합니다.|
+|[`stackalloc` 연산자](../../language-reference/operators/stackalloc.md)|스택에 메모리를 할당합니다.|
+|[`fixed` statement](../../language-reference/keywords/fixed-statement.md)|해당 주소를 찾을 수 있도록 임시로 변수를 고정합니다.|
+
+포인터에 관련 연산자에 대한 자세한 내용은 [포인터 관련 연산자](../../language-reference/operators/pointer-related-operators.md)를 참조하세요.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [포인터 형식](~/_csharplang/spec/unsafe-code.md#pointer-types) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../index.md)  
-- [안전하지 않은 코드 및 포인터](index.md)  
-- [포인터 변환](pointer-conversions.md)  
-- [포인터 식](pointer-expressions.md)  
-- [유형](../../language-reference/keywords/types.md)  
-- [unsafe](../../language-reference/keywords/unsafe.md)  
-- [fixed 문](../../language-reference/keywords/fixed-statement.md)  
-- [stackalloc](../../language-reference/keywords/stackalloc.md)  
-- [boxing 및 unboxing](../types/boxing-and-unboxing.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [안전하지 않은 코드 및 포인터](index.md)
+- [포인터 변환](pointer-conversions.md)
+- [유형](../../language-reference/keywords/types.md)
+- [unsafe](../../language-reference/keywords/unsafe.md)

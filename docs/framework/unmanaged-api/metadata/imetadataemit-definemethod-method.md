@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2dbc6b5ffaa3a381bdd657059a682a3d12dc4cf1
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 4297b21970fbca4b5aa53c31680394cab358d255
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850209"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777604"
 ---
 # <a name="imetadataemitdefinemethod-method"></a>IMetaDataEmit::DefineMethod 메서드
 지정된 된 시그니처를 사용 하 여 메서드 또는 전역 함수에 대 한 정의 만들고 해당 메서드 정의에 토큰을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT DefineMethod (      
     [in]  mdTypeDef         td,   
     [in]  LPCWSTR           szName,   
@@ -42,7 +42,7 @@ HRESULT DefineMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `td`  
  [in] `mdTypedef` 부모 클래스의 부모 인터페이스 메서드의 토큰입니다. 설정할 `td` 에 `mdTokenNil`전역 함수를 정의 하는 경우.  
   
@@ -90,9 +90,9 @@ HRESULT DefineMethod (
 ## <a name="defining-a-method-for-pinvoke"></a>PInvoke에 대 한 메서드를 정의합니다.  
  PInvoke를 통해 호출할 각 관리 되지 않는 함수에 대 한 관리 되지 않는 대상 함수를 나타내는 관리 되는 메서드를 정의 해야 합니다. 관리 되는 메서드를 정의 하려면 사용 하 여 `DefineMethod` PInvoke 사용 되는 방식에 따라 특정 값으로 설정 된 매개 변수 중 일부를 사용 하 여:  
   
--   PInvoke-관리 되지 않는 DLL에 상주 하는 외부 관리 되지 않는 메서드 호출이 포함 됩니다.  
+- PInvoke-관리 되지 않는 DLL에 상주 하는 외부 관리 되지 않는 메서드 호출이 포함 됩니다.  
   
--   로컬 PInvoke-에 현재 관리 되는 모듈에 포함 된 네이티브 관리 되지 않는 메서드 호출이 포함 됩니다.  
+- 로컬 PInvoke-에 현재 관리 되는 모듈에 포함 된 네이티브 관리 되지 않는 메서드 호출이 포함 됩니다.  
   
  매개 변수 설정은 다음 표에 제공 됩니다.  
   
@@ -104,7 +104,7 @@ HRESULT DefineMethod (
 |`dwImplFlags`|설정할 `miCil` 고 `miManaged`입니다.|설정할 `miNative` 고 `miUnmanaged`입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
@@ -112,6 +112,7 @@ HRESULT DefineMethod (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

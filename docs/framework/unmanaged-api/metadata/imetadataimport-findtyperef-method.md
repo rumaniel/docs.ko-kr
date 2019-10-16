@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 375dbaf03384b4d05a7815a11612814d8b427170
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8159b5245598993a2075fb402b280f9ab4cb2cfa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444444"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782469"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef 메서드
-에 대 한 토큰은 TypeRef에 대 한 포인터를 가져옵니다는 <xref:System.Type> 참조에 지정된 된 범위 및 지정된 된 이름을 가진입니다.  
+에 대 한 토큰은 TypeRef에 포인터를 가져옵니다는 <xref:System.Type> 지정된 된 범위에 있고 지정 된 이름을 가진 참조 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT FindTypeRef (  
    [in] mdToken        tkResolutionScope,  
    [in]  LPCWSTR       szName,  
@@ -37,9 +37,9 @@ HRESULT FindTypeRef (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `tkResolutionScope`  
- [in] 모듈, 어셈블리 또는 형식을 지정 하는 ModuleRef, AssemblyRef, 또는 TypeRef 토큰 각각 형식이 참조를 정의 합니다.  
+ [in] 모듈, 어셈블리 또는 형식을 나타내는 ModuleRef, AssemblyRef를 또는 TypeRef 토큰을 각각 형식이 참조 하는 정의 되어 있습니다.  
   
  `szName`  
  [in] 검색할 형식 참조의 이름입니다.  
@@ -48,14 +48,15 @@ HRESULT FindTypeRef (
  [out] 일치 하는 TypeRef 토큰에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

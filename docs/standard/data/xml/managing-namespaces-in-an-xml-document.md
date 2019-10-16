@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 682643fc-b848-4e42-8c0d-50deeaeb5f2a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c8d08d6fd6fb783f5cb8c7e714bffa2b655ffb41
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 83ea398f18ab02840ea811c74a6053dba11a3baa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214825"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490893"
 ---
 # <a name="managing-namespaces-in-an-xml-document"></a>XML 문서의 네임스페이스 관리
 XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 지정 및 미리 정의된 URI와 연결합니다. 이러한 연결을 만들려면 네임스페이스 URI의 접두사를 정의하고 해당 접두사를 사용하여 XML 데이터의 요소 및 특성 이름을 한정합니다. 네임스페이스는 요소 및 특성 이름이 충돌하는 것을 막고 동일한 이름의 요소 및 특성이 처리 및 확인되도록 하는 역할을 합니다.  
@@ -63,11 +63,11 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
  네임스페이스 관리자는 네임스페이스에 대한 유효성 검사를 수행하지 않지만 접두사 및 네임스페이스가 이미 확인되었고 [W3C 네임스페이스](https://www.w3.org/TR/REC-xml-names/) 사양을 따르는 것으로 간주합니다.  
   
 > [!NOTE]
->  [LINQ to XML](https://msdn.microsoft.com/library/f0fe21e9-ee43-4a55-b91a-0800e5782c13)은 네임스페이스를 관리하기 위해 <xref:System.Xml.XmlNamespaceManager>를 사용하지 않습니다. LINQ to XML을 사용할 때 네임스페이스를 관리하는 방법에 대한 내용은 LINQ 설명서에서 [XML 네임스페이스 작업](https://msdn.microsoft.com/library/e3003209-3234-45be-a832-47feb7927430)을 참조하세요.  
+> [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) 및 [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)의 LINQ TO XML은 <xref:System.Xml.XmlNamespaceManager>를 사용하여 네임스페이스를 관리하지 않습니다. LINQ to XML을 사용할 때 네임스페이스를 관리하는 방법에 대한 내용은 LINQ 설명서에서 [XML 네임스페이스 작업](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md) 및 [XML 네임스페이스 작업(Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)을 참조하세요.  
   
- 다음은 <xref:System.Xml.XmlNamespaceManager> 클래스로 수행할 수 있는 관리 및 조회 작업입니다. 자세한 내용 및 예는 각 메서드 또는 속성의 참조 페이지에 대한 링크를 참조하세요.  
+ 다음은 <xref:System.Xml.XmlNamespaceManager> 클래스로 수행할 수 있는 관리 및 조회 작업입니다. 자세한 내용 및 예제는 각 메서드 또는 속성의 참조 페이지에 대한 링크를 참조하세요.  
   
-|대상|사용|  
+|대상|기능|  
 |--------|---------|  
 |네임스페이스 추가|<xref:System.Xml.XmlNamespaceManager.AddNamespace%2A> 메서드|  
 |네임스페이스 제거|<xref:System.Xml.XmlNamespaceManager.RemoveNamespace%2A> 메서드|  
@@ -75,11 +75,11 @@ XML 네임스페이스는 XML 문서의 요소 및 특성 이름을 사용자 �
 |네임스페이스 접두사에 대한 URI 찾기|<xref:System.Xml.XmlNamespaceManager.LookupNamespace%2A> 메서드|  
 |네임스페이스 URI에 대한 접두사 찾기|<xref:System.Xml.XmlNamespaceManager.LookupPrefix%2A> 메서드|  
 |현재 노드의 네임스페이스 목록 가져오기|<xref:System.Xml.XmlNamespaceManager.GetNamespacesInScope%2A> 메서드|  
-|네임스페이스 영역 설정|<xref:System.Xml.XmlNamespaceManager.PushScope%2A> 및 <xref:System.Xml.XmlNamespaceManager.PopScope%2A> 메서드|  
-|접두사가 현재 영역에서 정의되어 있는지 여부를 확인합니다.|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> 메서드|  
-|접두사와 네임스페이스 URI를 찾는 데 사용하는 이름 테이블을 가져옵니다.|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> 속성|  
+|네임스페이스 범위 지정|<xref:System.Xml.XmlNamespaceManager.PushScope%2A> 및 <xref:System.Xml.XmlNamespaceManager.PopScope%2A> 메서드|  
+|접두사가 현재 범위에서 정의되어 있는지 확인|<xref:System.Xml.XmlNamespaceManager.HasNamespace%2A> 메서드|  
+|접두사와 URI를 찾는 데 사용된 이름 테이블 가져오기|<xref:System.Xml.XmlNamespaceManager.NameTable%2A> 속성|  
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.XmlNamespaceManager>  
+- <xref:System.Xml.XmlNamespaceManager>
 - [XML 문서 및 데이터](../../../../docs/standard/data/xml/index.md)

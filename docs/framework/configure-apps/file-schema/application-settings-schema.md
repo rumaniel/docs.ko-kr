@@ -7,54 +7,52 @@ helpviewer_keywords:
 - Windows Forms, application settings schema
 - configuration schema [.NET Framework], application settings
 ms.assetid: 5797fcff-6081-4e8c-bebf-63d9c70cf14b
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: f11be59941759687806591feb1edcce28b2119e6
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 89a08434332b0242fe57e9dcaa3b3ebcc5692d06
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123340"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927756"
 ---
 # <a name="application-settings-schema"></a>응용 프로그램 설정 스키마
 
-응용 프로그램 설정에 Windows Forms 또는 ASP.NET 응용 프로그램을 저장 하 고 응용 프로그램 범위 설정과 사용자 범위 설정을 검색할 수 있습니다. 이 컨텍스트에서 *설정은* 조각을 나타내는 응용 프로그램 또는 현재 사용자에 게 관련 될 수 있는 정보는-사용자에 게 데이터베이스 연결 문자열에서 모든 항목의 기본 창 크기 기본 설정 합니다.
+응용 프로그램 설정을 통해 Windows Forms 또는 ASP.NET 응용 프로그램에서 응용 프로그램 범위 및 사용자 범위 설정을 저장 하 고 검색할 수 있습니다. 이 컨텍스트에서 *설정은* 응용 프로그램 또는 현재 사용자와 관련 된 정보 이며, 데이터베이스 연결 문자열에서 사용자의 기본 설정 기본 창 크기에 이르기까지 모든 정보를 지정 합니다.
 
-기본적으로 Windows Forms 응용 프로그램에서 응용 프로그램 설정을 사용 하는 <xref:System.Configuration.LocalFileSettingsProvider> 설정을 XML 구성 파일에 저장 하는.NET 구성 시스템을 사용 하는 클래스입니다. 응용 프로그램 설정에 의해 사용 되는 파일에 대 한 자세한 내용은 참조 하세요. [응용 프로그램 설정 아키텍처](~/docs/framework/winforms/advanced/application-settings-architecture.md)합니다.
+기본적으로 Windows Forms 응용 프로그램의 응용 프로그램 설정은 <xref:System.Configuration.LocalFileSettingsProvider> 클래스를 사용 합니다 .이 클래스는 .net 구성 시스템을 사용 하 여 설정을 XML 구성 파일에 저장 합니다. 응용 프로그램 설정에 사용 되는 파일에 대 한 자세한 내용은 [응용 프로그램 설정 아키텍처](../../winforms/advanced/application-settings-architecture.md)를 참조 하세요.
 
-응용 프로그램 설정을 사용 하 여 구성 파일의 일부로 다음과 같은 요소를 정의 합니다.
+응용 프로그램 설정은 사용 하는 구성 파일의 일부로 다음 요소를 정의 합니다.
 
-| 요소                    | 설명                                                                           |
+| 요소                    | Description                                                                           |
 | -------------------------- | ------------------------------------------------------------------------------------- |
-| **\<applicationSettings >** | 모든 포함  **\<설정 >** 응용 프로그램에 특정 태그입니다.                         |
-| **\<userSettings >**        | 모든 포함  **\<설정 >** 현재 사용자에 게 특정 태그입니다.                        |
-| **\<설정 >**             | 설정을 정의합니다. 자식  **\<applicationSettings >** 하거나  **\<userSettings >** 합니다. |
-| **\<value>**               | 설정 값을 정의합니다. 자식의  **\<설정 >** 합니다.                                   |
+| **\<applicationSettings>** | 응용 프로그램에 특정 한 모든  **\<설정 >** 태그를 포함 합니다.                         |
+| **\<userSettings>**        | 현재 사용자와 관련 된 모든  **\<설정 >** 태그를 포함 합니다.                        |
+| **\<setting>**             | 설정을 정의합니다. Applicationsettings > 또는  **\<userSettings >** 의  **\<** 자식입니다. |
+| **\<value>**               | 설정 값을 정의 합니다. **\<설정 >** 의 자식입니다.                                   |
 
 ## <a name="applicationsettings-element"></a>\<applicationSettings > 요소
 
-이 요소는 모두 포함  **\<설정 >** 클라이언트 컴퓨터에서 응용 프로그램 인스턴스에 관련 된 태그입니다. 특성 없음을 정의합니다.
+이 요소는 클라이언트 컴퓨터의 응용 프로그램 인스턴스와 관련 된 모든  **\<설정 >** 태그를 포함 합니다. 특성 없음을 정의합니다.
 
 ## <a name="usersettings-element"></a>\<userSettings > 요소
 
-이 요소는 모두 포함  **\<설정 >** 응용 프로그램을 현재 사용 중인 사용자에 관련 된 태그입니다. 특성 없음을 정의합니다.
+이 요소는 현재 응용 프로그램을 사용 하 고 있는 사용자에 해당 하는 모든  **\<설정 >** 태그를 포함 합니다. 특성 없음을 정의합니다.
 
-## <a name="setting-element"></a>\<설정 > 요소
+## <a name="setting-element"></a>\<> 요소 설정
 
-이 요소에는 설정을 정의 합니다. 다음 특성을 가집니다.
+이 요소는 설정을 정의 합니다. 여기에는 다음과 같은 특성이 있습니다.
 
 | 특성        | 설명 |
 | ---------------- | ----------- |
-| **name**         | 필수. 설정의 고유 ID입니다. Visual Studio를 통해 만든 설정을 이름으로 저장 됩니다 `ProjectName.Properties.Settings`합니다. |
-| **serializedAs** | 필수. 텍스트 값을 직렬화 하는 데 사용할 형식입니다. 올바른 값은 다음과 같습니다.<br><br>- `string`. 사용 하 여 문자열 값이 serialize 되는 <xref:System.ComponentModel.TypeConverter>합니다.<br>- `xml`. 값은 XML serialization을 사용 하 여 serialize 됩니다.<br>- `binary`. 값은 이진 serialization을 사용 하 여 텍스트 인코딩된 이진으로 serialize 됩니다.<br />- `custom`. 설정 공급자가이 설정에 대 한 기본 지식이 직렬화 및 역직렬화 합니다. |
+| **name**         | 필수 요소. 설정의 고유 ID입니다. Visual Studio를 통해 만든 설정은 이름 `ProjectName.Properties.Settings`으로 저장 됩니다. |
+| **serializedAs** | 필수 요소. 값을 텍스트로 직렬화 하는 데 사용할 형식입니다. 유효한 값은<br><br>- `string`. 값은을 <xref:System.ComponentModel.TypeConverter>사용 하 여 문자열로 serialize 됩니다.<br>- `xml`. 값은 XML 직렬화를 사용 하 여 serialize 됩니다.<br>- `binary`. 이 값은 이진 serialization을 사용 하 여 텍스트 인코딩 이진으로 serialize 됩니다.<br />- `custom`. 설정 공급자는이 설정에 대 한 기본적인 지식을 갖고 있으며 직렬화 및 역직렬화 합니다. |
 
-## <a name="value-element"></a>\<값 > 요소
+## <a name="value-element"></a>\<value > 요소
 
-이 요소는 설정의 값을 포함합니다.
+이 요소는 설정 값을 포함 합니다.
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 두 개의 응용 프로그램 범위 설정 및 두 사용자 범위 설정을 정의 하는 응용 프로그램 설정 파일을 보여 줍니다.
+다음 예제에서는 두 개의 응용 프로그램 범위 설정 및 두 개의 사용자 범위 설정을 정의 하는 응용 프로그램 설정 파일을 보여 줍니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -92,5 +90,5 @@ ms.locfileid: "49123340"
 
 ## <a name="see-also"></a>참고자료
 
-[응용 프로그램 설정 개요](~/docs/framework/winforms/advanced/application-settings-overview.md)   
-[응용 프로그램 설정 아키텍처](~/docs/framework/winforms/advanced/application-settings-architecture.md)
+- [응용 프로그램 설정 개요](../../winforms/advanced/application-settings-overview.md)
+- [응용 프로그램 설정 아키텍처](../../winforms/advanced/application-settings-architecture.md)

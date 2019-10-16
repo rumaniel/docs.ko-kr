@@ -1,0 +1,1000 @@
+- name: 호스팅
+  href: index.md
+  items:
+    - name: 호스팅 Coclass
+      href: hosting-coclasses.md
+      items:
+        - name: CLRRuntimeHost Coclass
+          href: clrruntimehost-coclass.md
+        - name: ComCallUnmarshal Coclass
+          href: comcallunmarshal-coclass.md
+        - name: CorRuntimeHost Coclass
+          href: corruntimehost-coclass.md
+        - name: TypeNameFactory Coclass
+          href: typenamefactory-coclass.md
+    - name: 호스팅 열거형
+      href: hosting-enumerations.md
+      items:
+        - name: CLSID_RESOLUTION_FLAGS 열거형
+          href: clsid-resolution-flags-enumeration.md
+        - name: COR_GC_STAT_TYPES 열거형
+          href: cor-gc-stat-types-enumeration.md
+        - name: COR_GC_THREAD_STATS_TYPES 열거형
+          href: cor-gc-thread-stats-types-enumeration.md
+        - name: EApiCategories 열거형
+          href: eapicategories-enumeration.md
+        - name: EBindPolicyLevels 열거형
+          href: ebindpolicylevels-enumeration.md
+        - name: ECLRAssemblyIdentityFlags 열거형
+          href: eclrassemblyidentityflags-enumeration.md
+        - name: EClrEvent 열거형
+          href: eclrevent-enumeration.md
+        - name: EClrFailure 열거형
+          href: eclrfailure-enumeration.md
+        - name: EClrOperation 열거형
+          href: eclroperation-enumeration.md
+        - name: EClrUnhandledException 열거형
+          href: eclrunhandledexception-enumeration.md
+        - name: EContextType 열거형
+          href: econtexttype-enumeration.md
+        - name: ECustomDumpFlavor 열거형
+          href: ecustomdumpflavor-enumeration.md
+        - name: ECustomDumpItemKind 열거형
+          href: ecustomdumpitemkind-enumeration.md
+        - name: EHostApplicationPolicy 열거형
+          href: ehostapplicationpolicy-enumeration.md
+        - name: EHostBindingPolicyModifyFlags 열거형
+          href: ehostbindingpolicymodifyflags-enumeration.md
+        - name: EInitializeNewDomainFlags 열거형
+          href: einitializenewdomainflags-enumeration.md
+        - name: EMemoryAvailable 열거형
+          href: ememoryavailable-enumeration.md
+        - name: EMemoryCriticalLevel 열거형
+          href: ememorycriticallevel-enumeration.md
+        - name: EPolicyAction 열거형
+          href: epolicyaction-enumeration.md
+        - name: ESymbolReadingPolicy 열거형
+          href: esymbolreadingpolicy-enumeration.md
+        - name: ETaskType 열거형
+          href: etasktype-enumeration.md
+        - name: HOST_TYPE 열거형
+          href: host-type-enumeration.md
+        - name: MALLOC_TYPE 열거형
+          href: malloc-type-enumeration.md
+        - name: METAHOST_CONFIG_FLAGS 열거형
+          href: metahost-config-flags-enumeration.md
+        - name: METAHOST_POLICY_FLAGS 열거형
+          href: metahost-policy-flags-enumeration.md
+        - name: RUNTIME_INFO_FLAGS 열거형
+          href: runtime-info-flags-enumeration.md
+        - name: StackOverflowType 열거형
+          href: stackoverflowtype-enumeration.md
+        - name: STARTUP_FLAGS 열거형
+          href: startup-flags-enumeration.md
+        - name: ValidatorFlags 열거형
+          href: validatorflags-enumeration.md
+        - name: WAIT_OPTION 열거형
+          href: wait-option-enumeration.md
+    - name: 호스팅 전역 정적 함수
+      href: hosting-global-static-functions.md
+      items:
+        - name: .NET Framework 4 호스팅 전역 정적 함수
+          href: net-framework-4-hosting-global-static-functions.md
+          items:
+            - name: CLRCreateInstance 함수
+              href: clrcreateinstance-function.md
+        - name: 사용되지 않는 CLR 호스팅 함수
+          href: deprecated-clr-hosting-functions.md
+          items:
+            - name: _CorDllMain 함수
+              href: cordllmain-function.md
+            - name: _CorExeMain 함수
+              href: corexemain-function.md
+            - name: _CorExeMain2 함수
+              href: corexemain2-function.md
+            - name: _CorImageUnloading 함수
+              href: corimageunloading-function.md
+            - name: _CorValidateImage 함수
+              href: corvalidateimage-function.md
+            - name: CallFunctionShim 함수
+              href: callfunctionshim-function.md
+            - name: ClrCreateManagedInstance 함수
+              href: clrcreatemanagedinstance-function.md
+            - name: CoEEShutDownCOM 함수
+              href: coeeshutdowncom-function.md
+            - name: CoInitializeCor 함수
+              href: coinitializecor-function.md
+            - name: CoInitializeEE 함수
+              href: coinitializeee-function.md
+            - name: CorBindToCurrentRuntime 함수
+              href: corbindtocurrentruntime-function.md
+            - name: CorBindToRuntime 함수
+              href: corbindtoruntime-function.md
+            - name: CorBindToRuntimeByCfg 함수
+              href: corbindtoruntimebycfg-function.md
+            - name: CorBindToRuntimeEx 함수
+              href: corbindtoruntimeex-function.md
+            - name: CorBindToRuntimeHost 함수
+              href: corbindtoruntimehost-function.md
+            - name: CorExitProcess 함수
+              href: corexitprocess-function.md
+            - name: CorLaunchApplication 함수
+              href: corlaunchapplication-function.md
+            - name: CorMarkThreadInThreadPool 함수
+              href: cormarkthreadinthreadpool-function.md
+            - name: CoUninitializeCor 함수
+              href: couninitializecor-function.md
+            - name: CoUninitializeEE 함수
+              href: couninitializeee-function.md
+            - name: CreateDebuggingInterfaceFromVersion 함수
+              href: createdebugginginterfacefromversion-function.md
+            - name: CreateICeeFileGen 함수
+              href: createiceefilegen-function.md
+            - name: DestroyICeeFileGen 함수
+              href: destroyiceefilegen-function.md
+            - name: FExecuteInAppDomainCallback 함수 포인터
+              href: fexecuteinappdomaincallback-function-pointer.md
+            - name: FLockClrVersionCallback 함수 포인터
+              href: flockclrversioncallback-function-pointer.md
+            - name: GetCLRIdentityManager 함수
+              href: getclridentitymanager-function.md
+            - name: GetCORRequiredVersion 함수
+              href: getcorrequiredversion-function.md
+            - name: GetCORSystemDirectory 함수
+              href: getcorsystemdirectory-function.md
+            - name: GetCORVersion 함수
+              href: getcorversion-function.md
+            - name: GetFileVersion 함수
+              href: getfileversion-function.md
+            - name: GetRealProcAddress 함수
+              href: getrealprocaddress-function.md
+            - name: GetRequestedRuntimeInfo 함수
+              href: getrequestedruntimeinfo-function.md
+            - name: GetRequestedRuntimeVersion 함수
+              href: getrequestedruntimeversion-function.md
+            - name: GetRequestedRuntimeVersionForCLSID 함수
+              href: getrequestedruntimeversionforclsid-function.md
+            - name: GetVersionFromProcess 함수
+              href: getversionfromprocess-function.md
+            - name: LoadLibraryShim 함수
+              href: loadlibraryshim-function.md
+            - name: LoadStringRC 함수
+              href: loadstringrc-function.md
+            - name: LoadStringRCEx 함수
+              href: loadstringrcex-function.md
+            - name: LockClrVersion 함수
+              href: lockclrversion-function.md
+            - name: LPOVERLAPPED_COMPLETION_ROUTINE 함수 포인터
+              href: lpoverlapped-completion-routine-function-pointer.md
+            - name: LPTHREAD_START_ROUTINE 함수 포인터
+              href: lpthread-start-routine-function-pointer.md
+            - name: RunDll32ShimW 함수
+              href: rundll32shimw-function.md
+            - name: WAITORTIMERCALLBACK 함수 포인터
+              href: waitortimercallback-function-pointer.md
+    - name: 호스팅 인터페이스
+      href: hosting-interfaces.md
+      items:
+        - name: 사용되지 않는 CLR 호스팅 인터페이스 및 Coclass
+          href: deprecated-clr-hosting-interfaces-and-coclasses.md
+          items:
+            - name: IAppDomainSetup 인터페이스
+              href: iappdomainsetup-interface.md
+            - name: ICeeFileGen 클래스
+              href: iceefilegen-class.md
+            - name: ICorRuntimeHost 인터페이스
+              href: icorruntimehost-interface.md
+              items:
+                - name: CloseEnum 메서드
+                  href: icorruntimehost-closeenum-method.md
+                - name: CreateDomain 메서드
+                  href: icorruntimehost-createdomain-method.md
+                - name: CreateDomainSetup 메서드
+                  href: icorruntimehost-createdomainsetup-method.md
+                - name: CreateDomainEx 메서드
+                  href: icorruntimehost-createdomainex-method.md
+                - name: CreateEvidence 메서드
+                  href: icorruntimehost-createevidence-method.md
+                - name: CreateLogicalThreadState 메서드
+                  href: icorruntimehost-createlogicalthreadstate-method.md
+                - name: CurrentDomain 메서드
+                  href: icorruntimehost-currentdomain-method.md
+                - name: DeleteLogicalThreadState 메서드
+                  href: icorruntimehost-deletelogicalthreadstate-method.md
+                - name: EnumDomains 메서드
+                  href: icorruntimehost-enumdomains-method.md
+                - name: GetConfiguration 메서드
+                  href: icorruntimehost-getconfiguration-method.md
+                - name: GetDefaultDomain 메서드
+                  href: icorruntimehost-getdefaultdomain-method.md
+                - name: LocksHeldByLogicalThread 메서드
+                  href: icorruntimehost-locksheldbylogicalthread-method.md
+                - name: MapFile 메서드
+                  href: icorruntimehost-mapfile-method.md
+                - name: NextDomain 메서드
+                  href: icorruntimehost-nextdomain-method.md
+                - name: Start 메서드
+                  href: icorruntimehost-start-method.md
+                - name: Stop 메서드
+                  href: icorruntimehost-stop-method.md
+                - name: SwitchInLogicalThreadState 메서드
+                  href: icorruntimehost-switchinlogicalthreadstate-method.md
+                - name: SwitchOutLogicalThreadState 메서드
+                  href: icorruntimehost-switchoutlogicalthreadstate-method.md
+                - name: UnloadDomain 메서드
+                  href: icorruntimehost-unloaddomain-method.md
+        - name: CLR 호스팅 인터페이스
+          href: clr-hosting-interfaces.md
+          items:
+            - name: IActionOnCLREvent 인터페이스
+              href: iactiononclrevent-interface.md
+              items:
+                - name: OnEvent 메서드
+                  href: iactiononclrevent-onevent-method.md
+            - name: IApartmentCallback 인터페이스
+              href: iapartmentcallback-interface.md
+              items:
+                - name: DoCallback 메서드
+                  href: iapartmentcallback-docallback-method.md
+            - name: IAppDomainBinding 인터페이스
+              href: iappdomainbinding-interface.md
+              items:
+                - name: OnAppDomain 메서드
+                  href: iappdomainbinding-onappdomain-method.md
+            - name: ICatalogServices 인터페이스
+              href: icatalogservices-interface.md
+              items:
+                - name: Autodone 메서드
+                  href: icatalogservices-autodone-method.md
+                - name: NotAutodone 메서드
+                  href: icatalogservices-notautodone-method.md
+            - name: ICLRAssemblyIdentityManager 인터페이스
+              href: iclrassemblyidentitymanager-interface.md
+              items:
+                - name: GetBindingIdentityFromFile 메서드
+                  href: iclrassemblyidentitymanager-getbindingidentityfromfile-method.md
+                - name: GetBindingIdentityFromStream 메서드
+                  href: iclrassemblyidentitymanager-getbindingidentityfromstream-method.md
+                - name: GetCLRAssemblyReferenceList 메서드
+                  href: iclrassemblyidentitymanager-getclrassemblyreferencelist-method.md
+                - name: GetProbingAssembliesFromReference 메서드
+                  href: iclrassemblyidentitymanager-getprobingassembliesfromreference-method.md
+                - name: GetReferencedAssembliesFromFile 메서드
+                  href: iclrassemblyidentitymanager-getreferencedassembliesfromfile-method.md
+                - name: GetReferencedAssembliesFromStream 메서드
+                  href: iclrassemblyidentitymanager-getreferencedassembliesfromstream-method.md
+                - name: IsStronglyNamed 메서드
+                  href: iclrassemblyidentitymanager-isstronglynamed-method.md
+            - name: ICLRAssemblyReferenceList 인터페이스
+              href: iclrassemblyreferencelist-interface.md
+              items:
+                - name: IsAssemblyReferenceInList 메서드
+                  href: iclrassemblyreferencelist-isassemblyreferenceinlist-method.md
+                - name: IsStringAssemblyReferenceInList 메서드
+                  href: iclrassemblyreferencelist-isstringassemblyreferenceinlist-method.md
+            - name: ICLRControl 인터페이스
+              href: iclrcontrol-interface.md
+              items:
+                - name: GetCLRManager 메서드
+                  href: iclrcontrol-getclrmanager-method.md
+                - name: SetAppDomainManagerType 메서드
+                  href: iclrcontrol-setappdomainmanagertype-method.md
+            - name: ICLRDebugManager 인터페이스
+              href: iclrdebugmanager-interface.md
+              items:
+                - name: BeginConnection 메서드
+                  href: iclrdebugmanager-beginconnection-method.md
+                - name: EndConnection 메서드
+                  href: iclrdebugmanager-endconnection-method.md
+                - name: GetDacl 메서드
+                  href: iclrdebugmanager-getdacl-method.md
+                - name: IsDebuggerAttached 메서드
+                  href: iclrdebugmanager-isdebuggerattached-method.md
+                - name: SetConnectionTasks 메서드
+                  href: iclrdebugmanager-setconnectiontasks-method.md
+                - name: SetDacl 메서드
+                  href: iclrdebugmanager-setdacl-method.md
+                - name: SetSymbolReadingPolicy 메서드
+                  href: iclrdebugmanager-setsymbolreadingpolicy-method.md
+            - name: ICLRErrorReportingManager 인터페이스
+              href: iclrerrorreportingmanager-interface.md
+              items:
+                - name: BeginCustomDump 메서드
+                  href: iclrerrorreportingmanager-begincustomdump-method.md
+                - name: EndCustomDump 메서드
+                  href: iclrerrorreportingmanager-endcustomdump-method.md
+                - name: GetBucketParametersForCurrentException 메서드
+                  href: iclrerrorreportingmanager-getbucketparametersforcurrentexception-method.md
+            - name: ICLRGCManager 인터페이스
+              href: iclrgcmanager-interface.md
+              items:
+                - name: Collect 메서드
+                  href: iclrgcmanager-collect-method.md
+                - name: GetStats 메서드
+                  href: iclrgcmanager-getstats-method.md
+                - name: SetGCStartupLimits 메서드
+                  href: iclrgcmanager-setgcstartuplimits-method.md
+            - name: ICLRHostBindingPolicyManager 인터페이스
+              href: iclrhostbindingpolicymanager-interface.md
+              items:
+                - name: EvaluatePolicy 메서드
+                  href: iclrhostbindingpolicymanager-evaluatepolicy-method.md
+                - name: ModifyApplicationPolicy 메서드
+                  href: iclrhostbindingpolicymanager-modifyapplicationpolicy-method.md
+            - name: ICLRHostProtectionManager 인터페이스
+              href: iclrhostprotectionmanager-interface.md
+              items:
+                - name: SetEagerSerializeGrantSets
+                  href: iclrhostprotectionmanager-seteagerserializegrantsets-method.md
+                - name: SetProtectedCategories 메서드
+                  href: iclrhostprotectionmanager-setprotectedcategories-method.md
+            - name: ICLRIoCompletionManager 인터페이스
+              href: iclriocompletionmanager-interface.md
+              items:
+                - name: OnComplete 메서드
+                  href: iclriocompletionmanager-oncomplete-method.md
+            - name: ICLRMemoryNotificationCallback 인터페이스
+              href: iclrmemorynotificationcallback-interface.md
+              items:
+                - name: OnMemoryNotification 메서드
+                  href: iclrmemorynotificationcallback-onmemorynotification-method.md
+            - name: ICLROnEventManager 인터페이스
+              href: iclroneventmanager-interface.md
+              items:
+                - name: RegisterActionOnEvent 메서드
+                  href: iclroneventmanager-registeractiononevent-method.md
+                - name: UnregisterActionOnEvent 메서드
+                  href: iclroneventmanager-unregisteractiononevent-method.md
+            - name: ICLRPolicyManager 인터페이스
+              href: iclrpolicymanager-interface.md
+              items:
+                - name: SetActionOnFailure 메서드
+                  href: iclrpolicymanager-setactiononfailure-method.md
+                - name: SetActionOnTimeout 메서드
+                  href: iclrpolicymanager-setactionontimeout-method.md
+                - name: SetDefaultAction 메서드
+                  href: iclrpolicymanager-setdefaultaction-method.md
+                - name: SetTimeout 메서드
+                  href: iclrpolicymanager-settimeout-method.md
+                - name: SetTimeoutAndAction 메서드
+                  href: iclrpolicymanager-settimeoutandaction-method.md
+                - name: SetUnhandledExceptionPolicy 메서드
+                  href: iclrpolicymanager-setunhandledexceptionpolicy-method.md
+            - name: ICLRProbingAssemblyEnum 인터페이스
+              href: iclrprobingassemblyenum-interface.md
+              items:
+                - name: Get 메서드
+                  href: iclrprobingassemblyenum-get-method.md
+            - name: ICLRReferenceAssemblyEnum 인터페이스
+              href: iclrreferenceassemblyenum-interface.md
+              items:
+                - name: Get 메서드
+                  href: iclrreferenceassemblyenum-get-method.md
+            - name: ICLRRuntimeHost 인터페이스
+              href: iclrruntimehost-interface.md
+              items:
+                - name: ExecuteApplication 메서드
+                  href: iclrruntimehost-executeapplication-method.md
+                - name: ExecuteInAppDomain 메서드
+                  href: iclrruntimehost-executeinappdomain-method.md
+                - name: ExecuteInDefaultAppDomain 메서드
+                  href: iclrruntimehost-executeindefaultappdomain-method.md
+                - name: GetCLRControl 메서드
+                  href: iclrruntimehost-getclrcontrol-method.md
+                - name: GetCurrentAppDomainId 메서드
+                  href: iclrruntimehost-getcurrentappdomainid-method.md
+                - name: SetHostControl 메서드
+                  href: iclrruntimehost-sethostcontrol-method.md
+                - name: Start 메서드
+                  href: iclrruntimehost-start-method.md
+                - name: Stop 메서드
+                  href: iclrruntimehost-stop-method.md
+                - name: UnloadAppDomain 메서드
+                  href: iclrruntimehost-unloadappdomain-method.md
+            - name: ICLRSyncManager 인터페이스
+              href: iclrsyncmanager-interface.md
+              items:
+                - name: CreateRWLockOwnerIterator 메서드
+                  href: iclrsyncmanager-createrwlockowneriterator-method.md
+                - name: DeleteRWLockOwnerIterator 메서드
+                  href: iclrsyncmanager-deleterwlockowneriterator-method.md
+                - name: GetMonitorOwner 메서드
+                  href: iclrsyncmanager-getmonitorowner-method.md
+                - name: GetRWLockOwnerNext 메서드
+                  href: iclrsyncmanager-getrwlockownernext-method.md
+            - name: ICLRTask 인터페이스
+              href: iclrtask-interface.md
+              items:
+                - name: Abort 메서드
+                  href: iclrtask-abort-method.md
+                - name: ExitTask 메서드
+                  href: iclrtask-exittask-method.md
+                - name: GetMemStats 메서드
+                  href: iclrtask-getmemstats-method.md
+                - name: LocksHeld 메서드
+                  href: iclrtask-locksheld-method.md
+                - name: NeedsPriorityScheduling 메서드
+                  href: iclrtask-needspriorityscheduling-method.md
+                - name: Reset 메서드
+                  href: iclrtask-reset-method.md
+                - name: RudeAbort 메서드
+                  href: iclrtask-rudeabort-method.md
+                - name: SetTaskIdentifier 메서드
+                  href: iclrtask-settaskidentifier-method.md
+                - name: SwitchIn 메서드
+                  href: iclrtask-switchin-method.md
+                - name: SwitchOut 메서드
+                  href: iclrtask-switchout-method.md
+                - name: YieldTask 메서드
+                  href: iclrtask-yieldtask-method.md
+            - name: ICLRTaskManager 인터페이스
+              href: iclrtaskmanager-interface.md
+              items:
+                - name: CreateTask 메서드
+                  href: iclrtaskmanager-createtask-method.md
+                - name: GetCurrentTask 메서드
+                  href: iclrtaskmanager-getcurrenttask-method.md
+                - name: GetCurrentTaskType 메서드
+                  href: iclrtaskmanager-getcurrenttasktype-method.md
+                - name: SetLocale 메서드
+                  href: iclrtaskmanager-setlocale-method.md
+                - name: SetUILocale 메서드
+                  href: iclrtaskmanager-setuilocale-method.md
+            - name: ICLRValidator 인터페이스
+              href: iclrvalidator-interface.md
+              items:
+                - name: FormatEventInfo 메서드
+                  href: iclrvalidator-formateventinfo-method.md
+                - name: Validate 메서드
+                  href: iclrvalidator-validate-method.md
+            - name: ICorConfiguration 인터페이스
+              href: icorconfiguration-interface.md
+              items:
+                - name: AddDebuggerSpecialThread 메서드
+                  href: icorconfiguration-adddebuggerspecialthread-method.md
+                - name: SetDebuggerThreadControl 메서드
+                  href: icorconfiguration-setdebuggerthreadcontrol-method.md
+                - name: SetGCHostControl 메서드
+                  href: icorconfiguration-setgchostcontrol-method.md
+                - name: SetGCThreadControl 메서드
+                  href: icorconfiguration-setgcthreadcontrol-method.md
+            - name: ICorThreadpool 인터페이스
+              href: icorthreadpool-interface.md
+              items:
+                - name: CorBindIoCompletionCallback 메서드
+                  href: icorthreadpool-corbindiocompletioncallback-method.md
+                - name: CorCallOrQueueUserWorkItem 메서드
+                  href: icorthreadpool-corcallorqueueuserworkitem-method.md
+                - name: CorChangeTimer 메서드
+                  href: icorthreadpool-corchangetimer-method.md
+                - name: CorCreateTimer 메서드
+                  href: icorthreadpool-corcreatetimer-method.md
+                - name: CorDeleteTimer 메서드
+                  href: icorthreadpool-cordeletetimer-method.md
+                - name: CorGetAvailableThreads 메서드
+                  href: icorthreadpool-corgetavailablethreads-method.md
+                - name: CorGetMaxThreads 메서드
+                  href: icorthreadpool-corgetmaxthreads-method.md
+                - name: CorQueueUserWorkItem 메서드
+                  href: icorthreadpool-corqueueuserworkitem-method.md
+                - name: CorRegisterWaitForSingleObject 메서드
+                  href: icorthreadpool-corregisterwaitforsingleobject-method.md
+                - name: CorSetMaxThreads 메서드
+                  href: icorthreadpool-corsetmaxthreads-method.md
+                - name: CorUnregisterWait 메서드
+                  href: icorthreadpool-corunregisterwait-method.md
+            - name: IDebuggerInfo 인터페이스
+              href: idebuggerinfo-interface.md
+              items:
+                - name: IsDebuggerAttached 메서드
+                  href: idebuggerinfo-isdebuggerattached-method.md
+            - name: IDebuggerThreadControl 인터페이스
+              href: idebuggerthreadcontrol-interface.md
+              items:
+                - name: ReleaseAllRuntimeThreads 메서드
+                  href: idebuggerthreadcontrol-releaseallruntimethreads-method.md
+                - name: StartBlockingForDebugger 메서드
+                  href: idebuggerthreadcontrol-startblockingfordebugger-method.md
+                - name: ThreadIsBlockingForDebugger 메서드
+                  href: idebuggerthreadcontrol-threadisblockingfordebugger-method.md
+            - name: IGCHost 인터페이스
+              href: igchost-interface.md
+              items:
+                - name: Collect 메서드
+                  href: igchost-collect-method.md
+                - name: GetStats 메서드
+                  href: igchost-getstats-method.md
+                - name: GetThreadStats 메서드
+                  href: igchost-getthreadstats-method.md
+                - name: SetGCStartupLimits 메서드
+                  href: igchost-setgcstartuplimits-method.md
+                - name: SetVirtualMemLimit 메서드
+                  href: igchost-setvirtualmemlimit-method.md
+            - name: IGCHost2 인터페이스
+              href: igchost2-interface.md
+              items:
+                - name: SetGCStartupLimitsEx 메서드
+                  href: igchost2-setgcstartuplimitsex-method.md
+            - name: IGCHostControl 인터페이스
+              href: igchostcontrol-interface.md
+              items:
+                - name: RequestVirtualMemLimit 메서드
+                  href: igchostcontrol-requestvirtualmemlimit-method.md
+            - name: IGCThreadControl 인터페이스
+              href: igcthreadcontrol-interface.md
+              items:
+                - name: SuspensionEnding 메서드
+                  href: igcthreadcontrol-suspensionending-method.md
+                - name: SuspensionStarting 메서드
+                  href: igcthreadcontrol-suspensionstarting-method.md
+                - name: ThreadIsBlockingForSuspension 메서드
+                  href: igcthreadcontrol-threadisblockingforsuspension-method.md
+            - name: IHostAssemblyManager 인터페이스
+              href: ihostassemblymanager-interface.md
+              items:
+                - name: GetAssemblyStore 메서드
+                  href: ihostassemblymanager-getassemblystore-method.md
+                - name: GetNonHostStoreAssemblies 메서드
+                  href: ihostassemblymanager-getnonhoststoreassemblies-method.md
+            - name: IHostAssemblyStore 인터페이스
+              href: ihostassemblystore-interface.md
+              items:
+                - name: ProvideAssembly 메서드
+                  href: ihostassemblystore-provideassembly-method.md
+                - name: ProvideModule 메서드
+                  href: ihostassemblystore-providemodule-method.md
+            - name: IHostAutoEvent 인터페이스
+              href: ihostautoevent-interface.md
+              items:
+                - name: Set 메서드
+                  href: ihostautoevent-set-method.md
+                - name: Wait 메서드
+                  href: ihostautoevent-wait-method.md
+            - name: IHostControl 인터페이스
+              href: ihostcontrol-interface.md
+              items:
+                - name: GetHostManager 메서드
+                  href: ihostcontrol-gethostmanager-method.md
+                - name: SetAppDomainManager 메서드
+                  href: ihostcontrol-setappdomainmanager-method.md
+            - name: IHostCrst 인터페이스
+              href: ihostcrst-interface.md
+              items:
+                - name: Enter 메서드
+                  href: ihostcrst-enter-method.md
+                - name: Leave 메서드
+                  href: ihostcrst-leave-method.md
+                - name: SetSpinCount 메서드
+                  href: ihostcrst-setspincount-method.md
+                - name: TryEnter 메서드
+                  href: ihostcrst-tryenter-method.md
+            - name: IHostGCManager 인터페이스
+              href: ihostgcmanager-interface.md
+              items:
+                - name: SuspensionEnding 메서드
+                  href: ihostgcmanager-suspensionending-method.md
+                - name: SuspensionStarting 메서드
+                  href: ihostgcmanager-suspensionstarting-method.md
+                - name: ThreadIsBlockingForSuspension 메서드
+                  href: ihostgcmanager-threadisblockingforsuspension-method.md
+            - name: IHostIoCompletionManager 인터페이스
+              href: ihostiocompletionmanager-interface.md
+              items:
+                - name: Bind 메서드
+                  href: ihostiocompletionmanager-bind-method.md
+                - name: CloseIoCompletionPort 메서드
+                  href: ihostiocompletionmanager-closeiocompletionport-method.md
+                - name: CreateIoCompletionPort 메서드
+                  href: ihostiocompletionmanager-createiocompletionport-method.md
+                - name: GetAvailableThreads 메서드
+                  href: ihostiocompletionmanager-getavailablethreads-method.md
+                - name: GetHostOverlappedSize 메서드
+                  href: ihostiocompletionmanager-gethostoverlappedsize-method.md
+                - name: GetMaxThreads 메서드
+                  href: ihostiocompletionmanager-getmaxthreads-method.md
+                - name: GetMinThreads 메서드
+                  href: ihostiocompletionmanager-getminthreads-method.md
+                - name: InitializeHostOverlapped 메서드
+                  href: ihostiocompletionmanager-initializehostoverlapped-method.md
+                - name: SetCLRIoCompletionManager 메서드
+                  href: ihostiocompletionmanager-setclriocompletionmanager-method.md
+                - name: SetMaxThreads 메서드
+                  href: ihostiocompletionmanager-setmaxthreads-method.md
+                - name: SetMinThreads 메서드
+                  href: ihostiocompletionmanager-setminthreads-method.md
+            - name: IHostMalloc 인터페이스
+              href: ihostmalloc-interface.md
+              items:
+                - name: Alloc 메서드
+                  href: ihostmalloc-alloc-method.md
+                - name: DebugAlloc 메서드
+                  href: ihostmalloc-debugalloc-method.md
+                - name: Free 메서드
+                  href: ihostmalloc-free-method.md
+            - name: IHostManualEvent 인터페이스
+              href: ihostmanualevent-interface.md
+              items:
+                - name: Reset 메서드
+                  href: ihostmanualevent-reset-method.md
+                - name: Set 메서드
+                  href: ihostmanualevent-set-method.md
+                - name: Wait 메서드
+                  href: ihostmanualevent-wait-method.md
+            - name: IHostMemoryManager 인터페이스
+              href: ihostmemorymanager-interface.md
+              items:
+                - name: AcquiredVirtualAddressSpace 메서드
+                  href: ihostmemorymanager-acquiredvirtualaddressspace-method.md
+                - name: CreateMAlloc 메서드
+                  href: ihostmemorymanager-createmalloc-method.md
+                - name: GetMemoryLoad 메서드
+                  href: ihostmemorymanager-getmemoryload-method.md
+                - name: NeedsVirtualAddressSpace 메서드
+                  href: ihostmemorymanager-needsvirtualaddressspace-method.md
+                - name: RegisterMemoryNotificationCallback 메서드
+                  href: ihostmemorymanager-registermemorynotificationcallback-method.md
+                - name: ReleasedVirtualAddressSpace 메서드
+                  href: ihostmemorymanager-releasedvirtualaddressspace-method.md
+                - name: VirtualAlloc 메서드
+                  href: ihostmemorymanager-virtualalloc-method.md
+                - name: VirtualFree 메서드
+                  href: ihostmemorymanager-virtualfree-method.md
+                - name: VirtualProtect 메서드
+                  href: ihostmemorymanager-virtualprotect-method.md
+                - name: VirtualQuery 메서드
+                  href: ihostmemorymanager-virtualquery-method.md
+            - name: IHostPolicyManager 인터페이스
+              href: ihostpolicymanager-interface.md
+              items:
+                - name: OnDefaultAction 메서드
+                  href: ihostpolicymanager-ondefaultaction-method.md
+                - name: OnFailure 메서드
+                  href: ihostpolicymanager-onfailure-method.md
+                - name: OnTimeout 메서드
+                  href: ihostpolicymanager-ontimeout-method.md
+            - name: IHostSecurityContext 인터페이스
+              href: ihostsecuritycontext-interface.md
+              items:
+                - name: Capture 메서드
+                  href: ihostsecuritycontext-capture-method.md
+            - name: IHostSecurityManager 인터페이스
+              href: ihostsecuritymanager-interface.md
+              items:
+                - name: GetSecurityContext 메서드
+                  href: ihostsecuritymanager-getsecuritycontext-method.md
+                - name: ImpersonateLoggedOnUser 메서드
+                  href: ihostsecuritymanager-impersonateloggedonuser-method.md
+                - name: OpenThreadToken 메서드
+                  href: ihostsecuritymanager-openthreadtoken-method.md
+                - name: RevertToSelf 메서드
+                  href: ihostsecuritymanager-reverttoself-method.md
+                - name: SetSecurityContext 메서드
+                  href: ihostsecuritymanager-setsecuritycontext-method.md
+                - name: SetThreadToken 메서드
+                  href: ihostsecuritymanager-setthreadtoken-method.md
+            - name: IHostSemaphore 인터페이스
+              href: ihostsemaphore-interface.md
+              items:
+                - name: ReleaseSemaphore 메서드
+                  href: ihostsemaphore-releasesemaphore-method.md
+                - name: Wait 메서드
+                  href: ihostsemaphore-wait-method.md
+            - name: IHostSyncManager 인터페이스
+              href: ihostsyncmanager-interface.md
+              items:
+                - name: CreateAutoEvent 메서드
+                  href: ihostsyncmanager-createautoevent-method.md
+                - name: CreateCrst 메서드
+                  href: ihostsyncmanager-createcrst-method.md
+                - name: CreateCrstWithSpinCount 메서드
+                  href: ihostsyncmanager-createcrstwithspincount-method.md
+                - name: CreateManualEvent 메서드
+                  href: ihostsyncmanager-createmanualevent-method.md
+                - name: CreateMonitorEvent 메서드
+                  href: ihostsyncmanager-createmonitorevent-method.md
+                - name: CreateRWLockReaderEvent 메서드
+                  href: ihostsyncmanager-createrwlockreaderevent-method.md
+                - name: CreateRWLockWriterEvent 메서드
+                  href: ihostsyncmanager-createrwlockwriterevent-method.md
+                - name: CreateSemaphore 메서드
+                  href: ihostsyncmanager-createsemaphore-method.md
+                - name: SetCLRSyncManager 메서드
+                  href: ihostsyncmanager-setclrsyncmanager-method.md
+            - name: IHostTask 인터페이스
+              href: ihosttask-interface.md
+              items:
+                - name: Alert 메서드
+                  href: ihosttask-alert-method.md
+                - name: GetPriority 메서드
+                  href: ihosttask-getpriority-method.md
+                - name: Join 메서드
+                  href: ihosttask-join-method.md
+                - name: SetCLRTask 메서드
+                  href: ihosttask-setclrtask-method.md
+                - name: SetPriority 메서드
+                  href: ihosttask-setpriority-method.md
+                - name: Start 메서드
+                  href: ihosttask-start-method.md
+            - name: IHostTaskManager 인터페이스
+              href: ihosttaskmanager-interface.md
+              items:
+                - name: BeginDelayAbort 메서드
+                  href: ihosttaskmanager-begindelayabort-method.md
+                - name: BeginThreadAffinity 메서드
+                  href: ihosttaskmanager-beginthreadaffinity-method.md
+                - name: CallNeedsHostHook 메서드
+                  href: ihosttaskmanager-callneedshosthook-method.md
+                - name: CreateTask 메서드
+                  href: ihosttaskmanager-createtask-method.md
+                - name: EndDelayAbort 메서드
+                  href: ihosttaskmanager-enddelayabort-method.md
+                - name: EndThreadAffinity 메서드
+                  href: ihosttaskmanager-endthreadaffinity-method.md
+                - name: EnterRuntime 메서드
+                  href: ihosttaskmanager-enterruntime-method.md
+                - name: GetCurrentTask 메서드
+                  href: ihosttaskmanager-getcurrenttask-method.md
+                - name: GetStackGuarantee 메서드
+                  href: ihosttaskmanager-getstackguarantee-method.md
+                - name: LeaveRuntime 메서드
+                  href: ihosttaskmanager-leaveruntime-method.md
+                - name: ReverseEnterRuntime 메서드
+                  href: ihosttaskmanager-reverseenterruntime-method.md
+                - name: ReverseLeaveRuntime 메서드
+                  href: ihosttaskmanager-reverseleaveruntime-method.md
+                - name: SetCLRTaskManager 메서드
+                  href: ihosttaskmanager-setclrtaskmanager-method.md
+                - name: SetLocale 메서드
+                  href: ihosttaskmanager-setlocale-method.md
+                - name: SetStackGuarantee 메서드
+                  href: ihosttaskmanager-setstackguarantee-method.md
+                - name: SetUILocale 메서드
+                  href: ihosttaskmanager-setuilocale-method.md
+                - name: Sleep 메서드
+                  href: ihosttaskmanager-sleep-method.md
+                - name: SwitchToTask 메서드
+                  href: ihosttaskmanager-switchtotask-method.md
+            - name: IHostThreadPoolManager 인터페이스
+              href: ihostthreadpoolmanager-interface.md
+              items:
+                - name: GetAvailableThreads 메서드
+                  href: ihostthreadpoolmanager-getavailablethreads-method.md
+                - name: GetMaxThreads 메서드
+                  href: ihostthreadpoolmanager-getmaxthreads-method.md
+                - name: GetMinThreads 메서드
+                  href: ihostthreadpoolmanager-getminthreads-method.md
+                - name: QueueUserWorkItem 메서드
+                  href: ihostthreadpoolmanager-queueuserworkitem-method.md
+                - name: SetMaxThreads 메서드
+                  href: ihostthreadpoolmanager-setmaxthreads-method.md
+                - name: SetMinThreads 메서드
+                  href: ihostthreadpoolmanager-setminthreads-method.md
+            - name: IManagedObject 인터페이스
+              href: imanagedobject-interface.md
+              items:
+                - name: GetObjectIdentity 메서드
+                  href: imanagedobject-getobjectidentity-method.md
+                - name: GetSerializedBuffer 메서드
+                  href: imanagedobject-getserializedbuffer-method.md
+            - name: IObjectHandle 인터페이스
+              href: iobjecthandle-interface.md
+              items:
+                - name: Unwrap 메서드
+                  href: iobjecthandle-unwrap-method.md
+            - name: ITypeName 인터페이스
+              href: itypename-interface.md
+              items:
+                - name: GetAssemblyName 메서드
+                  href: itypename-getassemblyname-method.md
+                - name: GetModifierLength 메서드
+                  href: itypename-getmodifierlength-method.md
+                - name: GetModifiers 메서드
+                  href: itypename-getmodifiers-method.md
+                - name: GetNameCount 메서드
+                  href: itypename-getnamecount-method.md
+                - name: GetNames 메서드
+                  href: itypename-getnames-method.md
+                - name: GetTypeArgumentCount 메서드
+                  href: itypename-gettypeargumentcount-method.md
+                - name: GetTypeArguments 메서드
+                  href: itypename-gettypearguments-method.md
+            - name: ITypeNameBuilder 인터페이스
+              href: itypenamebuilder-interface.md
+              items:
+                - name: AddArray 메서드
+                  href: itypenamebuilder-addarray-method.md
+                - name: AddAssemblySpec 메서드
+                  href: itypenamebuilder-addassemblyspec-method.md
+                - name: AddByRef 메서드
+                  href: itypenamebuilder-addbyref-method.md
+                - name: AddName 메서드
+                  href: itypenamebuilder-addname-method.md
+                - name: AddPointer 메서드
+                  href: itypenamebuilder-addpointer-method.md
+                - name: AddSzArray 메서드
+                  href: itypenamebuilder-addszarray-method.md
+                - name: Clear 메서드
+                  href: itypenamebuilder-clear-method.md
+                - name: CloseGenericArgument 메서드
+                  href: itypenamebuilder-closegenericargument-method.md
+                - name: CloseGenericArguments 메서드
+                  href: itypenamebuilder-closegenericarguments-method.md
+                - name: OpenGenericArgument 메서드
+                  href: itypenamebuilder-opengenericargument-method.md
+                - name: OpenGenericArguments 메서드
+                  href: itypenamebuilder-opengenericarguments-method.md
+                - name: ToString 메서드
+                  href: itypenamebuilder-tostring-method.md
+            - name: ITypeNameFactory 인터페이스
+              href: itypenamefactory-interface.md
+              items:
+                - name: GetTypeNameBuilder 메서드
+                  href: itypenamefactory-gettypenamebuilder-method.md
+                - name: ParseTypeName 메서드
+                  href: itypenamefactory-parsetypename-method.md
+            - name: IValidator 인터페이스
+              href: ivalidator-interface.md
+              items:
+                - name: FormatEventInfo 메서드
+                  href: ivalidator-formateventinfo-method.md
+                - name: Validate 메서드
+                  href: ivalidator-validate-method.md
+        - name: .NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스
+          href: clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md
+          items:
+            - name: ICLRAppDomainResourceMonitor 인터페이스
+              href: iclrappdomainresourcemonitor-interface.md
+              items:
+                - name: GetCurrentAllocated 메서드
+                  href: iclrappdomainresourcemonitor-getcurrentallocated-method.md
+                - name: GetCurrentSurvived 메서드
+                  href: iclrappdomainresourcemonitor-getcurrentsurvived-method.md
+                - name: GetCurrentCpuTime 메서드
+                  href: iclrappdomainresourcemonitor-getcurrentcputime-method.md
+            - name: ICLRDomainManager 인터페이스
+              href: iclrdomainmanager-interface.md
+              items:
+                - name: SetAppDomainManagerType 메서드
+                  href: iclrdomainmanager-setappdomainmanagertype-method.md
+                - name: SetPropertiesForDefaultAppDomain 메서드
+                  href: iclrdomainmanager-setpropertiesfordefaultappdomain-method.md
+            - name: ICLRGCManager2 인터페이스
+              href: iclrgcmanager2-interface.md
+              items:
+                - name: SetGCStartupLimitsEx 메서드
+                  href: iclrgcmanager2-setgcstartuplimitsex-method.md
+            - name: ICLRMetaHost 인터페이스
+              href: iclrmetahost-interface.md
+              items:
+                - name: EnumerateInstalledRuntimes 메서드
+                  href: iclrmetahost-enumerateinstalledruntimes-method.md
+                - name: EnumerateLoadedRuntimes 메서드
+                  href: iclrmetahost-enumerateloadedruntimes-method.md
+                - name: ExitProcess 메서드
+                  href: iclrmetahost-exitprocess-method.md
+                - name: GetRuntime 메서드
+                  href: iclrmetahost-getruntime-method.md
+                - name: GetVersionFromFile 메서드
+                  href: iclrmetahost-getversionfromfile-method.md
+                - name: QueryLegacyV2RuntimeBinding 메서드
+                  href: iclrmetahost-querylegacyv2runtimebinding-method.md
+                - name: RequestRuntimeLoadedNotification 메서드
+                  href: iclrmetahost-requestruntimeloadednotification-method.md
+            - name: ICLRMetaHostPolicy 인터페이스
+              href: iclrmetahostpolicy-interface.md
+              items:
+                - name: GetRequestedRuntime 메서드
+                  href: iclrmetahostpolicy-getrequestedruntime-method.md
+            - name: ICLRRuntimeInfo 인터페이스
+              href: iclrruntimeinfo-interface.md
+              items:
+                - name: BindAsLegacyV2Runtime 메서드
+                  href: iclrruntimeinfo-bindaslegacyv2runtime-method.md
+                - name: GetDefaultStartupFlags 메서드
+                  href: iclrruntimeinfo-getdefaultstartupflags-method.md
+                - name: GetInterface 메서드
+                  href: iclrruntimeinfo-getinterface-method.md
+                - name: GetProcAddress 메서드
+                  href: iclrruntimeinfo-getprocaddress-method.md
+                - name: GetRuntimeDirectory 메서드
+                  href: iclrruntimeinfo-getruntimedirectory-method.md
+                - name: GetVersionString 메서드
+                  href: iclrruntimeinfo-getversionstring-method.md
+                - name: IsLoadable 메서드
+                  href: iclrruntimeinfo-isloadable-method.md
+                - name: IsLoaded 메서드
+                  href: iclrruntimeinfo-isloaded-method.md
+                - name: IsStarted 메서드
+                  href: iclrruntimeinfo-isstarted-method.md
+                - name: LoadErrorString 메서드
+                  href: iclrruntimeinfo-loaderrorstring-method.md
+                - name: LoadLibrary 메서드
+                  href: iclrruntimeinfo-loadlibrary-method.md
+                - name: SetDefaultStartupFlags 메서드
+                  href: iclrruntimeinfo-setdefaultstartupflags-method.md
+            - name: ICLRStrongName 인터페이스
+              href: iclrstrongname-interface.md
+              items:
+                - name: GetHashFromAssemblyFile 메서드
+                  href: iclrstrongname-gethashfromassemblyfile-method.md
+                - name: GetHashFromAssemblyFileW 메서드
+                  href: iclrstrongname-gethashfromassemblyfilew-method.md
+                - name: GetHashFromBlob 메서드
+                  href: iclrstrongname-gethashfromblob-method.md
+                - name: GetHashFromFile 메서드
+                  href: iclrstrongname-gethashfromfile-method.md
+                - name: GetHashFromFileW 메서드
+                  href: iclrstrongname-gethashfromfilew-method.md
+                - name: GetHashFromHandle 메서드
+                  href: iclrstrongname-gethashfromhandle-method.md
+                - name: StrongNameCompareAssemblies 메서드
+                  href: iclrstrongname-strongnamecompareassemblies-method.md
+                - name: StrongNameFreeBuffer 메서드
+                  href: iclrstrongname-strongnamefreebuffer-method.md
+                - name: StrongNameGetBlob 메서드
+                  href: iclrstrongname-strongnamegetblob-method.md
+                - name: StrongNameGetBlobFromImage 메서드
+                  href: iclrstrongname-strongnamegetblobfromimage-method.md
+                - name: StrongNameGetPublicKey 메서드
+                  href: iclrstrongname-strongnamegetpublickey-method.md
+                - name: StrongNameHashSize 메서드
+                  href: iclrstrongname-strongnamehashsize-method.md
+                - name: StrongNameKeyDelete 메서드
+                  href: iclrstrongname-strongnamekeydelete-method.md
+                - name: StrongNameKeyGen 메서드
+                  href: iclrstrongname-strongnamekeygen-method.md
+                - name: StrongNameKeyGenEx 메서드
+                  href: iclrstrongname-strongnamekeygenex-method.md
+                - name: StrongNameKeyInstall 메서드
+                  href: iclrstrongname-strongnamekeyinstall-method.md
+                - name: StrongNameSignatureGeneration 메서드
+                  href: iclrstrongname-strongnamesignaturegeneration-method.md
+                - name: StrongNameSignatureGenerationEx 메서드
+                  href: iclrstrongname-strongnamesignaturegenerationex-method.md
+                - name: StrongNameSignatureSize 메서드
+                  href: iclrstrongname-strongnamesignaturesize-method.md
+                - name: StrongNameSignatureVerification 메서드
+                  href: iclrstrongname-strongnamesignatureverification-method.md
+                - name: StrongNameSignatureVerificationEx 메서드
+                  href: iclrstrongname-strongnamesignatureverificationex-method.md
+                - name: StrongNameSignatureVerificationFromImage 메서드
+                  href: iclrstrongname-strongnamesignatureverificationfromimage-method.md
+                - name: StrongNameTokenFromAssembly 메서드
+                  href: iclrstrongname-strongnametokenfromassembly-method.md
+                - name: StrongNameTokenFromAssemblyEx 메서드
+                  href: iclrstrongname-strongnametokenfromassemblyex-method.md
+                - name: StrongNameTokenFromPublicKey 메서드
+                  href: iclrstrongname-strongnametokenfrompublickey-method.md
+            - name: ICLRStrongName2 인터페이스
+              href: iclrstrongname2-interface.md
+              items:
+                - name: StrongNameGetPublicKeyEx 메서드
+                  href: strongnamegetpublickeyex-method.md
+                - name: StrongNameSignatureVerificationEx2 메서드
+                  href: strongnamesignatureverificationex2-method.md
+            - name: ICLRTask2 인터페이스
+              href: iclrtask2-interface.md
+              items:
+                - name: BeginPreventAsyncAbort 메서드
+                  href: iclrtask2-beginpreventasyncabort-method.md
+                - name: EndPreventAsyncAbort 메서드
+                  href: iclrtask2-endpreventasyncabort-method.md
+    - name: 호스팅 구조체
+      href: hosting-structures.md
+      items:
+        - name: AssemblyBindInfo 구조체
+          href: assemblybindinfo-structure.md
+        - name: BucketParameters 구조체
+          href: bucketparameters-structure.md
+        - name: COR_GC_STATS 구조체
+          href: cor-gc-stats-structure.md
+        - name: COR_GC_THREAD_STATS 구조체
+          href: cor-gc-thread-stats-structure.md
+        - name: CustomDumpItem 구조체
+          href: customdumpitem-structure.md
+        - name: MDAInfo 구조체
+          href: mdainfo-structure.md
+        - name: ModuleBindInfo 구조체
+          href: modulebindinfo-structure.md
+        - name: StackOverflowInfo 구조체
+          href: stackoverflowinfo-structure.md

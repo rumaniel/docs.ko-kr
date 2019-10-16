@@ -5,21 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e8bd2eaa977c9e3546758e9fd0e9fa3b4527634
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: d0a6b3faff0208634e711b9d7908e3fd8dc640ae
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087942"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170837"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform 클래스에서 임의 동작 구현
 
 > [!NOTE]
-> <xref:System.Xml.Xsl.XslTransform> 클래스는 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.
+> <xref:System.Xml.Xsl.XslTransform> 클래스는 .NET Framework 2.0에서 사용되지 않습니다. <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 XSLT(Extensible Stylesheet Language for Transformations) 변환을 수행할 수 있습니다. 자세한 내용은 [XslCompiledTransform 클래스 사용](using-the-xslcompiledtransform-class.md) 및 [XslTransform 클래스에서 마이그레이션](migrating-from-the-xsltransform-class.md)을 참조하세요.
 
-임의 동작은 구현 공급자가 특정 상황을 처리하기 위해 선택할 수 있는 여러 가지 방법을 안내하는 [W3C(World Wide Web 컨소시엄) XSLT(XSL Transformations) 버전 1.0 권장 사항](https://www.w3.org/TR/1999/REC-xslt-19991116)에 나열된 동작으로 설명됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 W3C 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. W3C에서는 일부 문제점에 대해, 프로세서가 오류에서 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.
+임의 동작은 구현 공급자가 특정 상황을 처리하기 위해 선택할 수 있는 여러 가지 방법을 안내하는 [W3C(World Wide Web 컨소시엄) XSLT(XSL Transformations) 버전 1.0 권장 사항](https://www.w3.org/TR/1999/REC-xslt-19991116)에 나열된 동작으로 설명됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 W3C 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. W3C에서는 일부 문제점에 대해, 프로세서가 오류에서 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7\.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.
 
-따라서 다음 표에서는 W3C에서 허용하는 각각의 임의 동작에 대해 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 클래스의 <xref:System.Xml.Xsl.XslTransform> 구현을 수행하는 임의 동작과 W3C XSLT 1.0 권장 사항에서 해당 문제점에 대해 설명하는 단원의 목록을 보여 줍니다.
+따라서 다음 표에서는 W3C에서 허용하는 각각의 임의 동작에 대해 <xref:System.Xml.Xsl.XslTransform> 클래스의 .NET Framework 구현을 수행하는 임의 동작과 W3C XSLT 1.0 권장 사항에서 해당 문제점에 대해 설명하는 단원의 목록을 보여 줍니다.
 
 |문제점|동작|단원|
 |-------------|--------------|-------------|
@@ -75,17 +75,17 @@ ms.locfileid: "44087942"
 
 다음 표에서는 XSLT 프로세서에서 선택적으로 구현되며 <xref:System.Xml.Xsl.XslTransform> 클래스에서는 일괄 구현되는 기능을 보여 줍니다.
 
-|기능|참조 위치|노트|
+|기능|참조 위치|참고 사항|
 |-------------|------------------------|-----------|
 |`disable-output-escaping` 및 `<xsl:text...>` 태그의 `<xsl:value-of...>` 특성|W3C XSLT 1.0 권장 사항<br /><br /> 16.4단원|`disable-output-escaping` 또는 `xsl:text` 요소가 `xsl:value-of`, `xsl:comment` 또는 `xsl:processing-instruction` 요소에서 사용되면 `xsl:attribute` 특성이 무시됩니다.<br /><br /> 텍스트가 들어 있는 결과 트리 조각 및 이스케이프된 텍스트 출력은 지원되지 않습니다.<br /><br /> disable-output-escaping 특성은 <xref:System.Xml.XmlReader> 또는 <xref:System.Xml.XmlWriter> 개체로 변환할 때 무시됩니다.|
 
 ## <a name="see-also"></a>참고 항목
 
 - <xref:System.Xml.Xsl.XslTransform>
-- [XslTransform 클래스의 XSLT 프로세서 구현](xsltransform-class-implements-the-xslt-processor.md)  
-- [XslTransform 클래스를 사용하여 XSLT 변형](xslt-transformations-with-the-xsltransform-class.md)  
-- [변형 과정에서 XPathNavigator의 역할](xpathnavigator-in-transformations.md)  
-- [변형 과정에서 XPathNodeIterator의 역할](xpathnodeiterator-in-transformations.md)  
-- [XslTransform에 대한 XPathDocument 입력](xpathdocument-input-to-xsltransform.md)  
-- [XslTransform에 대한 XmlDataDocument 입력](xmldatadocument-input-to-xsltransform.md)  
-- [XslTransform에 대한 XmlDocument 입력](xmldocument-input-to-xsltransform.md)  
+- [XslTransform 클래스의 XSLT 프로세서 구현](xsltransform-class-implements-the-xslt-processor.md)
+- [XslTransform 클래스를 사용하여 XSLT 변형](xslt-transformations-with-the-xsltransform-class.md)
+- [변형 과정에서 XPathNavigator의 역할](xpathnavigator-in-transformations.md)
+- [변형 과정에서 XPathNodeIterator의 역할](xpathnodeiterator-in-transformations.md)
+- [XslTransform에 대한 XPathDocument 입력](xpathdocument-input-to-xsltransform.md)
+- [XslTransform에 대한 XmlDataDocument 입력](xmldatadocument-input-to-xsltransform.md)
+- [XslTransform에 대한 XmlDocument 입력](xmldocument-input-to-xsltransform.md)

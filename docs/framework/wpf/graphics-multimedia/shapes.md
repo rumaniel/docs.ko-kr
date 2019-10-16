@@ -14,21 +14,22 @@ helpviewer_keywords:
 - stretchable Shapes [WPF]
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
-ms.openlocfilehash: 1dc19da76b73d5b8e5d66851b539a7d1829fc938
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008178"
 ---
 # <a name="shapes"></a>도형
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용 하 여 기본 도형에 대 한 지원을 제공는 <xref:System.Windows.Shapes.Shape> 클래스입니다. 파생 되는 도형 개체 <xref:System.Windows.FrameworkElement> 및 따라서 레이아웃 시스템에 참여 및 단순히를 사용 하 여 그릴 수 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 사용 하 여 기본 모양 그리기에 대 한 지원을 제공 합니다 <xref:System.Windows.Shapes.Shape> 클래스입니다. Shape 개체에서 파생 <xref:System.Windows.FrameworkElement> 이와 같이 레이아웃 시스템에 참여 하 고 사용 하 여 단순히 그릴 수 있습니다 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [WPF에서 Shape 및 기본 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/shapes-how-to-topics.md)  
+ [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)  
+ [방법 항목](shapes-how-to-topics.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Shapes.Shape>  
- [2차원 그래픽 및 이미징](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Shapes.Shape>
+- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [그래픽 및 멀티미디어](index.md)

@@ -1,0 +1,38 @@
+- name: 트랜잭션 처리
+  href: index.md
+  items:
+    - name: 트랜잭션 기본 사항
+      href: transaction-fundamentals.md
+    - name: System.Transactions에서 제공하는 기능
+      href: features-provided-by-system-transactions.md
+      items:
+        - name: 트랜잭션 애플리케이션 작성
+          href: writing-a-transactional-application.md
+          items:
+            - name: 트랜잭션 범위를 사용하여 암시적 트랜잭션 구현
+              href: implementing-an-implicit-transaction-using-transaction-scope.md
+            - name: CommittableTransaction을 사용하여 명시적 트랜잭션 구현
+              href: implementing-an-explicit-transaction-using-committabletransaction.md
+            - name: DependentTransaction으로 동시성 관리
+              href: managing-concurrency-with-dependenttransaction.md
+            - name: 엔터프라이즈 서비스 및 COM+ 트랜잭션과의 상호 운용성
+              href: interoperability-with-enterprise-services-and-com-transactions.md
+            - name: 트랜잭션 관리 에스컬레이션
+              href: transaction-management-escalation.md
+            - name: 진단 추적
+              href: diagnostic-traces.md
+            - name: ASP.NET에서 System.Transactions 사용
+              href: using-system-transactions-in-aspnet.md
+        - name: 리소스 관리자 구현
+          href: implementing-a-resource-manager.md
+          items:
+            - name: 트랜잭션에서 리소스를 참가자로 등록
+              href: enlisting-resources-as-participants-in-a-transaction.md
+            - name: 단일 단계 및 다단계에서 트랜잭션 커밋
+              href: committing-a-transaction-in-single-phase-and-multi-phase.md
+            - name: 복구 수행
+              href: performing-recovery.md
+            - name: 리소스 액세스의 보안 신뢰 수준
+              href: security-trust-levels-in-accessing-resources.md
+            - name: 단일 단계 커밋 및 승격 가능한 단일 단계 알림을 사용한 최적화
+              href: optimization-spc-and-promotable-spn.md

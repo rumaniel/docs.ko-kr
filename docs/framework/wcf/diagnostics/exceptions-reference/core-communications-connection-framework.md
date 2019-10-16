@@ -3,14 +3,14 @@ title: '핵심 통신: 연결 프레임워크'
 ms.date: 03/30/2017
 ms.assetid: 61ee00e1-896d-47c8-942f-1db28ac89cdc
 ms.openlocfilehash: a3f52ac82c2bf09ded504e412d7f216dd0b39959
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33471978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998688"
 ---
 # <a name="core-communications-connection-framework"></a>핵심 통신: 연결 프레임워크
-이 항목에서는 Windows Communication Foundation (WCF) 연결 프레임 워크에 의해 생성 된 모든 예외를 보여 줍니다.  
+이 항목에서는 Windows Communication Foundation (WCF) 연결 프레임 워크에 의해 생성 된 모든 예외를 나열 합니다.  
   
 ## <a name="exception-list"></a>예외 목록  
   

@@ -1,227 +1,22 @@
 ---
-title: 죄송 하지만 우리 않는&#39;t이 C# 오류에 대 한 구체적인 정보가
+title: 죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
-- CS1583
-- CS0821
-- CS0010
 - CS4030
-- CS1526
-- CS0121
-- CS0729
-- CS0156
-- CS1934
-- CS0145
-- CS1648
-- CS2035
-- CS0081
-- CS1661
-- CS1684
-- CS0444
-- CS1585
-- CS0100
-- CS0609
 - CS1988
-- CS3015
-- CS0013
-- CS1021
-- CS0839
-- CS0516
-- CS1646
-- CS0619
-- CS0253
-- CS0080
 - CS4035
-- CS2034
-- CS2013
-- CS0582
-- CS0842
-- CS0264
-- CS0175
-- CS0572
 - CS0725
-- CS1597
-- CS1604
-- CS0509
-- CS0274
-- CS0831
-- CS0139
-- CS0022
-- CS0406
-- CS0250
-- CS0612
-- CS1732
-- CS2023
 - CS1992
-- CS0138
-- CS0596
-- CS0411
-- CS1951
-- CS3014
-- CS0704
-- CS3006
-- CS0538
-- CS1624
-- CS1594
-- CS0662
-- CS0105
-- CS0836
-- CS0629
-- CS0213
-- CS0206
-- CS0726
-- CS0101
-- CS0468
-- CS1709
-- CS0551
-- CS0690
-- CS0058
-- CS0211
-- CS0455
-- CS1657
-- CS0710
-- CS0021
-- CS1592
-- CS1569
-- CS1106
-- CS1043
-- CS1938
-- CS0758
-- CS1059
-- CS1587
-- CS0648
-- CS0136
 - CS4004
-- CS0242
-- CS1917
-- CS1715
-- CS0811
-- CS0447
-- CS0711
-- CS0763
-- CS0540
-- CS1038
-- CS0737
-- CS1547
 - CS1984
-- CS1730
-- CS0230
-- CS0443
-- CS0410
-- CS0402
-- CS0815
-- CS1635
-- CS0077
-- CS0442
-- CS0677
-- CS0009
-- CS0078
-- CS0107
-- CS0217
-- CS1027
-- CS1044
-- CS1013
 - CS1998
-- CS1689
-- CS0717
-- CS0183
-- CS0267
-- CS1615
-- CS1631
-- CS0473
 - CS4021
 - CS4023
-- CS1518
-- CS1647
-- CS0657
-- CS0076
-- CS0683
-- CS0026
-- CS1507
-- CS0215
-- CS1513
-- CS1037
 - CS0807
-- CS0573
-- CS0208
-- CS1553
-- CS0031
-- CS0167
-- CS1920
-- CS0280
-- CS0524
-- CS1682
-- CS0169
-- CS0131
-- CS1504
-- CS1664
-- CS1952
-- CS0669
-- CS2017
-- CS0005
-- CS0053
-- CS3011
-- CS1562
-- CS0164
-- CS1556
 - CS0800
-- CS0463
-- CS0191
-- CS0111
-- CS0838
-- CS1573
-- CS1613
-- CS1912
-- CS0743
-- CS2016
-- CS0315
-- CS1609
-- CS1102
-- CS0011
-- CS1057
-- CS0144
 - CS1985
-- CS0060
-- CS1643
-- CS0611
-- CS0030
-- CS0766
-- CS3024
-- CS3008
-- CS1702
-- CS0436
-- CS0720
-- CS0617
-- CS0157
-- CS1529
 - CS4008
-- CS1017
-- CS1022
-- CS3001
-- CS2029
 - CS0190
-- CS3000
-- CS1557
-- CS0568
-- CS0148
-- CS0699
-- CS0832
-- CS1514
-- CS0621
-- CS0747
-- cs1725
-- CS0112
-- CS1627
-- CS0706
-- CS0755
-- CS0214
-- CS1511
-- CS1954
-- CS1109
-- CS0666
-- CS1605
-- CS0218
-- CS0746
 - CS2030
 - CS1654
 - CS2020
@@ -882,32 +677,28 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5e9c0aff2df5c46e707fa9f85506758327b58d80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f60c2e3caec215c60851e669eabf554617149096
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33314072"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002171"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-c-error"></a>죄송 하지만 우리 않는&#39;t이 C# 오류에 대 한 구체적인 정보가
-죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음이 포럼 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.  
+# <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>죄송 합니다. 이 C# 오류에 대한 구체적인 정보가 없습니다.
+
+죄송 하지만이 오류에 대 한 특정 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음 중 하나를 사용 하 여 다른 개발자에 게 요청할 수 있습니다.
   
- [Visual C# 언어](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
- 에 대 한 질문과 일반적인 토론 Visual C# 언어 구문 및 컴파일러를 위한 포럼을 제공 합니다.  
-  
- [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
- Visual Studio 환경에서 작업 하는 방법에 대 한 질문에 대 한 포럼을 제공 합니다.  
-  
- [Visual C# 일반](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
- 에 대 한 질문에 대 한 포럼을 제공 하지 않으며 Visual C# 다른 포럼에서 다루지 않는 합니다.  
-  
- [StackOverflow](http://stackoverflow.com/questions/tagged/c%23)  
- 에 대 한 질문에 대 한 포럼을 제공 하지 않으며 Visual C#을 사용 합니다.  
-  
+ [Msdn 포럼-시각적 개체C#](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
+ 다른 포럼에서 다루지 않는 시각적 개체 C# 및 문제에 대 한 질문을 위한 포럼을 제공 합니다.  
+
+ [스택 오버플로](https://stackoverflow.com/questions/tagged/c%23)  
+시각적 개체 C#에 대 한 질문과 문제에 대 한 질문과 대답 웹 사이트를 제공 합니다.  
+
  다음 항목도 참조하세요.  
- [Visual C# 프로그래머를 위한 추가 리소스](../../csharp/getting-started/additional-resources.md)  
+ [Visual C# 프로그래머를 위한 추가 리소스](../getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>참고 항목  
- [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)  
- [C# 참조](../../csharp/language-reference/index.md)  
- [의견 보내기](/visualstudio/ide/talk-to-us)  
+## <a name="see-also"></a>참조
+
+- [C# 프로그래밍 가이드](../programming-guide/index.md)
+- [C# 참조](../language-reference/index.md)
+- [의견 보내기](/visualstudio/ide/talk-to-us)

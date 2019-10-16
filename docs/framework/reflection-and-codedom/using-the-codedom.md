@@ -22,21 +22,21 @@ helpviewer_keywords:
 ms.assetid: 0444ddf3-c3f6-44ed-a999-f710d9c3e0cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50ff6e2baaee683674f82cff178eeef7b7e43de4
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
-ms.translationtype: HT
+ms.openlocfilehash: 56b0b76e8dc137cbb9346f97604c2d53435c1fe6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43486214"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045737"
 ---
 # <a name="using-the-codedom"></a>CodeDOM 사용
 CodeDOM은 소스 코드 요소의 다양한 일반적인 형식을 나타내는 형식을 제공합니다. 개체 그래프를 어셈블하는 데 CodeDOM 요소를 사용하는 소스 코드 모델을 빌드하는 프로그램을 디자인할 수 있습니다. 이 개체 그래프는 CodeDOM 코드 생성기를 사용하여 지원되는 프로그래밍 언어에 대한 소스 코드로 렌더링할 수 있습니다. CodeDOM은 소스 코드를 이진 어셈블리로 컴파일하는 데도 사용할 수 있습니다.  
   
  CodeDOM의 몇 가지 일반적인 용도는 다음과 같습니다.  
   
--   템플릿 기반 코드 생성: ASP.NET, XML Web services 클라이언트 프록시, 코드 마법사, 디자이너 또는 기타 코드 내보내기 메커니즘에 대한 코드를 생성합니다.  
+- 템플릿 기반 코드 생성: ASP.NET, XML Web services 클라이언트 프록시, 코드 마법사, 디자이너 또는 기타 코드 내보내기 메커니즘에 대한 코드를 생성합니다.  
   
--   동적 컴파일: 단일 또는 여러 언어로 코드 컴파일을 지원합니다.  
+- 동적 컴파일: 단일 또는 여러 언어로 코드 컴파일을 지원합니다.  
   
 ## <a name="building-a-codedom-graph"></a>CodeDOM 그래프 빌드  
  <xref:System.CodeDom> 네임스페이스는 언어 구문에 관계없이 소스 코드의 논리 구조를 나타내기 위한 클래스를 제공합니다.  
@@ -45,14 +45,14 @@ CodeDOM은 소스 코드 요소의 다양한 일반적인 형식을 나타내는
  CodeDOM 그래프 구조는 컨테이너 트리와 비슷합니다. 각 호환 가능한 CodeDOM 그래프의 최상위 또는 루트 컨테이너는 <xref:System.CodeDom.CodeCompileUnit>입니다. 소스 코드 모델의 모든 요소는 그래프의 <xref:System.CodeDom.CodeObject> 속성을 통해 그래프에 연결되어야 합니다.  
   
 ### <a name="building-a-source-code-model-for-a-sample-hello-world-program"></a>샘플 Hello World 프로그램에 대한 소스 코드 모델 빌드  
- 다음 연습에서는 간단한 Hello World 응용 프로그램의 코드를 나타내는 CodeDOM 개체 그래프를 빌드하는 방법의 예제를 제공합니다. 이 코드 예제의 전체 소스 코드를 보려면 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 항목을 참조하세요.  
+ 다음 연습에서는 간단한 Hello World 애플리케이션의 코드를 나타내는 CodeDOM 개체 그래프를 빌드하는 방법의 예제를 제공합니다. 이 코드 예제의 전체 소스 코드를 보려면 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> 항목을 참조하세요.  
   
 #### <a name="creating-a-compile-unit"></a>컴파일 단위 만들기  
  CodeDOM은 컴파일할 소스 코드를 모델링하는 CodeDOM 개체 그래프를 참조할 수 있는 <xref:System.CodeDom.CodeCompileUnit>라는 개체를 정의합니다. **CodeCompileUnit**에는 특성, 네임스페이스 및 어셈블리에 대한 참조를 저장하기 위한 속성이 있습니다.  
   
  <xref:System.CodeDom.Compiler.CodeDomProvider> 클래스에서 파생되는 CodeDom 공급자에는 **CodeCompileUnit**에서 참조되는 개체 그래프를 처리하는 메서드가 포함됩니다.  
   
- 간단한 응용 프로그램용 개체 그래프를 만들려면 소스 코드 모델을 어셈블하고 **CodeCompileUnit**에서 해당 모델을 참조해야 합니다.  
+ 간단한 애플리케이션용 개체 그래프를 만들려면 소스 코드 모델을 어셈블하고 **CodeCompileUnit**에서 해당 모델을 참조해야 합니다.  
   
  이 예제에서 보여 주는 구문을 사용하여 새 컴파일 단위를 만들 수 있습니다.  
   
@@ -120,11 +120,11 @@ CodeDOM은 소스 코드 요소의 다양한 일반적인 형식을 나타내는
  [!code-csharp[CodeDomExample#19](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDomExample/CS/source2.cs#19)]
  [!code-vb[CodeDomExample#19](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDomExample/VB/source2.vb#19)]  
   
- 이제 `compileUnit`라는 <xref:System.CodeDom.CodeCompileUnit>에는 간단한 Hello World 프로그램에 대한 CodeDOM 그래프가 포함됩니다. CodeDOM 그래프에서 코드를 생성 및 컴파일하는 방법에 대한 자세한 내용은 [CodeDOM 그래프에서 소스 코드 생성 및 프로그램 컴파일](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)을 참조하세요.  
+ 이제 `compileUnit`라는 <xref:System.CodeDom.CodeCompileUnit>에는 간단한 Hello World 프로그램에 대한 CodeDOM 그래프가 포함됩니다. CodeDOM 그래프에서 코드를 생성 및 컴파일하는 방법에 대한 자세한 내용은 [CodeDOM 그래프에서 소스 코드 생성 및 프로그램 컴파일](generating-and-compiling-source-code-from-a-codedom-graph.md)을 참조하세요.  
   
 ### <a name="more-information-on-building-a-codedom-graph"></a>CodeDOM 그래프 빌드에 대한 자세한 정보  
  CodeDOM은 공용 언어 런타임을 지원하는 프로그래밍 언어에 있는 코드 요소의 다양한 일반적인 형식을 지원합니다. CodeDOM이 모든 가능한 프로그래밍 언어 기능을 나타내는 요소를 제공하도록 디자인된 것은 아닙니다. CodeDOM 요소로 쉽게 나타낼 수 없는 코드는 <xref:System.CodeDom.CodeSnippetExpression>, <xref:System.CodeDom.CodeSnippetStatement>, <xref:System.CodeDom.CodeSnippetTypeMember> 또는 <xref:System.CodeDom.CodeSnippetCompileUnit>로 캡슐화할 수 있습니다. 하지만 코드 조각은 CodeDOM을 통해 자동으로 다른 언어로 변환할 수 없습니다.  
   
  각 CodeDOM 형식에 대한 문서는 <xref:System.CodeDom> 네임스페이스에 대한 참조 문서를 참조하세요.  
   
- 코드 요소의 특정 형식을 나타내는 CodeDOM 요소를 찾기 위한 빠른 차트는 [CodeDOM 빠른 참조](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)를 참조하세요.
+ 코드 요소의 특정 형식을 나타내는 CodeDOM 요소를 찾기 위한 빠른 차트는 [CodeDOM 빠른 참조](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))를 참조하세요.

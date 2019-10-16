@@ -17,33 +17,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6f4b767fe7134833ee2e404be30bb51bf1385ec9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8609b32ad2dea699b5b248b2b8bb3d81ec744043
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437039"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779469"
 ---
 # <a name="igcthreadcontrolthreadisblockingforsuspension-method"></a>IGCThreadControl::ThreadIsBlockingForSuspension 메서드
-호출 하는 스레드를 위해 차단 가비지 컬렉션이 나 다른 일시 중단 작업을 호스트에 알립니다.  
+아마도 다른 일시 중단 또는 가비지 컬렉션에 대 한 차단 하 려는 호출 하는 스레드는 호스트에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT ThreadIsBlockingForSuspension ( );  
 ```  
   
 ## <a name="remarks"></a>설명  
- 호스트 내에서 선택할 수 있습니다는 `ThreadIsBlockingForSuspension` 콜백 스레드 일정을 변경 하려면 여부입니다.  
+ 호스트 내에서 선택할 수는 `ThreadIsBlockingForSuspension` 콜백 스레드를 예약 하기 위한 여부.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IGCThreadControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IGCThreadControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/igcthreadcontrol-interface.md)

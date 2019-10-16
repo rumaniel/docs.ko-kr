@@ -7,41 +7,41 @@ helpviewer_keywords:
 - timing system [WPF]
 - animation [WPF]
 ms.assetid: 587e36f6-1957-424e-9d89-c43724f26d84
-ms.openlocfilehash: 7c61e1bbd3b9c93785393c729f2af27f29d1dc40
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4936ba7bcd78c4867dae99df8bad11776cf655db
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45994275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010321"
 ---
 # <a name="animation-and-timing-how-to-topics"></a>애니메이션 및 타이밍 방법 항목
 다음 항목에서는 사용 하는 방법을 설명 합니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 애니메이션 및 타이밍 시스템 응용 프로그램에서 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [애니메이션 가속 또는 감속](../../../../docs/framework/wpf/graphics-multimedia/how-to-accelerate-or-decelerate-an-animation.md)  
- [주기가 반복되는 동안 애니메이션 값 누적](../../../../docs/framework/wpf/graphics-multimedia/how-to-accumulate-animation-values-during-repeat-cycles.md)  
- [애니메이션 시작 값에 애니메이션 출력 값 추가](../../../../docs/framework/wpf/graphics-multimedia/how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
- [Storyboard를 사용하여 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-by-using-a-storyboard.md)  
- [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-property-without-using-a-storyboard.md)  
- [ControlTemplate에서 애니메이션 효과 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-controltemplate.md)  
- [스타일에서 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-in-a-style.md)  
- [요소 또는 브러시의 불투명도에 애니메이션 효과 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)  
- [해당 타임라인의 속도를 변경하지 않고 클록의 속도 변경](../../../../docs/framework/wpf/graphics-multimedia/change-the-speed-of-a-clock.md)  
- [대화형 메서드를 사용하여 이미 시작된 Storyboard 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-a-storyboard-after-it-starts.md)  
- [From, To 및 By를 사용하여 애니메이션 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-control-an-animation-using-from-to-and-by.md)  
- [이름 범위 정의](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-name-scope.md)  
- [클록 상태가 변경될 때 알림 받기](../../../../docs/framework/wpf/graphics-multimedia/how-to-receive-notification-when-clock-state-changes.md)  
- [애니메이션 반복](../../../../docs/framework/wpf/graphics-multimedia/how-to-repeat-an-animation.md)  
- [Storyboard 검색](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard.md)  
- [동기적으로 Storyboard 검색](../../../../docs/framework/wpf/graphics-multimedia/how-to-seek-a-storyboard-synchronously.md)  
- [애니메이션의 지속 시간 설정](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-duration-for-an-animation.md)  
- [Storyboard로 애니메이션 효과를 적용한 후 속성 설정](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
- [자식 타임라인을 사용하여 애니메이션 단순화](../../../../docs/framework/wpf/graphics-multimedia/how-to-simplify-animations-by-using-child-timelines.md)  
- [Storyboard 애니메이션 간의 HandoffBehavior 지정](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-handoffbehavior-between-storyboard-animations.md)  
- [활성 기간 끝에 도달한 타임라인의 FillBehavior 지정](../../../../docs/framework/wpf/graphics-multimedia/specify-the-fillbehavior-for-a-timeline.md)  
- [타임라인을 자동으로 뒤집을지 여부 지정](../../../../docs/framework/wpf/graphics-multimedia/how-to-specify-whether-a-timeline-automatically-reverses.md)  
- [속성 값이 변경될 때 애니메이션 트리거](../../../../docs/framework/wpf/graphics-multimedia/how-to-trigger-an-animation-when-a-property-value-changes.md)  
- [Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
+ [애니메이션 가속 또는 감속](how-to-accelerate-or-decelerate-an-animation.md)  
+ [주기가 반복되는 동안 애니메이션 값 누적](how-to-accumulate-animation-values-during-repeat-cycles.md)  
+ [애니메이션 시작 값에 애니메이션 출력 값 추가](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)  
+ [Storyboard를 사용하여 속성에 애니메이션 효과 주기](how-to-animate-a-property-by-using-a-storyboard.md)  
+ [Storyboard를 사용하지 않고 속성에 애니메이션 효과 주기](how-to-animate-a-property-without-using-a-storyboard.md)  
+ [ControlTemplate에서 애니메이션 효과 적용](how-to-animate-in-a-controltemplate.md)  
+ [스타일에서 애니메이션 효과 주기](how-to-animate-in-a-style.md)  
+ [요소 또는 브러시의 불투명도에 애니메이션 효과 적용](how-to-animate-the-opacity-of-an-element-or-brush.md)  
+ [해당 타임라인의 속도를 변경하지 않고 클록의 속도 변경](change-the-speed-of-a-clock.md)  
+ [대화형 메서드를 사용하여 이미 시작된 Storyboard 제어](how-to-control-a-storyboard-after-it-starts.md)  
+ [From, To 및 By를 사용하여 애니메이션 제어](how-to-control-an-animation-using-from-to-and-by.md)  
+ [이름 범위 정의](how-to-define-a-name-scope.md)  
+ [클록 상태가 변경될 때 알림 받기](how-to-receive-notification-when-clock-state-changes.md)  
+ [애니메이션 반복](how-to-repeat-an-animation.md)  
+ [Storyboard 검색](how-to-seek-a-storyboard.md)  
+ [동기적으로 Storyboard 검색](how-to-seek-a-storyboard-synchronously.md)  
+ [애니메이션의 지속 시간 설정](how-to-set-a-duration-for-an-animation.md)  
+ [Storyboard로 애니메이션 효과를 적용한 후 속성 설정](how-to-set-a-property-after-animating-it-with-a-storyboard.md)  
+ [자식 타임라인을 사용하여 애니메이션 단순화](how-to-simplify-animations-by-using-child-timelines.md)  
+ [Storyboard 애니메이션 간의 HandoffBehavior 지정](how-to-specify-handoffbehavior-between-storyboard-animations.md)  
+ [활성 기간 끝에 도달한 타임라인의 FillBehavior 지정](specify-the-fillbehavior-for-a-timeline.md)  
+ [타임라인을 자동으로 뒤집을지 여부 지정](how-to-specify-whether-a-timeline-automatically-reverses.md)  
+ [속성 값이 변경될 때 애니메이션 트리거](how-to-trigger-an-animation-when-a-property-value-changes.md)  
+ [Storyboard를 시작한 후 이벤트 트리거를 사용하여 제어](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Media.Animation.Timeline>  
@@ -55,4 +55,4 @@ ms.locfileid: "45994275"
  <xref:System.Windows.Media.Animation>  
   
 ## <a name="related-sections"></a>관련 단원  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [그래픽 및 멀티미디어](index.md)

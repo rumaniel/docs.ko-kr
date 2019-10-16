@@ -8,12 +8,12 @@ helpviewer_keywords:
 - icon list control
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
-ms.openlocfilehash: 1ce9ced0c7e6bc13d5cdf331135590ba48c624fb
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: d4513439594c9bceac3463a5b878f9059a16046e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48844919"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645692"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList 구성 요소 개요(Windows Forms)
 
@@ -27,7 +27,7 @@ Windows Forms <xref:System.Windows.Forms.ImageList> 구성 요소는 컨트롤�
 
 <xref:System.Windows.Forms.ImageList> 구성 요소의 키 속성은 연결된 컨트롤에서 사용할 그림을 포함하는 <xref:System.Windows.Forms.ImageList.Images%2A>입니다. 인덱스 값이나 해당 키를 통해 각 개별 이미지에 액세스할 수 있습니다. <xref:System.Windows.Forms.ImageList.ColorDepth%2A> 속성은 이미지 렌더링에 사용되는 색 수를 결정합니다. 이미지는 모두 <xref:System.Windows.Forms.ImageList.ImageSize%2A> 속성에 설정된 동일한 크기로 표시됩니다. 더 큰 이미지는 적절하게 크기가 조정됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Windows.Forms.ImageList>
-- [방법: Windows Forms ImageList 구성 요소를 사용하여 이미지 추가 또는 제거](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)
+- [방법: Windows Forms ImageList 구성 요소를 사용 하 여 이미지 추가 또는 제거](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58bad617eb91b7e529ff3d95edd06a5c73feee64
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e51ff64115ce3417087eee6845aa802ad64f2a72
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196824"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69961000"
 ---
 # <a name="icordebugmodule3-interface"></a>ICorDebugModule3 인터페이스
 동적 모듈에 대한 기호 판독기를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 interface ICorDebugModule3 : IUnknown  
 {  
     HRESULT CreateReaderForInMemorySymbols  
@@ -43,25 +43,26 @@ interface ICorDebugModule3 : IUnknown
   
 |메서드|설명|  
 |------------|-----------------|  
-|[ICorDebugModule3::CreateReaderForInMemorySymbols 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|기호 판독기를 만듭니다 (일반적으로 [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)) 동적 모듈에 대 한 합니다.|  
+|[ICorDebugModule3::CreateReaderForInMemorySymbols 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule3-createreaderforinmemorysymbols-method.md)|동적 모듈에 대 한 기호 판독기 (일반적으로 [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md))를 만듭니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 인터페이스는 논리적으로 "ICorDebugModule" 및 "ICorDebugModule2" 인터페이스를 확장 합니다.  
+ 이 인터페이스는 "ICorDebugModule" 및 "ICorDebugModule2" 인터페이스를 논리적으로 확장 합니다.  
   
 > [!NOTE]
->  이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
+> 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
- **.NET framework 버전:** 4.5, 4, 3.5 SP1
+ **.NET Framework 버전:** 4.5, 4, 3.5 SP1
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebugRemoteTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebugRemoteTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

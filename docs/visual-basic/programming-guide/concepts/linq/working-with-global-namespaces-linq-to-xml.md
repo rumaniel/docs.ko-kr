@@ -2,15 +2,15 @@
 title: 전역 네임스페이스 작업(Visual Basic)(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
-ms.openlocfilehash: c1f34b374f956ec0a8b9658742e529d7ccb1b2ce
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9aab6f7175c905fcb3e82829f131f52b3d9368ac
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33648907"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710380"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>전역 네임스페이스 작업(Visual Basic)(LINQ to XML)
-사용 하 여 XML 네임 스페이스를 선언 하는 기능에는 Visual Basic에서 XML 리터럴의 주요 기능 중 하나는 `Imports` 문. 이 기능을 사용하여 접두사를 사용하는 XML 네임스페이스를 선언하거나 기본 XML 네임스페이스를 선언할 수 있습니다.  
+Visual Basic에서 xml 리터럴의 주요 기능 중 하나는 `Imports` 문을 사용 하 여 xml 네임 스페이스를 선언 하는 기능입니다. 이 기능을 사용하여 접두사를 사용하는 XML 네임스페이스를 선언하거나 기본 XML 네임스페이스를 선언할 수 있습니다.  
   
  이 기능은 두 가지 상황에서 유용합니다. 첫째, XML 리터럴에서 선언된 네임스페이스는 포함 식에까지 영향을 미치지 않습니다. 전역 네임스페이스를 선언하면 네임스페이스와 함께 포함 식을 사용하기 위해 수행해야 하는 작업량이 줄어듭니다. 둘째, XML 속성과 함께 네임스페이스를 사용하기 위해 전역 네임스페이스를 선언해야 합니다.  
   
@@ -197,5 +197,6 @@ End Module
 http://www.adventure-works.com  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [XML 네임 스페이스 (Visual Basic) 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+## <a name="see-also"></a>참고자료
+
+- [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)

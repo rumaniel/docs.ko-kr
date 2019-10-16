@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ScrollBar control [WPF]
 - controls [WPF], ScrollBar
 ms.assetid: 60f27d35-8f7b-4285-89d2-28336a4c073a
-ms.openlocfilehash: 9ae7334172b5cbc4ea7fb6be3caebcf2c47589ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 242dbdeeed5408815878aa30ef276019e1ccc2c4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556005"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971043"
 ---
 # <a name="scrollbar"></a>ScrollBar
-A <xref:System.Windows.Controls.Primitives.ScrollBar> 이동 하 여 현재 보기 영역 밖에 있는 콘텐츠를 볼 수 있습니다는 <xref:System.Windows.Controls.Primitives.Thumb> 는 콘텐츠를 볼 수 있도록 합니다.  
+A <xref:System.Windows.Controls.Primitives.ScrollBar> 이동 하 여 현재 가시 영역 밖에 있는 콘텐츠를 볼 수 있습니다는 <xref:System.Windows.Controls.Primitives.Thumb> 콘텐츠 표시 되도록 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [ScrollBar의 Thumb 크기 사용자 지정](../../../../docs/framework/wpf/controls/how-to-customize-the-thumb-size-on-a-scrollbar.md)  
+ [ScrollBar의 Thumb 크기 사용자 지정](how-to-customize-the-thumb-size-on-a-scrollbar.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  

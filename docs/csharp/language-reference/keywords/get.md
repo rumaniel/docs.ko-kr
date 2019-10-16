@@ -1,5 +1,6 @@
 ---
-title: get(C# 참조)
+title: get - C# 참조
+ms.custom: seodec18
 ms.date: 03/10/2017
 f1_keywords:
 - get_CSharpKeyword
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - get keyword [C#]
 ms.assetid: a52de048-fbe0-41b0-82ec-8e4ac04d3a71
-ms.openlocfilehash: 182f7164ad929232c185903a3dbf024a2e5d22a7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 783814a575e95fc9deb5c9cdef235a5636f5f529
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45987788"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602139"
 ---
 # <a name="get-c-reference"></a>get(C# 참조)
 
-`get` 키워드는 속성 값 또는 인덱서 요소를 반환하는 속성 또는 인덱서의 *accessor* 메서드를 정의합니다. 자세한 내용은 [속성](../../../csharp/programming-guide/classes-and-structs/properties.md), [자동으로 구현된 속성](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md) 및 [인덱서](../../../csharp/programming-guide/indexers/index.md)를 참조하세요.  
+`get` 키워드는 속성 값 또는 인덱서 요소를 반환하는 속성 또는 인덱서의 *accessor* 메서드를 정의합니다. 자세한 내용은 [속성](../../programming-guide/classes-and-structs/properties.md), [자동으로 구현된 속성](../../programming-guide/classes-and-structs/auto-implemented-properties.md) 및 [인덱서](../../programming-guide/indexers/index.md)를 참조하세요.  
   
 다음 예제에서는 `Seconds`라는 속성의 `get` 및 `set` 접근자를 둘 다 정의합니다. `_seconds`라는 private 필드를 사용하여 속성 값을 지원합니다.  
  
@@ -36,7 +37,7 @@ ms.locfileid: "45987788"
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)  
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
-- [속성](../../../csharp/programming-guide/classes-and-structs/properties.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](./index.md)
+- [속성](../../programming-guide/classes-and-structs/properties.md)

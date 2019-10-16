@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c9a35f35d7aea34c0ef08c30415fde75fe71e645
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1d8cfde8f0eb14919c12d261c3f9f7209365829c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426052"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759452"
 ---
 # <a name="isymunmanagedmethodgetsequencepoints-method"></a>ISymUnmanagedMethod::GetSequencePoints 메서드
 이 메서드 내에서 모든 시퀀스 위치를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetSequencePoints(  
     [in]  ULONG32  cPoints,  
     [out] ULONG32  *pcPoints,  
@@ -41,24 +41,24 @@ HRESULT GetSequencePoints(
     [in, size_is(cPoints)] ULONG32  endColumns[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cPoints`  
- [in] A `ULONG32` 의 크기를 받는 `offsets`, `documents`, `lines`, `columns`, `endLines`, 및 `endColumns` 배열입니다.  
+ [in] `ULONG32` 의 크기를 받는 합니다 `offsets`, `documents`, `lines`, `columns`를 `endLines`, 및 `endColumns` 배열입니다.  
   
  `pcPoints`  
- [out] 에 대 한 포인터는 `ULONG32` 시퀀스 위치를 포함 하는 데 필요한 버퍼의 길이 받는입니다.  
+ [out] 에 대 한 포인터를 `ULONG32` 시퀀스 위치를 포함 하는 데 필요한 버퍼의 길이 받는입니다.  
   
  `offsets`  
- [in] 시퀀스 위치에 대 한 메서드의 시작 부분에서 MSIL (language) 오프셋을 중간 Microsoft 저장할 배열입니다.  
+ [in] 저장할 Microsoft 중간 언어 (MSIL) 시퀀스 위치에 대 한 메서드 시작 부분 으로부터의 오프셋 배열입니다.  
   
  `documents`  
- [in] 시퀀스 위치가 있는 문서를 저장할 배열입니다.  
+ [in] 시퀀스 위치가 있는 문서를 저장 하는 배열입니다.  
   
  `lines`  
- [in] 에 시퀀스 위치가 있는 문서의 줄을 저장할 배열입니다.  
+ [in] 시퀀스 위치가 있는 문서의 줄을 저장할 배열입니다.  
   
  `columns`  
- [in] 시퀀스 위치가 있는 문서의에서 열을 저장 하는 배열입니다.  
+ [in] 시퀀스 위치가 있는 문서의 열을 저장 하는 배열입니다.  
   
  `endLines`  
  [in] 시퀀스 위치가 끝나는 문서의 줄 배열입니다.  
@@ -67,10 +67,11 @@ HRESULT GetSequencePoints(
  [in] 시퀀스 위치가 끝나는 문서의 열 배열입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.  
+ 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

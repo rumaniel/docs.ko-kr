@@ -1,0 +1,12 @@
+- name: Tlbexp 도우미 함수
+  href: index.md
+  items:
+    - name: GetTypeLibInfo 함수
+      href: gettypelibinfo-function.md
+    - name: LoadTypeLibWithResolver 함수
+      href: loadtypelibwithresolver-function.md
+    - name: ITypeLibResolver 인터페이스
+      href: itypelibresolver-interface.md
+      items:
+        - name: ResolveTypeLib 메서드
+          href: resolvetypelib-method.md

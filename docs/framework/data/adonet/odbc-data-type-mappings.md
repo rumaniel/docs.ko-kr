@@ -2,22 +2,22 @@
 title: ODBC 데이터 형식 매핑
 ms.date: 03/30/2017
 ms.assetid: 43c35d32-831d-480f-a150-78f7e869d17f
-ms.openlocfilehash: ece9397e8c8e8b9d26f8aac2298aa25173ac2d93
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 6611ca35ab5e5b44fa9adacfe25593bb4a5b9c44
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44251536"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70783518"
 ---
 # <a name="odbc-data-type-mappings"></a>ODBC 데이터 형식 매핑
-다음 표에서는 .NET Framework Data Provider for ODBC([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)])의 데이터 형식에 대해 유추된 <xref:System.Data.Odbc> 형식을 보여 줍니다. 또한 이 표에는 <xref:System.Data.Odbc.OdbcDataReader>의 형식화된 접근자 메서드도 나열되어 있습니다.  
+다음 표에서는 ODBC에 대 한 .NET Framework Data Provider (<xref:System.Data.Odbc>)의 데이터 형식에 대해 유추 된 .NET Framework 형식을 보여 줍니다. 또한 이 표에는 <xref:System.Data.Odbc.OdbcDataReader>의 형식화된 접근자 메서드도 나열되어 있습니다.  
   
-|ODBC 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 형식|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]의 형식화된 접근자|  
+|ODBC 형식|.NET Framework 형식|.NET Framework 형식화 된 접근자|  
 |---------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |SQL_BIGINT|Int64|GetInt64()|  
 |SQL_BINARY|Byte[]|GetBytes()|  
 |SQL_BIT|Boolean|GetBoolean()|  
-|SQL_CHAR|문자열<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
+|SQL_CHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
 |SQL_DECIMAL|Decimal|GetDecimal()|  
 |SQL_DOUBLE|Double|GetDouble()|  
 |SQL_GUID|Guid|GetGuid()|  
@@ -32,9 +32,10 @@ ms.locfileid: "44251536"
 |SQL_TYPE_TIMESTAMP|DateTime|GetDateTime()|  
 |SQL_VARBINARY|Byte[]|GetBytes()|  
 |SQL_WCHAR|문자열<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
-|SQL_WLONGVARCHAR|문자열<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
-|SQL_WVARCHAR|문자열<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
+|SQL_WLONGVARCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
+|SQL_WVARCHAR|String<br /><br /> Char[]|GetString()<br /><br /> GetChars()|  
   
-## <a name="see-also"></a>참고 항목  
- [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)
+- [ADO.NET 개요](ado-net-overview.md)

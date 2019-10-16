@@ -1,17 +1,18 @@
 ---
-title: partial 메서드(C# 참조)
+title: partial 메서드 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - partialmethod_CSharpKeyword
 helpviewer_keywords:
 - partial methods [C#]
 ms.assetid: 43f40242-17e0-4452-8573-090503ad3137
-ms.openlocfilehash: f859506ef59f4fc709e9942d86130fc222c14faf
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 14bcd3329b6ca8e46f6c180c97174a561108d143
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516371"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633355"
 ---
 # <a name="partial-method-c-reference"></a>partial 메서드(C# 참조)
 

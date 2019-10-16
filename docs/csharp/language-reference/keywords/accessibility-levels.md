@@ -1,16 +1,17 @@
 ---
-title: 액세스 가능성 수준(C# 참조)
+title: 액세스 가능성 수준 - C# 참조
+ms.custom: seodec18
 ms.date: 12/06/2017
 helpviewer_keywords:
 - access modifiers [C#], accessibility levels
 - accessibility levels
 ms.assetid: dc083921-0073-413e-8936-a613e8bb7df4
-ms.openlocfilehash: 4679fd2564454e7f1ade5cb4813729b65f433012
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 2d6605a305e5003e19f4fe1dd260746302691215
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617061"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602394"
 ---
 # <a name="accessibility-levels-c-reference"></a>액세스 가능성 수준(C# 참조)
 
@@ -42,20 +43,21 @@ ms.locfileid: "45617061"
 |`interface`|`public`|없음|  
 |`struct`|`private`|`public`<br /><br /> `internal`<br /><br /> `private`|  
   
- 중첩된 형식의 액세스 가능성은 액세스 가능 도메인에 따라 다릅니다. [액세스 가능성 도메인](../../../csharp/language-reference/keywords/accessibility-domain.md)은 멤버에 대해 선언된 액세스 가능성 및 한 수준 위 형식의 액세스 가능성 도메인에 의해 결정됩니다. 그러나 중첩 형식의 액세스 가능 도메인은 포함하는 형식의 액세스 가능 도메인을 벗어날 수는 없습니다.  
+ 중첩된 형식의 액세스 가능성은 액세스 가능 도메인에 따라 다릅니다. [액세스 가능성 도메인](./accessibility-domain.md)은 멤버에 대해 선언된 액세스 가능성 및 한 수준 위 형식의 액세스 가능성 도메인에 의해 결정됩니다. 그러나 중첩 형식의 액세스 가능 도메인은 포함하는 형식의 액세스 가능 도메인을 벗어날 수는 없습니다.  
   
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
-- [C# 참조](../../../csharp/language-reference/index.md)  
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
-- [액세스 한정자](../../../csharp/language-reference/keywords/access-modifiers.md)  
-- [접근성 도메인](../../../csharp/language-reference/keywords/accessibility-domain.md)  
-- [접근성 수준 사용에 대한 제한](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)  
-- [액세스 한정자](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)  
-- [public](../../../csharp/language-reference/keywords/public.md)  
-- [private](../../../csharp/language-reference/keywords/private.md)  
-- [protected](../../../csharp/language-reference/keywords/protected.md)  
-- [internal](../../../csharp/language-reference/keywords/internal.md)
+## <a name="see-also"></a>참고 항목
+
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](./index.md)
+- [액세스 한정자](./access-modifiers.md)
+- [접근성 도메인](./accessibility-domain.md)
+- [접근성 수준 사용에 대한 제한](./restrictions-on-using-accessibility-levels.md)
+- [액세스 한정자](../../programming-guide/classes-and-structs/access-modifiers.md)
+- [public](./public.md)
+- [private](./private.md)
+- [protected](./protected.md)
+- [internal](./internal.md)

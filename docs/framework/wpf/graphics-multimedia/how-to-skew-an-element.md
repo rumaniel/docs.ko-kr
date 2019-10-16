@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: f828e4d4e59fa5ed31f81f3e83570a25add19e01
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: cf770a284238826852e788e27f3b3f329ed0269f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43877082"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664079"
 ---
 # <a name="how-to-skew-an-element"></a>방법: 요소 기울이기
-사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.SkewTransform> 요소 기울이기 하 합니다. 전단이라고도 하는 기울이기는 일관되지 않은 방식으로 좌표 공간을 늘리는 변환입니다. 일반적인 한 가지 용도 <xref:System.Windows.Media.SkewTransform> 시뮬레이션입니다 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 깊이 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] 개체입니다.  
+사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Media.SkewTransform> 요소 기울이기 하 합니다. 전단이라고도 하는 기울이기는 일관되지 않은 방식으로 좌표 공간을 늘리는 변환입니다. 일반적인 한 가지 용도 <xref:System.Windows.Media.SkewTransform> 를 2 차원 개체에 3 차원 깊이 시뮬레이트하는 것입니다.  
   
  사용 하 여는 <xref:System.Windows.Media.SkewTransform.CenterX%2A> 및 <xref:System.Windows.Media.SkewTransform.CenterY%2A> 가운데를 지정 하는 속성의 가리킨는 <xref:System.Windows.Media.SkewTransform>합니다.  
   
@@ -25,25 +25,26 @@ ms.locfileid: "43877082"
  다음 예에서는 45도의 가로 기울이기를 적용을 <xref:System.Windows.Shapes.Rectangle> (0, 0)의 중심점에서.  
   
 ## <a name="example"></a>예제  
- [!code-xaml[transformsSample#41](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
+ [!code-xaml[transformsSample#41](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#41)]  
   
  다음 예에서는 45도의 가로 기울이기를 적용을 <xref:System.Windows.Shapes.Rectangle> (25, 25)의 중심점에서.  
   
- [!code-xaml[transformsSample#42](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
+ [!code-xaml[transformsSample#42](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#42)]  
   
  다음 예에서는 45도의 세로 기울이기를 적용을 <xref:System.Windows.Shapes.Rectangle> (25, 25)의 중심점에서.  
   
- [!code-xaml[transformsSample#43](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
+ [!code-xaml[transformsSample#43](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/SkewTransformExample.xaml#43)]  
   
  다음 그림에서는 이 예제에서 사용되는 다양한 기울이기를 보여 줍니다.  
   
- ![SkewTransform 예제](../../../../docs/framework/wpf/graphics-multimedia/media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
+ ![SkewTransform 예제](./media/img-wcpsdk-graphicsmm-skewtransformexample.gif "img_wcpsdk_graphicsmm_skewtransformexample")  
 세 개의 SkewTransform 예제 그림  
   
  전체 샘플을 보려면 [2차원 변환 샘플](https://go.microsoft.com/fwlink/?LinkID=158252)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.SkewTransform>  
- [Transform 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.SkewTransform>
+- [Transform 개요](transforms-overview.md)
+- [방법 항목](transformations-how-to-topics.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a3f752bb-8945-4e1b-8163-71def6e9f137
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85e7213342984276d8509fca8caefb2661865733
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3e4205c09d8f43a03b5c8b2e1be5029a543c158b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387106"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051859"
 ---
 # <a name="com-interop-sample-net-client-and-com-server"></a>COM Interop 샘플: .NET 클라이언트 및 COM 서버
 이 샘플에서는 [COM 서버](#cpconcominteropsamplenetclientcomserveranchor2)에 액세스하도록 빌드된 [.NET 클라이언트](#cpconcominteropsamplenetclientcomserveranchor1)가 COM coclass 인스턴스를 만들고 클래스 멤버를 호출하여 담보 대출 계산을 수행하는 방법을 보여 줍니다.  
@@ -299,5 +299,6 @@ static double Round(double value, short digits)
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [.NET Framework에 COM 구성 요소 노출](../../../docs/framework/interop/exposing-com-components.md)
+## <a name="see-also"></a>참고 항목
+
+- [.NET Framework에 COM 구성 요소 노출](exposing-com-components.md)

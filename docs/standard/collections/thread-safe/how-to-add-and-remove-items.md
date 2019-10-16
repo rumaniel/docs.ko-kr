@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 81b64b95-13f7-4532-9249-ab532f629598
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98d30cd89114aa4aa3d4f7f71f5174c54d3fcecb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9d8b1c63f10d1d79c3fec6cad87c9a82f03716c8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677840"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54543424"
 ---
 # <a name="how-to-add-and-remove-items-from-a-concurrentdictionary"></a>방법: ConcurrentDictionary에서 항목 추가 및 제거
 이 예제는 <xref:System.Collections.Concurrent.ConcurrentDictionary%602?displayProperty=nameWithType>에서 항목을 추가, 검색, 업데이트 및 제거하는 방법을 보여 줍니다. 이 컬렉션 클래스는 스레드로부터 안전하게 구현됩니다. 여러 스레드에서 컬렉션에 동시에 액세스할 수 있을 때는 언제든지 이 클래스를 사용하는 것이 좋습니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "45677840"
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A>|지정된 키의 기존 값을 검색하려는 경우 및 존재하지 않는 키/값 쌍을 지정하려는 경우|  
 |<xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryAdd%2A>, <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryGetValue%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryUpdate%2A> , <xref:System.Collections.Concurrent.ConcurrentDictionary%602.TryRemove%2A>|키/값 쌍 추가, 가져오기, 업데이트 또는 제거를 수행하려는 경우 및 어떤 이유로 인해 이러한 시도가 실패하거나 이미 키가 존재할 때 다른 작업을 대신 수행하려는 경우|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 <xref:System.Threading.Tasks.Task> 인스턴스를 사용하여 일부 요소를 <xref:System.Collections.Concurrent.ConcurrentDictionary%602>에 동시에 추가한 다음 모든 콘텐츠를 출력하여 해당 요소가 성공적으로 추가되었음을 보여 줍니다. 또한 이 예제에서는 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.AddOrUpdate%2A>, <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 및 <xref:System.Collections.Concurrent.ConcurrentDictionary%602.GetOrAdd%2A> 메서드를 사용하여 컬렉션의 항목을 추가, 업데이트 및 검색하는 방법을 보여 줍니다.  
   
  [!code-csharp[CDS#16](../../../../samples/snippets/csharp/VS_Snippets_Misc/cds/cs/cds_dictionaryhowto.cs#16)]
@@ -50,5 +50,5 @@ ms.locfileid: "45677840"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
 - [스레드로부터 안전한 컬렉션](../../../../docs/standard/collections/thread-safe/index.md)

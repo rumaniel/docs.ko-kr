@@ -1,19 +1,20 @@
 ---
-title: in 매개 변수 한정자(C# 참조)
-ms.date: 03/06/2018
+title: in 매개 변수 한정자 - C# 참조
+ms.custom: seodec18
+ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], in
 - in parameters [C#]
-ms.openlocfilehash: 54abd5192d0d9bb49be0a9feb8e5e4eaeb691a0c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e39d470308ed5a2b2ed82ade0faf8ba925228c2c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512017"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59112647"
 ---
 # <a name="in-parameter-modifier-c-reference"></a>in 매개 변수 한정자(C# 참조)
 
-`in` 키워드를 사용하면 참조를 통해 인수를 전달할 수 있습니다. 이 키워드는 호출된 메서드에서 `in` 인수를 수정할 수 없다는 점을 제외하고 [ref](ref.md) 또는 [out](out-parameter-modifier.md) 키워드와 유사합니다. `ref` 인수는 수정할 수 있지만 `out` 인수는 호출자가 수정해야 하며, 해당 수정 사항은 호출 컨텍스트에서 식별 가능합니다.
+`in` 키워드를 사용하면 참조를 통해 인수를 전달할 수 있습니다. 이 키워드는 정식 매개 변수를 변수여야 하는 인수의 별칭으로 설정합니다. 즉, 매개 변수에 대한 모든 작업이 인수에서 수행됩니다. 이 키워드는 호출된 메서드에서 `in` 인수를 수정할 수 없다는 점을 제외하고 [ref](ref.md) 또는 [out](out-parameter-modifier.md) 키워드와 유사합니다. `ref` 인수는 수정할 수 있지만 `out` 인수는 호출된 메서드가 수정해야 하며, 해당 수정 사항은 호출 컨텍스트에서 식별 가능합니다.
 
 [!code-csharp-interactive[cs-in-keyword](../../../../samples/snippets/csharp/language-reference/keywords/in-ref-out-modifier/InParameterModifier.cs#1)]  
 
@@ -22,9 +23,11 @@ ms.locfileid: "43512017"
 > [!NOTE] 
 > `in` 키워드는 `foreach` 명령문의 일부 또는 LINQ 쿼리에서 `join` 절의 일부로 형식 매개 변수가 반공변(contravariant)임을 지정하도록 제네릭 형식 매개 변수와 함께 사용될 수도 있습니다. 이러한 컨텍스트에서 `in` 키워드의 사용에 대한 자세한 내용은 모든 해당 사용에 대한 링크를 제공하는 [in](in.md)을 참조하세요.
   
- `in` 인수로 전달되는 변수는 메서드 호출에서 전달되기 전에 초기화되어야 합니다. 그러나 호출된 메서드는 값을 할당하거나 인수를 수정하지 않을 수 있습니다.  
-  
- `in`, `ref` 및 `out` 키워드는 서로 다른 런타임 동작을 수행하지만 컴파일 시간에 메서드 시그니처의 일부로 간주되지는 않습니다. 따라서 메서드 하나는 `ref` 또는 `in` 인수를 사용하고 다른 하나는 `out` 인수를 사용한다는 것 외에는 차이점이 없으면 메서드를 오버로드할 수 없습니다. 예를 들어 다음 코드는 컴파일되지 않습니다.  
+`in` 인수로 전달되는 변수는 메서드 호출에서 전달되기 전에 초기화되어야 합니다. 그러나 호출된 메서드는 값을 할당하거나 인수를 수정하지 않을 수 있습니다.  
+
+`in` 매개 변수 한정자는 C# 7.2 이상에서 사용 가능합니다. 이전 버전은 컴파일러 오류 `CS8107`(“C# 7.0에서는 ’읽기 전용 참조’ 기능을 사용할 수 없습니다. 언어 버전 7.2 이상을 사용하세요.”)을 생성합니다. 컴파일러 언어 버전을 구성하려면 [C# 언어 버전 선택](../configure-language-version.md)을 참조하세요.
+
+`in`, `ref` 및 `out` 키워드는 오버로드 해결을 위한 메서드 시그니처의 일부로 간주되지 않습니다. 따라서 메서드 하나는 `ref` 또는 `in` 인수를 사용하고 다른 하나는 `out` 인수를 사용한다는 것 외에는 차이점이 없으면 메서드를 오버로드할 수 없습니다. 예를 들어 다음 코드는 컴파일되지 않습니다.  
   
 ```csharp
 class CS0663_Example
@@ -120,8 +123,8 @@ Method(in i); // passed by readonly reference, explicitly using `in`
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../index.md)  
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)  
-- [C# 키워드](index.md)  
-- [메서드 매개 변수](method-parameters.md)  
-- [값 형식과 참조 의미 체계](../../reference-semantics-with-value-types.md)  
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](index.md)
+- [메서드 매개 변수](method-parameters.md)
+- [안전하고 효율적인 코드 작성](../../write-safe-efficient-code.md)

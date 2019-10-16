@@ -2,12 +2,12 @@
 title: '방법: 여러 소스로 개체 컬렉션 채우기(LINQ)(C#)'
 ms.date: 06/12/2018
 ms.assetid: 8ad7d480-b46c-4ccc-8c57-76f2d04ccc6d
-ms.openlocfilehash: 377b4a21c78be2b53d2bcd0e88d39d06609c462b
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c00257db7f3c06cab55cd48f7472f07dd7b2a664
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216095"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593062"
 ---
 # <a name="how-to-populate-object-collections-from-multiple-sources-linq-c"></a>방법: 여러 소스로 개체 컬렉션 채우기(LINQ)(C#)
 
@@ -18,7 +18,7 @@ ms.locfileid: "44216095"
 
 ## <a name="to-create-the-data-file"></a>데이터 파일을 만들려면
 
-[방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)에 설명된 대로 names.csv 및 scores.csv 파일을 해당 프로젝트 폴더에 복사합니다.
+[방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)](./how-to-join-content-from-dissimilar-files-linq.md)에 설명된 대로 names.csv 및 scores.csv 파일을 해당 프로젝트 폴더에 복사합니다.
 
 ## <a name="example"></a>예
 
@@ -107,7 +107,7 @@ class PopulateCollection
  */
 ```
 
-[select](../../../../csharp/language-reference/keywords/select-clause.md) 절에서 개체 이니셜라이저는 두 소스의 데이터를 사용하여 새 `Student` 개체를 각각 인스턴스화하는 데 사용됩니다.
+[select](../../../language-reference/keywords/select-clause.md) 절에서 개체 이니셜라이저는 두 소스의 데이터를 사용하여 새 `Student` 개체를 각각 인스턴스화하는 데 사용됩니다.
 
 쿼리 결과를 저장할 필요가 없는 경우 무명 형식이 명명된 형식보다 더 편리할 수 있습니다. 명명된 형식은 쿼리가 실행되는 메서드 외부로 쿼리 결과를 전달하는 경우에 필요합니다. 다음 예제는 앞의 예제와 동일한 작업을 실행하지만 명명된 형식 대신 무명 형식을 사용합니다.
 
@@ -139,16 +139,8 @@ foreach (var student in queryNamesScores2)
 }
 ```
 
-## <a name="compiling-the-code"></a>코드 컴파일
-
-다음 옵션 중 하나를 대상으로 하는 프로젝트를 만들고 컴파일합니다.
-
-- System.Core.dll에 대한 참조를 포함한 .NET Framework 버전 3.5
-- .NET Framework 버전 4.0 이상
-- .NET Core 버전 1.0 이상
-
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
-- [익명 형식](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
+- [LINQ 및 문자열(C#)](./linq-and-strings.md)
+- [개체 이니셜라이저 및 컬렉션 이니셜라이저](../../classes-and-structs/object-and-collection-initializers.md)
+- [익명 형식](../../classes-and-structs/anonymous-types.md)

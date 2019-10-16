@@ -3,12 +3,12 @@ title: 식 트리 요약
 description: 식 트리를 사용하여 코드를 데이터로 해석하고 해당 코드를 기반으로 하는 새 기능을 빌드하는 동적 프로그램을 만드는 방법을 요약합니다.
 ms.date: 06/20/2016
 ms.assetid: eb687ebd-1149-4453-9fc1-12a084495a66
-ms.openlocfilehash: e0d46aa67b61fd4e1d2bcc20b4a567524bb00301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 99b9463df096d3aada19ed7995b04ef4bd41c179
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33213512"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59148631"
 ---
 # <a name="expression-trees-summary"></a>식 트리 요약
 
@@ -25,4 +25,3 @@ ms.locfileid: "33213512"
 식 트리로 잘 변환되지 않는 최신 C# 언어 요소가 몇 가지 있습니다. 식 트리에는 `await` 식이나 `async` 람다 식이 포함될 수 없습니다. C# 6 릴리스에서 추가된 많은 기능이 식 트리에 작성된 대로 정확하게 나타나지 않습니다. 대신 최신 기능은 해당되는 이전 구문으로 식 트리에 노출됩니다. 생각만큼 큰 제한 사항이 아닐 수 있습니다. 실제로는 새로운 언어 기능이 도입되어도 식 트리를 해석하는 코드가 동일하게 작동할 수 있습니다.
 
 이러한 제한 사항에도 불구하고 식 트리를 사용하면 데이터 구조로 표시되는 코드를 해석하고 수정하는 동적 알고리즘을 만들 수 있습니다. 식 트리는 강력한 도구이며 기능을 수행하기 위해 Entity Framework와 같은 풍부한 라이브러리를 사용하는 .NET 에코시스템의 기능 중 하나입니다.
-

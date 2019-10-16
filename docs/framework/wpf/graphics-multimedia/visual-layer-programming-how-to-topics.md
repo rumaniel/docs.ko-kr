@@ -8,27 +8,28 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: e4328e1628028be72d10ee2a59c3f53b18bd6580
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762087"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>시각적 계층 프로그래밍 방법 항목
-이 섹션의 항목에는 컴퍼지션 적중 테스트 및 하위 수준에 대 한 시각적 계층을 사용 하는 방법을 보여 줍니다.  
+이 섹션의에서 항목에서는 컴퍼지션 적중 테스트 및 하위 수준에 대 한 시각적 계층을 사용 하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [시각적 요소의 오프셋 가져오기](../../../../docs/framework/wpf/graphics-multimedia/how-to-get-the-offset-of-a-visual.md)  
- [시각적 요소의 그리기 콘텐츠 열거](../../../../docs/framework/wpf/graphics-multimedia/how-to-enumerate-drawing-content-of-a-visual.md)  
- [시각적 요소의 기하 도형 적중 테스트](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-geometry-in-a-visual.md)  
- [기하 도형을 매개 변수로 사용하여 적중 테스트](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-geometry-as-a-parameter.md)  
- [Win32 호스트 컨테이너를 사용하여 적중 테스트](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-using-a-win32-host-container.md)  
- [CompositionTarget을 사용하여 프레임별 간격에 렌더링](../../../../docs/framework/wpf/graphics-multimedia/how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+ [시각적 요소의 오프셋 가져오기](how-to-get-the-offset-of-a-visual.md)  
+ [시각적 요소의 그리기 콘텐츠 열거](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [시각적 요소의 기하 도형 적중 테스트](how-to-hit-test-geometry-in-a-visual.md)  
+ [기하 도형을 매개 변수로 사용하여 적중 테스트](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [Win32 호스트 컨테이너를 사용하여 적중 테스트](how-to-hit-test-using-a-win32-host-container.md)  
+ [CompositionTarget을 사용하여 프레임별 간격에 렌더링](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Media.Visual>  
- <xref:System.Windows.Media.VisualTreeHelper>  
- <xref:System.Windows.Media.DrawingVisual>  
- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Media.Visual>
+- <xref:System.Windows.Media.VisualTreeHelper>
+- <xref:System.Windows.Media.DrawingVisual>
+- [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)
+- [그래픽 및 멀티미디어](index.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36564
 ms.assetid: 21312807-e1cd-4ac1-ae1c-c28a9c25164d
-ms.openlocfilehash: 757483f1e88276dd9db82de1c2a7e47b5c975b0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3e2902da7fe9d8fa2194db681df098f0148cbbaf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33598243"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584255"
 ---
 # <a name="type-arguments-could-not-be-inferred-from-the-delegate"></a>대리자에서 형식 인수를 유추할 수 없습니다.
 대입문이 `AddressOf` 를 사용하여 제네릭 프로시저의 주소를 대리자에게 할당하지만 형식 인수를 제네릭 프로시저에 제공하지 않습니다.  
@@ -23,11 +23,12 @@ ms.locfileid: "33598243"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   `AddressOf` 식에서 제네릭 프로시저에 대한 형식 인수를 지정합니다.  
+- `AddressOf` 식에서 제네릭 프로시저에 대한 형식 인수를 지정합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic의 제네릭 형식](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)  
- [AddressOf 연산자](../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [Visual Basic의 제네릭 프로시저](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)  
- [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)  
- [확장명 메서드](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>참고자료
+
+- [Visual Basic의 제네릭 형식](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [AddressOf 연산자](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [Generic Procedures in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)
+- [형식 목록](../../../visual-basic/language-reference/statements/type-list.md)
+- [확장명 메서드](../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

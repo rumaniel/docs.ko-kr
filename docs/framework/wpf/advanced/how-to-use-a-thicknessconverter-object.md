@@ -8,12 +8,12 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 6c8f9e83468a7b189b96efca2e175c0f3fe0dfff
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: ebfb8642a01f6d602f4e5ffa58fde6a8ee0b4e1f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001483"
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>방법: ThicknessConverter 개체 사용
 ## <a name="example"></a>예제  
@@ -23,13 +23,14 @@ ms.locfileid: "43856666"
   
  이 예제에서는 실행되지 않습니다.  
   
- [!code-csharp[ThicknessConverter#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
- [!code-vb[ThicknessConverter#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
+ [!code-csharp[ThicknessConverter#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ThicknessConverter/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[ThicknessConverter#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Thickness>  
- <xref:System.Windows.ThicknessConverter>  
- <xref:System.Windows.Controls.Border>  
- [방법: Margin 속성 변경](https://msdn.microsoft.com/library/8a313efd-5f99-4097-b4c1-8fa49d8379a2)  
- [방법: ListBoxItem 새 데이터 형식으로 변환](https://msdn.microsoft.com/library/7a080b88-184e-4b27-bb61-d42bafba9727)  
- [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Thickness>
+- <xref:System.Windows.ThicknessConverter>
+- <xref:System.Windows.Controls.Border>
+- [방법: Margin 속성 변경](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms750561(v=vs.90))
+- [방법: ListBoxItem을 새 데이터 형식으로 변환](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749147(v=vs.90))
+- [패널 개요](../controls/panels-overview.md)

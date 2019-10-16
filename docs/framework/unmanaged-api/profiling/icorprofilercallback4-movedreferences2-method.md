@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb5145db6f081661996766aab0683dc5d8a97e61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e676d03efc950ce911bce43e15322d1f9882d0fd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460765"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758222"
 ---
 # <a name="icorprofilercallback4movedreferences2-method"></a>ICorProfilerCallback4::MovedReferences2 메서드
-압축 가비지 컬렉션의 결과로 힙에 있는 개체의 새 레이아웃을 보고하려고 호출됩니다. 이 메서드는 프로파일러가 구현한 경우에 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스입니다. 이 콜백은 대체는 [icorprofilercallback:: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) 메서드를 큰 길이가 ULONG으로 표현 될 수 있는 길이 초과 하는 개체 범위를 보고할 수 있습니다.  
+압축 가비지 수집의 결과로 힙에 있는 개체의 새 레이아웃을 보고하려고 호출됩니다. 이 메서드는 프로파일러 구현에 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스입니다. 이 콜백은 대체 합니다 [icorprofilercallback:: Movedreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) 메서드를 더 큰 범위의 길이가 ulong에서으로 표현 될 수 있습니다 어떤 초과 하는 개체를 보고할 수 있어.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT MovedReferences2(  
     [in]  ULONG  cMovedObjectIDRanges,  
     [in, size_is(cMovedObjectIDRanges)] ObjectID oldObjectIDRangeStart[] ,  
@@ -37,7 +37,7 @@ HRESULT MovedReferences2(
     [in, size_is(cMovedObjectIDRanges)] SIZE_T    cObjectIDRangeLength[] );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cMovedObjectIDRanges`  
  [in] 압축 가비지 컬렉션 후에 이동된 연속 개체 블록 수입니다. 즉, `cMovedObjectIDRanges` 값은 `oldObjectIDRangeStart`, `newObjectIDRangeStart` 및 `cObjectIDRangeLength` 배열의 총 크기입니다.  
   
@@ -47,7 +47,7 @@ HRESULT MovedReferences2(
  [in] 메모리에서 연속 라이브 개체 블록의 이전(가비지 수집 전) 시작 주소를 각각 나타내는 `ObjectID` 값의 배열입니다.  
   
  `newObjectIDRangeStart`  
- [in] 메모리에서 연속 라이브 개체 블록의 새(가비지 수집 후) 시작 주소를 각각 나타내는 `ObjectID` 값의 배열입니다.  
+ [in] 메모리에서 연속 라이브 개체 블록의 새(가비지 컬렉션 후) 시작 주소를 각각 나타내는 `ObjectID` 값의 배열입니다.  
   
  `cObjectIDRangeLength`  
  [in] 메모리의 연속 개체 블록의 크기를 각각 나타내는 정수 배열입니다.  
@@ -73,22 +73,23 @@ HRESULT MovedReferences2(
   
  `newObjectID` = `newObjectIDRangeStart[i]` + (`oldObjectID` – `oldObjectIDRangeStart[i]`)  
   
- 콜백 자체가 진행되는 동안 `MovedReferences2`를 통해 전달된 `ObjectID` 값은 유효하지 않습니다. 가비지 수집기가 이전 위치에서 새 위치로 개체를 이동하는 중일 수 있기 때문입니다. 그러므로 프로파일러는 `MovedReferences2` 호출 중에 개체 검사를 시도하지 않아야 합니다. A [icorprofilercallback2:: Garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) 콜백은 모든 개체가 새 위치로 이동 되었고 검사가 수행 될 수 있음을 나타냅니다.  
+ 콜백 자체가 진행되는 동안 `MovedReferences2`를 통해 전달된 `ObjectID` 값은 유효하지 않습니다. 가비지 수집기가 이전 위치에서 새 위치로 개체를 이동하는 중일 수 있기 때문입니다. 그러므로 프로파일러는 `MovedReferences2` 호출 중에 개체 검사를 시도하지 않아야 합니다. A [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) 콜백 나타내고 모든 개체가 새 위치로 이동 된 검사를 수행할 수 있습니다.  
   
- 프로파일러 둘 다를 구현 하는 경우는 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 및 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스는 `MovedReferences2` 전에 메서드가 호출 되는 [ICorProfilerCallback:: MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) 메서드이지만 경우에만 `MovedReferences2` 메서드가 성공적으로 반환 합니다. 프로파일러는 두 번째 메서드 호출을 방지하기 위해 `MovedReferences2` 메서드에서 실패를 나타내는 HRESULT를 반환할 수 있습니다.  
+ 프로파일러 둘 다 구현 하는 경우는 [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md) 하며 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 인터페이스는 `MovedReferences2` 메서드 전에 호출 됩니다는 [ICorProfilerCallback:: MovedReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md) 방법 이지만 경우에만 `MovedReferences2` 메서드가 성공적으로 반환 합니다. 프로파일러는 두 번째 메서드 호출을 방지하기 위해 `MovedReferences2` 메서드에서 실패를 나타내는 HRESULT를 반환할 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [MovedReferences 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)  
- [ICorProfilerCallback4 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)  
- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [MovedReferences 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-movedreferences-method.md)
+- [ICorProfilerCallback4 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)

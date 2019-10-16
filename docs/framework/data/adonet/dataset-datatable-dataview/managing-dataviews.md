@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b67fab5-1722-4d2b-bfc1-247a75f0f1ee
-ms.openlocfilehash: 76cf9eb70094dfe8bb760490c42503e08f4b1649
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 5e85fccddf6359791ea702667a36b44f611815dc
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44201987"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784498"
 ---
 # <a name="managing-dataviews"></a>데이터 보기 관리
-<xref:System.Data.DataViewManager>를 사용하여 <xref:System.Data.DataView>의 모든 테이블에 대한 뷰 설정을 관리할 수 있습니다. 여러 테이블에 바인딩하려는 컨트롤에 있는 경우 그리드와 같은 관계를 탐색 하는 **DataViewManager** 적합 합니다.  
+<xref:System.Data.DataViewManager>를 사용하여 <xref:System.Data.DataView>의 모든 테이블에 대한 뷰 설정을 관리할 수 있습니다. 관계를 탐색 하는 표와 같이 여러 테이블에 바인딩하려는 컨트롤이 있는 경우에는 **DataViewManager** 이 적합 합니다.  
   
- 합니다 **DataViewManager** 의 컬렉션을 포함 <xref:System.Data.DataViewSetting> 의 테이블 뷰를 설정 하는 데 사용 되는 개체는 <xref:System.Data.DataSet>합니다. 합니다 <xref:System.Data.DataViewSettingCollection> 하나가 포함 되어 있습니다 <xref:System.Data.DataViewSetting> 의 각 테이블에 대 한 개체를 **데이터 집합**합니다. 기본값을 설정할 수 있습니다 **ApplyDefaultSort**를 **정렬**합니다 **RowFilter**, 및 **RowStateFilter** 하면 참조 된 테이블의 속성 사용 하 여 해당 **DataViewSetting**합니다. 참조할 수 있습니다 합니다 **DataViewSetting** 이름 또는 서 수 참조 또는 해당 특정 테이블 개체에 대 한 참조를 전달 하 여 특정 테이블에 대 한 합니다. 컬렉션에 액세스할 수 있습니다 **DataViewSetting** 개체를 **DataViewManager** 사용 하 여 합니다 **Dataviewsetting** 속성입니다.  
+ **DataViewManager** 에는 <xref:System.Data.DataViewSetting> <xref:System.Data.DataSet>에 있는 테이블의 뷰 설정을 설정 하는 데 사용 되는 개체의 컬렉션이 포함 되어 있습니다. 에 <xref:System.Data.DataViewSettingCollection> 는 **데이터 집합**의 각 테이블에 대 한 하나의 <xref:System.Data.DataViewSetting> 개체가 포함 되어 있습니다. 해당 **DataViewSetting**를 사용 하 여 참조 되는 테이블의 기본 **ApplyDefaultSort**, **Sort**, **RowFilter**및 **rowstatefilter** 속성을 설정할 수 있습니다. 이름 또는 서 수 참조를 기준으로 특정 테이블에 대 한 **DataViewSetting** 를 참조 하거나 해당 특정 테이블 개체에 대 한 참조를 전달할 수 있습니다. **DataViewSettings** 속성을 사용 하 여 **DataViewManager** 에서 **DataViewSetting** 개체의 컬렉션에 액세스할 수 있습니다.  
   
- 다음 코드 예에서는 채우기는 **데이터 집합** SQL Server를 사용 하 여 **Northwind** 데이터베이스 테이블 **고객**를 **주문**, 및  **Order Details**테이블 간의 관계를 생성, 사용 하는 **DataViewManager** 기본 설정 하 **DataView** 설정과 바인딩을 **DataGrid**  에 **DataViewManager**합니다. 기본값을 설정 하는 예제 **DataView** 의 모든 테이블에 대 한 설정을 합니다 **데이터 집합** 테이블의 기본 키로 정렬 (**ApplyDefaultSort**  =  **true**)의 정렬 순서를 수정 하는 **고객** 기준으로 정렬 하려면 테이블 **CompanyName**합니다.  
+ 다음 코드 예제에서는 SQL Server **Northwind** 데이터베이스 테이블 **고객**, **주문**및 **주문 세부 정보**를 사용 하 여 **데이터 집합** 을 채우고, 테이블 간의 관계를 만들고, **DataViewManager** 를 사용 하 여 기본 **DataView** 설정을 설정 하 고 **DataViewManager**에 **DataGrid** 를 바인딩합니다. 이 예에서는 테이블의 기본 키 (**ApplyDefaultSort** = **true**)를 기준으로 정렬 하 여 **데이터 집합** 의 모든 테이블에 대 한 기본 **DataView** 설정을 설정 하 고 **Customers** 테이블의 정렬 순서를 다음으로 수정 합니다. **CompanyName**을 기준으로 정렬 합니다.  
   
 ```vb  
 ' Assumes connection is a valid SqlConnection to Northwind.  
@@ -119,10 +119,11 @@ System.Windows.Forms.DataGrid grid = new System.Windows.Forms.DataGrid();
 grid.SetDataBinding(viewManager, "Customers");  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataViewManager>  
- <xref:System.Data.DataViewSetting>  
- <xref:System.Data.DataViewSettingCollection>  
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataViewManager>
+- <xref:System.Data.DataViewSetting>
+- <xref:System.Data.DataViewSettingCollection>
+- [DataView](dataviews.md)
+- [ADO.NET 개요](../ado-net-overview.md)

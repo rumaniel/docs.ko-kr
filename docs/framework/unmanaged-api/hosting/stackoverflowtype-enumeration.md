@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9e888b2359336c68ea6fdf52f798145fda12002e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 44d5b7fdb2908678671505649bb906c0c5f740e3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440871"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751138"
 ---
 # <a name="stackoverflowtype-enumeration"></a>StackOverflowType 열거형
 스택 오버플로 이벤트의 근본 원인을 나타내는 값을 포함 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     SO_Managed,  
     SO_ClrEngine,  
@@ -40,21 +40,22 @@ typedef enum {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`SO_ClrEngine`|실행 엔진으로 스택 오버플로가 발생 했습니다.|  
-|`SO_Managed`|관리 코드로 인해 스택 오버플로가 발생 했습니다.|  
-|`SO_Other`|비관리 코드로 인해 스택 오버플로가 발생 했습니다.|  
+|`SO_ClrEngine`|실행 엔진에서 스택 오버플로가 발생 했습니다.|  
+|`SO_Managed`|관리 코드에서 스택 오버플로가 발생 했습니다.|  
+|`SO_Other`|비관리 코드에서 스택 오버플로가 발생 했습니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 정보에 대 한 호출을 통해 호스트에 전달 되는 [iactiononclrevent:: Onevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) 메서드.  
+ 이 정보는 호출을 통해 호스트에 전달 된 [iactiononclrevent:: Onevent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-onevent-method.md) 메서드.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
  **라이브러리:** MSCorEE.dll  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

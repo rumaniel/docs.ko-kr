@@ -1,5 +1,5 @@
 ---
-title: '&lt;지우기&gt; webRequestModules (네트워크 설정)에 대 한 요소'
+title: webRequestModules의 <clear> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/webRequestModules/clear
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - webRequestModules, clear element
 - clear element, webRequestModules
 ms.assetid: 48f38bcb-f30c-4b74-a8f0-1a3caf1aa96f
-ms.openlocfilehash: 39d4a184972036677aaa9fdb33e672521033d35f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 95a190dac3a9512b404a054c60c48de9c4574790
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190530"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698337"
 ---
-# <a name="ltcleargt-element-for-webrequestmodules-network-settings"></a>&lt;지우기&gt; webRequestModules (네트워크 설정)에 대 한 요소
-응용 프로그램에서 등록 된 모든 웹 요청 모듈을 제거합니다.  
+# <a name="clear-element-for-webrequestmodules-network-settings"></a>webRequestModules의 \<clear > 요소 (네트워크 설정)
+응용 프로그램에서 등록 된 모든 웹 요청 모듈을 제거 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<webRequestModules>  
-\<지우기 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<webRequestModules >** ](webrequestmodules-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,16 +44,16 @@ ms.locfileid: "50190530"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[webRequestModules](../../../../../docs/framework/configure-apps/file-schema/network/webrequestmodules-element-network-settings.md)|네트워크 호스트에서 정보를 요청 하는 데는 모듈을 지정 합니다.|  
+|[webRequestModules](webrequestmodules-element-network-settings.md)|네트워크 호스트의 정보를 요청 하는 데 사용할 모듈을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `clear` 요소 또는 구성 계층 구조의 상위 수준 구성 파일에서 이전에 정의 된 등록 된 모든 웹 요청 모듈을 제거 합니다.  
+ @No__t-0 요소는 구성 파일에서 이전에 정의 되었거나 구성 계층 구조에서 상위 수준에 정의 된 등록 된 모든 웹 요청 모듈을 제거 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 모든 웹 요청 모듈을 지우고 http 웹 요청 모듈을 등록 합니다.  
+ 다음 예제에서는 모든 웹 요청 모듈을 지운 다음 HTTP에 대 한 웹 요청 모듈을 등록 합니다.  
   
 ```xml  
 <configuration>  
@@ -69,6 +69,7 @@ ms.locfileid: "50190530"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-- <xref:System.Net.WebRequest>  
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>참조
+
+- <xref:System.Net.WebRequest>
+- [네트워크 설정 스키마](index.md)

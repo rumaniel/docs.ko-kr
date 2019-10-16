@@ -1,13 +1,13 @@
 ---
-title: 값(F#)
-description: '특정 형식을 가진 수량이 F #의 값이 하는 방법에 대해 알아봅니다.'
+title: 값
+description: 의 F# 값이 특정 형식을 갖는 수량을 확인 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: f645481ce8395c11ae920aee06cbf07955aeb684
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: ed7a5b069a5a47aacf0cce4cfa754ded46f6e84a
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991170"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630793"
 ---
 # <a name="values"></a>값
 
@@ -17,11 +17,11 @@ F#의 값은 특정 형식을 가진 수량이며, 값은 정수 또는 부동 �
 
 *바인딩*이란 용어는 이름과 정의를 연결하는 것을 의미합니다. `let` 키워드는 다음 예제와 같이 값을 바인딩합니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet601.fs)]
 
 특정 값의 형식은 정의에서 유추됩니다. 정수 또는 부동 소수점 숫자와 같은 기본 형식의 경우 형식은 리터럴 형식에서 결정됩니다. 따라서 앞의 예제에서 컴파일러는 `b`의 형식을 `unsigned int`로 유추하는 반면 컴파일러는 `a`의 형식을 `int`로 유추합니다. 함수 값의 형식은 함수 본문의 반환 값에서 결정됩니다. 함수 값 형식에 대한 자세한 내용은 [함수](../functions/index.md)를 참조하세요. 리터럴 형식에 대한 자세한 내용은 [리터럴](../literals.md)을 참조하세요.
 
-컴파일러는 기본적으로 사용 하지 않는 바인딩에 대 한 진단 발생 하지 않습니다. 이러한 메시지를 받으려면 사용 컴파일러를 호출할 때 프로젝트 파일 또는 1182 경고 (참조 `--warnon` 아래에서 [컴파일러 옵션](../compiler-options.md)).
+컴파일러는 기본적으로 사용 되지 않는 바인딩에 대 한 진단을 실행 하지 않습니다. 이러한 메시지를 받으려면 컴파일러를 호출할 때 또는 프로젝트 파일에서 경고 1182를 사용 하도록 설정 합니다 `--warnon` ( [컴파일러 옵션](../compiler-options.md)아래 참조).
 
 ## <a name="why-immutable"></a>변경할 수 없는 이유
 
@@ -37,15 +37,15 @@ F#은 순수 함수형 언어가 아니지만 함수형 프로그래밍을 완�
 
 값을 정의할 때와 동일한 방식으로 `let` 키워드를 사용하여 변경 가능한 변수에 초기 값을 할당할 수 있습니다. 그러나 다음 예제와 같이, 이후에 `<-` 연산자를 사용하여 변경 가능한 변수에 새 값을 할당할 수 있다는 점이 다릅니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet602.fs)]
 
-표시 된 값 `mutable` 에 자동으로 승격 될 수 있습니다 `'a ref` forms와 같은 클로저를 만든를 포함 하 여 클로저를 캡처하지 경우 `seq` 작성기입니다. 이 경우 알림을 받으려면 원한다 면 경고를 활성화 3180 프로젝트 파일 또는 컴파일러를 호출할 때.
+표시 `mutable` 된 값은 작성기와 `seq` 같이 `'a ref` 클로저를 만드는 폼을 포함 하 여 클로저로 캡처한 경우 자동으로로 승격 될 수 있습니다. 이 문제가 발생 하는 경우 알리도록 하려면 프로젝트 파일에서 또는 컴파일러를 호출할 때 경고 3180을 사용 하도록 설정 합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-|제목|설명|
+|제목|Description|
 |-----|-----------|
-|[let 바인딩](../functions/let-bindings.md)|사용에 대 한 정보를 제공 합니다 `let` 이름을 값 및 함수에 바인딩해야 하는 키워드입니다.|
+|[let 바인딩](../functions/let-bindings.md)|`let` 키워드를 사용 하 여 이름을 값 및 함수에 바인딩하는 방법에 대 한 정보를 제공 합니다.|
 |[함수](../functions/index.md)|F#의 함수를 간략하게 설명합니다.|
 
 ## <a name="see-also"></a>참고자료

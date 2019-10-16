@@ -1,17 +1,17 @@
 ---
-title: 'Byref (F #)'
-description: 'Byref 및 낮은 수준의 프로그래밍에 사용 되는 F #에서는 byref와 유사한 형식에 알아봅니다.'
+title: Byref
+description: Byref 및 byref와 유사한 형식에 대 한 자세한 F#에 낮은 수준의 프로그래밍에 사용 됩니다.
 ms.date: 09/02/2018
-ms.openlocfilehash: 6131104e4325f77da84368c337f998c6b2b5309b
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703194"
 ---
 # <a name="byrefs"></a>Byref
 
-F # 낮은 수준의 프로그래밍의 공간에서 처리 하는 두 가지 주요 기능 영역에 있습니다.
+F#하위 수준 프로그래밍의 공간에서 처리 하는 두 가지 주요 기능 영역에 있습니다.
 
 * 합니다 `byref` / `inref` / `outref` 형식인 관리 되는 포인터입니다. 런타임 시 유효 하지 않은 프로그램을 컴파일할 수 있도록 사용 현황에 대 한 제한 갖습니다.
 * A `byref`-인 구조체와 마찬가지로 [구조](structures.md) 비슷한 의미 체계와 같은 컴파일 시간 제한이 있는 `byref<'T>`합니다. 한 가지 예는 <xref:System.Span%601>합니다.
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 사용 하 여 포인터에 대 한 작성 하는 `outref<'T>` 또는 `byref<'T>`에 대 한 포인터를 잡고 값도 확인 해야 `mutable`합니다.
@@ -84,7 +85,7 @@ f &dt
 다음 코드를 살펴보세요.
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 의미상으로 다음이 의미합니다.
@@ -97,7 +98,7 @@ let f (x: inref<SomeStruct>) = s.SomeField
 * 더 다른 스레드가 없거나 별칭에 대 한 쓰기 없는 `x`합니다.
 * 더입니다 `SomeStruct` 됨 변경할 수 없는 `x` 되는 `inref`합니다.
 
-그러나 F #에 대 한 값 형식입니다 **됩니다** 변경할 수 없는 합니다 `this` 포인터로 유추 됩니다는 `inref`합니다.
+그러나 F# 값 형식에 **됩니다** 변경할 수 없는 합니다 `this` 포인터로 유추 됩니다는 `inref`합니다.
 
 이러한 규칙을 함께 모두 의미는 보유자는 `inref` 포인터가 가리키는 메모리의 즉각적인 내용을 수정할 수 없습니다.
 
@@ -105,20 +106,20 @@ let f (x: inref<SomeStruct>) = s.SomeField
 
 목적은 `outref<'T>` 나타내는 포인터에서 읽을 수만 해야 하는 것입니다. 예기치 않게 `outref<'T>` 이름과 달리 기본 읽기 허용 값입니다. 호환성을 위해입니다. 의미상 `outref<'T>` 다르지 않습니다 `byref<'T>`합니다.
 
-### <a name="interop-with-c"></a>C#와 상호 운용성 #
+### <a name="interop-with-c"></a>C와의 상호 운용성\#
 
-C# 지원 합니다 `in ref` 및 `out ref` 외에에서 키워드 `ref` 반환 합니다. 다음 표에서 F # 해석 하는 방법을 새로운 C# 내보냅니다 보여 줍니다.
+C# 지원 합니다 `in ref` 및 `out ref` 외에에서 키워드 `ref` 반환 합니다. 다음 표는 어떻게 F# 새로운 해석 C# 내보냅니다.
 
-|C# 구문|F # 유추|
+|C# 구문|F#유추|
 |------------|---------|
 |`ref` 반환 값|`outref<'T>`|
 |`ref readonly` 반환 값|`inref<'T>`|
 |`in ref` 매개 변수|`inref<'T>`|
 |`out ref` 매개 변수|`outref<'T>`|
 
-다음 표에서 새로운 F # 내보냅니다 보여 줍니다.
+다음 표에서 보여 줍니다 F# 를 내보냅니다.
 
-|F # 구문|내보낸된 구문|
+|F#구문|내보낸된 구문|
 |------------|-----------------|
 |`inref<'T>` 인수|`[In]` 인수에는 특성|
 |`inref<'T>` 반환|`modreq` 특성 값을|
@@ -127,7 +128,7 @@ C# 지원 합니다 `in ref` 및 `out ref` 외에에서 키워드 `ref` 반환 �
 
 ### <a name="type-inference-and-overloading-rules"></a>형식 유추 및 규칙을 오버 로드
 
-`inref<'T>` 형식은 다음과 같은 경우 F # 컴파일러에서 유추 됩니다.
+`inref<'T>` 형식에서 유추 되는 F# 컴파일러에서 다음과 같은 경우:
 
 1. .NET 매개 변수 또는 반환 형식에는 `IsReadOnly` 특성입니다.
 2. `this` 변경할 수 없는 필드가 있는 구조체 형식에 대 한 포인터입니다.
@@ -165,20 +166,20 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 `IsByRefLike` 의미 하지는 않습니다 `Struct`합니다. 두 형식에 있어야 합니다.
 
-"`byref`-같은" F #의 구조체는 스택 바인딩된 값 형식입니다. 관리 되는 힙에 할당 되지 됩니다. `byref`-같은 구조체 유용 고성능 프로그래밍에 대 한 일련의 수명 및 비캡처 하는 방법에 대 한 강력한 검사를 사용 하 여 적용 됩니다. 규칙은 다음과 같습니다.
+"`byref`-같은" 구조체에서 F# 스택 바인딩된 값 형식입니다. 관리 되는 힙에 할당 되지 됩니다. `byref`-같은 구조체 유용 고성능 프로그래밍에 대 한 일련의 수명 및 비캡처 하는 방법에 대 한 강력한 검사를 사용 하 여 적용 됩니다. 규칙은 다음과 같습니다.
 
 * 사용할 수 있습니다 함수 매개 변수, 메서드 매개 변수, 지역 변수, 메서드를 반환 합니다.
 * 정적 이어야 하거나 멤버 클래스 또는 일반 구조체의 인스턴스 수는 없습니다.
 * 모든 클로저 생성으로 캡처할 수 없습니다 (`async` 메서드 또는 람다 식).
 * 제네릭 매개 변수로 사용할 수 없습니다.
 
-마지막은 F # 파이프라인 스타일의 프로그래밍에 중요로 `|>` 는 해당 입력된 형식 매개 변수화 되는 제네릭 함수입니다. 경우이 제한이 완화 될 수 있습니다 `|>` 나중에 인라인 되 고 본문에서 인라인되지 않은 제네릭 함수를 호출할 수 없습니다.
+이 마지막 기능은 매우 중요 한 F# 파이프라인 스타일 프로그래밍으로 `|>` 는 해당 입력된 형식 매개 변수화 되는 제네릭 함수입니다. 경우이 제한이 완화 될 수 있습니다 `|>` 나중에 인라인 되 고 본문에서 인라인되지 않은 제네릭 함수를 호출할 수 없습니다.
 
 이러한 규칙은 매우 강력 하 게 사용을 제한, 있지만 그렇게 안전한 방식으로 고성능 컴퓨팅의 약속을 충족 하 합니다.
 
 ## <a name="byref-returns"></a>Byref 반환
 
-F # 함수에서 Byref 반환 하거나 멤버를 생성 및 사용 될 수 있습니다. 사용 하는 경우는 `byref`-메서드를 반환 값을 암시적으로 역참조 됩니다. 합니다. 예를 들어:
+Byref 반환에서 F# 함수 또는 멤버 생성 및 사용 될 수 있습니다. 사용 하는 경우는 `byref`-메서드를 반환 값을 암시적으로 역참조 됩니다. 합니다. 예를 들어:
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =

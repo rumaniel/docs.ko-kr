@@ -2,12 +2,12 @@
 title: TcpConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 19acfba3-c057-4dbc-bac7-8674d7844d83
-ms.openlocfilehash: f9e1c043579f632f16a7cf36bf34c2467a743e47
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6fa68eed241edaea40b66c31240a4201e05779f4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956576"
 ---
 # <a name="tcpconnectionpoolsettings"></a>TcpConnectionPoolSettings
 TcpConnectionPoolSettings  
@@ -64,5 +64,6 @@ class TcpConnectionPoolSettings
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.TcpConnectionPoolSettings>

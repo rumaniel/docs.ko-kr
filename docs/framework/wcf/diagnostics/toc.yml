@@ -1,0 +1,31 @@
+- name: 관리 및 진단
+  href: index.md
+- name: 메시지 로깅
+  href: message-logging.md
+  items:
+    - name: 메시지 흐름 개요
+      href: message-flow-overview.md
+    - name: 메시지 로깅 구성
+      href: configuring-message-logging.md
+    - name: 메시지 로그 보기
+      href: viewing-message-logs.md
+    - name: 메시지 로깅에 대한 보안 고려 사항
+      href: security-concerns-for-message-logging.md
+    - name: 추적
+      href: tracing/
+    - name: ETW를 사용한 분석 추적
+      href: etw/
+    - name: 성능 카운터
+      href: performance-counters/
+    - name: 이벤트 로깅
+      href: event-logging/
+    - name: 진단에 Windows Management Instrumentation 사용
+      href: wmi/
+    - name: 예외 참조
+      href: exceptions-reference/
+- name: 애플리케이션 구성
+  href: configuring-your-application.md
+- name: ServiceModel 등록 도구
+  href: servicemodel-registration-tool.md
+- name: 서비스 배포
+  href: deploying-services.md

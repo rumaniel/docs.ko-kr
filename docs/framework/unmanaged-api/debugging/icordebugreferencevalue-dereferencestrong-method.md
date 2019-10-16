@@ -17,29 +17,29 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f994dfb2b72eacce0b53ae6f49a8173749dd96f9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 02ed315ccf227413e59f635b0244fb82be67c18e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418580"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744946"
 ---
 # <a name="icordebugreferencevaluedereferencestrong-method"></a>ICorDebugReferenceValue::DereferenceStrong 메서드
-`DereferenceStrong` 구현 되지 않았습니다. 이 메서드를 호출 하지 마십시오.  
+`DereferenceStrong` 구현 되지 않았습니다. 이 메서드를 호출 하지 마세요.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT DereferenceStrong (  
     [out] ICorDebugValue  **ppValue  
 );  
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,34 +17,35 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e29c9c246649229900beba2fcc9ab482071ae46
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24f7e2d5a547b78ceb4808feaf581c6f49807cf7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400668"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787623"
 ---
 # <a name="createalink-function"></a>CreateALink 함수
-어셈블리 링커의 인스턴스를 만들고 지정된 된 인터페이스에 대 한 포인터를 설정 합니다.  
+어셈블리 링커의 인스턴스를 만들고 지정 된 인터페이스에 대 한 포인터를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CreateALink (  
    REFIID riid,  
    IUnknown **ppInterface  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
   
-|매개 변수|설명|  
+|매개 변수|Description|  
 |---------------|-----------------|  
 |`riid`|어셈블리 링커 인터페이스 중 하나의 물리적 이름입니다.|  
-|`ppInterface`|성공적으로 완료에 대 한 포인터를 포함 하는 위치는 `riid` 인터페이스입니다.|  
+|`ppInterface`|성공적으로 완료 되 면 `riid` 인터페이스에 대 한 포인터를 포함 하는 위치입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **라이브러리**: alink.dll  
+ **라이브러리**: alink .dll  
   
-## <a name="see-also"></a>참고 항목  
- [Al.exe(어셈블리 링커)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>참고자료
+
+- [Al.exe(어셈블리 링커)](../../tools/al-exe-assembly-linker.md)

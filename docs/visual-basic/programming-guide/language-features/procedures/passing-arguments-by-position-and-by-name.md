@@ -22,12 +22,12 @@ helpviewer_keywords:
 - argument passing [Visual Basic], by position
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
-ms.openlocfilehash: bdaa0351e288b85a3e35818c0f53ef4d772932e5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183869"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791887"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>위치 및 이름으로 인수 전달(Visual Basic)
 호출 하는 경우는 `Sub` 또는 `Function` 프로시저 인수를 전달할 수 있습니다 *위치별* -프로시저의 정의에 나타나는 순서로-또는 전달할 수 있습니다 *이름별*를 하지 않고 위치에 관계입니다.  
@@ -94,12 +94,13 @@ Visual Basic 15.5부터 위치 인수 수에 따라 명명 된 인수 끝 위치
   
 매개 변수 배열을 이름으로 전달할 수 없습니다. 프로시저를 호출 하면 불특정 개수의 매개 변수 배열에 대 한 쉼표로 구분 된 인수를 제공 하 고 컴파일러가 단일 이름으로 둘 이상의 인수를 연결할 수 없습니다 때문입니다.  
   
-## <a name="see-also"></a>참고 항목  
- [절차](./index.md)  
- [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)  
- [방법: 프로시저에 인수 전달](./how-to-pass-arguments-to-a-procedure.md)  
- [값 또는 참조로 인수 전달](./passing-arguments-by-value-and-by-reference.md)  
- [선택적 매개 변수](./optional-parameters.md)  
- [매개 변수 배열](./parameter-arrays.md)  
- [선택 사항](../../../../visual-basic/language-reference/modifiers/optional.md)  
- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)
+## <a name="see-also"></a>참고자료
+
+- [절차](./index.md)
+- [프로시저 매개 변수 및 인수](./procedure-parameters-and-arguments.md)
+- [방법: 프로시저에 인수 전달](./how-to-pass-arguments-to-a-procedure.md)
+- [값 또는 참조로 인수 전달](./passing-arguments-by-value-and-by-reference.md)
+- [선택적 매개 변수](./optional-parameters.md)
+- [매개 변수 배열](./parameter-arrays.md)
+- [선택 사항](../../../../visual-basic/language-reference/modifiers/optional.md)
+- [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)

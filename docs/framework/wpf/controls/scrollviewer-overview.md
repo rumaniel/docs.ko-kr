@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
-ms.openlocfilehash: 4c9a2e8cf64f18f3e8614912759a4a6eb01d4823
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45593806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024029"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 개요
 사용자 인터페이스 내의 콘텐츠는 대개 컴퓨터 화면의 표시 영역보다 더 큽니다. 합니다 <xref:System.Windows.Controls.ScrollViewer> 컨트롤의 콘텐츠 스크롤을 사용 하는 편리한 방법을 제공 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다. 이 항목에서는 소개 된 <xref:System.Windows.Controls.ScrollViewer> 요소 몇 가지 사용 예제를 제공 합니다.  
@@ -38,33 +38,34 @@ ms.locfileid: "45593806"
   
  다음 코드 예제에서는의 인스턴스로 캐스팅 하는 방법을 보여 줍니다 <xref:System.Windows.Controls.Primitives.IScrollInfo> 에 <xref:System.Windows.Controls.StackPanel> 콘텐츠 스크롤 메서드 사용 하 여 (<xref:System.Windows.Controls.Primitives.IScrollInfo.LineUp%2A> 및 <xref:System.Windows.Controls.Primitives.IScrollInfo.LineDown%2A>) 인터페이스에 의해 정의 합니다.  
   
- [!code-csharp[IScrollInfoMethods#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
- [!code-vb[IScrollInfoMethods#3](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
+ [!code-csharp[IScrollInfoMethods#3](~/samples/snippets/csharp/VS_Snippets_Wpf/IScrollInfoMethods/CSharp/Window1.xaml.cs#3)]
+ [!code-vb[IScrollInfoMethods#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/IScrollInfoMethods/VisualBasic/Window1.xaml.vb#3)]  
   
 <a name="scrollviewer_markup_syntax_and_sample"></a>   
 ## <a name="defining-and-using-a-scrollviewer-element"></a>ScrollViewer 요소 정의 및 사용  
  다음 예제에서는 한 <xref:System.Windows.Controls.ScrollViewer> 일부 텍스트와 사각형이 포함 된 창에서. <xref:System.Windows.Controls.Primitives.ScrollBar> 요소가 표시 된 경우에 필요 합니다. 창의 크기를 조정할 때 합니다 <xref:System.Windows.Controls.Primitives.ScrollBar> 요소가 나타났다 사라집니다, 값이 업데이트 되어 합니다 <xref:System.Windows.Controls.ScrollViewer.ComputedHorizontalScrollBarVisibility%2A> 및 <xref:System.Windows.Controls.ScrollViewer.ComputedVerticalScrollBarVisibility%2A> 속성입니다.  
   
- [!code-cpp[ScrollViewer#1](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
- [!code-csharp[ScrollViewer#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
- [!code-vb[ScrollViewer#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
- [!code-xaml[ScrollViewer#1](../../../../samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
+ [!code-cpp[ScrollViewer#1](~/samples/snippets/cpp/VS_Snippets_Wpf/ScrollViewer/CPP/ScrollViewer_wcp.cpp#1)]
+ [!code-csharp[ScrollViewer#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ScrollViewer/CSharp/ScrollViewer_wcp.cs#1)]
+ [!code-vb[ScrollViewer#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ScrollViewer/VisualBasic/ScrollViewer.vb#1)]
+ [!code-xaml[ScrollViewer#1](~/samples/snippets/xaml/VS_Snippets_Wpf/ScrollViewer/XAML/Pane1.xaml#1)]  
   
 <a name="scrollviewer_styling_scrollviewer"></a>   
 ## <a name="styling-a-scrollviewer"></a>ScrollViewer 스타일 지정  
- Windows Presentation Foundation의 모든 컨트롤과 같이 <xref:System.Windows.Controls.ScrollViewer> 컨트롤의 기본 렌더링 동작을 변경 하기 위해 스타일을 지정할 수 있습니다. 컨트롤 스타일 지정에 대한 자세한 내용은 [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)을 참조하세요.  
+ Windows Presentation Foundation의 모든 컨트롤과 같이 <xref:System.Windows.Controls.ScrollViewer> 컨트롤의 기본 렌더링 동작을 변경 하기 위해 스타일을 지정할 수 있습니다. 컨트롤 스타일 지정에 대한 자세한 내용은 [스타일 지정 및 템플릿](styling-and-templating.md)을 참조하세요.  
   
 <a name="scrollviewer_scroll_vs_paginate"></a>   
 ## <a name="paginating-documents"></a>문서 페이지 매김  
  문서 콘텐츠의 경우 스크롤 대신 페이지 매김을 지원하는 문서 컨테이너를 선택할 수 있습니다. <xref:System.Windows.Documents.FlowDocument> 와 같은 보기 컨트롤 내에서 호스팅 되도록 디자인 된 문서에는 <xref:System.Windows.Controls.FlowDocumentPageViewer>를 스크롤할 필요성을 방지 하는 여러 페이지에 걸쳐 분할 콘텐츠를 지 원하는 합니다. <xref:System.Windows.Controls.DocumentViewer> 보기에 대 한 솔루션을 제공 <xref:System.Windows.Documents.FixedDocument> 콘텐츠 표시 영역의 외부에 콘텐츠를 표시 하려면 기존 스크롤을 사용 하는 합니다.  
   
- 문서 서식 및 프레젠테이션 옵션에 대한 자세한 내용은 [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)를 참조하세요.  
+ 문서 서식 및 프레젠테이션 옵션에 대한 자세한 내용은 [WPF의 문서](../advanced/documents-in-wpf.md)를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Controls.ScrollViewer>  
- <xref:System.Windows.Controls.Primitives.ScrollBar>  
- <xref:System.Windows.Controls.Primitives.IScrollInfo>  
- [스크롤 뷰어 만들기](https://msdn.microsoft.com/library/c8e46af7-b417-441b-aa30-791cbdbd43ef)  
- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [ScrollBar 스타일 및 템플릿](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [컨트롤](../../../../docs/framework/wpf/advanced/optimizing-performance-controls.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Controls.ScrollViewer>
+- <xref:System.Windows.Controls.Primitives.ScrollBar>
+- <xref:System.Windows.Controls.Primitives.IScrollInfo>
+- [방법: 스크롤 뷰어 만들기](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
+- [WPF의 문서](../advanced/documents-in-wpf.md)
+- [ScrollBar 스타일 및 템플릿](scrollbar-styles-and-templates.md)
+- [컨트롤](../advanced/optimizing-performance-controls.md)

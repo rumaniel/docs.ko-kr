@@ -2,12 +2,12 @@
 title: 서비스 프레임워크 메타데이터
 ms.date: 03/30/2017
 ms.assetid: 76afc73a-0770-4084-93f3-6701a757911e
-ms.openlocfilehash: f65f53ff99202275876fb6e3c431bc49ae2bd38b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f3e73df54b3389b2c9f27001953be147b27eb6f8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474352"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991209"
 ---
 # <a name="service-framework-metadata"></a>서비스 프레임워크 메타데이터
 이 항목에서는 서비스 프레임워크 메타데이터에 의해 생성된 모든 예외를 보여 줍니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "33474352"
 |-------------------|---------------------|  
 |AsyncEndCalledOnWrongChannel|비동기 End가 잘못된 채널에서 호출되었습니다.|  
 |AsyncEndCalledWithAnIAsyncResult|비동기 End가 다른 Begin 메서드의 IAsyncResult와 함께 호출되었습니다.|  
-|AttemptedToGetContractTypeForButThatTypeIs1|지정된 대상에 대한 계약 형식을 가져오려고 했지만 해당 형식이 ServiceContract가 아니며 ServiceContract를 상속하지 않습니다.|  
+|AttemptedToGetContractTypeForButThatTypeIs1|지정 된에 대 한 계약 형식을 가져오려고 했습니다. 형식이 ServiceContract가 아니고 ServiceContract를 상속 하지 않습니다.|  
 |CannotHaveTwoOperationsWithTheSameName3|동일한 계약에 이름이 같은 두 개의 작업을 가질 수 없습니다. 지정된 형식의 지정된 메서드가 이 규칙을 위반합니다. 메서드 이름을 변경하거나 OperationContractAttribute의 Name 속성을 사용하여 작업 중 하나의 이름을 변경할 수 있습니다.|  
 |CannotInheritTwoOperationsWithTheSameName3|이름이 같은 두 개의 다른 작업을 상속할 수 없습니다. 지정된 계약의 지정된 작업이 이 규칙을 위반합니다. 메서드 이름을 변경하거나 OperationContractAttribute의 Name 속성을 사용하여 작업 중 하나의 이름을 변경할 수 있습니다.|  
 |CantCreateChannelWithManualAddressing|수동 주소 지정이 필요하지만 이중 통신만 지원하는 바인딩 및 요청/회신이 필요한 계약에 대한 채널을 만들 수 없습니다.|  

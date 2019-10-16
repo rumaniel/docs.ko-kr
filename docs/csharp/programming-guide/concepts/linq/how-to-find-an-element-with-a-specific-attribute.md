@@ -2,12 +2,12 @@
 title: '방법: 특정 특성으로 요소 찾기(C#)'
 ms.date: 07/20/2015
 ms.assetid: b92591aa-3cfb-490e-99f6-da8de335e362
-ms.openlocfilehash: 351fb4160328ebcf547b0b3442adef11a153c523
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: da2d1691af6268a97e1f586e92c26bbb26906100
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529952"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593598"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-c"></a>방법: 특정 특성으로 요소 찾기(C#)
 이 항목에서는 특정 값을 가진 특성이 포함된 요소를 찾는 방법을 보여 줍니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "43529952"
 ## <a name="example"></a>예  
  이 예제에서는 값이 "Billing"인 `Address` element that has a `Type` 특성을 찾는 방법을 보여 줍니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrder.xml");  
@@ -41,9 +41,9 @@ foreach (XElement el in address)
 ```  
   
 ## <a name="example"></a>예  
- 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)을 참조하세요.  
+ 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-in-a-namespace.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문](./sample-xml-file-typical-purchase-order-in-a-namespace.md).  
   
 ```csharp  
 XElement root = XElement.Load("PurchaseOrderInNamespace.xml");  
@@ -71,8 +71,7 @@ foreach (XElement el in address)
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.Linq.XElement.Attribute%2A>  
-- <xref:System.Xml.Linq.XContainer.Elements%2A>  
-- [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [프로젝션 작업(C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- <xref:System.Xml.Linq.XElement.Attribute%2A>
+- <xref:System.Xml.Linq.XContainer.Elements%2A>
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [프로젝션 작업(C#)](./projection-operations.md)

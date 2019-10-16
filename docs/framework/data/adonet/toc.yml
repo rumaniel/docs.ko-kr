@@ -1,0 +1,342 @@
+- name: ADO.NET
+  href: index.md
+- name: ADO.NET의 새로운 기능
+  href: whats-new.md
+- name: ADO.NET 개요
+  href: ado-net-overview.md
+  items:
+    - name: ADO.NET 아키텍처
+      href: ado-net-architecture.md
+    - name: ADO.NET 기술 옵션 및 지침
+      href: ado-net-technology-options-and-guidelines.md
+    - name: LINQ 및 ADO.NET
+      href: linq-and-ado-net.md
+    - name: .NET Framework 데이터 공급자
+      href: data-providers.md
+    - name: ADO.NET 데이터 세트
+      href: ado-net-datasets.md
+    - name: ADO.NET에서 Side-by-Side 실행
+      href: side-by-side-execution.md
+    - name: ADO.NET 코드 예제
+      href: ado-net-code-examples.md
+- name: ADO.NET 애플리케이션 보안
+  href: securing-ado-net-applications.md
+  items:
+    - name: 보안 개요
+      href: security-overview.md
+    - name: 보안 데이터 액세스
+      href: secure-data-access.md
+    - name: 안전한 클라이언트 애플리케이션
+      href: secure-client-applications.md
+    - name: 코드 액세스 보안 및 ADO.NET
+      href: code-access-security.md
+    - name: 개인 정보 및 데이터 보안
+      href: privacy-and-data-security.md
+- name: ADO.NET에서 데이터 형식 매핑
+  href: data-type-mappings-in-ado-net.md
+  items:
+    - name: SQL Server 데이터 형식 매핑
+      href: sql-server-data-type-mappings.md
+    - name: OLE DB 데이터 형식 매핑
+      href: ole-db-data-type-mappings.md
+    - name: ODBC 데이터 형식 매핑
+      href: odbc-data-type-mappings.md
+    - name: Oracle 데이터 형식 매핑
+      href: oracle-data-type-mappings.md
+    - name: 부동 소수점 숫자
+      href: floating-point-numbers.md
+- name: ADO.NET에서 데이터 검색 및 수정
+  href: retrieving-and-modifying-data.md
+  items:
+    - name: 데이터 소스에 연결
+      href: connecting-to-a-data-source.md
+      items:
+        - name: 연결 설정
+          href: establishing-the-connection.md
+        - name: 연결 이벤트
+          href: connection-events.md
+    - name: 연결 문자열
+      href: connection-strings.md
+      items:
+        - name: 연결 문자열 작성기
+          href: connection-string-builders.md
+        - name: 연결 문자열 및 구성 파일
+          href: connection-strings-and-configuration-files.md
+        - name: 연결 문자열 구문
+          href: connection-string-syntax.md
+        - name: 연결 정보 보호
+          href: protecting-connection-information.md
+    - name: 연결 풀링
+      href: connection-pooling.md
+      items:
+        - name: SQL Server 연결 풀링(ADO.NET)
+          href: sql-server-connection-pooling.md
+        - name: 'OLE DB, ODBC 및 Oracle 연결 풀링'
+          href: ole-db-odbc-and-oracle-connection-pooling.md
+    - name: 명령 및 매개 변수
+      href: commands-and-parameters.md
+      items:
+        - name: 명령 실행
+          href: executing-a-command.md
+        - name: 매개 변수 및 매개 변수 데이터 형식 구성
+          href: configuring-parameters-and-parameter-data-types.md
+        - name: CommandBuilder를 사용하여 명령 생성
+          href: generating-commands-with-commandbuilders.md
+        - name: 데이터베이스에서 단일 값 가져오기
+          href: obtaining-a-single-value-from-a-database.md
+        - name: 명령을 사용하여 데이터 수정
+          href: using-commands-to-modify-data.md
+          items:
+            - name: 데이터 원본에서 데이터 업데이트
+              href: updating-data-in-a-data-source.md
+            - name: 카탈로그 작업 수행
+              href: performing-catalog-operations.md
+    - name: DataAdapters 및 DataReaders
+      href: dataadapters-and-datareaders.md
+      items:
+        - name: DataReader를 사용하여 데이터 검색
+          href: retrieving-data-using-a-datareader.md
+        - name: DataAdapter에서 DataSet 채우기
+          href: populating-a-dataset-from-a-dataadapter.md
+        - name: DataAdapter 매개 변수
+          href: dataadapter-parameters.md
+        - name: 데이터 세트에 기존 제약 조건 추가
+          href: adding-existing-constraints-to-a-dataset.md
+        - name: DataAdapter DataTable 및 DataColumn 매핑
+          href: dataadapter-datatable-and-datacolumn-mappings.md
+        - name: 쿼리 결과를 통해 페이징
+          href: paging-through-a-query-result.md
+        - name: DataAdapters로 데이터 원본 업데이트
+          href: updating-data-sources-with-dataadapters.md
+        - name: DataAdapter 이벤트 처리
+          href: handling-dataadapter-events.md
+        - name: DataAdapter를 사용하여 일괄 작업 수행
+          href: performing-batch-operations-using-dataadapters.md
+    - name: 트랜잭션 및 동시성
+      href: transactions-and-concurrency.md
+      items:
+        - name: 로컬 트랜잭션
+          href: local-transactions.md
+        - name: 분산 트랜잭션
+          href: distributed-transactions.md
+        - name: SQL Server와의 System.Transactions 통합
+          href: system-transactions-integration-with-sql-server.md
+        - name: 낙관적 동시성
+          href: optimistic-concurrency.md
+    - name: ID 또는 일련 번호 값 검색
+      href: retrieving-identity-or-autonumber-values.md
+    - name: 이진 데이터 검색
+      href: retrieving-binary-data.md
+    - name: 저장 프로시저로 데이터 수정
+      href: modifying-data-with-stored-procedures.md
+    - name: 데이터베이스 스키마 정보 검색
+      href: retrieving-database-schema-information.md
+      items:
+        - name: GetSchema 및 Schema 컬렉션
+          href: getschema-and-schema-collections.md
+        - name: 스키마 제한
+          href: schema-restrictions.md
+        - name: 공용 스키마 컬렉션
+          href: common-schema-collections.md
+        - name: SQL Server 스키마 컬렉션
+          href: sql-server-schema-collections.md
+        - name: Oracle 스키마 컬렉션
+          href: oracle-schema-collections.md
+        - name: ODBC 스키마 컬렉션
+          href: odbc-schema-collections.md
+        - name: OLE DB 스키마 컬렉션
+          href: ole-db-schema-collections.md
+    - name: DbProviderFactories
+      href: dbproviderfactories.md
+      items:
+        - name: 팩터리 모델 개요
+          href: factory-model-overview.md
+        - name: DbProviderFactory 가져오기
+          href: obtaining-a-dbproviderfactory.md
+        - name: 'DbConnection, DbCommand 및 DbException'
+          href: dbconnection-dbcommand-and-dbexception.md
+        - name: DbDataAdapter로 데이터 수정
+          href: modifying-data-with-a-dbdataadapter.md
+    - name: ADO.NET의 데이터 추적
+      href: data-tracing.md
+    - name: 성능 카운터
+      href: performance-counters.md
+    - name: 비동기 프로그래밍
+      href: asynchronous-programming.md
+    - name: SqlClient 스트리밍 지원
+      href: sqlclient-streaming-support.md
+    - name: LINQ to DataSet
+      href: linq-to-dataset.md
+      items:
+        - name: 시작
+          href: getting-started-linq-to-dataset.md
+          items:
+            - name: LINQ to DataSet 개요
+              href: linq-to-dataset-overview.md
+            - name: 데이터를 데이터 세트에 로드
+              href: loading-data-into-a-dataset.md
+            - name: 샘플 데이터베이스 다운로드
+              href: downloading-sample-databases-linq-to-dataset.md
+            - name: '방법: Visual Studio에서 LINQ to DataSet 프로젝트 만들기'
+              href: how-to-create-a-linq-to-dataset-project-in-vs.md
+        - name: 프로그래밍 가이드
+          href: programming-guide-linq-to-dataset.md
+          items:
+            - name: LINQ to DataSet에서 쿼리
+              href: queries-in-linq-to-dataset.md
+            - name: DataSets 쿼리
+              href: querying-datasets-linq-to-dataset.md
+              items:
+                - name: 단일 테이블 쿼리
+                  href: single-table-queries-linq-to-dataset.md
+                - name: 크로스 테이블 쿼리
+                  href: cross-table-queries-linq-to-dataset.md
+                - name: 형식화된 DataSets 쿼리
+                  href: querying-typed-datasets.md
+            - name: DataRows 비교
+              href: comparing-datarows-linq-to-dataset.md
+            - name: 쿼리에서 DataTable 만들기
+              href: creating-a-datatable-from-a-query-linq-to-dataset.md
+            - name: '방법: 제네릭 형식 T가 DataRow가 아닌 CopyToDataTable<T> 구현'
+              href: implement-copytodatatable-where-type-not-a-datarow.md
+            - name: 제네릭 필드 및 SetField 메서드
+              href: generic-field-and-setfield-methods-linq-to-dataset.md
+            - name: 데이터 바인딩 및 LINQ to DataSet
+              href: data-binding-and-linq-to-dataset.md
+              items:
+                - name: DataView 개체 만들기
+                  href: creating-a-dataview-object-linq-to-dataset.md
+                - name: DataView로 필터링
+                  href: filtering-with-dataview-linq-to-dataset.md
+                - name: DataView로 정렬
+                  href: sorting-with-dataview-linq-to-dataset.md
+                - name: DataView에서 DataRowView 컬렉션 쿼리
+                  href: querying-the-datarowview-collection-in-a-dataview.md
+                - name: DataView 성능
+                  href: dataview-performance.md
+                - name: '방법: Windows Forms DataGridView 컨트롤에 DataView 개체 바인딩'
+                  href: how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md
+            - name: LINQ to DataSet 쿼리 디버깅
+              href: debugging-linq-to-dataset-queries.md
+            - name: 보안
+              href: security-linq-to-dataset.md
+            - name: LINQ to DataSet 예제
+              href: linq-to-dataset-examples.md
+              items:
+                - name: 쿼리 식 예제
+                  href: query-expression-examples-linq-to-dataset.md
+                  items:
+                    - name: 프로젝션
+                      href: query-expression-syntax-examples-projection-linq-to-dataset.md
+                    - name: 제한 사항
+                      href: query-expression-syntax-examples-restriction-linq-to-dataset.md
+                    - name: 분할
+                      href: query-expression-syntax-examples-partitioning.md
+                    - name: 순서 지정
+                      href: query-expression-syntax-examples-ordering-linq-to-dataset.md
+                    - name: 요소 연산자
+                      href: query-expression-syntax-examples-element-operators.md
+                    - name: 집계 연산자
+                      href: query-expression-syntax-examples-aggregate-operators.md
+                    - name: 조인 연산자
+                      href: query-expression-syntax-examples-join-operators.md
+                - name: 메서드 기반 쿼리 예제
+                  href: method-based-query-examples-linq-to-dataset.md
+                  items:
+                    - name: 프로젝션
+                      href: method-based-query-syntax-examples-projection.md
+                    - name: 분할
+                      href: method-based-query-syntax-examples-partitioning-linq.md
+                    - name: 순서 지정
+                      href: method-based-query-syntax-examples-ordering-linq-to-dataset.md
+                    - name: 세트 연산자
+                      href: method-based-query-syntax-examples-set-operators.md
+                    - name: 변환 연산자
+                      href: method-based-query-syntax-examples-conversion-operators.md
+                    - name: 요소 연산자
+                      href: method-based-query-syntax-examples-element-operators.md
+                    - name: 집계 연산자
+                      href: method-based-query-syntax-examples-aggregate-operators.md
+                    - name: Join
+                      href: method-based-query-syntax-examples-join-linq-to-dataset.md
+                - name: DataSet별 연산자 예제
+                  href: dataset-specific-operator-examples-linq-to-dataset.md
+- name: 엔터티 데이터 모델
+  href: entity-data-model.md
+  items:
+    - name: 엔터티 데이터 모델의 주요 개념
+      href: entity-data-model-key-concepts.md
+    - name: '엔터티 데이터 모델: 네임스페이스'
+      href: entity-data-model-namespaces.md
+    - name: '엔터티 데이터 모델: 기본 데이터 형식'
+      href: entity-data-model-primitive-data-types.md
+    - name: '엔터티 데이터 모델: 상속'
+      href: entity-data-model-inheritance.md
+    - name: 연결 End
+      href: association-end.md
+    - name: 연결 End 복합성
+      href: association-end-multiplicity.md
+    - name: 연결 집합(association set)
+      href: association-set.md
+    - name: 연결 집합 End
+      href: association-set-end.md
+    - name: 연결 형식
+      href: association-type.md
+    - name: 복합 형식
+      href: complex-type.md
+    - name: 엔터티 컨테이너(entity container)
+      href: entity-container.md
+    - name: 엔터티 키
+      href: entity-key.md
+    - name: 엔터티 집합
+      href: entity-set.md
+    - name: 엔터티 형식(entity type)
+      href: entity-type.md
+    - name: 패싯
+      href: facet.md
+    - name: 외래 키 속성
+      href: foreign-key-property.md
+    - name: 모델 선언 함수
+      href: model-declared-function.md
+    - name: 모델 정의 함수
+      href: model-defined-function.md
+    - name: 탐색 속성(navigation property)
+      href: navigation-property.md
+    - name: 속성
+      href: property.md
+    - name: 참조 무결성 제약 조건
+      href: referential-integrity-constraint.md
+- name: Oracle 및 ADO.NET
+  href: oracle-and-adonet.md
+  items:
+    - name: 시스템 요구 사항
+      href: system-requirements-for-the-dotnet-data-provider-for-oracle.md
+    - name: Oracle BFILE
+      href: oracle-bfiles.md
+    - name: Oracle LOB
+      href: oracle-lobs.md
+    - name: Oracle REF CURSOR
+      href: oracle-ref-cursors.md
+      items:
+        - name: REF CURSOR 예제
+          href: ref-cursor-examples.md
+        - name: OracleDataReader의 REF CURSOR 매개 변수
+          href: ref-cursor-parameters-in-an-oracledatareader.md
+        - name: OracleDataReader를 사용하여 여러 Multiple REF CURSOR에서 데이터 검색
+          href: retrieving-data-from-multiple-ref-cursors.md
+        - name: 하나 이상의 REF CURSOR를 사용하여 데이터 세트 필터링
+          href: filling-a-dataset-using-one-or-more-ref-cursors.md
+    - name: OracleType
+      href: oracletypes.md
+    - name: Oracle 시퀀스
+      href: oracle-sequences.md
+    - name: Oracle 데이터 형식 매핑
+      href: oracle-data-type-mappings.md
+    - name: Oracle 분산 트랜잭션
+      href: oracle-distributed-transactions.md
+- name: ADO.NET Entity Framework
+  href: ef/
+- name: SQL Server 및 ADO.NET
+  href: sql/
+- name: 'DataSets, DataTables 및 DataViews'
+  href: dataset-datatable-dataview/

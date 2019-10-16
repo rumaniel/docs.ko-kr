@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3d4d0cd3-bde4-490b-99e7-f4e41be96455
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fe7edffd53023cba6dac1454e620d6e0d7e9513
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 2c438170ec48f40e59f8710d4e3820d6e915bed5
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582270"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55903828"
 ---
 # <a name="parallel-linq-plinq"></a>PLINQ(병렬 LINQ)
 PLINQ(병렬 LINQ)는 LINQ to Objects의 병렬 구현입니다. PLINQ는 LINQ 표준 쿼리 연산자의 전체 집합을 <xref:System.Linq> 네임스페이스의 확장 메서드로 구현하고, 병렬 작업을 위한 추가 연산자를 포함합니다. PLINQ는 LINQ의 간편성과 가독성을 병렬 프로그래밍의 기능과 결합합니다. 작업 병렬 라이브러리를 대상으로 하는 코드와 마찬가지로 PLINQ 쿼리는 호스트 컴퓨터의 기능에 따라 동시성 수준 규모를 조정합니다.  
@@ -44,7 +44,7 @@ PLINQ(병렬 LINQ)는 LINQ to Objects의 병렬 구현입니다. PLINQ는 LINQ �
   
  [방법: PLINQ에서 병합 옵션 지정](../../../docs/standard/parallel-programming/how-to-specify-merge-options-in-plinq.md)  
   
- [방법: PLINQ를 사용하여 파일 디렉터리 열거](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)  
+ [방법: PLINQ를 사용하여 파일 디렉터리 반복](../../../docs/standard/parallel-programming/how-to-iterate-file-directories-with-plinq.md)  
   
  [방법: PLINQ 쿼리 성능 측정](../../../docs/standard/parallel-programming/how-to-measure-plinq-query-performance.md)  
   
@@ -52,6 +52,7 @@ PLINQ(병렬 LINQ)는 LINQ to Objects의 병렬 구현입니다. PLINQ는 LINQ �
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Linq.ParallelEnumerable>  
-- [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)  
-- [LINQ(Language-Integrated Query)](https://msdn.microsoft.com/library/a73c4aec-5d15-4e98-b962-1274021ea93d)
+- <xref:System.Linq.ParallelEnumerable>
+- [병렬 프로그래밍](../../../docs/standard/parallel-programming/index.md)
+- [LINQ(Language-Integrated Query) - C#](../../csharp/programming-guide/concepts/linq/index.md)  
+- [LINQ(Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)  

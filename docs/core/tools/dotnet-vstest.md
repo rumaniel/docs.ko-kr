@@ -1,15 +1,14 @@
 ---
-title: dotnet vstest 명령 - .NET Core CLI
+title: dotnet vstest 명령
 description: dotnet vtest 명령은 프로젝트와 모든 종속성을 빌드합니다.
-author: guardrex
-ms.author: mairaw
+author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: 84b9d9eebfbf20fefe8153dd3ae9bec0f34986c8
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: ffe3807be2c35fb4d6b46b83ed84200433f551d8
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696340"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117518"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 
@@ -21,30 +20,38 @@ ms.locfileid: "34696340"
 
 ## <a name="synopsis"></a>개요
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-```
+
+```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
     [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [--Blame|/Blame] [--InIsolation|/InIsolation]
     [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-```
+
+```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath] 
     [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger]
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-```
+
+```dotnetcli
 dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--TestAdapterPath|/TestAdapterPath]
     [--Platform|/Platform] [--Framework|/Framework] [--Parallel|/Parallel] [--TestCaseFilter|/TestCaseFilter] [--logger|/logger] 
     [-lt|--ListTests|/lt|/ListTests] [--ParentProcessId|/ParentProcessId] [--Port|/Port] [--Diag|/Diag] [[--] <args>...]] [-?|--Help|/?|/Help]
 ```
+
 ---
 
 ## <a name="description"></a>설명
 
-`dotnet-vstest` 명령은 `VSTest.Console` 명령줄 응용 프로그램을 실행하여 자동화된 단위 및 코딩된 UI 응용 프로그램 테스트를 실행합니다.
+`dotnet-vstest` 명령은 `VSTest.Console` 명령줄 애플리케이션을 실행하여 자동화된 단위 테스트를 실행합니다.
 
 ## <a name="arguments"></a>인수
 
@@ -74,11 +81,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-테스트 실행에 사용되는 대상 .NET Framework 버전입니다. 유효한 값의 예는 `.NETFramework,Version=v4.6` 또는 `.NETCoreApp,Version=v1.0`입니다. 지원되는 기타 값은 `Framework35`, `Framework40`, `Framework45`, `FrameworkCore10` 및 `FrameworkUap10`입니다.
+테스트 실행에 사용되는 대상 .NET Framework 버전입니다. 유효한 값의 예는 `.NETFramework,Version=v4.6` 또는 `.NETCoreApp,Version=v1.0`입니다. 지원되는 기타 값에는 `Framework40`, `Framework45`, `FrameworkCore10` 및 `FrameworkUap10`이 있습니다.
 
 `--Parallel|/Parallel`
 
-테스트를 병렬로 실행합니다. 기본적으로 컴퓨터의 사용 가능한 모든 코어를 사용할 수 있습니다. 설정 파일을 사용하여 명시적인 코어 수를 설정합니다.
+테스트를 병렬로 실행합니다. 기본적으로 컴퓨터의 사용 가능한 모든 코어를 사용할 수 있습니다. runsettings 파일에서 RunConfiguration 노드 아래의 MaxCpuCount 속성을 설정하여 코어의 개수를 명시적으로 지정합니다.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -94,7 +101,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 * Team Foundation Server에 테스트 결과를 게시하려면 `TfsPublisher` 로거 공급자를 사용합니다.
 
-  ```
+  ```console
   /logger:TfsPublisher;
       Collection=<team project collection url>;
       BuildName=<build name>;
@@ -106,7 +113,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 * Visual Studio 테스트 결과 파일(TRX)에 결과를 기록하려면 `trx` 로거 공급자를 사용합니다. 이 스위치는 지정된 로그 파일 이름을 사용하여 테스트 결과 디렉터리에 파일을 만듭니다. `LogFileName`이 제공되지 않으면 테스트 결과를 포함할 고유한 파일 이름이 만들어집니다.
 
-  ```
+  ```console
   /logger:trx [;LogFileName=<Defaults to unique file name>]
   ```
 
@@ -138,7 +145,6 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 추가 옵션에 대한 지시 파일을 읽습니다.
 
-
 `args`
 
 어댑터에 전달될 추가 인수를 지정합니다. 인수는 `<n>=<v>` 형식의 이름-값 쌍으로 지정됩니다. 여기서 `<n>`은 인수 이름이고 `<v>`는 인수 값입니다. 여러 개의 인수를 구분하려면 공백을 사용합니다.
@@ -163,11 +169,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-테스트 실행에 사용되는 대상 .NET Framework 버전입니다. 유효한 값의 예는 `.NETFramework,Version=v4.6` 또는 `.NETCoreApp,Version=v1.0`입니다. 지원되는 기타 값에는 `Framework35`, `Framework40`, `Framework45` 및 `FrameworkCore10`이 있습니다.
+테스트 실행에 사용되는 대상 .NET Framework 버전입니다. 유효한 값의 예는 `.NETFramework,Version=v4.6` 또는 `.NETCoreApp,Version=v1.0`입니다. 그 밖의 지원되는 값은 `Framework40`, `Framework45` 및 `FrameworkCore10`입니다.
 
 `--Parallel|/Parallel`
 
-테스트를 병렬로 실행합니다. 기본적으로 컴퓨터의 사용 가능한 모든 코어를 사용할 수 있습니다. 설정 파일을 사용하여 명시적인 코어 수를 설정합니다.
+테스트를 병렬로 실행합니다. 기본적으로 컴퓨터의 사용 가능한 모든 코어를 사용할 수 있습니다. runsettings 파일에서 RunConfiguration 노드 아래의 MaxCpuCount 속성을 설정하여 코어의 개수를 명시적으로 지정합니다.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -183,7 +189,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 * Team Foundation Server에 테스트 결과를 게시하려면 `TfsPublisher` 로거 공급자를 사용합니다.
 
-  ```
+  ```console
   /logger:TfsPublisher;
       Collection=<team project collection url>;
       BuildName=<build name>;
@@ -195,7 +201,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 * Visual Studio 테스트 결과 파일(TRX)에 결과를 기록하려면 `trx` 로거 공급자를 사용합니다. 이 스위치는 지정된 로그 파일 이름을 사용하여 테스트 결과 디렉터리에 파일을 만듭니다. `LogFileName`이 제공되지 않으면 테스트 결과를 포함할 고유한 파일 이름이 만들어집니다.
 
-  ```
+  ```console
   /logger:trx [;LogFileName=<Defaults to unique file name>]
   ```
 
@@ -239,11 +245,11 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 `--Framework|/Framework:<Framework Version>`
 
-테스트 실행에 사용되는 대상 .NET Framework 버전입니다. 유효한 값의 예는 `.NETFramework,Version=v4.6` 또는 `.NETCoreApp,Version=v1.0`입니다. 지원되는 기타 값에는 `Framework35`, `Framework40`, `Framework45` 및 `FrameworkCore10`이 있습니다.
+테스트 실행에 사용되는 대상 .NET Framework 버전입니다. 유효한 값의 예는 `.NETFramework,Version=v4.6` 또는 `.NETCoreApp,Version=v1.0`입니다. 그 밖의 지원되는 값은 `Framework40`, `Framework45` 및 `FrameworkCore10`입니다.
 
 `--Parallel|/Parallel`
 
-테스트를 병렬로 실행합니다. 기본적으로 컴퓨터의 사용 가능한 모든 코어를 사용할 수 있습니다. 설정 파일을 사용하여 명시적인 코어 수를 설정합니다.
+테스트를 병렬로 실행합니다. 기본적으로 컴퓨터의 사용 가능한 모든 코어를 사용할 수 있습니다. runsettings 파일에서 RunConfiguration 노드 아래의 MaxCpuCount 속성을 설정하여 코어의 개수를 명시적으로 지정합니다.
 
 `--TestCaseFilter|/TestCaseFilter:<Expression>`
 
@@ -259,7 +265,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 * Team Foundation Server에 테스트 결과를 게시하려면 `TfsPublisher` 로거 공급자를 사용합니다.
 
-  ```
+  ```console
   /logger:TfsPublisher;
       Collection=<team project collection url>;
       BuildName=<build name>;
@@ -271,7 +277,7 @@ dotnet vstest [<TEST_FILE_NAMES>] [--Settings|/Settings] [--Tests|/Tests] [--Tes
 
 * Visual Studio 테스트 결과 파일(TRX)에 결과를 기록하려면 `trx` 로거 공급자를 사용합니다. 이 스위치는 지정된 로그 파일 이름을 사용하여 테스트 결과 디렉터리에 파일을 만듭니다. `LogFileName`이 제공되지 않으면 테스트 결과를 포함할 고유한 파일 이름이 만들어집니다.
 
-  ```
+  ```console
   /logger:trx [;LogFileName=<Defaults to unique file name>]
   ```
 

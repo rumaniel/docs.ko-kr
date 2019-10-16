@@ -2,12 +2,12 @@
 title: System.Uri의 국가별 리소스 식별자 지원
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 742ea03a62426506f068a9b9e669278d0d4663ec
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: f78fff250aae177b5f0360e77a1c41a2f2bb0527
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50047152"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647346"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri의 국가별 리소스 식별자 지원
 <xref:System.Uri?displayProperty=nameWithType> 클래스는 IRI(International Resource Identifier) 및 IDN(Internationalized Domain Names)을 통해 확장되었습니다. 이러한 향상된 기능은 .NET Framework 3.5, 3.0 SP1 및 2.0 SP1에서 사용할 수 있습니다.  
@@ -15,19 +15,19 @@ ms.locfileid: "50047152"
 ## <a name="iri-and-idn-support"></a>IRI 및 IDN 지원  
  웹 주소는 대개 매우 제한적인 문자 집합으로 구성된 URI(Uniform Resource Identifier)를 사용하여 표현됩니다.  
   
--   영문자의 대문자 및 소문자 ASCII 문자.  
+- 영문자의 대문자 및 소문자 ASCII 문자.  
   
--   0~9의 숫자.  
+- 0~9의 숫자.  
   
--   일부 기타 ASCII 기호.  
+- 일부 기타 ASCII 기호.  
   
  URI 사양은 IETF(Internet Engineering Task Force)에서 게시한 RFC 2396 및 RFC 3986에 설명되어 있습니다.  
   
  인터넷이 성장하면서 영어 이외의 언어로 리소스를 식별해야 할 필요성이 증가하고 있습니다. 이 필요성을 가능하게 하고 ASCII 이외 문자(유니코드/ISO 10646 문자 집합의 문자)를 허용하는 식별자를 IRI(International Resource Identifier)라고 합니다. IRI 사양은 IETF에서 게시한 RFC 3987에 설명되어 있습니다. IRI를 사용하면 URL에 유니코드 문자를 포함할 수 있습니다.  
   
- 기존 <xref:System.Uri?displayProperty=nameWithType> 클래스는 RFC 3987을 기반으로 IRI 지원을 제공하도록 확장되었습니다. 현재 사용자의 경우 IRI를 사용하도록 설정하지 않는 한 .NET Framework 2.0 동작에서 차이를 느끼지 못할 것입니다. 이 덕분에 .NET Framework 이전 버전과의 응용 프로그램 호환성이 제공됩니다.  
+ 기존 <xref:System.Uri?displayProperty=nameWithType> 클래스는 RFC 3987을 기반으로 IRI 지원을 제공하도록 확장되었습니다. 현재 사용자의 경우 IRI를 사용하도록 설정하지 않는 한 .NET Framework 2.0 동작에서 차이를 느끼지 못할 것입니다. 이 덕분에 .NET Framework 이전 버전과의 애플리케이션 호환성이 제공됩니다.  
   
- 응용 프로그램은 도메인 이름에 적용되는 IDN(다국어 도메인 이름) 구문 분석을 사용할지 여부와 IRI 구문 분석 규칙을 적용할지 여부를 지정할 수 있습니다. 이 설정은 machine.config 또는 app.config 파일에서 지정할 수 있습니다.  
+ 애플리케이션은 도메인 이름에 적용되는 IDN(다국어 도메인 이름) 구문 분석을 사용할지 여부와 IRI 구문 분석 규칙을 적용할지 여부를 지정할 수 있습니다. 이 설정은 machine.config 또는 app.config 파일에서 지정할 수 있습니다.  
   
  IDN을 사용하면 도메인 이름의 모든 유니코드 레이블이 해당 Punycode 문자로 변환됩니다. Punycode 이름에는 ASCII 문자만 사용되며 항상 xn-- 접두사로 시작합니다. 대부분의 DNS 서버는 ASCII 문자만 지원하므로(RFC 3940 참조) 이렇게 해야 인터넷에서 기존 DNS 서버를 지원할 수 있습니다.  
   
@@ -43,8 +43,9 @@ ms.locfileid: "50047152"
   
  <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> 및 <xref:System.Configuration.IdnElement?displayProperty=nameWithType> 구성 클래스에 대한 구성 설정은 첫 번째 <xref:System.Uri?displayProperty=nameWithType> 클래스가 생성될 때 한 번 판독됩니다. 해당 시점 후의 구성 설정 변경 내용은 무시됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>  
- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>  
- <xref:System.Uri?displayProperty=nameWithType>  
- <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType>
+## <a name="see-also"></a>참고 항목
+
+- <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
+- <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
+- <xref:System.Uri.DnsSafeHost%2A?displayProperty=nameWithType>

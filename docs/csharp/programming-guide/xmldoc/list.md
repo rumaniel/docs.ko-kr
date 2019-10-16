@@ -1,5 +1,6 @@
 ---
-title: '&lt;list&gt;(C# 프로그래밍 가이드)'
+title: <list> - C# 프로그래밍 가이드
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - list
@@ -12,14 +13,14 @@ helpviewer_keywords:
 - <item> C# XML tag
 - <list> C# XML tag
 ms.assetid: c9620b1b-c2e6-43f1-ab88-8ab47308ffec
-ms.openlocfilehash: 3f9d1e2b08b672ca58e96767aedaa71a8826c0ab
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aadb24c43d49acb3e71490efd156b14d9fc5f133
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512434"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587979"
 ---
-# <a name="ltlistgt-c-programming-guide"></a>&lt;list&gt;(C# 프로그래밍 가이드)
+# <a name="list-c-programming-guide"></a>\<list>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
   
 ```xml  
@@ -35,7 +36,7 @@ ms.locfileid: "43512434"
 </list>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `term`  
  `description`에서 정의되는, 정의할 용어입니다.  
   
@@ -49,12 +50,12 @@ ms.locfileid: "43512434"
   
  목록 또는 테이블에 \<item> 블록을 필요한 개수만큼 포함할 수 있습니다.  
   
- [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
+ [/doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
 ## <a name="example"></a>예  
- [!code-csharp[csProgGuideDocComments#6](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/list_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#6](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#6)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: deaeb4e244a4f9c1e8582d9bea26c2ae5cfde818
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: daee6c46c247bcd21073f779cada8c843947a949
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421352"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747242"
 ---
 # <a name="icordebugregistersetgetregisters-method"></a>ICorDebugRegisterSet::GetRegisters 메서드
-(현재 코드를 실행 하는 컴퓨터)에서 각 레지스터의 값을 가져옵니다는 비트 마스크에 의해 지정 된 합니다.  
+(코드는 현재 실행 중인 컴퓨터)에서 각 레지스터의 값을 가져옵니다 비트 마스크에 의해 지정 된 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetRegisters (  
     [in] ULONG64       mask,   
     [in] ULONG32       regCount,  
@@ -38,30 +38,31 @@ HRESULT GetRegisters (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `mask`  
- [in] 검색할 값은 어느 레지스터를 지정 하는 비트 마스크입니다. 각 비트를 레지스터에 해당합니다. 약간 1로 설정 되 면 레지스터의 값이 검색 됩니다. 그렇지 않으면 레지스터의 값은 검색 되지 않습니다.  
+ [in] 검색할 값은 어느 레지스터를 지정 하는 비트 마스크입니다. 각 비트 레지스터에 해당 합니다. 잠시으로 설정 된 하나 레지스터의 값 검색 됩니다. 그렇지 않은 경우 레지스터의 값 검색 되지 않습니다.  
   
  `regCount`  
  [in] 레지스터 값을 검색할 수 있습니다.  
   
  `regBuffer`  
- [out] 배열 `CORDB_REGISTER` 각각 수신 하는 레지스터의 값 개체입니다.  
+ [out] 배열을 `CORDB_REGISTER` 레지스터의 값을 받으며 각 개체입니다.  
   
 ## <a name="remarks"></a>설명  
- 배열의 크기는 비트 마스크에 1로 설정 된 비트 수와 동일 해야 합니다. `regCount` 매개 변수 레지스터 값을 받을 버퍼에서 요소 수를 지정 합니다. 경우는 `regCount` 값이 너무 작아서 마스크에 의해 지정 된 레지스터 수에 대 한, 레지스터 집합에서 잘립니다. 경우는 `regCount` 값이 너무 커서는 사용 하지 않는 `regBuffer` 요소를 수정 되지 것입니다.  
+ 배열의 크기는 비트 마스크에 하나로 설정 하는 비트 수와 동일 해야 합니다. `regCount` 매개 변수 레지스터 값을 받을 버퍼에서 요소 수를 지정 합니다. 경우는 `regCount` 값이 너무 작아서 마스크에 의해 지정 된 레지스터 수, 레지스터 집합에서 잘립니다. 경우는 `regCount` 값이 너무 커서를 사용 하지 않는 `regBuffer` 요소를 수정 되지 것입니다.  
   
- 비트 마스크를 사용할 수 있는 레지스터를 지정 하는 경우 `GetRegisters` 해당 레지스터에 대 한 비활성화 상태 값을 반환 합니다.  
+ 비트 마스크를 사용할 수 없는 레지스터를 지정 하는 경우 `GetRegisters` 해당 레지스터에 대해 비활성화 상태 값을 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebugRegisterSet 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)  
- [ICorDebugRegisterSet2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebugRegisterSet 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+- [ICorDebugRegisterSet2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)

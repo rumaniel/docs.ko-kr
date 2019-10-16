@@ -8,49 +8,49 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13f7e935ab999ccc3cd3ea1e308e8d686bed4171
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec90d022a0c72782f413a84b6fbd2c1b8d663a73
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396937"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046502"
 ---
 # <a name="garbage-collection-etw-events"></a>가비지 컬렉션 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 가비지 수집과 관련된 정보를 수집합니다. 가비지 수집 수행 횟수, 가비지 수집 중에 해제된 메모리 양 등을 판별하는 작업을 포함하여 진단과 디버깅에 도움이 됩니다.  
   
  이 범주는 다음 이벤트로 구성됩니다.  
   
--   [GCStart_V1 Event](#gcstart_v1_event)  
+- [GCStart_V1 Event](#gcstart_v1_event)  
   
--   [GCEnd_V1 Event](#gcend_v1_event)  
+- [GCEnd_V1 Event](#gcend_v1_event)  
   
--   [GCHeapStats_V1 Event](#gcheapstats_v1_event)  
+- [GCHeapStats_V1 Event](#gcheapstats_v1_event)  
   
--   [GCCreateSegment_V1 Event](#gccreatesegment_v1_event)  
+- [GCCreateSegment_V1 Event](#gccreatesegment_v1_event)  
   
--   [GCFreeSegment_V1 Event](#gcfreesegment_v1_event)  
+- [GCFreeSegment_V1 Event](#gcfreesegment_v1_event)  
   
--   [GCRestartEEBegin_V1 Event](#gcrestarteebegin_v1_event)  
+- [GCRestartEEBegin_V1 Event](#gcrestarteebegin_v1_event)  
   
--   [GCRestartEEEnd_V1 Event](#gcrestarteeend_v1_event)  
+- [GCRestartEEEnd_V1 Event](#gcrestarteeend_v1_event)  
   
--   [GCSuspendEE_V1 Event](#gcsuspendee_v1_event)  
+- [GCSuspendEE_V1 Event](#gcsuspendee_v1_event)  
   
--   [GCSuspendEEEnd_V1 Event](#gcsuspendeeend_v1_event)  
+- [GCSuspendEEEnd_V1 Event](#gcsuspendeeend_v1_event)  
   
--   [GCAllocationTick_V2 Event](#gcallocationtick_v2_event)  
+- [GCAllocationTick_V2 Event](#gcallocationtick_v2_event)  
   
--   [GCFinalizersBegin_V1 Event](#gcfinalizersbegin_v1_event)  
+- [GCFinalizersBegin_V1 Event](#gcfinalizersbegin_v1_event)  
   
--   [GCFinalizersEnd_V1 Event](#gcfinalizersend_v1_event)  
+- [GCFinalizersEnd_V1 Event](#gcfinalizersend_v1_event)  
   
--   [GCCreateConcurrentThread_V1 Event](#gccreateconcurrentthread_v1_event)  
+- [GCCreateConcurrentThread_V1 Event](#gccreateconcurrentthread_v1_event)  
   
--   [GCTerminateConcurrentThread_V1 Event](#gcterminateconcurrentthread_v1_event)  
+- [GCTerminateConcurrentThread_V1 Event](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
-## <a name="gcstartv1-event"></a>GCStart_V1 Event  
- 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.  
+## <a name="gcstart_v1-event"></a>GCStart_V1 Event  
+ 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
@@ -75,7 +75,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gcend_v1_event"></a>   
-## <a name="gcendv1-event"></a>GCEnd_V1 Event  
+## <a name="gcend_v1-event"></a>GCEnd_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -99,7 +99,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gcheapstats_v1_event"></a>   
-## <a name="gcheapstatsv1-event"></a>GCHeapStats_V1 Event  
+## <a name="gcheapstats_v1-event"></a>GCHeapStats_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -134,7 +134,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gccreatesegment_v1_event"></a>   
-## <a name="gccreatesegmentv1-event"></a>GCCreateSegment_V1 Event  
+## <a name="gccreatesegment_v1-event"></a>GCCreateSegment_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -161,7 +161,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gcfreesegment_v1_event"></a>   
-## <a name="gcfreesegmentv1-event"></a>GCFreeSegment_V1 Event  
+## <a name="gcfreesegment_v1-event"></a>GCFreeSegment_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -184,7 +184,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gcrestarteebegin_v1_event"></a>   
-## <a name="gcrestarteebeginv1-event"></a>GCRestartEEBegin_V1 Event  
+## <a name="gcrestarteebegin_v1-event"></a>GCRestartEEBegin_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -202,7 +202,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gcrestarteeend_v1_event"></a>   
-## <a name="gcrestarteeendv1-event"></a>GCRestartEEEnd_V1 Event  
+## <a name="gcrestarteeend_v1-event"></a>GCRestartEEEnd_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -220,7 +220,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gcsuspendee_v1_event"></a>   
-## <a name="gcsuspendeev1-event"></a>GCSuspendEE_V1 Event  
+## <a name="gcsuspendee_v1-event"></a>GCSuspendEE_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -237,14 +237,14 @@ ms.locfileid: "33396937"
   
 |필드 이름|데이터 형식|설명|  
 |----------------|---------------|-----------------|  
-|이유|win:UInt16|0x0 - 기타.<br /><br /> 0x1 - 가비지 수집.<br /><br /> 0x2 - 응용 프로그램 도메인 중지.<br /><br /> 0x3 - 코드 피칭.<br /><br /> 0x4 - 종료.<br /><br /> 0x5 - 디버거.<br /><br /> 0x6 - 가비지 수집 준비.|  
+|이유|win:UInt16|0x0 - 기타.<br /><br /> 0x1 - 가비지 수집.<br /><br /> 0x2 - 애플리케이션 도메인 중지.<br /><br /> 0x3 - 코드 피칭.<br /><br /> 0x4 - 종료.<br /><br /> 0x5 - 디버거.<br /><br /> 0x6 - 가비지 수집 준비.|  
 |개수|win:UInt32|해당 시점의 GC 개수입니다. 일반적으로 이 이벤트 뒤에 후속 GC 시작 이벤트가 확인되고 가비지 수집 중에 GC 인덱스를 늘리면 해당 개수는 이 개수 + 1이 됩니다.|  
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
  [맨 위로 이동](#top)  
   
 <a name="gcsuspendeeend_v1_event"></a>   
-## <a name="gcsuspendeeendv1-event"></a>GCSuspendEEEnd_V1 Event  
+## <a name="gcsuspendeeend_v1-event"></a>GCSuspendEEEnd_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -262,7 +262,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gcallocationtick_v2_event"></a>   
-## <a name="gcallocationtickv2-event"></a>GCAllocationTick_V2 Event  
+## <a name="gcallocationtick_v2-event"></a>GCAllocationTick_V2 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -290,7 +290,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gcfinalizersbegin_v1_event"></a>   
-## <a name="gcfinalizersbeginv1-event"></a>GCFinalizersBegin_V1 Event  
+## <a name="gcfinalizersbegin_v1-event"></a>GCFinalizersBegin_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -308,7 +308,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gcfinalizersend_v1_event"></a>   
-## <a name="gcfinalizersendv1-event"></a>GCFinalizersEnd_V1 Event  
+## <a name="gcfinalizersend_v1-event"></a>GCFinalizersEnd_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -331,7 +331,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gccreateconcurrentthread_v1_event"></a>   
-## <a name="gccreateconcurrentthreadv1-event"></a>GCCreateConcurrentThread_V1 Event  
+## <a name="gccreateconcurrentthread_v1-event"></a>GCCreateConcurrentThread_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -350,7 +350,7 @@ ms.locfileid: "33396937"
  [맨 위로 이동](#top)  
   
 <a name="gcterminateconcurrentthread_v1_event"></a>   
-## <a name="gcterminateconcurrentthreadv1-event"></a>GCTerminateConcurrentThread_V1 Event  
+## <a name="gcterminateconcurrentthread_v1-event"></a>GCTerminateConcurrentThread_V1 Event  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -366,5 +366,6 @@ ms.locfileid: "33396937"
   
  이벤트 데이터가 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>참고자료
+
+- [CLR ETW 이벤트](clr-etw-events.md)

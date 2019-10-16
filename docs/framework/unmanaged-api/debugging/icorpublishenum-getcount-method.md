@@ -17,36 +17,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f191c31ec5333fbea52c298f477c8c624beb92b2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1465a667763c12593c4bc89148d70f85371fcc67
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424510"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775565"
 ---
 # <a name="icorpublishenumgetcount-method"></a>ICorPublishEnum::GetCount 메서드
-열거형에서 항목의 수를 가져옵니다.  
+열거형의 항목 수를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetCount (  
     [out] ULONG   *pcelt  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pcelt`  
  [out] 열거형에는 항목 수에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorPub.idl, CorPub.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorPublishEnum 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorPublishEnum 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)

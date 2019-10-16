@@ -1,6 +1,6 @@
 ---
 title: TAP(작업 기반 비동기 패턴)
-ms.date: 03/30/2017
+ms.date: 02/26/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -14,33 +14,34 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe69943a6f87bbbb7f29d1e4d6d30c26709725d8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33579017"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377653"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>TAP(작업 기반 비동기 패턴)
 TAP(작업 기반 비동기 패턴)은 임의 비동기 작업을 나타내는 데 사용되는 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 네임스페이스의 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks?displayProperty=nameWithType> 형식을 기준으로 합니다. TAP은 새로운 개발을 위해 비동기 디자인 패턴을 권장합니다.  
   
-## <a name="naming-parameters-and-return-types"></a>이름 지정, 매개 변수 및 반환 형식  
- TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 나타냅니다. 이는 `IAsyncResult` 및 `Begin` 메서드가 필요한 비동기 프로그래밍 모델(APM 또는 `End`) 패턴과 대조적이며, `Async` 접미사가 있는 메서드가 필요하고 하나 이상의 이벤트, 이벤트 처리기 대리자 형식 및 `EventArg` 파생 형식도 요구하는 이벤트 기반 비동기 패턴(EAP)과 대조적입니다. TAP의 비동기 메서드는 작업 이름 뒤에 `Async` 접미사를 포함합니다(예: `Get` 작업의 경우 `GetAsync`). 접미사가 `Async`인 메서드 이름이 이미 포함되어 있는 클래스에 TAP 메서드를 추가하는 경우 대신 `TaskAsync` 접미사를 사용합니다. 예를 들어, 클래스에 `GetAsync` 메서드가 이미 있는 경우 이름으로 `GetTaskAsync`를 사용합니다.  
+## <a name="naming-parameters-and-return-types"></a>이름 지정, 매개 변수 및 반환 형식
+
+TAP은 단일 메서드를 사용하여 비동기 작업의 시작과 완료를 나타냅니다. 이는 APM(비동기 프로그래밍 모델 또는 `IAsyncResult`) 패턴 및 EAP(이벤트 기반 비동기 패턴)와 대조됩니다. APM에는 `Begin` 및 `End` 메서드가 필요합니다. EAP에는 `Async` 접미사가 있는 메서드가 필요하며 하나 이상의 이벤트, 이벤트 처리기 대리자 형식 및 `EventArg`에서 파생된 형식도 필요합니다. TAP의 비동기 메서드는 <xref:System.Threading.Tasks.Task>, <xref:System.Threading.Tasks.Task%601>, <xref:System.Threading.Tasks.ValueTask> 및 <xref:System.Threading.Tasks.ValueTask%601>와 같은 대기할 수 있는 형식을 반환하는 메서드의 작업 이름 뒤에 `Async` 접미사를 포함합니다. 예를 들어 `Task<String>`을 반환하는 비동기 `Get` 작업은 명명된 `GetAsync`일 수 있습니다. 접미사가 `Async`인 EAP 메서드 이름이 이미 포함되어 있는 클래스에 TAP 메서드를 추가하는 경우 대신 `TaskAsync` 접미사를 사용합니다. 예를 들어, 클래스에 `GetAsync` 메서드가 이미 있는 경우 이름으로 `GetTaskAsync`를 사용합니다. 메서드가 비동기 작업을 시작하지만 대기할 수 있는 형식을 반환하지 않는 경우 이 메서드가 작업 결과를 반환하거나 throw하지 않도록 제안하려면 해당 이름은 `Begin`, `Start` 또는 일부 다른 동사로 시작해야 합니다.  
   
  TAP 메서드는 해당 동기 메서드가 void를 반환하는지 또는 `TResult` 형식을 반환하는지에 따라 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 또는 <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 개체를 반환합니다.  
   
- TAP 메서드의 매개 변수는 해당 동기 작업의 매개 변수와 일치해야 하며 동일한 순서로 제공되어야 합니다.  그러나, `out` 및 `ref` 매개 변수는 이 규칙에서 제외되므로 사용하지 말아야 합니다. `out` 또는 `ref` 매개 변수를 통해 반환된 데이터는 `TResult`에 의해 반환되는 <xref:System.Threading.Tasks.Task%601>의 일부로 대신 반환되어야 하며, 여러 값을 수용하기 위해 튜플 또는 사용자 지정 데이터 구조를 사용해야 합니다. 
+ TAP 메서드의 매개 변수는 해당 동기 메서드의 매개 변수와 일치해야 하며 동일한 순서로 제공되어야 합니다.  그러나, `out` 및 `ref` 매개 변수는 이 규칙에서 제외되므로 사용하지 말아야 합니다. `out` 또는 `ref` 매개 변수를 통해 반환된 데이터는 `TResult`에 의해 반환되는 <xref:System.Threading.Tasks.Task%601>의 일부로 대신 반환되어야 하며, 여러 값을 수용하기 위해 튜플 또는 사용자 지정 데이터 구조를 사용해야 합니다. TAP 메서드의 동기 메서드가 매개 변수를 제공하지 않는 경우에도 <xref:System.Threading.CancellationToken> 매개 변수 추가를 고려해야 합니다.
  
- 작업의 생성, 조작 또는 조합에만 사용되는 메서드(메서드의 비동기 의도는 메서드 이름 또는 메서드가 속해 있는 형식의 이름에 분명하게 나타나 있음)는 이 명명 패턴을 따를 필요가 없습니다. 이런 메서드를 흔히 조합기라고 합니다. 조합기의 예로는 <xref:System.Threading.Tasks.Task.WhenAll%2A> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A>가 있으며, [작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) 문서의 [기본 제공 작업 기반 조합기 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators) 섹션에서 해당 설명을 확인할 수 있습니다.  
+ 작업의 생성, 조작 또는 조합에만 사용되는 메서드(메서드의 비동기 의도는 메서드 이름 또는 메서드가 속해 있는 형식의 이름에 분명하게 나타나 있음)는 이 명명 패턴을 따를 필요가 없습니다. 이런 메서드를 흔히 조합기라고 합니다.  조합기의 예로는 <xref:System.Threading.Tasks.Task.WhenAll%2A> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A>가 있으며, [작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md) 문서의 [기본 제공 작업 기반 조합기 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md#combinators) 섹션에서 해당 설명을 확인할 수 있습니다.  
   
  TAP 구문이 APM(비동기 프로그래밍 모델) 및 EAP(이벤트 기반 비동기 패턴)와 같은 레거시 비동기 프로그래밍 패턴에 사용된 구문과 어떻게 다른지에 대한 예를 보려면 [비동기 프로그래밍 패턴](../../../docs/standard/asynchronous-programming-patterns/index.md)을 참조하세요.  
   
 ## <a name="initiating-an-asynchronous-operation"></a>비동기 작업 시작  
  TAP을 기반으로 하는 비동기 메서드는 인수 유효성 검사 및 결과 작업을 반환하기 전에 비동기 작업 시작 등 적은 양의 작업을 동기적으로 수행할 수 있습니다. 동기 작업은 비동기 메서드가 신속하게 반환할 수 있도록 최소한으로 유지해야 합니다. 빠르게 반환되는 이유는 다음과 같습니다.  
   
--   비동기 메서드는 사용자 인터페이스(UI) 스레드에서 호출할 수 있으며, 모든 장기 실행 동기 작업에서 응용 프로그램의 응답에 문제가 발생할 수 있습니다  
+- 비동기 메서드는 사용자 인터페이스(UI) 스레드에서 호출할 수 있으며, 모든 장기 실행 동기 작업에서 애플리케이션의 응답에 문제가 발생할 수 있습니다  
   
--   여러 비동기 메서드를 동시에 실행할 수 있습니다. 따라서 비동기 메서드의 동기 부분에서 모든 장기 실행 작업은 다른 비동기 작업의 시작을 지연시켜 동시성의 이점을 감소시킬 수 있습니다.  
+- 여러 비동기 메서드를 동시에 실행할 수 있습니다. 따라서 비동기 메서드의 동기 부분에서 모든 장기 실행 작업은 다른 비동기 작업의 시작을 지연시켜 동시성의 이점을 감소시킬 수 있습니다.  
   
  경우에 따라 작업을 완료하는 데 필요한 작업 시간이 비동기적으로 작업을 실행하는 데 필요한 작업 시간보다 적을 수 있습니다. 이미 메모리에 버퍼링된 데이터로 읽기 작업을 충족할 수 있는 스트림에서 읽기는 이러한 시나리오의 예입니다. 경우에 따라 작업을 동기적으로 완료하고 이미 완료된 작업을 반환할 수 있습니다.  
   
@@ -53,7 +54,7 @@ TAP(작업 기반 비동기 패턴)은 임의 비동기 작업을 나타내는 �
  TAP 메서드의 호출자는 결과 작업을 동기적으로 대기함으로써 TAP 메서드의 완료 대기를 차단하거나 비동기 작업이 완료될 때 추가(연속) 코드를 실행할 수 있습니다. 연속 코드 작성자는 해당 코드가 실행되는 위치를 제어합니다. 연속 코드를 <xref:System.Threading.Tasks.Task> 클래스에서 메서드를 통해(예: <xref:System.Threading.Tasks.Task.ContinueWith%2A>) 명시적으로 만들거나 연속 작업을 기반으로 만들어진 언어 지원을 사용하여(예: C#의 `await`, Visual Basic의 `Await`, F#의 `AwaitValue`) 암시적으로 만들 수 있습니다.  
   
 ## <a name="task-status"></a>작업 상태  
- <xref:System.Threading.Tasks.Task> 클래스는 비동기 작업에 대한 수명 주기를 제공하며 해당 주기는 <xref:System.Threading.Tasks.TaskStatus> 열거형으로 표시됩니다. <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>에서 파생되는 유형의 상황을 지원하거나 일정에 따라 구성을 구분할 수 있도록 지원하기 위해 <xref:System.Threading.Tasks.Task> 클래스가 <xref:System.Threading.Tasks.Task.Start%2A> 메서드를 노출합니다. 공용 <xref:System.Threading.Tasks.Task> 생성자에서 만든 작업은 예약되지 않은 <xref:System.Threading.Tasks.TaskStatus.Created> 상태에서 수명 주기를 시작하고 이러한 인스턴스에서 <xref:System.Threading.Tasks.Task.Start%2A>를 호출할 때만 예약되므로 콜드 작업이라고 합니다. 
+ <xref:System.Threading.Tasks.Task> 클래스는 비동기 작업에 대한 수명 주기를 제공하며 해당 주기는 <xref:System.Threading.Tasks.TaskStatus> 열거형으로 표시됩니다. <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601>에서 파생되는 유형의 상황을 지원하거나 일정에 따라 구성을 구분할 수 있도록 지원하기 위해 <xref:System.Threading.Tasks.Task> 클래스가 <xref:System.Threading.Tasks.Task.Start%2A> 메서드를 노출합니다. 공용 <xref:System.Threading.Tasks.Task> 생성자에서 만든 작업은 예약되지 않은 <xref:System.Threading.Tasks.TaskStatus.Created> 상태에서 수명 주기를 시작하고 이러한 인스턴스에서 <xref:System.Threading.Tasks.Task.Start%2A>를 호출할 때만 예약되므로 콜드 작업이라고 합니다.  
  
  다른 모든 작업은 활성 상태로 수명 주기를 시작합니다. 즉, 작업이 나타내는 비동기 작업이 이미 시작되었고 작업 상태는 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 이외의 열거형 값임을 의미합니다. TAP 메서드에서 반환되는 모든 작업을 활성화해야 합니다. **TAP 메서드가 내부적으로 작업의 생성자를 사용하여 반환할 작업을 인스턴스화하는 경우 해당 TAP 메서드는 작업을 반환하기 전에 <xref:System.Threading.Tasks.Task> 개체에서 <xref:System.Threading.Tasks.Task.Start%2A>를 호출해야 합니다.** TAP 메서드의 소비자는 반환된 작업을 활성화했다가 안전하게 가정할 수 있으며 TAP 메서드에서 반환된 <xref:System.Threading.Tasks.Task.Start%2A>의 <xref:System.Threading.Tasks.Task>를 호출하려고 시도해서는 안 됩니다. 활성 작업에서 <xref:System.Threading.Tasks.Task.Start%2A>를 호출하면 <xref:System.InvalidOperationException> 예외가 나타납니다.  
   
@@ -94,7 +95,7 @@ TAP(작업 기반 비동기 패턴)은 임의 비동기 작업을 나타내는 �
  TAP 구현이 `progress` 매개 변수를 허용하는 오버로드를 제공하는 경우 진행률이 보고되지 않으면 `null`인 인수를 허용해야 합니다. TAP 구현에서는 비동기 메서드에서 신속하게 진행률을 제공하고 진행률의 소비자가 해당 정보를 다루는 방법과 가장 잘 처리할 수 있는 상황을 결정할 수 있는 <xref:System.Progress%601> 개체에 진행률을 동기적으로 보고해야 합니다. 예를 들어, 진행률 인스턴스에서 콜백 마샬링을 선택할 수 있으며, 캡처된 동기화 컨텍스트에 이벤트를 발생시킬 수 있습니다.  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T> 구현  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]는 단일 <xref:System.IProgress%601> 구현인 <xref:System.Progress%601>를 제공합니다. <xref:System.Progress%601> 클래스는 다음과 같이 선언됩니다.  
+ .NET Framework 4.5는 단일 <xref:System.IProgress%601> 구현인 <xref:System.Progress%601>를 제공합니다. <xref:System.Progress%601> 클래스는 다음과 같이 선언됩니다.  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
@@ -194,5 +195,5 @@ Public MethodNameAsync(…, cancellationToken As CancellationToken,
 |-----------|-----------------|  
 |[비동기 프로그래밍 패턴](../../../docs/standard/asynchronous-programming-patterns/index.md)|작업 기반 비동기 패턴(TAP), 비동기 프로그래밍 모델(APM) 및 이벤트 기반 비동기 패턴(EAP)과 같이 비동기 작업을 수행하는 세 가지 패턴이 도입됩니다.|  
 |[작업 기반 비동기 패턴 구현](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)|Visual Studio의 C#와 Visual Basic 컴파일러를 수동으로 사용하거나 컴파일러 및 수동적인 방법의 조합을 사용하는 이 세 가지 방법으로 작업 기반 비동기 패턴(TAP)을 구현하는 방법에 대해 설명합니다.|  
-|[작업 기반 비동기 패턴 사용](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|작업과 콜백을 사용하여 차단되지 않고 대기하는 방법에 대해 설명합니다.|  
+|[Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)|작업과 콜백을 사용하여 차단되지 않고 대기하는 방법에 대해 설명합니다.|  
 |[다른 비동기 패턴 및 형식과의 Interop](../../../docs/standard/asynchronous-programming-patterns/interop-with-other-asynchronous-patterns-and-types.md)|비동기 프로그래밍 모델(APM) 및 이벤트 기반 비동기 패턴(EAP)을 구현하기 위해 작업 기반 비동기 패턴(TAP)을 사용하는 방법에 대해 설명합니다.|

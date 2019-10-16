@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
-ms.openlocfilehash: 7144a5fd4a197fddaf1ac4132df0ff70995ad067
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3335da503b6fb9c33e44266997cc945214a3a365
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33594164"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913069"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>람다 식에 반복 변수를 사용하면 예기치 않은 결과가 발생할 수 있습니다.
-할 수는 람다 식에 반복 변수를 사용 하 여 예기치 않은 결과입니다. 대신 루프 내에 지역 변수를 만들고 여기에 반복 변수 값을 할당 합니다.  
+람다 식에 반복 변수를 사용 하 여 있을 예기치 않은 결과입니다. 대신 루프 내의 지역 변수를 만들고 반복 변수의 값을 할당 합니다.  
   
- 이 경고는 루프 내에서 선언 되는 람다 식에 루프 반복 변수를 사용 하는 경우에 나타납니다. 예를 들어 다음 예제에서는 경고를 표시 합니다.  
+ 루프 반복 변수를 사용 하 여 루프 내에서 선언 된 람다 식에서이 경고가 표시 됩니다. 예를 들어, 다음 예제에서는 경고를 표시 합니다.  
   
 ```vb  
 For i As Integer = 1 To 10  
@@ -45,7 +45,7 @@ Module Module1
 End Module  
 ```  
   
- `For` 루프의 루프 반복 변수 값을 반환 하며 각 람다 식의 배열을 만들어 `i`합니다. 람다 식의 평가 하는 경우는 `For Each` 루프 예상 0, 1, 2, 3 및 4가 표시의 연속 값을 보려면 `i` 에 `For` 루프 합니다. 최종 값을 참조 하는 대신, `i` 다섯 번 표시 됩니다.  
+ 합니다 `For` 루프는 각 루프 반복 변수의 값을 반환 람다 식의 배열을 만듭니다 `i`합니다. 람다 식의 평가 하는 경우는 `For Each` 루프를 예상할 수 0, 1, 2, 3 및 4 표시의 연속 값을 보려면 `i` 에 `For` 루프. 최종 값 대신 표시 `i` 다섯 번 표시 됩니다.  
   
  `5`  
   
@@ -57,13 +57,13 @@ End Module
   
  `5`  
   
- 이 메시지는 기본적으로 경고입니다. 경고를 숨기 거 나 경고를 오류로 처리 하는 방법에 대 한 자세한 내용은 참조 [Visual Basic에서 경고 구성](/visualstudio/ide/configuring-warnings-in-visual-basic)합니다.  
+ 이 메시지는 기본적으로 경고입니다. 경고를 숨기거나 오류로 처리하는 방법에 대한 자세한 내용은 [Configuring Warnings in Visual Basic](/visualstudio/ide/configuring-warnings-in-visual-basic)을 참조하세요.  
   
  **오류 ID:** BC42324  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   반복 변수 값을 지역 변수에 할당 하 고 람다 식에서 지역 변수를 사용 합니다.  
+- 반복 변수의 값을 지역 변수에 할당 및 람다 식에 지역 변수를 사용 합니다.  
   
 ```vb  
 Module Module1  
@@ -83,5 +83,6 @@ Module Module1
 End Module  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+## <a name="see-also"></a>참고자료
+
+- [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

@@ -17,34 +17,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45b88758c339cd77bc7e17e0c29969f8783555f4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b58da58897edbf3ec9492c1f9f1b2f3d7b83e07a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436626"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780080"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile 메서드
-지정된 된 파일을 메모리에 매핑합니다. 이 메서드는 사용되지 않습니다.  
+지정된 된 파일을 메모리에 매핑됩니다. 이 메서드는 사용되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT MapFile(  
     [in]  HANDLE    hFile,  
     [out] HMODULE*  hMapAddress  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hFile`  
  [in] 매핑할 파일의 핸들입니다.  
   
  `hMapAddress`  
- [out] 매핑 파일을 시작 하는 시작 메모리 주소를 지정 합니다.  
+ [out] 매핑 파일을 시작 하는 시작 메모리 주소입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
@@ -52,5 +52,6 @@ HRESULT MapFile(
   
  **.NET framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참고 항목  
- [ICorRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

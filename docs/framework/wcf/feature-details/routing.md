@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows communication Foundation [WCF], routing
 ms.assetid: bd56516c-420d-4c4e-97f9-f72d28d149a9
 ms.openlocfilehash: 50b6cb78f5fb20344d5f682d268b6e646c17fb9e
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50048608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991083"
 ---
 # <a name="routing"></a>라우팅
 이 단원의 항목에서는 라우팅 서비스에 대해 설명합니다. 라우팅 서비스는 내용 기반 라우팅을 구성하고, 프로토콜 브리징을 설정하고, 통신 오류를 처리하고, 런타임에 라우팅 논리를 동적으로 업데이트하는 데 사용할 수 있는 구성 가능한 제네릭 SOAP 매개자입니다.  

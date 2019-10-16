@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 08594d9757596eed470ffba8b5b63a01c493c358
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d25c8500250411083e9fb6b33b3f743e5cd103c0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796528"
 ---
 # <a name="xname-directive"></a>x:Name 지시문
 XAML 이름 범위에 대 한 XAML 정의 요소를 고유 하 게 식별합니다. XAML 이름 범위와 해당 고유성 모델 프레임 워크 Api를 제공 하거나 런타임에 XAML에서 생성 된 개체 그래프에 액세스 하는 동작을 구현 하는 경우 인스턴스화된 개체에 적용할 수 있습니다.  
@@ -30,12 +30,12 @@ XAML 이름 범위에 대 한 XAML 정의 요소를 고유 하 게 식별합니�
   
 |||  
 |-|-|  
-|`XAMLNameValue`|제한 사항을 준수 하는 문자열을 [XamlName 문법](../../../docs/framework/xaml-services/xamlname-grammar.md)합니다.|  
+|`XAMLNameValue`|제한 사항을 준수 하는 문자열을 [XamlName 문법](xamlname-grammar.md)합니다.|  
   
 ## <a name="remarks"></a>설명  
  후 `x:Name` 에 적용 되는 프레임 워크의 프로그래밍 모델을 백업, 개체 참조 또는 생성자에서 반환 된 인스턴스를 보유 하는 변수의 이름이 동일 합니다.  
   
- 값을 `x:Name` 지시문 사용은 XAML 이름 범위 내에서 고유 해야 합니다. 기본적으로.NET Framework XAML 서비스 API에서 사용 하는 기본 XAML 이름 범위는 단일 XAML 프로덕션의 XAML 루트 요소에 정의 된 및 해당 XAML 프로덕션에 포함 된 요소를 포함 합니다. 특정 시나리오를 해결 하기 위해 프레임 워크에 의해 단일 XAML 프로덕션에서 발생할 수 있는 추가 불연속 XAML 이름 범위를 정의할 수 있습니다. 예를 들어 wpf에서 새 XAML 이름 범위 정의 되어 있고 해당 XAML 프로덕션에서 정의 된 모든 템플릿에 의해 생성 됩니다. (많은 XAML 이름 범위 개념 적합 하지만 WPF 용으로 작성) XAML 이름 범위에 대 한 자세한 내용은 참조 하세요. [WPF XAML 이름 범위](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)합니다.  
+ 값을 `x:Name` 지시문 사용은 XAML 이름 범위 내에서 고유 해야 합니다. 기본적으로.NET Framework XAML 서비스 API에서 사용 하는 기본 XAML 이름 범위는 단일 XAML 프로덕션의 XAML 루트 요소에 정의 된 및 해당 XAML 프로덕션에 포함 된 요소를 포함 합니다. 특정 시나리오를 해결 하기 위해 프레임 워크에 의해 단일 XAML 프로덕션에서 발생할 수 있는 추가 불연속 XAML 이름 범위를 정의할 수 있습니다. 예를 들어 wpf에서 새 XAML 이름 범위 정의 되어 있고 해당 XAML 프로덕션에서 정의 된 모든 템플릿에 의해 생성 됩니다. (많은 XAML 이름 범위 개념 적합 하지만 WPF 용으로 작성) XAML 이름 범위에 대 한 자세한 내용은 참조 하세요. [WPF XAML 이름 범위](../wpf/advanced/wpf-xaml-namescopes.md)합니다.  
   
  일반적으로 `x:Name` 을 사용 하는 경우에 적용 되지 않도록 `x:Key`합니다. 특정 기존 프레임 워크에서 XAML 구현 간의 대체 개념을 도입 `x:Key` 고 `x:Name`하지만 권장 되지 않습니다. .NET framework XAML 서비스와 같은 이름/키 정보를 처리 하는 경우 이러한 대체 개념을 지원 하지 않습니다 <xref:System.Windows.Markup.INameScope> 또는 <xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>합니다.  
   
@@ -46,11 +46,11 @@ XAML 이름 범위에 대 한 XAML 정의 요소를 고유 하 게 식별합니�
  Using.NET Framework XAML 서비스 XAML 이름 범위 지원에 대 한 백업 논리를 구현 하 여 프레임 워크와 무관 하 게에서 정의할 수 있습니다는 <xref:System.Windows.Markup.INameScope> 인터페이스입니다.  
   
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보  
- 표준 빌드 구성에 대 한는 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML, partial 클래스 및 코드 숨김에서 지정된을 사용 하는 응용 프로그램 `x:Name` 내부에서 만든 필드의 이름이 때 코드 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 를 태그로 처리 컴파일 빌드 작업 및 해당 필드 개체에 대 한 참조를 보유 합니다. 기본적으로 생성된 된 필드 내부입니다. 지정 하 여 필드 액세스를 변경할 수 있습니다 합니다 [X:fieldmodifier 특성](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)합니다. WPF 및 Silverlight에서 순서가 태그 컴파일 정의 하 고 이름을 partial 클래스에 있지만 값의 필드는 처음에 비어 있습니다. 그런 다음 생성 된 메서드가 `InitializeComponent` 클래스 생성자 내에서 호출 됩니다. `InitializeComponent` 이루어져 `FindName` 각를 사용 하 여 호출는 `x:Name` partial 클래스의 XAML 정의에 있는 값 문자열을 입력 합니다. 반환 값은 다음 구문 분석 된 XAML에서 만들어진 개체를 사용 하 여 필드 값을 채울 필드 이름이 같은 파일에 대 한 참조를 할당 됩니다. 실행 `InitializeComponent` 참조를 사용 하 여 런타임 개체 그래프를 가능 하 게 합니다 `x:Name` 의 필드 이름을 직접 호출 하는 대신 / `FindName` 언제 든 지 명시적으로 해야 하는 XAML 정의 개체에 대 한 참조입니다.  
+ 표준 빌드 구성에 대 한는 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] XAML, partial 클래스 및 코드 숨김에서 지정된을 사용 하는 응용 프로그램 `x:Name` 내부에서 만든 필드의 이름이 때 코드 [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] 를 태그로 처리 컴파일 빌드 작업 및 해당 필드 개체에 대 한 참조를 보유 합니다. 기본적으로 생성된 된 필드 내부입니다. 지정 하 여 필드 액세스를 변경할 수 있습니다 합니다 [X:fieldmodifier 특성](x-fieldmodifier-directive.md)합니다. WPF 및 Silverlight에서 순서가 태그 컴파일 정의 하 고 이름을 partial 클래스에 있지만 값의 필드는 처음에 비어 있습니다. 그런 다음 생성 된 메서드가 `InitializeComponent` 클래스 생성자 내에서 호출 됩니다. `InitializeComponent` 이루어져 `FindName` 각를 사용 하 여 호출는 `x:Name` partial 클래스의 XAML 정의에 있는 값 문자열을 입력 합니다. 반환 값은 다음 구문 분석 된 XAML에서 만들어진 개체를 사용 하 여 필드 값을 채울 필드 이름이 같은 파일에 대 한 참조를 할당 됩니다. 실행 `InitializeComponent` 참조를 사용 하 여 런타임 개체 그래프를 가능 하 게 합니다 `x:Name` 의 필드 이름을 직접 호출 하는 대신 / `FindName` 언제 든 지 명시적으로 해야 하는 XAML 정의 개체에 대 한 참조입니다.  
   
- WPF에 대 한 Microsoft Visual Basic을 사용 하는 응용 프로그램 대상으로 하 고 사용 하 여 XAML 파일이 포함 되어 있습니다 `Page` 빌드 작업을 별도 참조 속성을 추가 하는 컴파일 중 만들어집니다는 `WithEvents` 키워드는 가진모든요소를`x:Name`지원 하기 위해 `Handles` 이벤트 처리기 대리자에 대 한 구문입니다. 이 속성은 항상 공개 합니다. 자세한 내용은 [Visual Basic 및 WPF 이벤트 처리](../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)를 참조하세요.  
+ WPF에 대 한 Microsoft Visual Basic을 사용 하는 응용 프로그램 대상으로 하 고 사용 하 여 XAML 파일이 포함 되어 있습니다 `Page` 빌드 작업을 별도 참조 속성을 추가 하는 컴파일 중 만들어집니다는 `WithEvents` 키워드는 가진모든요소를`x:Name`지원 하기 위해 `Handles` 이벤트 처리기 대리자에 대 한 구문입니다. 이 속성은 항상 공개 합니다. 자세한 내용은 [Visual Basic 및 WPF 이벤트 처리](../wpf/advanced/visual-basic-and-wpf-event-handling.md)를 참조하세요.  
   
- `x:Name` 여기서 페이지 태그 컴파일되지 않은 빌드 작업 (예를 들어 리소스 사전의 느슨한 XAML) 하는 경우에도 로드 시 XAML 이름 범위에 이름을 등록 하는 WPF XAML 프로세서에서 사용 됩니다. 이 동작에 대 한 이유 중 하나 이므로 합니다 `x:Name` 잠재적으로 필요 <xref:System.Windows.Data.Binding.ElementName%2A> 바인딩. 자세한 내용은 참조 하세요 [데이터 바인딩 개요](../../../docs/framework/wpf/data/data-binding-overview.md)합니다.  
+ `x:Name` 여기서 페이지 태그 컴파일되지 않은 빌드 작업 (예를 들어 리소스 사전의 느슨한 XAML) 하는 경우에도 로드 시 XAML 이름 범위에 이름을 등록 하는 WPF XAML 프로세서에서 사용 됩니다. 이 동작에 대 한 이유 중 하나 이므로 합니다 `x:Name` 잠재적으로 필요 <xref:System.Windows.Data.Binding.ElementName%2A> 바인딩. 자세한 내용은 참조 하세요 [데이터 바인딩 개요](../wpf/data/data-binding-overview.md)합니다.  
   
  앞서 설명 했 듯이 `x:Name` (또는 `Name`)을 사용 하는 경우에 적용 되지 않도록 `x:Key`합니다. 합니다 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary> 구현 되지 않거나 null 값을 반환 하지만 XAML 이름 범위를 정의 하는 자체의 특수 동작이 <xref:System.Windows.Markup.INameScope> 이 동작을 적용 하는 방법으로 Api입니다. WPF XAML 파서를 발견 하면 `Name` 나 `x:Name` XAML 정의 <xref:System.Windows.ResourceDictionary>, 이름을 한 XAML 이름 범위에 추가 되지 않습니다. 모든 XAML 이름 범위에서 해당 이름을 찾으려고 시도 하 고 `FindName` 메서드는 올바른 결과 반환 하지 것입니다.  
   
@@ -66,7 +66,8 @@ XAML 이름 범위에 대 한 XAML 정의 요소를 고유 하 게 식별합니�
 ## <a name="silverlight-usage-notes"></a>Silverlight 사용 정보  
  `x:Name` Silverlight 용은 별도로 설명 됩니다. 자세한 내용은 참조 하세요. [XAML Namespace (x:) 언어 기능 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>  
- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>  
- [WPF의 트리](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
+- <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
+- [WPF의 트리](../wpf/advanced/trees-in-wpf.md)

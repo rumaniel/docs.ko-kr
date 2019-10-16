@@ -2,12 +2,12 @@
 title: MsmqIntegrationBindingElement
 ms.date: 03/30/2017
 ms.assetid: eaaa7651-e6e5-4fae-9dad-c1867d38b586
-ms.openlocfilehash: ff8cc5797c25680d257c8d142425538c75dbf044
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 12d910a0b3b4931c869b9e209912f2f0c96130f7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50205076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963334"
 ---
 # <a name="msmqintegrationbindingelement"></a>MsmqIntegrationBindingElement
 MsmqIntegrationBindingElement  
@@ -40,5 +40,6 @@ class MsmqIntegrationBindingElement : MsmqBindingElementBase
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBindingElement>

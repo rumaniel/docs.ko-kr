@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: caa92596-9e15-4d91-acbe-56911ef47a84
-ms.openlocfilehash: 00eb4ba1f5f84c60f1ca51871f604b6ee27798c3
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 12cb3a1fb3311450b8597ef13f1f2efa4adeaf7e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002842"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922514"
 ---
 # <a name="how-to-control-serialization-of-derived-classes"></a>방법: 파생 클래스의 Serialization 제어
 **XmlElementAttribute** 특성을 사용하여 XML 요소의 이름을 변경하는 것이 개체 serialization을 사용자 지정하는 유일한 방법은 아닙니다. 기존 클래스에서 파생하고 새 클래스를 serialize하는 방법을 <xref:System.Xml.Serialization.XmlSerializer> 인스턴스에 지시하여 XML 스트림을 사용자 지정할 수도 있습니다.  
@@ -234,10 +234,10 @@ public class Run
   
 ## <a name="see-also"></a>참고자료
 
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- <xref:System.Xml.Serialization.XmlElementAttribute>  
-- <xref:System.Xml.Serialization.XmlAttributes>  
-- <xref:System.Xml.Serialization.XmlAttributeOverrides>  
-- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
-- [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- <xref:System.Xml.Serialization.XmlElementAttribute>
+- <xref:System.Xml.Serialization.XmlAttributes>
+- <xref:System.Xml.Serialization.XmlAttributeOverrides>
+- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- [방법: 개체 serialize](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [방법: XML Stream에 대 한 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)

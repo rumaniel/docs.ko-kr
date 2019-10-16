@@ -1,5 +1,0 @@
-# [제네릭](index.md)
-## [.NET의 제네릭 컬렉션](collections.md)
-## [배열과 목록을 조작하기 위한 제네릭 대리자](delegates-for-manipulating-arrays-and-lists.md)
-## [제네릭 인터페이스](interfaces.md)
-## [공 분산 및 반공 분산](covariance-and-contravariance.md)

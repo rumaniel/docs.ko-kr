@@ -3,12 +3,12 @@ title: C# 특성 - C# 언어 둘러보기
 description: C#에서 특성을 사용하는 선언적 프로그래밍에 대해 알아보기
 ms.date: 08/10/2016
 ms.assetid: 753bcfe2-7ddd-4487-9513-ba70937fc8e9
-ms.openlocfilehash: 671023f268ae78d63db8868ef6046b8f13880659
-ms.sourcegitcommit: 78bcb629abdbdbde0e295b4e81f350a477864aba
+ms.openlocfilehash: 79bd14ebd3b25eabc0b9f7ed8f9e9585a050805f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/08/2018
-ms.locfileid: "34312237"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634647"
 ---
 # <a name="attributes"></a>특성
 
@@ -31,4 +31,4 @@ C# 프로그램의 형식, 멤버 및 기타 엔터티는 동작의 특정 측�
 [!code-csharp[AttributeRead](../../../samples/snippets/csharp/tour/attributes/Program.cs#ReadAttributes)]
 
 >[!div class="step-by-step"]
-[이전](delegates.md)
+>[이전](delegates.md)

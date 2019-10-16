@@ -7,35 +7,36 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 5d3a19460fa2a2a8269887df0e97a3ad18654607
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762217"
 ---
 # <a name="graphics"></a>그래픽
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제안은 멀티미디어, 벡터 그래픽, 애니메이션 및 쉽게 흥미로운 사용자 인터페이스 및 콘텐츠를 작성 하는 개발자를 위한 콘텐츠 컴퍼지션에 대 한 지원을 통합 합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제품 통합 멀티미디어, 벡터 그래픽, 애니메이션 및 콘텐츠 컴퍼지션을, 개발자가 쉽게 흥미로운 사용자 인터페이스 및 콘텐츠를 작성할 수 있도록 지원 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [비트맵 효과](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects.md)  
- [브러시](../../../../docs/framework/wpf/graphics-multimedia/brushes.md)  
- [그리기](../../../../docs/framework/wpf/graphics-multimedia/drawings.md)  
- [기하 도형](../../../../docs/framework/wpf/graphics-multimedia/geometries.md)  
- [이미지](../../../../docs/framework/wpf/graphics-multimedia/images.md)  
- [도형](../../../../docs/framework/wpf/graphics-multimedia/shapes.md)  
- [변환](../../../../docs/framework/wpf/graphics-multimedia/transformations.md)  
- [그래픽 렌더링 레지스트리 설정](../../../../docs/framework/wpf/graphics-multimedia/graphics-rendering-registry-settings.md)  
- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/graphics-how-to-topics.md)  
+ [비트맵 효과](bitmap-effects.md)  
+ [브러시](brushes.md)  
+ [그리기](drawings.md)  
+ [기하 도형](geometries.md)  
+ [이미지](images.md)  
+ [도형](shapes.md)  
+ [변환](transformations.md)  
+ [그래픽 렌더링 레지스트리 설정](graphics-rendering-registry-settings.md)  
+ [방법 항목](graphics-how-to-topics.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Shapes.Shape>  
- <xref:System.Windows.Media.Transform>  
- <xref:System.Windows.Media.Imaging.BitmapImage>  
- <xref:System.Windows.Media.Geometry>  
- <xref:System.Windows.Media.Drawing>  
- <xref:System.Windows.Media.Brush>  
- <xref:System.Windows.Media.Effects.BitmapEffect>  
- [2차원 그래픽 및 이미징](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Shapes.Shape>
+- <xref:System.Windows.Media.Transform>
+- <xref:System.Windows.Media.Imaging.BitmapImage>
+- <xref:System.Windows.Media.Geometry>
+- <xref:System.Windows.Media.Drawing>
+- <xref:System.Windows.Media.Brush>
+- <xref:System.Windows.Media.Effects.BitmapEffect>
+- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [그래픽 및 멀티미디어](index.md)
+- [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)

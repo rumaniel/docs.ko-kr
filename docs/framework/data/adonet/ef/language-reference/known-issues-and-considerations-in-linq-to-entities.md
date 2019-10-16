@@ -5,29 +5,29 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 6b54f75afd52b5179693c5a92ebce2e8aa02f122
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4fb7d574fdb9bd6bd9465cffaf0fda5069b2c0ee
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32765466"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854379"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities에서 알려진 문제 및 고려 사항
-이 단원에서는 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 쿼리와 관련하여 알려진 문제에 대한 정보를 제공합니다.  
+이 섹션에서는 LINQ to Entities 쿼리의 알려진 문제에 대 한 정보를 제공 합니다.  
   
--   [LINQ 쿼리를 캐시할 수 없습니다.](#LINQQueriesThatAreNotCached)  
+- [캐시할 수 없는 LINQ 쿼리](#LINQQueriesThatAreNotCached)  
   
--   [순서 정보 손실](#OrderingInfoLost)  
+- [순서 정보 손실](#OrderingInfoLost)  
   
--   [부호 없는 정수 지원 되지 않음](#UnsignedIntsUnsupported)  
+- [부호 없는 정수는 지원 되지 않습니다.](#UnsignedIntsUnsupported)  
   
--   [형식 변환 오류](#TypeConversionErrors)  
+- [형식 변환 오류](#TypeConversionErrors)  
   
--   [지원 되지 않는 스칼라가 아닌 변수 참조](#RefNonScalarClosures)  
+- [지원 되지 않는 비 스칼라 변수 참조](#RefNonScalarClosures)  
   
--   [SQL Server 2000과 중첩된 쿼리가 실패할 수 있음](#NestedQueriesSQL2000)  
+- [중첩 쿼리는 SQL Server 2000를 사용 하 여 실패할 수 있습니다.](#NestedQueriesSQL2000)  
   
--   [익명 형식으로 프로젝션](#ProjectToAnonymousType)  
+- [익명 형식으로 프로젝션](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>캐시할 수 없는 LINQ 쿼리  
@@ -35,14 +35,14 @@ ms.locfileid: "32765466"
   
 <a name="OrderingInfoLost"></a>   
 ## <a name="ordering-information-lost"></a>순서 정보 손실  
- 열을 익명 형식으로 프로젝션하면 호환성 수준 "80"에서 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 데이터베이스에 대해 실행되는 일부 쿼리에서 순서 정보가 손실됩니다.  이런 현상은 다음 예제와 같이 정렬 순서 목록에 있는 열 이름이 선택기의 열 이름과 일치할 때 발생합니다.  
+ 열을 익명 형식으로 프로젝션 하면 호환성 수준 "80"로 설정 된 SQL Server 2005 데이터베이스에 대해 실행 되는 일부 쿼리에서 순서 정보가 손실 됩니다.  이런 현상은 다음 예제와 같이 정렬 순서 목록에 있는 열 이름이 선택기의 열 이름과 일치할 때 발생합니다.  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt543840)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT543840](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt543840)]  
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>부호 없는 정수 지원되지 않음  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]에서 부호 없는 정수가 지원되지 않으므로 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 쿼리에서 부호 없는 정수 형식을 지정할 수 없습니다. 부호 없는 정수를 지정 하는 경우는 <xref:System.ArgumentException> 다음 예제와 같이 쿼리 식 변환 하는 동안 예외가 throw 됩니다. 다음 예제에서는 ID 48000인 주문을 쿼리합니다.  
+ Entity Framework는 부호 없는 정수를 지원 하지 않으므로 LINQ to Entities 쿼리에 부호 없는 정수 형식을 지정할 수 없습니다. 부호 없는 정수를 <xref:System.ArgumentException> 지정 하는 경우 다음 예제와 같이 쿼리 식 변환 중에 예외가 throw 됩니다. 다음 예제에서는 ID 48000인 주문을 쿼리합니다.  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  
@@ -58,7 +58,7 @@ ms.locfileid: "32765466"
  엔터티와 같이 스칼라가 아닌 변수를 쿼리에서 참조할 수 없습니다. 이러한 쿼리가 실행되면 <xref:System.NotSupportedException> 예외가 throw되고 "`EntityType` 형식의 상수 값을 만들 수 없습니다. 이 컨텍스트에서는 기본 형식('Int32, String 및 Guid')만 지원됩니다."라는 메시지가 표시됩니다.  
   
 > [!NOTE]
->  스칼라 변수 컬렉션 참조가 지원됨  
+> 스칼라 변수 컬렉션 참조가 지원됨  
   
  [!code-csharp[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#sbudt555877)]
  [!code-vb[DP L2E Conceptual Examples#SBUDT555877](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#sbudt555877)]  
@@ -79,5 +79,6 @@ ms.locfileid: "32765466"
  [!code-csharp[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#projtoanontype2)]
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
+## <a name="see-also"></a>참고자료
+
+- [LINQ to Entities](linq-to-entities.md)

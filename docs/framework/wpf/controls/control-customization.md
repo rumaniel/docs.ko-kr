@@ -7,22 +7,23 @@ helpviewer_keywords:
 - customizing controls [WPF]
 - controls [WPF], customization
 ms.assetid: a3d9930e-5597-470e-a636-dcf65eac500b
-ms.openlocfilehash: 938d95c97350a513873cf8f9c5791d66e7a17e72
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b70a6654e5c3722ad1ef1d926ee3a441d24d9e68
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017698"
 ---
 # <a name="control-customization"></a>컨트롤 사용자 지정
 이 범주에서는 다양 한 기본 클래스, 인터페이스 및 기타 요소와 완벽 하 게 기능을 만드는 데 사용 되는 개념을 다룹니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제어 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [컨트롤 제작 개요](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
- [스타일을 지정할 수 있는 컨트롤을 디자인하기 위한 지침](../../../../docs/framework/wpf/controls/guidelines-for-designing-stylable-controls.md)  
- [표시기(Adorner)](../../../../docs/framework/wpf/controls/adorners.md)  
- [Control 스타일 및 템플릿](../../../../docs/framework/wpf/controls/control-styles-and-templates.md)  
- [WPF 사용자 지정 컨트롤의 UI 자동화](../../../../docs/framework/wpf/controls/ui-automation-of-a-wpf-custom-control.md)  
+ [컨트롤 제작 개요](control-authoring-overview.md)  
+ [스타일을 지정할 수 있는 컨트롤을 디자인하기 위한 지침](guidelines-for-designing-stylable-controls.md)  
+ [표시기(Adorner)](adorners.md)  
+ [Control 스타일 및 템플릿](control-styles-and-templates.md)  
+ [WPF 사용자 지정 컨트롤의 UI 자동화](ui-automation-of-a-wpf-custom-control.md)  
   
-## <a name="see-also"></a>참고 항목  
- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+## <a name="see-also"></a>참고자료
+
+- [스타일 지정 및 템플릿](styling-and-templating.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;제거할&gt; 요소에 대 한 &lt;appSettings&gt;'
+title: <appSettings>에 대한 <remove> 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/remove
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: 218c4464-e007-4539-803f-7c8b0a909fd8
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e9b79a8319b320289f43adac5a82ef22fa5e32b0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 121b1c4b124ba07ff3bd312fd3832d3da592f486
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199697"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921291"
 ---
-# <a name="remove-element-for-appsettings"></a>\<제거 > 요소에 대 한 \<appSettings >
+# <a name="remove-element-for-appsettings"></a>\<appSettings >에 대 \<한 > 요소 제거
 
-사용자 지정 응용 프로그램 설정을 제거합니다.
+사용자 지정 응용 프로그램 설정을 제거 합니다.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<제거 >**
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>구문
 
@@ -42,7 +42,7 @@ ms.locfileid: "50199697"
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | 파일 경로, XML Web services URL 또는 응용 프로그램의 기타 사용자 지정 구성 정보와 같은 사용자 지정 응용 프로그램 설정이 포함되어 있습니다. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 파일 경로, XML Web services URL 또는 애플리케이션의 기타 사용자 지정 구성 정보와 같은 사용자 지정 애플리케이션 설정이 포함되어 있습니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -50,7 +50,7 @@ ms.locfileid: "50199697"
 
 ## <a name="example"></a>예제
 
-다음 예제에 대 한 사용자 지정 구성 설정을 제거 하는 방법을 보여 줍니다 `ApplicationName`:
+다음 예제에서는에 대 한 `ApplicationName`사용자 지정 구성 설정을 제거 하는 방법을 보여 줍니다.
 
 ```xml
 <appSettings>
@@ -60,4 +60,4 @@ ms.locfileid: "50199697"
 
 ## <a name="see-also"></a>참고자료
 
-- [.NET Framework의 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework에 대 한 구성 파일 스키마](../index.md)

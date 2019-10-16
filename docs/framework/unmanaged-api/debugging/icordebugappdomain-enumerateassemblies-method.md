@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 13137dcf7c2edd96397916cc7db905c9e48a3d0a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6bacd93baae3f0c0b70c4b910e8130551b4f3e48
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401602"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738057"
 ---
 # <a name="icordebugappdomainenumerateassemblies-method"></a>ICorDebugAppDomain::EnumerateAssemblies 메서드
 응용 프로그램 도메인에서 어셈블리에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumerateAssemblies (  
     [out] ICorDebugAssemblyEnum  **ppAssemblies  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppAssemblies`  
- [out] 응용 프로그램 도메인에서 어셈블리에 대 한 열거자를 ICorDebugAssemblyEnum 개체의 주소에 대 한 포인터입니다.  
+ [out] 응용 프로그램 도메인의 어셈블리에 대 한 열거자는 ICorDebugAssemblyEnum 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

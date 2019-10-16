@@ -2,12 +2,12 @@
 title: NamedPipeConnectionPoolSettings
 ms.date: 03/30/2017
 ms.assetid: 079bccb8-54b5-4436-a43d-5567763f72ce
-ms.openlocfilehash: 77d8403947d341ea2efcef98bbf166f94f75f31f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c2d4bfc08a503a8d6eb0e8abf6f1e798b90bc83
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963217"
 ---
 # <a name="namedpipeconnectionpoolsettings"></a>NamedPipeConnectionPoolSettings
 NamedPipeConnectionPoolSettings  
@@ -56,5 +56,6 @@ class NamedPipeConnectionPoolSettings
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.NamedPipeConnectionPoolSettings>

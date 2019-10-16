@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], RepeatButton
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
-ms.openlocfilehash: 4dff6497fe6d6483b12d09b6dc84fdb0f2fbd95e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971132"
 ---
 # <a name="repeatbutton"></a>RepeatButton
-<xref:System.Windows.Controls.Primitives.RepeatButton> 는 비슷합니다는 <xref:System.Windows.Controls.Button>합니다. 그러나 <xref:System.Windows.Controls.Primitives.RepeatButton> 요소 제어할 수 있습니다 시기 및 방법을 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트가 발생 합니다.  
+합니다 <xref:System.Windows.Controls.Primitives.RepeatButton> 비슷합니다는 <xref:System.Windows.Controls.Button>합니다. 그러나 <xref:System.Windows.Controls.Primitives.RepeatButton> 요소 제어할 수는 경우 및 방법을 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트가 발생 합니다.  
   
- 다음 그림에는 반복 단추 컨트롤, 기본값, PointerFocused, 및-Pressed의 세 가지 상태의 예가 나와 있습니다. 기본 상태를 표시 하는 첫 번째 단추는 <xref:System.Windows.Controls.Primitives.RepeatButton>합니다. 두 번째 포커스를 받으면 마우스 포인터를 단추 위로 가져갈 때 단추의 모양을 변경 하는 방법을 보여 줍니다. 마지막 단추의 모양을 표시는 <xref:System.Windows.Controls.Primitives.RepeatButton> 컨트롤 위에 마우스 단추를 누를 때.  
+ 다음 그림에는 세 가지 반복 단추 컨트롤, 기본, PointerFocused, 및 Pressed 상태의 예가 나와 있습니다. 기본 상태를 표시 하는 첫 번째 단추는 <xref:System.Windows.Controls.Primitives.RepeatButton>합니다. 두 번째 포커스를 받으면 마우스 포인터가 단추를 가리킬 때 단추의 모양을 변경 하는 방법을 보여 줍니다. 마지막 단추 모양을 보여 줍니다는 <xref:System.Windows.Controls.Primitives.RepeatButton> 컨트롤 위에 마우스 단추를 누를 때.  
   
- ![반복 단추 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
+ ![단추 상태를 반복](./media/ss-ctl-repeatbutton.png "SS_CTL_repeatbutton")  
 일반적인 RepeatButton  
   
 ## <a name="in-this-section"></a>섹션 내용  

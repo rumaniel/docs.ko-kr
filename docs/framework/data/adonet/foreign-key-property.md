@@ -2,27 +2,28 @@
 title: 외래 키 속성
 ms.date: 03/30/2017
 ms.assetid: 23cb6729-544d-4f67-9ee7-44e8a6545587
-ms.openlocfilehash: 5a00c4d4cc469f5c816b8173843d283d63ccf308
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e2f41c2db9aea26c7954a99ebf3f40b03e8df735
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32762652"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795032"
 ---
 # <a name="foreign-key-property"></a>외래 키 속성
-A *외래 키 속성* 엔터티 데이터 모델 (EDM)의 기본 형식이 [속성](../../../../docs/framework/data/adonet/property.md) (또는 기본 형식 속성 집합)에 [엔터티 형식](../../../../docs/framework/data/adonet/entity-type.md) 는 포함된[엔터티 키](../../../../docs/framework/data/adonet/entity-key.md) 다른 엔터티 형식의 합니다.  
+EDM (엔터티 데이터 모델)의 *외래 키 속성* 은 다른 엔터티 형식의 [엔터티 키](entity-key.md) 를 포함 하는 [엔터티 형식](entity-type.md) 에 대 한 기본 형식 [속성](property.md) (또는 기본 형식 속성 집합)입니다.  
   
- 외래 키 속성은 관계형 데이터베이스의 외래 키 열과 유사합니다. 테이블 행 간의 관계를 만드는 관계형 데이터베이스에 외래 키 열은 사용 동일한 방식으로 개념적 모델에 외래 키 속성 설정에 익숙한 [연결](../../../../docs/framework/data/adonet/association-type.md) 엔터티 형식 사이입니다. A [참조 무결성 제약 조건을](../../../../docs/framework/data/adonet/referential-integrity-constraint.md) 외래 키 속성 형식 중 하나에 있을 때 두 엔터티 형식 간에 연결을 정의 하는 데 사용 됩니다.  
+ 외래 키 속성은 관계형 데이터베이스의 외래 키 열과 유사합니다. 관계형 데이터베이스에서 외래 키 열을 사용 하 여 테이블의 행 간 관계를 만드는 것과 마찬가지로 개념적 모델의 외래 키 속성은 엔터티 형식 간의 [연결](association-type.md) 을 설정 하는 데 사용 됩니다. [참조 무결성 제약 조건은](referential-integrity-constraint.md) 형식 중 하나에 외래 키 속성이 있는 경우 두 엔터티 형식 간의 연결을 정의 하는 데 사용 됩니다.  
   
 ## <a name="example"></a>예제  
  다음 다이어그램에서는 세 가지 엔터티 형식 `Book`, `Publisher` 및 `Author`가 포함된 개념적 모델을 보여 줍니다. `Book` 엔터티 형식에는 `PublisherId` 연결에 참조 무결성 제약 조건을 정의할 때 `Publisher` 엔터티 형식의 엔터티 키를 참조하는 `PublishedBy` 속성이 있습니다.  
   
- ![RefConstraintModel](../../../../docs/framework/data/adonet/media/refconstraintmodel.gif "RefConstraintModel")  
+ ![RefConstraintModel](./media/foreign-key-property/reference-constraint-model.gif "참조 제약 조건 모델 예")  
   
- [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) 개념 스키마 정의 언어를 호출 하는 도메인 특정 언어 DSL ()를 사용 하 여 ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 개념적 모델을 정의 합니다. 다음 CSDL에서는 외래 키 속성 `PublisherId`를 사용하여 위의 개념적 모델에 표시된 `PublishedBy` 연결에 참조 무결성 제약 조건을 정의합니다.  
+ [ADO.NET Entity Framework](./ef/index.md) 에서는[CSDL](./ef/language-reference/csdl-specification.md)(개념 스키마 정의 언어) 이라는 DSL (도메인별 언어)을 사용 하 여 개념적 모델을 정의 합니다. 다음 CSDL에서는 외래 키 속성 `PublisherId`를 사용하여 위의 개념적 모델에 표시된 `PublishedBy` 연결에 참조 무결성 제약 조건을 정의합니다.  
   
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
-## <a name="see-also"></a>참고 항목  
- [엔터티 데이터 모델의 주요 개념](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)  
- [엔터티 데이터 모델](../../../../docs/framework/data/adonet/entity-data-model.md)
+## <a name="see-also"></a>참고자료
+
+- [엔터티 데이터 모델의 주요 개념](entity-data-model-key-concepts.md)
+- [엔터티 데이터 모델](entity-data-model.md)

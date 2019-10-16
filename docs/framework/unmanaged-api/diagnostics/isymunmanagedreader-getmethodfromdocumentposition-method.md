@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f756a6e80eee0998398b4955d1d091d97b2ad73f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a1935b831902e975616557f512789c339baf49c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426161"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776982"
 ---
 # <a name="isymunmanagedreadergetmethodfromdocumentposition-method"></a>ISymUnmanagedReader::GetMethodFromDocumentPosition 메서드
 문서에서 지정된 된 위치에 중단점을 포함 하는 메서드를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetMethodFromDocumentPosition (  
     [in]  ISymUnmanagedDocument*  document,  
     [in]  ULONG32  line,  
@@ -37,24 +37,25 @@ HRESULT GetMethodFromDocumentPosition (
     [out, retval] ISymUnmanagedMethod**  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `document`  
  [in] 지정 된 문서입니다.  
   
  `line`  
- [in] 지정된 된 문서 줄입니다.  
+ [in] 지정 된 문서 줄입니다.  
   
  `column`  
- [in] 지정된 된 문서 열입니다.  
+ [in] 지정 된 문서 열입니다.  
   
  `pRetVal`  
- [out] 주소에 대 한 포인터는 [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) 중단점을 포함 하는 메서드를 나타내는 개체입니다.  
+ [out] 주소에 대 한 포인터를 [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) 중단점을 포함 하는 메서드를 나타내는 개체입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.  
+ 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

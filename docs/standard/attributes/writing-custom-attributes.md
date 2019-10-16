@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 97216f69-bde8-49fd-ac40-f18c500ef5dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67a5ffe2075618020f3ab9f801852a1a97fc74d2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 1d0a0659c99a49770d0d08460026363ecef06654
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44087393"
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836320"
 ---
 # <a name="writing-custom-attributes"></a>사용자 지정 특성 작성
 사용자 지정 특성을 직접 디자인하는 데 새로운 개념을 모두 알 필요는 없습니다. 개체 지향 프로그래밍에 익숙하고 클래스 디자인 방법을 알고 있는 것으로 충분합니다. 사용자 지정 특성은 본래 <xref:System.Attribute?displayProperty=nameWithType>에서 직접 또는 간접적으로 파생된 일반적인 클래스입니다. 일반적인 클래스와 마찬가지로 사용자 지정 특성에도 데이터를 저장하고 검색하는 메서드가 포함되어 있습니다.  
@@ -47,7 +47,7 @@ ms.locfileid: "44087393"
  [!code-csharp[Conceptual.Attributes.Usage#5](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#5)]
  [!code-vb[Conceptual.Attributes.Usage#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#5)]  
   
- <xref:System.AttributeUsageAttribute>에는 사용자 지정 특성을 만드는 데 필요한 세 가지 멤버인 [AttributeTargets](#attributetargets-member), [Inherited](#inherited-property) 및 [AllowMultiple](#allowmultiple-property)이 포함되어 있습니다.  
+ <xref:System.AttributeUsageAttribute>에는 사용자 지정 특성을 만드는 데 중요한 세 가지 멤버가 있습니다. [AttributeTargets](#attributetargets-member), [상속](#inherited-property) 및 [AllowMultiple](#allowmultiple-property).  
   
 ### <a name="attributetargets-member"></a>AttributeTargets 멤버  
  앞의 예제에는 특성을 모든 프로그램 요소에 적용할 수 있는 <xref:System.AttributeTargets.All?displayProperty=nameWithType>이 지정되어 있습니다. 또는 특성이 클래스에만 적용되도록 <xref:System.AttributeTargets.Class?displayProperty=nameWithType>를 지정하거나 특성이 메서드에만 적용되도록 <xref:System.AttributeTargets.Method?displayProperty=nameWithType>를 지정할 수 있습니다. 이러한 방법으로 사용자 지정 특성을 사용하여 모든 프로그램 요소의 설명을 표시할 수 있습니다.  
@@ -118,7 +118,7 @@ ms.locfileid: "44087393"
  [!code-csharp[Conceptual.Attributes.Usage#15](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#15)]
  [!code-vb[Conceptual.Attributes.Usage#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#15)]  
   
- 생성자를 오버로드하여 값을 다르게 조합하여 사용할 수도 있습니다. 또한 사용자 지정 특성 클래스에 대한 [속성](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)을 정의하면 특성을 초기화 할 때 명명된 매개변수와 위치 매개 변수를 함께 사용할 수 있습니다. 일반적으로 모든 필수 매개 변수는 positional로 정의하고 모든 선택적 매개 변수는 named로 정의합니다. 이때 필수 매개 변수가 없으면 특성을 초기화할 수 없습니다. 다른 모든 매개 변수는 선택적 요소입니다. Visual Basic에서는 특성 클래스의 생성자가 ParamArray 인수를 사용할 수 없습니다.  
+ 생성자를 오버로드하여 값을 다르게 조합하여 사용할 수도 있습니다. 또한 사용자 지정 특성 클래스에 대한 [속성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))을 정의하면 특성을 초기화 할 때 명명된 매개변수와 위치 매개 변수를 함께 사용할 수 있습니다. 일반적으로 모든 필수 매개 변수는 positional로 정의하고 모든 선택적 매개 변수는 named로 정의합니다. 이때 필수 매개 변수가 없으면 특성을 초기화할 수 없습니다. 다른 모든 매개 변수는 선택적 요소입니다. Visual Basic에서는 특성 클래스의 생성자가 ParamArray 인수를 사용할 수 없습니다.  
   
  다음 코드 예제에서는 앞의 생성자를 사용하는 특성이 선택적 매개 변수와 필수 매개 변수를 사용하여 적용되는 방식을 보여 줍니다. 이 예제에서는 특성에 하나의 필수 부울 값과 하나의 선택적 문자열 속성이 있는 것으로 가정합니다.  
   
@@ -127,7 +127,7 @@ ms.locfileid: "44087393"
  [!code-vb[Conceptual.Attributes.Usage#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.attributes.usage/vb/source2.vb#17)]  
   
 ## <a name="declaring-properties"></a>속성 선언  
- 명명된 매개 변수를 정의하거나 특성에 의해 저장된 값을 쉽게 반환하려면 [속성](https://msdn.microsoft.com/library/8f1a1ff1-0f05-40e0-bfdf-80de8fff7d52)을 선언합니다. 특성 속성은 반환될 데이터 형식에 대한 설명이 포함된 공용 엔터티로 선언되어야 합니다. 속성 값을 포함할 변수를 정의한 다음 이를 **get** 및 **set** 메서드와 연결합니다. 다음 코드 예제에서는 특성에 간단한 속성을 구현하는 방법을 보여 줍니다.  
+ 명명된 매개 변수를 정의하거나 특성에 의해 저장된 값을 쉽게 반환하려면 [속성](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v=vs.120))을 선언합니다. 특성 속성은 반환될 데이터 형식에 대한 설명이 포함된 공용 엔터티로 선언되어야 합니다. 속성 값을 포함할 변수를 정의한 다음 이를 **get** 및 **set** 메서드와 연결합니다. 다음 코드 예제에서는 특성에 간단한 속성을 구현하는 방법을 보여 줍니다.  
   
  [!code-cpp[Conceptual.Attributes.Usage#16](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.attributes.usage/cpp/source2.cpp#16)]
  [!code-csharp[Conceptual.Attributes.Usage#16](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.attributes.usage/cs/source2.cs#16)]
@@ -150,6 +150,6 @@ ms.locfileid: "44087393"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Attribute?displayProperty=nameWithType>  
-- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>  
+- <xref:System.Attribute?displayProperty=nameWithType>
+- <xref:System.AttributeUsageAttribute?displayProperty=nameWithType>
 - [특성](../../../docs/standard/attributes/index.md)

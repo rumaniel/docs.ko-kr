@@ -7,22 +7,22 @@ helpviewer_keywords:
 - data binding [WPF]
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
-ms.openlocfilehash: 441f14b09e3bd3ed745d38645ec23b9d040d419b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954195"
 ---
 # <a name="data-binding-wpf"></a>데이터 바인딩(WPF)
-Windows Presentation Foundation (WPF) 데이터 바인딩 응용 프로그램 데이터와 상호 작용 하는 간단 하 고 일관적인 방법을 제공 합니다. 다양 한 형식의 공용 언어 런타임 (CLR) 개체 및 XML 데이터 원본에서에서 데이터 요소를 바인딩할 수 있습니다.  
+Windows Presentation Foundation (WPF) 데이터 바인딩 응용 프로그램 데이터와 상호 작용을 간단 하 고 일관적인 방법을 제공 합니다. 다양 한 공용 언어 런타임 (CLR) 개체 및 XML 형식의 데이터 원본에서에서 데이터 요소를 바인딩할 수 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [데이터 바인딩 개요](../../../../docs/framework/wpf/data/data-binding-overview.md)  
- [바인딩 소스 개요](../../../../docs/framework/wpf/data/binding-sources-overview.md)  
- [데이터 템플릿 개요](../../../../docs/framework/wpf/data/data-templating-overview.md)  
- [바인딩 선언 개요](../../../../docs/framework/wpf/data/binding-declarations-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)  
+ [데이터 바인딩 개요](data-binding-overview.md)  
+ [바인딩 소스 개요](binding-sources-overview.md)  
+ [데이터 템플릿 개요](data-templating-overview.md)  
+ [바인딩 선언 개요](binding-declarations-overview.md)  
+ [방법 항목](data-binding-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Data>  
@@ -34,8 +34,8 @@ Windows Presentation Foundation (WPF) 데이터 바인딩 응용 프로그램 �
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>관련 단원  
- [끌어서 놓기](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
+ [끌어서 놓기](../advanced/drag-and-drop.md)  
   
- [데이터 바인딩](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)  
+ [데이터 바인딩](../advanced/optimizing-performance-data-binding.md)  
   
- [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](../../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+ [연습: WPF 응용 프로그램에서 응용 프로그램 데이터 캐싱](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

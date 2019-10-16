@@ -15,16 +15,16 @@ helpviewer_keywords:
 - serialization, examples
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
-ms.openlocfilehash: 28c7ebe1de3adb92e531597027e4b8bb7a63294c
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47236165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934509"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>특성을 사용하여 XML Serialization 제어
 
-특성을 사용하여 개체의 XML serialization을 제어하거나 동일한 클래스 집합에서 대체 XML 스트림을 만들 수 있습니다. 대체 XML 스트림 만들기에 대한 자세한 내용은 [방법: XML 스트림의 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)을 참조하세요.
+특성을 사용하여 개체의 XML serialization을 제어하거나 동일한 클래스 집합에서 대체 XML 스트림을 만들 수 있습니다. 대체 XML 스트림 만들기에 대 한 자세한 내용은 참조 하세요. [방법: XML Stream에 대 한 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)합니다.
 
 > [!NOTE]
 > 생성 된 XML은 World Wide Web Consortium (W3C) 문서의 5 단원을 따라야 하는 경우 [단순 개체 액세스 프로토콜 (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)에 나열 된 특성을 사용 하 여 [특성은 제어 인코딩된 SOAP Serialization](attributes-that-control-encoded-soap-serialization.md)합니다.
@@ -70,7 +70,7 @@ public class TaxRates {
 
 ## <a name="controlling-array-serialization"></a>배열 serialization 제어
 
-<xref:System.Xml.Serialization.XmlArrayAttribute> 및 <xref:System.Xml.Serialization.XmlArrayItemAttribute> 특성은 배열의 serialization을 제어하도록 디자인되었습니다. 이러한 특성을 사용하면 World Wide Web 컨소시엄[www.w3.org] 문서 "XML Schema Part 2: Datatypes"에 정의된 대로 요소 이름, 네임스페이스 및 XML 스키마(XSD) 데이터 형식을 제어할 수 있습니다. 또한 배열에 포함될 수 있는 형식을 지정할 수도 있습니다.
+<xref:System.Xml.Serialization.XmlArrayAttribute> 및 <xref:System.Xml.Serialization.XmlArrayItemAttribute> 특성은 배열의 serialization을 제어하도록 디자인되었습니다. 이러한 특성을 사용 하 여 제어할 수 있습니다 요소 이름, 네임 스페이스 및 XML 스키마 (XSD) 데이터 형식 (World Wide Web 컨소시엄 [www.w3.org] 문서에 정의 된 대로 "XML Schema Part 2: Datatypes ")입니다. 또한 배열에 포함될 수 있는 형식을 지정할 수도 있습니다.
 
 <xref:System.Xml.Serialization.XmlArrayAttribute>는 배열이 serialize될 때 발생하는 바깥쪽 XML 요소의 속성을 결정합니다. 예를 들어 기본적으로 아래 배열을 serialize하면 `Employees`라는 이름의 XML 요소가 생성됩니다. `Employees` 요소에는 배열 형식 `Employee`를 따라 이름이 지정된 일련의 요소가 포함됩니다.
 
@@ -317,10 +317,10 @@ public 속성이나 필드를 serialize할 필요가 없는 상황이 있을 수
 
 ## <a name="see-also"></a>참고자료
 
-- [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)  
-- [인코딩된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)  
-- [XML serialization 소개](introducing-xml-serialization.md)  
-- [XML serialization 예제](examples-of-xml-serialization.md)  
-- [방법: XML 스트림의 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-- [방법: 개체 직렬화](how-to-serialize-an-object.md)  
-- [방법: 개체 deserialize](how-to-deserialize-an-object.md)  
+- [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
+- [인코딩된 SOAP serialization을 제어하는 특성](attributes-that-control-encoded-soap-serialization.md)
+- [XML serialization 소개](introducing-xml-serialization.md)
+- [XML serialization 예제](examples-of-xml-serialization.md)
+- [방법: XML Stream에 대 한 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [방법: 개체 serialize](how-to-serialize-an-object.md)
+- [방법: 개체 deserialize](how-to-deserialize-an-object.md)

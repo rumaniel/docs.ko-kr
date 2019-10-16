@@ -8,19 +8,19 @@ helpviewer_keywords:
 - properties [WPF], how-to topics
 - dependency properties [WPF]
 ms.assetid: e16dd710-1530-4462-81a2-43719b973970
-ms.openlocfilehash: b2b9dffe1837df0e8daaf5526a59609db8efb7fc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 78bf1dbe9c9c95a3ae1afe2515adbd8bc65a7d44
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628615"
 ---
 # <a name="properties-how-to-topics"></a>속성 방법 항목
 ## <a name="in-this-section"></a>섹션 내용  
- [종속성 속성 구현](../../../../docs/framework/wpf/advanced/how-to-implement-a-dependency-property.md)  
- [종속성 속성의 소유자 형식 추가](../../../../docs/framework/wpf/advanced/how-to-add-an-owner-type-for-a-dependency-property.md)  
- [연결된 속성 등록](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)  
- [종속성 속성의 메타데이터 재정의](../../../../docs/framework/wpf/advanced/how-to-override-metadata-for-a-dependency-property.md)  
+ [종속성 속성 구현](how-to-implement-a-dependency-property.md)  
+ [종속성 속성의 소유자 형식 추가](how-to-add-an-owner-type-for-a-dependency-property.md)  
+ [연결된 속성 등록](how-to-register-an-attached-property.md)  
+ [종속성 속성의 메타데이터 재정의](how-to-override-metadata-for-a-dependency-property.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.DependencyProperty>  
@@ -32,4 +32,4 @@ ms.locfileid: "33544487"
  <xref:System.Windows.DependencyObject>  
   
 ## <a name="related-sections"></a>관련 단원  
- [속성](../../../../docs/framework/wpf/advanced/properties-wpf.md)
+ [속성](properties-wpf.md)

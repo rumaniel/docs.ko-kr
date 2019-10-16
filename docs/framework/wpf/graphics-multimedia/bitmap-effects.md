@@ -9,21 +9,21 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - images [WPF], bitmap
 ms.assetid: be180b56-ca6e-4da3-a839-f6b0bf482f7d
-ms.openlocfilehash: fef5cec4da09f8cd1a29cb9ebaccc83ee7c48311
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a52e330147b07f26136380821c392d27eec60fae
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555817"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69935253"
 ---
 # <a name="bitmap-effects"></a>비트맵 효과
-이 섹션의 항목을 사용 하 여 비트맵 이미지 시각 효과 적용 하는 방법에 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  
+이 단원의 항목에서는를 사용 하 여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]비트맵 이미지에 시각적 효과를 적용 하는 방법을 설명 합니다.  
   
 > [!IMPORTANT]
->  에 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 이후 버전의 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는 사용 되지 않습니다. 사용 하려는 경우는 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스, 사용 되지 않음 예외가 발생 합니다. 클래스 대신에는 <xref:System.Windows.Media.Effects.BitmapEffect> 클래스는는 <xref:System.Windows.Media.Effects.Effect> 클래스입니다. 대부분의 경우에는 <xref:System.Windows.Media.Effects.Effect> 클래스는 훨씬 더 빨라집니다.  
+> .NET Framework 4 이상 <xref:System.Windows.Media.Effects.BitmapEffect> 에서는 클래스가 사용 되지 않습니다. <xref:System.Windows.Media.Effects.BitmapEffect> 클래스를 사용 하려고 하면 사용 되지 않는 예외가 발생 합니다. 클래스에 대 한 <xref:System.Windows.Media.Effects.BitmapEffect> <xref:System.Windows.Media.Effects.Effect> 사용 되지 않는 대안은 클래스입니다. 대부분의 경우 클래스는 <xref:System.Windows.Media.Effects.Effect> 훨씬 더 빠릅니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [비트맵 효과 개요](../../../../docs/framework/wpf/graphics-multimedia/bitmap-effects-overview.md)  
+ [비트맵 효과 개요](bitmap-effects-overview.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Media.Effects.BitmapEffect>  
@@ -31,6 +31,6 @@ ms.locfileid: "33555817"
  <xref:System.Windows.Media.Effects>  
   
 ## <a name="related-sections"></a>관련 단원  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [그래픽 및 멀티미디어](index.md)  
   
- [이미징 개요](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+ [이미징 개요](imaging-overview.md)

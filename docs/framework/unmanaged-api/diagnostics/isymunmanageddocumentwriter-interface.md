@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2ee8a5d98c3577bc54ecdaa5205f08a5c610830
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 70828b8d4ebcc17fa178a53806ef7f55f7ba33e1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424458"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939791"
 ---
 # <a name="isymunmanageddocumentwriter-interface"></a>ISymUnmanagedDocumentWriter 인터페이스
 기호 저장소가 참조하는 문서에 쓰기 위한 메서드를 제공합니다.  
@@ -31,10 +31,11 @@ ms.locfileid: "33424458"
 |메서드|설명|  
 |------------|-----------------|  
 |[SetCheckSum 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setchecksum-method.md)|체크섬 정보를 설정합니다.|  
-|[SetSource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|포함 된 쓰고 있는 문서에 대 한 소스를 설정 합니다.|  
+|[SetSource 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-setsource-method.md)|포함 된 기록 되는 문서에 대 한 소스를 설정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

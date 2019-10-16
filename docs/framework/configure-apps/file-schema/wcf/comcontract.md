@@ -1,46 +1,47 @@
 ---
-title: '&lt;comContract&gt;'
+title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: e2addbada7f55076ae919d93c897991a7ec0fcd8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b499294af71ba230dcf985d4af1d013b1ca260cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839539"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850034"
 ---
-# <a name="ltcomcontractgt"></a>&lt;comContract&gt;
+# <a name="comcontract"></a>\<comContract>
 COM+ 통합 서비스 계약을 지정합니다.  
   
- \<system.ServiceModel>  
-\<comContracts>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<comContracts >** ](comcontracts.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<comContract >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<comContracts>  
-  <comContract  
-      contract="string"  
-      namespace="string"  
-      name="string"  
-      requireSession="Boolean">  
-      <exposedMethods>  
-         <exposedMethod name="string" />  
-      </exposedMethods>  
-      <userDefinedTypes>  
-         <userDefinedType name="string"  
-            typeLibID="string"  
-            typeLibVersion="string"  
-            typeDefID="string">  
-         </userDefinedType>  
-      </userDefinedTypes>  
-      <persistableTypes>  
-         <persistableType id="string"  
-            name="string">  
-         </persistableType>  
-      </persistableTypes>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract contract="String"
+               namespace="String"
+               name="String"
+               requireSession="Boolean">
+    <exposedMethods>
+      <exposedMethod name="String" />
+    </exposedMethods>
+    <userDefinedTypes>
+      <userDefinedType name="String"
+                       typeLibID="String"
+                       typeLibVersion="String"
+                       typeDefID="String">
+      </userDefinedType>
+    </userDefinedTypes>
+    <persistableTypes>
+      <persistableType id="String"
+                       name="String">
+      </persistableType>
+    </persistableTypes>
+  </comContract>
+</comContracts>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -57,7 +58,7 @@ COM+ 통합 서비스 계약을 지정합니다.
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |persistableTypes|모든 지속 형식입니다.|  
 |userDefinedTypes|서비스 계약에 포함될 UDT(사용자 정의 형식) 컬렉션입니다.|  
@@ -65,35 +66,34 @@ COM+ 통합 서비스 계약을 지정합니다.
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
 |comContracts|`comContract` 요소의 컬렉션을 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- COM + 통합 서비스 계약은 현재 제한 되며는 `http://tempuri.org` 네임 스페이스, 계약 이름은 지원 COM 인터페이스에서 파생 됩니다. 그러나 구성 파일에서`comContracts` 섹션 및 `comContract` 요소를 사용하여 대안을 지정할 수 있습니다. 예를 들어 다음 구성을 사용하여 포함시킬 네임스페이스, 계약 이름, 사용자 정의 형식 및 서비스 계약의 기타 설정을 지정할 수 있습니다.  
+ Com + 통합 서비스 계약은 현재 `http://tempuri.org` 네임 스페이스로 제한 되며, 계약 이름은 지원 COM 인터페이스에서 파생 됩니다. 그러나 구성 파일에서`comContracts` 섹션 및 `comContract` 요소를 사용하여 대안을 지정할 수 있습니다. 예를 들어 다음 구성을 사용하여 포함시킬 네임스페이스, 계약 이름, 사용자 정의 형식 및 서비스 계약의 기타 설정을 지정할 수 있습니다.  
   
 ```xml  
-<comContracts>  
-  <comContract  
-      contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"  
-      namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"  
-      name="_Broker"  
-      requireSession="true">  
-      <exposedMethods>  
-         <exposedMethod name="BuyStock" />  
-         <exposedMethod name="SellStock" />  
-         <exposedMethod name="ExecuteTransaction" />  
-      </exposedMethods>  
-  </comContract>  
-</comContracts>  
+<comContracts>
+  <comContract contract="{5163B1E7-F0CF-4B6A-9A02-4AB654F34284}"
+               namespace="http://tempuri.org/5163B1E7-F0CF-4B6A-9A02-4AB654F34284"
+               name="_Broker"
+               requireSession="true">
+    <exposedMethods>
+      <exposedMethod name="BuyStock" />
+      <exposedMethod name="SellStock" />
+      <exposedMethod name="ExecuteTransaction" />
+    </exposedMethods>
+  </comContract>
+</comContracts>
 ```  
   
  지정된 네임스페이스와 계약 이름은 서비스가 초기화될 때 생성된 서비스 설명에 적용됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
- <xref:System.ServiceModel.Configuration.ComContractElementCollection>  
- <xref:System.ServiceModel.Configuration.ComContractElement>  
- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [COM+ 응용 프로그램과 통합](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [방법: COM+ 서비스 설정 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.ComContractElementCollection>
+- <xref:System.ServiceModel.Configuration.ComContractElement>
+- [\<comContracts>](comcontracts.md)
+- [COM+ 애플리케이션과 통합](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [방법: COM + 서비스 설정 구성](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f4735103f277d710dd23adfa19c475c425feaa36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c3a6892dbed172c0be3b036014d393657dbc8593
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403333"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777525"
 ---
 # <a name="addfile2-method"></a>AddFile2 메서드
-어셈블리에 파일을 추가합니다. 바인딩되지 않은 모듈을 만드는 데 사용할 수도 있습니다.  
+어셈블리에 파일을 추가 합니다. 바인딩되지 않은 모듈을 만드는 데 사용할 수도 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT AddFile2(  
     mdAssembly AssemblyID,  
     LPCWSTR pszFilename,  
@@ -39,29 +39,30 @@ HRESULT AddFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
- 파일이 추가 되는 어셈블리에 대 한 ID입니다.  
+ 파일이 추가 된 어셈블리의 ID입니다.  
   
  `pszFilename`  
  추가할 파일의 이름입니다.  
   
  `dwFlags`  
- COM + `FileDef` 플래그와 같은 `ffContainsNoMetaData` 및 `ffWriteable`합니다. `dwFlags` 에 전달 [DefineFile 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)합니다.  
+ 및 `FileDef` 와`ffWriteable`같은 com + 플래그입니다. `ffContainsNoMetaData` `dwFlags`[DefineFile 메서드에](../metadata/imetadataassemblyemit-definefile-method.md)전달 됩니다.  
   
  `pEmitter`  
- 인터페이스를 [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md) 인터페이스입니다.  
+ [IMetaDataEmit2 인터페이스](../metadata/imetadataemit2-interface.md) 인터페이스에 대 한 인터페이스입니다.  
   
  `pFileToken`  
- 추가 중인 파일에 대 한 ID를 받습니다.  
+ 추가 되는 파일에 대 한 ID를 받습니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h가 필요합니다.  
+ Alink가 필요 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>참고자료
+
+- [IALink2 인터페이스](ialink2-interface.md)
+- [IALink 인터페이스](ialink-interface.md)
+- [ALink API](index.md)

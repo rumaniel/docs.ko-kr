@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db10b5c67a098cc34292a2680bd832f9cef2861b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: b77a01a6adf40c21e0d56853b860982e39b9b27e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584106"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779796"
 ---
 # <a name="iclrmetahostenumerateloadedruntimes-method"></a>ICLRMetaHost::EnumerateLoadedRuntimes 메서드
 유효한를 포함 하는 열거자를 반환 합니다 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md) 주어진된 프로세스에서 로드 되는 공용 언어 런타임 (CLR)의 각 버전에 대 한 인터페이스 포인터입니다. 이 메서드를 대체 합니다 [GetVersionFromProcess](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md) 함수입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumerateLoadedRuntimes (  
     [in] HANDLE hndProcess,  
     [out, retval] IEnumUnknown **ppEnumerator  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hndProcess`  
  [in] 로드 된 런타임을 대 한 검사 프로세스의 핸들입니다.  
   
@@ -49,13 +49,13 @@ HRESULT EnumerateLoadedRuntimes (
 |HRESULT|설명|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_POINTER|`ppEnumerator`가 null인 경우|  
+|E_POINTER|`ppEnumerator`가 null입니다.|  
   
 ## <a name="remarks"></a>설명  
  와 같은 사용 되지 않는 함수를 사용 하 여 로드 된 해당 하는 경우에이 메서드는 로드는 모든 런타임을 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MetaHost.h  
   
@@ -63,6 +63,7 @@ HRESULT EnumerateLoadedRuntimes (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICLRMetaHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)  
- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>참고자료
+
+- [ICLRMetaHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)
+- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

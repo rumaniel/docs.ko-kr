@@ -1,5 +1,5 @@
 ---
-title: '&lt;제거&gt; connectionManagement (네트워크 설정)에 대 한 요소'
+title: connectionManagement의 <remove> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/remove
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - <connectionManagement>, remove element
 - remove element, connectionManagement
 ms.assetid: 94b81775-5a22-4975-8c47-8620c40c3f35
-ms.openlocfilehash: 03cac1523c0fce268c2df8d04134c0d5e88830e2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cbafd29be6855cbb95d17388791ba152230295cc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181555"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697836"
 ---
-# <a name="ltremovegt-element-for-connectionmanagement-network-settings"></a>&lt;제거&gt; connectionManagement (네트워크 설정)에 대 한 요소
-연결 관리 목록에서 IP 주소 또는 DNS 이름을 제거합니다.  
+# <a name="remove-element-for-connectionmanagement-network-settings"></a>@no__t-connectionManagement (네트워크 설정)에 대 한 > 요소 제거
+연결 관리 목록에서 IP 주소 또는 DNS 이름을 제거 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<connectionManagement >  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<connectionManagement >** ](connectionmanagement-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<remove >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -49,18 +49,18 @@ ms.locfileid: "50181555"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|네트워크 호스트에 대한 최대 연결 수를 지정합니다.|  
+|[connectionManagement](connectionmanagement-element-network-settings.md)|네트워크 호스트에 대한 최대 연결 수를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- `remove` 요소가 지정된 된 서버 연결 관리 목록 항목을 제거 합니다.  
+ @No__t-0 요소는 지정 된 서버에 대 한 연결 관리 목록 항목을 제거 합니다.  
   
- 값을 `address` 특성 유효한 IP 주소 또는 호스트 이름 이어야 합니다.  
+ @No__t-0 특성의 값은 올바른 IP 주소 또는 호스트 이름 이어야 합니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예에서는 서버에 대 한 모든 연결 관리 목록 항목을 제거 `www.adventure-works.com` 한 다음 서버에 대 한 연결 4를 사용 하도록 응용 프로그램을 구성 `www.contoso.com` 및 다른 모든 서버에 두 개의 연결 합니다.  
+ 다음 예에서는-0 @no__t 서버에 대 한 연결 관리 목록 항목을 제거한 다음 @no__t 서버에 대 한 4 개의 연결을 사용 하도록 응용 프로그램을 구성 합니다.  
   
 ```xml  
 <configuration>  
@@ -74,7 +74,8 @@ ms.locfileid: "50181555"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-- <xref:System.Net.ServicePoint>  
-- <xref:System.Net.ServicePointManager>  
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>참조
+
+- <xref:System.Net.ServicePoint>
+- <xref:System.Net.ServicePointManager>
+- [네트워크 설정 스키마](index.md)

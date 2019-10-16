@@ -1,0 +1,638 @@
+- name: 'C# 언어 참조'
+  href: index.md
+- name: 언어 버전 구성
+  href: configure-language-version.md
+- name: 'C# 키워드'
+  items:
+    - name: 개요
+      href: keywords/index.md
+    - name: 기본 제공 형식
+      items:
+        - name: 값 형식
+          items:
+            - name: 값 형식의 기능
+              href: keywords/value-types.md
+            - name: bool
+              href: keywords/bool.md
+            - name: 정수 숫자 형식
+              displayName: 'sbyte, byte, short, ushort, int, uint, long, ulong, integer'
+              href: builtin-types/integral-numeric-types.md
+            - name: 부동 소수점 숫자 형식
+              displayName: 'float, decimal, double, rational, real'
+              href: builtin-types/floating-point-numeric-types.md
+            - name: char
+              href: keywords/char.md
+            - name: enum
+              href: keywords/enum.md
+            - name: struct
+              href: keywords/struct.md
+        - name: 참조 형식
+          items:
+            - name: 참조 형식의 기능
+              href: keywords/reference-types.md
+            - name: 클래스
+              href: keywords/class.md
+            - name: 기본 제공 참조 형식
+              displayName: 'object, delegate, dynamic, string'
+              href: builtin-types/reference-types.md
+            - name: interface(인터페이스)
+              href: keywords/interface.md
+        - name: void
+          href: keywords/void.md
+        - name: var
+          href: keywords/var.md
+        - name: 관리되지 않는 형식
+          href: builtin-types/unmanaged-types.md
+        - name: 형식 참조 테이블
+          items:
+            - name: 기본 제공 형식 표
+              href: keywords/built-in-types-table.md
+            - name: 값 형식 표
+              href: keywords/value-types-table.md
+            - name: 기본값 표
+              href: keywords/default-values-table.md
+            - name: 암시적 숫자 변환표
+              href: keywords/implicit-numeric-conversions-table.md
+            - name: 명시적 숫자 변환표
+              href: keywords/explicit-numeric-conversions-table.md
+            - name: 숫자 결과 서식 지정 표
+              href: keywords/formatting-numeric-results-table.md
+    - name: 한정자
+      items:
+        - name: 액세스 한정자
+          items:
+            - name: 빠른 참조
+              href: keywords/access-modifiers.md
+            - name: 액세스 가능성 수준
+              href: keywords/accessibility-levels.md
+            - name: 내게 필요한 옵션 도메인
+              href: keywords/accessibility-domain.md
+            - name: 내게 필요한 옵션 수준 사용에 대한 제한
+              href: keywords/restrictions-on-using-accessibility-levels.md
+            - name: internal
+              href: keywords/internal.md
+            - name: private
+              href: keywords/private.md
+            - name: protected
+              href: keywords/protected.md
+            - name: public
+              href: keywords/public.md
+            - name: protected internal
+              href: keywords/protected-internal.md
+            - name: private protected
+              href: keywords/private-protected.md
+        - name: abstract
+          href: keywords/abstract.md
+        - name: async
+          href: keywords/async.md
+          displayName: await
+        - name: const
+          href: keywords/const.md
+        - name: 이벤트(event)
+          href: keywords/event.md
+        - name: extern
+          href: keywords/extern.md
+        - name: in(제네릭 한정자)
+          href: keywords/in-generic-modifier.md
+        - name: new(멤버 한정자)
+          href: keywords/new-modifier.md
+        - name: out(제네릭 한정자)
+          href: keywords/out-generic-modifier.md
+        - name: 재정의
+          href: keywords/override.md
+        - name: readonly
+          href: keywords/readonly.md
+        - name: sealed
+          href: keywords/sealed.md
+        - name: 정적
+          href: keywords/static.md
+        - name: unsafe
+          href: keywords/unsafe.md
+        - name: virtual
+          href: keywords/virtual.md
+        - name: volatile
+          href: keywords/volatile.md
+    - name: 문 키워드
+      items:
+        - name: 명령문 범주
+          href: keywords/statement-keywords.md
+        - name: 선택문
+          items:
+            - name: if-else
+              href: keywords/if-else.md
+            - name: switch
+              href: keywords/switch.md
+        - name: 반복 문
+          items:
+            - name: do
+              href: keywords/do.md
+            - name: for
+              href: keywords/for.md
+            - name: 'foreach, in'
+              href: keywords/foreach-in.md
+            - name: while
+              href: keywords/while.md
+        - name: 점프 문
+          items:
+            - name: break
+              href: keywords/break.md
+            - name: continue
+              href: keywords/continue.md
+            - name: goto
+              href: keywords/goto.md
+            - name: 반환값(return)
+              href: keywords/return.md
+        - name: 예외 처리 문
+          items:
+            - name: throw
+              href: keywords/throw.md
+            - name: try-catch
+              href: keywords/try-catch.md
+            - name: try-finally
+              href: keywords/try-finally.md
+            - name: try-catch-finally
+              href: keywords/try-catch-finally.md
+        - name: Checked 및 Unchecked
+          items:
+            - name: 개요
+              href: keywords/checked-and-unchecked.md
+            - name: checked
+              href: keywords/checked.md
+            - name: unchecked
+              href: keywords/unchecked.md
+        - name: fixed 문
+          href: keywords/fixed-statement.md
+        - name: lock 문
+          href: keywords/lock-statement.md
+    - name: 메서드 매개 변수
+      items:
+        - name: 매개 변수 전달
+          href: keywords/method-parameters.md
+        - name: params
+          href: keywords/params.md
+        - name: in(매개 변수 한정자)
+          href: keywords/in-parameter-modifier.md
+        - name: ref
+          href: keywords/ref.md
+        - name: out(매개 변수 한정자)
+          href: keywords/out-parameter-modifier.md
+    - name: 네임스페이스 키워드
+      items:
+        - name: 네임스페이스(namespace)
+          href: keywords/namespace.md
+        - name: using
+          items:
+            - name: using 컨텍스트
+              href: keywords/using.md
+            - name: using 지시문
+              href: keywords/using-directive.md
+            - name: using 정적 지시문
+              href: keywords/using-static.md
+            - name: using 문
+              href: keywords/using-statement.md
+        - name: extern alias
+          href: keywords/extern-alias.md
+    - name: 형식 테스트 키워드
+      items:
+        - name: is
+          href: keywords/is.md
+    - name: 제네릭 형식 제약 조건 키워드
+      items:
+        - name: new 제약 조건
+          href: keywords/new-constraint.md
+        - name: 형식에 대한 설명
+          href: keywords/where-generic-type-constraint.md
+    - name: 액세스 키워드
+      items:
+        - name: base
+          href: keywords/base.md
+        - name: this
+          href: keywords/this.md
+    - name: 리터럴 키워드
+      items:
+        - name: 'null'
+          href: keywords/null.md
+        - name: 'true'
+          href: keywords/true-literal.md
+        - name: 'false'
+          href: keywords/false-literal.md
+        - name: default
+          href: keywords/default.md
+    - name: 상황별 키워드
+      items:
+        - name: 빠른 참조
+          href: keywords/contextual-keywords.md
+        - name: add
+          href: keywords/add.md
+        - name: Get
+          href: keywords/get.md
+        - name: 부분(형식)
+          href: keywords/partial-type.md
+        - name: partial(메서드)
+          href: keywords/partial-method.md
+        - name: remove
+          href: keywords/remove.md
+        - name: set
+          href: keywords/set.md
+        - name: when(필터 조건)
+          href: keywords/when.md
+        - name: 값
+          href: keywords/value.md
+        - name: yield
+          href: keywords/yield.md
+    - name: 쿼리 키워드
+      items:
+        - name: 빠른 참조
+          href: keywords/query-keywords.md
+        - name: from 절
+          href: keywords/from-clause.md
+        - name: where 절
+          href: keywords/where-clause.md
+        - name: select 절
+          href: keywords/select-clause.md
+        - name: group 절
+          href: keywords/group-clause.md
+        - name: into
+          href: keywords/into.md
+        - name: orderby 절
+          href: keywords/orderby-clause.md
+        - name: join 절
+          href: keywords/join-clause.md
+        - name: let 절
+          href: keywords/let-clause.md
+        - name: ascending
+          href: keywords/ascending.md
+        - name: descending
+          href: keywords/descending.md
+        - name: 'On'
+          href: keywords/on.md
+        - name: equals
+          href: keywords/equals.md
+        - name: by
+          href: keywords/by.md
+        - name: 의
+          href: keywords/in.md
+- name: 'C# 연산자'
+  items:
+    - name: 개요
+      href: operators/index.md
+    - name: 산술 연산자
+      href: operators/arithmetic-operators.md
+      displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
+    - name: 부울 논리 연산자
+      href: operators/boolean-logical-operators.md
+      displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+    - name: 비트 및 시프트 연산자
+      href: operators/bitwise-and-shift-operators.md
+      displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>='
+    - name: 같음 연산자
+      href: operators/equality-operators.md
+      displayName: '==, !='
+    - name: 비교 연산자
+      href: operators/comparison-operators.md
+      displayName: '>, <, >=, <=, greater, less'
+    - name: 멤버 액세스 연산자
+      href: operators/member-access-operators.md
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation, ^, index from end, hat, .., range'
+    - name: 형식 테스트 및 캐스트 연산자
+      href: operators/type-testing-and-cast.md
+      displayName: 'is operator, is keyword, as operator, as keyword, typeof, (), conversion'
+    - name: 사용자 정의 전환 연산자
+      href: operators/user-defined-conversion-operators.md
+      displayName: 'implicit, explicit'
+    - name: 포인터 관련 연산자
+      href: operators/pointer-related-operators.md
+      displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'
+    - name: = 연산자
+      href: operators/assignment-operator.md
+      displayName: 'assignment, ref'
+    - name: + 및 += 연산자
+      href: operators/addition-operator.md
+      displayName: 'string concatenation, delegate combination, event subscription'
+    - name: '- 및 -= 연산자'
+      href: operators/subtraction-operator.md
+      displayName: 'delegate removal, event unsubscription'
+    - name: '?: 연산자'
+      href: operators/conditional-operator.md
+      displayName: 'conditional, ternary, ref'
+    - name: '! (null-forgiving) 연산자'
+      href: operators/null-forgiving.md
+      displayName: 'nullable reference, null-forgiveness'
+    - name: '?? 및 ??= 연산자'
+      href: operators/null-coalescing-operator.md
+      displayName: 'null-coalescing, assignment'
+    - name: => 연산자
+      href: operators/lambda-operator.md
+      displayName: lambda
+    - name: ':: 연산자'
+      href: operators/namespace-alias-qualifier.md
+      displayName: 'namespace alias qualifier, global namespace'
+    - name: await 연산자
+      href: operators/await.md
+      displayName: async
+    - name: 기본 연산자
+      href: operators/default.md
+      displayName: 'default value, default literal, type default'
+    - name: 대리자 연산자
+      href: operators/delegate-operator.md
+      displayName: anonymous
+    - name: nameof 연산자
+      href: operators/nameof.md
+    - name: new 연산자
+      href: operators/new-operator.md
+    - name: sizeof 연산자
+      href: operators/sizeof.md
+    - name: stackalloc 연산자
+      href: operators/stackalloc.md
+    - name: true 및 false 연산자
+      href: operators/true-false-operators.md
+    - name: 연산자 오버로드
+      href: operators/operator-overloading.md
+- name: 'C# 특수 문자'
+  items:
+    - name: 개요
+      href: tokens/index.md
+    - name: $ -- 문자열 보간
+      href: tokens/interpolated.md
+    - name: '@ -- 약어 식별자'
+      href: tokens/verbatim.md
+- name: 'C# 전처리기 지시문'
+  items:
+    - name: 개요
+      href: preprocessor-directives/index.md
+    - name: '#if'
+      href: preprocessor-directives/preprocessor-if.md
+    - name: '#else'
+      href: preprocessor-directives/preprocessor-else.md
+    - name: '#elif'
+      href: preprocessor-directives/preprocessor-elif.md
+    - name: '#endif'
+      href: preprocessor-directives/preprocessor-endif.md
+    - name: '#define'
+      href: preprocessor-directives/preprocessor-define.md
+    - name: '#undef'
+      href: preprocessor-directives/preprocessor-undef.md
+    - name: '#warning'
+      href: preprocessor-directives/preprocessor-warning.md
+    - name: '#error'
+      href: preprocessor-directives/preprocessor-error.md
+    - name: '#line'
+      href: preprocessor-directives/preprocessor-line.md
+    - name: '#region'
+      href: preprocessor-directives/preprocessor-region.md
+    - name: '#endregion'
+      href: preprocessor-directives/preprocessor-endregion.md
+    - name: '#pragma'
+      href: preprocessor-directives/preprocessor-pragma.md
+    - name: '#pragma warning'
+      href: preprocessor-directives/preprocessor-pragma-warning.md
+    - name: '#pragma checksum'
+      href: preprocessor-directives/preprocessor-pragma-checksum.md
+- name: 'C# 컴파일러 옵션'
+  items:
+    - name: 개요
+      href: compiler-options/index.md
+    - name: csc.exe를 사용한 명령줄 빌드
+      href: compiler-options/command-line-building-with-csc-exe.md
+    - name: '방법: Visual Studio 명령줄에 필요한 환경 변수 설정'
+      href: compiler-options/how-to-set-environment-variables-for-the-visual-studio-command-line.md
+    - name: 'C# 컴파일러 옵션 범주별 목록'
+      href: compiler-options/listed-by-category.md
+    - name: 'C# 컴파일러 옵션 사전순 목록'
+      href: compiler-options/listed-alphabetically.md
+      items:
+        - name: '@'
+          href: compiler-options/response-file-compiler-option.md
+        - name: '-addmodule'
+          href: compiler-options/addmodule-compiler-option.md
+        - name: '-appconfig'
+          href: compiler-options/appconfig-compiler-option.md
+        - name: '-baseaddress'
+          href: compiler-options/baseaddress-compiler-option.md
+        - name: '-bugreport'
+          href: compiler-options/bugreport-compiler-option.md
+        - name: '-checked'
+          href: compiler-options/checked-compiler-option.md
+        - name: '-codepage'
+          href: compiler-options/codepage-compiler-option.md
+        - name: '-debug'
+          href: compiler-options/debug-compiler-option.md
+        - name: '-define'
+          href: compiler-options/define-compiler-option.md
+        - name: '-delaysign'
+          href: compiler-options/delaysign-compiler-option.md
+        - name: '-deterministic'
+          href: compiler-options/deterministic-compiler-option.md
+        - name: '-doc'
+          href: compiler-options/doc-compiler-option.md
+        - name: '-errorreport'
+          href: compiler-options/errorreport-compiler-option.md
+        - name: '-filealign'
+          href: compiler-options/filealign-compiler-option.md
+        - name: '-fullpaths'
+          href: compiler-options/fullpaths-compiler-option.md
+        - name: '-help, -?'
+          href: compiler-options/help-compiler-option.md
+        - name: '-highentropyva'
+          href: compiler-options/highentropyva-compiler-option.md
+        - name: '-keycontainer'
+          href: compiler-options/keycontainer-compiler-option.md
+        - name: '-keyfile'
+          href: compiler-options/keyfile-compiler-option.md
+        - name: '-langversion'
+          href: compiler-options/langversion-compiler-option.md
+        - name: '-lib'
+          href: compiler-options/lib-compiler-option.md
+        - name: '-link'
+          href: compiler-options/link-compiler-option.md
+        - name: '-linkresource'
+          href: compiler-options/linkresource-compiler-option.md
+        - name: '-main'
+          href: compiler-options/main-compiler-option.md
+        - name: '-moduleassemblyname'
+          href: compiler-options/moduleassemblyname-compiler-option.md
+        - name: '-noconfig'
+          href: compiler-options/noconfig-compiler-option.md
+        - name: '-nologo'
+          href: compiler-options/nologo-compiler-option.md
+        - name: '-nostdlib'
+          href: compiler-options/nostdlib-compiler-option.md
+        - name: '-nowarn'
+          href: compiler-options/nowarn-compiler-option.md
+        - name: '-nowin32manifest'
+          href: compiler-options/nowin32manifest-compiler-option.md
+        - name: '-optimize'
+          href: compiler-options/optimize-compiler-option.md
+        - name: '-out'
+          href: compiler-options/out-compiler-option.md
+        - name: '-pathmap'
+          href: compiler-options/pathmap-compiler-option.md
+        - name: '-pdb'
+          href: compiler-options/pdb-compiler-option.md
+        - name: '-platform'
+          href: compiler-options/platform-compiler-option.md
+        - name: '-preferreduilang'
+          href: compiler-options/preferreduilang-compiler-option.md
+        - name: '-publicsign'
+          href: compiler-options/publicsign-compiler-option.md
+        - name: '-recurse'
+          href: compiler-options/recurse-compiler-option.md
+        - name: '-reference'
+          href: compiler-options/reference-compiler-option.md
+        - name: '-refout'
+          href: compiler-options/refout-compiler-option.md
+        - name: '-refonly'
+          href: compiler-options/refonly-compiler-option.md
+        - name: '-resource'
+          href: compiler-options/resource-compiler-option.md
+        - name: '-subsystemversion'
+          href: compiler-options/subsystemversion-compiler-option.md
+        - name: '-target'
+          href: compiler-options/target-compiler-option.md
+          items:
+            - name: '-target:appcontainerexe'
+              href: compiler-options/target-appcontainerexe-compiler-option.md
+            - name: '-target:exe'
+              href: compiler-options/target-exe-compiler-option.md
+            - name: '-target:library'
+              href: compiler-options/target-library-compiler-option.md
+            - name: '-target:module'
+              href: compiler-options/target-module-compiler-option.md
+            - name: '-target:winexe'
+              href: compiler-options/target-winexe-compiler-option.md
+            - name: '-target:winmdobj'
+              href: compiler-options/target-winmdobj-compiler-option.md
+        - name: '-unsafe'
+          href: compiler-options/unsafe-compiler-option.md
+        - name: '-utf8output'
+          href: compiler-options/utf8output-compiler-option.md
+        - name: '-warn'
+          href: compiler-options/warn-compiler-option.md
+        - name: '-warnaserror'
+          href: compiler-options/warnaserror-compiler-option.md
+        - name: '-win32icon'
+          href: compiler-options/win32icon-compiler-option.md
+        - name: '-win32manifest'
+          href: compiler-options/win32manifest-compiler-option.md
+        - name: '-win32res'
+          href: compiler-options/win32res-compiler-option.md
+- name: 'C# 컴파일러 오류'
+  href: compiler-messages/index.md
+- name: 'C# 6.0 초안 사양'
+  items:
+    - name: 소개
+      href: ../../../_csharplang/spec/introduction.md
+    - name: 어휘 구조
+      href: ../../../_csharplang/spec/lexical-structure.md
+    - name: 기본 개념
+      href: ../../../_csharplang/spec/basic-concepts.md
+    - name: 유형
+      href: ../../../_csharplang/spec/types.md
+    - name: 변수
+      href: ../../../_csharplang/spec/variables.md
+    - name: 변환
+      href: ../../../_csharplang/spec/conversions.md
+    - name: 표현식
+      href: ../../../_csharplang/spec/expressions.md
+    - name: 문
+      href: ../../../_csharplang/spec/statements.md
+    - name: 네임스페이스
+      href: ../../../_csharplang/spec/namespaces.md
+    - name: 클래스
+      href: ../../../_csharplang/spec/classes.md
+    - name: 구조체
+      href: ../../../_csharplang/spec/structs.md
+    - name: 배열
+      href: ../../../_csharplang/spec/arrays.md
+    - name: 인터페이스
+      href: ../../../_csharplang/spec/interfaces.md
+    - name: 열거형
+      href: ../../../_csharplang/spec/enums.md
+    - name: 대리자
+      href: ../../../_csharplang/spec/delegates.md
+    - name: 예외
+      href: ../../../_csharplang/spec/exceptions.md
+    - name: 특성
+      href: ../../../_csharplang/spec/attributes.md
+    - name: 안전하지 않은 코드
+      href: ../../../_csharplang/spec/unsafe-code.md
+    - name: 설명서 주석
+      href: ../../../_csharplang/spec/documentation-comments.md
+- name: 'C# 7.0 사양 제안'
+  items:
+    - name: 패턴 일치
+      href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
+    - name: 로컬 함수
+      href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
+    - name: 출력 변수 선언
+      href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
+    - name: Throw 식
+      href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
+    - name: 이진 리터럴
+      href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
+    - name: 자릿수 구분 기호
+      href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+- name: 'C# 7.1 사양 제안'
+  items:
+    - name: 비동기 Main 메서드
+      href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
+    - name: 기본 식
+      href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
+    - name: 튜플 이름 유추
+      href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
+    - name: 제네릭과 패턴 일치
+      href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
+- name: 'C# 7.2 사양 제안'
+  items:
+    - name: 읽기 전용 참조
+      href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
+    - name: ref 유사 형식에 대한 컴파일 시간 안전
+      href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
+    - name: 뒤에 오지 않는 명명된 인수
+      href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
+    - name: 비공개 보호
+      href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
+    - name: 조건부 참조
+      href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
+    - name: 선행 숫자 구분 기호
+      href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
+- name: 'C# 7.3 사양 제안'
+  items:
+    - name: 관리되지 않는 제네릭 형식 제약 조건
+      href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
+    - name: 이동 가능/이동 불가능 컨텍스트에 관계없이 `fixed` 필드 인덱싱에는 고정이 필요하지 않음
+      href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+    - name: 패턴 기반 `fixed` 문
+      href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
+    - name: 참조 로컬 재할당
+      href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
+    - name: Stackalloc 배열 이니셜라이저
+      href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
+    - name: 자동 구현 속성 필드 대상 특성
+      href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
+    - name: 이니셜라이저의 식 변수
+      href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
+    - name: 튜플 같음(==) 및 같지 않음(!=)
+      href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
+    - name: 향상된 오버로드 후보
+      href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
+- name: 'C# 8.0 사양 제안'
+  items:
+    - name: Nullable 참조 형식 - 제안
+      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
+    - name: Nullable 참조 형식 - 사양
+      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+    - name: 재귀 패턴 일치
+      href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+    - name: 기본 인터페이스 메서드
+      href: ../../../_csharplang/proposals/csharp-8.0/default-interface-methods.md
+    - name: 비동기 스트림
+      href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
+    - name: 범위
+      href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
+    - name: 패턴 기반 using 및 using 선언
+      href: ../../../_csharplang/proposals/csharp-8.0/using.md
+    - name: Null 결합 할당
+      href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
+    - name: 읽기 전용 인스턴스 멤버
+      href: ../../../_csharplang/proposals/csharp-8.0/readonly-instance-members.md

@@ -1,0 +1,119 @@
+- name: ADO.NET Entity Framework
+  href: index.md
+- name: Entity Framework 개요
+  href: overview.md
+- name: 모델링 및 매핑
+  href: modeling-and-mapping.md
+  items:
+    - name: EDM 생성기(EdmGen.exe)
+      href: edm-generator-edmgen-exe.md
+      items:
+        - name: '방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 생성'
+          href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
+        - name: '방법: EdmGen.exe를 사용하여 개체 계층 코드 생성'
+          href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
+        - name: '방법: EdmGen.exe를 사용하여 모델 및 매핑 파일 유효성 검사'
+          href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
+    - name: '방법: 연결 문자열 정의'
+      href: how-to-define-the-connection-string.md
+    - name: '방법: 모델 및 매핑 파일을 포함 리소스로 만들기'
+      href: how-to-make-model-and-mapping-files-embedded-resources.md
+    - name: 데이터 정의 언어로 작업
+      href: working-with-data-definition-language.md
+- name: 개념적 모델 쿼리
+  href: querying-a-conceptual-model.md
+- name: 개체 작업
+  href: working-with-objects.md
+- name: 데이터 공급자 작업
+  href: working-with-data-providers.md
+  items:
+    - name: 연결 문자열
+      href: connection-strings.md
+    - name: Entity Framework 데이터 공급자
+      href: data-providers.md
+      items:
+        - name: Entity Framework용 EntityClient 공급자
+          href: entityclient-provider-for-the-entity-framework.md
+          items:
+            - name: '방법: EntityConnection 연결 문자열 빌드'
+              href: how-to-build-an-entityconnection-connection-string.md
+            - name: '방법: PrimitiveType 결과를 반환하는 쿼리 실행'
+              href: how-to-execute-a-query-that-returns-primitivetype-results.md
+            - name: '방법: StructuralType 결과를 반환하는 쿼리 실행'
+              href: how-to-execute-a-query-that-returns-structuraltype-results.md
+            - name: '방법: RefType 결과를 반환하는 쿼리 실행'
+              href: how-to-execute-a-query-that-returns-reftype-results.md
+            - name: '방법: 복합 형식을 반환하는 쿼리 실행'
+              href: how-to-execute-a-query-that-returns-complex-types.md
+            - name: '방법: 중첩 컬렉션을 반환하는 쿼리 실행'
+              href: how-to-execute-a-query-that-returns-nested-collections.md
+            - name: '방법: EntityCommand를 사용하여 매개 변수가 있는 Entity SQL 쿼리 실행'
+              href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
+            - name: '방법: EntityCommand를 사용하여 매개 변수 있는 저장 프로시저 실행'
+              href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
+            - name: '방법: 다형성 쿼리 실행'
+              href: how-to-execute-a-polymorphic-query.md
+            - name: '방법: 탐색 연산자로 관계 탐색'
+              href: how-to-navigate-relationships-with-the-navigate-operator.md
+        - name: Entity Framework용 SqlClient
+          href: sqlclient-for-the-entity-framework.md
+          items:
+            - name: Entity Framework용 SqlClient 기능
+              href: sqlclient-for-ef-functions.md
+              items:
+                - name: 개념적 모델 정식 함수와 SQL Server 함수 매핑
+                  href: conceptual-model-canonical-to-sql-server-functions-mapping.md
+                - name: 집계 함수
+                  href: aggregate-functions-sqlclient-for-entity-framework.md
+                - name: 날짜 및 시간 함수
+                  href: date-and-time-functions.md
+                - name: 수학 함수
+                  href: mathematical-functions.md
+                - name: 문자열 함수
+                  href: string-functions.md
+                - name: 시스템 함수
+                  href: system-functions.md
+            - name: Entity FrameworkTypes용 SqlClient
+              href: sqlclient-for-ef-types.md
+            - name: Entity Framework용 SqlClient에서 알려진 문제
+              href: known-issues-in-sqlclient-for-entity-framework.md
+    - name: Entity Framework 데이터 공급자 작성
+      href: writing-an-ef-data-provider.md
+      items:
+        - name: SQL 생성
+          href: sql-generation.md
+          items:
+            - name: 명령 트리의 모양
+              href: the-shape-of-the-command-trees.md
+            - name: 명령 트리에서 SQL 생성 - 최선의 방법
+              href: generating-sql-from-command-trees-best-practices.md
+            - name: 샘플 공급자의 SQL 생성
+              href: sql-generation-in-the-sample-provider.md
+              items:
+                - name: 아키텍처 및 디자인
+                  href: architecture-and-design.md
+                - name: '연습: SQL 생성'
+                  href: walkthrough-sql-generation.md
+        - name: 수정 SQL 생성
+          href: modification-sql-generation.md
+        - name: 공급자 매니페스트 지정
+          href: provider-manifest-specification.md
+- name: 개발 및 배포 고려 사항
+  href: development-and-deployment-considerations.md
+  items:
+    - name: 보안 고려 사항
+      href: security-considerations.md
+    - name: 성능 고려 사항
+      href: performance-considerations.md
+    - name: 마이그레이션 고려 사항
+      href: migration-considerations.md
+    - name: 배포 고려 사항
+      href: deployment-considerations.md
+- name: Entity Framework 리소스
+  href: resources.md
+- name: Entity Framework 용어
+  href: terminology.md
+- name: 시작
+  href: getting-started.md
+- name: 언어 참조
+  href: language-reference/index.md

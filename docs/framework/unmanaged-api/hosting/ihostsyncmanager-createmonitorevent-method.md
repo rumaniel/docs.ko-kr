@@ -17,26 +17,26 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b934816073a48936afca119895488ddf2f0e37d2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3e5a66a87424c2ff8367aaf9ad4da27595880912
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199762"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753416"
 ---
 # <a name="ihostsyncmanagercreatemonitorevent-method"></a>IHostSyncManager::CreateMonitorEvent 메서드
 자동 재설정 이벤트를 모니터링 대상된 개체를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CreateMonitorEvent (  
     [in]  SIZE_T cookie,  
     [out] IHostAutoEvent **ppEvent  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cookie`  
  [in] 이벤트 개체를 사용 하 여 연결 하는 쿠키입니다.  
   
@@ -45,7 +45,7 @@ HRESULT CreateMonitorEvent (
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|`CreateMonitorEvent` 성공적으로 반환 합니다.|  
 |HOST_E_CLRNOTAVAILABLE|프로세스에는 CLR (공용 언어 런타임)에 로드 되지 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
@@ -61,7 +61,7 @@ HRESULT CreateMonitorEvent (
  호스트를 호출 하 여 작업 모니터의 대기를 확인 하려면 쿠키를 사용할 수는 [iclrsyncmanager:: Getmonitorowner](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-getmonitorowner-method.md) 메서드.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
@@ -69,8 +69,9 @@ HRESULT CreateMonitorEvent (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICLRSyncManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)  
- [IHostAutoEvent 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)  
- [IHostSyncManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)  
- <xref:System.Threading.Monitor>
+## <a name="see-also"></a>참고자료
+
+- [ICLRSyncManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)
+- [IHostAutoEvent 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostautoevent-interface.md)
+- [IHostSyncManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)
+- <xref:System.Threading.Monitor>

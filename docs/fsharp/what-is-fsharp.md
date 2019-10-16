@@ -1,19 +1,19 @@
 ---
 title: F#이란
-description: '어떤 F # 프로그래밍 언어는 및와 같은 새로운 F # 프로그래밍에 알아봅니다. 다양 한 데이터 형식, 함수 및 서로 연결 되는 방법에 대해 알아봅니다.'
+description: F# 프로그래밍 언어와 F# 프로그래밍이 어떤 것인지 알아봅니다. 풍부한 데이터 유형과 기능, 이들이 함께 어울리는 방법을 알아봅니다.
 ms.date: 08/03/2018
-ms.openlocfilehash: 193747f380c61a387ed79ecca6abbcd90ee74376
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3cba509f59a8e81e1a0264de7451e9d80304d768
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863298"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332729"
 ---
-# <a name="what-is-f"></a>F#이란 #
+# <a name="what-is-f"></a>F\#이란
 
-F#은 정확하고 유지 보수가 쉬운 코드를 만들어주는 함수형 프로그래밍 언어입니다.
+F#은 정확하고 유지 보수가 쉬운 코드를 만들 수 있는 함수형 프로그래밍 언어입니다.
 
-F# 프로그래밍은 자동으로 타입이 유추되고 일반화된 타입 및 함수를 주로 정의하는 것을 포함합니다. 이를 통해 프로그래밍의 세부 사항보다는 계속해서 문제 도메인에 집중하고 데이터를 다루도록 해줍니다.
+F# 프로그래밍은 주로 자동으로 형식이 유추되고 일반화되는 형식 및 함수를 정의하는 것을 포함합니다. 따라서 프로그래밍의 세부 사항보다는 문제 도메인에 집중하고 데이터를 조작하는 데 집중할 수 있습니다.
 
 ```fsharp
 open System // Gets access to functionality in System namespace.
@@ -35,7 +35,7 @@ let main args =
     0
 ```
 
-F#은 다음과 같은 다양한 기능들이 있습니다.
+F#은 다음과 같은 다양한 기능이 있습니다.
 
 * 간단한 구문
 * 기본적으로 변경 불가능
@@ -45,11 +45,11 @@ F#은 다음과 같은 다양한 기능들이 있습니다.
 * 패턴 매칭
 * 비동기 프로그래밍
 
-기능의 전체 집합에 설명 되어는 [F # 언어 참조](language-reference/index.md)합니다.
+전체 기능은 [F# 언어 참조](./language-reference/index.md)에 문서화되어 있습니다.
 
-## <a name="rich-data-types"></a>다양 한 데이터 형식
+## <a name="rich-data-types"></a>다양한 데이터 형식
 
-[레코드](language-reference/records.md) 및 [식별된 공용체](language-reference/discriminated-unions.md)와 같은 데이터 타입들을 사용하면 복잡한 데이터와 도메인들을 표현할 수 있습니다.
+[Records](./language-reference/records.md) 및 [Discriminated Unions](./language-reference/discriminated-unions.md)와 같은 데이터 타입을 사용하면 복잡한 데이터와 도메인을 표현할 수 있습니다.
 
 ```fsharp
 // Group data with Records
@@ -72,11 +72,11 @@ type WithdrawalResult =
     | UndisclosedFailure
 ```
 
-F# 레코드와 식별된 공용체는 기본적으로 null이 아니며 변경 불가능하며 비교할 수 있으므로 매우 쉽게 사용할 수 있습니다.
+F# Record와 Discriminated Union는 기본적으로 null이 아니며 변경 불가능하고 비교할 수 있으므로 아주 쉽게 사용할 수 있습니다.
 
-## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>함수 및 패턴 일치를 사용 하 여 적용된 정확성
+## <a name="enforced-correctness-with-functions-and-pattern-matching"></a>함수 및 패턴 매칭을 통한 정확성 강화
 
-F # 함수를 쉽게 선언할 수는 실제로 강력한입니다. 함께 사용 하면 [패턴 일치](language-reference/pattern-matching.md), 인 정확성 컴파일러에 의해 적용 되는 동작을 정의할 수 있습니다.
+F# 함수는 실제로 사용할 때 선언하기 쉽고 강력합니다. [패턴 일치](./language-reference/pattern-matching.md)와 함께 사용하면 컴파일러에 의해 적용되는 정확한 동작을 정의할 수 있습니다.
 
 ```fsharp
 // Returns a WithdrawalResult
@@ -93,14 +93,14 @@ let handleWithdrawal amount =
     | UndisclosedFailure -> printfn "Failed: unknown :("
 ```
 
-F # 함수는 첫 번째 클래스를 매개 변수로 전달 되 고 다른 함수에서 반환 된 수를 의미 합니다. 또한입니다.
+F# 함수는 또한 일급 클래스이며, 매개변수로 전달되고 다른 함수에서 반환될 수 있습니다.
 
 ## <a name="functions-to-define-operations-on-objects"></a>객체에 대한 연산을 정의하는 함수
 
-F#은 객체를 완벽하게 지원합니다. 객체는 데이터와 함수를 혼합해야 할 때 유용한 데이터 타입입니다.
+F#은 객체를 완벽하게 지원합니다. 객체는 데이터와 기능을 혼합해야 할 때 유용한 데이터 타입입니다.
 
 ```fsharp
-type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) =
+type Set<'T when 'T: comparison>(elements: seq<'T>) =
     member s.IsEmpty = // Implementation elided
     member s.Contains (value) =// Implementation elided
     member s.Add (value) = // Implementation elided
@@ -110,7 +110,6 @@ type Set<[<EqualityConditionOn>] ‘T when ‘T: comparison>(elements: seq<'T>) 
     interface IEnumerable<‘T>
     interface IReadOnlyCollection<‘T>
 
-[<RequireQualifiedAccess>]
 module Set =
     let isEmpty (set: Set<'T>) = set.IsEmpty
 
@@ -119,8 +118,8 @@ module Set =
     let add value (set: Set<'T>) = set.Add(value)
 ```
 
-F#에서는 객체 지향적 코드를 작성하는 것 보다 함수를 조작하는 데 필요한 다른 데이터 타입으로 객체를 처리하는 코드를 작성합니다. [제네릭 인터페이스](language-reference/interfaces.md), [객체 식](language-reference/object-expressions.md) 및 [멤버](language-reference/members/index.md)의 현명한 사용과 같은 기능은 더 큰 F# 프로그램에서 일반적입니다.
+F#에서는 객체 지향적 코드를 작성하는 대신 함수를 조작하는 데 필요한 다른 데이터 타입으로 객체를 처리하는 코드를 작성합니다. [제네릭 인터페이스](./language-reference/interfaces.md), [객체 식](./language-reference/object-expressions.md) 및 [멤버](./language-reference/members/index.md)의 적절한 사용과 같은 기능은 대부분의 F# 프로그램에서 일반적입니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-더 많은 F# 기능 집합은 [F# 둘러보기](tour.md)를 확인하십시오.
+더 많은 F# 기능은 [F# 둘러보기](tour.md)를 확인하세요.

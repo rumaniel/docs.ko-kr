@@ -17,42 +17,42 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a45ef91eba38223270a04cff2f00c30decb019f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ce40a54e82e95f41247db525110c510e3d83031e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399706"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045925"
 ---
 # <a name="reflection-and-generic-types"></a>리플렉션 및 제네릭 형식
 <a name="top"></a> 리플렉션의 관점에서 제네릭 형식과 일반 형식 간 차이점은 제네릭 형식이 형식 매개 변수(제네릭 형식 정의인 경우) 또는 형식 인수(생성된 형식인 경우)의 집합과 연결되어 있다는 점입니다. 제네릭 메서드는 동일한 방식으로 일반 메서드와 다릅니다.  
   
  다음과 같이 리플렉션이 제네릭 형식 및 메서드를 처리하는 방법을 이해하기 위한 두 가지 키가 있습니다.  
   
--   제네릭 형식 정의 및 제네릭 메서드 정의의 형식 매개 변수는 <xref:System.Type> 클래스의 인스턴스로 표현됩니다.  
+- 제네릭 형식 정의 및 제네릭 메서드 정의의 형식 매개 변수는 <xref:System.Type> 클래스의 인스턴스로 표현됩니다.  
   
     > [!NOTE]
-    >  <xref:System.Type> 의 여러 속성 및 메서드는 <xref:System.Type> 개체가 제네릭 형식 매개 변수를 나타낼 때 다른 동작을 내포합니다. 이러한 차이는 속성 및 메서드 항목에 설명되어있습니다. 예제는 <xref:System.Type.IsAutoClass%2A> 및 <xref:System.Type.DeclaringType%2A>을 참조하세요. 또한 일부 멤버는 <xref:System.Type> 개체가 제네릭 형식 매개 변수를 나타낼 경우에만 유효합니다. 예제는 <xref:System.Type.GetGenericTypeDefinition%2A>을 참조하세요.  
+    > <xref:System.Type> 의 여러 속성 및 메서드는 <xref:System.Type> 개체가 제네릭 형식 매개 변수를 나타낼 때 다른 동작을 내포합니다. 이러한 차이는 속성 및 메서드 항목에 설명되어있습니다. 예제는 <xref:System.Type.IsAutoClass%2A> 및 <xref:System.Type.DeclaringType%2A>을 참조하세요. 또한 일부 멤버는 <xref:System.Type> 개체가 제네릭 형식 매개 변수를 나타낼 경우에만 유효합니다. 예제는 <xref:System.Type.GetGenericTypeDefinition%2A>을 참조하세요.  
   
--   <xref:System.Type> 의 인스턴스가 제네릭 형식을 나타내면 형식 매개 변수(제네릭 형식 정의의 경우) 또는 형식 인수(생성된 형식의 경우)를 나타내는 형식의 배열이 포함됩니다. 제네릭 메서드를 나타내는 <xref:System.Reflection.MethodInfo> 클래스의 인스턴스에서도 똑같습니다.  
+- <xref:System.Type> 의 인스턴스가 제네릭 형식을 나타내면 형식 매개 변수(제네릭 형식 정의의 경우) 또는 형식 인수(생성된 형식의 경우)를 나타내는 형식의 배열이 포함됩니다. 제네릭 메서드를 나타내는 <xref:System.Reflection.MethodInfo> 클래스의 인스턴스에서도 똑같습니다.  
   
  리플렉션은 <xref:System.Type> 및 <xref:System.Reflection.MethodInfo>의 메서드를 제공합니다. 이 메서드를 통해 형식 매개 변수의 배열에 액세스할 수 있으며, <xref:System.Type>의 인스턴스가 형식 매개 변수를 나타내는지 또는 실제 형식을 나타내는지 확인할 수 있습니다.  
   
- 여기에서 논의한 메서드를 보여 주는 예제 코드는 [방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)를 참조하세요.  
+ 여기에서 설명한 메서드를 보여 주는 코드 예제는 [방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](how-to-examine-and-instantiate-generic-types-with-reflection.md)를 참조하세요.  
   
- 다음 논의에서는 형식 매개 변수 및 인수와 개방형 또는 폐쇄형의 생성된 형식 간 차이점과 같은 제네릭 용어에 익숙하다고 가정합니다. 자세한 내용은 [제네릭](../../../docs/standard/generics/index.md)을 참조하세요.  
+ 다음 논의에서는 형식 매개 변수 및 인수와 개방형 또는 폐쇄형의 생성된 형식 간 차이점과 같은 제네릭 용어에 익숙하다고 가정합니다. 자세한 내용은 [제네릭](../../standard/generics/index.md)을 참조하세요.  
   
  이 개요는 다음과 같은 섹션으로 구성되어 있습니다.  
   
--   [제네릭 형식인가요 아니면 제네릭 메서드인가요?](#is_this_a_generic_type_or_method)  
+- [제네릭 형식인가요 아니면 제네릭 메서드인가요?](#is_this_a_generic_type_or_method)  
   
--   [폐쇄형 제네릭 형식 생성](#generating_closed_generic_types)  
+- [폐쇄형 제네릭 형식 생성](#generating_closed_generic_types)  
   
--   [형식 인수 및 형식 매개 변수 검사](#examining_type_arguments)  
+- [형식 인수 및 형식 매개 변수 검사](#examining_type_arguments)  
   
--   [고정](#invariants)  
+- [고정](#invariants)  
   
--   [관련 항목](#related_topics)  
+- [관련 항목](#related_topics)  
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>제네릭 형식인가요 아니면 제네릭 메서드인가요?  
@@ -115,9 +115,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 ### <a name="source-of-a-generic-parameter"></a>제네릭 매개 변수의 소스  
  제네릭 형식 매개 변수는 검사 중인 형식, 바깥쪽 형식 또는 제네릭 메서드에서 가져올 수 있습니다. 다음과 같이 제네릭 형식 매개 변수의 소스를 확인할 수 있습니다.  
   
--   먼저, <xref:System.Type.DeclaringMethod%2A> 속성을 사용하여 형식 매개 변수가 제네릭 메서드에서 가져온 것인지 확인합니다. 속성 값이 null 참조(Visual Basic의`Nothing` )가 아니면 소스가 제네릭 메서드입니다.  
+- 먼저, <xref:System.Type.DeclaringMethod%2A> 속성을 사용하여 형식 매개 변수가 제네릭 메서드에서 가져온 것인지 확인합니다. 속성 값이 null 참조(Visual Basic의`Nothing` )가 아니면 소스가 제네릭 메서드입니다.  
   
--   소스가 제네릭 메서드가 아닌 경우 <xref:System.Type.DeclaringType%2A> 속성을 사용하여 제네릭 형식 매개 변수가 속한 제네릭 형식을 확인합니다.  
+- 소스가 제네릭 메서드가 아닌 경우 <xref:System.Type.DeclaringType%2A> 속성을 사용하여 제네릭 형식 매개 변수가 속한 제네릭 형식을 확인합니다.  
   
  형식 매개 변수가 제네릭 메서드에 속한 경우 <xref:System.Type.DeclaringType%2A> 속성은 관련이 없는 제네릭 메서드를 선언한 형식을 반환합니다.  
   
@@ -131,10 +131,10 @@ generic<typename V, typename W> ref class D : B<int, V> {};
  <xref:System.Type.GenericParameterAttributes%2A> 속성은 형식 매개 변수의 분산(공 분산 및 반공 분산) 및 특별 제약 조건을 나타내는 <xref:System.Reflection.GenericParameterAttributes> 값을 가져옵니다.  
   
 #### <a name="covariance-and-contravariance"></a>공 분산 및 반공 분산  
- 형식 매개 변수가 공 분산인지 또는 반공 분산인지 확인하려면 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>인 경우 형식 매개 변수는 고정입니다. [공변성(Covariance) 및 반공변성(Contravariance)](../../../docs/standard/generics/covariance-and-contravariance.md)을 참조하세요.  
+ 형식 매개 변수가 공 분산인지 또는 반공 분산인지 확인하려면 <xref:System.Reflection.GenericParameterAttributes.VarianceMask?displayProperty=nameWithType> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>인 경우 형식 매개 변수는 고정입니다. [공변성(Covariance) 및 반공변성(Contravariance)](../../standard/generics/covariance-and-contravariance.md)을 참조하세요.  
   
 #### <a name="special-constraints"></a>특별 제약 조건  
- 형식 매개 변수의 특별 제약 조건을 확인하려면 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>인 경우 특별 제약 조건이 없습니다. 형식 매개 변수는 참조 형식이어야 하고 Nullable이 아닌 값 형식이어야 하며 그리고 기본 생성자를 보유해야 하는 제약을 받습니다.  
+ 형식 매개 변수의 특별 제약 조건을 확인하려면 <xref:System.Reflection.GenericParameterAttributes.SpecialConstraintMask?displayProperty=nameWithType> 마스크를 <xref:System.Reflection.GenericParameterAttributes> 속성에서 반환한 <xref:System.Type.GenericParameterAttributes%2A> 값에 적용합니다. 결과가 <xref:System.Reflection.GenericParameterAttributes.None?displayProperty=nameWithType>인 경우 특별 제약 조건이 없습니다. 형식 매개 변수는 참조 형식이어야 하고 Nullable이 아닌 값 형식이어야 하며 그리고 매개 변수가 없는 생성자를 보유해야 하는 제약을 받습니다.  
   
  [맨 위로 이동](#top)  
   
@@ -149,7 +149,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 |제목|설명|  
 |-----------|-----------------|  
-|[방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|<xref:System.Type> 및 <xref:System.Reflection.MethodInfo>의 속성 및 메서드를 사용하여 제네릭 형식을 검사하는 방법을 보여 줍니다.|  
-|[제네릭](../../../docs/standard/generics/index.md)|제네릭 기능 및 .NET Framework에서 제네릭 기능을 지원하는 방법을 설명합니다.|  
-|[방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|리플렉션 내보내기를 사용하여 동적 어셈블리에서 제네릭 형식을 생성하는 방법을 보여 줍니다.|  
-|[형식 정보 보기](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|<xref:System.Type> 클래스를 설명하고 <xref:System.Type>과 다양한 리플렉션 클래스를 함께 사용하여 생성자, 메서드, 필드, 속성, 이벤트에 대한 정보를 가져오는 방법을 보여 주는 코드 예제를 제공합니다.|
+|[방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](how-to-examine-and-instantiate-generic-types-with-reflection.md)|<xref:System.Type> 및 <xref:System.Reflection.MethodInfo>의 속성 및 메서드를 사용하여 제네릭 형식을 검사하는 방법을 보여 줍니다.|  
+|[제네릭](../../standard/generics/index.md)|제네릭 기능 및 .NET Framework에서 제네릭 기능을 지원하는 방법을 설명합니다.|  
+|[방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의](how-to-define-a-generic-type-with-reflection-emit.md)|리플렉션 내보내기를 사용하여 동적 어셈블리에서 제네릭 형식을 생성하는 방법을 보여 줍니다.|  
+|[형식 정보 보기](viewing-type-information.md)|<xref:System.Type> 클래스를 설명하고 <xref:System.Type>과 다양한 리플렉션 클래스를 함께 사용하여 생성자, 메서드, 필드, 속성, 이벤트에 대한 정보를 가져오는 방법을 보여 주는 코드 예제를 제공합니다.|

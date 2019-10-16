@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a0d105679a749b8c87099af871bdb42874d440b1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7676c83e8b231606896cb6d1224633b4fa15e725
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447005"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777564"
 ---
 # <a name="imetadataemitdefinenestedtype-method"></a>IMetaDataEmit::DefineNestedType 메서드
-형식 정의의 메타 데이터 서명을 만듭니다, 반환 된 `mdTypeDef` 정의 된 형식에서 참조 형식의 멤버 임을 지정 하 고 해당 형식에 대 한 토큰는 `tdEncloser` 매개 변수입니다.  
+메타 데이터 서명의 형식 정의 만들고, 반환 합니다는 `mdTypeDef` 해당 형식에 대 한 토큰 및 형식 정의에서 참조 형식의 멤버를 지정 합니다 `tdEncloser` 매개 변수입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT DefineNestedType (   
     [in]  LPCWSTR     szTypeDef,  
     [in]  DWORD       dwTypeDefFlags,   
@@ -40,15 +40,15 @@ HRESULT DefineNestedType (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `szTypeDef`  
- [in] 유니코드에 대 한 형식의 이름입니다.  
+ [in] 유니코드 형식의 이름입니다.  
   
  `dwTypeDefFlags`  
  [in] `TypeDef` 특성입니다. 이 비트 마스크의 `CorTypeAttr` 값입니다.  
   
  `tkExtends`  
- [in] 기본 클래스의 토큰입니다. 이 역할은 한 `mdTypeDef` 또는 `mdTypeRef` 토큰입니다.  
+ [in] 토큰의 기본 클래스입니다. 이 값은 `mdTypeDef` 또는 `mdTypeRef` 토큰입니다.  
   
  `rtkImplements`[]  
  [in] 이 클래스 또는 인터페이스를 구현 하는 인터페이스를 지정 하는 토큰의 배열입니다.  
@@ -60,14 +60,15 @@ HRESULT DefineNestedType (
  [out] `mdTypeDef` 할당 된 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MSCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

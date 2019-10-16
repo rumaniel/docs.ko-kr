@@ -1,13 +1,13 @@
 ---
-title: 개체 식(F#)
-description: '명명 된 형식을 추가 코드와 새로 만드는 데 필요한 오버 헤드를 방지 하려는 경우 F # 식 개체를 사용 하는 방법에 알아봅니다.'
-ms.date: 05/16/2016
-ms.openlocfilehash: 1a971044d680d3bf5a6fff38affdaf001d5403b4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+title: 개체 식
+description: 사용 하는 방법을 알아봅니다 F# 명명 된 형식을 새 만들려면 개체 식 추가 코드와 오버 헤드를 방지 하려는 경우 필요 합니다.
+ms.date: 02/08/2019
+ms.openlocfilehash: 63f2c1d7128721b7b8c744e4cf02d73c2a8b4a07
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666295"
 ---
 # <a name="object-expressions"></a>개체 식
 
@@ -34,7 +34,44 @@ ms.locfileid: "43865464"
 
 다음 예제에서는 여러 다른 유형의 개체 식 보여 줍니다.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet4301.fs)]
+```fsharp
+// This object expression specifies a System.Object but overrides the
+// ToString method.
+let obj1 = { new System.Object() with member x.ToString() = "F#" }
+printfn "%A" obj1
+
+// This object expression implements the IFormattable interface.
+let delimiter(delim1: string, delim2: string, value: string) =
+    { new System.IFormattable with
+        member x.ToString(format: string, provider: System.IFormatProvider) =
+            if format = "D" then
+                delim1 + value + delim2
+            else
+                value }
+
+let obj2 = delimiter("{","}", "Bananas!");
+
+printfn "%A" (System.String.Format("{0:D}", obj2))
+
+// Define two interfaces
+type IFirst =
+  abstract F : unit -> unit
+  abstract G : unit -> unit
+
+type ISecond =
+  inherit IFirst
+  abstract H : unit -> unit
+  abstract J : unit -> unit
+
+// This object expression implements both interfaces.
+let implementer() =
+    { new ISecond with
+        member this.H() = ()
+        member this.J() = ()
+      interface IFirst with
+        member this.F() = ()
+        member this.G() = () }
+```
 
 ## <a name="using-object-expressions"></a>개체 식 사용
 

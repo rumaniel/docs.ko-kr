@@ -1,20 +1,20 @@
 ---
-title: '방법: 두 목록 (Visual Basic) (LINQ) 간의 차집합 구하기'
+title: '방법: (LINQ) (Visual Basic)의 두 목록 간의 차집합 구하기'
 ms.date: 07/20/2015
 ms.assetid: b5b25474-10a8-4df6-aab5-75621bb6b68e
-ms.openlocfilehash: 77ff74788adddcd28e23028b034cd682f2d94233
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a5c08e270059cd4ab127051d091deff221091fbc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33641254"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593476"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>방법: 두 목록 (Visual Basic) (LINQ) 간의 차집합 구하기
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-visual-basic"></a>방법: (LINQ) (Visual Basic)의 두 목록 간의 차집합 구하기
 이 예제에서는 LINQ를 사용하여 두 개의 문자열 목록을 비교하고 names1.txt에 있지만 names2.txt에는 없는 줄만 출력하는 방법을 보여 줍니다.  
   
 ### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
   
-1.  에 표시 된 대로 names1.txt 및 names2.txt를 솔루션 폴더로 복사 [하는 방법: 결합 및 비교 문자열 컬렉션 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)합니다.  
+1. [방법: (LINQ) (Visual Basic) 문자열 컬렉션 결합 및 비교](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)합니다.  
   
 ## <a name="example"></a>예제  
   
@@ -51,10 +51,11 @@ End Class
 ' Garcia, Debra  
 ```  
   
- 와 같은 일부 유형의 쿼리 Visual Basic에서 작업 <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>, <xref:System.Linq.Enumerable.Union%2A>, 및 <xref:System.Linq.Enumerable.Concat%2A>, 메서드 기반의 구문을 으로만 표시 될 수 있습니다.  
+ 일부 유형의 쿼리 작업 Visual basic의 경우와 같은 <xref:System.Linq.Enumerable.Except%2A>, <xref:System.Linq.Enumerable.Distinct%2A>를 <xref:System.Linq.Enumerable.Union%2A>, 및 <xref:System.Linq.Enumerable.Concat%2A>, 메서드 기반 구문 으로만 표현할 수 있습니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
+VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다는 `Imports` System.Linq 네임 스페이스에 대 한 문입니다.
   
-## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+## <a name="see-also"></a>참고자료
+
+- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

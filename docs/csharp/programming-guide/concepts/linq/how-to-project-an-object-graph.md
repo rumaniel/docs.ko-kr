@@ -2,18 +2,18 @@
 title: '방법: 개체 그래프 프로젝션(C#)'
 ms.date: 07/20/2015
 ms.assetid: 293d15d5-3eaf-48de-9a02-3e13cb117b5b
-ms.openlocfilehash: f8e15e80a6914a8dcb848d91a13958f7e4175342
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b00e350dd5bf00a5939547b3ed1651b2a6645197
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196085"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253488"
 ---
 # <a name="how-to-project-an-object-graph-c"></a>방법: 개체 그래프 프로젝션(C#)
 이 항목에서는 XML에서 개체 그래프를 프로젝션하거나 채우는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예  
- 다음 코드에서는 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 문서의 `Address`, `PurchaseOrder` 및 `PurchaseOrderItem` 클래스를 사용하여 개체 그래프를 채웁니다.  
+ 다음 코드에서는 `Address`, `PurchaseOrder` 및 `PurchaseOrderItem` 클래스를 사용하여 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](./sample-xml-file-typical-purchase-order-linq-to-xml-1.md) XML 문서에서 개체 그래프를 채웁니다.  
   
 ```csharp  
 class Address  
@@ -62,16 +62,15 @@ class Address
   
     public override string ToString()  
     {  
-        StringBuilder sb = new StringBuilder();  
-        sb.Append(String.Format("Type: {0}\n",  
-          addressType == AddressUse.Shipping ? "Shipping" : "Billing"));  
-        sb.Append(String.Format("Name: {0}\n", name));  
-        sb.Append(String.Format("Street: {0}\n", street));  
-        sb.Append(String.Format("City: {0}\n", city));  
-        sb.Append(String.Format("State: {0}\n", state));  
-        sb.Append(String.Format("Zip: {0}\n", zip));  
-        sb.Append(String.Format("Country: {0}\n", country));  
-        return sb.ToString();  
+        StringBuilder sb = new StringBuilder();
+        sb.Append($"Type: {(addressType == AddressUse.Shipping ? "Shipping" : "Billing")}\n");
+        sb.Append($"Name: {name}\n");
+        sb.Append($"Street: {street}\n");
+        sb.Append($"City: {city}\n");
+        sb.Append($"State: {state}\n");
+        sb.Append($"Zip: {zip}\n");
+        sb.Append($"Country: {country}\n");
+        return sb.ToString();
     }  
 }  
   
@@ -110,16 +109,16 @@ class PurchaseOrderItem
   
     public override string ToString()  
     {  
-        StringBuilder sb = new StringBuilder();  
-        sb.Append(String.Format("PartNumber: {0}\n", partNumber));  
-        sb.Append(String.Format("ProductName: {0}\n", productName));  
-        sb.Append(String.Format("Quantity: {0}\n", quantity));  
-        sb.Append(String.Format("USPrice: {0}\n", usPrice));  
-        if (comment != null)  
-            sb.Append(String.Format("Comment: {0}\n", comment));  
-        if (shipDate != DateTime.MinValue)  
-            sb.Append(String.Format("ShipDate: {0:d}\n", shipDate));  
-        return sb.ToString();  
+        StringBuilder sb = new StringBuilder();
+        sb.Append($"PartNumber: {partNumber}\n");
+        sb.Append($"ProductName: {productName}\n");
+        sb.Append($"Quantity: {quantity}\n");
+        sb.Append($"USPrice: {usPrice}\n");
+        if (comment != null)
+            sb.Append($"Comment: {comment}\n");
+        if (shipDate != DateTime.MinValue)
+            sb.Append($"ShipDate: {shipDate:d}\n");
+        return sb.ToString();
     }  
 }  
   
@@ -153,25 +152,25 @@ class PurchaseOrder
   
     public override string ToString()  
     {  
-        StringBuilder sb = new StringBuilder();  
-        sb.Append(String.Format("PurchaseOrderNumber: {0}\n", purchaseOrderNumber));  
-        sb.Append(String.Format("OrderDate: {0:d}\n", orderDate));  
-        sb.Append("\n");  
-        sb.Append("Addresses\n");  
-        sb.Append("=====\n");  
-        foreach (Address address in addresses)  
-        {  
-            sb.Append(address);  
-            sb.Append("\n");  
-        }  
-        sb.Append("Items\n");  
-        sb.Append("=====\n");  
-        foreach (PurchaseOrderItem item in items)  
-        {  
-            sb.Append(item);  
-            sb.Append("\n");  
-        }  
-        return sb.ToString();  
+        StringBuilder sb = new StringBuilder();
+        sb.Append($"PurchaseOrderNumber: {purchaseOrderNumber}\n");
+        sb.Append($"OrderDate: {orderDate:d}\n");
+        sb.Append("\n");
+        sb.Append("Addresses\n");
+        sb.Append("=====\n");
+        foreach (Address address in addresses)
+        {
+            sb.Append(address);
+            sb.Append("\n");
+        }
+        sb.Append("Items\n");
+        sb.Append("=====\n");
+        foreach (PurchaseOrderItem item in items)
+        {
+            sb.Append(item);
+            sb.Append("\n");
+        }
+        return sb.ToString();
     }  
 }  
   
@@ -219,7 +218,7 @@ class Program {
   
  예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 PurchaseOrderNumber: 99503  
 OrderDate: 10/20/1999  
   
@@ -258,6 +257,5 @@ ShipDate: 5/21/1999
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Linq.Enumerable.Select%2A>  
-- <xref:System.Linq.Enumerable.ToList%2A>  
-- [프로젝션 및 변환(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+- <xref:System.Linq.Enumerable.Select%2A>
+- <xref:System.Linq.Enumerable.ToList%2A>

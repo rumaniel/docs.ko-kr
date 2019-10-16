@@ -8,16 +8,16 @@ helpviewer_keywords:
 - collectible assemblies, retrieving
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04a04e422fec14055d8ac3f50b9f2f18658a0f9f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b26da264b2da40e19db4bc5e3b3575505f5c979c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33398263"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54637744"
 ---
 # <a name="collectible-assemblies-for-dynamic-type-generation"></a>동적 형식 생성을 위해 수집 가능한 어셈블리
 
-*수집 가능한 어셈블리*는 만들어진 응용 프로그램 도메인을 언로드하지 않고 언로드할 수 있는 동적 어셈블리입니다. 수집 가능한 어셈블리에서 사용되는 모든 관리 및 관리되지 않는 메모리 및 포함하는 형식은 회수될 수 있습니다. 어셈블리 이름 등의 정보는 내부 테이블에서 제거됩니다.
+*수집 가능한 어셈블리*는 만들어진 애플리케이션 도메인을 언로드하지 않고 언로드할 수 있는 동적 어셈블리입니다. 수집 가능한 어셈블리에서 사용되는 모든 관리 및 관리되지 않는 메모리 및 포함하는 형식은 회수될 수 있습니다. 어셈블리 이름 등의 정보는 내부 테이블에서 제거됩니다.
 
 언로드를 활성화하려면 동적 어셈블리를 만들 때 <xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndCollect?displayProperty=nameWithType> 플래그를 사용합니다. 어셈블리는 일시적이며(즉, 저장될 수 없음) [수집 가능한 어셈블리에 대한 제한](#restrictions-on-collectible-assemblies) 섹션에 설명된 제한 사항이 적용됩니다. CLR(공용 언어 런타임)은 어셈블리와 관련된 모든 개체를 릴리스할 때 자동으로 수집 가능한 어셈블리를 언로드합니다. 다른 모든 측면에서 수집 가능한 어셈블리는 다른 동적 어셈블리와 동일한 방식으로 생성 및 사용됩니다.
 
@@ -77,9 +77,9 @@ ms.locfileid: "33398263"
 - **컨텍스트 바인딩 개체**    
    컨텍스트 정적 변수는 지원되지 않습니다. 수집 가능한 어셈블리의 형식은 <xref:System.ContextBoundObject>를 확장할 수 없습니다. 그러나 수집 가능한 어셈블리의 코드는 다른 곳에서 정의된 컨텍스트 바인딩 개체를 사용할 수 있습니다.
 
-- **스레드 정적 데이터**       
+- **스레드 정적 데이터**       
    스레드 정적 변수는 지원되지 않습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[동적 메서드 및 어셈블리 내보내기](emitting-dynamic-methods-and-assemblies.md)
+- [동적 메서드 및 어셈블리 내보내기](emitting-dynamic-methods-and-assemblies.md)

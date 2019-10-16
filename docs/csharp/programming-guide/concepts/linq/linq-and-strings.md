@@ -2,18 +2,18 @@
 title: LINQ 및 문자열(C#)
 ms.date: 07/20/2015
 ms.assetid: dbe2d657-b3f3-487e-b645-21fb2d71cd7b
-ms.openlocfilehash: da7a35f0fd66d1f7b8a72550c175b5428242fbc1
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c7a1b86cc611d5f38ceab814b4594f5ad953fbc4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43886502"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54744624"
 ---
 # <a name="linq-and-strings-c"></a>LINQ 및 문자열(C#)
 
 LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할 수 있습니다. 텍스트 파일의 반구조적 데이터에 특히 유용할 수 있습니다. LINQ 쿼리에 기존의 문자열 함수 및 정규식을 결합할 수 있습니다. 예를 들어 <xref:System.String.Split%2A?displayProperty=nameWithType> 또는 <xref:System.Text.RegularExpressions.Regex.Split%2A?displayProperty=nameWithType> 메서드를 사용하여 문자열 배열을 만든 다음 LINQ를 사용하여 쿼리하거나 수정할 수 있습니다. LINQ 쿼리의 `where` 절에 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A?displayProperty=nameWithType> 메서드를 사용할 수 있습니다. 또한 LINQ를 사용하여 정규식에서 반환된 <xref:System.Text.RegularExpressions.MatchCollection> 결과를 쿼리하거나 수정할 수 있습니다.
 
-이 섹션에 설명된 기법을 사용하여 반구조적 텍스트 데이터를 XML로 변환할 수도 있습니다. 자세한 내용은 [방법: CSV 파일에서 XML 생성](how-to-generate-xml-from-csv-files.md)을 참조하세요.
+이 섹션에 설명된 기법을 사용하여 반구조적 텍스트 데이터를 XML로 변환할 수도 있습니다. 자세한 내용은 [방법: CSV 파일에서 XML 생성(C#)](how-to-generate-xml-from-csv-files.md)을 참조하세요.
 
 이 섹션의 예제는 다음 두 가지 범주로 구분됩니다.
 
@@ -68,7 +68,7 @@ LINQ를 사용하여 문자열 및 문자열 컬렉션을 쿼리하고 변환할
   
   단일 파일을 데이터 소스로 사용하여 새 파일을 만드는 방법을 보여 줍니다.
 
-- [방법: CSV 텍스트 파일의 열 값 계산(LINQ)(C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [방법: CSV 텍스트 파일의 열 값 컴퓨팅(LINQ)(C#)](how-to-compute-column-values-in-a-csv-text-file-linq.md)
   
   .csv 파일의 텍스트 데이터에 대해 수학적 계산을 수행하는 방법을 보여 줍니다.
 

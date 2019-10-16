@@ -1,5 +1,5 @@
 ---
-title: '&lt;assemblyBinding&gt; 요소에 대 한 &lt;구성&gt;'
+title: <configuration>에 대한 <assemblyBinding> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/assemblyBinding
@@ -7,21 +7,19 @@ helpviewer_keywords:
 - assemblyBinding Element
 - <assemblyBinding> Element
 ms.assetid: 6cc55983-b894-449b-8e26-b258e53939cd
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 5693b92ac35a357ff1f8643d0eb9ec2105acecb4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: e0b83c4b3573ab6819654e72cac1bf3e4a0ba637
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193358"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921269"
 ---
-# <a name="assemblybinding-element-for-configuration"></a>\<assemblyBinding > 요소에 대 한 \<구성 >
+# <a name="assemblybinding-element-for-configuration"></a>\<구성 >에 대 한 \<assemblybinding > 요소
 
 구성 수준에서 어셈블리 바인딩 정책을 지정합니다.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;**\<assemblyBinding >**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp; **\<assemblyBinding>**
 
 ## <a name="syntax"></a>구문
 
@@ -41,24 +39,24 @@ ms.locfileid: "47193358"
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다. |
+| [ **\<configuration>** ](configuration-element.md) | 공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다. |
 
 ## <a name="child-element"></a>자식 요소
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<linkedConfiguration >**](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) | 포함할 구성 파일을 지정합니다. |
+| [ **\<linkedConfiguration>** ](linkedconfiguration-element.md) | 포함할 구성 파일을 지정합니다. |
 
 ## <a name="remarks"></a>설명
 
-합니다 [  **\<linkedConfiguration >** ](~/docs/framework/configure-apps/file-schema/linkedconfiguration-element.md) 어셈블리를 포함 하도록 응용 프로그램 구성 파일의 구성 파일을 허용 하 여 구성 요소 어셈블리의 관리를 간소화 하는 요소 잘 알려진 위치 대신 복제 어셈블리 구성 설정.
+[ **\<LinkedConfiguration >** ](linkedconfiguration-element.md) 요소는 응용 프로그램 구성 파일에서 어셈블리를 복제 하는 대신 잘 알려진 위치에 어셈블리 구성 파일을 포함 하도록 허용 하 여 구성 요소 어셈블리의 관리를 간소화 합니다. 구성 설정.
 
 > [!NOTE]
-> 합니다  **\<linkedConfiguration >** Windows side-by-side-매니페스트를 사용 하 여 응용 프로그램에 대 한 요소가 지원 되지 않습니다.
+> LinkedConfiguration > 요소는 Windows side-by-side 매니페스트를 사용 하는 응용 프로그램에 대해 지원 되지 않습니다.  **\<**
 
 ## <a name="example"></a>예제
 
-다음 예제에서는 로컬 하드 디스크의 구성 파일을 포함 하는 방법을 보여 줍니다.
+다음 예제에서는 로컬 하드 디스크에 구성 파일을 포함 하는 방법을 보여 줍니다.
 
 ```xml
 <configuration>
@@ -70,4 +68,4 @@ ms.locfileid: "47193358"
 
 ## <a name="see-also"></a>참고자료
 
-[.NET Framework의 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework에 대 한 구성 파일 스키마](index.md)

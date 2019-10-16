@@ -2,12 +2,12 @@
 title: '방법: 그룹화를 사용하여 계층 구조 만들기(C#)'
 ms.date: 07/20/2015
 ms.assetid: 0213d59e-5f76-438c-9cab-4bf11f7b971d
-ms.openlocfilehash: 8fa384ced04a90002f8f721266f163c874d6e0ff
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 7d9a58e5b36d6096c156f458c8ba700e04fd8eca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46585562"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593846"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-c"></a>방법: 그룹화를 사용하여 계층 구조 만들기(C#)
 이 예제에서는 데이터를 그룹화한 다음 그룹화에 따라 XML을 생성하는 방법을 보여 줍니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "46585562"
 ## <a name="example"></a>예  
  이 예제에서는 먼저 범주를 기준으로 데이터를 그룹화한 다음 XML 계층 구조가 그룹화를 반영하는 XML 파일을 새로 생성합니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 숫자 데이터(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)를 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 숫자 데이터(LINQ to XML)](./sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```csharp  
 XElement doc = XElement.Load("Data.xml");  
@@ -73,7 +73,3 @@ Console.WriteLine(newData);
   </Group>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

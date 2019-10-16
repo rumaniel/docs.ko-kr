@@ -2,12 +2,12 @@
 title: XML 선언으로 serialize(C#)
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
-ms.openlocfilehash: 613280efc8c734c53c4af9252b4b83e2dd942f36
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4533d69f2b0bee68b4adee6e18fe28dde18078ae
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46586303"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483473"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>XML 선언으로 serialize(C#)
 이 항목에서는 serialization을 통해 XML 선언이 생성되는지 여부를 제어하는 방법에 대해 설명합니다.  
@@ -63,4 +63,4 @@ Console.WriteLine(sb.ToString());
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 트리 serialize(C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [XML 트리 serialize(C#)](serializing-to-files-textwriters-and-xmlwriters.md)

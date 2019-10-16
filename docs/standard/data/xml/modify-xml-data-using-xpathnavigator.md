@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 03a7c5a1-b296-4af4-b209-043c958dc0a5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 219327d246416cfb3d76919680aa74a58bae5fb3
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: ba6393d19909d8be762ee38b4c925987528d6304
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085883"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967347"
 ---
 # <a name="modify-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 수정
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에서 노드와 값을 수정하는 메서드 집합을 제공합니다. 이러한 메서드를 사용하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 `true`여야 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "44085883"
 |<xref:System.Xml.XPath.XPathNodeType.Namespace>|지원되지 않음|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNodeType.Namespace> 노드나 <xref:System.Xml.XPath.XPathNodeType.Root> 노드를 편집할 수 없습니다.  
+> <xref:System.Xml.XPath.XPathNodeType.Namespace> 노드나 <xref:System.Xml.XPath.XPathNodeType.Root> 노드를 편집할 수 없습니다.  
   
  또한 <xref:System.Xml.XPath.XPathNavigator> 클래스는 노드를 삽입하고 제거하는 메서드 집합을 제공합니다. XML 문서에서 노드를 삽입하고 제거하는 방법에 대한 자세한 내용은 [XPathNavigator를 사용하여 XML 데이터 삽입](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md) 및 [XPathNavigator를 사용하여 XML 데이터 제거](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md) 항목을 참조하세요.  
   
@@ -109,7 +109,7 @@ navigator.SetTypedValue(DateTime.Now);
  <xref:System.Xml.XPath.XPathNavigator> 클래스는 W3C XML 스키마를 사용해 강력한 형식의 XML을 설명합니다. W3C XML 스키마 문서에 대한 유효성 검사를 기반으로 요소 및 특성에 형식 정보로 주석을 추가할 수 있습니다. 다른 요소나 특성을 포함할 수 있는 요소를 복합 형식이라고 하며 텍스트 내용만 포함할 수 있는 요소를 단순 형식이라고 합니다.  
   
 > [!NOTE]
->  특성에는 단순 형식만 있을 수 있습니다.  
+> 특성에는 단순 형식만 있을 수 있습니다.  
   
  특성이나 요소가 해당 형식 정의와 관련된 모든 규칙을 준수하는 경우 이 특성이나 요소는 스키마에 대해 유효한 것으로 간주될 수 있습니다. 스키마에 대해 유효하려면 단순 형식 `xs:int`가 포함된 요소에는 -2147483648에서 2147483647까지의 숫자 값이 포함되어야 합니다. 복합 형식의 경우 요소의 스키마 유효성 검사는 자식 요소 및 특성의 스키마 유효성 검사에 따라 결정됩니다. 그러므로 요소가 복합 형식 정의에 대해 유효할 경우 모든 자식 요소 및 특성은 해당 형식 정의에 대해 유효합니다. 마찬가지로 요소의 자식 요소 또는 특성 중 하나라도 형식 정의에 대해 유효하지 않을 경우 또는 유효성을 알 수 없는 경우 해당 요소도 유효하지 않거나 요소의 유효성을 알 수 없습니다.  
   
@@ -243,16 +243,16 @@ Console.WriteLine(navigator.OuterXml);
  <xref:System.Xml.XPath.XPathNavigator> 개체를 사용하여 `xsi:nil` 값의 `true` 특성이 있는 유효한 요소에 내용을 추가하는 경우 `xsi:nil` 특성 값은 `false`로 설정됩니다.  
   
 > [!NOTE]
->  `xsi:nil` 특성이 `false`로 설정된 요소의 내용을 삭제하면 이 특성 값은 `true`로 변경되지 않습니다.  
+> `xsi:nil` 특성이 `false`로 설정된 요소의 내용을 삭제하면 이 특성 값은 `true`로 변경되지 않습니다.  
   
 ## <a name="saving-an-xml-document"></a>XML 문서 저장  
  <xref:System.Xml.XmlDocument> 클래스의 메서드를 사용하면 <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 이 항목에서 설명하는 편집 메서드의 결과로 저장할 수 있습니다. <xref:System.Xml.XmlDocument> 개체에서 변경된 내용을 저장하는 방법에 대한 자세한 내용은 [문서 작성 및 저장](../../../../docs/standard/data/xml/saving-and-writing-a-document.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [XPathNavigator를 사용하여 XML 데이터 삽입](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [XPathNavigator를 사용하여 XML 데이터 삽입](../../../../docs/standard/data/xml/insert-xml-data-using-xpathnavigator.md)
 - [XPathNavigator를 사용하여 XML 데이터 제거](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

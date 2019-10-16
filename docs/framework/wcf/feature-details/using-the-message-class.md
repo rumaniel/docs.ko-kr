@@ -5,36 +5,36 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 0ff65d9173838a8eb8850253e62d822f06942f26
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 76ac5fad653604c7abe403def72d31696d26b547
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33508984"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967842"
 ---
 # <a name="using-the-message-class"></a>Message 클래스 사용
-<xref:System.ServiceModel.Channels.Message> Windows Communication Foundation (WCF)에 기본 클래스입니다. 클라이언트와 서비스 간의 모든 통신에서 결국 <xref:System.ServiceModel.Channels.Message> 인스턴스의 전송과 수신이 발생합니다.  
+클래스 <xref:System.ServiceModel.Channels.Message> 는 WCF (Windows Communication Foundation)의 기본 클래스입니다. 클라이언트와 서비스 간의 모든 통신에서 결국 <xref:System.ServiceModel.Channels.Message> 인스턴스의 전송과 수신이 발생합니다.  
   
- 일반적으로 <xref:System.ServiceModel.Channels.Message> 클래스와 직접 상호 작용하지는 않습니다. 대신, WCF 서비스 모델 구문 예: 데이터 계약, 메시지 계약 및 작업 계약 등 들어오고 나가는 메시지를 설명 하기 위해 사용 됩니다. 그러나 일부 고급 시나리오에서는 <xref:System.ServiceModel.Channels.Message> 클래스를 직접 사용하여 프로그래밍할 수 있습니다. 예를 들어 다음과 같은 경우 <xref:System.ServiceModel.Channels.Message> 클래스를 사용할 수 있습니다.  
+ 일반적으로 <xref:System.ServiceModel.Channels.Message> 클래스와 직접 상호 작용하지는 않습니다. 대신 WCF 서비스 모델 구문 (예: 데이터 계약, 메시지 계약 및 작업 계약)은 들어오고 나가는 메시지를 설명 하는 데 사용 됩니다. 그러나 일부 고급 시나리오에서는 <xref:System.ServiceModel.Channels.Message> 클래스를 직접 사용하여 프로그래밍할 수 있습니다. 예를 들어 다음과 같은 경우 <xref:System.ServiceModel.Channels.Message> 클래스를 사용할 수 있습니다.  
   
--   [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체를 serialize하는 대신 보내는 메시지 내용을 만드는 대체 방법이 필요한 경우(예: 디스크의 파일에서 직접 메시지 생성).  
+- 보내는 메시지 콘텐츠를 만드는 다른 방법이 필요한 경우 (예: 디스크의 파일에서 직접 메시지를 만드는 경우) .NET Framework 개체를 serialize 하는 대신  
   
--   [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 개체로 deserialize하는 대신 들어오는 메시지 내용을 사용하는 대체 방법이 필요한 경우(예: 원시 XML 콘텐츠에 XSLT 변환을 적용하려는 경우)  
+- 들어오는 메시지 내용을 사용 하는 대체 방법이 필요한 경우 (예: 원시 XML 콘텐츠에 XSLT 변환을 적용 하려는 경우) .NET Framework 개체로 deserialize 하는 대신  
   
--   메시지 내용에 관계없이 일반적인 방법으로 메시지를 처리해야 하는 경우(예: 라우터, 부하 분산 장치 또는 게시-구독 시스템을 구축할 때 메시지를 라우팅 또는 전달하는 경우)  
+- 메시지 내용에 관계없이 일반적인 방법으로 메시지를 처리해야 하는 경우(예: 라우터, 부하 분산 장치 또는 게시-구독 시스템을 구축할 때 메시지를 라우팅 또는 전달하는 경우)  
   
- 사용 하기 전에 <xref:System.ServiceModel.Channels.Message> 클래스의 WCF 데이터 전송 아키텍처를 숙지 [데이터 전송 아키텍처 개요](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)합니다.  
+ <xref:System.ServiceModel.Channels.Message> 클래스를 사용 하기 전에 [데이터 전송 아키텍처 개요](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)의 WCF 데이터 전송 아키텍처를 숙지 합니다.  
   
  <xref:System.ServiceModel.Channels.Message>는 데이터의 범용 컨테이너이지만 그 디자인은 SOAP 프로토콜의 메시지 디자인과 유사합니다. SOAP와 마찬가지로 메시지에는 메시지 본문과 헤더가 있습니다. 메시지 본문에는 실제 페이로드 데이터가 들어 있고 헤더에는 명명된 추가 데이터 컨테이너가 들어 있습니다. 본문과 헤더를 읽고 쓰는 규칙은 서로 다릅니다. 예를 들어 헤더는 항상 메모리에 버퍼링되고 순서와 횟수에 관계없이 액세스할 수 있지만 본문은 한 번만 읽을 수 있고 스트리밍할 수 있습니다. 일반적으로 SOAP를 사용하는 경우 메시지 본문은 SOAP 본문에 매핑되고 메시지 헤더는 SOAP 헤더에 매핑됩니다.  
   
 ## <a name="using-the-message-class-in-operations"></a>작업에서 메시지 클래스 사용  
  <xref:System.ServiceModel.Channels.Message> 클래스를 작업의 입력 매개 변수, 작업의 반환 값 또는 둘 다로 사용할 수 있습니다. 작업에서 <xref:System.ServiceModel.Channels.Message>를 사용하는 경우 다음 제한 사항이 적용됩니다.  
   
--   작업에 `out` 또는 `ref` 매개 변수를 사용할 수 없습니다.  
+- 작업에 `out` 또는 `ref` 매개 변수를 사용할 수 없습니다.  
   
--   `input` 매개 변수를 둘 이상 사용할 수 없습니다. 매개 변수가 있는 경우 메시지 또는 메시지 계약 형식이어야 합니다.  
+- `input` 매개 변수를 둘 이상 사용할 수 없습니다. 매개 변수가 있는 경우 메시지 또는 메시지 계약 형식이어야 합니다.  
   
--   반환 형식은 `void`, `Message` 또는 메시지 계약 형식이어야 합니다.  
+- 반환 형식은 `void`, `Message` 또는 메시지 계약 형식이어야 합니다.  
   
  다음 코드 예제에는 올바른 작업 계약이 포함되어 있습니다.  
   
@@ -78,27 +78,27 @@ ms.locfileid: "33508984"
 ## <a name="extracting-message-body-data"></a>메시지 본문 데이터 추출  
  `Message` 클래스는 본문에서 정보를 추출하는 여러 방법을 지원합니다. 이러한 방법을 다음 범주로 분류할 수 있습니다.  
   
--   한 번에 전체 메시지 본문을 XML 작성기에 씁니다. 이 라고 *메시지 쓰기*합니다.  
+- 한 번에 전체 메시지 본문을 XML 작성기에 씁니다. 이를 *메시지 작성*이라고 합니다.  
   
--   메시지 본문에 XML 판독기를 적용합니다. 이렇게 하면 필요할 경우 나중에 부분별로 메시지 본문에 액세스할 수 있습니다. 이 라고 *메시지를 읽는*합니다.  
+- 메시지 본문에 XML 판독기를 적용합니다. 이렇게 하면 필요할 경우 나중에 부분별로 메시지 본문에 액세스할 수 있습니다. 이를 *메시지 읽기*라고 합니다.  
   
--   본문을 비롯한 전체 메시지를 <xref:System.ServiceModel.Channels.MessageBuffer> 형식의 메모리 내 버퍼로 복사할 수 있습니다. 이 라고 *메시지 복사*합니다.  
+- 본문을 비롯한 전체 메시지를 <xref:System.ServiceModel.Channels.MessageBuffer> 형식의 메모리 내 버퍼로 복사할 수 있습니다. 이를 *메시지 복사*라고 합니다.  
   
  액세스 방법에 관계없이 `Message` 본문에는 한 번만 액세스할 수 있습니다. 메시지 개체에는 처음에 Created로 설정되는 `State` 속성이 있습니다. 앞의 목록에서 설명한 세 가지 액세스 방법은 상태를 각각 Written, Read 및 Copied로 설정합니다. 또한 `Close` 메서드는 메시지 본문 내용이 더 이상 필요하지 않을 경우 상태를 Closed로 설정할 수 있습니다. 메시지 본문은 만듦 상태에서만 액세스할 수 있으며 상태가 변경된 후에는 만듦 상태로 돌아갈 수 없습니다.  
   
 ## <a name="writing-messages"></a>메시지 쓰기  
- <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 메서드는 지정된 `Message` 인스턴스의 본문 내용을 지정된 XML 작성기에 씁니다. <xref:System.ServiceModel.Channels.Message.WriteBody%2A> 메서드는 본문 내용을 적절한 래퍼 요소에 포함(예: <`soap:body`>)한다는 점을 제외하고 동일한 작업을 수행합니다. 마지막으로 <xref:System.ServiceModel.Channels.Message.WriteMessage%2A>는 래핑 SOAP 봉투와 헤더를 비롯한 전체 메시지를 씁니다. SOAP를 해제하면(Version이 `MessageVersion.None`임) 세 가지 방법이 모두 동일한 작업을 수행하여 메시지 본문 내용을 씁니다.  
+ <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 메서드는 지정된 `Message` 인스턴스의 본문 내용을 지정된 XML 작성기에 씁니다. 메서드 <xref:System.ServiceModel.Channels.Message.WriteBody%2A> 는 본문 내용을 적절 한 래퍼 요소에 포함 (예: > <`soap:body`) 한다는 점을 제외 하 고 동일 하 게 수행 합니다. 마지막으로 <xref:System.ServiceModel.Channels.Message.WriteMessage%2A>는 래핑 SOAP 봉투와 헤더를 비롯한 전체 메시지를 씁니다. SOAP가 해제 되어 있는 경우<xref:System.ServiceModel.Channels.Message.Version> ( <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>가 인 경우) 세 가지 메서드는 모두 동일한 작업을 수행 합니다. 즉, 메시지 본문 내용을 씁니다.  
   
  예를 들어 다음 코드는 들어오는 메시지의 본문을 파일에 씁니다.  
   
  [!code-csharp[C_UsingTheMessageClass#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#5)]
  [!code-vb[C_UsingTheMessageClass#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#5)]  
   
- 두 개의 추가 도우미 메서드는 특정 SOAP 시작 요소 태그를 씁니다. 이 메서드는 메시지 본문에 액세스하지 않으므로 메시지 상태를 변경하지 않습니다. 여기에는 다음이 포함됩니다.  
+ 두 개의 추가 도우미 메서드는 특정 SOAP 시작 요소 태그를 씁니다. 이 메서드는 메시지 본문에 액세스하지 않으므로 메시지 상태를 변경하지 않습니다. 이러한 개체는 다음과 같습니다.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A>는 시작 본문 요소(예: `<soap:Body>`)를 씁니다.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartBody%2A>는 시작 본문 요소(예: `<soap:Body>`)를 씁니다.  
   
--   <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A>는 시작 봉투 요소(예: `<soap:Envelope>`)를 씁니다.  
+- <xref:System.ServiceModel.Channels.Message.WriteStartEnvelope%2A>는 시작 봉투 요소(예: `<soap:Envelope>`)를 씁니다.  
   
  해당하는 끝 요소 태그를 쓰려면 해당 XML 작성기에서 `WriteEndElement`를 호출합니다. 이 메서드는 직접 호출되는 경우가 거의 없습니다.  
   
@@ -133,25 +133,25 @@ ms.locfileid: "33508984"
  `MessageBuffer` 클래스에는 주목할 만한 다른 멤버가 있습니다. 버퍼 내용이 더 이상 필요하지 않으면 <xref:System.ServiceModel.Channels.MessageBuffer.Close%2A> 메서드를 호출하여 리소스를 확보할 수 있습니다. <xref:System.ServiceModel.Channels.MessageBuffer.BufferSize%2A> 속성은 할당된 버퍼의 크기를 반환합니다. <xref:System.ServiceModel.Channels.MessageBuffer.MessageContentType%2A> 속성은 메시지의 MIME 콘텐츠 형식을 반환합니다.  
   
 ## <a name="accessing-the-message-body-for-debugging"></a>디버깅을 위해 메시지 본문에 액세스  
- 디버깅 목적으로 <xref:System.ServiceModel.Channels.Message.ToString%2A> 메서드를 호출하여 문자열로 메시지 표현을 가져올 수 있습니다. 이 표현은 일반적으로 XML 형식이 사람이 인식하는 데 더 적합하다는 점을 제외하고 텍스트 인코더로 인코딩된 경우 통신 중에 메시지가 표시되는 방식과 일치합니다. 단, 메시지 본문은 예외입니다. 본문은 한 번만 읽을 수 있으며 `ToString`에서 메시지 상태를 변경하지 않습니다. 따라서는 `ToString` 메서드 본문에 액세스 할 수 있으며 메시지 본문 대신 자리 표시자 (예를 들어 "..." 또는 세 개의 점)를 대체할 수 있습니다. 메시지의 본문 내용이 중요한 경우 `ToString`을 사용하여 메시지를 기록하지 마세요.  
+ 디버깅 목적으로 <xref:System.ServiceModel.Channels.Message.ToString%2A> 메서드를 호출하여 문자열로 메시지 표현을 가져올 수 있습니다. 이 표현은 일반적으로 XML 형식이 사람이 인식하는 데 더 적합하다는 점을 제외하고 텍스트 인코더로 인코딩된 경우 통신 중에 메시지가 표시되는 방식과 일치합니다. 단, 메시지 본문은 예외입니다. 본문은 한 번만 읽을 수 있으며 `ToString`에서 메시지 상태를 변경하지 않습니다. 따라서 메서드는 `ToString` 본문에 액세스 하지 못할 수 있으며 자리 표시자 (예: "...")를 대체할 수 있습니다. 또는 세 개의 점)을 메시지 본문 대신 메시지의 본문 내용이 중요한 경우 `ToString`을 사용하여 메시지를 기록하지 마세요.  
   
 ## <a name="accessing-other-message-parts"></a>다른 메시지 부분에 액세스  
  본문 내용 이외의 메시지 정보에 액세스할 수 있도록 다양한 속성이 제공됩니다. 그러나 메시지가 닫힌 후에는 이러한 속성을 호출할 수 없습니다.  
   
--   <xref:System.ServiceModel.Channels.Message.Headers%2A> 속성은 메시지 헤더를 나타냅니다. 이 항목의 뒷부분에 나오는 "헤더 작업" 섹션을 참조 하세요.  
+- <xref:System.ServiceModel.Channels.Message.Headers%2A> 속성은 메시지 헤더를 나타냅니다. 이 항목의 뒷부분에 나오는 "헤더 작업" 섹션을 참조 하십시오.  
   
--   <xref:System.ServiceModel.Channels.Message.Properties%2A> 속성은 일반적으로 메시지가 전송될 때 내보내지 않는 메시지에 첨부된 명명된 데이터 부분인 메시지 속성을 나타냅니다. 이 항목의 뒷부분에 있는 "속성 작업" 단원을 참조하세요.  
+- <xref:System.ServiceModel.Channels.Message.Properties%2A> 속성은 일반적으로 메시지가 전송될 때 내보내지 않는 메시지에 첨부된 명명된 데이터 부분인 메시지 속성을 나타냅니다. 이 항목의 뒷부분에 있는 "속성 작업" 단원을 참조하세요.  
   
--   <xref:System.ServiceModel.Channels.Message.Version%2A> 속성은 메시지와 연결된 SOAP 및 WS-Addressing 버전을 나타내거나 SOAP를 사용하지 않는 경우 `None`을 나타냅니다.  
+- <xref:System.ServiceModel.Channels.Message.Version%2A> 속성은 메시지와 연결된 SOAP 및 WS-Addressing 버전을 나타내거나 SOAP를 사용하지 않는 경우 `None`을 나타냅니다.  
   
--   메시지가 SOAP 오류 메시지인 경우 <xref:System.ServiceModel.Channels.Message.IsFault%2A> 속성에서 `true`를 반환합니다.  
+- 메시지가 SOAP 오류 메시지인 경우 <xref:System.ServiceModel.Channels.Message.IsFault%2A> 속성에서 `true`를 반환합니다.  
   
--   메시지가 비어 있으면 <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> 속성에서 `true`를 반환합니다.  
+- 메시지가 비어 있으면 <xref:System.ServiceModel.Channels.Message.IsEmpty%2A> 속성에서 `true`를 반환합니다.  
   
  <xref:System.ServiceModel.Channels.Message.GetBodyAttribute%28System.String%2CSystem.String%29> 메서드를 사용하여 특정 이름과 네임스페이스로 식별된 본문 래퍼 요소(예: `<soap:Body>`)의 특정 특성에 액세스할 수 있습니다. 이러한 특성이 없으면 `null`이 반환됩니다. 이 메서드는 `Message`가 만듦 상태인 경우(메시지 본문에 아직 액세스하지 않은 경우)에만 호출할 수 있습니다.  
   
 ## <a name="working-with-headers"></a>헤더 작업  
- A `Message` 라는 명명 된 XML 조각 개수에 관계 없이 포함 될 수 있습니다 *헤더*합니다. 각 조각은 일반적으로 SOAP 헤더에 매핑됩니다. `Headers` 형식의 <xref:System.ServiceModel.Channels.MessageHeaders> 속성을 통해 헤더에 액세스합니다. <xref:System.ServiceModel.Channels.MessageHeaders>는 <xref:System.ServiceModel.Channels.MessageHeaderInfo> 개체의 컬렉션이고 개별 헤더는 해당 <xref:System.Collections.IEnumerable> 인터페이스나 인덱서를 통해 액세스할 수 있습니다. 예를 들어 다음 코드는 `Message`의 모든 헤더 이름을 나열합니다.  
+ 에 `Message` 는 *헤더*라는 명명 된 XML 조각이 개수에 제한 없이 포함 될 수 있습니다. 각 조각은 일반적으로 SOAP 헤더에 매핑됩니다. `Headers` 형식의 <xref:System.ServiceModel.Channels.MessageHeaders> 속성을 통해 헤더에 액세스합니다. <xref:System.ServiceModel.Channels.MessageHeaders>는 <xref:System.ServiceModel.Channels.MessageHeaderInfo> 개체의 컬렉션이고 개별 헤더는 해당 <xref:System.Collections.IEnumerable> 인터페이스나 인덱서를 통해 액세스할 수 있습니다. 예를 들어 다음 코드는 `Message`의 모든 헤더 이름을 나열합니다.  
   
  [!code-csharp[C_UsingTheMessageClass#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#8)]
  [!code-vb[C_UsingTheMessageClass#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#8)]  
@@ -168,7 +168,7 @@ ms.locfileid: "33508984"
  헤더의 XML 데이터에 액세스하려면 <xref:System.ServiceModel.Channels.MessageHeaders.GetReaderAtHeader%2A>를 호출하고 특정 헤더 인덱스에 대한 XML 판독기를 반환합니다. 헤더 내용을 개체로 deserialize하려면 <xref:System.ServiceModel.Channels.MessageHeaders.GetHeader%60%601%28System.Int32%29> 또는 다른 오버로드 중 하나를 사용합니다. 가장 기본적인 오버로드는 기본 방식으로 구성된 <xref:System.Runtime.Serialization.DataContractSerializer>를 사용하여 헤더를 deserialize합니다. 다른 serializer나 `DataContractSerializer`의 다른 구성을 사용하려면 `XmlObjectSerializer`를 받아들이는 오버로드 중 하나를 사용합니다. 인덱스 대신 헤더 이름, 네임스페이스 및 선택적으로 `Actor` 값의 목록을 사용하는 오버로드도 있습니다. 이 오버로드는 `FindHeader` 및 `GetHeader`의 조합입니다.  
   
 ## <a name="working-with-properties"></a>속성 작업  
- `Message` 인스턴스는 임의 형식과 개수의 명명된 개체를 포함할 수 있습니다. `Properties` 형식의 `MessageProperties` 속성을 통해 이 컬렉션에 액세스합니다. 이 컬렉션은 <xref:System.Collections.Generic.IDictionary%602> 인터페이스를 구현하며 <xref:System.String>에서 <xref:System.Object>로의 매핑으로 작동합니다. 일반적으로 속성 값은 통신 중인 메시지의 모든 부분에 직접 매핑되지 않는 하지만 보다 다양 한 메시지 처리 힌트 또는 WCF 채널 스택의 다양 한 채널에는 제공 된 <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> 서비스 프레임 워크입니다. 예를 들어 참조 [데이터 전송 아키텍처 개요](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)합니다.  
+ `Message` 인스턴스는 임의 형식과 개수의 명명된 개체를 포함할 수 있습니다. `Properties` 형식의 `MessageProperties` 속성을 통해 이 컬렉션에 액세스합니다. 이 컬렉션은 <xref:System.Collections.Generic.IDictionary%602> 인터페이스를 구현하며 <xref:System.String>에서 <xref:System.Object>로의 매핑으로 작동합니다. 일반적으로 속성 값은 통신 하는 메시지의 일부에 직접 매핑되지 않지만 WCF 채널 스택의 다양 한 채널 또는 <xref:System.ServiceModel.Channels.MessageHeaders.CopyTo%28System.ServiceModel.Channels.MessageHeaderInfo%5B%5D%2CSystem.Int32%29> 서비스 프레임 워크에 다양 한 메시지 처리 힌트를 제공 합니다. 예제는 [데이터 전송 아키텍처 개요](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)를 참조 하세요.  
   
 ## <a name="inheriting-from-the-message-class"></a>Message 클래스에서 상속  
  `CreateMessage`를 사용하여 만든 기본 제공 메시지 형식이 요구 사항에 맞지 않을 경우 `Message` 클래스에서 파생된 클래스를 만듭니다.  
@@ -181,7 +181,7 @@ ms.locfileid: "33508984"
  [!code-csharp[C_UsingTheMessageClass#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#9)]
  [!code-vb[C_UsingTheMessageClass#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#9)]  
   
- `OnGetReaderAtBodyContents` 및 `OnCreateBufferedCopy` 메서드에는 대부분의 경우에서 작동하는 기본 구현이 있습니다. 기본 구현에서는 `OnWriteBodyContents`를 호출하고 그 결과를 버퍼링한 다음 결과 버퍼로 작업합니다. 그러나 일부 경우에서는 이 기능만으로 충분하지 않을 수 있습니다. 앞의 예제에서 메시지를 읽으면 100,000개의 XML 요소가 버퍼링되며 이는 바람직하지 않을 수 있습니다. `OnGetReaderAtBodyContents`를 재정의하여 난수를 제공하는 사용자 지정 `XmlDictionaryReader` 파생 클래스를 반환할 수 있습니다. 그런 후에 다음 예제와 같이 `OnWriteBodyContents`를 재정의하여 `OnGetReaderAtBodyContents` 속성이 반환하는 판독기를 사용할 수 있습니다.  
+ <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents> 및 <xref:System.ServiceModel.Channels.Message.OnCreateBufferedCopy%2A> 메서드에는 대부분의 경우에서 작동하는 기본 구현이 있습니다. 기본 구현에서는 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A>를 호출하고 그 결과를 버퍼링한 다음 결과 버퍼로 작업합니다. 그러나 일부 경우에서는 이 기능만으로 충분하지 않을 수 있습니다. 앞의 예제에서 메시지를 읽으면 100,000개의 XML 요소가 버퍼링되며 이는 바람직하지 않을 수 있습니다. <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents>를 재정의하여 난수를 제공하는 사용자 지정 <xref:System.Xml.XmlDictionaryReader> 파생 클래스를 반환할 수 있습니다. 그런 다음, 다음 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%2A> 예제와 같이 <xref:System.ServiceModel.Channels.Message.OnGetReaderAtBodyContents> 메서드가 반환 하는 판독기를 사용 하도록를 재정의할 수 있습니다.  
   
  [!code-csharp[C_UsingTheMessageClass#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_usingthemessageclass/cs/source.cs#10)]
  [!code-vb[C_UsingTheMessageClass#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_usingthemessageclass/vb/source.vb#10)]  
@@ -193,10 +193,10 @@ ms.locfileid: "33508984"
  메시지 복사본을 만드는 경우 복사본은 원본의 메시지 헤더를 사용합니다.  
   
 ### <a name="other-members-that-can-be-overridden"></a>재정의할 수 있는 기타 멤버  
- <xref:System.ServiceModel.Channels.Message.OnWriteStartEnvelope%2A>, <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A> 및 <xref:System.ServiceModel.Channels.Message.OnWriteStartBody%2A> 메서드를 재정의하여 SOAP 봉투, SOAP 헤더 및 SOAP 본문 요소 시작 태그를 쓰는 방법을 지정할 수 있습니다. 일반적으로 이 메서드는 `<soap:Envelope>`, `<soap:Header>` 및 `<soap:Body>`에 해당하며 `Version` 속성에서 `MessageVersion.None`을 반환할 경우 아무 내용도 쓰면 안 됩니다.  
+ <xref:System.ServiceModel.Channels.Message.OnWriteStartEnvelope%2A>, <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A> 및 <xref:System.ServiceModel.Channels.Message.OnWriteStartBody%2A> 메서드를 재정의하여 SOAP 봉투, SOAP 헤더 및 SOAP 본문 요소 시작 태그를 쓰는 방법을 지정할 수 있습니다. 일반적으로 이 메서드는 `<soap:Envelope>`, `<soap:Header>` 및 `<soap:Body>`에 해당하며 <xref:System.ServiceModel.Channels.Message.Version> 속성에서 <xref:System.ServiceModel.Channels.MessageVersion.None>을 반환할 경우 아무 내용도 쓰면 안 됩니다.  
   
 > [!NOTE]
->  `OnGetReaderAtBodyContents`의 기본 구현에서는 `OnWriteStartEnvelope`를 호출하고 결과를 버퍼링하기 전에 `OnWriteStartBody` 및 `OnWriteBodyContents`를 호출합니다. 헤더는 쓰지 않습니다.  
+> `OnGetReaderAtBodyContents`의 기본 구현에서는 `OnWriteStartEnvelope`를 호출하고 결과를 버퍼링하기 전에 `OnWriteStartBody` 및 `OnWriteBodyContents`를 호출합니다. 헤더는 쓰지 않습니다.  
   
  <xref:System.ServiceModel.Channels.Message.OnWriteMessage%2A> 메서드를 재정의하여 다양한 부분에서 전체 메시지가 생성되는 방법을 변경합니다. `OnWriteMessage` 메서드는 <xref:System.ServiceModel.Channels.Message.WriteMessage%2A> 및 기본 <xref:System.ServiceModel.Channels.Message.OnCreateBufferedCopy%2A> 구현에서 호출됩니다. <xref:System.ServiceModel.Channels.Message.WriteMessage%2A> 재정의는 최선의 방법이 아닙니다. 적절한 `On` 메서드(예: <xref:System.ServiceModel.Channels.Message.OnWriteStartEnvelope%2A>, <xref:System.ServiceModel.Channels.Message.OnWriteStartHeaders%2A> 및 <xref:System.ServiceModel.Channels.BodyWriter.OnWriteBodyContents%2A>)를 재정의하는 것이 좋습니다.  
   

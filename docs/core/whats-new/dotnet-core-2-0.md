@@ -4,12 +4,12 @@ description: .NET Core에서 볼 수 있는 새로운 기능에 대해 알아봅
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/13/2017
-ms.openlocfilehash: 4be579f2000c86b3dad412b24589fa8e7024d2f0
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c208f565bebedc06e244de1f6554129f21c77b8c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591765"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70849941"
 ---
 # <a name="whats-new-in-net-core-20"></a>.NET Core 2.0의 새로운 기능
 
@@ -68,7 +68,7 @@ C# 및 F#를 지원할 뿐만 아니라 .NET Core 2.0도 Visual Basic을 지원�
 - .NET Core 단위 테스트 프로젝트
 - .NET Core xUnit 테스트 프로젝트
 
-예를 들어 Visual Basic "Hello World" 응용 프로그램을 만들려면 명령줄에서 다음 단계를 수행합니다.
+예를 들어 Visual Basic "Hello World" 애플리케이션을 만들려면 명령줄에서 다음 단계를 수행합니다.
 
 1. 콘솔 창을 열고 프로젝트에 대한 디렉터리를 만들고 현재 디렉터리로 설정합니다.
 
@@ -76,13 +76,13 @@ C# 및 F#를 지원할 뿐만 아니라 .NET Core 2.0도 Visual Basic을 지원�
 
    이 명령은 *Program.vb*라는 Visual Basic 소스 코드와 함께 `.vbproj` 파일 확장인 프로젝트 파일을 만듭니다. 이 파일은 문자열 "Hello World!"를 작성하는 소스 코드를 포함합니다. 콘솔 창에 표시합니다.
 
-1. `dotnet run` 명령을 입력합니다. [.NET Core CLI](../tools/index.md)는 "Hello World!" 메시지를 표시하는 응용 프로그램을 자동으로 컴파일하고 실행합니다. 콘솔 창에 표시합니다.
+1. `dotnet run` 명령을 입력합니다. [.NET Core CLI](../tools/index.md)는 "Hello World!" 메시지를 표시하는 애플리케이션을 자동으로 컴파일하고 실행합니다. 콘솔 창에 표시합니다.
 
 ### <a name="support-for-c-71"></a>C# 7.1에 대한 지원
 
 .NET Core 2.0은 다음을 비롯하여 다양하고 새로운 기능을 추가하는 C# 7.1을 지원합니다.
 
-- 응용 프로그램 진입점인 `Main` 메서드는 [비동기](../../csharp/language-reference/keywords/async.md) 키워드로 표시될 수 있습니다.
+- 애플리케이션 진입점인 `Main` 메서드는 [비동기](../../csharp/language-reference/keywords/async.md) 키워드로 표시될 수 있습니다.
 - 유추된 튜플 이름입니다.
 - 기본 식입니다.
 
@@ -132,11 +132,11 @@ Visual Studio 2017 버전 15.3 및 경우에 따라 Mac용 Visual Studio는 .NET
 
 .NET Core 2.0 SDK가 설치되는 경우 .NET Core 1.x 프로젝트를 .NET Core 2.0으로, .NET 표준 1.x 라이브러리를 .NET 표준 2.0으로 대상을 변경할 수 있습니다.
 
-Visual Studio에서 프로젝트의 대상을 변경하려면 프로젝트 속성 대화 상자의 **응용 프로그램** 탭을 열고 **대상 프레임 워크** 값을 **.NET Core 2.0** 또는 **.NET 표준 2.0**으로 변경합니다. 또한 프로젝트를 마우스 오른쪽 단추로 클릭하고 **\*.csproj 파일 편집** 옵션을 선택하여 변경할 수 있습니다. 자세한 내용은 이 항목 앞 부분의 [도구](#tooling) 섹션을 참조하세요.
+Visual Studio에서 프로젝트의 대상을 변경하려면 프로젝트 속성 대화 상자의 **애플리케이션** 탭을 열고 **대상 프레임 워크** 값을 **.NET Core 2.0** 또는 **.NET 표준 2.0**으로 변경합니다. 또한 프로젝트를 마우스 오른쪽 단추로 클릭하고 **\*.csproj 파일 편집** 옵션을 선택하여 변경할 수 있습니다. 자세한 내용은 이 항목 앞 부분의 [도구](#tooling) 섹션을 참조하세요.
 
 ### <a name="live-unit-testing-support-for-net-core"></a>.NET Core에 대한 Live Unit Testing 지원
 
-Live Unit Testing이 코드를 수정하려면 언제든지 자동으로 백그라운드에서 영향을 받는 단위 테스트를 실행하고 Visual Studio 환경에서 결과 및 코드 검사 라이브를 표시합니다. 이제 .NET Core 2.0은 Live Unit Testing을 지원합니다. 이전에 Live Unit Testing은 .NET Framework 응용 프로그램에만 사용할 수 있었습니다.
+Live Unit Testing이 코드를 수정하려면 언제든지 자동으로 백그라운드에서 영향을 받는 단위 테스트를 실행하고 Visual Studio 환경에서 결과 및 코드 검사 라이브를 표시합니다. 이제 .NET Core 2.0은 Live Unit Testing을 지원합니다. 이전에 Live Unit Testing은 .NET Framework 애플리케이션에만 사용할 수 있었습니다.
 
 자세한 내용은 [Visual Studio 2017에서 Live Unit Testing](/visualstudio/test/live-unit-testing) 및 [Live Unit Testing FAQ](/visualstudio/test/live-unit-testing-faq)를 참조하세요.
 
@@ -144,7 +144,7 @@ Live Unit Testing이 코드를 수정하려면 언제든지 자동으로 백그�
 
 다양한 대상 프레임워크에 대한 프로젝트를 빌드하는 경우 이제 최상위 메뉴에서 대상 플랫폼을 선택할 수 있습니다. 다음 그림에서 SCD1이라는 프로젝트는 64비트 macOS X 10.11(`osx.10.11-x64`) 및 64비트 Windows 10/Windows Server 2016(`win10-x64`)을 대상으로 지정합니다. 디버그 빌드를 실행하는 경우에 프로젝트 단추를 선택하기 전에 대상 프레임워크를 선택할 수 있습니다.
 
-![프로젝트를 빌드할 때 대상 프레임워크 선택](media/multitarget.png)
+![프로젝트를 빌드할 때 대상 프레임워크 선택 영역을 보여주는 스크린샷](./media/dotnet-core-2-0/target-framework-selection.png)
 
 ### <a name="side-by-side-support-for-net-core-sdks"></a>.NET Core SDK에 대한 병렬 지원
 
@@ -152,15 +152,15 @@ Live Unit Testing이 코드를 수정하려면 언제든지 자동으로 백그�
 
 ## <a name="documentation-improvements"></a>설명서 개선
 
-### <a name="net-application-architecture"></a>.NET 응용 프로그램 아키텍처
+### <a name="net-application-architecture"></a>.NET 애플리케이션 아키텍처
 
-빌드하는 데 .NET을 사용하는 경우 [.NET 응용 프로그램 아키텍처](https://www.microsoft.com/net/learn/architecture)는 지침, 모범 사례 및 응용 프로그램 예제를 제공하는 전자책 집합에 액세스 권한을 부여합니다.
+빌드하는 데 .NET을 사용하는 경우 [.NET 애플리케이션 아키텍처](https://dotnet.microsoft.com/learn/dotnet/architecture-guides)는 지침, 모범 사례 및 애플리케이션 예제를 제공하는 eBook 집합에 액세스 권한을 부여합니다.
 
-- [마이크로 서비스 및 Docker 컨테이너](../../standard/microservices-architecture/index.md)
-- [ASP.NET을 사용하여 개발한 웹 응용 프로그램](../../standard/modern-web-apps-azure-architecture/index.md)
-- [Xamarin을 사용하는 모바일 응용 프로그램](/xamarin/xamarin-forms/enterprise-application-patterns/index)
-- [Azure에서 클라우드에 배포되는 응용 프로그램](/azure/architecture/reference-architectures/index)
+- [마이크로 서비스 및 Docker 컨테이너](../../architecture/microservices/index.md)
+- [ASP.NET을 사용하여 개발한 웹 애플리케이션](../../architecture/modern-web-apps-azure/index.md)
+- [Xamarin을 사용하는 모바일 애플리케이션](/xamarin/xamarin-forms/enterprise-application-patterns/index)
+- [Azure에서 클라우드에 배포되는 애플리케이션](/azure/architecture/reference-architectures/index)
 
 ## <a name="see-also"></a>참고 항목
 
-* [ASP.NET Core 2.0의 새로운 기능](/aspnet/core/aspnetcore-2.0)
+- [ASP.NET Core 2.0의 새로운 기능](/aspnet/core/aspnetcore-2.0)

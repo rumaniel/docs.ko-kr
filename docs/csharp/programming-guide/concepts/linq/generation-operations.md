@@ -2,12 +2,12 @@
 title: 생성 작업(C#)
 ms.date: 07/20/2015
 ms.assetid: 1c421b3a-5954-448c-bcac-a27798d1858f
-ms.openlocfilehash: 968f74342ca4fe5ef892c9ce64ed0e9ac21a6071
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9fe04c34752825d45ca5bcf33051a24b72243b51
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500246"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594243"
 ---
 # <a name="generation-operations-c"></a>생성 작업(C#)
 생성은 값의 새 시퀀스를 만드는 작업을 나타냅니다.  
@@ -25,5 +25,5 @@ ms.locfileid: "43500246"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Linq>  
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)

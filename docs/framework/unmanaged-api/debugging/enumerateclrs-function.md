@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56f7f36baa71a3e58dfa3314ebe06a018cfd3468
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ae668a40ba1510e0e3d4f509643022ebe822a4f0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408231"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738944"
 ---
 # <a name="enumerateclrs-function"></a>EnumerateCLRs 함수
 프로세스의 CLR을 열거하기 위한 메커니즘을 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumerateCLRs (  
     [in]  DWORD      debuggeePID,  
     [out] HANDLE**   ppHandleArrayOut,  
@@ -39,7 +39,7 @@ HRESULT EnumerateCLRs (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `debuggeePID`  
  [in] 로드된 CLR이 열거되는 소스 프로세스의 프로세스 식별자입니다.  
   
@@ -70,12 +70,12 @@ HRESULT EnumerateCLRs (
   
  Windows 운영 체제에서 `debuggeePID`는 OS 프로세스 식별자에 매핑됩니다.  
   
- `ppHandleArrayOut` 및 `ppStringArrayOut`용 메모리는 이 함수를 통해 할당됩니다. 할당 된 메모리를 확보 하기 위해 호출 해야 [CloseCLREnumeration 함수](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)합니다.  
+ `ppHandleArrayOut` 및 `ppStringArrayOut`용 메모리는 이 함수를 통해 할당됩니다. 할당 된 메모리를 확보 하기 위해 호출 해야 합니다 [CloseCLREnumeration 함수](../../../../docs/framework/unmanaged-api/debugging/closeclrenumeration-function.md)합니다.  
   
  대상 프로세스의 CLR 개수를 반환하려면 null로 설정된 두 배열 매개 변수와 함께 이 함수를 호출하면 됩니다. 이 개수에서 호출자는 만들어질 버퍼 크기를 유추할 수 있습니다. `(sizeof(HANDLE) * count) + (sizeof(LPWSTR) * count) + (sizeof(WCHAR*) * count * MAX_PATH)`.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** dbgshim.h  
   

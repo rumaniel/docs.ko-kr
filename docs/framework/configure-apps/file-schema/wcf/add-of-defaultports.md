@@ -1,29 +1,35 @@
 ---
-title: '&lt;defaultPorts&gt;의 &lt;add&gt;'
+title: <defaultPorts>의 <add>
 ms.date: 03/30/2017
 ms.assetid: f162ce42-963b-4779-96a7-d6d8b4ea0d2f
-ms.openlocfilehash: 28ddc98bd66c1f74f857448aa710d3998ddbd3dc
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: f5de2aa897a3bc37d08932451a2c7b94bc603b9e
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748752"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400644"
 ---
-# <a name="ltaddgt-of-ltdefaultportsgt"></a>&lt;defaultPorts&gt;의 &lt;add&gt;
-클라이언트 응용 프로그램에서 수신하는 기본 통신 끝점입니다.  
+# <a name="add-of-defaultports"></a>\<defaultports의 \<> 추가 >
+클라이언트 애플리케이션에서 수신하는 기본 통신 엔드포인트입니다.  
   
- \<system.ServiceModel>  
-\<동작 >  
-\<serviceBehaviors>  
-\<동작 >  
-\<useRequestHeadersForMetadataAddress >  
-\<a d d >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<useRequestHeadersForMetadataAddress >** ](userequestheadersformetadataaddress.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<defaultPorts >** ](defaultports.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 추가**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<useRequestHeadersForMetadataAddress>   <defaultPorts>      <add port="Integer" scheme="String" />   </defaultPorts></useRequestHeadersForMetadataAddress>  
+<useRequestHeadersForMetadataAddress>
+  <defaultPorts>
+    <add port="Integer"
+         scheme="String" />
+  </defaultPorts>
+</useRequestHeadersForMetadataAddress>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -31,7 +37,7 @@ ms.locfileid: "32748752"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |포트|기본 통신 포트 번호를 지정하는 정수입니다.|  
 |scheme|통신 포트와 연결된 프로토콜 설정 그룹을 지정하는 문자열입니다.|  
@@ -41,9 +47,10 @@ ms.locfileid: "32748752"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<a d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/defaultports.md)|클라이언트 응용 프로그램에서 수신하는 기본 통신 끝점을 나열하는 기본 포트의 컬렉션입니다.|  
+|[\<defaultPorts>](defaultports.md)|클라이언트 애플리케이션에서 수신하는 기본 통신 엔드포인트를 나열하는 기본 포트의 컬렉션입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.DefaultPortElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.DefaultPortElement>

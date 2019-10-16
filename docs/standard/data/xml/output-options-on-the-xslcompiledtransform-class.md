@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205023"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647849"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform 클래스의 출력 옵션
 이 항목에서는 사용할 수 있는 XSLT 출력 옵션에 대해 설명합니다. 스타일시트나 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 메서드에서 출력 옵션을 지정할 수 있습니다.  
@@ -46,16 +46,16 @@ ms.locfileid: "47205023"
  이 출력 형식을 사용하여 출력 파일의 URI를 지정할 수 있습니다.  
   
 #### <a name="stream"></a>스트림  
- 스트림은 파일, 입력/출력 장치, 프로세스 간 통신 파이프 또는 TCP/IP 소켓과 같은 바이트 시퀀스를 추상적으로 나타낸 것입니다. <xref:System.IO.Stream> 클래스와 해당 파생 클래스는 이러한 여러 형식의 입력 및 출력의 일반 뷰를 제공하는데 이때 프로그래머는 운영 체제 및 기본 장치의 세부 정보에서 격리됩니다.  
+ 스트림은 파일, 입력/출력 디바이스, 프로세스 간 통신 파이프 또는 TCP/IP 소켓과 같은 바이트 시퀀스를 추상적으로 나타낸 것입니다. <xref:System.IO.Stream> 클래스와 해당 파생 클래스는 이러한 여러 형식의 입력 및 출력의 일반 뷰를 제공하는데 이때 프로그래머는 운영 체제 및 기본 디바이스의 세부 정보에서 격리됩니다.  
   
  이 출력 형식을 사용하여 데이터를 <xref:System.IO.FileStream>, <xref:System.IO.MemoryStream> 또는 출력 스트림(`Response.OutputStream`)으로 보낼 수 있습니다.  
   
 #### <a name="textwriter"></a>TextWriter  
  <xref:System.IO.TextWriter>는 연속 문자를 씁니다. <xref:System.IO.StringWriter> 및 <xref:System.IO.StreamWriter> 클래스에서 구현되며 이 클래스는 각각 문자열과 스트림에 문자를 씁니다. 문자열로 출력하려면 이 출력 형식을 사용합니다.  
   
-## <a name="notes"></a>노트  
+## <a name="notes"></a>참고 사항  
   
--   빈 태그를 쓰는 경우 `<myElement />`와 같이 요소 이름의 마지막 문자와 백슬래시 사이에 공백이 쓰여집니다. 그러면 이전 브라우저에 생성된 HTML 페이지가 올바르게 표시됩니다.  
+- 빈 태그를 쓰는 경우 `<myElement />`와 같이 요소 이름의 마지막 문자와 백슬래시 사이에 공백이 쓰여집니다. 그러면 이전 브라우저에 생성된 HTML 페이지가 올바르게 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 

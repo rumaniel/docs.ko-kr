@@ -1,21 +1,21 @@
 ---
-title: 부울 연산자(F#)
-description: 'F # 프로그래밍 언어에서 사용할 수 있는 부울 연산자에 알아봅니다.'
+title: 부울 연산자
+description: 사용할 수 있는 부울 연산자에 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: faa181090efa7c4064a30b42d83afa4888e98b82
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: ad4bdd1121389f7e280647dbe0c4d0098ffb17df
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638482"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641888"
 ---
 # <a name="boolean-operators"></a>부울 연산자
 
-이 항목에서는 F # 언어의 부울 연산자에 대 한 지원을 설명합니다.
+부울 연산자에 대 한 지원에 설명 합니다 F# 언어입니다.
 
 ## <a name="summary-of-boolean-operators"></a>부울 연산자 요약
 
-다음 표에서 F # 언어에서 사용할 수 있는 부울 연산자를 보여 줍니다. 이러한 연산자에서 지 원하는 유일한 형식이 `bool` 형식입니다.
+다음 표에서 사용할 수 있는 부울 연산자는 F# 언어입니다. 이러한 연산자에서 지 원하는 유일한 형식이 `bool` 형식입니다.
 
 |연산자|설명|
 |--------|-----------|

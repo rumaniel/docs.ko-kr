@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [WPF], WPF interoperation
 - interoperability [WPF], Windows Forms
 ms.assetid: 8a157e6b-8054-46db-a5cf-a78966acc7a1
-ms.openlocfilehash: 0daa399e2d000a228773ee20f157af7439f7acbb
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: acb8095b32364f1e22330f22df60085016bdc664
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502040"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834036"
 ---
 # <a name="windows-forms-controls-and-equivalent-wpf-controls"></a>Windows Forms 컨트롤 및 해당 WPF 컨트롤
 많은 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 해당 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 컨트롤 이지만 일부 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤에 해당 있는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]합니다. 이 항목에서는 두 기술에서 제공 하는 컨트롤 형식을 비교 합니다.  
@@ -82,12 +82,13 @@ ms.locfileid: "43502040"
 |<xref:System.Windows.Forms.TreeView>|<xref:System.Windows.Controls.TreeView>||  
 |<xref:System.Windows.Forms.UserControl>|<xref:System.Windows.Controls.UserControl>||  
 |<xref:System.Windows.Forms.VScrollBar>|<xref:System.Windows.Controls.Primitives.ScrollBar>|컨테이너 컨트롤에 스크롤가 빌드됩니다.|  
-|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame> 컨트롤 HTML 페이지를 호스팅할 수 있습니다.<br /><br /> 부터 합니다 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)], <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> HTML 페이지 및 백업 컨트롤 호스팅할 수 있습니다는 <xref:System.Windows.Controls.Frame> 제어 합니다.|  
+|<xref:System.Windows.Forms.WebBrowser>|<xref:System.Windows.Controls.Frame>, <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType>|<xref:System.Windows.Controls.Frame> 컨트롤 HTML 페이지를 호스팅할 수 있습니다.<br /><br /> .NET Framework 3.5 SP1부터 합니다 <xref:System.Windows.Controls.WebBrowser?displayProperty=nameWithType> HTML 페이지 및 백업 컨트롤 호스팅할 수 있습니다는 <xref:System.Windows.Controls.Frame> 제어 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.Integration.ElementHost>  
- <xref:System.Windows.Forms.Integration.WindowsFormsHost>  
- [Windows 용 WPF 디자이너 Forms 개발자](https://msdn.microsoft.com/library/47ad0909-e89b-4996-b4ac-874d929f94ca)  
- [연습: WPF에서 Windows Forms 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)  
- [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)  
- [마이그레이션 및 상호 운용성](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.Integration.ElementHost>
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>
+- [Windows 용 WPF 디자이너 Forms 개발자](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/cc165605(v=vs.100))
+- [연습: WPF에서 Windows Forms 컨트롤 호스팅](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [연습: Windows Forms에서 WPF 복합 컨트롤 호스팅](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [마이그레이션 및 상호 운용성](migration-and-interoperability.md)

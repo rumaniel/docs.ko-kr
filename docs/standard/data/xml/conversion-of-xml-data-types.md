@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: a2aa99ba-8239-4818-9281-f1d72ee40bde
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cec2b85c55871c8a21a74e79cfcdd041fa063bec
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 56b5b51848858b7f1240059ca30eb48474650b73
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45664581"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54555130"
 ---
 # <a name="conversion-of-xml-data-types"></a>XML 데이터 형식 변환
 **XmlConvert** 클래스에 있는 대부분의 메서드는 문자열과 강력한 형식의 서식 간에 데이터를 변환하는 데 사용됩니다. 메서드는 로캘과 무관합니다. 즉, 변환을 수행하는 경우 메서드는 로캘 설정을 고려하지 않습니다.  
@@ -68,5 +68,5 @@ writer.WriteElementString("TestInt32",XmlConvert.ToString(vInt32));
   
 ## <a name="see-also"></a>참고 항목
 
-- [문자열을 .NET Framework 데이터 형식으로 변환](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)  
+- [문자열을 .NET Framework 데이터 형식으로 변환](../../../../docs/standard/data/xml/converting-strings-to-dotnet-data-types.md)
 - [.NET Framework 형식을 문자열로 변환](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

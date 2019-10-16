@@ -2,19 +2,19 @@
 title: 집계 작업 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
-ms.openlocfilehash: 7e6f838a340283f6fbcd0db4d7d6a089aae9a5aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669023"
 ---
 # <a name="aggregation-operations-visual-basic"></a>집계 작업 (Visual Basic)
 집계 작업에서는 값의 컬렉션에서 하나의 값을 계산합니다. 예를 들어 1달 동안의 일일 온도 값에서 평균 일일 온도를 계산하는 것이 집계 작업입니다.  
   
  다음 그림은 숫자 시퀀스에 대한 두 가지 집계 작업의 결과를 보여 줍니다. 첫 번째 작업은 숫자의 합계를 계산합니다. 두 번째 작업은 시퀀스의 최대 값을 반환합니다.  
   
- ![LINQ 집계 작업](../../../../csharp/programming-guide/concepts/linq/media/linq_aggregation.png "LINQ_Aggregation")  
+ ![LINQ 집계 작업을 보여주는 그림](./media/aggregation-operations/linq-aggregation-operations.png)  
   
  다음 섹션에는 집계 작업을 수행하는 표준 쿼리 연산자 메서드가 나와 있습니다.  
   
@@ -33,41 +33,42 @@ ms.locfileid: "33644071"
 ## <a name="query-expression-syntax-examples"></a>쿼리 식 구문 예제  
   
 ### <a name="average"></a>평균  
- 다음 코드 예제에서는 `Aggregate Into Average` 절 Visual basic 숫자 기온을 나타내는의 배열에서 평균 기온을 계산 합니다.  
+ 다음 코드 예제에서는 `Aggregate Into Average` 기온을 나타내는 숫자의 배열에서 평균 온도 계산 하는 Visual Basic의 절.  
   
- [!code-vb[CsLINQAggregating#1](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_1.vb)]  
+ [!code-vb[CsLINQAggregating#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#1)]  
   
 ### <a name="count"></a>개수  
- 다음 코드 예제에서는 `Aggregate Into Count` 절 Visual basic의 배열에 80 보다 크거나 값의 수를 계산 합니다.  
+ 다음 코드 예제에서는 `Aggregate Into Count` 절 Visual basic의 배열에서 80 보다 크거나 값의 수를 계산 합니다.  
   
- [!code-vb[CsLINQAggregating#2](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_2.vb)]  
+ [!code-vb[CsLINQAggregating#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#2)]  
   
 ### <a name="longcount"></a>LongCount  
- 다음 코드 예제에서는 `Aggregate Into LongCount` 절 배열에 있는 값의 수를 계산 합니다.  
+ 다음 코드 예제에서는 `Aggregate Into LongCount` 절을 배열에 있는 값의 수를 계산 합니다.  
   
- [!code-vb[CsLINQAggregating#3](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_3.vb)]  
+ [!code-vb[CsLINQAggregating#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#3)]  
   
 ### <a name="max"></a>최대  
- 다음 코드 예제에서는 `Aggregate Into Max` 절 기온을 나타내는 숫자의 배열에서 최대 기온을 계산 합니다.  
+ 다음 코드 예제에서는 `Aggregate Into Max` 온도 나타내는 숫자의 배열에 최대 온도 계산 하는 절.  
   
- [!code-vb[CsLINQAggregating#4](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_4.vb)]  
+ [!code-vb[CsLINQAggregating#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#4)]  
   
 ### <a name="min"></a>최소  
- 다음 코드 예제에서는 `Aggregate Into Min` 기온을 나타내는 숫자의 배열에 최소 온도 계산 하는 절.  
+ 다음 코드 예제에서는 `Aggregate Into Min` 온도 나타내는 숫자의 배열에 최소 온도 계산 하는 절.  
   
- [!code-vb[CsLINQAggregating#5](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_5.vb)]  
+ [!code-vb[CsLINQAggregating#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#5)]  
   
 ### <a name="sum"></a>Sum  
- 다음 코드 예제에서는 `Aggregate Into Sum` 비용을 나타내는 값의 배열에서 총 비용 금액을 계산 하는 절.  
+ 다음 코드 예제에서는 `Aggregate Into Sum` 경비를 나타내는 값의 배열에서 총 비용 금액을 계산 하는 절.  
   
- [!code-vb[CsLINQAggregating#6](../../../../visual-basic/programming-guide/concepts/linq/codesnippet/VisualBasic/aggregation-operations_6.vb)]  
+ [!code-vb[CsLINQAggregating#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/CsLINQAggregating/VB/Aggregating.vb#6)]  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Linq>  
- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Aggregate 절](../../../../visual-basic/language-reference/queries/aggregate-clause.md)  
- [방법: CSV 텍스트 파일 (LINQ) (Visual Basic)의 열 값 계산](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)  
- [방법: 데이터 개수, 합 또는 평균 계산](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)  
- [방법: 쿼리 결과의 최소값 또는 최대값 찾기](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)  
- [방법: 파일 또는 파일 (LINQ) (Visual Basic) 디렉터리 트리에서 가장 큰 값에 대 한 쿼리](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)  
- [방법: 폴더 (Visual Basic) (LINQ) 집합을 바이트의 총 수에 대 한 쿼리](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Aggregate 절](../../../../visual-basic/language-reference/queries/aggregate-clause.md)
+- [방법: CSV 텍스트 파일 (LINQ) (Visual Basic)의 열 값 계산](../../../../visual-basic/programming-guide/concepts/linq/how-to-compute-column-values-in-a-csv-text-file-linq.md)
+- [방법: 개수, 합 또는 평균 데이터](../../../../visual-basic/programming-guide/language-features/linq/how-to-count-sum-or-average-data-by-using-linq.md)
+- [방법: 쿼리 결과의 최소값 또는 최대값 찾기](../../../../visual-basic/programming-guide/language-features/linq/how-to-find-the-minimum-or-maximum-value-in-a-query-result.md)
+- [방법: 가장 큰 파일 또는 디렉터리 트리 (LINQ) (Visual Basic)의 파일에 대 한 쿼리](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+- [방법: 쿼리 (LINQ) (Visual Basic) 폴더 집합을 바이트의 총 수](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md)

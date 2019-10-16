@@ -2,12 +2,12 @@
 title: 메시징 프로토콜
 ms.date: 03/30/2017
 ms.assetid: 5b20bca7-87b3-4c8f-811b-f215b5987104
-ms.openlocfilehash: 4678980520266879b41bea6e10f075a2df116457
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 70972f6a211d60d9fd330277040428ef783e9668
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183856"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631533"
 ---
 # <a name="messaging-protocols"></a>메시징 프로토콜
 
@@ -47,7 +47,18 @@ Windows Communication Foundation (WCF) 채널 스택에 내부 메시지 표현�
 
 다음 XML 네임 스페이스 및 관련된 접두사는이 항목 전체에서 사용 됩니다.
 
-| 접두사 | Namespace Uniform Resource Identifier (URI) | [---|---| | s11 | `http://schemas.xmlsoap.org/soap/envelope` | | s12 | `http://www.w3.org/2003/05/soap-envelope` | | wsa | `http://www.w3.org/2004/08/addressing` | | wsam | `http://www.w3.org/2007/05/addressing/metadata` | | wsap | `http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` | | wsa10 | `http://www.w3.org/2005/08/addressing` | | wsaw10 | `http://www.w3.org/2006/05/addressing/wsdl` | | xop | `http://www.w3.org/2004/08/xop/include` | | xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` | | dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
+| 접두사 | 네임스페이스 URI(Uniform Resource Identifier) |
+|------------|---------------------------------------------------|
+| s11 | `http://schemas.xmlsoap.org/soap/envelope` |
+| s12 |`http://www.w3.org/2003/05/soap-envelope` |
+| wsa |`http://www.w3.org/2004/08/addressing` |
+| wsam |`http://www.w3.org/2007/05/addressing/metadata` |
+| wsap |`http://schemas.xmlsoap.org/ws/2004/09/policy/addressing` |
+| wsa10 |`http://www.w3.org/2005/08/addressing` |
+| wsaw10 |`http://www.w3.org/2006/05/addressing/wsdl` |
+| xop |`http://www.w3.org/2004/08/xop/include` |
+| xmime |`http://www.w3.org/2004/06/xmlmime`<br /><br /> `http://www.w3.org/2005/05/xmlmime` |
+| dp |`http://schemas.microsoft.com/net/2006/06/duplex` |
 
 ## <a name="soap-11-and-soap-12"></a>SOAP 1.1 및 SOAP 1.2
 
@@ -59,15 +70,15 @@ WCF는 SOAP 1.1 봉투 처리 (BP11) Basic Profile 1.1 및 Basic Profile 1.0 (SS
 #### <a name="mandatory-header-processing"></a>필수 헤더 처리
 WCF 헤더 처리에 대 한 규칙을 따릅니다 `mustUnderstand` 다음과 같은 형태로 사용 하 여 SOAP 1.1과 SOAP 1.2 사양에 설명 합니다.
 
-메시지가 WCF 채널 스택은 입력 하는 예를 들어 관련된 바인딩 요소로 구성 된 개별 채널, 텍스트 메시지 인코딩, 보안, 안정적인 메시징 및 트랜잭션에 의해 처리 됩니다. 각 채널은 연결된 네임스페이스에서 헤더를 인식한 후 인식된 것으로 표시합니다. 메시지가 디스패처에 전달되면 작업 포맷터는 해당 메시지/작업 계약에 필요한 헤더를 읽고 인식된 것으로 표시합니다. 그런 다음 디스패처는 나머지 헤더가 인식되지 않았지만 `mustUnderstand`로 표시되지 않았는지 확인하고 예외를 throw합니다. 받는 사람을 대상으로 하는 `mustUnderstand` 헤더가 포함된 메시지는 받는 사람 응용 프로그램 코드로 처리되지 않습니다.
+메시지가 WCF 채널 스택은 입력 하는 예를 들어 관련된 바인딩 요소로 구성 된 개별 채널, 텍스트 메시지 인코딩, 보안, 안정적인 메시징 및 트랜잭션에 의해 처리 됩니다. 각 채널은 연결된 네임스페이스에서 헤더를 인식한 후 인식된 것으로 표시합니다. 메시지가 디스패처에 전달되면 작업 포맷터는 해당 메시지/작업 계약에 필요한 헤더를 읽고 인식된 것으로 표시합니다. 그런 다음 디스패처는 나머지 헤더가 인식되지 않았지만 `mustUnderstand`로 표시되지 않았는지 확인하고 예외를 throw합니다. 받는 사람을 대상으로 하는 `mustUnderstand` 헤더가 포함된 메시지는 받는 사람 애플리케이션 코드로 처리되지 않습니다.
 
-이러한 계층화된 처리를 사용하면 SOAP 노드의 응용 프로그램 계층과 인프라 계층을 분리할 수 있습니다.
+이러한 계층화된 처리를 사용하면 SOAP 노드의 애플리케이션 계층과 인프라 계층을 분리할 수 있습니다.
 
-- B1111: 인식 되지 않는 헤더 메시지는 WCF 인프라 채널 스택에서 처리 된 후 하지만 응용 프로그램에서 처리 되기 전에 검색 된
+- B1111: 메시지는 WCF 인프라 채널 스택에서 처리 된 후 하지만 응용 프로그램에서 처리 되기 전에 인식 되지 않는 헤더 감지
 
      SOAP 1.1과 SOAP 1.2의 `mustUnderstand` 헤더 값은 서로 다릅니다. Basic Profile 1.1에서 SOAP 1.1 메시지의 `mustUnderstand` 값은 0 또는 1이어야 합니다. SOAP 1.2에서는 0, 1, `false` 및 `true`를 값으로 사용할 수 있지만 정식으로 표현된 `xs:boolean` 값(`false`, `true`)을 내보내는 것이 좋습니다.
 
-- B1112: WCF 내보냅니다 `mustUnderstand` 값 0과 1 SOAP 1.1 및 SOAP 1.2 버전 SOAP 봉투의 합니다. 전체 값 공간을 허용 하는 WCF `xs:boolean` 에 대 한 합니다 `mustUnderstand` 머리글 (0, 1, `false`, `true`)
+- B1112: WCF가 내보내는 `mustUnderstand` 값 0과 1 SOAP 1.1 및 SOAP 1.2 버전 SOAP 봉투의 합니다. 전체 값 공간을 허용 하는 WCF `xs:boolean` 에 대 한 합니다 `mustUnderstand` 머리글 (0, 1, `false`, `true`)
 
 #### <a name="soap-faults"></a>SOAP 오류
 다음은 WCF 관련 SOAP 오류 구현 목록입니다.
@@ -83,16 +94,16 @@ WCF는 Basic Profile 1.1 사양 단원 3.4에 따라 SOAP1.1 HTTP 바인딩을 �
 
 - B2211: WCF 서비스 HTTP POST 요청의 리디렉션을 구현 하지 않습니다.
 
-- B2212: WCF 클라이언트 3.4.8에 따라 HTTP 쿠키를 지원합니다.
+- B2212: WCF 클라이언트는 3.4.8에 따라 HTTP 쿠키를 지원합니다.
 
 #### <a name="soap-12-http-binding"></a>SOAP 1.2 HTTP 바인딩
 WCF에 SOAP 1.2-part 2 (SOAP12Part2) 사양에 설명 된 대로 SOAP 1.2 HTTP 바인딩을 구현 합니다.
 
 SOAP 1.2에는 `application/soap+xml` 미디어 유형에 대한 선택적 작업 매개 변수가 추가되었습니다. 이 매개 변수는 WS-Addressing을 사용하지 않을 때 SOAP 메시지 본문을 구문 분석할 필요 없이 메시지 디스패치를 최적화하는 데 유용합니다.
 
-- R2221: `application/soap+xml` 작업 매개 변수(SOAP 1.2 요청에 있는 경우)는 해당 WSDL 바인딩 내 `soapAction` 요소의 `wsoap12:operation` 특성과 일치해야 합니다.
+- R2221: `application/soap+xml` action 매개 변수는 SOAP 1.2 요청에 있는 경우 일치 해야 합니다는 `soapAction` 특성을 `wsoap12:operation` 요소는 해당 WSDL 바인딩 내에서.
 
-- R2222: WS-Addressing 2004/08 또는 WS-Addressing 1.0을 사용할 경우 `application/soap+xml` 작업 매개 변수(SOAP 1.2 메시지에 있는 경우)가 `wsa:Action`과 일치해야 합니다.
+- R2222: 합니다 `application/soap+xml` action 매개 변수는 SOAP 1.2 메시지에 있는 경우 일치 해야 `wsa:Action` Ws-addressing 2004/08 또는 Ws-addressing 1.0을 사용할 때.
 
 WS-Addressing을 사용하지 않고 들어오는 요청에 작업 매개 변수가 없는 경우 메시지 `Action`이 지정되지 않은 것으로 간주됩니다.
 
@@ -118,9 +129,9 @@ R3111에서 네임 스페이스는 `EndpointReference` 요소나 WCF 끝점 교�
 #### <a name="endpoint-references-and-metadata"></a>엔드포인트 참조 및 메타데이터
 대부분의 시나리오에서는 지정된 엔드포인트에 대해 메타데이터 또는 메타데이터 참조를 전달해야 합니다.
 
-B3121: WCF에서 Ws-metadataexchange (MEX) 사양 단원 6 값별 또는 참조별 끝점 참조에 대 한 메타 데이터를 포함 하는에 설명 된 메커니즘을 사용 합니다.
+B3121: 값별 또는 참조별 끝점 참조에 대 한 메타 데이터를 포함 하도록 섹션 6 Ws-metadataexchange (MEX) 사양에서 설명 하는 메커니즘을 사용 하는 WCF입니다.
 
-WCF 서비스에서 토큰 발급자가 발급 한 보안 Assertions Markup Language (SAML) 토큰을 사용 하 여 인증이 필요로 하는 경우를 고려해 보십시오 `http://sts.fabrikam123.com`합니다. WCF 끝점을 사용 하 여이 인증 요구 사항을 설명 `sp:IssuedToken` 중첩 된 어설션 `sp:Issuer` 토큰 발급자를 가리키는 어설션 합니다. `sp:Issuer` 어설션에 액세스하는 클라이언트 응용 프로그램은 토큰 발급자 엔드포인트와 통신하는 방법을 알고 있어야 합니다. 클라이언트는 토큰 발급자에 대한 메타데이터를 알고 있어야 합니다. MEX에 정의 된 끝점 참조 메타 데이터 확장을 사용 하 여을 WCF 토큰 발급자 메타 데이터에 대 한 참조를 제공 합니다.
+WCF 서비스에서 토큰 발급자가 발급 한 보안 Assertions Markup Language (SAML) 토큰을 사용 하 여 인증이 필요로 하는 경우를 고려해 보십시오 `http://sts.fabrikam123.com`합니다. WCF 끝점을 사용 하 여이 인증 요구 사항을 설명 `sp:IssuedToken` 중첩 된 어설션 `sp:Issuer` 토큰 발급자를 가리키는 어설션 합니다. ph x=&quot;1&quot; /&amp;gt; 어설션에 액세스하는 클라이언트 애플리케이션은 토큰 발급자 엔드포인트와 통신하는 방법을 알고 있어야 합니다. 클라이언트는 토큰 발급자에 대한 메타데이터를 알고 있어야 합니다. MEX에 정의 된 끝점 참조 메타 데이터 확장을 사용 하 여을 WCF 토큰 발급자 메타 데이터에 대 한 참조를 제공 합니다.
 
 ```xml
 <sp:IssuedToken>
@@ -156,7 +167,7 @@ WCF 응용 프로그램을 사용 하 여 응용 프로그램 상호 작용 하�
 
 WCF 끝점 참조 매개 변수 및 해당 사양에 따라 참조 속성의 처리를 구현합니다.
 
-B3221: Ws-addressing 2004/08을 사용 하도록 구성 되 면 WCF 끝점 구분 하지 않습니다 참조 속성과 참조 매개 변수를 처리 합니다.
+B3221: Ws-addressing 2004/08을 사용 하도록 구성 되 면 WCF 끝점 참조 속성과 참조 매개 변수 처리 간에 구분 하지 않습니다.
 
 ### <a name="message-exchange-patterns"></a>메시지 교환 패턴
 웹 서비스 작업 호출에 관련 된 메시지의 시퀀스 라고 합니다 *메시지 교환 패턴*합니다. 지 원하는 WCF 단방향, 요청-회신 및 이중 메시지 교환 패턴입니다. 이 단원에서는 사용 중인 메시지 교환 패턴에 따른 메시지 처리에 대한 WS-Addressing 요구 사항에 대해 자세히 설명합니다.
@@ -166,36 +177,36 @@ B3221: Ws-addressing 2004/08을 사용 하도록 구성 되 면 WCF 끝점 구�
 #### <a name="one-way-message"></a>단방향 메시지
 WCF 끝점을 사용 하 여 메시지를 지원 하도록 구성 된 경우는 지정 된 `Action` 단방향 패턴에 따라 WCF 끝점 동작 및 요구 사항을 따릅니다. 달리 지정 하지 않는 한 동작과 규칙의 두 버전의 Ws-addressing WCF에서 지원 되는 적용 됩니다.
 
-- R3311: 요청자는 `wsa:To`, `wsa:Action` 및 엔드포인트 참조에 지정된 모든 참조 매개 변수에 대한 헤더를 포함해야 합니다. WS-Addressing 2004/08을 사용하고 [reference properties]이 엔드포인트 참조에 지정된 경우에도 해당 헤더를 메시지에 추가해야 합니다.
+- R3311: 요청 자가 포함 되어야 합니다 `wsa:To`, `wsa:Action`, 및 끝점 참조에 의해 지정 되는 모든 참조 매개 변수에 대 한 헤더입니다. WS-Addressing 2004/08을 사용하고 [reference properties]이 엔드포인트 참조에 지정된 경우에도 해당 헤더를 메시지에 추가해야 합니다.
 
-- B3312: 요청자가 `MessageID`, `ReplyTo` 및 `FaultTo` 헤더를 포함할 수 있습니다. 이러한 헤더는 수신자 인프라에서 무시되고 응용 프로그램으로 전달됩니다.
+- B3312: 요청 자가 포함 될 수 있습니다 `MessageID`, `ReplyTo`, 및 `FaultTo` 헤더입니다. 이러한 헤더는 수신자 인프라에서 무시되고 애플리케이션으로 전달됩니다.
 
-- R3313: HTTP를 사용하고 HTTP 응답 레그에 전송 중인 메시지가 없을 때 응답자는 HTTP 202 상태 코드와 함께 본문이 빈 HTTP 응답을 보내야 합니다.
+- R3313: HTTP를 사용 하 고 HTTP 응답 레그에 전송 중인 메시지가 없는 경우 응답자는 빈 본문과 HTTP 202 상태 코드를 사용 하 여 HTTP 응답을 보내야 합니다.
 
      HTTP 전송을 사용 중이고 작업 계약에 메시지가 단방향으로 선언되어 있는 경우에도 인프라 메시지를 보내는 데 HTTP 응답을 사용할 수 있습니다. 예를 들어, 신뢰할 수 있는 메시징을 사용하여 HTTP 응답에서 `SequenceAcknowledgement` 메시지를 보낼 수 있습니다.
 
-- B3314: WCF 응답자 오류 메시지를 단방향 메시지에 대 한 응답에서에 보내지 않습니다.
+- B3314: WCF 응답자는 단방향 메시지에 대 한 응답에서 오류 메시지를 보내지 않습니다.
 
 #### <a name="request-reply"></a>요청-회신
 WCF 끝점을 사용 하 여 메시지에 대해 구성 된 경우는 지정 된 `Action` 요청-회신 패턴에 따라, WCF 끝점 동작 및 요구 사항 아래에 따릅니다. 지정 하지 않는 한 동작과 규칙의 두 버전의 Ws-addressing WCF에서 지원에 적용 됩니다.
 
-- R3321: 요청자는 요청에 포함 해야 `wsa:To`, `wsa:Action`, `wsa:MessageID`, 및 모든 참조 매개 변수 또는 참조 속성 (또는 둘 다) 끝점 참조에 의해 지정 된 헤더입니다.
+- R3321: 요청 자가 요청에 포함 해야 합니다 `wsa:To`, `wsa:Action`, `wsa:MessageID`, 및 모든 참조 매개 변수 또는 참조 속성 (또는 둘 다) 끝점 참조에 의해 지정 된 헤더입니다.
 
-- R3322: WS-Addressing 2004/08을 사용하는 경우 `ReplyTo`도 요청에 포함해야 합니다.
+- R3322: Ws-addressing 2004/08을 사용 하면 `ReplyTo` 요청에 포함 되어야 합니다.
 
 - R3323: Ws-addressing 1.0을 사용 하는 경우 및 `ReplyTo` 요청에서는 같음 [address] 속성을 사용 하 여 기본 끝점 참조가 없는 `http://www.w3.org/2005/08/addressing/anonymous` 사용 됩니다.
 
-- R3324: 요청자 있어야 `wsa:To`, `wsa:Action`, 및 `wsa:RelatesTo` 회신 메시지의 헤더 뿐만 아니라 모든 참조 매개 변수 또는 참조 속성 (또는 둘 다)로 지정 된 헤더를 `ReplyTo` 끝점 참조에는 요청입니다.
+- R3324: 요청 자가 포함 되어야 합니다 `wsa:To`, `wsa:Action`, 및 `wsa:RelatesTo` 회신 메시지의 헤더 뿐만 아니라 모든 참조 매개 변수 또는 참조 속성 (또는 둘 다)로 지정 된 헤더를 `ReplyTo` 끝점 요청에 대 한 참조입니다.
 
 ### <a name="web-services-addressing-faults"></a>Web Services Addressing 오류
-R3411: WCF Ws-addressing 2004/08을 정의한 다음 오류를 생성 합니다.
+R3411: WCF는 Ws-addressing 2004/08을 정의한 다음 오류를 생성 합니다.
 
 | 코드 | 원인 |
 |----------|-----------|
 | `wsa:DestinationUnreachable` | 이 채널에 대해 설정된 회신 주소와 다른 `ReplyTo`를 사용하여 메시지가 도착했습니다. 받는 사람 헤더에 지정된 주소에서 수신 대기하는 엔드포인트가 없습니다. |
 | `wsa:ActionNotSupported` | 엔드포인트와 연결된 인프라 채널 또는 디스패처가 `Action` 헤더에 지정된 동작을 인식하지 못합니다. |
 
-R3412: WCF Ws-addressing 1.0을 정의한 다음 오류를 생성 합니다.
+R3412: WCF는 Ws-addressing 1.0을 정의한 다음 오류를 생성 합니다.
 
 | 코드 | 원인 |
 |----------|-----------|
@@ -280,11 +291,11 @@ WSDL 1.1 SOAP 1.x HTTP 바인딩을 사용하는 엔드포인트에서 엔드포
 
 앞의 문에 따라 요청 메시지의 `wsa:ReplyTo` 헤더에 대해 다음 요구 사항이 충족되어야 합니다.
 
-- R3514: 끝점에 보낸 메시지 요청을 `ReplyTo` 헤더를 `[address]` 같지 않음 속성 `http://www.w3.org/2005/08/addressing/anonymous` 끝점이 WSDL 1.1 SOAP 1.x HTTP 바인딩을 사용 하 고 않은 정책 대안이 있는 경우는 `wsap10:UsingAddressing` 또는 `wsap:UsingAddressing` 어설션을 함께 `cdp:CompositeDuplex` 연결 합니다.
+- R3514: 끝점에 보낸 메시지 요청을 `ReplyTo` 헤더를 `[address]` 같지 않음 속성 `http://www.w3.org/2005/08/addressing/anonymous` 끝점이 WSDL 1.1 SOAP 1.x HTTP 바인딩을 사용 하 고 않은 정책 대안이 있는 경우는 `wsap10:UsingAddressing` 또는 `wsap:UsingAddressing` 어설션 함께 `cdp:CompositeDuplex` 연결 합니다.
 
-- R3515: 끝점에 보낸 메시지 요청을 `ReplyTo` 헤더를 `[address]` 속성이 `http://www.w3.org/2005/08/addressing/anonymous`, 수도 있고는 `ReplyTo` 끝점이 WSDL 1.1 SOAP 1.x HTTP 바인딩을 사용 하 고 않은 정책 대안이 있는 경우 모든 헤더 `wsap10:UsingAddressing` 어설션 및 no `cdp:CompositeDuplex` 어설션은 연결 합니다.
+- R3515: 끝점에 보낸 메시지 요청을 `ReplyTo` 헤더를 `[address]` 속성이 `http://www.w3.org/2005/08/addressing/anonymous`, 수도 있고는 `ReplyTo` 모든 끝점이 WSDL 1.1 SOAP 1.x HTTP 바인딩을 사용 하 여 있고 를사용하여정책대안이있는헤더`wsap10:UsingAddressing` 어설션 및 no `cdp:CompositeDuplex` 어설션은 연결 합니다.
 
-- R3516: 끝점에 보낸 메시지 요청을 `ReplyTo` 헤더를 `[address]` 속성이 `http://www.w3.org/2005/08/addressing/anonymous` 끝점이 WSDL 1.1 SOAP 1.x HTTP 바인딩을 사용 하 고 않은 정책 대안이 있는 경우 `wsap:UsingAddressing` 어설션 및 없음 `cdp:CompositeDuplex`어설션은 연결 합니다.
+- R3516: 끝점에 보낸 메시지 요청을 `ReplyTo` 헤더를 `[address]` 속성이 `http://www.w3.org/2005/08/addressing/anonymous` 끝점이 WSDL 1.1 SOAP 1.x HTTP 바인딩을 사용 하 고 않은 정책 대안이 있는 경우 `wsap:UsingAddressing` 어설션 및 no `cdp:CompositeDuplex` 어설션은 연결 합니다.
 
 WS-addressing WSDL 사양에서는 세 개의 텍스트 값(required, optional, prohibited)을 가진 `<wsaw:Anonymous/>`wsa:ReplyTo 요소를 추가하여`wsa:ReplyTo` 헤더(단원 3.2)에 대한 요구 사항을 나타냄으로써 비슷한 프로토콜 바인딩을 설명하려고 합니다. 그러나 해당 요소를 어설션으로 사용하여 대안 교차를 지원하려면 도메인별 확장이 필요하므로, 이러한 요소 정의는 WS-Policy 컨텍스트에서 어설션으로 사용할 수 없습니다. 또한 이러한 요소 정의는 통신 중인 엔드포인트 동작과 반대로 `ReplyTo` 헤더 값을 나타내므로 HTTP 전송에만 해당됩니다.
 
@@ -302,11 +313,11 @@ B3521: WCF를 사용 합니다 `wsaw10:Action` 특성을 `wsdl:portType/wsdl:ope
 #### <a name="use-endpoint-reference-inside-wsdl-port"></a>WSDL 포트에서 엔드포인트 참조 사용
 WS-ADDR10-WSDL 단원 4.1에서는 `wsdl:port` 자식 요소를 포함하도록 `<wsa10:EndpointReference…/>` 요소를 확장하여 WS-Addressing 용어로 엔드포인트를 설명합니다. Ws-addressing 2004/08에서이 유틸리티를 확장 하는 WCF 허용 `<wsa:EndpointReference…/>` 의 자식 요소로 표시할 `wsdl:port`합니다.
 
-- R3531: 끝점에 `<wsaw10:UsingAddressing/>` 정책 어설션과 연결된 정책 대안이 있는 경우 해당`wsdl:port` 요소는`<wsa10:EndpointReference …/>` 자식 요소를 포함할 수 있습니다.
+- R3531: 끝점에는 연결 된 정책 대안이 있는 경우는 `<wsaw10:UsingAddressing/>` 해당 정책 어설션 `wsdl:port` 요소의 자식 요소를 포함할 수 있습니다 `<wsa10:EndpointReference …/>`합니다.
 
 - R3532: 경우는 `wsdl:port` 요소에 자식 요소가 `<wsa10:EndpointReference …/>`의 `wsa10:EndpointReference/wsa10:Address` 자식 요소 값의 값과 일치 해야 합니다는 `@address` 형제의 특성 `wsdl:port` / `wsdl:location` 요소입니다.
 
-- R3533: 엔드포인트에 `<wsap:UsingAddressing/>``wsdl:port` 정책 어설션과 연결된 정책 대안이 있는 경우 해당 `<wsa:EndpointReference …/>` 요소는 자식 요소를 포함할 수 있습니다.
+- R3533: 끝점에는 연결 된 정책 대안이 있는 경우 `<wsap:UsingAddressing/>` 해당 정책 어설션 `wsdl:port` 요소의 자식 요소를 포함할 수 있습니다 `<wsa:EndpointReference …/>`합니다.
 
 - R3534: 경우는 `wsdl:port` 요소에 자식 요소가 `<wsa:EndpointReference …/>`의 `wsa:EndpointReference/wsa:Address` 자식 요소 값의 값과 일치 해야 합니다는 `@address` 형제의 특성 `wsdl:port` / `wsdl:location` 요소입니다.
 
@@ -320,9 +331,9 @@ WS-Security가 메시지 무결성 보호를 위해 사용될 경우 WS-Addressi
 #### <a name="one-way-message"></a>단방향 메시지
 이 시나리오에서 발신자는 수신자에게 단방향 메시지를 보냅니다. SOAP 1.2, HTTP 1.1 및 W3C WS-Addressing 1.0이 사용됩니다.
 
-요청 메시지 구조: 메시지 헤더는 `wsa10:To` 및 `wsa10:Action` 요소를 포함합니다. 메시지 본문은 응용 프로그램 네임스페이스의 특정 `<app:Ping>` 요소를 포함합니다.
+요청 메시지 구조: 메시지 헤더 포함 `wsa10:To` 고 `wsa10:Action` 요소입니다. 메시지 본문은 애플리케이션 네임스페이스의 특정 `<app:Ping>` 요소를 포함합니다.
 
-HTTP 헤더: POST의 대상이의 URI와 일치 하는 `wsa10:To` 요소입니다.
+HTTP 헤더: 게시물에서 대상의 URI와 일치 하는 `wsa10:To` 요소입니다.
 
 Content-Type 헤더에는 SOAP 1.2에 필요한 `application/soap+xml` 값이 있습니다. `charset` 및 `action` 매개 변수가 포함됩니다. Content-Type 헤더의 `action` 매개 변수가 `wsa10:Action` 메시지 헤더의 값과 일치합니다.
 
@@ -435,21 +446,21 @@ MTOM 메시지 처리 과정은 이전 "MTOM 메시지 생성" 단원에서 설�
 #### <a name="http-content-type-header"></a>HTTP Content-Type 헤더
 다음은 SOAP 1.x MTOM 인코딩된 메시지 MTOM 사양 자체에 명시 된 요구 사항에서 파생 된의 HTTP Content-type 헤더의 형식에 대 한 WCF 설명의 목록 및 MTOM 및 RFC 2387에서 파생 됩니다.
 
-- R4131: HTTP Content-Type 헤더에는 multipart/related(대/소문자 구분 안 함) 값 및 해당 매개 변수가 있어야 합니다. 매개 변수 이름은 대/소문자를 구분하지 않습니다. 매개 변수의 순서는 중요하지 않습니다.
+- R4131: Multipart/related (대/소문자) 값 및 해당 매개 변수는 HTTP Content-type 헤더가 있어야 합니다. 매개 변수 이름은 대/소문자를 구분하지 않습니다. 매개 변수의 순서는 중요하지 않습니다.
 
 - MIME 메시지에 대한 Content-Type 헤더의 전체 BNF(Backus-Naur Form)는 RFC 2045, 단원 5.1에 나열되어 있습니다.
 
-- R4132: HTTP Content-Type 헤더에는 큰따옴표로 묶은 `application/xop+xml` 값을 가진 형식 매개 변수가 있어야 합니다.
+- R4132: HTTP Content-type 헤더를 형식 매개 변수 값이 있어야 합니다. `application/xop+xml` 큰따옴표로 묶어야 합니다.
 
 텍스트 같은 예약 된 문자를 대부분 포함 모든 multipart/related 미디어 형식 매개 변수에서 큰따옴표를 사용 하는 요구 사항을 RFC 2387에에서 명시적 상태일 "\@" 또는 "/" 큰따옴표 필요 표시합니다.
 
-- R4133: HTTP Content-Type 헤더에는 SOAP 1.x 봉투를 포함하는 MIMI 부분의 Content-ID 헤더 값이 큰따옴표로 묶인 시작 매개 변수가 있어야 합니다. 시작 매개 변수가 생략된 경우 첫 번째 MIME 부분에 SOAP 1.x 봉투가 포함되어야 합니다.
+- R4133: HTTP Content-type 헤더를 SOAP를 포함 하는 MIME 부분의 CONTENT-ID 헤더의 값을 사용 하 여 시작 매개 변수가 있어야 합니다. 1.x 봉투 (envelope)를 큰따옴표로 묶어야 합니다. 시작 매개 변수가 생략된 경우 첫 번째 MIME 부분에 SOAP 1.x 봉투가 포함되어야 합니다.
 
-- R4134: SOAP 1.1 MTOM 인코딩된 메시지의 HTTP Content-Type 헤더는 큰따옴표로 묶인 text/xml 값을 가진 start-info 매개 변수를 포함해야 합니다.
+- R4134: SOAP 1.1 MTOM 인코딩된 메시지의 HTTP Content-type 헤더는 큰따옴표로 묶인 text/xml 값을 가진 start-info 매개 변수를 포함 해야 합니다.
 
-- R4135: SOAP 1.2 MTOM 인코딩된 메시지의 HTTP Content-Type 헤더는 큰따옴표로 묶인 `application/soap+xml` 값을 가진 start-info 매개 변수를 포함해야 합니다.
+- R4135: HTTP Content-type 헤더를 SOAP 1.2 MTOM 인코딩된 메시지에 대 한 값을 가진 start-info 매개 변수를 포함 해야 `application/soap+xml`큰따옴표로 묶인 합니다.
 
-- R4136: SOAP 1.x MTOM 인코딩된 메시지의 HTTP Content-Type 헤더에는 RFC 2046, 단원 5.1.1에 정의된 MIME 경계 BNF와 일치하는 큰따옴표로 묶인 값을 가진 boundary 매개 변수가 있어야 합니다.
+- R4136: SOAP 1.x MTOM 인코딩된 메시지에 대 한 HTTP Content-type 헤더는 MIME 경계 BNF RFC 2046, 단원 5.1.1에에서 정의 된 일치 하는 값 (큰따옴표로 묶인)를 사용 하 여 boundary 매개 변수가 있어야
 
     ```
     boundary := 0*69<bchars> bcharsnospace 
@@ -481,9 +492,9 @@ MTOM 메시지 처리 과정은 이전 "MTOM 메시지 생성" 단원에서 설�
 #### <a name="infoset-mime-part"></a>Infoset MIME 부분
 SOAP 1.x 봉투는 XOP MIME 패키지의 루트 부분으로 캡슐화되며 `infoset` 부분이라고도 합니다.
 
-- R4141: SOAP 1.x 봉투는 XOP MIME 패키지의 루트 부분으로 캡슐화되어야 하고, `infoset` 부분이라고도 하며, HTTP Content-Type에서 참조되어야 합니다.
+- R4141: SOAP 1.x 봉투 (envelope) 호출 하는 XOP MIME 패키지의 루트 부분으로 캡슐화 되어야 합니다 `infoset` 파트 및 참조에서 HTTP 콘텐츠 형식입니다.
 
-- R4142: SOAP `Infoset` 부분은 `Content-ID`, `Content-Transfer-Encoding` 및 `Content-Type` MIME 헤더를 포함해야 합니다.
+- R4142: SOAP `Infoset` 부분에 다음 MIME 헤더를 포함 해야 합니다. `Content-ID`, `Content-Transfer-Encoding`, 및 `Content-Type`합니다.
 
 Content-ID 헤더의 형식은 RFC 2045에 다음과 같이 정의되어 있습니다.
 
@@ -499,7 +510,7 @@ msg-id    =       [CFWS] "<" id-left "@" id-right ">" [CFWS]
 
 효과적으로 전자 메일 주소 내에 포함 하 고 "\<" 및 ">"입니다. `[CFWS]` 접두사와 접미사는 설명을 전달하기 위해 RFC 2822에 추가되었지만 상호 운용성을 유지하려면 사용하지 않아야 합니다.
 
-R4143: Infoset MIME 부분의 Content-ID 헤더 값은 `msg-id` 접두사 및 접미사 부분을 생략한 상태의 RFC 2822의 `[CFWS]` 생성을 따라야 합니다.
+R4143: 에 대 한 Infoset MIME 부분의 CONTENT-ID 헤더 값을 따라야 `msg-id` 사용 하 여 RFC 2822의 `[CFWS]` 접두사 및 접미사 부분을 생략 합니다.
 
 많은 MIME 구현 내에 포함 된 값에 대 한 요구 사항 완화 "\<" 및 ">" 전자 메일 주소를 사용 `absoluteURI` 묶인 "\<", ">" 전자 메일 주소 외에도 합니다. 이 WCF 버전은 형식의 CONTENT-ID MIME 헤더의 값을 사용합니다.
 
@@ -507,7 +518,7 @@ R4143: Infoset MIME 부분의 Content-ID 헤더 값은 `msg-id` 접두사 및 �
 Content-ID: <http://tempuri.org/0> 
 ```
 
-R4144: MTOM 프로세서는 다음과 같은 완화된 `msg-id`와 일치하는 Content-ID 헤더 값을 사용해야 합니다.
+R4144: MTOM 프로세서는 CONTENT-ID 헤더 값이 같은 완화 된 일치 하는 동의 해야 `msg-id`합니다.
 
 ```
 msg-id-relaxed =     [CFWS] "<" (absoluteURI | mail-address) ">" [CFWS]
@@ -516,11 +527,11 @@ mail-address   =     id-left "@" id-right
 
 MIME(RFC 2045)은 MIME 부분의 콘텐츠 인코딩을 전달하기 위해 Content-Transfer-Encoding 헤더를 제공합니다. Content-Transfer-Encoding에 대해 정의된 기본값은 7비트로 대부분의 SOAP 메시지에 적합하지 않으므로 상호 운용성 향상을 위해 Content-Transfer-Encoding 헤더가 필요합니다.
 
-- R4145: SOAP Infoset 부분은 Content-Transfer-Encoding 헤더를 포함해야 합니다.
+- R4145: SOAP Infoset 부분은 콘텐츠-전송-인코딩 헤더를 포함 해야 합니다.
 
-- R4146: SOAP 봉투 문자 인코딩이 UTF-8이면 Content-Transfer-Encoding 헤더 값이 8비트여야 합니다.
+- R4146: SOAP 봉투 문자 인코딩이 u t F-8 인 경우 콘텐츠-전송-인코딩 헤더의 값에는 8 비트 여야 합니다.
 
-- R4147: SOAP 봉투 문자 인코딩이 UTF-16이면 Content-Transfer-Encoding 헤더 값이 이진이어야 합니다.
+- R4147: SOAP 봉투 문자 인코딩이 u t F-16 이면 콘텐츠-전송-인코딩 헤더의 값 이진 이어야 합니다.
 
 - [XOP] 단원 5에 따르면
 
@@ -540,12 +551,12 @@ MIME(RFC 2045)은 MIME 부분의 콘텐츠 인코딩을 전달하기 위해 Cont
 
      XOP에서는 `charset`의 `application/xop+xml` 매개 변수를 선택적 요소로 정의하고 있지만, `charset` 미디어 형식의 `text/xml` 매개 변수에 대한 BP 1.1 요구 사항과 마찬가지로 상호 운용성을 위해 필요합니다.
 
-- R41410: `type` 및 `charset` 매개 변수가 SOAP 1.x Infoset 부분의 Content-Type 헤더에 있어야 합니다.
+- R41410: 합니다 `type` 고 `charset` 매개 변수가 SOAP 1.x Infoset 부분의 Content-type 헤더에 있어야 합니다.
 
 #### <a name="wcf-endpoint-support-for-mtom"></a>MTOM에 대한 WCF 엔드포인트 지원
 MTOM의 목적은 SOAP 메시지를 인코딩하여 base64 인코딩된 데이터를 최적화하는 데 있습니다. 다음은 제약 조건 목록입니다.
 
-- R4151: base64 인코딩된 데이터를 포함하는 모든 요소 정보 항목이 최적화될 수 있습니다.
+- R4151: Base64로 인코딩된 데이터를 포함 하는 모든 요소 정보 항목이 최적화 될 수 있습니다.
 
 - B4152: WCF는 base64로 인코딩된 데이터를 포함 하 고 길이가 1024 바이트를 초과 하는 요소 정보 항목을 최적화 합니다.
 
@@ -558,9 +569,9 @@ WCF는 다음 정책 어설션은 사용 하 여 끝점에서 MTOM 사용을 나
 <wsoma:OptimizedMimeSerialization ... />
 ```
 
-- R4211: 이전 정책 어설션은 엔드포인트 정책 주체를 포함하고 MTOM을 사용하여 엔드포인트에서 보내거나 받은 모든 메시지를 최적화하도록 지정합니다.
+- R4211: 이전 정책 어설션은 끝점 정책 주체가 있고 MTOM을 사용 하 여 전송 끝점에서 받은 모든 메시지가 최적화 해야 하는지 되도록 지정 합니다.
 
-- B4212: MTOM 최적화를 사용 하도록 구성 되 면 WCF 끝점 추가 MTOM 정책 어설션을 해당 연결 된 정책 `wsdl:binding`합니다.
+- B4212: WCF 끝점을 MTOM 최적화를 사용 하도록 구성 하는 경우 해당 연결 된 정책에 MTOM 정책 어설션을 추가 `wsdl:binding`합니다.
 
 ### <a name="composition-with-ws-security"></a>WS-Security를 사용하여 구성
 MTOM은 비슷한 인코딩 메커니즘 `text/xml` 및 WCF 이진 XML입니다. MTOM은 WS-Security 및 기타 WS-* 프로토콜을 사용하여 자연스러운 구성을 제공합니다. WS-Security를 사용하여 보안된 메시지는 MTOM을 사용하여 최적화할 수 있습니다.

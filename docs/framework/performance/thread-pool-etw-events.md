@@ -7,28 +7,28 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 41a37fa34b9d75eb8cfc1bdcb55b237faf137cad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9a96fd4c45113afd2ab918b714bd6e12a429917c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33396109"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046183"
 ---
 # <a name="thread-pool-etw-events"></a>스레드 풀 ETW 이벤트
 <a name="top"></a> 이러한 이벤트는 작업자 스레드 및 I/O 스레드에 대한 정보를 수집합니다.  
   
  스레드 풀 이벤트에는 다음과 같은 두 그룹이 있습니다.  
   
--   [작업자 스레드 풀 이벤트](#worker). 이러한 스레드 풀 이벤트는 응용 프로그램에서 스레드 풀을 사용하는 방식에 대한 정보 및 작업 부하가 동시성 제어에 미치는 영향에 대한 정보를 제공합니다.  
+- [작업자 스레드 풀 이벤트](#worker). 이러한 스레드 풀 이벤트는 응용 프로그램에서 스레드 풀을 사용하는 방식에 대한 정보 및 작업 부하가 동시성 제어에 미치는 영향에 대한 정보를 제공합니다.  
   
--   [I/O 스레드 풀 이벤트](#io). 이러한 스레드 풀 이벤트는 스레드 풀에서 생성되거나, 만료되거나, 만료되지 않거나, 종료된 I/O 스레드에 대한 정보를 제공합니다.  
+- [I/O 스레드 풀 이벤트](#io). 이러한 스레드 풀 이벤트는 스레드 풀에서 생성되거나, 만료되거나, 만료되지 않거나, 종료된 I/O 스레드에 대한 정보를 제공합니다.  
   
 <a name="worker"></a>   
 ## <a name="worker-thread-pool-events"></a>작업자 스레드 풀 이벤트  
- 이러한 이벤트는 런타임의 작업자 스레드 풀과 관련이 있으며, 스레드 이벤트에 대한 알림을 제공합니다(예: 스레드가 만들어지거나 중지될 때). 작업자 스레드 풀은 동시성 제어를 위해 측정된 처리량을 기준으로 스레드 수가 계산되는 자동 선택 알고리즘을 사용합니다. 작업자 스레드 풀 이벤트는 응용 프로그램이 스레드 풀을 사용하는 방법 그리고 특정 작업 부하가 동시성 제어에 미칠 수 있는 영향을 이해하는 데 사용할 수 있습니다.  
+ 이러한 이벤트는 런타임의 작업자 스레드 풀과 관련이 있으며, 스레드 이벤트에 대한 알림을 제공합니다(예: 스레드가 만들어지거나 중지될 때). 작업자 스레드 풀은 동시성 제어를 위해 측정된 처리량을 기준으로 스레드 수가 계산되는 자동 선택 알고리즘을 사용합니다. 작업자 스레드 풀 이벤트는 애플리케이션이 스레드 풀을 사용하는 방법 그리고 특정 작업 부하가 동시성 제어에 미칠 수 있는 영향을 이해하는 데 사용할 수 있습니다.  
   
 ### <a name="threadpoolworkerthreadstart-and-threadpoolworkerthreadstop"></a>ThreadPoolWorkerThreadStart 및 ThreadPoolWorkerThreadStop  
- 다음 표에서는 이러한 이벤트의 키워드 및 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.  
+ 다음 표에서는 이러한 이벤트의 키워드 및 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
 |-----------------------------------|-----------|  
@@ -131,7 +131,7 @@ ms.locfileid: "33396109"
 ## <a name="io-thread-events"></a>I/O 스레드 이벤트  
  이러한 스레드 풀 이벤트는 비동기적인 I/O 스레드 풀(완료 포트)에서 스레드에 대해 발생합니다.  
   
-### <a name="iothreadcreatev1"></a>IOThreadCreate_V1  
+### <a name="iothreadcreate_v1"></a>IOThreadCreate_V1  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -152,7 +152,7 @@ ms.locfileid: "33396109"
 |NumRetired|win:UInt64|만료된 작업자 스레드의 수입니다.|  
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
-### <a name="iothreadretirev1"></a>IOThreadRetire_V1  
+### <a name="iothreadretire_v1"></a>IOThreadRetire_V1  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -173,7 +173,7 @@ ms.locfileid: "33396109"
 |NumRetired|win:UInt64|만료된 I/O 스레드의 수입니다.|  
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
-### <a name="iothreadunretirev1"></a>IOThreadUnretire_V1  
+### <a name="iothreadunretire_v1"></a>IOThreadUnretire_V1  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
 |이벤트를 발생시키기 위한 키워드|수준|  
@@ -215,5 +215,6 @@ ms.locfileid: "33396109"
 |NumRetired|win:UInt64|만료된 I/O 스레드의 수입니다.|  
 |ClrInstanceID|Win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>참고자료
+
+- [CLR ETW 이벤트](clr-etw-events.md)

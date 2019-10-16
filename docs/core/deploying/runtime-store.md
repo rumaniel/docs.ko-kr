@@ -1,15 +1,15 @@
 ---
 title: 런타임 패키지 저장소
-description: 이 항목에서는 .NET Core에서 사용되는 런타임 패키지 저장소 및 대상 매니페스트에 대해 설명합니다.
+description: 런타임 패키지 저장소를 사용하여 .NET Core에서 사용되는 매니페스트를 대상으로 지정하는 방법을 알아봅니다.
 author: bleroy
-ms.author: mairaw
 ms.date: 08/12/2017
-ms.openlocfilehash: df2776ac2e4a2eed7f54b3031f13ab41fc714aae
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 8a8d2d3298f144347c36c640700a1e578dc14715
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511586"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116541"
 ---
 # <a name="runtime-package-store"></a>런타임 패키지 저장소
 
@@ -64,13 +64,13 @@ ms.locfileid: "43511586"
 
 패키지 저장소 매니페스트, 런타임 및 프레임워크에서 `dotnet store`를 실행하여 런타임 패키지 저장소를 프로비전합니다.
 
-```console
+```dotnetcli
 dotnet store --manifest <PATH_TO_MANIFEST_FILE> --runtime <RUNTIME_IDENTIFIER> --framework <FRAMEWORK>
 ```
 
 **예제**
 
-```console
+```dotnetcli
 dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcoreapp2.0 --framework-version 2.0.0
 ```
 
@@ -94,13 +94,13 @@ dotnet store --manifest packages.csproj --runtime win10-x64 --framework netcorea
 
 디스크에 대상 매니페스트 파일이 있는 경우 앱을 게시할 때 [`dotnet publish`](../tools/dotnet-publish.md) 명령을 사용하여 파일 경로를 지정합니다.
 
-```console
+```dotnetcli
 dotnet publish --manifest <PATH_TO_MANIFEST_FILE>
 ```
 
 **예제**
 
-```console
+```dotnetcli
 dotnet publish --manifest manifest.xml
 ```
 
@@ -122,7 +122,7 @@ dotnet publish --manifest manifest.xml
 
 ## <a name="aspnet-core-implicit-store"></a>ASP.NET Core 암시적 저장소
 
-ASP.NET Core 암시적 저장소는 ASP.NET Core 2.0에만 적용됩니다. 암시적 저장소를 사용하지 **않는** ASP.NET Core 2.1 이상을 사용하는 응용 프로그램을 강력히 권장합니다. ASP.NET Core 2.1 이상에서는 공유 프레임워크를 사용합니다.
+ASP.NET Core 암시적 저장소는 ASP.NET Core 2.0에만 적용됩니다. 암시적 저장소를 사용하지 **않는** ASP.NET Core 2.1 이상을 사용하는 애플리케이션을 강력히 권장합니다. ASP.NET Core 2.1 이상에서는 공유 프레임워크를 사용합니다.
 
 런타임 패키지 저장소 기능은 앱이 [FDD(프레임워크 종속 배포)](index.md#framework-dependent-deployments-fdd) 앱으로 배포될 경우 ASP.NET Core 앱에서 암시적으로 사용됩니다. [`Microsoft.NET.Sdk.Web`](https://github.com/aspnet/websdk)의 대상에는 대상 시스템의 암시적 패키지 저장소를 참조하는 매니페스트가 포함됩니다. 또한 `Microsoft.AspNetCore.All` 패키지를 사용하는 FDD 앱은 앱과 자산만 포함되고 `Microsoft.AspNetCore.All` 메타패키지에 나열된 패키지가 포함되지 않은 게시된 앱이 됩니다. 해당 패키지는 대상 시스템에 있는 것으로 가정합니다.
 
@@ -139,7 +139,7 @@ ASP.NET Core 암시적 저장소는 ASP.NET Core 2.0에만 적용됩니다. 암�
 > [!NOTE]
 > [SCD(자체 포함된 배포)](index.md#self-contained-deployments-scd) 앱의 경우 대상 시스템에 필수 매니페스트 패키지가 없어도 되는 것으로 가정합니다. 따라서 SCD 앱의 경우 **\<PublishWithAspNetCoreTargetManifest>** 는 `true`로 설정될 수 없습니다.
 
-배포에 포함되지 않은 매니페스트 종속성을 사용하여 응용 프로그램을 배포할 경우(어셈블리가 *bin* 폴더에 있음) 해당 어셈블리의 호스트에서 런타임 패키지 저장소가 *사용되지 않습니다*. *bin* 폴더 어셈블리는 호스트의 런타임 패키지 저장소에 어셈블리가 있는지에 관계없이 사용됩니다.
+배포에 포함되지 않은 매니페스트 종속성을 사용하여 애플리케이션을 배포할 경우(어셈블리가 *bin* 폴더에 있음) 해당 어셈블리의 호스트에서 런타임 패키지 저장소가 *사용되지 않습니다*. *bin* 폴더 어셈블리는 호스트의 런타임 패키지 저장소에 어셈블리가 있는지에 관계없이 사용됩니다.
 
 매니페스트에 지정된 종속성 버전은 런타임 패키지 저장소의 종속성 버전과 일치해야 합니다. 대상 매니페스트의 종속성과 런타임 패키지 저장소에 있는 버전 간에 버전이 일치하지 않고 앱 배포에 필수 패키지 버전이 없는 경우에는 앱이 시작되지 않습니다. 런타임 패키지 저장소 어셈블리에 대해 호출되는 대상 매니페스트의 이름은 예외에 포함되므로 불일치 문제를 해결하는 데 도움이 됩니다.
 
@@ -147,5 +147,5 @@ ASP.NET Core 암시적 저장소는 ASP.NET Core 2.0에만 적용됩니다. 암�
 
 ## <a name="see-also"></a>참고 항목
 
-* [dotnet-publish](../tools/dotnet-publish.md)  
-* [dotnet-store](../tools/dotnet-store.md)  
+- [dotnet-publish](../tools/dotnet-publish.md)
+- [dotnet-store](../tools/dotnet-store.md)

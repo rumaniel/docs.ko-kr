@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 ms.assetid: 5e79da7e-e78a-413c-8fb0-f3f9cd84f579
 dev_langs:
 - sql
-ms.openlocfilehash: bf20bb92010d5031e973cb1cc004b6b8f13d0091
-ms.sourcegitcommit: 22c3c8f74eaa138dbbbb02eb7d720fce87fc30a9
+ms.openlocfilehash: 956fe117eb0c59392c3999046bc70deaed268ac6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34234316"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70248777"
 ---
 # <a name="unsupported-expressions"></a>지원 되지 않는 식
 
-이 항목에서는 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서 지원되지 않는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 식에 대해 설명합니다. 자세한 내용은 참조 [Entity SQL 차이점 transact-sql에서](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)합니다.
+이 항목에서는에서 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]지원 되지 않는 transact-sql 식에 대해 설명 합니다. 자세한 내용은 [Transact-sql과 Entity SQL 다른 방법](how-entity-sql-differs-from-transact-sql.md)을 참조 하세요.
 
-## <a name="quantified-predicates"></a>정규화 된 조건자
+## <a name="quantified-predicates"></a>정량화 된 조건자
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서는 다음 폼을 생성할 수 있습니다.
+Transact-sql은 다음 형식의 구문을 허용 합니다.
 
 ```sql
 sal > all (select salary from employees)
@@ -33,9 +33,9 @@ exists(select 0 from employees as e where sal > e.salary)
 
 ## <a name="-operator"></a>* 연산자
 
-[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]에서는 모든 열이 프로젝션되어야 함을 나타내도록 SELECT 절에서 * 연산자를 사용하도록 지원합니다. 이는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 지원되지 않습니다.
+Transact-sql은 SELECT 절에서 * 연산자를 사용 하 여 모든 열이 투영 되어야 함을 나타낼 수 있습니다. 이는 [!INCLUDE[esql](../../../../../../includes/esql-md.md)]에서는 지원되지 않습니다.
 
 ## <a name="see-also"></a>참고자료
 
-[Entity SQL 개요](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)  
-[Entity SQL과 Transact-SQL의 차이점](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)  
+- [Entity SQL 개요](entity-sql-overview.md)
+- [Entity SQL과 Transact-SQL의 차이점](how-entity-sql-differs-from-transact-sql.md)

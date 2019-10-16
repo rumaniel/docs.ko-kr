@@ -1,0 +1,17 @@
+- name: 컬렉션 및 데이터 구조
+  href: index.md
+  items:
+    - name: Collection 클래스 선택
+      href: selecting-a-collection-class.md
+    - name: 일반적으로 사용되는 컬렉션 형식
+      href: commonly-used-collection-types.md
+    - name: 제네릭 컬렉션 사용 기준
+      href: when-to-use-generic-collections.md
+    - name: 컬렉션 내에서 비교 및 정렬
+      href: comparisons-and-sorts-within-collections.md
+    - name: Sorted 컬렉션 형식
+      href: sorted-collection-types.md
+    - name: Hashtable 및 Dictionary 컬렉션 형식
+      href: hashtable-and-dictionary-collection-types.md
+    - name: 스레드로부터 안전한 컬렉션
+      href: thread-safe/

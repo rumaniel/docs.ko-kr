@@ -1,0 +1,68 @@
+- name: 파일 및 스트림 I/O
+  href: index.md
+  items:
+    - name: Windows 시스템의 파일 경로 형식
+      href: file-path-formats.md
+    - name: 공통적인 I/O 작업
+      href: common-i-o-tasks.md
+      items:
+        - name: '방법: 디렉터리 복사'
+          href: how-to-copy-directories.md
+        - name: '방법: 디렉터리 및 파일 열거'
+          href: how-to-enumerate-directories-and-files.md
+        - name: '방법: 새로 만든 데이터 파일 읽기 및 쓰기'
+          href: how-to-read-and-write-to-a-newly-created-data-file.md
+        - name: '방법: 로그 파일 열기 및 추가'
+          href: how-to-open-and-append-to-a-log-file.md
+        - name: '방법: 파일에 텍스트 쓰기'
+          href: how-to-write-text-to-a-file.md
+        - name: '방법: 파일에서 텍스트 읽기'
+          href: how-to-read-text-from-a-file.md
+        - name: '방법: 문자열에서 문자 읽기'
+          href: how-to-read-characters-from-a-string.md
+        - name: '방법: 문자열에 문자 쓰기'
+          href: how-to-write-characters-to-a-string.md
+        - name: '방법: 액세스 제어 목록 항목 추가 또는 제거'
+          href: how-to-add-or-remove-access-control-list-entries.md
+        - name: '방법: 파일 압축 및 추출'
+          href: how-to-compress-and-extract-files.md
+        - name: 스트림 작성
+          href: composing-streams.md
+        - name: '방법: .NET Framework 스트림과 Windows 런타임 스트림 간 변환'
+          href: how-to-convert-between-dotnet-streams-and-winrt-streams.md
+    - name: 비동기 파일 I/O
+      href: asynchronous-file-i-o.md
+    - name: I/O 오류 처리
+      href: handling-io-errors.md
+    - name: 격리된 스토리지
+      href: isolated-storage.md
+      items:
+        - name: 격리 유형
+          href: types-of-isolation.md
+        - name: '방법: 격리된 스토리지의 저장소 가져오기'
+          href: how-to-obtain-stores-for-isolated-storage.md
+        - name: '방법: 격리된 스토리지의 저장소 열거'
+          href: how-to-enumerate-stores-for-isolated-storage.md
+        - name: '방법: 격리된 스토리지에서 저장소 삭제'
+          href: how-to-delete-stores-in-isolated-storage.md
+        - name: '방법: 격리된 스토리지의 공간 부족 상태 예상'
+          href: how-to-anticipate-out-of-space-conditions-with-isolated-storage.md
+        - name: '방법: 격리된 스토리지의 파일 및 디렉터리 만들기'
+          href: how-to-create-files-and-directories-in-isolated-storage.md
+        - name: '방법: 격리된 스토리지의 기존 파일 및 디렉터리 찾기'
+          href: how-to-find-existing-files-and-directories-in-isolated-storage.md
+        - name: '방법: 격리된 스토리지의 파일 읽기 및 쓰기'
+          href: how-to-read-and-write-to-files-in-isolated-storage.md
+        - name: '방법: 격리된 스토리지의 파일 및 디렉터리 삭제'
+          href: how-to-delete-files-and-directories-in-isolated-storage.md
+    - name: 파이프
+      href: pipe-operations.md
+      items:
+        - name: '방법: 로컬 프로세스 간 통신에 익명 파이프 사용'
+          href: how-to-use-anonymous-pipes-for-local-interprocess-communication.md
+        - name: '방법: 네트워크 프로세스 간 통신에 명명된 파이프 사용'
+          href: how-to-use-named-pipes-for-network-interprocess-communication.md
+    - name: 파이프라인
+      href: pipelines.md
+    - name: 메모리 매핑된 파일
+      href: memory-mapped-files.md

@@ -2,12 +2,12 @@
 title: '방법: Office Open XML 문서에서 단락 검색(C#)'
 ms.date: 07/20/2015
 ms.assetid: cc2687cf-d648-451e-88ac-3847c6c967c8
-ms.openlocfilehash: e4234c3b35ca20fc06946947f9bacb10d656bc16
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: bfac597e0c36f41216821947928babd471fd61b3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44083857"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253399"
 ---
 # <a name="how-to-retrieve-paragraphs-from-an-office-open-xml-document-c"></a>방법: Office Open XML 문서에서 단락 검색(C#)
 이 항목에서는 Office Open XML 문서를 열고 문서에 있는 모든 단락의 컬렉션을 검색하는 예제를 제공합니다.  
@@ -19,7 +19,7 @@ ms.locfileid: "44083857"
   
  이 예제에서는 예제에서도 제공되는 `StringConcatenate`라는 확장 메서드를 사용합니다.  
   
- 이 예제가 작동하는 방식을 설명하는 자세한 자습서는 [XML의 순수 함수 변환(C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)을 참조하세요.  
+ 이 예제가 작동하는 방식을 설명하는 자세한 자습서는 [XML의 순수 함수 변환(C#)](./introduction-to-pure-functional-transformations.md)을 참조하세요.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
@@ -163,9 +163,9 @@ class Program
 }  
 ```  
   
- [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)에 설명된 샘플 Open XML 문서로 실행하는 경우 이 예제는 다음과 같은 출력을 생성합니다.  
+ [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)에 설명된 샘플 Open XML 문서로 실행하는 경우 이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -182,7 +182,3 @@ StyleName:Normal >This example produces the following output:<
 StyleName:Normal ><  
 StyleName:Code >Hello World<  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

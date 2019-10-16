@@ -1,19 +1,19 @@
 ---
-title: 최종 &lt;키워드&gt; 문 (Visual Basic)
+title: End <keyword> 문(Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.EndDefinition
 helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
-ms.openlocfilehash: 8137434bfd8c26144d78b1761b784cdba4894eaf
-ms.sourcegitcommit: 7fe772c6c05a982153655d618c826e9839d39cac
+ms.openlocfilehash: 96dc8ce6b0d3b7545f5caeef43358936e426f566
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/03/2018
-ms.locfileid: "33605266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638157"
 ---
-# <a name="end-ltkeywordgt-statement-visual-basic"></a>최종 &lt;키워드&gt; 문 (Visual Basic)
+# <a name="end-keyword-statement-visual-basic"></a>최종 \<키워드 > 문 (Visual Basic)
 
 추가 키워드 뒤에, 해당 키워드 뒤에 문 블록의 정의가 종료 됩니다.
 
@@ -101,4 +101,4 @@ End With
   
 ## <a name="see-also"></a>참고자료
 
-[End 문](end-statement.md)
+- [End 문](end-statement.md)

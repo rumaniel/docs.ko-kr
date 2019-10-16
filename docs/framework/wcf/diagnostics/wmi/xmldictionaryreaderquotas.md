@@ -2,12 +2,12 @@
 title: XmlDictionaryReaderQuotas
 ms.date: 03/30/2017
 ms.assetid: 9b4ca8b4-0a89-4758-97ab-528a8ce18f07
-ms.openlocfilehash: 9bc519509b00383be333ac605688950d2709117c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f1c12a0a60397a84d4e9ff0241c4182b4511af5c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858431"
 ---
 # <a name="xmldictionaryreaderquotas"></a>XmlDictionaryReaderQuotas
 XmlDictionaryReaderQuotas  
@@ -72,6 +72,7 @@ class XmlDictionaryReaderQuotas
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Xml.XmlDictionaryReaderQuotas>  
- <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Xml.XmlDictionaryReaderQuotas>
+- <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>

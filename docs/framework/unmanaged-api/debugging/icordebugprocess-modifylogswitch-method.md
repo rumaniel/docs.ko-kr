@@ -17,39 +17,39 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20ceed164631169b3a47809381b2cc4e630ae718
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 96db1ca115ffed47b5eb8eadd9c3d2f620060c4a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418619"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755455"
 ---
 # <a name="icordebugprocessmodifylogswitch-method"></a>ICorDebugProcess::ModifyLogSwitch 메서드
 지정 된 로그 스위치의 심각도 수준을 설정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT ModifyLogSwitch(  
     [in] WCHAR *pLogSwitchName,  
     [in] LONG  lLevel);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pLogSwitchName`  
  [in] Log 스위치의 이름을 지정 하는 문자열에 대 한 포인터입니다.  
   
  `lLevel`  
- [in] 지정 된 로그 스위치에 대해 설정할 심각도 수준입니다.  
+ [in] 지정된 된 로그 스위치에 대해 설정할 심각도 수준입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 한 후에 유효는 [icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) 콜백이 발생 했습니다.  
+ 이 메서드는 한 후에 유효 합니다 [icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) 콜백 발생 했습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

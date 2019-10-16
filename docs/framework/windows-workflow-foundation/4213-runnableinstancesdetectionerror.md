@@ -3,11 +3,11 @@ title: 4213 - RunnableInstancesDetectionError
 ms.date: 03/30/2017
 ms.assetid: 979ec935-bd9f-4798-be9a-25e08c4b94cf
 ms.openlocfilehash: b846e561d947c10df2565e8db7601e11e9357ba1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774194"
 ---
 # <a name="4213---runnableinstancesdetectionerror"></a>4213 - RunnableInstancesDetectionError
 ## <a name="properties"></a>속성  
@@ -16,8 +16,8 @@ ms.locfileid: "33511285"
 |-|-|  
 |ID|4213|  
 |키워드|WFInstanceStore|  
-|수준|오류|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|수준|Error|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  예외로 인해 실행 가능한 인스턴스를 검색하지 못했습니다.  

@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], Canvas
 - Canvas control [WPF], how-to topics
 ms.assetid: 5c8f5bca-7ba9-4526-a9bf-0852351dbe8a
-ms.openlocfilehash: d853ecbe7722772b243fec13842388f158ad4ddd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c07039a66b40a6ecb54eda674bf2be396fc3e68
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912524"
 ---
 # <a name="canvas-how-to-topics"></a>캔버스 방법 항목
-이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.Canvas> 요소 자식 요소의 절대 위치입니다.  
+이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.Canvas> 요소 자식 요소의 절대 위치입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Border를 사용하여 Canvas의 내용 래핑](../../../../docs/framework/wpf/controls/how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
- [캔버스 위치 지정 속성 가져오기 또는 설정](../../../../docs/framework/wpf/controls/how-to-get-or-set-canvas-positioning-properties.md)  
- [캔버스 만들기 및 사용](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-canvas.md)  
- [Canvas의 연결된 속성을 사용하여 자식 요소 배치](../../../../docs/framework/wpf/controls/how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
- [Thumb을 사용하여 캔버스 크기 조정](../../../../docs/framework/wpf/controls/how-to-resize-a-canvas-by-using-a-thumb.md)  
+ [Border를 사용하여 Canvas의 내용 래핑](how-to-wrap-a-border-around-the-content-of-a-canvas.md)  
+ [캔버스 위치 지정 속성 가져오기 또는 설정](how-to-get-or-set-canvas-positioning-properties.md)  
+ [캔버스 만들기 및 사용](how-to-create-and-use-a-canvas.md)  
+ [Canvas의 연결된 속성을 사용하여 자식 요소 배치](how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md)  
+ [Thumb을 사용하여 캔버스 크기 조정](how-to-resize-a-canvas-by-using-a-thumb.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +40,8 @@ ms.locfileid: "33550955"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>관련 단원  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)  
+ [레이아웃](../advanced/layout.md)  
   
- [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 개요](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 개요](scrollviewer-overview.md)

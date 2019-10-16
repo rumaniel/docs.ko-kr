@@ -1,19 +1,19 @@
 ---
-title: XmlDataDocument로 데이터 집합 동기화
+title: XmlDataDocument로 데이터 세트 동기화
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fbc96fa9-b5d1-4f97-b099-c89b0e14ce2c
-ms.openlocfilehash: 5aeb5fc3ad1008871b6c54d6c096cb3a76c3416e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 272b76c0448da9e069fba331c3ae99c1de02ed16
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082464"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784271"
 ---
-# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>XmlDataDocument로 데이터 집합 동기화
-이 단원에서는 <xref:System.Data.DataSet>와 동기화된 강력한 형식의 <xref:System.Xml.XmlDataDocument>을 사용하여 구매 주문을 처리하는 한 가지 단계를 보여 줍니다. 다음 예제에서는 한 **데이터 집합** 소스 XML 문서의 일부만 일치 하는 스키마가 최소화 된 합니다. 예제에서는 사용를 **XmlDataDocument** 소스 XML 문서의 신뢰도 유지 하기 위해 사용 하도록 설정 합니다 **데이터 집합** XML 문서의 하위 집합을 노출 하는 데 사용할 합니다.  
+# <a name="synchronizing-a-dataset-with-an-xmldatadocument"></a>XmlDataDocument로 데이터 세트 동기화
+이 단원에서는 <xref:System.Data.DataSet>와 동기화된 강력한 형식의 <xref:System.Xml.XmlDataDocument>을 사용하여 구매 주문을 처리하는 한 가지 단계를 보여 줍니다. 다음 예에서는 소스 XML 문서의 일부에만 일치 하는 최소화 된 스키마를 사용 하 여 **데이터 집합** 을 만듭니다. 이 예에서는 **XmlDataDocument** 를 사용 하 여 원본 xml 문서의 충실도를 유지 합니다 .이를 통해 **데이터 집합** 을 사용 하 여 xml 문서의 하위 집합을 노출할 수 있습니다.  
   
  다음 XML 문서에는 고객 정보, 주문한 품목 및 배송 정보 등 구매 주문과 관련된 모든 정보가 들어 있습니다.  
   
@@ -109,9 +109,9 @@ ms.locfileid: "47082464"
 </PurchaseOrder>  
 ```  
   
- 앞의 XML 문서에 포함된 구매 주문 정보 처리 단계는 회사의 현재 재고품으로 주문을 채우기 위한 것입니다. 회사 창고에서 주문을 채우는 직원은 구매 주문의 전체 내용을 확인할 필요가 없으며, 해당 주문에 대한 제품 정보만 확인하면 됩니다. XML 문서에서 제품 정보만 노출 하려면 강력한 형식의 만들 **데이터 집합** 스키마를 사용 하 여 순서가 지정 된 제품 및 수량에 매핑되는 XML 스키마 정의 언어 (XSD) 스키마로 작성 합니다. 에 대 한 자세한 내용은 강력한 **데이터 집합** 개체를 참조 하십시오 [형식화 된 데이터 집합](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)합니다.  
+ 앞의 XML 문서에 포함된 구매 주문 정보 처리 단계는 회사의 현재 재고품으로 주문을 채우기 위한 것입니다. 회사 창고에서 주문을 채우는 직원은 구매 주문의 전체 내용을 확인할 필요가 없으며, 해당 주문에 대한 제품 정보만 확인하면 됩니다. XML 문서의 제품 정보만 표시 하려면 XSD (XML 스키마 정의 언어) 스키마로 작성 된 스키마를 사용 하 여 주문 된 제품 및 수량에 매핑되는 강력한 형식의 **데이터 집합** 을 만듭니다. 강력한 형식의 **데이터 집합** 개체에 대 한 자세한 내용은 [형식화 된 데이터](typed-datasets.md)집합을 참조 하세요.  
   
- 다음 코드는 스키마를 보여 줍니다. 강력한 형식의 **데이터 집합** 이 샘플에 대해 생성 됩니다.  
+ 다음 코드에서는이 샘플에 대해 강력한 형식의 **데이터 집합** 을 생성 하는 스키마를 보여 줍니다.  
   
 ```xml  
 <?xml version="1.0" standalone="yes"?>  
@@ -157,11 +157,11 @@ ms.locfileid: "47082464"
 </xs:schema>  
 ```  
   
- 정보만 합니다 **OrderDetails** 및 **제품** 원래 XML 문서의 요소에 대 한 스키마에 포함 됩니다는 **데이터 집합**합니다. 동기화를 **데이터 집합** 사용 하 여는 **XmlDataDocument** 요소에 포함 되지 않은 되도록 합니다 **데이터 집합** XML 문서에 계속 유지 됩니다.  
+ 원래 XML 문서의 **OrderDetails** 및 **Products** 요소에 있는 정보만 **데이터 집합**에 대 한 스키마에 포함 됩니다. **데이터 집합** 을 **XmlDataDocument** 와 동기화 하면 **데이터 집합** 에 포함 되지 않은 요소가 XML 문서와 함께 유지 됩니다.  
   
- 강력한 형식의 사용 하 여 **데이터 집합** XML 스키마에서 생성 된 (네임 스페이스를 사용 하 여 **Northwind.FillOrder**)를 동기화 하 여 원래 XML 문서의 일부를 노출할 수 있습니다는  **데이터 집합** 사용 하 여 합니다 **XmlDataDocument** 원본 XML 문서에서 로드 합니다. 에 **데이터 집합** 에서 생성 된 스키마 데이터 없이 구조만 포함 합니다. XML을 로드 하는 경우 데이터 입력은 **XmlDataDocument**합니다. 로드 하려는 경우는 **XmlDataDocument** 사용 하 여 동기화 된를 **데이터 집합** 이미 포함 하는 데이터, 예외가 throw 됩니다.  
+ XML 스키마에서 생성 된 강력한 형식의 **데이터 집합** (XmlDataDocument **의 네임**스페이스 포함)을 사용 하면 **데이터 집합** 을 로드 된 와 동기화 하 여 원래 xml 문서의 일부를 노출할 수 있습니다. 원본 XML 문서에서 스키마에서 생성 된 **데이터 집합** 에는 구조는 포함 되지만 데이터는 포함 되지 않습니다. **XmlDataDocument**에 XML을 로드 하면 데이터가 채워집니다. 이미 데이터가 포함 된 데이터 **집합과** 동기화 된 **XmlDataDocument** 를 로드 하려고 하면 예외가 throw 됩니다.  
   
- 후는 **데이터 집합** (및 **XmlDataDocument**)가 업데이트 되는 **XmlDataDocument** 수정 된 XML 문서에서 무시 된 요소를 사용 하 여 작성할 수 있습니다는 **데이터 집합** 아래와 같이 그대로 계속 합니다. 구매 주문 시나리오에서 주문 항목을 채웠으면 수정된 XML 문서를 주문 과정의 다음 단계인 회사의 배송 부서로 전달할 수 있습니다.  
+ **데이터 집합** (및 **XmlDataDocument**)을 업데이트 한 **후에는** 아래와 같이 **데이터 집합** 에서 무시 된 요소가 그대로 남아 있는 수정 된 XML 문서를 작성할 수 있습니다. 구매 주문 시나리오에서 주문 항목을 채웠으면 수정된 XML 문서를 주문 과정의 다음 단계인 회사의 배송 부서로 전달할 수 있습니다.  
   
 ```vb  
 Imports System  
@@ -231,6 +231,7 @@ public class Sample
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [데이터 집합 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [데이터 세트 및 XmlDataDocument 동기화](dataset-and-xmldatadocument-synchronization.md)
+- [ADO.NET 개요](../ado-net-overview.md)

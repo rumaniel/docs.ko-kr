@@ -1,19 +1,19 @@
 ---
-title: .NET Core로 이식 - Windows 호환 기능 팩 사용
+title: Windows 호환성 팩을 사용하여 코드를 .NET Core로 포팅
 description: Windows 호환 기능 팩 및 이를 사용하여 기존 .NET Framework 코드를 .NET Core로 이식하는 방법에 대해 알아보기
 author: terrajobst
-ms.author: mairaw
-ms.date: 11/13/2017
-ms.openlocfilehash: 51b96d7828285964c1b0cbb835b8eb5ed92c47d6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 12/07/2018
+ms.custom: seodec18
+ms.openlocfilehash: 71e390881d4e9c7836622abeed49c0ea2e5f7526
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34566175"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70202557"
 ---
-# <a name="using-the-windows-compatibility-pack"></a>Windows 호환 기능 팩 사용
+# <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>Windows 호환성 팩을 사용하여 코드를 .NET Core로 포팅
 
-개발자가 기존 코드를 .NET Core에 이식할 때 직면하는 가장 일반적인 문제 중 하나는 API 및 .NET Framework에만 존재하는 기술에 의존하는 것입니다. *Windows 호환 기능 팩*은 .NET Core 응용 프로그램 뿐만 아니라 .NET Standard 라이브러리를 빌드하는 것이 기존 코드에 더욱 실행 가능할 수 있도록 이러한 많은 기술을 제공하는 것에 대한 것입니다.
+기존 코드를 .NET Core로 포팅할 때 가장 일반적인 문제 중 일부는 .NET Framework에만 있는 API 및 기술에 대한 종속성입니다. ‘Windows 호환성 팩’은 이러한 기술을 대부분 제공하므로 .NET Core 애플리케이션과 .NET Standard 라이브러리를 훨씬 쉽게 빌드할 수 있습니다. 
 
 이 패키지는 수정 없이 API 집합 및 기존 코드 컴파일을 크게 증가시키는 논리적 [.NET Standard 2.0의 확장](../whats-new/dotnet-core-2-0.md#api-changes-and-library-support)입니다. 그러나 .NET Standard에 대한 약속을 지키기 위해("모든 .NET 구현이 제공하는 API의 집합") 레지스트리, WMI(Windows Management Instrumentation) 또는 리플렉션 내보내기 API와 같은 모든 플랫폼에서 작동할 수 없는 기술을 포함하지 않았습니다.
 
@@ -43,7 +43,7 @@ Windows 전용을 포함하는 약 20,000 개의 API와 다음과 같은 기술 
 * Windows 런타임 캐싱
 * Windows 서비스
 
-자세한 내용은 [호환 기능 팩의 사양](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)을 참조하세요.
+자세한 내용은 [호환성 팩의 사양](https://github.com/dotnet/designs/blob/master/accepted/compat-pack/compat-pack.md)을 참조하세요.
 
 ## <a name="get-started"></a>시작
 
@@ -53,7 +53,7 @@ Windows 전용을 포함하는 약 20,000 개의 API와 다음과 같은 기술 
 
 3. Windows에서 유지하려는 경우 모두 준비되었습니다.
 
-4. Linux 또는 macOS에서 .NET Core 응용 프로그램 또는 .NET Standard 라이브러리를 실행하려는 경우 [API 분석기](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/)를 사용하여 플랫폼 간에 작동하지 않는 API의 사용량을 찾습니다.
+4. Linux 또는 macOS에서 .NET Core 애플리케이션 또는 .NET Standard 라이브러리를 실행하려는 경우 [API 분석기](../../standard/analyzers/api-analyzer.md)를 사용하여 플랫폼 간에 작동하지 않는 API의 사용량을 찾습니다.
 
 5. 이러한 API의 사용량을 제거하거나 플랫폼 간 대체 방법으로 바꾸거나 다음과 같은 플랫폼 검사를 사용하여 보호합니다.
 
@@ -78,4 +78,3 @@ Windows 전용을 포함하는 약 20,000 개의 API와 다음과 같은 기술 
     ```
 
 데모의 경우 [Windows 호환 기능 팩의 Channel 9 비디오](https://channel9.msdn.com/Events/Connect/2017/T123)를 확인하세요.
-

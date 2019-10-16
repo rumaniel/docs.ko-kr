@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
-ms.openlocfilehash: 7d982b73332a2629ccd32c409e0de6fe1ce6eb98
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d773b6e49a9f3c2909b2479abdc498d4b059f660
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878113"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>GUID 및 uniqueidentifier 값 비교
 SQL Server의 GUID(Globally Unique Identifier) 데이터 형식은 16바이트 이진 값을 저장하는 `uniqueidentifier` 데이터 형식으로 표현됩니다. GUID는 이진수이며 주로 여러 사이트에 많은 컴퓨터를 가지고 있는 네트워크에서 고유해야 하는 식별자로 사용됩니다. GUID는 Transact-SQL NEWID 함수를 호출하여 생성되며 전체 영역에서 고유성이 보장됩니다. 자세한 내용은 [고유 식별자 (Transact SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql)합니다.  
@@ -45,7 +45,7 @@ Sorted SqlGuids:
 1aaaaaaa-bbbb-cccc-dddd-3eeeeeeeeeee  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
 
-[SQL Server 데이터 형식 및 ADO.NET](sql-server-data-types.md)  
-[ADO.NET 개요](../ado-net-overview.md)  
+- [SQL Server 데이터 형식 및 ADO.NET](sql-server-data-types.md)
+- [ADO.NET 개요](../ado-net-overview.md)

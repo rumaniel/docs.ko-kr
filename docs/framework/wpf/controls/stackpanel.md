@@ -8,18 +8,18 @@ helpviewer_keywords:
 - StackPanel control [WPF]
 - controls [WPF], StackPanel
 ms.assetid: a82b824c-1b98-49a9-b7fd-2d9c154dd002
-ms.openlocfilehash: b901c256491b24c0583835fab36744733c545920
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: df78e1037f0bc444d5ae3820eda5d461a415e265
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791029"
 ---
 # <a name="stackpanel"></a>StackPanel
-<xref:System.Windows.Controls.StackPanel> 요소는 가로 또는 세로로 자식 요소를 스택 하는 데 사용 됩니다.  
+<xref:System.Windows.Controls.StackPanel> 요소 자식 요소를 가로 또는 세로로 누적 하는 데 사용 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법 항목](../../../../docs/framework/wpf/controls/stackpanel-how-to-topics.md)  
+ [방법 항목](stackpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Panel>  
@@ -37,8 +37,8 @@ ms.locfileid: "33553743"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>관련 단원  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)  
+ [레이아웃](../advanced/layout.md)  
   
- [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 개요](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 개요](scrollviewer-overview.md)

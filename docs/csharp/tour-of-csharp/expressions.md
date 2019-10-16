@@ -1,14 +1,14 @@
 ---
 title: C# 식 - C# 언어 둘러보기
-description: 식, 피연산자 및 연산자는 C# 언어의 기본 구성 요소입니다.
-ms.date: 11/06/2016
+description: 식, 피연산자 및 연산자는 C# 언어의 블록을 빌드합니다.
+ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 8fa1c5d0464644b26eb457bca8ecaf007c288f42
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2553730d495942730c53d3646f35e80759a4d168
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352304"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609325"
 ---
 # <a name="expressions"></a>식
 
@@ -18,79 +18,17 @@ ms.locfileid: "33352304"
 
 피연산자는 동일한 우선 순위를 가진 두 연산자 사이에 나올 경우 연산자의 *결합성*에 따라 연산이 수행되는 순서가 제어됩니다.
 
-*   대입 연산자를 제외하고 모든 이항 연산자는 *왼쪽 결합성*을 갖습니다. 즉, 연산이 왼쪽에서 오른쪽으로 수행됩니다. 예를 들어, `x + y + z`는 `(x + y) + z`로 계산됩니다.
-*   대입 연산자 및 조건부 연산자(`?:`)는 *오른쪽 결합성*을 갖습니다. 즉, 연산이 오른쪽에서 왼쪽으로 수행됩니다. 예를 들어, `x = y = z`는 `x = (y = z)`로 계산됩니다.
+* 대입 연산자를 제외하고 모든 이항 연산자는 *왼쪽 결합성*을 갖습니다. 즉, 연산이 왼쪽에서 오른쪽으로 수행됩니다. 예를 들어, `x + y + z`는 `(x + y) + z`로 계산됩니다.
+* 대입 연산자 및 조건부 연산자(`?:`)는 *오른쪽 결합성*을 갖습니다. 즉, 연산이 오른쪽에서 왼쪽으로 수행됩니다. 예를 들어, `x = y = z`는 `x = (y = z)`로 계산됩니다.
 
 우선 순위 및 결합성은 괄호를 사용하여 제어할 수 있습니다. 예를 들어 `x + y * z`는 먼저 `y`와 `z`를 곱한 다음 그 결과를 `x`와 더하지만 `(x + y) * z`는 먼저 `x`와 `y`를 더한 다음 그 결과에 `z`를 곱합니다.
 
-대부분의 연산자는 *오버로드*할 수 있습니다. 연산자 오버로드는 피연산자 중 하나 또는 둘 다가 사용자 정의 클래스 또는 구조체 형식인 연산에 대해 사용자 정의 연산자 구현을 지정할 수 있도록 허용합니다.
+대부분의 연산자는 [*오버로드*](../language-reference/operators/operator-overloading.md)할 수 있습니다. 연산자 오버로드는 피연산자 중 하나 또는 둘 다가 사용자 정의 클래스 또는 구조체 형식인 연산에 대해 사용자 정의 연산자 구현을 지정할 수 있도록 허용합니다.
 
-다음에서는 C# 연산자를 요약하고 가장 높은 우선 순위부터 연산자 범주를 나열합니다. 동일한 범주의 연산자는 우선 순위가 같습니다. 각 범주 아래에는 해당 범주의 식 목록과 해당 식 형식에 대한 설명이 나옵니다.
+C#은 [산술](../language-reference/operators/arithmetic-operators.md), [논리](../language-reference/operators/boolean-logical-operators.md), [비트 및 시프트](../language-reference/operators/bitwise-and-shift-operators.md) 연산과 [같음](../language-reference/operators/equality-operators.md) 및 [순서](../language-reference/operators/comparison-operators.md) 비교를 수행하는 여러 연산자를 제공합니다.
 
-* 기본 연산자
-    - `x.m`: 멤버 액세스
-    - `x(...)`: 메서드 및 대리자 호출
-    - `x[...]`: 배열 및 인덱서 액세스
-    - `x++`: 후위 증가
-    - `x--`: 후위 감소
-    - `new T(...)`: 개체 및 대리자 생성
-    - `new T(...){...}`: 이니셜라이저를 사용한 개체 생성
-    - `new {...}`: 익명 개체 이니셜라이저
-    - `new T[...]`: 배열 생성
-    - `typeof(T)`: `T`에 대한 <xref:System.Type> 개체 가져오기
-    - `checked(x)`: checked 컨텍스트에서 식 계산
-    - `unchecked(x)`: unchecked 컨텍스트에서 식 계산
-    - `default(T)`: `T` 형식의 기본값 가져오기
-    - `delegate {...}`: 익명 함수(무명 메서드)
-* 단항
-    - `+x`: ID
-    - `-x`: 부정
-    - `!x`: 논리 부정
-    - `~x`: 비트 부정 연산
-    - `++x`: 전위 증가
-    - `--x`: 전위 감소
-    - `(T)x`: `x`를 `T` 형식으로 명시적 변환
-    - `await x`: 비동기적으로 `x` 완료 대기
-* 곱하기
-    - `x * y`: 곱하기
-    - `x / y`: 나누기
-    - `x % y`: 나머지
-* 더하기
-    - `x + y`: 더하기, 문자열 연결, 대리자 결합
-    - `x – y`: 빼기, 대리자 제거
-* 시프트
-    - `x << y`: 왼쪽 시프트
-    - `x >> y`: 오른쪽 시프트
-* 관계형 및 형식 테스트
-    - `x < y`: 보다 작음
-    - `x > y`: 보다 큼
-    - `x <= y`: 작거나 같음
-    - `x >= y`: 크거나 같음
-    - `x is T`: `x`가 `T`이면 `true` 반환, 그렇지 않으면 `false` 반환
-    - `x as T`: `T`로 형식이 지정된 `x` 반환, `x`가 `T`가 아닌 경우 `null` 반환
-* 같음
-    - `x == y`: 같음
-    - `x != y`: 같지 않음
-* 논리적 AND
-    - `x & y`: 정수 비트 AND, 부울 논리곱 AND
-* 논리 XOR
-    - `x ^ y`: 정수 비트 XOR, 부울 논리곱 XOR
-* 논리적 OR
-    - `x | y`: 정수 비트 OR, 부울 논리곱 OR
-* 조건부 AND
-    - `x && y`: `x`가 `false`가 아닌 경우에만 `y` 평가
-* 조건부 OR
-    - `x || y`: `x`가 `true`가 아닌 경우에만 `y` 평가
-* Null 결합
-    - `x ?? y`: `x`가 null이면 `y`, 그렇지 않으면 `x`로 평가
-* 조건
-    - `x ? y : z`: `x`가 `true`이면 `y`, `x`가 `false`이면 `z`로 평가
-* 대입 또는 익명 함수
-    - `x = y`: 대입
-    - `x op= y`: 복합 대입. 지원되는 연산자는 다음과 같습니다.
-        - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-    - `(T x) => y`: 익명 함수(람다 식)
+우선 순위 수준에 따라 정렬된 전체 연산자 목록은 [C# 연산자](../language-reference/operators/index.md)를 참조하세요.
 
->[!div class="step-by-step"]
-[이전](types-and-variables.md)
-[다음](statements.md)
+> [!div class="step-by-step"]
+> [이전](types-and-variables.md)
+> [다음](statements.md)

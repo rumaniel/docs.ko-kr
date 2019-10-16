@@ -5,34 +5,32 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 3707196cf833577e65dbd1879f2762ec4336abc2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 59d65601a37c9aba63708748a82fd5e85261b75b
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47073517"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042138"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 자동화 속성 개요
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- UI 자동화 공급자는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 요소에 속성을 노출합니다. 이러한 속성을 통해 UI 자동화 클라이언트 응용 프로그램은 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]항목에 대한 정보(특히 정적 및 동적 데이터를 포함한 컨트롤)를 검색할 수 있습니다.  
+ UI 자동화 공급자는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 요소에 속성을 노출합니다. 이러한 속성을 통해 UI 자동화 클라이언트 애플리케이션은 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]항목에 대한 정보(특히 정적 및 동적 데이터를 포함한 컨트롤)를 검색할 수 있습니다.  
   
  이 섹션에서는 광범위한 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 속성 개요를 제공합니다. 보다 구체적인 정보는 다음 항목에서 제공됩니다.  
   
--   [클라이언트의 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
+- [클라이언트의 UI 자동화 속성](ui-automation-properties-for-clients.md)  
   
--   [서버 쪽 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
+- [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)  
   
 <a name="Property_Identifiers"></a>   
 ## <a name="property-identifiers"></a>속성 식별자  
- 모든 속성은 숫자 및 이름으로 식별됩니다. 속성의 이름은 디버깅 및 진단용으로만 사용됩니다. 공급자는 숫자 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 를 사용하여 들어오는 속성 요청을 식별합니다. 그러나 클라이언트 응용 프로그램은 숫자 및 이름 캡슐화하는 <xref:System.Windows.Automation.AutomationProperty>만 사용하여 검색하려는 속성을 식별합니다.  
+ 모든 속성은 숫자 및 이름으로 식별됩니다. 속성의 이름은 디버깅 및 진단용으로만 사용됩니다. 공급자는 숫자 Id를 사용 하 여 들어오는 속성 요청을 식별 합니다. 그러나 클라이언트 애플리케이션은 숫자 및 이름 캡슐화하는 <xref:System.Windows.Automation.AutomationProperty>만 사용하여 검색하려는 속성을 식별합니다.  
   
  특정 속성을 나타내는<xref:System.Windows.Automation.AutomationProperty> 개체는 다양한 클래스에 필드로 사용할 수 있습니다. 보안상의 이유로, UI 자동화 공급자는 Uiautomationtypes.dll에 포함된 별도의 클래스 집합에서 이러한 개체를 가져옵니다.  
   
- 다음 표에서는 <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)]를 참조하세요.  
+ 다음 표에서는 id를 <xref:System.Windows.Automation.AutomationProperty>포함 하는 클래스로 속성을 분류 합니다.  
   
 |속성의 종류|클라이언트가 ID를 가져오는 위치|공급자 ID를 가져오는 위치|  
 |-------------------------|--------------------------|----------------------------|  
@@ -55,12 +53,12 @@ ms.locfileid: "47073517"
   
 <a name="Properties_by_Category"></a>   
 ## <a name="properties-by-category"></a>범주별 속성  
- 다음 표에서는 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 가 <xref:System.Windows.Automation.AutomationElement> 및 <xref:System.Windows.Automation.AutomationElementIdentifiers>에 있는 속성을 분류합니다. 이러한 속성은 모든 컨트롤에 공통됩니다. 일부를 제외한 모든 속성은 공급자 응용 프로그램의 수명 동안 정적일 가능성이 높습니다. 대부분의 동적 속성은 컨트롤 패턴과 연결되어 있습니다.  
+ 다음 표에서는 및 <xref:System.Windows.Automation.AutomationElement> <xref:System.Windows.Automation.AutomationElementIdentifiers>에서 id를 찾을 수 있는 속성을 분류 합니다. 이러한 속성은 모든 컨트롤에 공통됩니다. 일부를 제외한 모든 속성은 공급자 애플리케이션의 수명 동안 정적일 가능성이 높습니다. 대부분의 동적 속성은 컨트롤 패턴과 연결되어 있습니다.  
   
- **속성 액세스** 열에는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 및 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>외에도 각 속성에 대한 기타 접근자가 나열됩니다. 클라이언트 응용 프로그램에서 속성을 가져오는 방법에 대한 자세한 내용은 [UI Automation Properties for Clients](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)을 참조하세요.  
+ **속성 액세스** 열에는 <xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A> 및 <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>외에도 각 속성에 대한 기타 접근자가 나열됩니다. 클라이언트 애플리케이션에서 속성을 가져오는 방법에 대한 자세한 내용은 [UI Automation Properties for Clients](ui-automation-properties-for-clients.md)을 참조하세요.  
   
 > [!NOTE]
->  각 속성에 대한 특정 정보를 보려면 **속성 액세스** 열에 있는 링크를 클릭하세요.  
+> 각 속성에 대한 특정 정보를 보려면 **속성 액세스** 열에 있는 링크를 클릭하세요.  
   
 ### <a name="display-characteristics"></a>특성 표시  
   
@@ -141,30 +139,31 @@ ms.locfileid: "47073517"
 ## <a name="localization"></a>지역화  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 공급자는 운영 체제의 언어에 다음과 같은 속성을 제공해야 합니다.  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.AccessKeyProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.HelpTextProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>  
   
--   <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
+- <xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>  
   
 <a name="Properties_and_Events"></a>   
 ## <a name="properties-and-events"></a>속성 및 이벤트  
- 의 속성을 사용한 밀접한 관계는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 변경 이벤트의 개념입니다. 동적 속성의 경우, 클라이언트 응용 프로그램에서는 속성 값이 변경되었는지 확인하는 방법이 필요합니다. 그에 따라 정보 캐시를 업데이트하거나 다른 방법으로 새로운 정보에 대응할 수 있습니다.  
+ 의 속성을 사용한 밀접한 관계는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 속성 변경 이벤트의 개념입니다. 동적 속성의 경우, 클라이언트 애플리케이션에서는 속성 값이 변경되었는지 확인하는 방법이 필요합니다. 그에 따라 정보 캐시를 업데이트하거나 다른 방법으로 새로운 정보에 대응할 수 있습니다.  
   
  [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 에 변경이 수행되면 공급자가 이벤트를 발생시킵니다. 예를 들어, 확인란이 선택되거나 선택 취소되면 공급자의 Toggle 패턴 구현에서 속성 변경 이벤트가 발생합니다. 공급자는 클라이언트가 이벤트 또는 특정 이벤트를 수신 대기하는지에 따라 선택적으로 이벤트를 발생시킬 수 있습니다.  
   
- 일부 공급자는 이벤트를 발생시키지 않습니다. 이는 요소에 대한 UI 자동화 공급자의 구현에 따라 다릅니다. 예를 들어, 목록 상자에 대한 표준 프록시 공급자는 <xref:System.Windows.Automation.SelectionPattern.SelectionProperty> 가 변경될 때 이벤트를 발생시키지 않습니다. 이 경우, 응용 프로그램은 <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>를 수신 대기합니다.  
+ 일부 공급자는 이벤트를 발생시키지 않습니다. 이는 요소에 대한 UI 자동화 공급자의 구현에 따라 다릅니다. 예를 들어, 목록 상자에 대한 표준 프록시 공급자는 <xref:System.Windows.Automation.SelectionPattern.SelectionProperty> 가 변경될 때 이벤트를 발생시키지 않습니다. 이 경우, 애플리케이션은 <xref:System.Windows.Automation.SelectionItemPattern.ElementSelectedEvent>를 수신 대기합니다.  
   
  클라이언트는 이벤트를 구독하여 이벤트를 수신 대기합니다. 이벤트를 구독하는 것은 이벤트를 처리할 수 있는 대리자 메서드를 만들고, 이러한 메서드에서 처리될 특정 이벤트와 함께 해당 메서드를 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 에 전달한다는 의미입니다. 특히 속성 변경 이벤트의 경우 클라이언트는 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>를 구현해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [UI 자동화 클라이언트의 캐싱](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)  
- [클라이언트의 UI 자동화 속성](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)  
- [서버 쪽 UI 자동화 공급자 구현](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)  
- [속성 조건을 기반으로 UI 자동화 요소 찾기](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)  
- [UI 자동화 공급자에서 속성 반환](../../../docs/framework/ui-automation/return-properties-from-a-ui-automation-provider.md)  
- [UI 자동화 공급자에서 이벤트 발생](../../../docs/framework/ui-automation/raise-events-from-a-ui-automation-provider.md)
+## <a name="see-also"></a>참고자료
+
+- [UI 자동화 클라이언트의 캐싱](caching-in-ui-automation-clients.md)
+- [클라이언트의 UI 자동화 속성](ui-automation-properties-for-clients.md)
+- [서버 쪽 UI 자동화 공급자 구현](server-side-ui-automation-provider-implementation.md)
+- [속성 조건을 기반으로 UI 자동화 요소 찾기](find-a-ui-automation-element-based-on-a-property-condition.md)
+- [UI 자동화 공급자에서 속성 반환](return-properties-from-a-ui-automation-provider.md)
+- [UI 자동화 공급자에서 이벤트 발생](raise-events-from-a-ui-automation-provider.md)

@@ -1,20 +1,19 @@
 ---
 title: 예외 Throw
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - exceptions, throwing
 - explicitly throwing exceptions
 - throwing exceptions, design guidelines
 ms.assetid: 5388e02b-52f5-460e-a2b5-eeafe60eeebe
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9fbbe84811e3fa096b9e13c459143311bb75a198
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+author: KrzysztofCwalina
+ms.openlocfilehash: 74eee418a3c87b335cdf96557c4e17b95aff7b58
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669071"
 ---
 # <a name="exception-throwing"></a>예외 Throw
 이 섹션에서 설명 하는 예외를 발생 시키는 지침 실행 오류의 의미를 정의 하는 것 필요 합니다. 된 구성원이 수행할 수 없습니다 실행 실패가 발생할 때마다 (어떤 멤버 이름을 의미 함)를 수행 하도록 설계 되었습니다. 예를 들어 경우는 `OpenFile` 메서드 호출자에 게 열려 있는 파일 핸들을 반환할 수 없습니다, 실행 실패로 간주 됩니다.  
@@ -63,9 +62,9 @@ ms.locfileid: "47397909"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [예외 디자인 지침](../../../docs/standard/design-guidelines/exceptions.md)

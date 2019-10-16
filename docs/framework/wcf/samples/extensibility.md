@@ -3,11 +3,11 @@ title: 확장성
 ms.date: 03/30/2017
 ms.assetid: cd7ddffc-a261-44aa-bd50-33c1c74f0df0
 ms.openlocfilehash: af6bbb5ea703c83ec38b97fae5a6f4bd266479b3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969340"
 ---
 # <a name="extensibility"></a>확장성
 이 섹션에는 사용자 지정 확장성 및 Windows Communication Foundation (WCF)의 다른 기능을 처리 하는 샘플이 들어 있습니다.  

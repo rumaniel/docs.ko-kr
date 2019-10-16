@@ -1,17 +1,17 @@
 ---
-title: '&lt;ImpliesType&gt; 요소(.NET 네이티브)'
+title: <ImpliesType>요소 (.NET 네이티브)
 ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97b3e63ceb4b121c3e71e33a00fdf725258039c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 10fa3a0ac04038bb686311a4d86c99442c0fcf26
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33395592"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71049671"
 ---
-# <a name="ltimpliestypegt-element-net-native"></a>&lt;ImpliesType&gt; 요소(.NET 네이티브)
+# <a name="impliestype-element-net-native"></a>\<ImpliesType > 요소 (.NET 네이티브)
 포함 형식 또는 메서드에 정책이 적용된 경우 해당 정책을 형식에 적용합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -35,7 +35,7 @@ ms.locfileid: "33395592"
   
 ### <a name="attributes"></a>특성  
   
-|특성|특성 형식|설명|  
+|특성|특성 유형|Description|  
 |---------------|--------------------|-----------------|  
 |`Name`|일반|필수 특성입니다. 형식 이름을 지정합니다.|  
 |`Activate`|반사|선택적 특성입니다. 인스턴스를 활성화할 수 있도록 생성자에 대한 런타임 액세스를 제어합니다.|  
@@ -57,27 +57,27 @@ ms.locfileid: "33395592"
   
 ## <a name="all-other-attributes"></a>기타 모든 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
-|*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)을 참조하세요.|  
+|*policy_setting*|이 정책 형식에 적용할 설정입니다. 가능한 값은 `All`, `Auto`, `Excluded`, `Public`, `PublicAndInternal`, `Required Public`, `Required PublicAndInternal` 및 `Required All`입니다. 자세한 내용은 [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)을 참조하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|메서드에 리플렉션 정책을 적용합니다.|  
+|[\<Type>](type-element-net-native.md)|형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
+|[\<TypeInstantiation>](typeinstantiation-element-net-native.md)|생성된 제네릭 형식 및 모든 해당 멤버에 리플렉션 정책을 적용합니다.|  
+|[\<Method>](method-element-net-native.md)|메서드에 리플렉션 정책을 적용합니다.|  
   
 ## <a name="remarks"></a>설명  
  `<ImpliesType>` 요소는 주로 라이브러리에서 사용되며 다음과 같은 시나리오를 해결합니다.  
   
--   형식 하나에 대해 루틴을 리플렉션해야 하면 두 번째 형식에 대해서도 루틴을 리플렉션해야 하는 경우  
+- 형식 하나에 대해 루틴을 리플렉션해야 하면 두 번째 형식에 대해서도 루틴을 리플렉션해야 하는 경우  
   
--   정적 분석에서 필요한 것으로 표시하지 않았기 때문에 두 번째 형식의 암시적 인스턴스화에 대한 메타데이터를 사용할 수 없는 경우  
+- 정적 분석에서 필요한 것으로 표시하지 않았기 때문에 두 번째 형식의 암시적 인스턴스화에 대한 메타데이터를 사용할 수 없는 경우  
   
  가장 일반적인 두 가지 형식은 공유 형식 인수가 있는 제네릭 인스턴스화입니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "33395592"
   
  이 지시문은 `Explicit`의 인스턴스화에 정의된 `Dynamic` 정책 설정이 없으면 아무런 영향을 주지 않습니다. 예를 들어 `Explicit<Int32>`의 경우 `Implicit<Int32>`는 공용 멤버가 루트에 있는 상태로 인스턴스화되며 동적 프로그래밍을 위해 해당 메타데이터에 액세스할 수 있습니다.  
   
- 다음은 하나 이상의 serializer에 적용되는 실제 예제입니다. 지시문은 `IList<`*something*`>`으로 형식화된 항목을 반영하는 동시에 응용 프로그램별 주석이 없어도 해당 `List<`*something*`>` 형식도 반영해야 하는 요구 사항을 캡처합니다.  
+ 다음은 하나 이상의 serializer에 적용되는 실제 예제입니다. 지시문은 `IList<`*something*`>`으로 형식화된 항목을 반영하는 동시에 애플리케이션별 주석이 없어도 해당 `List<`*something*`>` 형식도 반영해야 하는 요구 사항을 캡처합니다.  
   
 ```xml  
 <Type Name="System.Collections.Generic.IList{T}">  
@@ -99,7 +99,7 @@ ms.locfileid: "33395592"
 </Type>  
 ```  
   
- `<ImpliesType>` 요소는 `<Method>` 내에서도 나타날 수 있습니다. 경우에 따라 제네릭 메서드를 인스턴스화하면 형식 인스턴스화에 대한 리플렉션이 수행될 수 있기 때문입니다. 지정한 라이브러리가 연결된 <xref:System.Collections.Generic.List%601> 및 <xref:System.Array> 형식과 함께 동적으로 액세스하는 제네릭 메서드 `IEnumerable<T> MakeEnumerable<T>(string` `spelling``, T` `defaultValue``)`의 경우를 예로 들 수 있습니다. 이 예는 다음 코드와 같이 표시될 수 있습니다.  
+ `<ImpliesType>` 요소는 `<Method>` 내에서도 나타날 수 있습니다. 경우에 따라 제네릭 메서드를 인스턴스화하면 형식 인스턴스화에 대한 리플렉션이 수행될 수 있기 때문입니다. 예를 들어 지정 된 라이브러리가 연결 `IEnumerable<T> MakeEnumerable<T>(string spelling, T defaultValue)` <xref:System.Collections.Generic.List%601> 된 및 <xref:System.Array> 형식과 함께 동적으로 액세스 하는 제네릭 메서드를 가정 합니다. 이 예는 다음 코드와 같이 표시될 수 있습니다.  
   
 ```xml  
 <Type Name="MyType">  
@@ -110,7 +110,8 @@ ms.locfileid: "33395592"
 </Type>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [런타임 지시문(rd.xml) 구성 파일 참조](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
- [런타임 지시문 요소](../../../docs/framework/net-native/runtime-directive-elements.md)  
- [런타임 지시문 정책 설정](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
+## <a name="see-also"></a>참고자료
+
+- [런타임 지시문(rd.xml) 구성 파일 참조](runtime-directives-rd-xml-configuration-file-reference.md)
+- [런타임 지시문 요소](runtime-directive-elements.md)
+- [런타임 지시문 정책 설정](runtime-directive-policy-settings.md)

@@ -16,39 +16,40 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b512389078ab022208c4b163edc8501a900669ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bf96770dd58c9b84596c082a615f626ec723cc6c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400366"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787241"
 ---
 # <a name="init-method"></a>Init 메서드
-구현 하는 개체를 준비는 [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) 사용 합니다.  
+사용할 [Ialink 인터페이스](ialink-interface.md) 를 구현 하는 개체를 준비 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT Init(  
     IMetaDataDispenserEx* pDispenser,  
     IMetaDataError* pErrorHandler  
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pDispenser`  
- [IMetaDataDispenserEx 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) 메타 데이터 디스펜서에 대 한 포인터입니다.  
+ 메타 데이터 디스펜서에 대 한 [IMetaDataDispenserEx 인터페이스](../metadata/imetadatadispenserex-interface.md) 포인터입니다.  
   
  `pErrorHandler`  
- [IMetaDataError 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) 인터페이스를 처리 하는 선택적 오류에 대 한 포인터입니다.  
+ 선택적 오류 처리 인터페이스에 대 한 [IMetaDataError 인터페이스](../metadata/imetadataerror-interface.md) 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h 필요  
+ Alink 필요  
   
-## <a name="see-also"></a>참고 항목  
- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>참고자료
+
+- [IALink 인터페이스](ialink-interface.md)
+- [IALink2 인터페이스](ialink2-interface.md)
+- [ALink API](index.md)

@@ -1,23 +1,23 @@
 ---
-title: WordprocessingML 문서의 스타일 부분1
+title: WordprocessingML 문서의 스타일 부분
 ms.date: 07/20/2015
 ms.assetid: 5458bccf-3898-4661-904b-7d280c9239a9
-ms.openlocfilehash: 96ed7445379d9a8ca64250ef4d923786555a3882
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 56726a7ea7594bfd1c68e5b1f8e45f585138eac6
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44179600"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868634"
 ---
 # <a name="style-part-of-a-wordprocessingml-document"></a>WordprocessingML 문서의 스타일 부분
 이 항목에서는 Office Open XML WordprocessingML 문서의 스타일 부분에 대한 예제를 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 Office Open XML WordprocessingML 문서의 스타일 부분을 구성하는 XML입니다.  
   
  기본 단락 스타일에는 다음과 같은 여는 태그를 가진 요소가 있습니다.  
   
-```  
+```xml
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal">  
 ```  
   
@@ -139,7 +139,3 @@ ms.locfileid: "44179600"
   </w:style>  
 </w:styles>  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [Office Open XML WordprocessingML 문서 정보(C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

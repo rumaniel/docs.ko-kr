@@ -16,30 +16,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6761ff204d299bc2db84e2e80d988306125a110
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e2c3a3057003d0035bfcb096a94c84d610e3056f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985514"
 ---
 # <a name="iappdomainbinding-interface"></a>IAppDomainBinding 인터페이스
-공용 언어 런타임 (CLR) 응용 프로그램 도메인을 이미 만들었다고 호스트 응용 프로그램에 알리기 위해 호출 하는 방법을 제공 합니다.  
+CLR (공용 언어 런타임) 응용 프로그램 도메인이 만들어졌는지 호스트 응용 프로그램에 알리기 위해 호출 하는 방법을 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
 |메서드|설명|  
 |------------|-----------------|  
-|[OnAppDomain 메서드](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|공용 언어 런타임 (CLR)는 응용 프로그램 도메인이 생성 된 호스트에 알리기 위해 호출 됩니다.|  
+|[OnAppDomain 메서드](../../../../docs/framework/unmanaged-api/hosting/iappdomainbinding-onappdomain-method.md)|CLR (공용 언어 런타임) 응용 프로그램 도메인이 만들어졌는지 호스트에 알리기 위해 호출 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

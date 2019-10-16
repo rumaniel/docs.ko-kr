@@ -2,12 +2,12 @@
 title: C# 7.3의 새로운 기능
 description: C# 7.3의 새로운 기능에 대한 개요입니다.
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: ca53073db1b61300186a483001f79bf0caa79169
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873802"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433519"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3의 새로운 기능
 
@@ -34,7 +34,12 @@ C# 7.3 릴리스에는 두 개의 기본 테마가 있습니다. 하나의 테�
 - `-publicsign` - OSS(오픈 소스 소프트웨어) 시그니처를 사용하도록 설정합니다.
 - `-pathmap` - 소스 디렉터리에 대한 매핑을 제공합니다.
 
-이 문서의 나머지 부분에서는 각 개선 사항에 대해 자세히 알아보기 위한 세부 정보와 링크를 제공합니다.
+이 문서의 나머지 부분에서는 각 개선 사항에 대해 자세히 알아보기 위한 세부 정보와 링크를 제공합니다. `dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.
+
+1. [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 글로벌 도구를 설치합니다.
+1. [dotnet/try-samples](https://github.com/dotnet/try-samples) 리포지토리를 복제합니다.
+1. 현재 디렉터리를 *try-samples* 리포지토리의 *csharp7* 하위 디렉터리로 설정합니다.
+1. `dotnet try`를 실행합니다.
 
 ## <a name="enabling-more-efficient-safe-code"></a>좀 더 효율적인 안전한 코드 사용
 
@@ -51,7 +56,7 @@ unsafe struct S
 }
 ```
 
-이전 버전의 C#에서는 `myFixedField`의 일부인 정수 중 하나에 액세스하려면 변수를 고정해야 했습니다. 이제 다음 코드는 안전한 컨텍스트에서 컴파일됩니다.
+이전 버전의 C#에서는 `myFixedField`의 일부인 정수 중 하나에 액세스하려면 변수를 고정해야 했습니다. 이제 다음 코드는 별도의 `fixed` 문 안에 `p` 변수를 고정하지 않고 컴파일됩니다.
 
 ```csharp
 class C
@@ -112,7 +117,7 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-자세한 내용은 언어 참조에서 [`stackalloc` 문](../language-reference/keywords/stackalloc.md) 문서를 참조하세요.
+자세한 내용은 [`stackalloc` 연산자](../language-reference/operators/stackalloc.md) 문서를 참조하세요.
 
 ### <a name="more-types-support-the-fixed-statement"></a>더 많은 형식이 `fixed` 문을 지원함
 
@@ -124,7 +129,7 @@ Span<int> arr = stackalloc [] {1, 2, 3};
 
 이제 형식 매개 변수에 대한 기본 클래스 제약 조건으로 <xref:System.Enum?displayProperty=nameWithType> 또는 <xref:System.Delegate?displayProperty=nameWithType> 형식을 지정할 수 있습니다.
 
-또한 새 `unmanaged` 제약 조건을 사용하여 형식 매개 변수가 **관리되지 않는 형식**이 되도록 지정할 수 있습니다. **관리되지 않는 형식**은 참조 형식이 아니고 모든 중첩 수준의 참조 형식을 포함하지 않는 형식입니다.
+또한 새 `unmanaged` 제약 조건을 사용하여 형식 매개 변수가 [관리되지 않는 형식](../language-reference/builtin-types/unmanaged-types.md)이 되도록 지정할 수 있습니다.
 
 자세한 내용은 [`where` 제네릭 제약 조건](../language-reference/keywords/where-generic-type-constraint.md) 및 [형식 매개 변수 제약 조건](../programming-guide/generics/constraints-on-type-parameters.md)에 대한 문서를 참조하세요.
 

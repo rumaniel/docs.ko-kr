@@ -1,30 +1,32 @@
 ---
-title: '&lt;namespaceTable&gt;의 &lt;add&gt;'
+title: <namespaceTable>의 <add>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 5ae672f12a2ef58efc9738624c113855e59e02b6
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3b3b4a1584b37601269368ee0e4e973626ddf9cf
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748635"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850389"
 ---
-# <a name="ltaddgt-of-ltnamespacetablegt"></a>&lt;namespaceTable&gt;의 &lt;add&gt;
+# <a name="add-of-namespacetable"></a>\<\<namespaceTable > > 추가
 매핑을 앞에 붙인 다음 XPath 필터에서 라우팅에 사용할 수 있는 네임스페이스를 포함하는 구성 요소를 나타냅니다.  
   
- \<system.serviceModel>  
-\<라우팅 >  
-\<namespaceTable >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<라우팅 >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<namespaceTable >** ](namespacetable.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 추가**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-   <routing>   <namespaceTable>  
-     <add namespace="String" prefix="String" />    </namespaceTable></routing>  
-```  
-  
-```csharp  
+<routing>
+  <namespaceTable>
+    <add namespace="String"
+         prefix="String" />
+  </namespaceTable>
+</routing>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -42,9 +44,10 @@ ms.locfileid: "32748635"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<namespaceTable >](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|매핑을 앞에 붙인 다음 XPath 필터에서 라우팅에 사용할 수 있는 네임스페이스를 포함하는 요소 집합을 정의하기 위한 구성 섹션을 나타냅니다.|  
+|[\<namespaceTable>](namespacetable.md)|매핑을 앞에 붙인 다음 XPath 필터에서 라우팅에 사용할 수 있는 네임스페이스를 포함하는 요소 집합을 정의하기 위한 구성 섹션을 나타냅니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>    
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>

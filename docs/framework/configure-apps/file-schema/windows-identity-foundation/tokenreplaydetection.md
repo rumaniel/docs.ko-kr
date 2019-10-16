@@ -1,21 +1,22 @@
 ---
-title: '&lt;tokenReplayDetection&gt;'
+title: <tokenReplayDetection>
 ms.date: 03/30/2017
 ms.assetid: ac3f588e-5f75-4275-b969-2d492ecc3b47
 author: BrucePerlerMS
-ms.openlocfilehash: bd2272cb83dc0183d5008cfa178e11783f51ca2d
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: a4454042e1d97fb3cc2d6f2735104dadda6e7b5a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261057"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251767"
 ---
-# <a name="lttokenreplaydetectiongt"></a>&lt;tokenReplayDetection&gt;
-토큰 재생 검색을 사용 하도록 설정 하 고 토큰에 대 한 만료 시간을 지정 합니다.  
+# <a name="tokenreplaydetection"></a>\<tokenReplayDetection>
+토큰 재생 검색을 사용 하도록 설정 하 고 토큰의 만료 시간을 지정 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<tokenReplayDetection >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tokenReplayDetection >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,8 +39,8 @@ ms.locfileid: "48261057"
   
 |특성|설명|  
 |---------------|-----------------|  
-|사용|때 토큰 재생 검색 사용 되는지 여부를 지정 하는 값 토큰을 사용 하도록 설정 하려면 "true" 재생 검색 합니다.|  
-|expirationPeriod|<xref:System.TimeSpan> 항목 만료 된 것으로 간주 되어 캐시에서 제거 하기 전의 시간을 최대 크기를 지정 하는 합니다.  지정 하는 방법에 대 한 자세한 내용은 <xref:System.TimeSpan> 값을 참조 하세요 [Timespan 값](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)합니다.|  
+|enabled|토큰 재생 검색이 사용 되는지 여부를 지정 하는 값입니다. 토큰 재생 검색을 사용 하도록 설정 하려면 "true"로 설정 합니다.|  
+|expirationPeriod|항목이 만료 된 것으로 간주 되 고 캐시에서 제거 되기 전 까지의 최대 시간을 지정 하는입니다.<xref:System.TimeSpan>  값을 지정 <xref:System.TimeSpan> 하는 방법에 대 한 자세한 내용은 [Timespan 값](../windows-workflow-foundation/index.md)을 참조 하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -48,10 +49,10 @@ ms.locfileid: "48261057"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|서비스 수준 id 설정을 지정합니다.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|구성 컬렉션의 보안 토큰 처리기를 제공합니다.|  
+|[\<identityConfiguration>](identityconfiguration.md)|서비스 수준 id 설정을 지정 합니다.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|보안 토큰 처리기의 컬렉션에 대 한 구성을 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `<tokenReplayDetection>` 요소 아래에 있는 서비스 수준에서 지정할 수 있습니다 합니다 `<identityConfiguration>` 요소 또는 보안 토큰 처리기 컬렉션 수준에서는 `<securityTokenHandlerConfiguration>` 요소입니다. 서비스에 지정 된 토큰 처리기 컬렉션의 설정을 무시 합니다.  
+ 요소는 요소 아래의 서비스 수준 `<identityConfiguration>` 또는 요소의 보안 토큰 `<securityTokenHandlerConfiguration>` 처리기 컬렉션 수준에서 지정할 수 있습니다. `<tokenReplayDetection>` 토큰 처리기 컬렉션의 설정은 서비스에 지정 된 설정을 재정의 합니다.  
   
- 토큰 재생 캐시의 형식으로 지정 된 [ \<tokenReplayCache >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaycache.md) 요소입니다.
+ 토큰 재생 캐시의 유형은 [ \<tokenreplaycache >](tokenreplaycache.md) 요소에 의해 지정 됩니다.

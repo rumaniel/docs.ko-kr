@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c24fe637514ba773cecc7824de276b1707a4e90c
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: f0e05b09d5ce788b9a3da262d5890a0694b49375
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582556"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69969024"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>스키마 컴파일을 위한 XmlSchemaSet
 XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성을 검사할 수 있는 캐시인 <xref:System.Xml.Schema.XmlSchemaSet>에 대해 설명합니다.  
@@ -37,9 +37,9 @@ XSD(XML 스키마 정의 언어) 스키마를 저장하고 유효성을 검사�
 ## <a name="migrating-to-the-xmlschemaset"></a>XmlSchemaSet으로 마이그레이션  
  다음 코드 예제에서는 사용되지 않는 <xref:System.Xml.Schema.XmlSchemaSet> 클래스에서 새 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스로 마이그레이션하는 방법을 보여 줍니다. 또한 두 클래스 간에 다음과 같은 주요 차이점을 설명합니다.  
   
--   <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 클래스의 <xref:System.Xml.Schema.XmlSchemaCollection> 메서드와 달리 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 호출할 때 스키마가 컴파일되지 않습니다. 예제 코드에서는 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 명시적으로 호출합니다.  
+- <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> 클래스의 <xref:System.Xml.Schema.XmlSchemaCollection> 메서드와 달리 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 호출할 때 스키마가 컴파일되지 않습니다. 예제 코드에서는 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 메서드를 명시적으로 호출합니다.  
   
--   <xref:System.Xml.Schema.XmlSchemaSet>을 반복하려면 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 속성을 사용해야 합니다.  
+- <xref:System.Xml.Schema.XmlSchemaSet>을 반복하려면 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 속성을 사용해야 합니다.  
   
  다음은 사용되지 않는 <xref:System.Xml.Schema.XmlSchemaCollection> 코드 예제입니다.  
   
@@ -133,12 +133,12 @@ foreach (XmlSchema schema in schemaSet.Schemas("http://www.contoso.com/books"))
  <xref:System.Xml.Schema.XmlSchemaSet>의 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 사용하면 <xref:System.Xml.Schema.XmlSchemaSet>에 있는 스키마가 논리 스키마 한 개로 컴파일됩니다.  
   
 > [!NOTE]
->  사용되지 않는 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스와 달리 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 메서드를 호출할 때 스키마가 컴파일되지 않습니다.  
+> 사용되지 않는 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스와 달리 <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> 메서드를 호출할 때 스키마가 컴파일되지 않습니다.  
   
  <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 성공적으로 실행한 경우 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>의 <xref:System.Xml.Schema.XmlSchemaSet> 속성은 `true`로 설정됩니다.  
   
 > [!NOTE]
->  <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>에 있는 동안 스키마를 편집해도 <xref:System.Xml.Schema.XmlSchemaSet> 속성에는 영향을 주지 않습니다. <xref:System.Xml.Schema.XmlSchemaSet>에서 개별 스키마를 업데이트한 내용은 추적되지 않습니다. 결과적으로 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A>에 포함된 스키마 중 하나를 변경해도 `true`에서 스키마를 추가하거나 제거하지 않으면 <xref:System.Xml.Schema.XmlSchemaSet> 속성은 <xref:System.Xml.Schema.XmlSchemaSet>일 수 있습니다.  
+> <xref:System.Xml.Schema.XmlSchemaSet>에 있는 동안 스키마를 편집해도 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 속성에는 영향을 주지 않습니다. <xref:System.Xml.Schema.XmlSchemaSet>에서 개별 스키마를 업데이트한 내용은 추적되지 않습니다. 결과적으로 <xref:System.Xml.Schema.XmlSchemaSet>에 포함된 스키마 중 하나를 변경해도 <xref:System.Xml.Schema.XmlSchemaSet>에서 스키마를 추가하거나 제거하지 않으면 <xref:System.Xml.Schema.XmlSchemaSet.IsCompiled%2A> 속성은 `true`일 수 있습니다.  
   
  다음 예제에서는 `books.xsd` 파일을 <xref:System.Xml.Schema.XmlSchemaSet>에 추가하고 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 호출합니다.  
   
@@ -253,12 +253,12 @@ foreach (XmlSchema schema in schemaSet.Schemas())
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>  
-- <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>  
-- [스키마 캐시로서 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)  
+- <xref:System.Xml.Schema.XmlSchemaSet.Add%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Contains%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.Remove%2A>
+- <xref:System.Xml.Schema.XmlSchemaSet.RemoveRecursive%2A>
+- [스키마 캐시로서 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)
 - [XmlSchemaSet을 사용하여 XSD(XML 스키마) 유효성 검사](../../../../docs/standard/data/xml/xml-schema-xsd-validation-with-xmlschemaset.md)

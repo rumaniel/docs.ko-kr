@@ -1,6 +1,0 @@
-# [데스크톱 앱의 리소스](index.md)
-## [리소스 파일 만들기](creating-resource-files-for-desktop-apps.md)
-### [프로그래밍 방식으로 .resx 파일 작업](working-with-resx-files-programmatically.md)
-## [위성 어셈블리 만들기](creating-satellite-assemblies-for-desktop-apps.md)
-## [리소스 패키징 및 배포](packaging-and-deploying-resources-in-desktop-apps.md)
-## [리소스 검색](retrieving-resources-in-desktop-apps.md)

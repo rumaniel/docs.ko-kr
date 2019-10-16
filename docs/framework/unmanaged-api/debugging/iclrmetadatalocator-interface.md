@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd7a67237d89864915f8b4f1f7361d1f113d1e5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697851"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator 인터페이스
-데이터 액세스 서비스 계층을 대상 프로세스의 어셈블리 메타 데이터를 찾을 때 사용 합니다.  
+대상 프로세스에서 어셈블리의 메타 데이터를 찾을 데이터 액세스 서비스 계층을 사용 합니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -33,16 +33,17 @@ ms.locfileid: "33404745"
 |[GetMetadata 메서드](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|대상 프로세스에서 이미지의 메타 데이터를 검색합니다.|  
   
 ## <a name="remarks"></a>설명  
- API 클라이언트(즉, 디버거)에서는 이 인터페이스를 특정 대상 프로세스에 적절하게 구현해야 합니다. 예를 들어 활성 프로세스에 대 한 구현을 메모리 덤프의 것과 다른 것입니다.  
+ API 클라이언트(즉, 디버거)에서는 이 인터페이스를 특정 대상 프로세스에 적절하게 구현해야 합니다. 예를 들어 활성 프로세스에 대 한 구현은 메모리 덤프와 다른 것입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** ClrData.idl, ClrData.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.** **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

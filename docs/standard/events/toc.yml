@@ -1,0 +1,18 @@
+- name: 이벤트
+  href: index.md
+  items:
+    - name: '방법: 이벤트 발생 및 사용'
+      href: how-to-raise-and-consume-events.md
+    - name: '방법: 이벤트 속성을 사용하여 여러 이벤트 처리'
+      href: how-to-handle-multiple-events-using-event-properties.md
+    - name: '방법: Web Forms 애플리케이션에서 이벤트 사용'
+      href: how-to-consume-events-in-a-web-forms-application.md
+    - name: 관찰자 디자인 패턴
+      href: observer-design-pattern.md
+      items:
+        - name: 관찰자 디자인 패턴 모범 사례
+          href: observer-design-pattern-best-practices.md
+        - name: '방법: 공급자 구현'
+          href: how-to-implement-a-provider.md
+        - name: '방법: 관찰자 구현'
+          href: how-to-implement-an-observer.md

@@ -2,12 +2,12 @@
 title: '방법: 선택적 요소로 필터링(C#)'
 ms.date: 07/20/2015
 ms.assetid: f99e2f93-fca5-403f-8a0c-770761d4905a
-ms.openlocfilehash: c781db261dbf673af7a11150971956b4c07da774
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 0f8e17d99085ad04ed76b83bce806418ca6d60cd
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47076599"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253827"
 ---
 # <a name="how-to-filter-on-an-optional-element-c"></a>방법: 선택적 요소로 필터링(C#)
 요소가 XML 문서에 있는지 확실하지 않은 경우에도 해당 요소를 기준으로 필터링하려는 경우가 있습니다. 특정 요소에 자식 요소가 없는 경우 이 요소를 기준으로 필터링하여 null 참조 예외를 트리거하지 않도록 검색을 수행해야 합니다. 다음 예제에서는 `Child5` 요소에 `Type` 자식 요소가 없지만 쿼리가 여전히 제대로 실행됩니다.  
@@ -47,14 +47,14 @@ foreach(string str in cList)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
 ```  
   
 ## <a name="example"></a>예  
- 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)을 참조하세요.  
+ 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.  
   
 ```csharp  
 XElement root = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -89,7 +89,7 @@ foreach (string str in cList)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Child One Text  
 Child Two Text  
 Child Four Text  
@@ -97,9 +97,8 @@ Child Four Text
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>  
-- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>  
-- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>  
-- [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)  
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [프로젝션 작업(C#)](../../../../csharp/programming-guide/concepts/linq/projection-operations.md)
+- <xref:System.Xml.Linq.XElement.Attribute%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.XContainer.Elements%2A?displayProperty=nameWithType>
+- <xref:System.Xml.Linq.Extensions.Elements%2A?displayProperty=nameWithType>
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [프로젝션 작업(C#)](./projection-operations.md)

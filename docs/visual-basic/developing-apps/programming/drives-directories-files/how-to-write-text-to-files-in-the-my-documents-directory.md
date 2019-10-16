@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 894458ad6d69b8bb2836518b90723703733208b6
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4f9eb4c9e0eb92712b5ea1a4feef24f2bb95d70b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45617080"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335461"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>방법: Visual Basic에서 내 문서 디렉터리의 파일에 텍스트 쓰기
 `My.Computer.FileSystem.SpecialDirectories` 개체를 사용하면 **MyDocuments** 디렉터리 등의 특수 디렉터리에 액세스할 수 있습니다.  
@@ -21,16 +21,16 @@ ms.locfileid: "45617080"
   
 #### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>내 문서 디렉터리에 새 텍스트 파일을 쓰려면  
   
-1.  `My.Computer.FileSystem.SpecialDirectories.MyDocuments` 속성을 사용하여 경로를 제공합니다.  
+1. `My.Computer.FileSystem.SpecialDirectories.MyDocuments` 속성을 사용하여 경로를 제공합니다.  
   
-     [!code-vb[VbFileIOWrite#1](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_1.vb)]  
+     [!code-vb[VbFileIOWrite#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#1)]  
   
-2.  `WriteAllText` 메서드를 사용하여 지정한 파일에 텍스트를 씁니다.  
+2. `WriteAllText` 메서드를 사용하여 지정한 파일에 텍스트를 씁니다.  
   
-     [!code-vb[VbVbcnMyFileSystem#14](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_2.vb)]  
+     [!code-vb[VbVbcnMyFileSystem#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#14)]  
   
-## <a name="example"></a>예  
- [!code-vb[VbFileIOWrite#2](../../../../visual-basic/developing-apps/programming/drives-directories-files/codesnippet/VisualBasic/how-to-write-text-to-files-in-the-my-documents-directory_3.vb)]  
+## <a name="example"></a>예제  
+ [!code-vb[VbFileIOWrite#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#2)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
  `test.txt`를 쓰려는 파일 이름으로 바꿉니다.  
@@ -41,11 +41,12 @@ ms.locfileid: "45617080"
 ## <a name="net-framework-security"></a>.NET Framework 보안  
  부분 신뢰 컨텍스트에서 실행하는 경우 권한 부족으로 인해 코드에서 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../../../framework/misc/code-access-security-basics.md)을 참조하세요.  
   
- 이 예제에서는 새 파일을 만듭니다. 응용 프로그램에서 파일을 만들어야 하는 경우 해당 응용 프로그램에 폴더에 대한 만들기 권한이 있어야 합니다. 권한은 액세스 제어 목록을 사용하여 설정됩니다. 파일이 이미 있는 경우에는 응용 프로그램에 더 낮은 권한인 쓰기 권한만 있으면 됩니다. 가능한 경우 배포하는 동안 파일을 만들고, 폴더에 대한 만들기 권한 대신 단일 파일에 대한 읽기 권한만 부여하는 것이 더 안전합니다. 또한 루트 폴더나 **Program Files** 폴더보다 사용자 폴더에 데이터를 쓰는 것이 더 안전합니다. 자세한 내용은 [ACL 기술 개요](https://msdn.microsoft.com/library/06fbf66d-6f02-4378-b863-b2f12e349045)를 참조하세요.  
+ 이 예제에서는 새 파일을 만듭니다. 애플리케이션에서 파일을 만들어야 하는 경우 해당 애플리케이션에 폴더에 대한 만들기 권한이 있어야 합니다. 권한은 액세스 제어 목록을 사용하여 설정됩니다. 파일이 이미 있는 경우에는 애플리케이션에 더 낮은 권한인 쓰기 권한만 있으면 됩니다. 가능한 경우 배포하는 동안 파일을 만들고, 폴더에 대한 만들기 권한 대신 단일 파일에 대한 읽기 권한만 부여하는 것이 더 안전합니다. 또한 루트 폴더나 **Program Files** 폴더보다 사용자 폴더에 데이터를 쓰는 것이 더 안전합니다. 자세한 내용은 [ACL 기술 개요](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>  
- <xref:Microsoft.VisualBasic.Devices.Computer>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>  
- <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>
+## <a name="see-also"></a>참고 항목
+
+- <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>
+- <xref:Microsoft.VisualBasic.Devices.Computer>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
+- <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>

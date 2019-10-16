@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e404228cbc6efb81ed90c135358b1832ddcd8954
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 944e02fe83ba71b51ffb154748acff9c6dd662fe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185367"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764017"
 ---
 # <a name="icordebugmodule3createreaderforinmemorysymbols-method"></a>ICorDebugModule3::CreateReaderForInMemorySymbols 메서드
 동적 모듈에 대 한 디버그 기호 판독기를 만듭니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CreateReaderForInMemorySymbols (  
       [in] REFIID riid,  
       [out][iid_is(riid)] void **    ppObj  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  riid  
  [in] 반환할 COM 인터페이스의 IID입니다. 일반적으로 [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)합니다.  
   
@@ -63,7 +63,7 @@ HRESULT CreateReaderForInMemorySymbols (
  첫 번째 형식이 로드 될 때까지 동적 모듈에서는 사용할 수 있는 모든 기호를 있지 않은 (표시 된 대로 합니다 [LoadClass 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-loadclass-method.md) 콜백).  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -71,8 +71,9 @@ HRESULT CreateReaderForInMemorySymbols (
   
  **.NET framework 버전:** 4.5, 4, 3.5 SP1  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebugRemoteTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)  
- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
-    
- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebugRemoteTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
+- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

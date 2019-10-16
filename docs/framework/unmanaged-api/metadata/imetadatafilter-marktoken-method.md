@@ -17,36 +17,37 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 97f184bae4628f2aa357644188594396468671ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 08340c82acb8eff2ce5b778c719f350b58b51fa5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33444154"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757524"
 ---
 # <a name="imetadatafiltermarktoken-method"></a>IMetaDataFilter::MarkToken 메서드
-지정한 메타 데이터 토큰이 처리 되었는지 나타내는 값을 설정 합니다.  
+지정 된 메타 데이터 토큰을 처리 했는지를 나타내는 값을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT MarkToken (  
     [in] mdToken   tk  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] 처리 된 것으로 표시 하려면 토큰입니다.  
+ [in] 토큰 처리 됨으로입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataFilter 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataFilter 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

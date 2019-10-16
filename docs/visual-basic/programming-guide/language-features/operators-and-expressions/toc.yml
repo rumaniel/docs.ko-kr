@@ -1,0 +1,25 @@
+- name: 연산자 및 식
+  href: index.md
+  items:
+    - name: 연산자를 사용한 일반적인 작업
+      href: common-tasks-performed-with-visual-basic-operators.md
+    - name: 산술 연산자
+      href: arithmetic-operators.md
+    - name: 비교 연산자
+      href: comparison-operators.md
+    - name: '방법: 두 개체가 동일한지 테스트'
+      href: how-to-test-whether-two-objects-are-the-same.md
+    - name: '방법: 패턴에 대해 문자열 비교'
+      href: how-to-match-a-string-against-a-pattern.md
+    - name: 연결 연산자
+      href: concatenation-operators.md
+    - name: 논리 및 비트 연산자
+      href: logical-and-bitwise-operators.md
+    - name: 연산자의 효율적 결합
+      href: efficient-combination-of-operators.md
+    - name: '방법: 숫자 값 계산'
+      href: how-to-calculate-numeric-values.md
+    - name: 값 비교
+      href: value-comparisons.md
+    - name: 부울 식
+      href: boolean-expressions.md

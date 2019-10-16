@@ -3,12 +3,12 @@ title: 식 트리 실행
 description: 식 트리를 실행 가능한 중간 언어(IL) 명령으로 변환하여 실행하는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 109e0ac5-2a9c-48b4-ac68-9b6219cdbccf
-ms.openlocfilehash: fb9ec5f023587b4e5c74ab71acbd6a886e085e4a
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: f6dca5a3965924e8eb6e1c04fe7ffc3c78c7df93
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207393"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201848"
 ---
 # <a name="executing-expression-trees"></a>식 트리 실행
 
@@ -109,7 +109,7 @@ private static Func<int, int> CreateBoundResource()
 
 이 메서드에서 반환된 대리자는 `constant`를 통해 닫히고 삭제되었습니다. 이 대리자는 `using` 문에서 선언되었기 때문에 삭제되었습니다. 
 
-이제 이 메서드에서 반환된 대리자를 실행하면 실행 시점에 `ObjecctDisposedException`이 throw됩니다.
+이제 이 메서드에서 반환된 대리자를 실행하면 실행 시점에 `ObjectDisposedException`이 throw됩니다.
 
 컴파일 시간 구문을 나타내는 런타임 오류가 발생하면 이상하게 보일 수 있지만 식 트리를 사용하면 이런 환경이 시작됩니다.
 

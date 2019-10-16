@@ -5,12 +5,12 @@ helpviewer_keywords:
 - binary serialization, steps
 - serialization, steps
 ms.assetid: 4bcbc883-2a91-418f-b968-6c86a25e9737
-ms.openlocfilehash: ef81ecc7ca177fa9360f53a6b66015412d282065
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b697e8c590d0865b26eaa9f66a333504a5faece2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954052"
 ---
 # <a name="steps-in-the-serialization-process"></a>serialization 프로세스의 단계
 <xref:System.Runtime.Serialization.Formatter.Serialize*> 메서드가 [포맷터](xref:System.Runtime.Serialization.Formatter)에서 호출되면 개체 serialization이 다음 규칙 시퀀스에 따라 진행됩니다.
@@ -27,5 +27,5 @@ ms.locfileid: "44084919"
   
 ## <a name="see-also"></a>참고자료
 
-- [이진 serialization](binary-serialization.md)  
+- [이진 serialization](binary-serialization.md)
 - [XML 및 SOAP serialization](xml-and-soap-serialization.md)

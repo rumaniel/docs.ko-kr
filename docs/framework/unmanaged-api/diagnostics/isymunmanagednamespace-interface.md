@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9408a56b7a1e8cbad94014b55ec5d830e1734810
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 87dd6db9624c2216ab13e77b04cfa63f95aee7e2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939453"
 ---
 # <a name="isymunmanagednamespace-interface"></a>ISymUnmanagedNamespace 인터페이스
 네임 스페이스를 나타냅니다.  
@@ -35,7 +35,8 @@ ms.locfileid: "33426090"
 |[GetVariables 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-getvariables-method.md)|이 네임 스페이스 내에서 전역 범위에서 정의 된 모든 변수를 반환 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [진단 기호 저장소 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

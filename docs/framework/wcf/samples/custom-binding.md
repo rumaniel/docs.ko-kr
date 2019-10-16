@@ -3,14 +3,14 @@ title: 사용자 지정 바인딩
 ms.date: 03/30/2017
 ms.assetid: 3c9537ea-9708-4ebc-b861-219f2e2db53d
 ms.openlocfilehash: f28aa83aa22a87f76e955d6b4eb7cfa9f6d7fcdd
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803383"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003147"
 ---
 # <a name="custom-binding"></a>사용자 지정 바인딩
-이 단원에는 끝점 요소의 사용자 지정 바인딩 특성을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.  
+이 단원에는 엔드포인트 요소의 사용자 지정 바인딩 특성을 사용하는 방법을 보여 주는 샘플이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [사용자 지정 바인딩 명령](../../../../docs/framework/wcf/samples/custom-binding-imperative.md)  

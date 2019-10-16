@@ -2,12 +2,12 @@
 title: 스타일이 사용된 WordprocessingML 문서3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 8b21c9e8be957ea2b43405a96e343cea78197f68
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8f335303f2e288103520d0bedf81e295ab56efef
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196098"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590876"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>스타일이 사용된 WordprocessingML 문서
 더 복잡한 WordprocessingML 문서에는 스타일로 서식이 지정된 단락이 있습니다.  
@@ -17,7 +17,7 @@ ms.locfileid: "47196098"
  패키지에 액세스할 때 임의의 경로를 사용하는 대신 부분 간 관계를 통해 액세스해야 합니다. 이 문제는 WordprocessingML 문서의 내용 조작 자습서의 범위를 벗어나지만 이 자습서에 포함된 예제 프로그램에서는 올바른 방법을 보여 줍니다.  
   
 ## <a name="a-document-that-uses-styles"></a>스타일을 사용하는 문서  
- [WordprocessingML 문서의 모양(C#)](../../../../csharp/programming-guide/concepts/linq/shape-of-wordprocessingml-documents.md) 항목에서 제공하는 WordML 예제는 매우 단순하지만 다음 문서는 더 복잡합니다. 이 문서에는 스타일로 서식이 지정된 단락이 있습니다. Office Open XML 문서를 구성하는 XML을 보는 가장 쉬운 방법은 [Office Open XML 문서 부분을 출력하는 예제(C#)](../../../../csharp/programming-guide/concepts/linq/example-that-outputs-office-open-xml-document-parts.md)를 실행하는 것입니다.  
+ [WordprocessingML 문서의 모양(C#)](./shape-of-wordprocessingml-documents.md) 항목에서 제공하는 WordML 예제는 매우 단순하지만 다음 문서는 더 복잡합니다. 스타일로 서식이 지정된 단락이 있습니다. Office Open XML 문서를 구성하는 XML을 보는 가장 쉬운 방법은 [Office Open XML 문서 부분을 출력하는 예제(C#)](./example-that-outputs-office-open-xml-document-parts.md)를 실행하는 것입니다.  
   
  다음 문서에서 첫 번째 단락에는 `Heading1` 스타일이 있습니다. 기본 스타일이 있는 단락이 많이 있으며 `Code` 스타일이 있는 단락도 많이 있습니다. 이 문서는 이와 같이 비교적 복잡하기 때문에 LINQ to XML을 사용하여 구문 분석하기가 더 흥미로운 대상입니다.  
   
@@ -136,7 +136,4 @@ ms.locfileid: "47196098"
   </w:body>  
 </w:document>  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [Office Open XML WordprocessingML 문서 정보(C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+ 

@@ -2,12 +2,12 @@
 title: 속성
 description: 유효성 검사, 계산된 값, 지연 평가, 속성 변경 알림 기능을 포함하는 C# 속성에 대해 알아봅니다.
 ms.date: 04/25/2018
-ms.openlocfilehash: d4fa7b6117bec63c41318dd4bcc3850ce55a5907
-ms.sourcegitcommit: 88f251b08bf0718ce119f3d7302f514b74895038
+ms.openlocfilehash: 6638ae74516d7546882c8a380eed9b03ff3d18e9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "33956240"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587414"
 ---
 # <a name="properties"></a>속성
 
@@ -18,7 +18,7 @@ ms.locfileid: "33956240"
 
 ## <a name="property-syntax"></a>속성 구문
 
-속성 구문은 필드에 대한 자연 확장입니다. 필드는 저장소 위치를 정의합니다.
+속성 구문은 필드에 대한 자연 확장입니다. 필드는 스토리지 위치를 정의합니다.
 
 [!code-csharp[Person class with public fields](../../samples/snippets/csharp/properties/Person.cs#1)]
 
@@ -26,7 +26,7 @@ ms.locfileid: "33956240"
 
 [!code-csharp[Person class with public properties](../../samples/snippets/csharp/properties/Person.cs#2)]
 
-위에 표시된 구문은 *자동 속성* 구문입니다. 컴파일러는 속성을 백업하는 필드의 저장소 위치를 생성합니다. 또한 컴파일러는 `get` 및 `set` 접근자의 본문을 구현합니다.
+위에 표시된 구문은 *자동 속성* 구문입니다. 컴파일러는 속성을 백업하는 필드의 스토리지 위치를 생성합니다. 또한 컴파일러는 `get` 및 `set` 접근자의 본문을 구현합니다.
 
 때로는 해당 형식의 기본값이 아닌 값으로 속성을 초기화해야 합니다.  이 작업을 위해 C#에서는 닫는 중괄호 뒤에 속성의 값을 설정합니다. `FirstName` 속성의 초기 값을 `null` 대신 빈 문자열로 설정할 수도 있습니다. 아래와 같이 지정하면 됩니다.
 
@@ -34,7 +34,7 @@ ms.locfileid: "33956240"
 
 이 아티클의 뒷부분에서 살펴보겠지만 특정 초기화는 읽기 전용 속성에 가장 유용합니다.
 
-아래 표시된 대로 저장소를 직접 정의할 수도 있습니다.
+아래 표시된 대로 스토리지를 직접 정의할 수도 있습니다.
 
 [!code-csharp[Person class with properties and backing field](../../samples/snippets/csharp/properties/Person.cs#4)]
 
@@ -104,7 +104,7 @@ public class Measurements
 
 [!code-csharp[A computed property](../../samples/snippets/csharp/properties/Person.cs#10)]
 
-위 예에서는 [문자열 보간](../csharp/language-reference/tokens/interpolated.md) 기능을 사용하여 전체 이름에 대한 서식이 지정된 문자열을 만듭니다.
+위 예에서는 [문자열 보간](./language-reference/tokens/interpolated.md) 기능을 사용하여 전체 이름에 대한 서식이 지정된 문자열을 만듭니다.
 
 계산된 `FullName` 속성을 만드는 보다 간결한 방법을 제공하는 *식 본문 멤버*를 사용할 수도 있습니다.
 
@@ -114,7 +114,7 @@ public class Measurements
 
 ### <a name="cached-evaluated-properties"></a>캐시된 평가 속성
 
-계산된 속성의 개념과 저장소를 혼합하고 *캐시된 평가 속성*을 만들 수 있습니다.  예를 들어 처음 액세스할 때만 문자열 형식이 지정되도록 `FullName` 속성을 업데이트할 수 있습니다.
+계산된 속성의 개념과 스토리지를 혼합하고 *캐시된 평가 속성*을 만들 수 있습니다.  예를 들어 처음 액세스할 때만 문자열 형식이 지정되도록 `FullName` 속성을 업데이트할 수 있습니다.
 
 [!code-csharp[Caching the value of a computed property](../../samples/snippets/csharp/properties/Person.cs#12)]
 
@@ -140,7 +140,7 @@ C# 7.3부터 필드 특성은 자동 구현된 속성의 컴파일러에서 생�
 
 [!code-csharp[invalidating the cache correctly](../../samples/snippets/csharp/properties/Person.cs#15)]
 
-`?.` 연산자를 *null 조건부 연산자*라고 합니다. 연산자의 오른쪽을 평가하기 전에 null 참조를 확인합니다. 최종 결과로, `PropertyChanged` 이벤트에 대한 구독자가 없는 경우 이벤트를 발생시키는 코드가 실행되지 않습니다. 해당 경우 이 확인을 수행하지 않으면 `NullReferenceException`이 throw됩니다. 자세한 내용은 [`events`](delegates-events.md)를 참조하세요. 또한 이 예제에서는 새 `nameof` 연산자를 사용하여 속성 이름 기호에서 해당 텍스트 표현으로 변환합니다.
+`?.` 연산자를 *null 조건부 연산자*라고 합니다. 연산자의 오른쪽을 평가하기 전에 null 참조를 확인합니다. 최종 결과로, `PropertyChanged` 이벤트에 대한 구독자가 없는 경우 이벤트를 발생시키는 코드가 실행되지 않습니다. 해당 경우 이 확인을 수행하지 않으면 `NullReferenceException`이 throw됩니다. 자세한 내용은 [`events`](events-overview.md)를 참조하세요. 또한 이 예제에서는 새 `nameof` 연산자를 사용하여 속성 이름 기호에서 해당 텍스트 표현으로 변환합니다.
 `nameof`를 사용하면 속성 이름을 잘못 입력하는 오류를 줄일 수 있습니다.
 
 <xref:System.ComponentModel.INotifyPropertyChanged>를 구현하는 작업은 필요한 시나리오를 지원하기 위해 접근자의 코드를 작성할 수 있는 경우의 예제입니다.

@@ -1,6 +1,6 @@
 ---
 title: 형식 디자인 지침
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - type design guidelines
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], type design guidelines
 - types [.NET Framework], design guidelines
 ms.assetid: 6b49314e-8bba-43ea-97ca-4e0255812f95
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: a7fb9964d0e542c0937c55ae65bd88b3f7149fa8
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 16f2a095f461a406eedbd2b34b0c91d3ac43bbe5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650104"
 ---
 # <a name="type-design-guidelines"></a>형식 디자인 지침
 CLR 관점에서 보면는 두 가지 범주의 형식-참조 형식과 값 형식-있지만 프레임 워크 디자인에 대 한 토론을 하기 위해 고유한 특정 디자인 규칙을 사용 하 여 각 논리적인 그룹으로 형식 나눕니다.  
@@ -44,7 +43,7 @@ CLR 관점에서 보면는 두 가지 범주의 형식-참조 형식과 값 형�
  [중첩 형식](../../../docs/standard/design-guidelines/nested-types.md)  
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 

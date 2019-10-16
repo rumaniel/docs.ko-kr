@@ -1,28 +1,29 @@
 ---
-title: '&lt;시간 제한&gt;'
+title: <timeOuts>
 ms.date: 03/30/2017
 ms.assetid: 7fccd436-b326-48ec-8de1-c16817a09e0d
-ms.openlocfilehash: 1f0638f85177d2acb6f61e3246a1a5ee9a4e2f5c
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b9c67ac03f0eb73a2a4cdd43ab48fe12871a1cc3
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753003"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854968"
 ---
-# <a name="lttimeoutsgt"></a>&lt;시간 제한&gt;
+# <a name="timeouts"></a>\<timeOuts>
 서비스 호스트가 열리거나 닫히는 데 허용되는 시간 간격을 지정하는 구성 요소를 나타냅니다.  
   
- \<system.ServiceModel>  
-\<client>  
-\<endpoint>  
-\<호스트 >  
-\<제한 시간 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<서비스 >** ](services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<서비스 >** ](service.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<호스트 >** ](host.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<시간 제한 >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<timeOuts closeTimeout="TimeSpan"  
-   openTimeout="TimeSpan" >  
+<timeOuts closeTimeout="TimeSpan"
+          openTimeout="TimeSpan" />
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -40,11 +41,12 @@ ms.locfileid: "32753003"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<호스트 >](../../../../../docs/framework/configure-apps/file-schema/wcf/host.md)|서비스 호스트의 설정을 지정하는 구성 요소입니다.|  
+|[\<host>](host.md)|서비스 호스트의 설정을 지정하는 구성 요소입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.HostElement>  
- <xref:System.ServiceModel.ServiceHost>  
- [호스팅](../../../../../docs/framework/wcf/feature-details/hosting.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.HostElement>
+- <xref:System.ServiceModel.ServiceHost>
+- [호스팅](../../../wcf/feature-details/hosting.md)

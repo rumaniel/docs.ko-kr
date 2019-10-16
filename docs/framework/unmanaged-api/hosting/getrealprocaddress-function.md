@@ -16,51 +16,52 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 256afe9a4304654ddb263a0671db7525f3bedcba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0027514392dfbb93ab4189eb7c66a380fb77c1ae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429639"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778163"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 함수
-공용 언어 런타임 (CLR)의 최신 설치 버전에서 내보낸 지정 된 함수의 주소를 가져옵니다.  
+사용 하는 CLR (공용 언어 런타임)의 최신 설치 버전에서 내보낸 지정 된 함수의 주소를 가져옵니다.  
   
- 이 함수에 더 이상 사용 되지는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]합니다.  
+ .NET Framework 4에서이 함수에 사용 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetRealProcAddress (  
     [in]  LPCSTR  pwszProcName,   
     [out] VOID  **ppv  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pwszProcName`  
  [in] 함수의 이름입니다.  
   
  `ppv`  
- [out] 포인터는 함수의 주소를 받는 위치입니다.  
+ [out] 함수 주소에 대 한 포인터를 수신 하는 위치입니다.  
   
 ## <a name="return-value"></a>반환 값  
  이 메서드는 CorError.h에 정의 된 다음 값 외에도 WinError.h에 정의 된 대로 표준 구성 요소 개체 모델 (COM) 오류 코드를 반환 합니다.  
   
-|반환 코드|설명|  
+|반환 코드|Description|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
 |E_POINTER|`ppv`가 잘못된 경우|  
-|CLR_E_SHIM_RUNTIMEEXPORT|런타임에 함수를 내보내지 않습니다.|  
+|CLR_E_SHIM_RUNTIMEEXPORT|런타임에서 함수를 내보내지 않습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
  **라이브러리:** MSCorEE.dll  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a>참고자료
+
+- [사용되지 않는 CLR 호스팅 함수](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

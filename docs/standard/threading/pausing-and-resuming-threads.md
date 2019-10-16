@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9fce4859-a19d-4506-b082-7dd0792688ca
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b66881a8a42c0c34b5c2119f7404fe7787c8f3f2
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: f3dcee9c45cdbf029ccba90a963c9cea0a9c7ad4
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836260"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963572"
 ---
 # <a name="pausing-and-interrupting-threads"></a>스레드 일시 중지 및 중단
 
@@ -41,19 +41,19 @@ ms.locfileid: "48836260"
  차단된 스레드에서 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 메서드를 호출하여 <xref:System.Threading.ThreadInterruptedException>을 throw하면 스레드가 차단 호출에서 분리되어 대기 스레드를 중단할 수 있습니다. 스레드는 <xref:System.Threading.ThreadInterruptedException>을 catch하고 작업을 계속하는 데 필요한 동작을 수행해야 합니다. 스레드가 예외를 무시하는 경우 런타임은 예외를 catch하고 스레드를 중지합니다.  
   
 > [!NOTE]
->  <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>를 호출할 때 대상 스레드가 차단되지 않는 경우 스레드는 차단될 때까지 중단되지 않습니다. 스레드가 차단되지 않으면 중단 없이 완료될 수 있습니다.  
+> <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>를 호출할 때 대상 스레드가 차단되지 않는 경우 스레드는 차단될 때까지 중단되지 않습니다. 스레드가 차단되지 않으면 중단 없이 완료될 수 있습니다.  
   
  대기가 관리되는 대기인 경우 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 둘 다 스레드를 즉시 깨웁니다. 대기가 관리되지 않는 대기인 경우(예: Win32 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject) 함수에 대한 플랫폼 호출) 스레드가 관리 코드로 반환되거나 호출할 때까지 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 스레드를 제어할 수 없습니다. 관리 코드에서 동작은 다음과 같습니다.  
   
--   <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 대상 스레드에서 <xref:System.Threading.ThreadInterruptedException>이 발생하게 합니다.  
+- <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 대상 스레드에서 <xref:System.Threading.ThreadInterruptedException>이 발생하게 합니다.  
   
--   <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw합니다. 자세한 내용은 [스레드 제거](../../../docs/standard/threading/destroying-threads.md)를 참조하세요.  
+- <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>는 대기 상태에서 스레드를 깨우고 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw합니다. 자세한 내용은 [스레드 제거](../../../docs/standard/threading/destroying-threads.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadInterruptedException>  
-- <xref:System.Threading.ThreadAbortException>  
-- [스레딩](../../../docs/standard/threading/index.md)  
-- [스레드 및 스레딩 사용](../../../docs/standard/threading/using-threads-and-threading.md)  
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadInterruptedException>
+- <xref:System.Threading.ThreadAbortException>
+- [스레딩](../../../docs/standard/threading/index.md)
+- [스레드 및 스레딩 사용](../../../docs/standard/threading/using-threads-and-threading.md)
 - [동기화 기본 형식 개요](../../../docs/standard/threading/overview-of-synchronization-primitives.md)

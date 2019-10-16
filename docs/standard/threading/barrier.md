@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613a8bc7-6a28-4795-bd6c-1abd9050478f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbbf7055a250ae7fa630097f3014a6420228fed3
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 081a4e66462ab546bf4738b4a8b06a4a2ec91a1d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397009"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645029"
 ---
 # <a name="barrier"></a>장벽
 
@@ -44,17 +44,17 @@ ms.locfileid: "47397009"
 
  장벽은 스레드가 루프로 여러 단계를 수행할 때 특히 유용합니다. 코드에 한두 개의 작업 단계만 필요한 경우 다음을 포함하여 임의 종류의 암시적 조인과 함께 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 개체를 사용할지 여부를 고려합니다.  
   
--   <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Parallel.Invoke%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType>  
   
--   <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType>  
   
  자세한 내용은 [연속 작업을 사용하여 작업 연결](../parallel-programming/chaining-tasks-by-using-continuation-tasks.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [스레딩 개체 및 기능](threading-objects-and-features.md)  
+- [스레딩 개체 및 기능](threading-objects-and-features.md)
 - [방법: 동시 작업을 장벽과 동기화](how-to-synchronize-concurrent-operations-with-a-barrier.md)

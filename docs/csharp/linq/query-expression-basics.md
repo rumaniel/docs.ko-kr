@@ -3,12 +3,12 @@ title: 쿼리 식 기본 사항(C#의 LINQ)
 description: 쿼리 식과 관련된 개념 소개
 ms.date: 11/30/2016
 ms.assetid: 027db1f8-346f-44d2-a16e-043fcea3a4e0
-ms.openlocfilehash: 68f338381e354f4944539d63ca3a3cc3500031c1
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 96ef75fe702e60eaa38acef77a73a5ea7f2076f4
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45625524"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54709119"
 ---
 # <a name="query-expression-basics"></a>쿼리 식 기본 사항
 
@@ -20,7 +20,7 @@ ms.locfileid: "45625524"
 
 일반적으로 소스 데이터는 논리적으로 같은 종류의 요소 시퀀스로서 구성됩니다. 예를 들어 SQL Database 테이블은 행 시퀀스를 포함합니다. XML 파일에는 XML 요소의 "시퀀스"가 있습니다(트리 구조에서는 계층적으로 구성되지만). 메모리 내 컬렉션은 개체의 시퀀스를 포함합니다.
 
-응용 프로그램의 관점에서 소스 데이터의 특정 형식과 구조는 중요하지 않습니다. 응용 프로그램에는 소스 데이터가 항상 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601> 컬렉션으로 표시됩니다. 예를 들어 LINQ to XML에서 소스 데이터는 `IEnumerable`\<<xref:System.Xml.Linq.XElement>>로 표시됩니다.
+애플리케이션의 관점에서 소스 데이터의 특정 형식과 구조는 중요하지 않습니다. 애플리케이션에는 소스 데이터가 항상 <xref:System.Collections.Generic.IEnumerable%601> 또는 <xref:System.Linq.IQueryable%601> 컬렉션으로 표시됩니다. 예를 들어 LINQ to XML에서 소스 데이터는 `IEnumerable`\<<xref:System.Xml.Linq.XElement>>로 표시됩니다.
 
 이 소스 시퀀스에서 쿼리는 다음 세 가지 중 하나를 수행할 수 있습니다.
 
@@ -174,7 +174,7 @@ LINQ에서 쿼리 변수는 쿼리의 *결과* 대신 *쿼리*를 저장하는 �
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../programming-guide/index.md)  
-- [LINQ(Language-Integrated Query)](index.md)  
-- [쿼리 키워드(LINQ)](../language-reference/keywords/query-keywords.md)  
-- [표준 쿼리 연산자 개요](../programming-guide/concepts/linq/standard-query-operators-overview.md)  
+- [C# 프로그래밍 가이드](../programming-guide/index.md)
+- [LINQ(Language-Integrated Query)](index.md)
+- [쿼리 키워드(LINQ)](../language-reference/keywords/query-keywords.md)
+- [표준 쿼리 연산자 개요](../programming-guide/concepts/linq/standard-query-operators-overview.md)

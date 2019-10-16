@@ -2,12 +2,12 @@
 title: 메시지 검사자
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 253be4d13649d4f6394aad1bb002f5cd555d8af2
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: e7846b8710fa52a5b13de245b8b7147e217533db
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861505"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039394"
 ---
 # <a name="message-inspectors"></a>메시지 검사자
 이 샘플에서는 클라이언트 및 서비스 메시지 검사자를 구현하고 구성하는 방법을 보여 줍니다.  
@@ -202,7 +202,7 @@ void ValidateMessageBody(ref System.ServiceModel.Channels.Message message, bool 
 ```  
   
 ## <a name="behavior"></a>동작  
- 메시지 검사자는 클라이언트 런타임이나 디스패치 런타임의 확장입니다. 이러한 확장은 사용 하 여 구성 됩니다 *동작*합니다. 동작은 기본 구성을 변경하거나 메시지 검사자와 같은 확장을 기본 구성에 추가하여 서비스 모델 런타임의 동작을 변경하는 클래스입니다.  
+ 메시지 검사자는 클라이언트 런타임이나 디스패치 런타임의 확장입니다. 이러한 확장은 *동작*을 사용 하 여 구성 됩니다. 동작은 기본 구성을 변경하거나 메시지 검사자와 같은 확장을 기본 구성에 추가하여 서비스 모델 런타임의 동작을 변경하는 클래스입니다.  
   
  다음 `SchemaValidationBehavior` 클래스는 클라이언트 런타임이나 디스패치 런타임에 이 샘플의 메시지 검사자를 추가하는 데 사용된 동작입니다. 두 경우 모두 기본 구현에 해당됩니다. <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyClientBehavior%2A> 및 <xref:System.ServiceModel.Description.IEndpointBehavior.ApplyDispatchBehavior%2A>에서는 메시지 검사자를 만들어 해당 런타임의 <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A> 컬렉션에 추가합니다.  
   
@@ -256,10 +256,10 @@ public class SchemaValidationBehavior : IEndpointBehavior
 ```  
   
 > [!NOTE]
->  이 특정 동작은 특성을 겸용하지 않으므로 서비스 유형의 계약 형식에 선언적으로 추가할 수 없습니다. 이 동작은 특성 선언에서 스키마 컬렉션을 로드할 수 없기 때문에 디자인에 따라 결정되며 이 특성의 추가 구성 위치(예: 응용 프로그램 설정)를 참조하는 것은 나머지 서비스 모델 구성과 일치하지 않는 구성 요소를 만든다는 의미입니다. 따라서 이 동작은 코드와 서비스 모델 구성 확장을 통해 명령적으로만 추가할 수 있습니다.  
+> 이 특정 동작은 특성을 겸용하지 않으므로 서비스 유형의 계약 형식에 선언적으로 추가할 수 없습니다. 이 동작은 특성 선언에서 스키마 컬렉션을 로드할 수 없기 때문에 디자인에 따라 결정되며 이 특성의 추가 구성 위치(예: 응용 프로그램 설정)를 참조하는 것은 나머지 서비스 모델 구성과 일치하지 않는 구성 요소를 만든다는 의미입니다. 따라서 이 동작은 코드와 서비스 모델 구성 확장을 통해 명령적으로만 추가할 수 있습니다.  
   
 ## <a name="adding-the-message-inspector-through-configuration"></a>구성을 통해 메시지 검사자 추가  
- 응용 프로그램 구성 파일의 끝점에서 사용자 지정 동작을 구성 하려면 서비스 모델에 필요한 구성을 만들려면 구현자 *확장명 요소* 에서 파생 된 클래스로 표현 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>합니다. 그런 다음 이 섹션에 설명된 다음 확장에 대해 표시된 대로 확장에 대한 서비스 모델의 구성 섹션에 이 확장을 추가해야 합니다.  
+ 응용 프로그램 구성 파일에서 끝점에 대 한 사용자 지정 동작을 구성 하려면 서비스 모델에서 구현자를 통해에서 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>파생 된 클래스로 표현 되는 구성 *확장 요소* 를 만들어야 합니다. 그런 다음 이 섹션에 설명된 다음 확장에 대해 표시된 대로 확장에 대한 서비스 모델의 구성 섹션에 이 확장을 추가해야 합니다.  
   
 ```xml  
 <system.serviceModel>  
@@ -398,19 +398,17 @@ catch (Exception e)
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-2.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.  
+2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.  
   
-3.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
-  
-## <a name="see-also"></a>참고 항목
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  

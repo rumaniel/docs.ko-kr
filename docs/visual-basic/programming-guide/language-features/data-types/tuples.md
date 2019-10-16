@@ -4,12 +4,12 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: d76c14aa83fcf47faea41946614e83cfbc8ad57b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 16934232e1e202f1b100680a5101332aa622f2cc
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195504"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348496"
 ---
 # <a name="tuples-visual-basic"></a>튜플 (Visual Basic)
 
@@ -50,7 +50,7 @@ Visual Basic 15.3부터 Visual Basic 유추할 수 있는 튜플 요소 이름 �
 
 [!code-vb[ExplicitlyNamed](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/named-tuples/program.vb#2)]
 
-수감 되어 튜플 요소 이름을 사용 하도록 설정, Visual Basic 프로젝트에서는 Visual Basic 컴파일러의 버전을 정의 해야 합니다 (\*.vbproj) 파일: 
+유추 된 튜플 요소 이름을 사용 하도록 설정, Visual Basic 프로젝트에서는 Visual Basic 컴파일러의 버전을 정의 해야 합니다 (\*.vbproj) 파일: 
 
 ```xml 
 <PropertyGroup> 
@@ -163,7 +163,7 @@ Visual Basic 튜플은의 인스턴스를 **System.ValueTuple** .NET Framework 4
 
 - 속성을 **튜플** 인스턴스는 읽기 전용; 튜플은 변경할 수 없습니다. Visual Basic 튜플 및 **ValueTuple** 형식, 튜플 필드는 읽기-쓰기; 튜플은 변경할 수 있습니다.
 
-- 제네릭 **튜플** 형식은 참조 형식입니다. 이 사용 하 여 **튜플** 형식 개체를 할당 하는 의미입니다. 실행 부하 과다 경로에서는 이로 인해 응용 프로그램 성능이 크게 영향을 받을 수 있습니다. Visual Basic 튜플 및 **ValueTuple** 형식은 값 형식입니다.
+- 제네릭 **튜플** 형식은 참조 형식입니다. 이 사용 하 여 **튜플** 형식 개체를 할당 하는 의미입니다. 실행 부하 과다 경로에서는 이로 인해 애플리케이션 성능이 크게 영향을 받을 수 있습니다. Visual Basic 튜플 및 **ValueTuple** 형식은 값 형식입니다.
 
 확장 메서드는 <xref:System.TupleExtensions> 클래스를 쉽게 Visual Basic 튜플와.NET 간 변환 **튜플** 개체입니다. **ToTuple** 메서드는.NET Visual Basic 튜플을 변환 합니다 **튜플** 개체와 **ToValueTuple** 메서드를.NET으로 변환 합니다 **튜플** Visual Basic 튜플 개체입니다.
 
@@ -171,6 +171,6 @@ Visual Basic 튜플은의 인스턴스를 **System.ValueTuple** .NET Framework 4
 
 [!code-vb[Convert](../../../../../samples/snippets/visualbasic/programming-guide/language-features/data-types/tuple2.vb#1)]
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
-[Visual Basic 언어 참조](index.md)  
+- [Visual Basic 언어 참조](index.md)

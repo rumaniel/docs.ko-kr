@@ -1,0 +1,399 @@
+- name: 진단 기호 저장소
+  href: index.md
+  items:
+    - name: 진단 기호 저장소 인터페이스
+      href: diagnostics-symbol-store-interfaces.md
+      items:
+        - name: IBindingDisplay 인터페이스
+          href: ibindingdisplay-interface.md
+          items:
+            - name: GetCurrentDisplay 메서드
+              href: ibindingdisplay-getcurrentdisplay-method.md
+            - name: InitializeForProcess 메서드
+              href: ibindingdisplay-initializeforprocess-method.md
+        - name: IDebugAutoAttach 인터페이스
+          href: idebugautoattach-interface.md
+          items:
+            - name: AutoAttach 메서드
+              href: idebugautoattach-autoattach-method.md
+        - name: INotifyConnection2 인터페이스
+          href: inotifyconnection2-interface.md
+          items:
+            - name: RegisterNotifySource 메서드
+              href: inotifyconnection2-registernotifysource-method.md
+            - name: UnregisterNotifySource 메서드
+              href: inotifyconnection2-unregisternotifysource-method.md
+        - name: INotifySink2 인터페이스
+          href: inotifysink2-interface.md
+          items:
+            - name: OnSyncCallEnter 메서드
+              href: inotifysink2-onsynccallenter-method.md
+            - name: OnSyncCallExit 메서드
+              href: inotifysink2-onsynccallexit-method.md
+            - name: OnSyncCallOut 메서드
+              href: inotifysink2-onsynccallout-method.md
+            - name: OnSyncCallReturn 메서드
+              href: inotifysink2-onsynccallreturn-method.md
+        - name: INotifySource2 인터페이스
+          href: inotifysource2-interface.md
+          items:
+            - name: SetNotifyFilter 메서드
+              href: inotifysource2-setnotifyfilter-method.md
+        - name: ISymENCUnmanagedMethod 인터페이스
+          href: isymencunmanagedmethod-interface.md
+          items:
+            - name: GetDocumentsForMethod 메서드
+              href: isymencunmanagedmethod-getdocumentsformethod-method.md
+            - name: GetDocumentsForMethodCount 메서드
+              href: isymencunmanagedmethod-getdocumentsformethodcount-method.md
+            - name: GetFileNameFromOffset 메서드
+              href: isymencunmanagedmethod-getfilenamefromoffset-method.md
+            - name: GetLineFromOffset 메서드
+              href: isymencunmanagedmethod-getlinefromoffset-method.md
+            - name: GetSourceExtentInDocument 메서드
+              href: isymencunmanagedmethod-getsourceextentindocument-method.md
+        - name: ISymUnmanagedAsyncMethod 인터페이스
+          href: isymunmanagedasyncmethod-interface.md
+          items:
+            - name: GetAsyncStepInfo 메서드
+              href: isymunmanagedasyncmethod-getasyncstepinfo-method.md
+            - name: GetAsyncStepInfoCount 메서드
+              href: isymunmanagedasyncmethod-getasyncstepinfocount-method.md
+            - name: GetCatchHandlerILOffset 메서드
+              href: isymunmanagedasyncmethod-getcatchhandleriloffset-method.md
+            - name: GetKickoffMethod 메서드
+              href: isymunmanagedasyncmethod-getkickoffmethod-method.md
+            - name: HasCatchHandlerILOffset 메서드
+              href: isymunmanagedasyncmethod-hascatchhandleriloffset-method.md
+            - name: IsAsyncMethod 메서드
+              href: isymunmanagedasyncmethod-isasyncmethod-method.md
+        - name: ISymUnmanagedAsyncMethodPropertiesWriter 인터페이스
+          href: isymunmanagedasyncmethodpropertieswriter-interface.md
+          items:
+            - name: DefineAsyncStepInfo 메서드
+              href: isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md
+            - name: DefineCatchHandlerILOffset 메서드
+              href: isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md
+            - name: DefineKickoffMethod 메서드
+              href: isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md
+        - name: ISymUnmanagedBinder 인터페이스
+          href: isymunmanagedbinder-interface.md
+          items:
+            - name: GetReaderForFile 메서드
+              href: isymunmanagedbinder-getreaderforfile-method.md
+            - name: GetReaderFromStream 메서드
+              href: isymunmanagedbinder-getreaderfromstream-method.md
+        - name: ISymUnmanagedBinder2 인터페이스
+          href: isymunmanagedbinder2-interface.md
+          items:
+            - name: GetReaderForFile2 메서드
+              href: isymunmanagedbinder2-getreaderforfile2-method.md
+        - name: ISymUnmanagedBinder3 인터페이스
+          href: isymunmanagedbinder3-interface.md
+          items:
+            - name: GetReaderFromCallback 메서드
+              href: isymunmanagedbinder3-getreaderfromcallback-method.md
+        - name: ISymUnmanagedConstant 인터페이스
+          href: isymunmanagedconstant-interface.md
+          items:
+            - name: GetName 메서드
+              href: isymunmanagedconstant-getname-method.md
+            - name: GetSignature 메서드
+              href: isymunmanagedconstant-getsignature-method.md
+            - name: GetValue 메서드
+              href: isymunmanagedconstant-getvalue-method.md
+        - name: ISymUnmanagedDispose 인터페이스
+          href: isymunmanageddispose-interface.md
+          items:
+            - name: Destroy 메서드
+              href: isymunmanageddispose-destroy-method.md
+        - name: ISymUnmanagedDocument 인터페이스
+          href: isymunmanageddocument-interface.md
+          items:
+            - name: FindClosestLine 메서드
+              href: isymunmanageddocument-findclosestline-method.md
+            - name: GetCheckSum 메서드
+              href: isymunmanageddocument-getchecksum-method.md
+            - name: GetCheckSumAlgorithmId 메서드
+              href: isymunmanageddocument-getchecksumalgorithmid-method.md
+            - name: GetDocumentType 메서드
+              href: isymunmanageddocument-getdocumenttype-method.md
+            - name: GetLanguage 메서드
+              href: isymunmanageddocument-getlanguage-method.md
+            - name: GetLanguageVendor 메서드
+              href: isymunmanageddocument-getlanguagevendor-method.md
+            - name: GetSourceLength 메서드
+              href: isymunmanageddocument-getsourcelength-method.md
+            - name: GetSourceRange 메서드
+              href: isymunmanageddocument-getsourcerange-method.md
+            - name: GetURL 메서드
+              href: isymunmanageddocument-geturl-method.md
+            - name: HasEmbeddedSource 메서드
+              href: isymunmanageddocument-hasembeddedsource-method.md
+        - name: ISymUnmanagedDocumentWriter 인터페이스
+          href: isymunmanageddocumentwriter-interface.md
+          items:
+            - name: SetCheckSum 메서드
+              href: isymunmanageddocumentwriter-setchecksum-method.md
+            - name: SetSource 메서드
+              href: isymunmanageddocumentwriter-setsource-method.md
+        - name: ISymUnmanagedENCUpdate 인터페이스
+          href: isymunmanagedencupdate-interface.md
+          items:
+            - name: GetLocalVariableCount 메서드
+              href: isymunmanagedencupdate-getlocalvariablecount-method.md
+            - name: GetLocalVariables 메서드
+              href: isymunmanagedencupdate-getlocalvariables-method.md
+            - name: InitializeForEnc 메서드
+              href: isymunmanagedencupdate-initializeforenc-method.md
+            - name: UpdateMethodLines 메서드
+              href: isymunmanagedencupdate-updatemethodlines-method.md
+            - name: UpdateSymbolStore2 메서드
+              href: isymunmanagedencupdate-updatesymbolstore2-method.md
+        - name: ISymUnmanagedMethod 인터페이스
+          href: isymunmanagedmethod-interface.md
+          items:
+            - name: GetNamespace 메서드
+              href: isymunmanagedmethod-getnamespace-method.md
+            - name: GetOffset 메서드
+              href: isymunmanagedmethod-getoffset-method.md
+            - name: GetParameters 메서드
+              href: isymunmanagedmethod-getparameters-method.md
+            - name: GetRanges 메서드
+              href: isymunmanagedmethod-getranges-method.md
+            - name: GetRootScope 메서드
+              href: isymunmanagedmethod-getrootscope-method.md
+            - name: GetScopeFromOffset 메서드
+              href: isymunmanagedmethod-getscopefromoffset-method.md
+            - name: GetSequencePointCount 메서드
+              href: isymunmanagedmethod-getsequencepointcount-method.md
+            - name: GetSequencePoints 메서드
+              href: isymunmanagedmethod-getsequencepoints-method.md
+            - name: GetSourceStartEnd 메서드
+              href: isymunmanagedmethod-getsourcestartend-method.md
+            - name: GetToken 메서드
+              href: isymunmanagedmethod-gettoken-method.md
+        - name: ISymUnmanagedNamespace 인터페이스
+          href: isymunmanagednamespace-interface.md
+          items:
+            - name: GetName 메서드
+              href: isymunmanagednamespace-getname-method.md
+            - name: GetNamespaces 메서드
+              href: isymunmanagednamespace-getnamespaces-method.md
+            - name: GetVariables 메서드
+              href: isymunmanagednamespace-getvariables-method.md
+        - name: ISymUnmanagedReader 인터페이스
+          href: isymunmanagedreader-interface.md
+          items:
+            - name: GetDocument 메서드
+              href: isymunmanagedreader-getdocument-method.md
+            - name: GetDocuments 메서드
+              href: isymunmanagedreader-getdocuments-method.md
+            - name: GetDocumentVersion 메서드
+              href: isymunmanagedreader-getdocumentversion-method.md
+            - name: GetGlobalVariables 메서드
+              href: isymunmanagedreader-getglobalvariables-method.md
+            - name: GetMethod 메서드
+              href: isymunmanagedreader-getmethod-method.md
+            - name: GetMethodByVersion 메서드
+              href: isymunmanagedreader-getmethodbyversion-method.md
+            - name: GetMethodFromDocumentPosition 메서드
+              href: isymunmanagedreader-getmethodfromdocumentposition-method.md
+            - name: GetMethodsFromDocumentPosition 메서드
+              href: isymunmanagedreader-getmethodsfromdocumentposition-method.md
+            - name: GetMethodVersion 메서드
+              href: isymunmanagedreader-getmethodversion-method.md
+            - name: GetNamespaces 메서드
+              href: isymunmanagedreader-getnamespaces-method.md
+            - name: GetSymAttribute 메서드
+              href: isymunmanagedreader-getsymattribute-method.md
+            - name: GetSymbolStoreFileName 메서드
+              href: isymunmanagedreader-getsymbolstorefilename-method.md
+            - name: GetUserEntryPoint 메서드
+              href: isymunmanagedreader-getuserentrypoint-method.md
+            - name: GetVariables 메서드
+              href: isymunmanagedreader-getvariables-method.md
+            - name: Initialize 메서드
+              href: isymunmanagedreader-initialize-method.md
+            - name: ReplaceSymbolStore 메서드
+              href: isymunmanagedreader-replacesymbolstore-method.md
+            - name: UpdateSymbolStore 메서드
+              href: isymunmanagedreader-updatesymbolstore-method.md
+        - name: ISymUnmanagedReader2 인터페이스
+          href: isymunmanagedreader2-interface.md
+          items:
+            - name: GetMethodByVersionPreRemap 메서드
+              href: isymunmanagedreader2-getmethodbyversionpreremap-method.md
+            - name: GetMethodsInDocument 메서드
+              href: isymunmanagedreader2-getmethodsindocument-method.md
+            - name: GetSymAttributePreRemap 메서드
+              href: isymunmanagedreader2-getsymattributepreremap-method.md
+        - name: ISymUnmanagedReaderSymbolSearchInfo 인터페이스
+          href: isymunmanagedreadersymbolsearchinfo-interface.md
+          items:
+            - name: GetSymbolSearchInfoCount 메서드
+              href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md
+            - name: GetSymbolSearchInfo 메서드
+              href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md
+        - name: ISymUnmanagedScope 인터페이스
+          href: isymunmanagedscope-interface.md
+          items:
+            - name: GetChildren 메서드
+              href: isymunmanagedscope-getchildren-method.md
+            - name: GetEndOffset 메서드
+              href: isymunmanagedscope-getendoffset-method.md
+            - name: GetLocalCount 메서드
+              href: isymunmanagedscope-getlocalcount-method.md
+            - name: GetLocals 메서드
+              href: isymunmanagedscope-getlocals-method.md
+            - name: GetMethod 메서드
+              href: isymunmanagedscope-getmethod-method.md
+            - name: GetNamespaces 메서드
+              href: isymunmanagedscope-getnamespaces-method.md
+            - name: GetParent 메서드
+              href: isymunmanagedscope-getparent-method.md
+            - name: GetStartOffset 메서드
+              href: isymunmanagedscope-getstartoffset-method.md
+        - name: ISymUnmanagedScope2 인터페이스
+          href: isymunmanagedscope2-interface.md
+          items:
+            - name: GetConstantCount 메서드
+              href: isymunmanagedscope2-getconstantcount-method.md
+            - name: GetConstants 메서드
+              href: isymunmanagedscope2-getconstants-method.md
+        - name: ISymUnmanagedSourceServerModule 인터페이스
+          href: isymunmanagedsourceservermodule-interface.md
+          items:
+            - name: GetSourceServerData 메서드
+              href: isymunmanagedsourceservermodule-getsourceserverdata-method.md
+        - name: ISymUnmanagedSymbolSearchInfo 인터페이스
+          href: isymunmanagedsymbolsearchinfo-interface.md
+          items:
+            - name: GetHRESULT 메서드
+              href: isymunmanagedsymbolsearchinfo-gethresult-method.md
+            - name: GetSearchPath 메서드
+              href: isymunmanagedsymbolsearchinfo-getsearchpath-method.md
+            - name: GetSearchPathLength 메서드
+              href: isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md
+        - name: ISymUnmanagedVariable 인터페이스
+          href: isymunmanagedvariable-interface.md
+          items:
+            - name: GetAddressField1 메서드
+              href: isymunmanagedvariable-getaddressfield1-method.md
+            - name: GetAddressField2 메서드
+              href: isymunmanagedvariable-getaddressfield2-method.md
+            - name: GetAddressField3 메서드
+              href: isymunmanagedvariable-getaddressfield3-method.md
+            - name: GetAddressKind 메서드
+              href: isymunmanagedvariable-getaddresskind-method.md
+            - name: GetAttributes 메서드
+              href: isymunmanagedvariable-getattributes-method.md
+            - name: GetEndOffset 메서드
+              href: isymunmanagedvariable-getendoffset-method.md
+            - name: GetName 메서드
+              href: isymunmanagedvariable-getname-method.md
+            - name: GetSignature 메서드
+              href: isymunmanagedvariable-getsignature-method.md
+            - name: GetStartOffset 메서드
+              href: isymunmanagedvariable-getstartoffset-method.md
+        - name: ISymUnmanagedWriter 인터페이스
+          href: isymunmanagedwriter-interface.md
+          items:
+            - name: Abort 메서드
+              href: isymunmanagedwriter-abort-method.md
+            - name: Close 메서드
+              href: isymunmanagedwriter-close-method.md
+            - name: CloseMethod 메서드
+              href: isymunmanagedwriter-closemethod-method.md
+            - name: CloseNamespace 메서드
+              href: isymunmanagedwriter-closenamespace-method.md
+            - name: CloseScope 메서드
+              href: isymunmanagedwriter-closescope-method.md
+            - name: DefineConstant 메서드
+              href: isymunmanagedwriter-defineconstant-method.md
+            - name: DefineDocument 메서드
+              href: isymunmanagedwriter-definedocument-method.md
+            - name: DefineField 메서드
+              href: isymunmanagedwriter-definefield-method.md
+            - name: DefineGlobalVariable 메서드
+              href: isymunmanagedwriter-defineglobalvariable-method.md
+            - name: DefineLocalVariable 메서드
+              href: isymunmanagedwriter-definelocalvariable-method.md
+            - name: DefineParameter 메서드
+              href: isymunmanagedwriter-defineparameter-method.md
+            - name: DefineSequencePoints 메서드
+              href: isymunmanagedwriter-definesequencepoints-method.md
+            - name: GetDebugInfo 메서드
+              href: isymunmanagedwriter-getdebuginfo-method.md
+            - name: Initialize 메서드
+              href: isymunmanagedwriter-initialize-method.md
+            - name: Initialize2 메서드
+              href: isymunmanagedwriter-initialize2-method.md
+            - name: OpenMethod 메서드
+              href: isymunmanagedwriter-openmethod-method.md
+            - name: OpenNamespace 메서드
+              href: isymunmanagedwriter-opennamespace-method.md
+            - name: OpenScope 메서드
+              href: isymunmanagedwriter-openscope-method.md
+            - name: RemapToken 메서드
+              href: isymunmanagedwriter-remaptoken-method.md
+            - name: SetMethodSourceRange 메서드
+              href: isymunmanagedwriter-setmethodsourcerange-method.md
+            - name: SetScopeRange 메서드
+              href: isymunmanagedwriter-setscoperange-method.md
+            - name: SetSymAttribute 메서드
+              href: isymunmanagedwriter-setsymattribute-method.md
+            - name: SetUserEntryPoint 메서드
+              href: isymunmanagedwriter-setuserentrypoint-method.md
+            - name: UsingNamespace 메서드
+              href: isymunmanagedwriter-usingnamespace-method.md
+        - name: ISymUnmanagedWriter2 인터페이스
+          href: isymunmanagedwriter2-interface.md
+          items:
+            - name: DefineConstant2 메서드
+              href: isymunmanagedwriter2-defineconstant2-method.md
+            - name: DefineGlobalVariable2 메서드
+              href: isymunmanagedwriter2-defineglobalvariable2-method.md
+            - name: DefineLocalVariable2 메서드
+              href: isymunmanagedwriter2-definelocalvariable2-method.md
+        - name: ISymUnmanagedWriter3 인터페이스
+          href: isymunmanagedwriter3-interface.md
+          items:
+            - name: Commit 메서드
+              href: isymunmanagedwriter3-commit-method.md
+            - name: OpenMethod2 메서드
+              href: isymunmanagedwriter3-openmethod2-method.md
+        - name: ISymUnmanagedWriter4 인터페이스
+          href: isymunmanagedwriter4-interface.md
+          items:
+            - name: GetDebugInfoWithPadding 메서드
+              href: isymunmanagedwriter4-getdebuginfowithpadding-method.md
+        - name: ISymUnmanagedWriter5 인터페이스
+          href: isymunmanagedwriter5-interface.md
+          items:
+            - name: CloseMapTokensToSourceSpans 메서드
+              href: isymunmanagedwriter5-closemaptokenstosourcespans-method.md
+            - name: MapTokenToSourceSpan 메서드
+              href: isymunmanagedwriter5-maptokentosourcespan-method.md
+            - name: OpenMapTokensToSourceSpans 메서드
+              href: isymunmanagedwriter5-openmaptokenstosourcespans-method.md
+    - name: 진단 기호 저장소 열거형
+      href: diagnostics-symbol-store-enumerations.md
+      items:
+        - name: CorSymAddrKind 열거형
+          href: corsymaddrkind-enumeration.md
+        - name: CorSymSearchPolicyAttributes 열거형
+          href: corsymsearchpolicyattributes-enumeration.md
+        - name: CorSymVarFlag 열거형
+          href: corsymvarflag-enumeration.md
+        - name: NOTIFY_FILTER 열거형
+          href: notify-filter-enumeration.md
+    - name: 진단 기호 저장소 구조체
+      href: diagnostics-symbol-store-structures.md
+      items:
+        - name: CALL_ID 구조체
+          href: call-id-structure.md
+        - name: SYMLINEDELTA 구조체
+          href: symlinedelta-structure.md
+        - name: USER_THREAD 구조체
+          href: user-thread-structure.md

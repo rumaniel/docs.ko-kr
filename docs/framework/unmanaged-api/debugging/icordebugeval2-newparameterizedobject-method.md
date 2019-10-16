@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f20c24984aadd05139d1a427b75bc65438539ff1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aae5f4c79acd6f92d42c2890ba64fa66e1b4bfbe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412807"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753595"
 ---
 # <a name="icordebugeval2newparameterizedobject-method"></a>ICorDebugEval2::NewParameterizedObject 메서드
 새 매개 변수가 있는 형식 개체를 인스턴스화하고 개체의 생성자 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT NewParameterizedObject (  
     [in] ICorDebugFunction     *pConstructor,  
     [in] ULONG32               nTypeArgs,  
@@ -39,7 +39,7 @@ HRESULT NewParameterizedObject (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pConstructor`  
  [in] 인스턴스화할 수 개체의 생성자를 나타내는 ICorDebugFunction 개체에 대 한 포인터입니다.  
   
@@ -47,7 +47,7 @@ HRESULT NewParameterizedObject (
  [in] 형식 인수 수가 전달 합니다.  
   
  `ppTypeArgs`  
- [in] 포인터의 배열을, 각 인스턴스화 중인 개체에 대 한 형식 인수를 나타내는 ICorDebugType 개체를 가리킵니다.  
+ [in] 포인터의 배열, 각 인스턴스화 중인 개체에 대 한 형식 인수를 나타내는 ICorDebugType 개체를 가리킵니다.  
   
  `nArgs`  
  [in] 인수 개수가 생성자에 전달 합니다.  
@@ -56,13 +56,13 @@ HRESULT NewParameterizedObject (
  [in] 생성자에 전달 되는 인수 값을 나타내는 ICorDebugValue 개체를 가리키는 각각 포인터의 배열입니다.  
   
 ## <a name="remarks"></a>설명  
- 개체의 생성자 걸릴 수 있습니다 <xref:System.Type> 매개 변수입니다.  
+ 개체의 생성자 걸립니다 <xref:System.Type> 매개 변수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

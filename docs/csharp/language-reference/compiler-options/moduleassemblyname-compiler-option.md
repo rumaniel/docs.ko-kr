@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [C#]
 - .moduleassemblyname compiler option [C#]
 ms.assetid: d464d9b9-f18d-423b-95e9-66c7878fd53a
-ms.openlocfilehash: 975acb5b814bc5a250cba351e0d1559968f7e298
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 7562c0609d61b2388f5063bc480a4dfc715155db
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864708"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70970083"
 ---
 # <a name="-moduleassemblyname-c-compiler-option"></a>-moduleassemblyname(C# 컴파일러 옵션)
 .netmodule에서 public이 아닌 형식에 액세스할 수 있는 어셈블리를 지정합니다.  
@@ -31,15 +31,15 @@ ms.locfileid: "43864708"
 ## <a name="remarks"></a>설명  
  **-moduleassemblyname**은 .netmodule을 빌드할 때와 다음 조건이 충족되는 경우 사용해야 합니다.  
   
--   .netmodule은 기존 어셈블리의 public이 아닌 형식에 액세스해야 합니다.  
+- .netmodule은 기존 어셈블리의 public이 아닌 형식에 액세스해야 합니다.  
   
--   .netmodule을 빌드할 어셈블리의 이름을 알아야 합니다.  
+- .netmodule을 빌드할 어셈블리의 이름을 알아야 합니다.  
   
--   기존 어셈블리는 friend 어셈블리(friend assembly)에 .netmodule을 빌드할 어셈블리에 대한 액세스를 부여합니다.  
+- 기존 어셈블리는 friend 어셈블리(friend assembly)에 .netmodule을 빌드할 어셈블리에 대한 액세스를 부여합니다.  
   
- .netmodule 빌드 방법에 대한 자세한 내용은 [-target:module(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md)을 참조하세요.  
+ .netmodule 빌드 방법에 대한 자세한 내용은 [-target:module(C# 컴파일러 옵션)](./target-module-compiler-option.md)을 참조하세요.  
   
- friend 어셈블리에 대한 자세한 내용은 [Friend 어셈블리](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)를 참조하세요.  
+ friend 어셈블리에 대한 자세한 내용은 [Friend 어셈블리](../../../standard/assembly/friend.md)를 참조하세요.  
   
  개발 환경 내에서는 이 옵션을 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
@@ -95,7 +95,7 @@ class A {
   
 **An_Internal_Class.Test 호출됨**
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

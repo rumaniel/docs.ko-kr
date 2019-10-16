@@ -2,12 +2,12 @@
 title: 대리자의 가변성(C#)
 ms.date: 07/20/2015
 ms.assetid: 19de89d2-8224-4406-8964-2965b732b890
-ms.openlocfilehash: 3dabac4e532198871cf05d639aa692751ab17ae1
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 213c295782c10d15f0515eeb653322eafdb390d9
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48027574"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924373"
 ---
 # <a name="variance-in-delegates-c"></a>대리자의 가변성(C#)
 .NET Framework 3.5에는 메서드 시그니처를 C#에 있는 모든 대리자의 대리자 형식과 일치시키는 가변성 지원이 추가되었습니다. 즉, 일치하는 시그니처가 있는 메서드만이 아니라 더 많은 파생된 형식(공변성(covariance))을 반환하는 메서드 또는 대리자 형식에 지정된 것보다 더 적은 수의 파생된 형식(반공변성(contravariance))을 가지고 있는 매개 변수를 수락하는 메서드도 대리자에 할당할 수 있습니다. 여기에는 제네릭 및 비 제네릭 대리자가 모두 포함됩니다.  
@@ -62,7 +62,7 @@ SampleGenericDelegate<Second, First> dGeneric = ASecondRFirst;
 SampleGenericDelegate<Second, First> dGenericConversion = AFirstRSecond;  
 ```  
   
- 더 많은 예제는 [대리자에서 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md) 및 [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)을 참조하세요.  
+ 더 많은 예제는 [대리자에서 가변성 사용(C#)](./using-variance-in-delegates.md) 및 [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](./using-variance-for-func-and-action-generic-delegates.md)을 참조하세요.  
   
 ## <a name="variance-in-generic-type-parameters"></a>제네릭 형식 매개 변수에서의 가변성  
  .NET Framework 4 이상에서는 가변성에 필요한 대로 형식이 서로 간에 상속된 경우 제네릭 형식 매개 변수로 지정한 서로 다른 형식을 가지고 있는 제네릭 대리자를 상호 간에 할당할 수 있도록, 대리자 간 암시적 변환을 사용하도록 설정할 수 있습니다.  
@@ -112,17 +112,17 @@ public static void Test()
 ### <a name="generic-delegates-that-have-variant-type-parameters-in-the-net-framework"></a>.NET Framework에 Variant 형식 매개 변수를 가지고 있는 제네릭 대리자  
  .NET Framework 4에는 기존의 몇몇 제네릭 대리자에서 제네릭 형식 매개 변수에 대한 가변성 지원이 추가되었습니다.  
   
--   <xref:System> 네임스페이스의 `Action` 대리자(예: <xref:System.Action%601> 및 <xref:System.Action%602>)  
+- <xref:System> 네임스페이스의 `Action` 대리자(예: <xref:System.Action%601> 및 <xref:System.Action%602>)  
   
--   <xref:System> 네임스페이스의 `Func` 대리자(예: <xref:System.Func%601> 및 <xref:System.Func%602>)  
+- <xref:System> 네임스페이스의 `Func` 대리자(예: <xref:System.Func%601> 및 <xref:System.Func%602>)  
   
--   <xref:System.Predicate%601> 대리자  
+- <xref:System.Predicate%601> 대리자  
   
--   <xref:System.Comparison%601> 대리자  
+- <xref:System.Comparison%601> 대리자  
   
--   <xref:System.Converter%602> 대리자  
+- <xref:System.Converter%602> 대리자  
   
- 자세한 정보 및 예제는 [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)을 참조하세요.  
+ 자세한 정보 및 예제는 [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](./using-variance-for-func-and-action-generic-delegates.md)을 참조하세요.  
   
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>제네릭 대리자에서 Variant 형식 매개 변수 선언  
  제네릭 대리자가 공변(covariant) 또는 반공변(contravariant) 제네릭 형식 매개 변수를 가지고 있는 경우 이를 *variant 제네릭 대리자*라고 할 수 있습니다.  
@@ -140,7 +140,7 @@ public delegate void DContravariant<in A>(A a);
 ```  
   
 > [!IMPORTANT]
->  C#의 `ref`, `in` 및 `out` 매개 변수는 variant로 표시할 수 없습니다.  
+> C#의 `ref`, `in` 및 `out` 매개 변수는 variant로 표시할 수 없습니다.  
   
  동일한 대리자에서, 그러나 서로 다른 형식 매개 변수에 대해 분산 및 공변성(covariance)을 모두 지원하는 것도 가능합니다. 다음 예제에서 이를 확인할 수 있습니다.  
   
@@ -198,6 +198,6 @@ public static void Test()
   
 ## <a name="see-also"></a>참고 항목
 
-- [제네릭](~/docs/standard/generics/index.md)  
-- [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](../../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)  
-- [방법: 대리자 조합(멀티캐스트 대리자)](../../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)
+- [제네릭](../../../../standard/generics/index.md)
+- [Func 및 Action 제네릭 대리자에 가변성 사용(C#)](./using-variance-for-func-and-action-generic-delegates.md)
+- [방법: 대리자 조합(멀티캐스트 대리자)](../../delegates/how-to-combine-delegates-multicast-delegates.md)

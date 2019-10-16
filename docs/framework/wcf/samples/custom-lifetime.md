@@ -2,12 +2,12 @@
 title: 사용자 지정 수명
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003165"
 ---
 # <a name="custom-lifetime"></a>사용자 지정 수명
 
@@ -60,7 +60,7 @@ using (new OperationContextScope((IClientChannel)proxy2))
 
 ## <a name="extending-the-instancecontext"></a>InstanceContext 확장
 
-Wcf의 경우 <xref:System.ServiceModel.InstanceContext> 서비스 인스턴스 간의 링크로 및 `Dispatcher`합니다. WCF를 사용 하면 확장 가능한 개체 패턴을 사용 하 여 새 상태나 동작을 추가 하 여이 런타임 구성 요소를 확장할 수 있습니다. 새로운 기능을 사용 하 여 기존 런타임 클래스를 확장 하거나 또는 개체에 새 상태 기능을 추가할 확장명 가능한 개체 패턴 WCF에서 사용 됩니다. 확장 가능한 개체 패턴에는 세 가지 인터페이스인 <xref:System.ServiceModel.IExtensibleObject%601>, <xref:System.ServiceModel.IExtension%601> 및 <xref:System.ServiceModel.IExtensionCollection%601>이 있습니다.
+Wcf의 경우 <xref:System.ServiceModel.InstanceContext> 서비스 인스턴스 간의 링크로 및 `Dispatcher`합니다. WCF를 사용 하면 확장 가능한 개체 패턴을 사용 하 여 새 상태나 동작을 추가 하 여이 런타임 구성 요소를 확장할 수 있습니다. 새로운 기능을 사용 하 여 기존 런타임 클래스를 확장 하거나 또는 개체에 새 상태 기능을 추가할 확장명 가능한 개체 패턴 WCF에서 사용 됩니다. 확장명 가능한 개체 패턴에는 세 가지 인터페이스인 <xref:System.ServiceModel.IExtensibleObject%601>, <xref:System.ServiceModel.IExtension%601> 및 <xref:System.ServiceModel.IExtensionCollection%601>이 있습니다.
 
 <xref:System.ServiceModel.IExtensibleObject%601> 인터페이스는 해당 기능을 사용자 지정 하는 확장을 허용 하도록 개체에 의해 구현 됩니다.
 
@@ -145,7 +145,7 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
 이 샘플에서는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>을 구현하여 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드에 대한 호출을 가로채고 이를 `CustomLeaseExtension`에 라우트합니다. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현은 `CustomLifetimeLease` 클래스에 포함됩니다. <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드는 WCF 서비스 인스턴스를 해제 하려고 할 때 호출 됩니다. 그러나 ServiceBehavior의 `ISharedSessionInstance` 컬렉션에는 특정 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현의 인스턴스가 하나만 있습니다. 즉, 알 수 없으므로 합니다 <xref:System.ServiceModel.InstanceContext> WCF 확인 시 닫혀는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드. 따라서이 샘플에서는 스레드 잠금을 요청을 직렬화 하는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드.
 
 > [!IMPORTANT]
-> serialization은 응용 프로그램의 성능에 큰 영향을 주므로 스레드 잠금은 사용하지 않는 것이 좋습니다.
+> serialization은 애플리케이션의 성능에 큰 영향을 주므로 스레드 잠금은 사용하지 않는 것이 좋습니다.
 
 전용 멤버 필드에 사용 됩니다는 `CustomLifetimeLease` 유휴 상태를 추적 하는 클래스 및에서 반환 되는 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드. 때마다 합니다 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 메서드를 호출 합니다 `isIdle` 필드를 반환 하 고 다시 설정 `false`합니다.  디스패처에서 `false` 메서드를 호출할 수 있도록 하려면 이 값을 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.NotifyIdle%2A>로 설정해야 합니다.
 
@@ -201,7 +201,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- 마지막 합니다 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현을 사용 하 여를 서비스 모델에 후크 되어를 <xref:System.ServiceModel.Description.IServiceBehavior> 구현 합니다. 이 구현은 `CustomLeaseTimeAttribute` 클래스에 배치되며 `Attribute` 기본 클래스에서도 파생되어 이 동작을 특성으로 노출합니다.
+ 마지막 합니다 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 구현을 사용 하 여를 서비스 모델에 후크 되어를 <xref:System.ServiceModel.Description.IServiceBehavior> 구현 합니다. 이 구현은 `CustomLeaseTimeAttribute` 클래스에 배치되며 <xref:System.Attribute> 기본 클래스에서도 파생되어 이 동작을 특성으로 노출합니다.
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,
@@ -240,7 +240,7 @@ public class EchoService : IEchoService
 
 1. 수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](one-time-setup-procedure-for-the-wcf-samples.md)합니다.
 
-2. 지침에 따라 솔루션의 C# 또는 Visual Basic.NET 버전을 빌드하려면 [Building Windows Communication Foundation Samples](building-the-samples.md)합니다.
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](building-the-samples.md)의 지침을 따릅니다.
 
 3. 단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](running-the-samples.md)합니다.
 

@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], CheckBox
 - CheckBox control [WPF]
 ms.assetid: ee701cc2-968b-4683-8f81-3fafd8542700
-ms.openlocfilehash: a3f59ce8632a56f363f6ea029fc328655fece930
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 42d4d0e232d66c076a2f3ecfb2ae95a41b0557a5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052224"
 ---
 # <a name="checkbox"></a>CheckBox
-사용할 수 있습니다는 <xref:System.Windows.Controls.CheckBox> 에 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 응용 프로그램을 나타내는 사용자를 선택 하거나 선택을 취소할 수 있는 옵션입니다. 단일 확인란을 사용할 수 있습니다 또는 두 개 이상의 확인란을 그룹화 할 수 있습니다.  
+사용할 수는 <xref:System.Windows.Controls.CheckBox> 에 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 사용자 선택 하거나 선택을 취소할 수 있는 옵션을 나타내는 응용 프로그램의 합니다. 확인란 하나만 사용 하거나 둘 이상의 확인란을 그룹화 할 수 있습니다.  
   
- 다음 그래픽에서는의 다양 한 상태는 <xref:System.Windows.Controls.CheckBox>합니다.  
+ 다음 그림의 서로 다른 상태는 <xref:System.Windows.Controls.CheckBox>합니다.  
   
- ![CheckBox 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
+ ![CheckBox 상태](./media/ss-ctl-checkbox.png "SS_CTL_checkbox")  
 다양 한 상태의 CheckBox 컨트롤  
   
 ## <a name="reference"></a>참조  

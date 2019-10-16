@@ -1,1 +1,0 @@
-IPTC(International Press Telecommunications Council)

@@ -17,31 +17,31 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5cd157f89797406fbe87c3d70c415d7b192d1a9
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 8edb88d13732650e00292d63ad4e1975a97ac704
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025242"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291635"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>방법: 키 컨테이너에 비대칭 키 저장
-비대칭 개인 키는 로컬 컴퓨터에 축자로 저장하거나 일반 텍스트로 저장해서는 안 됩니다. 개인 키를 저장해야 하는 경우에는 키 컨테이너를 사용해야 합니다. 키 컨테이너에 대한 자세한 내용은 [컴퓨터 수준 및 사용자 수준 RSA 키 컨테이너 이해](https://msdn.microsoft.com/library/9a179f38-8fb7-4442-964c-fb7b9f39f5b9)를 참조하세요.  
+비대칭 프라이빗 키는 로컬 컴퓨터에 축자로 저장하거나 일반 텍스트로 저장해서는 안 됩니다. 프라이빗 키를 저장해야 하는 경우에는 키 컨테이너를 사용해야 합니다. 키 컨테이너에 대한 자세한 내용은 [컴퓨터 수준 및 사용자 수준 RSA 키 컨테이너 이해](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))를 참조하세요.  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>비대칭 키를 만들어 키 컨테이너에 저장하려면  
   
-1.  새 인스턴스를 만듭니다는 <xref:System.Security.Cryptography.CspParameters> 클래스 및 키 컨테이너에 호출 하려는 이름을 전달 합니다 <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> 필드입니다.  
+1. @No__t-0 클래스의 새 인스턴스를 만들고 키 컨테이너를 호출 하려는 이름을 <xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType> 필드에 전달 합니다.  
   
-2.  파생 된 클래스의 새 인스턴스를 만들고 합니다 <xref:System.Security.Cryptography.AsymmetricAlgorithm> 클래스 (일반적으로 **RSACryptoServiceProvider** 또는 **DSACryptoServiceProvider**) 이전에 만든 전달  **CspParameters** 개체를 해당 생성자입니다.  
+2. @No__t-0 클래스 (일반적으로 **RSACryptoServiceProvider** 또는 **DSACryptoServiceProvider**)에서 파생 되는 클래스의 새 인스턴스를 만들고 이전에 만든 **cspparameters** 개체를 해당 생성자에 전달 합니다.  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>키 컨테이너에서 키를 삭제하려면  
   
-1.  **CspParameters** 클래스의 새 인스턴스를 만들고 키 컨테이너에 지정하려는 이름을 **CspParameters.KeyContainerName** 필드에 전달합니다.  
+1. **CspParameters** 클래스의 새 인스턴스를 만들고 키 컨테이너에 지정하려는 이름을 **CspParameters.KeyContainerName** 필드에 전달합니다.  
   
-2.  **AsymmetricAlgorithm** 클래스에서 파생된 클래스의 새 인스턴스를 만들고(일반적으로 **RSACryptoServiceProvider** 또는 **DSACryptoServiceProvider**) 이전에 만든 **CspParameters** 개체를 해당 생성자에 전달합니다.  
+2. **AsymmetricAlgorithm** 클래스에서 파생된 클래스의 새 인스턴스를 만들고(일반적으로 **RSACryptoServiceProvider** 또는 **DSACryptoServiceProvider**) 이전에 만든 **CspParameters** 개체를 해당 생성자에 전달합니다.  
   
-3.  **AsymmetricAlgorithm**에서 파생된 클래스의 **PersistKeyInCSP**속성을 **false**(Visual Basic의 경우 **False**)로 설정합니다.  
+3. **AsymmetricAlgorithm**에서 파생된 클래스의 **PersistKeyInCSP**속성을 **false**(Visual Basic의 경우 **False**)로 설정합니다.  
   
-4.  **AsymmetricAlgorithm**에서 파생된 클래스의 **Clear** 메서드를 호출합니다. 이 메서드는 클래스의 모든 리소스를 해제하고 키 컨테이너를 지웁니다.  
+4. **AsymmetricAlgorithm**에서 파생된 클래스의 **Clear** 메서드를 호출합니다. 이 메서드는 클래스의 모든 리소스를 해제하고 키 컨테이너를 지웁니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 비대칭 키를 만들어 키 컨테이너에 저장하고 나중에 키를 검색하며 컨테이너에서 키를 삭제하는 방법을 보여 줍니다.  
@@ -212,7 +212,7 @@ public class StoreKey
 }  
 ```  
   
-```Output  
+```console  
 Key added to container:  
 <RSAKeyValue> Key Information A</RSAKeyValue>  
 Key retrieved from container :  
@@ -223,9 +223,9 @@ Key added to container:
 Key deleted.  
 ```  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [암호화 및 해독용 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)  
-- [데이터 암호화](../../../docs/standard/security/encrypting-data.md)  
-- [데이터 해독](../../../docs/standard/security/decrypting-data.md)  
+- [암호화 및 해독용 키 생성](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
+- [데이터 암호화](../../../docs/standard/security/encrypting-data.md)
+- [데이터 해독](../../../docs/standard/security/decrypting-data.md)
 - [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

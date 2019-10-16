@@ -16,53 +16,54 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bba40acf7bfd20897ece4de285fe7a9175be83e0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: adbbf94dc36c6d82360ed532b283cd666a1a52ed
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431765"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796854"
 ---
 # <a name="gethistoryfiledirectory-function"></a>GetHistoryFileDirectory 함수
-응용 프로그램 기록 디렉터리의 경로 검색 합니다.  
+응용 프로그램 기록 디렉터리의 경로를 검색 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetHistoryFileDirectory (  
     [in]      LPWSTR      wzDir,  
     [in,out]  LPCWSTR  *pdwsize,  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wzDir`  
- [out] 응용 프로그램 기록 디렉터리 경로 저장할 버퍼입니다.  
+ 제한이 응용 프로그램 기록 디렉터리의 경로를 저장할 버퍼입니다.  
   
  `pdwSize`  
- [out에서] 버퍼의 길이입니다.  
+ [in, out] 버퍼의 길이입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 이 메서드는 다음 값 외에도 WinError.h 파일에 정의 된 대로 표준 COM 오류 코드를 반환 합니다.  
+ 이 메서드는 Winerror.h 파일에 정의 된 대로 다음 값 외에 표준 COM 오류 코드를 반환 합니다.  
   
-|반환 코드|설명|  
+|반환 코드|Description|  
 |-----------------|-----------------|  
 |S_OK|메서드가 완료되었습니다.|  
-|E_INVALIDARG|`wzDir` 또는 `pdwSize` null 또는 버전 문자열이 잘못 되었습니다.|  
+|E_INVALIDARG|`wzDir`또는 `pdwSize` 이 null 이거나 버전 문자열이 잘못 되었습니다.|  
   
 ## <a name="remarks"></a>설명  
- 성공적으로 완료 되는 `pdwSize` 경로 문자열의 길이 인수를 설정 합니다.  
+ 성공적으로 완료 되 면 `pdwSize` 인수는 경로 문자열의 길이로 설정 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Fusion.h  
+ **헤더:** Fusion. h  
   
- **라이브러리:** Fusion.dll 및 Mscorwks.dll 합니다. 올바른 버전의.NET Framework를 대상 하는 데 Mscorwks.dll 대신 Fusion.dll를 사용 합니다.  
+ **라이브러리** Fusion 및 Mscorwks.dll. Mscorwks.dll 대신 Fusion을 사용 하 여 올바른 버전의 .NET Framework를 대상으로 하는지 확인 합니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [CreateHistoryReader 함수](../../../../docs/framework/unmanaged-api/fusion/createhistoryreader-function.md)  
- [NukeDownloadedCache 함수](../../../../docs/framework/unmanaged-api/fusion/nukedownloadedcache-function.md)  
- [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>참고자료
+
+- [CreateHistoryReader 함수](createhistoryreader-function.md)
+- [NukeDownloadedCache 함수](nukedownloadedcache-function.md)
+- [Fusion 전역 정적 함수](fusion-global-static-functions.md)

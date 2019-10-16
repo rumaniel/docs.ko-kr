@@ -7,15 +7,15 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
-ms.openlocfilehash: d86ddb9f57b30350ee962bb0c81f68884ab4d258
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 217ae092872b5de1638d88051aed1f8a4e785b7d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778608"
 ---
 # <a name="assignment-operators-visual-basic"></a>할당 연산자(Visual Basic)
-Visual Basic에서 정의 된 할당 연산자는 다음과 같습니다.  
+Visual Basic에 정의 된 할당 연산자는 다음과 같습니다.  
   
  [= 연산자](../../../visual-basic/language-reference/operators/assignment-operator.md)  
   
@@ -37,7 +37,8 @@ Visual Basic에서 정의 된 할당 연산자는 다음과 같습니다.
   
  [&= 연산자](../../../visual-basic/language-reference/operators/and-assignment-operator.md)  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [문](../../../visual-basic/language-reference/statements/index.md)
+## <a name="see-also"></a>참고자료
+
+- [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [문(C++)](../../../visual-basic/language-reference/statements/index.md)

@@ -1,5 +1,5 @@
 ---
-title: '&lt;추가&gt; 요소에 대 한 &lt;appSettings&gt;'
+title: <appSettings>에 대한 <add> 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/appSettings/add
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 8734efdc-00f6-4a65-bba6-084c5bc65246
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: e74f0956dd5acebccee87fd6ad8c09b299badffd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 594ba4f289012e775e93acba98056b60bdd94cbd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194347"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69927744"
 ---
-# <a name="add-element-for-appsettings"></a>\<추가 > 요소에 대 한 \<appSettings >
+# <a name="add-element-for-appsettings"></a>\<appSettings >에 대 \<한 > 요소 추가
 
-사용자 지정 응용 프로그램 설정을 추가합니다.
+사용자 지정 응용 프로그램 설정을 추가 합니다.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<추가 >**
+[ **\<configuration>** ](../configuration-element.md)   
+&nbsp;&nbsp;[ **\<appSettings>** ](appsettings-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>구문
 
@@ -43,7 +43,7 @@ ms.locfileid: "50194347"
 
 |     | 설명 |
 | --- | ----------- |
-| [**\<appSettings>**](~/docs/framework/configure-apps/file-schema/appsettings/appsettings-element-for-configuration.md) | 파일 경로, XML Web services URL 또는 응용 프로그램의 기타 사용자 지정 구성 정보와 같은 사용자 지정 응용 프로그램 설정이 포함되어 있습니다. |
+| [ **\<appSettings>** ](appsettings-element-for-configuration.md) | 파일 경로, XML Web services URL 또는 애플리케이션의 기타 사용자 지정 구성 정보와 같은 사용자 지정 애플리케이션 설정이 포함되어 있습니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -59,7 +59,7 @@ ms.locfileid: "50194347"
 </appSettings>
 ```
 
-다음 예제에서는 `<add>` ASP.NET 응용 프로그램에서 두 호환성 설정을 정의 하는 요소:
+다음 예제에서는 `<add>` 요소를 사용 하 여 ASP.NET 응용 프로그램에서 두 가지 호환성 설정을 정의 합니다.
 
 ```xml
 <appSettings>
@@ -70,4 +70,4 @@ ms.locfileid: "50194347"
 
 ## <a name="see-also"></a>참고자료
 
-- [.NET Framework의 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework에 대 한 구성 파일 스키마](../index.md)

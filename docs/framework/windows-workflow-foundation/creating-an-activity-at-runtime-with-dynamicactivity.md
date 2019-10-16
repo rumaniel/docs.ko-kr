@@ -2,12 +2,12 @@
 title: 동적 활동을 사용하여 런타임에 활동 만들기
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 32a35d5220950d8547b1f934c431bdb9c3627e8e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: de67fdd71f28bc0f4b16017d253682ca2615f854
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48583876"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989735"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>동적 활동을 사용하여 런타임에 활동 만들기
 <xref:System.Activities.DynamicActivity>는 public 생성자를 사용하는 구체적이고 봉인된 클래스입니다. <xref:System.Activities.DynamicActivity>는 활동 DOM을 통해 런타임에 활동 기능을 어셈블하는 데 사용할 수 있습니다.  
@@ -21,19 +21,19 @@ ms.locfileid: "48583876"
   
 #### <a name="to-create-an-activity-at-runtime-using-imperative-code"></a>명령적 코드를 사용하여 런타임에 활동을 만들려면  
   
-1.  OpenVisual Studio 2010입니다.  
+1. OpenVisual Studio 2010.  
   
-2.  선택 **파일**를 **새**하십시오 **프로젝트**합니다. 선택 **Workflow 4.0** 아래에서 **Visual C#** 에 **프로젝트 형식** 창에서 선택한 합니다 **v2010** 노드. 선택 **순차 워크플로 콘솔 응용 프로그램** 에 **템플릿** 창입니다. 새 프로젝트의 이름을 DynamicActivitySample로 지정합니다.  
+2. **파일**, **새로 만들기**, **프로젝트**를 선택 합니다. **프로젝트 형식** 창에서 **Visual C#**  아래에 있는 **Workflow 4.0** 을 선택 하 고 **v2010** 노드를 선택 합니다. **템플릿** 창에서 **순차 워크플로 콘솔 응용 프로그램** 을 선택 합니다. 새 프로젝트의 이름을 DynamicActivitySample로 지정합니다.  
   
-3.  HelloActivity 프로젝트에서 Workflow1.xaml을 마우스 오른쪽 단추로 누르고 **삭제**합니다.  
+3. HelloActivity 프로젝트에서 Workflow1.vb를 마우스 오른쪽 단추로 클릭 하 고 **삭제**를 선택 합니다.  
   
-4.  Program.cs를 엽니다. 다음 지시문을 파일의 맨 위에 추가합니다.  
+4. Program.cs를 엽니다. 다음 지시문을 파일의 맨 위에 추가합니다.  
   
-    ```  
+    ```csharp  
     using System.Collections.Generic;  
     ```  
   
-5.  `Main` 메서드의 내용을 다음 코드로 바꿉니다. 이 코드는 단일 <xref:System.Activities.Statements.Sequence> 활동을 포함하는 <xref:System.Activities.Statements.WriteLine> 활동을 만든 다음 새 동적 활동의 <xref:System.Activities.DynamicActivity.Implementation%2A> 속성에 할당합니다.  
+5. `Main` 메서드의 내용을 다음 코드로 바꿉니다. 이 코드는 단일 <xref:System.Activities.Statements.Sequence> 활동을 포함하는 <xref:System.Activities.Statements.WriteLine> 활동을 만든 다음 새 동적 활동의 <xref:System.Activities.DynamicActivity.Implementation%2A> 속성에 할당합니다.  
   
     ```csharp  
     //Define the input argument for the activity  
@@ -66,36 +66,36 @@ ms.locfileid: "48583876"
                 Console.ReadLine();  
     ```  
   
-6.  응용 프로그램을 실행합니다. 텍스트 "Hello World!"를 사용 하 여 콘솔 창 표시 합니다.  
+6. 애플리케이션을 실행합니다. "Hello World!" 텍스트를 포함 하는 콘솔 창 표시.  
   
 #### <a name="to-create-an-activity-at-runtime-using-xaml"></a>XAML을 사용하여 런타임에 활동을 만들려면  
   
-1.  Visual Studio 2010을 엽니다.  
+1. Visual Studio 2010을 엽니다.  
   
-2.  선택 **파일**를 **새**하십시오 **프로젝트**합니다. 선택 **Workflow 4.0** 아래에서 **Visual C#** 에 **프로젝트 형식** 창에서 선택한 합니다 **v2010** 노드. 선택 **워크플로 콘솔 응용 프로그램** 에 **템플릿** 창입니다. 새 프로젝트의 이름을 DynamicActivitySample로 지정합니다.  
+2. **파일**, **새로 만들기**, **프로젝트**를 선택 합니다. **프로젝트 형식** 창에서 **Visual C#**  아래에 있는 **Workflow 4.0** 을 선택 하 고 **v2010** 노드를 선택 합니다. **템플릿** 창에서 **워크플로 콘솔 응용 프로그램** 을 선택 합니다. 새 프로젝트의 이름을 DynamicActivitySample로 지정합니다.  
   
-3.  HelloActivity 프로젝트에서 Workflow1.xaml을 엽니다. 클릭 합니다 **인수** 디자이너의 맨 아래에 있는 옵션입니다. `In` 형식의 `TextToWrite`라는 새 `String` 인수를 만듭니다.  
+3. HelloActivity 프로젝트에서 Workflow1.xaml을 엽니다. 디자이너 아래쪽에 있는 **인수** 옵션을 클릭 합니다. `In` 형식의 `TextToWrite`라는 새 `String` 인수를 만듭니다.  
   
-4.  끌어서를 **WriteLine** 에서 활동을 **기본** 디자이너 화면에 도구 상자의 섹션. 값을 할당 `TextToWrite` 에 **텍스트** 작업의 속성입니다.  
+4. 도구 상자의 **기본 형식** 섹션에서 **WriteLine** 활동을 디자이너 화면으로 끌어 옵니다. 활동의 `TextToWrite` **Text** 속성에 값을 할당 합니다.  
   
-5.  Program.cs를 엽니다. 다음 지시문을 파일의 맨 위에 추가합니다.  
+5. Program.cs를 엽니다. 다음 지시문을 파일의 맨 위에 추가합니다.  
   
-    ```  
+    ```csharp  
     using System.Activities.XamlIntegration;  
     ```  
   
-6.  `Main` 메서드의 내용을 다음 코드로 대체합니다.  
+6. `Main` 메서드의 내용을 다음 코드로 대체합니다.  
   
-    ```  
+    ```csharp  
     Activity act2 = ActivityXamlServices.Load(@"Workflow1.xaml");  
                     results = WorkflowInvoker.Invoke(act2, new Dictionary<string, object> { { "TextToWrite", "HelloWorld!" } });  
     Console.ReadLine();  
     ```  
   
-7.  응용 프로그램을 실행합니다. 텍스트 "Hello World!"를 사용 하 여 콘솔 창 표시 됩니다.  
+7. 애플리케이션을 실행합니다. "Hello World!" 텍스트를 포함 하는 콘솔 창 나오는.  
   
-8.  Workflow1.xaml 파일을 마우스 오른쪽 단추로 클릭 합니다 **솔루션 탐색기** 선택한 **코드 보기**합니다. 활동 클래스가 `x:Class`를 사용하여 만들어지고 속성은 `x:Property`를 사용하여 만들어집니다.  
+8. **솔루션 탐색기** 에서 workflow1.vb 파일을 마우스 오른쪽 단추로 클릭 하 고 **코드 보기**를 선택 합니다. 활동 클래스가 `x:Class`를 사용하여 만들어지고 속성은 `x:Property`를 사용하여 만들어집니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-- [명령형 코드를 사용하여 워크플로, 활동 및 식 작성](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [명령형 코드를 사용하여 워크플로, 활동 및 식 작성](authoring-workflows-activities-and-expressions-using-imperative-code.md)

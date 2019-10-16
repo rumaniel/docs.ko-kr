@@ -1,19 +1,21 @@
 ---
-title: 워크플로의 &lt;behaviors&gt;
+title: <behaviors>워크플로
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 3c6017b6-0c4f-4192-bd67-9515f5d1ec82
-ms.openlocfilehash: 762fd1ff0de7980848ac3921706f406932c7f35d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 05a15cdf5c043eb5d94b36028324310d2b7a8413
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32767312"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398870"
 ---
-# <a name="ltbehaviorsgt-of-workflow"></a>워크플로의 &lt;behaviors&gt;
-이 요소에 포함 된 **serviceBehaviors** 컬렉션입니다.  컬렉션의 각 요소는 워크플로 서비스에서 사용하는 동작 요소를 정의합니다. 각 동작 요소는 고유한으로 식별 되 **이름** 특성입니다.  
+# <a name="behaviors-of-workflow"></a>\<워크플로의 동작 >
+이 요소는 **Servicebehaviors** 컬렉션을 포함 합니다.  컬렉션의 각 요소는 워크플로 서비스에서 사용하는 동작 요소를 정의합니다. 각 동작 요소는 고유한 **이름** 특성으로 식별 됩니다.  
   
- \<system.ServiceModel>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<컴퓨터. ServiceModel >** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<동작 >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,18 +34,19 @@ ms.locfileid: "32767312"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/servicebehaviors-of-workflow.md)|이 구성 섹션은 특정 워크플로 서비스에 정의된 모든 동작을 나타냅니다.|  
+|[\<serviceBehaviors>](servicebehaviors-of-workflow.md)|이 구성 섹션은 특정 워크플로 서비스에 정의된 모든 동작을 나타냅니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<system.serviceModel>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)|모든 워크플로 구성 요소의 루트 요소입니다.|  
+|[\<system.serviceModel>](../wcf/system-servicemodel.md)|모든 워크플로 구성 요소의 루트 요소입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.BehaviorsSection>  
- <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>  
- <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>  
- [동작을 사용하여 런타임 구성 및 확장](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.BehaviorsSection>
+- <xref:System.ServiceModel.Configuration.ServiceBehaviorElementCollection>
+- <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>
+- [동작을 사용하여 런타임 구성 및 확장](../../../wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

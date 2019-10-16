@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfd7ee890a7f2c3ea8cd3de9fbe830575c0ca10c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a683f1531ed28fbd8ef085414bb7cb365762ffde
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738048"
 ---
 # <a name="icordebugappdomainenumeratebreakpoints-method"></a>ICorDebugAppDomain::EnumerateBreakpoints 메서드
 응용 프로그램 도메인에서 활성화 된 모든 중단점에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumerateBreakpoints (  
     [out] ICorDebugBreakpointEnum   **ppBreakpoints  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppBreakpoints`  
- [out] 응용 프로그램 도메인에서 활성화 된 모든 중단점에 대 한 열거자를 ICorDebugBreakpointEnum 개체의 주소에 대 한 포인터입니다.  
+ [out] 응용 프로그램 도메인에서 활성화 된 모든 중단점에 대 한 열거자는 ICorDebugBreakpointEnum 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- 열거자에는 모든 유형의 중단점, 중단점 함수 및 데이터 중단점을 포함 하 여 포함 합니다.  
+ 열거자는 모든 유형의 함수 중단점 등 데이터 중단점, 중단점을 포함 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -7,65 +7,64 @@ helpviewer_keywords:
 - control library [WPF]
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
-ms.openlocfilehash: 26f81a2bfeb5ef4e448ddcbc9b8bac521624a629
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f5d69a1743941a235b3a1fda38023b11b3f26809
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912316"
 ---
 # <a name="control-library"></a>컨트롤 라이브러리
 Windows Presentation Foundation (WPF) 컨트롤 라이브러리를 제공 하 여 Windows Presentation Foundation (WPF), 사전순으로 나열 하는 컨트롤에 대 한 정보를 포함 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [테두리](../../../../docs/framework/wpf/controls/border.md)  
- [BulletDecorator](../../../../docs/framework/wpf/controls/bulletdecorator.md)  
- [Button](../../../../docs/framework/wpf/controls/button.md)  
- [일정](../../../../docs/framework/wpf/controls/calendar.md)  
- [캔버스](../../../../docs/framework/wpf/controls/canvas.md)  
- [CheckBox](../../../../docs/framework/wpf/controls/checkbox.md)  
- [ComboBox](../../../../docs/framework/wpf/controls/combobox.md)  
- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)  
- [DataGrid](../../../../docs/framework/wpf/controls/datagrid.md)  
- [DatePicker](../../../../docs/framework/wpf/controls/datepicker.md)  
- [DockPanel](../../../../docs/framework/wpf/controls/dockpanel.md)  
- [DocumentViewer](../../../../docs/framework/wpf/controls/documentviewer.md)  
- [Expander](../../../../docs/framework/wpf/controls/expander.md)  
- [FlowDocumentPageViewer](../../../../docs/framework/wpf/controls/flowdocumentpageviewer.md)  
- [FlowDocumentReader](../../../../docs/framework/wpf/controls/flowdocumentreader.md)  
- [FlowDocumentScrollViewer](../../../../docs/framework/wpf/controls/flowdocumentscrollviewer.md)  
- [프레임](../../../../docs/framework/wpf/controls/frame.md)  
- [눈금](../../../../docs/framework/wpf/controls/grid.md)  
- [GridSplitter](../../../../docs/framework/wpf/controls/gridsplitter.md)  
- [GroupBox](../../../../docs/framework/wpf/controls/groupbox.md)  
- [Image](../../../../docs/framework/wpf/controls/image.md)  
- [레이블](../../../../docs/framework/wpf/controls/label.md)  
- [ListBox](../../../../docs/framework/wpf/controls/listbox.md)  
- [ListView](../../../../docs/framework/wpf/controls/listview.md)  
- [메뉴](../../../../docs/framework/wpf/controls/menu.md)  
- [패널](../../../../docs/framework/wpf/controls/panel.md)  
- [PasswordBox](../../../../docs/framework/wpf/controls/passwordbox.md)  
- [팝업](../../../../docs/framework/wpf/controls/popup.md)  
- [ProgressBar](../../../../docs/framework/wpf/controls/progressbar.md)  
- [PrintDialog](../../../../docs/framework/wpf/controls/printdialog.md)  
- [RadioButton](../../../../docs/framework/wpf/controls/radiobutton.md)  
- [RepeatButton](../../../../docs/framework/wpf/controls/repeatbutton.md)  
- [Ribbon(WPF)](https://msdn.microsoft.com/library/d2b5749c-43ec-4e1f-9017-8f1d0bbd5d3f)  
- [RichTextBox](../../../../docs/framework/wpf/controls/richtextbox.md)  
- [ScrollBar](../../../../docs/framework/wpf/controls/scrollbar.md)  
- [ScrollViewer](../../../../docs/framework/wpf/controls/scrollviewer.md)  
- [구분 기호](../../../../docs/framework/wpf/controls/separator.md)  
- [슬라이더](../../../../docs/framework/wpf/controls/slider.md)  
- [StackPanel](../../../../docs/framework/wpf/controls/stackpanel.md)  
- [StatusBar](../../../../docs/framework/wpf/controls/statusbar.md)  
- [TabControl](../../../../docs/framework/wpf/controls/tabcontrol.md)  
- [TextBlock](../../../../docs/framework/wpf/controls/textblock.md)  
- [TextBox](../../../../docs/framework/wpf/controls/textbox.md)  
- [툴바](../../../../docs/framework/wpf/controls/toolbar.md)  
- [ToolTip](../../../../docs/framework/wpf/controls/tooltip.md)  
- [TreeView](../../../../docs/framework/wpf/controls/treeview.md)  
- [WrapPanel](../../../../docs/framework/wpf/controls/wrappanel.md)  
- [Viewbox](../../../../docs/framework/wpf/controls/viewbox.md)  
+ [테두리](border.md)  
+ [BulletDecorator](bulletdecorator.md)  
+ [Button](button.md)  
+ [일정](calendar.md)  
+ [캔버스](canvas.md)  
+ [CheckBox](checkbox.md)  
+ [ComboBox](combobox.md)  
+ [ContextMenu](contextmenu.md)  
+ [DataGrid](datagrid.md)  
+ [DatePicker](datepicker.md)  
+ [DockPanel](dockpanel.md)  
+ [DocumentViewer](documentviewer.md)  
+ [Expander](expander.md)  
+ [FlowDocumentPageViewer](flowdocumentpageviewer.md)  
+ [FlowDocumentReader](flowdocumentreader.md)  
+ [FlowDocumentScrollViewer](flowdocumentscrollviewer.md)  
+ [프레임](frame.md)  
+ [눈금](grid.md)  
+ [GridSplitter](gridsplitter.md)  
+ [GroupBox](groupbox.md)  
+ [Image](image.md)  
+ [레이블](label.md)  
+ [ListBox](listbox.md)  
+ [ListView](listview.md)  
+ [메뉴](menu.md)  
+ [패널](panel.md)  
+ [PasswordBox](passwordbox.md)  
+ [팝업](popup.md)  
+ [ProgressBar](progressbar.md)  
+ [PrintDialog](printdialog.md)  
+ [RadioButton](radiobutton.md)  
+ [RepeatButton](repeatbutton.md)  
+ [RichTextBox](richtextbox.md)  
+ [ScrollBar](scrollbar.md)  
+ [ScrollViewer](scrollviewer.md)  
+ [구분 기호](separator.md)  
+ [슬라이더](slider.md)  
+ [StackPanel](stackpanel.md)  
+ [StatusBar](statusbar.md)  
+ [TabControl](tabcontrol.md)  
+ [TextBlock](textblock.md)  
+ [TextBox](textbox.md)  
+ [툴바](toolbar.md)  
+ [ToolTip](tooltip.md)  
+ [TreeView](treeview.md)  
+ [WrapPanel](wrappanel.md)  
+ [Viewbox](viewbox.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls>  
@@ -73,8 +72,8 @@ Windows Presentation Foundation (WPF) 컨트롤 라이브러리를 제공 하 �
  <xref:System.Windows.Controls.Primitives>  
   
 ## <a name="related-sections"></a>관련 단원  
- [컨트롤 사용자 지정](../../../../docs/framework/wpf/controls/control-customization.md)  
+ [컨트롤 사용자 지정](control-customization.md)  
   
- [범주별 컨트롤](../../../../docs/framework/wpf/controls/controls-by-category.md)  
+ [범주별 컨트롤](controls-by-category.md)  
   
- [WPF 콘텐츠 모델](../../../../docs/framework/wpf/controls/wpf-content-model.md)
+ [WPF 콘텐츠 모델](wpf-content-model.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - root namespaces
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
-ms.openlocfilehash: 28016763b2cef2e8b8954f486bbbdb6930b5364c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7f6b976af7933b3895f6992488d2d1532a8fc2f7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784139"
 ---
 # <a name="namespace-statement"></a>Namespace 문
 네임 스페이스의 이름을 선언 하 고 해당 네임 스페이스에서 컴파일되도록 선언 뒤에 오는 소스 코드가 있습니다.  
@@ -35,7 +35,7 @@ End Namespace
  선택 사항입니다. 프로젝트의 루트 네임 스페이스에서 네임 스페이스를 정의할 수 있습니다. 참조 [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)합니다.  
   
  `name`  
- 필수. 네임 스페이스를 식별 하는 고유 이름입니다. 올바른 Visual Basic 식별자 여야 합니다. 자세한 내용은 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
+ 필수 요소. 네임 스페이스를 식별 하는 고유 이름입니다. 올바른 Visual Basic 식별자 여야 합니다. 자세한 내용은 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)합니다.  
   
  `componenttypes`  
  선택 사항입니다. 네임 스페이스를 구성 하는 요소입니다. 이러한 포함 되지만 열거형, 구조체, 인터페이스, 클래스, 모듈, 대리자 및 다른 네임 스페이스에 제한 되지 않습니다.  
@@ -78,17 +78,17 @@ End Namespace
 ## <a name="example"></a>예제  
  다음 예제에서는 다른 중첩 된 두 개의 네임 스페이스를 선언 합니다.  
   
- [!code-vb[VbVbalrStatements#43](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#43](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#43)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 단일 줄에 여러 개의 중첩 된 네임 스페이스를 선언 하 고 앞의 예와 동일 합니다.  
   
- [!code-vb[VbVbalrStatements#41](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#41](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#41)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 이전 예제에서 정의 된 클래스에 액세스 합니다.  
   
- [!code-vb[VbVbalrStatements#42](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/namespace-statement_3.vb)]  
+ [!code-vb[VbVbalrStatements#42](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#42)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 새 제네릭 목록 클래스의 기본 구조를 정의 하 고 추가 <xref:System.Collections.Generic?displayProperty=nameWithType> 네임 스페이스입니다.  
@@ -102,7 +102,8 @@ Namespace System.Collections.Generic
 End Namespace  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Imports 문(.NET 네임스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+## <a name="see-also"></a>참고자료
+
+- [Imports 문(.NET 네임스페이스 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Visual Basic의 네임 스페이스](../../../visual-basic/programming-guide/program-structure/namespaces.md)

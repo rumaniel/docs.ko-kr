@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: c0e8909a1e642333e93cfea5dbfde2f6c33c5443
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 8bb2b411dc867b6a43e52058dccf2ac980cf0b1e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/02/2018
-ms.locfileid: "43470959"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922506"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug(C# 컴파일러 옵션)
 **-debug** 옵션을 사용하면 컴파일러에서 디버깅 정보를 생성하여 출력 파일에 넣습니다.  
@@ -38,23 +38,23 @@ ms.locfileid: "43470959"
  **-debug:full**을 사용하는 경우 JIT 최적화된 코드의 속도 및 크기와 **-debug:full**을 사용한 코드 품질이 일부 영향을 받는 것에 유의하세요. 릴리스 코드를 생성하는 경우 **-debug:pdbonly**를 사용하거나 PDB를 사용하지 않는 것이 좋습니다.  
   
 > [!NOTE]
->  **-debug:pdbonly** 및 **-debug:full** 간의 차이점 중 하나는 **-debug:full**을 사용하는 경우 컴파일러가 <xref:System.Diagnostics.DebuggableAttribute>를 내보낸다는 것입니다. 이 특성은 JIT 컴파일러에 디버그 정보를 사용할 수 있음을 알리는 데 사용됩니다. 따라서 **-debug:full**을 사용하는 경우 false로 설정된 <xref:System.Diagnostics.DebuggableAttribute>가 코드에 포함되어 있으면 오류가 발생합니다.  
+> **-debug:pdbonly** 및 **-debug:full** 간의 차이점 중 하나는 **-debug:full**을 사용하는 경우 컴파일러가 <xref:System.Diagnostics.DebuggableAttribute>를 내보낸다는 것입니다. 이 특성은 JIT 컴파일러에 디버그 정보를 사용할 수 있음을 알리는 데 사용됩니다. 따라서 **-debug:full**을 사용하는 경우 false로 설정된 <xref:System.Diagnostics.DebuggableAttribute>가 코드에 포함되어 있으면 오류가 발생합니다.  
   
- 응용 프로그램의 디버그 성능을 구성하는 방법에 대한 자세한 내용은 [쉽게 디버그할 수 있도록 이미지 만들기](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)를 참조하세요.  
+ 애플리케이션의 디버그 성능을 구성하는 방법에 대한 자세한 내용은 [쉽게 디버그할 수 있도록 이미지 만들기](../../../framework/debug-trace-profile/making-an-image-easier-to-debug.md)를 참조하세요.  
   
- .pdb 파일의 위치를 변경하려면 [-pdb(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/pdb-compiler-option.md)를 참조하세요.  
+ .pdb 파일의 위치를 변경하려면 [-pdb(C# 컴파일러 옵션)](./pdb-compiler-option.md)를 참조하세요.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트 **속성** 페이지를 엽니다.  
+1. 프로젝트 **속성** 페이지를 엽니다.  
   
-2.  **빌드** 속성 페이지를 클릭합니다.  
+2. **빌드** 속성 페이지를 클릭합니다.  
   
-3.  **고급** 단추를 클릭합니다.  
+3. **고급** 단추를 클릭합니다.  
   
-4.  **디버그 정보** 속성을 수정합니다.  
+4. **디버그 정보** 속성을 수정합니다.  
   
- 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>를 참조하세요.  
+ 이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>을 참조하세요.  
   
 ## <a name="example"></a>예  
  출력 파일 `app.pdb`에 디버깅 정보를 넣습니다.  
@@ -63,7 +63,7 @@ ms.locfileid: "43470959"
 csc -debug -pdb:app.pdb test.cs  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

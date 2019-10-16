@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dc900ca20ac87ddecfd8f7adf0894af21ca5d2f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 24f058ff11a1155aa53a1d1f222ff1230c1c23e3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418092"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760988"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity 메서드
 코드 실행 이전 버전의 편집된 된 함수에서 시퀀스 위치에 도달 했습니다 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT FunctionRemapOpportunity (  
     [in] ICorDebugAppDomain   *pAppDomain,  
     [in] ICorDebugThread      *pThread,  
@@ -39,12 +39,12 @@ HRESULT FunctionRemapOpportunity (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pAppDomain`  
- [in] 편집 된 함수를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.  
+ [in] 편집된 된 함수를 포함 하는 응용 프로그램 도메인을 나타내는 ICorDebugAppDomain 개체에 대 한 포인터입니다.  
   
  `pThread`  
- [in] 다시 매핑 중단점 만났습니다 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.  
+ [in] 다시 매핑 중단점이 발생 하는 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.  
   
  `pOldFunction`  
  [in] 현재 스레드에서 실행 중인 함수의 버전을 나타내는 ICorDebugFunction 개체에 대 한 포인터입니다.  
@@ -56,19 +56,20 @@ HRESULT FunctionRemapOpportunity (
  [in] 이전 버전의 함수에 명령 포인터의 Microsoft MSIL (intermediate language) 오프셋입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 콜백은 있도록 디버거를 호출 하 여 지정 된 함수의 새 버전에 적절 한 위치에 대 한 명령 포인터를 다시 매핑할 수는 [icordebugilframe2:: Remapfunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) 메서드. 디버거를 호출 하지 않는 경우 `RemapFunction` 호출 하기 전에 [icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 메서드를 런타임에서 계속 이전 코드를 실행 하 고 다른 트리거는 발생 `FunctionRemapOpportunity` 다음 시퀀스 위치에서 콜백 합니다.  
+ 이 콜백은 디버거를 호출 하 여 명령에 대 한 포인터로 지정 된 함수의 새 버전에 적절 한 위치를 다시 매핑할 수 있는 기회를 제공 합니다 [ICorDebugILFrame2::RemapFunction](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe2-remapfunction-method.md) 메서드. 디버거를 호출 하지 않습니다 `RemapFunction` 호출 하기 전에 [icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 메서드를 런타임에서 계속 이전 코드를 실행 하 고 다른 시기가 `FunctionRemapOpportunity` 다음 시퀀스 위치에서 콜백을 합니다.  
   
- 이 콜백은 디버거 하면 S_OK가 반환 될 때까지 이전 버전의 지정된 된 함수를 실행 하는 모든 프레임에 대 한 호출 됩니다.  
+ 이 콜백은 디버거 하면 S_OK가 반환 될 때까지 이전 버전의 지정된 된 함수를 실행 하는 프레임 마다 호출 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

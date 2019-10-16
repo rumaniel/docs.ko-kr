@@ -1,13 +1,13 @@
 ---
-title: 함수(F#)
-description: 'F # 및 F #에서 지 원하는 방법 일반적인 함수형 프로그래밍 구문도 함수에 알아봅니다.'
+title: 함수
+description: 의 함수 및에서 F# 일반적인 함수형 F# 프로그래밍 구문을 지 원하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 717eba7e69398048d229173e07ccc376797171bb
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 6f65ce692169b71abe8d2eff7ef07b66975d478b
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839577"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68630708"
 ---
 # <a name="functions"></a>함수
 
@@ -42,11 +42,11 @@ let f x = x + 1
 
 모듈 범위 이외의 모든 범위 수준에서 값 또는 함수 이름을 다시 사용할 수 있습니다. 이름을 다시 사용하는 경우 나중에 선언된 이름이 이전에 선언된 이름을 섀도 처리합니다. 그러나 모듈의 최상위 수준 범위에서는 이름이 고유해야 합니다. 예를 들어 다음 코드가 모듈 범위에 표시되는 경우에는 오류가 발생하지만 함수 내에 표시되는 경우에는 오류가 발생하지 않습니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet101.fs)]
 
 하지만 다음 코드는 범위의 모든 수준에서 허용됩니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet102.fs)]
 
 ### <a name="parameters"></a>매개 변수
 
@@ -74,7 +74,7 @@ let f x = (x, x)
 
 함수 본문에는 로컬 변수 및 함수에 대한 정의를 포함할 수 있습니다. 이러한 변수 및 함수는 현재 함수 본문 외부가 아닌 본문 내부에 있습니다. 간단한 구문 옵션을 사용하는 경우 다음 예제와 같이 들여쓰기를 사용하여 정의가 함수 본문 내에 있음을 나타내야 합니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet103.fs)]
 
 자세한 내용은 [코드 서식 지정 지침](../code-formatting-guidelines.md) 및 [자세한 구문](../verbose-syntax.md)을 참조하세요.
 
@@ -84,7 +84,7 @@ let f x = (x, x)
 
 반환 값을 명시적으로 지정하려면 다음과 같이 코드를 작성합니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet105.fs)]
 
 코드가 위와 같이 작성되면 컴파일러에서 전체 함수에 **float**을 적용합니다. 매개 변수 형식에도 이를 적용하려는 경우 다음 코드를 사용합니다.
 
@@ -104,17 +104,17 @@ let vol = cylinderVolume 2.0 3.0
 
 지정된 수보다 적은 인수를 지정하는 경우 나머지 인수를 요구하는 새 함수를 만듭니다. 인수를 처리하는 이 메서드를 *커링*(currying)이라고 하며 F#과 같은 함수형 프로그래밍 언어의 특성입니다. 예를 들어, 두 가지 크기의 파이프(**2.0**의 반지름 및 **3.0**의 반지름)에 대해 작업하고 있다고 가정합니다. 다음과 같이 파이프의 볼륨을 결정하는 함수를 만들 수 있습니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet106.fs)]
 
 다양한 길이의 두 가지 크기 파이프에 필요한 추가 인수를 제공합니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet107.fs)]
 
 ## <a name="recursive-functions"></a>재귀 함수
 
-*재귀 함수*는 자신을 호출하는 함수입니다. 이러한 함수에는 **rec** 키워드 다음에 **let** 키워드를 지정해야 합니다. 임의의 함수를 호출하는 경우와 마찬가지로 함수 본문 내에서 재귀 함수를 호출합니다. 다음 재귀 함수를 계산 합니다 *n*<sup>th</sup> 피보나치 수 있습니다. 피보나치 수열은 아주 오래 전부터 알려져 왔으며, 연속되는 각 숫자는 수열에서 이전 두 숫자의 합이 되는 수열입니다.
+*재귀 함수*는 자신을 호출하는 함수입니다. 이러한 함수에는 **rec** 키워드 다음에 **let** 키워드를 지정해야 합니다. 임의의 함수를 호출하는 경우와 마찬가지로 함수 본문 내에서 재귀 함수를 호출합니다. 다음 재귀 함수는 *n*<sup>번째</sup> 피보나치 수를 계산 합니다. 피보나치 수열은 아주 오래 전부터 알려져 왔으며, 연속되는 각 숫자는 수열에서 이전 두 숫자의 합이 되는 수열입니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet108.fs)]
 
 주의를 기울이고 누적기 및 연속의 사용과 같은 특별 기법을 인식하여 재귀 함수를 작성하지 않으면 일부 재귀 함수는 프로그램 스택을 오버플로하거나 비효율적으로 작동할 수 있습니다.
 
@@ -122,17 +122,17 @@ let vol = cylinderVolume 2.0 3.0
 
 F#에서 모든 함수는 값으로 간주됩니다. 사실 이들을 *함수 값*이라고 합니다. 함수가 값이기 때문에 이러한 함수를 값이 사용되는 다른 컨텍스트에서 또는 다른 함수의 인수로 사용할 수 있습니다. 다음은 함수 값을 인수로 사용하는 함수의 예입니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet109.fs)]
 
 `->` 토큰을 사용하여 함수 값의 형식을 지정합니다. 이 토큰의 왼쪽에는 인수의 형식이 있고 오른쪽에는 반환 값이 있습니다. 앞의 예제에서 `apply1`은 `transform` 함수를 인수로 사용합니다. 여기서 `transform`은 인수를 사용하고 다른 정수를 반환하는 함수입니다. 다음 코드에서는 `apply1`을 사용하는 방법을 보여 줍니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet110.fs)]
 
 `result`의 값은 앞의 코드가 실행된 후 101이 됩니다.
 
 다음 예와 같이 여러 인수는 연속적인 `->` 토큰으로 구분됩니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet111.fs)]
 
 해당 결과는 200입니다.
 
@@ -140,15 +140,15 @@ F#에서 모든 함수는 값으로 간주됩니다. 사실 이들을 *함수 �
 
 *람다 식*은 명명되지 않은 함수입니다. 이전 예제에서, 명명된 함수인 **increment** 및 **mul**을 정의하는 대신 다음과 같이 람다 식을 사용할 수 있습니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-`fun` 키워드를 사용하여 람다 식을 정의합니다. 람다 식은 함수 정의와 유사합니다. 단, `=` 토큰 대신 `->` 토큰이 함수 본문에서 인수 목록을 구분하는 데 사용됩니다. 일반 함수 정의에서와 같이, 인수 형식이 명시적으로 유추되거나 지정될 수 있으며 람다 식의 반환 형식은 본문의 마지막 식 형식에서 유추됩니다. 자세한 내용은 [람다 식: `fun` 키워드](../functions/lambda-expressions-the-fun-keyword.md)를 참조하세요.
+`fun` 키워드를 사용하여 람다 식을 정의합니다. 람다 식은 함수 정의와 유사합니다. 단, `=` 토큰 대신 `->` 토큰이 함수 본문에서 인수 목록을 구분하는 데 사용됩니다. 일반 함수 정의에서와 같이, 인수 형식이 명시적으로 유추되거나 지정될 수 있으며 람다 식의 반환 형식은 본문의 마지막 식 형식에서 유추됩니다. 자세한 내용은 람다 식을 [참조 하세요. `fun` 키워드](../functions/lambda-expressions-the-fun-keyword.md)입니다.
 
 ## <a name="function-composition-and-pipelining"></a>함수 컴퍼지션 및 파이프라인
 
 F#의 함수는 다른 함수에서 구성할 수 있습니다. 두 함수**function1** 및 **function2**의 컴퍼지션은 **function1**을 적용한 후 **function2**를 적용한다는 것을 나타냅니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet113.fs)]
 
 결과는 202입니다.
 

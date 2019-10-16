@@ -1,5 +1,6 @@
 ---
-title: continue 문(C# 참조)
+title: continue 문 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - continue_CSharpKeyword
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - continue keyword [C#]
 ms.assetid: 8a5ac96f-f98a-4519-b32d-345847ed7be0
-ms.openlocfilehash: 37315caf14ba829dfc91da065bc49982f21b947f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 74d166dbcf03b868baf464864e4c246f789df9cc
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861408"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605876"
 ---
 # <a name="continue-c-reference"></a>continue(C# 참조)
 
-`continue` 문은 자신이 나타나는 바깥쪽 [while](../../../csharp/language-reference/keywords/while.md), [do](../../../csharp/language-reference/keywords/do.md), [for](../../../csharp/language-reference/keywords/for.md) 또는 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문의 다음 반복으로 제어를 전달합니다.
+`continue` 문은 자신이 나타나는 바깥쪽 [while](./while.md), [do](./do.md), [for](./for.md) 또는 [foreach](./foreach-in.md) 문의 다음 반복으로 제어를 전달합니다.
 
 ## <a name="example"></a>예
 
@@ -30,8 +31,7 @@ ms.locfileid: "43861408"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)  
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
-- [break 문](/cpp/cpp/break-statement-cpp)  
-- [점프 문](../../../csharp/language-reference/keywords/jump-statements.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](./index.md)
+- [break 문](/cpp/cpp/break-statement-cpp)

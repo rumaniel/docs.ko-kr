@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], GroupBox
 - GroupBox control [WPF]
 ms.assetid: 1f4ed3d9-a171-4623-bc4f-3314e3576271
-ms.openlocfilehash: e7e73523f9c7038fdcec64f66567dc41a75d5e2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1808fefab2d15ce57da4b381f258dc8e5207e358
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550841"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68709111"
 ---
 # <a name="groupbox"></a>GroupBox
-<xref:System.Windows.Controls.GroupBox> 컨트롤은 한 <xref:System.Windows.Controls.HeaderedContentControl> 에 대 한 제목이 지정된 된 컨테이너를 제공 하는 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 콘텐츠입니다.  
+컨트롤은 GUI (그래픽 사용자 인터페이스) 콘텐츠에 대해 제목이 있는 컨테이너를 제공 하는입니다.<xref:System.Windows.Controls.HeaderedContentControl> <xref:System.Windows.Controls.GroupBox>  
   
- 다음 그림에서는 한 <xref:System.Windows.Controls.GroupBox> 를 포함 하는 <xref:System.Windows.Controls.TabControl> 및 <xref:System.Windows.Controls.Button> 내부에 <xref:System.Windows.Controls.StackPanel>합니다.  
+ <xref:System.Windows.Controls.GroupBox> 다음 그림은에 <xref:System.Windows.Controls.TabControl> 포함 된 및 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.StackPanel>를 포함 하는을 보여 줍니다.  
   
- ![GroupBoxImage](../../../../docs/framework/wpf/controls/media/groupboximage.JPG "GroupBoxImage")  
+ ![Groupbox를 표시 하는 스크린샷](./media/groupbox/groupbox-tab-button-stackpanel.jpg)  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [GruopBox 템플릿 정의](../../../../docs/framework/wpf/controls/how-to-define-a-groupbox-template.md)  
+ [GruopBox 템플릿 정의](how-to-define-a-groupbox-template.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.GroupBox>  

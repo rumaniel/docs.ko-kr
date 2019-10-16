@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 5711b225-6aa2-4e4f-9898-19f2d518ad1a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69e22328c39ae68acc4baff12775b49fbac80696
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 68d19784bab8a5d5a1994ea139b5631f56c7c680
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44252833"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54580423"
 ---
 # <a name="reading-xml-data-using-xpathdocument-and-xmldocument"></a>XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기
 두 가지 방법으로 <xref:System.Xml.XPath?displayProperty=nameWithType> 네임스페이스에서 XML 문서를 읽을 수 있습니다. 하나는 읽기 전용 <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 문서를 읽는 것이고 다른 하나는 <xref:System.Xml.XmlDocument> 네임스페이스에서 편집 가능한 <xref:System.Xml?displayProperty=nameWithType> 클래스를 사용하여 XML 문서를 읽는 것입니다.  
@@ -74,10 +74,10 @@ document.Load("books.xml");
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [XPathNavigator를 사용하여 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
-- [XPathNavigator를 사용하여 XML 데이터 편집](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [XPathNavigator를 사용하여 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
+- [XPathNavigator를 사용하여 XML 데이터 편집](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)
 - [XPathNavigator를 사용하여 스키마 유효성 검사](../../../../docs/standard/data/xml/schema-validation-using-xpathnavigator.md)

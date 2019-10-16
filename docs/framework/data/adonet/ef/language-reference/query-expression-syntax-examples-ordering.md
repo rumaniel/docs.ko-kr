@@ -1,21 +1,21 @@
 ---
-title: '쿼리 식 구문 예제: 정렬'
+title: '쿼리 식 구문 예제: 순서 지정'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
-ms.openlocfilehash: bc8bfaabb9e90e66e4ec81e551fd66319a78ca7e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 73000b16b29238dfb60596060733ecf8d7caa45b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836750"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398430"
 ---
-# <a name="query-expression-syntax-examples-ordering"></a>쿼리 식 구문 예제: 정렬
-이 항목의 예제에 사용 하는 방법을 보여 줍니다 합니다 `OrderBy` 및 `OrderByDescending` 쿼리 하는 메서드는 [AdventureWorks Sales 모델](https://msdn.microsoft.com/library/f16cd988-673f-4376-b034-129ca93c7832) 쿼리 식 구문을 사용 합니다. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  
+# <a name="query-expression-syntax-examples-ordering"></a>쿼리 식 구문 예제: 순서 지정
+이 항목의 예제에서는 쿼리 식 구문을 사용 하 `OrderBy` 여 `OrderByDescending` [AdventureWorks Sales 모델](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks) 을 쿼리 하기 위해 및 메서드를 사용 하는 방법을 보여 줍니다. 이 예제에서 사용하는 AdventureWorks Sales 모델에서는 AdventureWorks 샘플 데이터베이스의 Contact, Address, Product, SalesOrderHeader 및 SalesOrderDetail 테이블을 사용합니다.  
   
- 이 항목의 예제에서는 다음을 사용 `using` / `Imports` 문:  
+ 이 항목의 예제에서는 다음 `using` / `Imports` 문을 사용 합니다.  
   
  [!code-csharp[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP L2E Examples#ImportsUsing](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#importsusing)]  
@@ -58,5 +58,6 @@ ms.locfileid: "48836750"
  [!code-csharp[DP L2E Examples#ThenByDescendingSimple](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Examples/CS/Program.cs#thenbydescendingsimple)]
  [!code-vb[DP L2E Examples#ThenByDescendingSimple](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescendingsimple)]  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ to Entities에서 쿼리](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
+## <a name="see-also"></a>참고자료
+
+- [LINQ to Entities에서 쿼리](queries-in-linq-to-entities.md)

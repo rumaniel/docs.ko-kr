@@ -1,8 +1,7 @@
 ---
 title: DataMemberFieldEditor 클래스
 ms.date: 03/30/2017
-ms.technology:
-- dotnet-winforms
+ms.technology: dotnet-winforms
 api_name:
 - System.Windows.Forms.Design.DataMemberFieldEditor
 api_location:
@@ -14,12 +13,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5146b0756d1aace14a294436a38b8d0e3e689c76
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 52c95c5977dafb6d348e69f3c2f5280bafc3b342
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61706119"
 ---
 # <a name="datamemberfieldeditor-class"></a>DataMemberFieldEditor 클래스
 
@@ -32,7 +31,7 @@ internal class DataMemberFieldEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberFieldEditor` 클래스는 내부 전용 이며 코드에서 직접 사용할 업그레이드용은 아닙니다.
+> `DataMemberFieldEditor` 클래스는 내부용 이며 사용자 코드에서 직접 사용할 하려고 하지 않습니다.
 > 
 > Microsoft는 어떤 상황에서 프로덕션 응용 프로그램에서이 클래스의 사용을 지원 하지 않습니다.
 

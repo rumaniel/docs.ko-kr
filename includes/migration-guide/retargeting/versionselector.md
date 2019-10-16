@@ -1,4 +1,13 @@
-> [!div class="op_multi_selector" title1="From .NET Framework Version" title2="To .NET Framework Version"]
+---
+ms.openlocfilehash: 1f647732f2e8657aebb58d57848c876956c30a90
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70963583"
+---
+> [!div class="op_multi_selector" title1="이전 .NET Framework 버전" title2="이후 .NET Framework 버전"]
+>
 > - [(4.0 | 4.5)](~/docs/framework/migration-guide/retargeting/4.0-4.5.md)
 > - [(4.0 | 4.5.1)](~/docs/framework/migration-guide/retargeting/4.0-4.5.1.md)
 > - [(4.0 | 4.5.2)](~/docs/framework/migration-guide/retargeting/4.0-4.5.2.md)
@@ -8,6 +17,7 @@
 > - [(4.0 | 4.7)](~/docs/framework/migration-guide/retargeting/4.0-4.7.md)
 > - [(4.0 | 4.7.1)](~/docs/framework/migration-guide/retargeting/4.0-4.7.1.md)
 > - [(4.0 | 4.7.2)](~/docs/framework/migration-guide/retargeting/4.0-4.7.2.md)
+> - [(4.0 | 4.8)](~/docs/framework/migration-guide/retargeting/4.0-4.8.md)
 > - [(4.5 | 4.5.1)](~/docs/framework/migration-guide/retargeting/4.5-4.5.1.md)
 > - [(4.5 | 4.5.2)](~/docs/framework/migration-guide/retargeting/4.5-4.5.2.md)
 > - [(4.5 | 4.6)](~/docs/framework/migration-guide/retargeting/4.5-4.6.md)
@@ -16,6 +26,7 @@
 > - [(4.5 | 4.7)](~/docs/framework/migration-guide/retargeting/4.5-4.7.md)
 > - [(4.5 | 4.7.1)](~/docs/framework/migration-guide/retargeting/4.5-4.7.1.md)
 > - [(4.5 | 4.7.2)](~/docs/framework/migration-guide/retargeting/4.5-4.7.2.md)
+> - [(4.5 | 4.8)](~/docs/framework/migration-guide/retargeting/4.5-4.8.md)
 > - [(4.5.1 | 4.5.2)](~/docs/framework/migration-guide/retargeting/4.5.1-4.5.2.md)
 > - [(4.5.1 | 4.6)](~/docs/framework/migration-guide/retargeting/4.5.1-4.6.md)
 > - [(4.5.1 | 4.6.1)](~/docs/framework/migration-guide/retargeting/4.5.1-4.6.1.md)
@@ -29,18 +40,25 @@
 > - [(4.5.2 | 4.7)](~/docs/framework/migration-guide/retargeting/4.5.2-4.7.md)
 > - [(4.5.2 | 4.7.1)](~/docs/framework/migration-guide/retargeting/4.5.2-4.7.1.md)
 > - [(4.5.2 | 4.7.2)](~/docs/framework/migration-guide/retargeting/4.5.2-4.7.2.md)
+> - [(4.5.2 | 4.8)](~/docs/framework/migration-guide/retargeting/4.5.2-4.8.md)
 > - [(4.6 | 4.6.1)](~/docs/framework/migration-guide/retargeting/4.6-4.6.1.md)
 > - [(4.6 | 4.6.2)](~/docs/framework/migration-guide/retargeting/4.6-4.6.2.md)
 > - [(4.6 | 4.7)](~/docs/framework/migration-guide/retargeting/4.6-4.7.md)
 > - [(4.6 | 4.7.1)](~/docs/framework/migration-guide/retargeting/4.6-4.7.1.md)
 > - [(4.6 | 4.7.2)](~/docs/framework/migration-guide/retargeting/4.6-4.7.2.md)
+> - [(4.6 | 4.8)](~/docs/framework/migration-guide/retargeting/4.6-4.8.md)
 > - [(4.6.1 | 4.6.2)](~/docs/framework/migration-guide/retargeting/4.6.1-4.6.2.md)
 > - [(4.6.1 | 4.7)](~/docs/framework/migration-guide/retargeting/4.6.1-4.7.md)
 > - [(4.6.1 | 4.7.1)](~/docs/framework/migration-guide/retargeting/4.6.1-4.7.1.md)
 > - [(4.6.1 | 4.7.2)](~/docs/framework/migration-guide/retargeting/4.6.1-4.7.2.md)
+> - [(4.6.1 | 4.8)](~/docs/framework/migration-guide/retargeting/4.6.1-4.8.md)
 > - [(4.6.2 | 4.7)](~/docs/framework/migration-guide/retargeting/4.6.2-4.7.md)
 > - [(4.6.2 | 4.7.1)](~/docs/framework/migration-guide/retargeting/4.6.2-4.7.1.md)
 > - [(4.6.2 | 4.7.2)](~/docs/framework/migration-guide/retargeting/4.6.2-4.7.2.md)
+> - [(4.6.2 | 4.8)](~/docs/framework/migration-guide/retargeting/4.6.2-4.8.md)
 > - [(4.7 | 4.7.1)](~/docs/framework/migration-guide/retargeting/4.7-4.7.1.md)
 > - [(4.7 | 4.7.2)](~/docs/framework/migration-guide/retargeting/4.7-4.7.2.md)
+> - [(4.7 | 4.8)](~/docs/framework/migration-guide/retargeting/4.7-4.8.md)
 > - [(4.7.1 | 4.7.2)](~/docs/framework/migration-guide/retargeting/4.7.1-4.7.2.md)
+> - [(4.7.1 | 4.8)](~/docs/framework/migration-guide/retargeting/4.7.1-4.8.md)
+> - [(4.7.2 | 4.8)](~/docs/framework/migration-guide/retargeting/4.7.2-4.8.md)

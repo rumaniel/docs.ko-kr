@@ -16,15 +16,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27cce8a77d4236829124b45650d5d0ac32a5150c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 34c358a3405262787ed495bf9d8d75462d97a71f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198005"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380338"
 ---
 # <a name="icorprofilerinfo4-interface"></a>ICorProfilerInfo4 인터페이스
-코드 프로파일러가 CLR (공용 언어 런타임) 이벤트 모니터링을 제어 하 고 요청 정보를 사용 하 여 통신에 사용 되는 메서드를 제공 합니다. . 합니다 `ICorProfilerInfo4` 인터페이스는 다른 확장 `ICorProfilerInfo` 인터페이스입니다. 추가 시간 (JIT) 컴파일을 지원 하기 위해 새 메서드를 제공 합니다 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]합니다.  
+코드 프로파일러가 CLR (공용 언어 런타임) 이벤트 모니터링을 제어 하 고 요청 정보를 사용 하 여 통신에 사용 되는 메서드를 제공 합니다. . 합니다 `ICorProfilerInfo4` 인터페이스는 다른 확장 `ICorProfilerInfo` 인터페이스입니다. .NET Framework 4.5에 추가-just-in-time (JIT) 컴파일을 지원 하기 위해 새 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -45,7 +45,7 @@ ms.locfileid: "50198005"
  CLR은 자유 스레드 모델을 사용하여 `ICorProfilerInfo4` 인터페이스의 메서드를 구현합니다. 각 메서드가 HRESULT를 반환하여 성공 또는 실패를 나타냅니다. 가능한 반환 코드 목록은 CorError.h 파일을 참조하세요.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -53,6 +53,7 @@ ms.locfileid: "50198005"
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

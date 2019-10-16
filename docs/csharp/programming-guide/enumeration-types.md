@@ -1,5 +1,6 @@
 ---
-title: 열거형 형식(C# 프로그래밍 가이드)
+title: 열거형 형식 - C# 프로그래밍 가이드
+ms.custom: seodec18
 ms.date: 09/10/2017
 helpviewer_keywords:
 - enumerations [C#]
@@ -7,20 +8,20 @@ helpviewer_keywords:
 - C# Language, enums
 - bit flags [C#]
 ms.assetid: 64a9b731-9e3c-4336-8a09-018db2aa10b7
-ms.openlocfilehash: 3efedd48303c79bafde3704b0fdd6fcdd465a0a7
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: fea12a32d39f98ddc575e2d538e7501d2ff49768
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45686130"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590550"
 ---
 # <a name="enumeration-types-c-programming-guide"></a>열거형 형식(C# 프로그래밍 가이드)
 
-열거형 형식(열거형이라고도 함)은 변수에 할당할 수 있는 명명된 정수 계열 상수 집합을 정의하는 효율적인 방법을 제공합니다. 예를 들어 값이 요일을 나타내는 변수를 정의해야 한다고 가정합니다. 해당 변수에 저장할 수 있는 의미 있는 값이 7개만 있습니다. 이러한 값을 정의하려면 [enum](../../csharp/language-reference/keywords/enum.md) 키워드를 사용하여 선언되는 열거형 형식을 사용할 수 있습니다.
+열거형 형식(열거형이라고도 함)은 변수에 할당할 수 있는 명명된 정수 계열 상수 집합을 정의하는 효율적인 방법을 제공합니다. 예를 들어 값이 요일을 나타내는 변수를 정의해야 한다고 가정합니다. 해당 변수에 저장할 수 있는 의미 있는 값이 7개만 있습니다. 이러한 값을 정의하려면 [enum](../language-reference/keywords/enum.md) 키워드를 사용하여 선언되는 열거형 형식을 사용할 수 있습니다.
 
 [!code-csharp[csProgGuideEnums#1](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideEnums/CS/Enums.cs#1)]
 
-기본적으로 열거형에서 각 요소의 기본 형식은 [int](../../csharp/language-reference/keywords/int.md)입니다. 이전 예제와 같이 콜론을 사용하여 다른 정수 계열 숫자 형식을 지정할 수 있습니다. 가능한 형식의 전체 목록은 [enum(C# 참조)](../../csharp/language-reference/keywords/enum.md)을 참조하세요.
+기본적으로 열거형에서 각 요소의 기본 형식은 [int](../language-reference/builtin-types/integral-numeric-types.md)입니다. 이전 예제와 같이 콜론을 사용하여 다른 정수 계열 숫자 형식을 지정할 수 있습니다. 가능한 형식의 전체 목록은 [enum(C# 참조)](../language-reference/keywords/enum.md)을 참조하세요.
 
 다음 예제와 같이 기본 형식으로 캐스트하여 기본 숫자 값을 확인할 수 있습니다.
 
@@ -85,10 +86,10 @@ Console.WriteLine("{0} is month number #{1}.", thisMonth, monthNumber);
 
 자세한 내용은 <xref:System.Enum?displayProperty=nameWithType>을 참조하세요.
 
-또한 확장 메서드를 사용하여 열거형에 대한 새 메서드를 만들 수 있습니다. 자세한 내용은 [방법: 새 열거형 메서드 만들기](../../csharp/programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)를 참조하세요.
+또한 확장 메서드를 사용하여 열거형에 대한 새 메서드를 만들 수 있습니다. 자세한 내용은 [방법: 새 열거형 메서드 만들기](./classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Enum?displayProperty=nameWithType>  
-- [C# 프로그래밍 가이드](../../csharp/programming-guide/index.md)  
-- [enum](../../csharp/language-reference/keywords/enum.md)
+- <xref:System.Enum?displayProperty=nameWithType>
+- [C# 프로그래밍 가이드](./index.md)
+- [enum](../language-reference/keywords/enum.md)

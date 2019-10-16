@@ -12,27 +12,27 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d28da0c788d40222ccd689807d6e51f66b4ce78
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48844308"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59337697"
 ---
 # <a name="applying-attributes"></a>특성 적용
 다음 프로세스를 사용하여 코드 요소에 특성을 적용합니다.  
   
-1.  새 특성을 정의하거나 .NET Framework에서 기존 특성의 네임스페이스를 가져와 이 특성을 사용합니다.  
+1. 새 특성을 정의하거나 .NET Framework에서 기존 특성의 네임스페이스를 가져와 이 특성을 사용합니다.  
   
-2.  코드 요소 바로 앞에 특성을 배치하여 이 요소에 해당 특성을 적용합니다.  
+2. 코드 요소 바로 앞에 특성을 배치하여 이 요소에 해당 특성을 적용합니다.  
   
      각 언어마다 고유한 특성 구문이 있습니다. C++ 및 C#의 경우 특성은 대괄호로 묶고, 공백으로 요소와 구분되며, 줄 바꿈 문자를 사용할 수 있습니다. Visual Basic의 경우 특성은 꺾쇠 괄호로 묶고, 같은 논리 줄에 있어야 합니다. 줄 바꿈이 필요하면 줄 연속 문자를 사용할 수 있습니다.
   
-3.  특성에 대한 위치 매개 변수와 명명된 매개 변수를 지정합니다.  
+3. 특성에 대한 위치 매개 변수와 명명된 매개 변수를 지정합니다.  
   
      위치 매개 변수는 필수 요소로서 명명된 매개 변수 앞에 와야 하며, 특성의 생성자 중 하나의 매개 변수에 해당합니다. 명명된 매개 변수는 선택적 요소이며, 특성의 읽기/쓰기 속성에 해당합니다. C++ 및 C#의 경우 각 선택적 매개 변수에 `name`=`value`를 지정합니다. 여기서 `name`은 속성의 이름입니다. Visual Basic의 경우 `name`:=`value`를 지정합니다.  
   
- 특성은 코드를 컴파일할 때 메타데이터로 내보내지며, 공용 언어 런타임과 사용자 지정 도구 또는 응용 프로그램에서 런타임 리플렉션 서비스를 통해 사용할 수 있습니다.  
+ 특성은 코드를 컴파일할 때 메타데이터로 내보내지며, 공용 언어 런타임과 사용자 지정 도구 또는 애플리케이션에서 런타임 리플렉션 서비스를 통해 사용할 수 있습니다.  
   
  모든 특성 이름은 규칙에 따라 Attribute로 끝납니다. 하지만 런타임을 목적으로 하는 일부 언어(예: Visual Basic 및 C#)에서는 특성의 전체 이름을 지정할 필요가 없습니다. 예를 들어 <xref:System.ObsoleteAttribute?displayProperty=nameWithType>를 초기화하려는 경우 **Obsolete**로만 참조해야 합니다.  
   
@@ -54,7 +54,8 @@ ms.locfileid: "48844308"
   
 ## <a name="see-also"></a>참고 항목
 
-- [특성](../../../docs/standard/attributes/index.md)  
-- [특성에 저장된 정보 검색](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)  
-- [개념](/cpp/windows/attributed-programming-concepts)  
-- [특성](https://msdn.microsoft.com/library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)
+- [특성](../../../docs/standard/attributes/index.md)
+- [특성에 저장된 정보 검색](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)
+- [개념](/cpp/windows/attributed-programming-concepts)
+- [특성(C#)](../../csharp/programming-guide/concepts/attributes/index.md)
+- [특성 개요(Visual Basic)](../../visual-basic/programming-guide/concepts/attributes/index.md)

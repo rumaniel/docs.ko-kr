@@ -1,5 +1,6 @@
 ---
-title: bool 키워드(C# 참조)
+title: bool 키워드 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - bool_CSharpKeyword
@@ -7,19 +8,19 @@ f1_keywords:
 helpviewer_keywords:
 - bool keyword [C#]
 ms.assetid: 551cfe35-2632-4343-af49-33ad12da08e2
-ms.openlocfilehash: 2041182dffa0330ea601b30e047c0b09731618f2
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 3e4e83b52cd6b275e68039693c774f6490f2b88f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042402"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606050"
 ---
 # <a name="bool-c-reference"></a>bool(C# 참조)
 
-`bool` 키워드는 <xref:System.Boolean?displayProperty=nameWithType>의 별칭입니다. 부울 값 [true](../../../csharp/language-reference/keywords/true.md) 및 [false](../../../csharp/language-reference/keywords/false.md)를 저장할 변수를 선언하는 데 사용됩니다.
+`bool` 키워드는 <xref:System.Boolean?displayProperty=nameWithType>의 별칭입니다. 부울 값 [true](true-literal.md) 및 [false](false-literal.md)를 저장할 변수를 선언하는 데 사용됩니다.
 
 > [!NOTE]
-> `null` 값을 가질 수 있는 부울 변수가 필요한 경우 `bool?`를 사용합니다. 자세한 내용은 [Null 허용 형식](../../../csharp/programming-guide/nullable-types/index.md)을 참조하세요.
+> 예를 들어 값이 세 개인 논리를 지원해야 하는 경우(예: 값이 세 개인 부울 형식을 지원하는 데이터베이스에서 작업하는 경우) `bool?` 형식을 사용합니다. `bool?` 피연산자의 경우 미리 정의된 `&` 및 `|` 연산자는 값이 세 개인 논리를 지원합니다. 자세한 내용은 [부울 논리 연산자](../operators/boolean-logical-operators.md) 문서의 [Nullable 부울 논리 연산자](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators) 섹션을 참조하세요.
 
 ## <a name="literals"></a>리터럴
 
@@ -51,10 +52,10 @@ C++에서 `bool` 형식의 값은 `int` 형식의 값으로 변환될 수 있습
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)  
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
-- [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](./index.md)
+- [정수 형식](../builtin-types/integral-numeric-types.md)
+- [기본 제공 형식 표](./built-in-types-table.md)
+- [암시적 숫자 변환 표](./implicit-numeric-conversions-table.md)
+- [명시적 숫자 변환 표](./explicit-numeric-conversions-table.md)

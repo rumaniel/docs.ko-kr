@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d7024b8c0682b3351d185e518dd149737beb04bc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 10d0fc0c65d6c479ee4bf7bf527ee33615d53084
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416360"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761172"
 ---
 # <a name="icordebugmanagedcallback2createconnection-method"></a>ICorDebugManagedCallback2::CreateConnection 메서드
-새 연결 만들어졌는지 디버거에 알립니다.  
+새 연결을 만들어졌는지 디버거에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CreateConnection (  
     [in] ICorDebugProcess     *pProcess,  
     [in] CONNID               dwConnectionId,  
@@ -37,7 +37,7 @@ HRESULT CreateConnection (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pProcess`  
  [in] 연결을 만든 프로세스를 나타내는 "ICorDebugProcess" 개체에 대 한 포인터  
   
@@ -48,21 +48,22 @@ HRESULT CreateConnection (
  [in] 새 연결의 이름에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- A `CreateConnection` 콜백 중 한 가지는 다음과 같은 경우에 발생 합니다.  
+ `CreateConnection` 콜백 중 다음과 같은 경우에 발생 합니다.  
   
--   때 연결을 포함 하는 프로세스에 디버거 연결 합니다. 이 경우 런타임에 생성 되며 발송 한 `CreateConnection` 이벤트 및 [icordebugmanagedcallback2:: Changeconnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) 프로세스에서 각 연결에 대 한 이벤트입니다.  
+- 때 디버거 연결을 포함 하는 프로세스에 연결 합니다. 이 경우 런타임은 생성 되며 디스패치를 `CreateConnection` 이벤트와 [ICorDebugManagedCallback2::ChangeConnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-changeconnection-method.md) 프로세스의 각 연결에 대 한 이벤트입니다.  
   
--   호스트를 호출 하는 경우 [iclrdebugmanager:: Beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) 에 [호스팅 API](../../../../docs/framework/unmanaged-api/hosting/index.md)합니다.  
+- 호스트를 호출 하는 경우 [iclrdebugmanager:: Beginconnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-beginconnection-method.md) 에 [호스팅 API](../../../../docs/framework/unmanaged-api/hosting/index.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)  
- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebugManagedCallback2 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
+- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

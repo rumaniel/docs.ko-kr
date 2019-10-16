@@ -17,15 +17,13 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70cec58f232d7ab8e02cbe346d393fb25dc4e5c0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9a0b35b4782ca173133523aa9e9d0fe48ea728d0
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411985"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700773"
 ---
 # <a name="icordebugcontrollercancommitchanges-method"></a>ICorDebugController::CanCommitChanges 메서드
-`CanCommitChanges`는 사용되지 않습니다. 이 메서드를 호출 하지 마십시오.  
-  
-## <a name="see-also"></a>참고 항목  
- 
+
+`CanCommitChanges`는 사용되지 않습니다. 이 메서드를 호출 하지 마세요.

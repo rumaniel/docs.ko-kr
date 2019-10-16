@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMessageDropped
 ms.date: 03/30/2017
 ms.assetid: 8b6e644d-fa68-4be7-abe9-3659671a37c1
-ms.openlocfilehash: 07bef8b391a03f2c011e1d1a7c7fb4fad908e022
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3fa5ec62c5e8ac83f3f81fb406499b7e596b3dac
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969509"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagedropped"></a>System.ServiceModel.Channels.MsmqMessageDropped
 MSMQ에서 메시지를 삭제했습니다.  
@@ -19,8 +19,9 @@ MSMQ에서 메시지를 삭제했습니다.
   
  참조 [포이즌 메시지 처리](https://go.microsoft.com/fwlink/?LinkID=99546) 메시지는 포이즌 메시지가 될 경우 및이 적절히 처리 하도록 서비스를 구성 하는 방법에 대 한 자세한 내용은 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)  
- [포이즌 메시지 처리](https://go.microsoft.com/fwlink/?LinkID=99546)
+## <a name="see-also"></a>참고자료
+
+- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
+- [포이즌 메시지 처리](https://go.microsoft.com/fwlink/?LinkID=99546)

@@ -9,24 +9,24 @@ helpviewer_keywords:
 - popups [WPF]
 - controls [WPF], Popup
 ms.assetid: 36a4320f-91ce-4f5f-9621-7934de3eff77
-ms.openlocfilehash: c7161439f5b4a0e0e224235b458945376215d273
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3b43456de1b161763c6197956003c9e7f07135fc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770608"
 ---
 # <a name="popup"></a>Popup
-<xref:System.Windows.Controls.Primitives.Popup> 컨트롤 현재 응용 프로그램 창 위에 배치 되는 별도 창에서 콘텐츠를 표시 합니다.  
+<xref:System.Windows.Controls.Primitives.Popup> 현재 응용 프로그램 창 위에 떠 있는 별도 창에서 컨트롤에 내용이 표시 됩니다.  
   
- 다음 그림에서는 한 <xref:System.Windows.Controls.Primitives.Popup> 제어와 관련 하 여 배치 되는 <xref:System.Windows.Controls.Button> 즉 부모입니다.  
+ 다음 그림에 표시를 <xref:System.Windows.Controls.Primitives.Popup> 기준으로 배치 되는 컨트롤을 <xref:System.Windows.Controls.Button> 부모입니다.  
   
- ![팝업 설명](../../../../docs/framework/wpf/controls/media/popuppicture.JPG "PopupPicture")  
+ ![팝업 설명](./media/popup/popup-picture-button.jpg)  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [팝업 개요](../../../../docs/framework/wpf/controls/popup-overview.md)  
- [팝업 배치 동작](../../../../docs/framework/wpf/controls/popup-placement-behavior.md)  
- [방법 항목](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)  
+ [팝업 개요](popup-overview.md)  
+ [팝업 배치 동작](popup-placement-behavior.md)  
+ [방법 항목](popup-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Primitives.Popup>  

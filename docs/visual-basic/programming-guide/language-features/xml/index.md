@@ -3,14 +3,8 @@ title: Visual Basic의 XML
 description: XML 및 LINQ Visual Basic 코드의 XML 기능을 사용 하는 방법을 알아봅니다.
 ms.date: 10/20/2017
 helpviewer_keywords:
-- LINQ to XML [Visual Basic]
+  - 'LINQ to XML [Visual Basic]'
 ms.assetid: 954b6e40-1246-4185-a018-4061724fcae9
-ms.openlocfilehash: 4ccdf0f4b05e23c1107d7df2a813e8b6de423589
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084389"
 ---
 # <a name="xml-in-visual-basic"></a>Visual Basic의 XML
 
@@ -29,7 +23,7 @@ Visual Basic에서 상호 작용할 수 있도록 하는 통합된 언어 지원
   
 ## <a name="see-also"></a>참고자료
 
-- <xref:System.Xml.Linq>  
-- [XML 리터럴](../../../../visual-basic/language-reference/xml-literals/index.md)  
-- [XML 축 속성](../../../../visual-basic/language-reference/xml-axis/index.md)  
+- <xref:System.Xml.Linq>
+- [XML 리터럴](../../../../visual-basic/language-reference/xml-literals/index.md)
+- [XML 축 속성](../../../../visual-basic/language-reference/xml-axis/index.md)
 - [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)

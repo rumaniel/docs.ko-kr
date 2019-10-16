@@ -1,5 +1,5 @@
 ---
-title: '&lt;cryptographySettings&gt; 요소'
+title: <cryptographySettings> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/mscorlib/cryptographySettings
@@ -8,21 +8,19 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4bad1d15bc8e2fd40d42581220888f035e515162
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 96a8c9accc56274b5cc13dc2a871165857b3a2d9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181383"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699817"
 ---
-# <a name="ltcryptographysettingsgt-element"></a>&lt;cryptographySettings&gt; 요소
+# <a name="cryptographysettings-element"></a>\<cryptographySettings > 요소
 암호화 설정이 포함되어 있습니다.  
   
- \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t **\<cryptographySettings >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -41,18 +39,18 @@ ms.locfileid: "50181383"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<cryptoNameMapping >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptonamemapping-element.md)|이름에 대한 클래스의 매핑이 포함되어 있습니다.|  
-|[\<oidMap >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidmap-element.md)|ASN.1 클래스 개체 식별자 (OID) 매핑이 들어 있습니다.|  
+|[\<cryptoNameMapping>](cryptonamemapping-element.md)|이름에 대한 클래스의 매핑이 포함되어 있습니다.|  
+|[\<oidMap>](oidmap-element.md)|클래스에 대 한 OID (개체 식별자) 매핑을 포함 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
-|`mscorlib`|포함 된 `cryptographySettings` 요소입니다.|  
+|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`mscorlib`|요소를 `cryptographySettings` 포함 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 방법을 보여 주는 예제는  **\<cryptographySettings >** 암호화 이름 매핑 및 OID 매핑이 포함 하는 요소입니다. 이 예제에서는 런타임에 구성 있도록 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType> 반환을 `MyHashClass` 개체 및 `MyCryptoClass` 클래스 1.3.36.2.1 개체 식별자에 매핑됩니다.  
+ 다음 예에서는 **\<cryptographySettings >** 요소를 사용 하 여 암호화 이름 매핑과 OID 매핑을 포함 하는 방법을 보여 줍니다. 이 예제에서는 <xref:System.Security.Cryptography.HashAlgorithm.Create%2A?displayProperty=nameWithType>이 `MyHashClass` 개체를 반환 하 고 `MyCryptoClass` 클래스가 개체 식별자 1.3.36.2.1에 매핑되도록 런타임을 구성 합니다.  
   
 ```xml  
 <configuration>  
@@ -78,7 +76,8 @@ ms.locfileid: "50181383"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
+## <a name="see-also"></a>참조
+
+- [구성 파일 스키마](../index.md)
+- [암호화 설정 스키마](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)

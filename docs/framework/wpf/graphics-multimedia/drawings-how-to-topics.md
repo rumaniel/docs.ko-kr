@@ -11,26 +11,27 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 5f445633-529c-4091-8a2c-13035ac8c41b
-ms.openlocfilehash: 332c9fe35111b3fa7e4f604f4a2334694f0f89c3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6be388292ce2c73b9ef555ea6b00c986c99dc11a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010139"
 ---
 # <a name="drawings-how-to-topics"></a>그리기 방법 항목
-이 섹션의 항목을 사용 하는 방법을 설명 <xref:System.Windows.Media.Drawing> 도형, 이미지 또는 텍스트를 그리는 데 개체입니다.  
+이 섹션의에서 항목에서는 사용 하는 방법에 설명 <xref:System.Windows.Media.Drawing> 도형, 이미지 또는 텍스트를 그릴 개체입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Drawing에 GuidelineSet 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-guidelineset-to-a-drawing.md)  
-  [합성 그리기 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-composite-drawing.md)  
-  [GeometryDrawing 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-geometrydrawing.md)  
-  [ImageDrawing을 사용하여 이미지 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-image-using-imagedrawing.md)  
-  [VideoDrawing을 사용하여 미디어 재생](../../../../docs/framework/wpf/graphics-multimedia/how-to-play-media-using-a-videodrawing.md)  
-  [그림을 이미지 소스로 사용](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-drawing-as-an-image-source.md)  
+ [Drawing에 GuidelineSet 적용](how-to-apply-a-guidelineset-to-a-drawing.md)  
+  [합성 그리기 만들기](how-to-create-a-composite-drawing.md)  
+  [GeometryDrawing 만들기](how-to-create-a-geometrydrawing.md)  
+  [ImageDrawing을 사용하여 이미지 그리기](how-to-draw-an-image-using-imagedrawing.md)  
+  [VideoDrawing을 사용하여 미디어 재생](how-to-play-media-using-a-videodrawing.md)  
+  [그림을 이미지 소스로 사용](how-to-use-a-drawing-as-an-image-source.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Media.Drawing>  
- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [WPF에서 Shape 및 기본 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Media.Drawing>
+- [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)
+- [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)
+- [그래픽 및 멀티미디어](index.md)

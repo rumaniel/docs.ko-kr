@@ -7,37 +7,38 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-ms.openlocfilehash: be3abd74a71fc711cd9f4bf6796b7d55017355ef
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5748b7929db18578bbe00e3217b1578ac5fbc0f4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543434"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614599"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>방법: Freezable을 읽기 전용으로 설정
-확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Freezable> 호출 하 여 읽기 전용 해당 <xref:System.Windows.Freezable.Freeze%2A> 메서드.  
+확인 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Freezable> 를 호출 하 여 읽기 전용으로 해당 <xref:System.Windows.Freezable.Freeze%2A> 메서드.  
   
- 고정할 수 없습니다는 <xref:System.Windows.Freezable> 다음 조건 중 하나라도 않은 경우 개체 `true` 개체에 대 한 합니다.  
+ 고정할 수 없습니다는 <xref:System.Windows.Freezable> 경우 다음 조건 중 하나는 개체 `true` 개체에 대 한 합니다.  
   
--   애니메이션이 적용 또는 데이터 바인딩된 속성입니다.  
+- 애니메이션 효과가 적용 또는 데이터 바인딩된 속성입니다.  
   
--   동적 리소스에서 설정 하는 속성이 있습니다. 동적 리소스에 대 한 자세한 내용은 참조는 [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)합니다.  
+- 동적 리소스에 의해 설정 된 속성이 있습니다. 동적 리소스에 대 한 자세한 내용은 참조는 [XAML 리소스](xaml-resources.md)합니다.  
   
--   포함 된 <xref:System.Windows.Freezable> 고정할 수 없는 하위 개체입니다.  
+- 포함 된 <xref:System.Windows.Freezable> 고정할 수 없는 하위 개체입니다.  
   
- 이러한 조건이 `false` 에 대 한 프로그램 <xref:System.Windows.Freezable> 개체 하지 않으려는 수정 성능을 향상 시키는 것을 고려 하십시오.  
+ 이러한 조건이 `false` 에 대 한 프로그램 <xref:System.Windows.Freezable> 개체 숨기지 않으려면 수정, 성능 이점을 얻을 수 고정 하는 것이 좋습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 고정 한 <xref:System.Windows.Media.SolidColorBrush>의 형식인 <xref:System.Windows.Freezable> 개체입니다.  
+ 다음 예제에서는 고정 된 <xref:System.Windows.Media.SolidColorBrush>의 형식인 <xref:System.Windows.Freezable> 개체입니다.  
   
- [!code-csharp[freezablesample_procedural#FreezeExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#freezeexample1)]
- [!code-vb[freezablesample_procedural#FreezeExample1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#freezeexample1)]  
+ [!code-csharp[freezablesample_procedural#FreezeExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#freezeexample1)]
+ [!code-vb[freezablesample_procedural#FreezeExample1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#freezeexample1)]  
   
- 에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 개체 참조는 [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)합니다.  
+ 에 대 한 자세한 내용은 <xref:System.Windows.Freezable> 개체를 참조 합니다 [Freezable 개체 개요](freezable-objects-overview.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Freezable>  
- <xref:System.Windows.Freezable.CanFreeze%2A>  
- <xref:System.Windows.Freezable.Freeze%2A>  
- [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Freezable>
+- <xref:System.Windows.Freezable.CanFreeze%2A>
+- <xref:System.Windows.Freezable.Freeze%2A>
+- [Freezable 개체 개요](freezable-objects-overview.md)
+- [방법 항목](base-elements-how-to-topics.md)

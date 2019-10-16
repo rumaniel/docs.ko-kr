@@ -2,12 +2,12 @@
 title: System.DateTime 메서드
 ms.date: 03/30/2017
 ms.assetid: 4f80700c-e83f-4ab6-af0f-1c9a606e1133
-ms.openlocfilehash: 57ffb3a7f79607b449c6e300ca15396a3f99386b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fba695975645ecb86a06b17f0664fdf37f8866a0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360763"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792425"
 ---
 # <a name="systemdatetime-methods"></a>System.DateTime 메서드
 다음과 같은 LINQ to SQL 지원 메서드, 연산자 및 속성을 LINQ to SQL 쿼리에 사용할 수 있습니다. 메서드, 연산자 또는 속성이 지원되지 않는 경우 LINQ to SQL에서는 해당 멤버를 SQL Server에서 실행하기 위해 변환할 수 없습니다. 이러한 멤버를 코드에 사용할 수 있지만 쿼리를 Transact-SQL로 변환하기 전이나 데이터베이스에서 결과가 검색된 후에 반드시 평가해야 합니다.  
@@ -64,8 +64,9 @@ ms.locfileid: "33360763"
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffHour%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMinute%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffSecond%2A>|  
 |<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMicrosecond%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffMonth%2A>|<xref:System.Data.Linq.SqlClient.SqlMethods.DateDiffYear%2A>|  
   
-## <a name="see-also"></a>참고 항목  
- [쿼리 개념](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  
- [개체 모델 만들기](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)  
- [SQL-CLR 형식 매핑](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)  
- [데이터 형식 및 함수](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+## <a name="see-also"></a>참고자료
+
+- [쿼리 개념](query-concepts.md)
+- [개체 모델 만들기](creating-the-object-model.md)
+- [SQL-CLR 형식 매핑](sql-clr-type-mapping.md)
+- [데이터 형식 및 함수](data-types-and-functions.md)

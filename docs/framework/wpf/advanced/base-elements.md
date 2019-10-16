@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 55034aa5-3c1d-442a-8293-f4692d8ea6ae
-ms.openlocfilehash: 165dfda74ac570578371915259548784c5a37820
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a1f7105ee6590314eb2ebbfa52b511f55f83dc05
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33539467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926414"
 ---
 # <a name="base-elements"></a>기본 요소
-4 개의 주요 클래스<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.FrameworkContentElement>-상당 WPF 프로그래밍에서 사용할 수 있는 공통 요소 기능을 구현 합니다. 이 네 가지 클래스 라고이 SDK에서 기본 요소 클래스입니다.  
+네 가지 주요 클래스<xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>를 <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.FrameworkContentElement>-상당 WPF 프로그래밍에서 사용할 수 있는 공통 요소 기능을 구현 합니다. 이러한 네 가지 클래스 라고이 SDK에서 기본 요소 클래스입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [기본 요소 개요](../../../../docs/framework/wpf/advanced/base-elements-overview.md)  
- [Freezable 개체 개요](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)  
- [맞춤, 여백 및 안쪽 여백 개요](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/advanced/base-elements-how-to-topics.md)  
+ [기본 요소 개요](base-elements-overview.md)  
+ [Freezable 개체 개요](freezable-objects-overview.md)  
+ [맞춤, 여백 및 안쪽 여백 개요](alignment-margins-and-padding-overview.md)  
+ [방법 항목](base-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.UIElement>  
@@ -32,12 +32,12 @@ ms.locfileid: "33539467"
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>관련 단원  
- [WPF 아키텍처](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF의 XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [요소 트리 및 Serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [속성](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [이벤트](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [입력](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [리소스](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [스레딩 모델](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF 아키텍처](wpf-architecture.md)  
+  [WPF의 XAML](xaml-in-wpf.md)  
+  [요소 트리 및 Serialization](element-tree-and-serialization.md)  
+  [속성](properties-wpf.md)  
+  [이벤트](events-wpf.md)  
+  [입력](input-wpf.md)  
+  [리소스](resources-wpf.md)  
+  [스타일 지정 및 템플릿](../controls/styling-and-templating.md)  
+  [스레딩 모델](threading-model.md)

@@ -2,12 +2,12 @@
 title: Visual Basic 언어 버전 선택
 description: 컴파일러가 특정 컴파일러 버전을 사용 하 여 구문 유효성 검사를 수행 하도록 구성 합니다.
 ms.date: 05/24/2018
-ms.openlocfilehash: 7628b5a7c27f5b26171d42e44a58598ef3d5d49f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4768d59a37d168b2883396f1dea4d0c1a0ff4ca7
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194724"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268272"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Visual Basic 언어 버전 선택
 
@@ -36,7 +36,7 @@ Visual Basic 컴파일러 기본값은 해제 된 언어의 최신 주 버전입
 |값|의미|
 |------------|-------------|
 |default|컴파일러는 지원할 수 있는 최신 주 버전의 유효한 언어 구문을 모두 허용합니다.|
-|10|컴파일러 또는 Visual Basic 9.0에 포함 된 구문만을 허용 합니다.|
+|9|컴파일러 또는 Visual Basic 9.0에 포함 된 구문만을 허용 합니다.|
 |10|컴파일러 또는 Visual Basic 10.0의 포함 된 구문만을 허용 합니다.|
 |11|컴파일러 또는 Visual Basic 11.0에 포함 된 구문만을 허용 합니다.|
 |12|컴파일러 또는 Visual Basic 12.0에 포함 된 구문만을 허용 합니다.|
@@ -44,6 +44,7 @@ Visual Basic 컴파일러 기본값은 해제 된 언어의 최신 주 버전입
 |15|컴파일러 또는 Visual Basic 15.0에 포함 된 구문만을 허용 합니다.|
 |15.3|컴파일러 또는 Visual Basic 15.3에 포함 된 구문만을 허용 합니다.|
 |15.5|컴파일러 또는 Visual Basic 15.5에 포함 된 구문만을 허용 합니다.|
+|15.8|컴파일러 또는 Visual Basic 15.8에 포함 된 구문만을 허용 합니다.|
 |latest|컴파일러가 지원할 수 있는 유효한 언어 구문을 모두 허용합니다.|
 
 특수한 문자열 `default` 및 `latest`는 각각 빌드 컴퓨터에 설치된 최신 주 및 부 언어 버전을 확인합니다.
@@ -60,7 +61,7 @@ Visual Basic 컴파일러 기본값은 해제 된 언어의 최신 주 버전입
 </Project>
 ```
 
-이제 해당 파일을 포함 하는 디렉터리의 모든 하위 디렉터리에 빌드는 Visual Basic 버전 15.5 구문을 사용 합니다. 자세한 내용은 [빌드 사용자 지정](/visualstudio/msbuild/customize-your-build.md)에 대한 문서를 참조하세요.
+이제 해당 파일을 포함 하는 디렉터리의 모든 하위 디렉터리에 빌드는 Visual Basic 버전 15.5 구문을 사용 합니다. 자세한 내용은 [빌드 사용자 지정](/visualstudio/msbuild/customize-your-build)에 대한 문서를 참조하세요.
 
 ## <a name="set-the-langversion-compiler-option"></a>langversion 컴파일러 옵션 설정
 

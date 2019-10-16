@@ -17,29 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 350aecb9f9c99c9aa44ae6df6d31c7cb69ae5760
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 459a24e2ed9b97a67dc0266231fdfc32a9c853a6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430347"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776656"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource 메서드
-반환 `true` 문서 소스 디버깅 기호;에 대해 포함 된 경우는 그렇지 않으면 반환 `false`합니다.  
+반환 `true` 문서에 소스가 디버깅 기호;에 포함 되어 있으면 반환이 고, 그렇지 `false`합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT HasEmbeddedSource(  
    [out, retval]  BOOL  *pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pRetVal`  
- [out] 문서 소스 디버깅 기호에 포함 되어 있는지 여부를 나타내는 변수에 대 한 포인터입니다.  
+ [out] 문서에 디버깅 기호를 포함 하는 원본에 있는지 여부를 나타내는 변수에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK입니다.  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

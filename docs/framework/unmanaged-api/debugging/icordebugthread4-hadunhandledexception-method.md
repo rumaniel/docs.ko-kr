@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8215ddfd0f59f835d0b0dcd278b8cae9c12027d2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9bbc3379ff9523564f4eae7da96fca2247601fcd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422112"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765162"
 ---
 # <a name="icordebugthread4hadunhandledexception-method"></a>ICorDebugThread4::HadUnhandledException 메서드
-스레드가 처리 되지 않은 예외가 한 적이 있는지 여부를 나타냅니다.  
+스레드 처리 되지 않은 예외가 한 적이 있는지 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetBlockingObjects (  
     [out] ICorDebugBlockingObjectEnum **ppBlockingObjectEnum  
     );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppBlockingObjectEnum`  
  [out] 순서가 지정 된 열거형의 주소에 대 한 포인터 [CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md) 구조입니다.  
   
@@ -44,22 +44,23 @@ HRESULT GetBlockingObjects (
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|스레드가는 만들어진 이후 처리 되지 않은 예외가 발생 했습니다.|  
-|S_FALSE|스레드가 처리 되지 않은 예외가 적입니다.|  
+|S_OK|스레드에는 생성 된 후 처리 되지 않은 예외가 발생 했습니다.|  
+|S_FALSE|스레드의 처리 되지 않은 예외가 적입니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 스레드에서 처리 되지 않은 예외가 한 적이 있는지 여부를 나타냅니다. 예외로 인해 콜백 트리거될 때까지 또는 네이티브 JIT 연결가 시작 되 면이 메서드는 항상 S_OK를 반환 합니다. 하지만 다 하는 [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) 메서드는 처리 되지 않은 예외를 반환 하는 경우 프로세스 하지 아직 계속 된 예외로 인해 콜백을 받은 후 또는 시 됩니다; 네이티브 JIT 연결 합니다. 또한 것 가능 없지만 둘 이상의 스레드가 네이티브 JIT 연결 트리거될 때 처리 되지 않은 예외와 함께 있어야 합니다. 이러한 경우 JIT 연결을 트리거한 예외를 확인할 수 없습니다 있습니다.  
+ 이 메서드는 스레드에서 처리 되지 않은 예외가 한 적이 있는지 여부를 나타냅니다. 처리 되지 않은 예외가 콜백이 트리거될 때 또는 네이티브 JIT 연결 시작 되 면이 메서드는 항상 S_OK를 반환 합니다. 그러나 보장이 합니다 [ICorDebugThread.GetCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread-getcurrentexception-method.md) 메서드는 처리 되지 않은 예외를 반환 하는 경우 프로세스 하지 아직 계속 된 처리 되지 않은 예외 콜백을 받은 후 또는 시는; 네이티브 JIT 연결 합니다. 또한 가능성이 없지만 예외가 트리거되는 네이티브 JIT 연결 시 사용 하 여 스레드를 둘 이상 있습니다. 이러한 경우 JIT 연결을 트리거한 예외 확인할 방법은 없으며 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebugThread4 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebugThread4 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

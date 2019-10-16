@@ -5,12 +5,12 @@ helpviewer_keywords:
 - errors [Visual Basic], run-time
 - run-time errors [Visual Basic], Visual Basic
 ms.assetid: 130f7c2b-8eb1-4a6e-81aa-e30e27d3d4f7
-ms.openlocfilehash: ce61401dec875ac1dea01e1e5a892d06974a3d36
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 11d35774b489d36c32e5d3f58a5bc25b005ff12d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61595428"
 ---
 # <a name="visual-basic-run-time-messages"></a>Visual Basic 런타임 메시지
 이 섹션에는 런타임 시 발생 하는 Visual Basic 오류 메시지를 포함 합니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "43788028"
   
  [다른 이벤트 로그에서 이미 이 이름으로 소스를 등록했습니다.](../../visual-basic/misc/another-event-log-has-already-registered-a-source-with-this-name.md)  
   
- [응용 프로그램 정의 또는 개체 정의 오류](../../visual-basic/misc/application-defined-or-object-defined-error.md)  
+ [애플리케이션 정의 또는 개체 정의 오류](../../visual-basic/misc/application-defined-or-object-defined-error.md)  
   
  [인수 '\<argument1 >' 인수의 길이 보다 작거나 같아야 '\<argument2 >'](../../visual-basic/misc/argument-argument1-must-be-less-than-or-equal-to-the-length-of-argument2.md)  
   
@@ -189,9 +189,9 @@ ms.locfileid: "43788028"
   
  [DataBits는 0보다 커야 합니다.](../../visual-basic/misc/databits-must-be-greater-than-0.md)  
   
- [장치 입/출력(I/O) 오류입니다.](../../visual-basic/language-reference/error-messages/device-i-o-error.md)  
+ [디바이스 입/출력(I/O) 오류입니다.](../../visual-basic/language-reference/error-messages/device-i-o-error.md)  
   
- [장치를 사용할 수 없습니다.](../../visual-basic/misc/device-unavailable.md)  
+ [디바이스를 사용할 수 없습니다.](../../visual-basic/misc/device-unavailable.md)  
   
  ['Dir' 함수는 처음에 'PathName' 인수를 사용하여 호출해야 합니다.](../../visual-basic/language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md)  
   
@@ -495,7 +495,7 @@ ms.locfileid: "43788028"
   
  [이 작업은 파일이 닫혀 있을 때만 수행할 수 있습니다.](../../visual-basic/misc/this-operation-can-only-be-done-when-the-file-is-closed.md)  
   
- [이 단일 인스턴스 응용 프로그램을 원본 인스턴스에 연결할 수 없습니다.](../../visual-basic/misc/this-single-instance-application-could-not-connect-to-the-original-instance.md)  
+ [이 단일 인스턴스 애플리케이션을 원본 인스턴스에 연결할 수 없습니다.](../../visual-basic/misc/this-single-instance-application-could-not-connect-to-the-original-instance.md)  
   
  [이 시스템은 일본어 로캘을 지원하지 않습니다.](../../visual-basic/misc/this-system-does-not-contain-support-for-the-japanese-locale.md)  
   
@@ -505,7 +505,7 @@ ms.locfileid: "43788028"
   
  [이 시스템은 중국어 번체 로캘을 지원하지 않습니다.](../../visual-basic/misc/this-system-does-not-contain-support-for-the-traditional-chinese-locale.md)  
   
- [DLL 응용 프로그램 클라이언트가 너무 많습니다.](../../visual-basic/misc/too-many-dll-application-clients.md)  
+ [DLL 애플리케이션 클라이언트가 너무 많습니다.](../../visual-basic/misc/too-many-dll-application-clients.md)  
   
  [파일이 너무 많습니다.](../../visual-basic/language-reference/error-messages/too-many-files.md)  
   
@@ -553,6 +553,6 @@ ms.locfileid: "43788028"
   
  [현재 폴더 또는 하위 폴더 중 하나에 있는 경로를 지정해야 합니다.](../../visual-basic/misc/you-must-specify-path-that-is-under-the-current-folder-or-one-of-sub-folders.md)  
   
-## <a name="see-also"></a>참고 항목  
-   
- [오류 메시지](../../visual-basic/language-reference/error-messages/index.md)
+## <a name="see-also"></a>참고자료
+
+- [오류 메시지](../../visual-basic/language-reference/error-messages/index.md)

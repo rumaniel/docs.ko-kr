@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: 32664dc3be98a9d5a2e6a7d61790c18ae5d3795d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 77f208a0ce94925f1f968d4949f591ccab43e582
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519329"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583507"
 ---
 # <a name="option-compare-statement"></a>Option Compare 문
 문자열 데이터를 비교할 때 사용할 기본 비교 방법을 선언합니다.  
@@ -65,38 +65,39 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>IDE에서 Option Compare를 설정하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
+1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.  
   
-2.  **컴파일** 탭을 클릭합니다.  
+2. **컴파일** 탭을 클릭합니다.  
   
-3.  값을 설정 합니다 **Option Compare** 상자입니다.  
+3. 값을 설정 합니다 **Option Compare** 상자입니다.  
   
  프로젝트를 만들 때를 **Option Compare** 에 설정 합니다 **컴파일** 탭으로 설정 됩니다는 **Option Compare** 에서 설정를 **옵션** 대화 상자입니다. 이 설정을 변경 하는 **도구** 메뉴에서 클릭 **옵션**합니다. **옵션** 대화 상자에서 **프로젝트 및 솔루션**을 확장하고 **VB 기본값**을 클릭합니다. 초기 기본 설정은 **VB 기본값** 됩니다 **이진**합니다.  
   
 #### <a name="to-set-option-compare-on-the-command-line"></a>명령줄에서 Option Compare를 설정하려면  
   
--   포함 된 [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) 컴파일러 옵션을 **vbc** 명령.  
+- 포함 된 [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md) 컴파일러 옵션을 **vbc** 명령.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Option Compare` 문을 사용하여 이진 비교를 기본 문자열 비교 방법으로 설정합니다. 이 코드를 사용하려면 `Option Compare Binary` 문의 주석 처리를 제거하여 소스 파일 맨 위에 삽입합니다.  
   
- [!code-vb[VbVbalrStatements#45](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_1.vb)]  
+ [!code-vb[VbVbalrStatements#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#45)]  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Option Compare` 문을 사용하여 대/소문자 미구분 텍스트 정렬 순서를 기본 문자열 비교 방법으로 설정합니다. 이 코드를 사용하려면 `Option Compare Text` 문의 주석 처리를 제거하여 소스 파일 맨 위에 삽입합니다.  
   
- [!code-vb[VbVbalrStatements#46](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/option-compare-statement_2.vb)]  
+ [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.Strings.InStr%2A>  
- <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>  
- <xref:Microsoft.VisualBasic.Strings.Replace%2A>  
- <xref:Microsoft.VisualBasic.Strings.Split%2A>  
- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>  
- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [비교 연산자](../../../visual-basic/language-reference/operators/comparison-operators.md)  
- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Like 연산자](../../../visual-basic/language-reference/operators/like-operator.md)  
- [문자열 함수](../../../visual-basic/language-reference/functions/string-functions.md)  
- [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:Microsoft.VisualBasic.Strings.InStr%2A>
+- <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>
+- <xref:Microsoft.VisualBasic.Strings.Replace%2A>
+- <xref:Microsoft.VisualBasic.Strings.Split%2A>
+- <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
+- [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [비교 연산자](../../../visual-basic/language-reference/operators/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Like 연산자](../../../visual-basic/language-reference/operators/like-operator.md)
+- [문자열 함수](../../../visual-basic/language-reference/functions/string-functions.md)
+- [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)

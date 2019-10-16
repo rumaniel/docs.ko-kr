@@ -1,13 +1,14 @@
 ---
-title: private protected (C# Reference)
+title: private protected - C# 참조
+ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 4a4ee999fe932674e854b1428ab33b33bc71d2ad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c739dd0b5a5457a66c11962ed86bcd2ffbf811ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518453"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661685"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# Reference)
 
@@ -32,7 +33,7 @@ public class DerivedClass1 : BaseClass
 {
     void Access()
     {
-        BaseClass baseObject = new BaseClass();
+        var baseObject = new BaseClass();
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.

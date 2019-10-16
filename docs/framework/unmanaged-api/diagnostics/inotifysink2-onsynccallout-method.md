@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a38c35f0acd47c9183c043e1c436413a309b138
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4cea67587e4a33b4b9f8cbaa23cb7d299004a46
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426077"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736166"
 ---
 # <a name="inotifysink2onsynccallout-method"></a>INotifySink2::OnSyncCallOut 메서드
-되 면 호출 됩니다.  
+이 호출 하는 경우 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT OnSyncCallOut  
 (  
     [in]  CALL_ID  in_CallID,  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallOut
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `in_CallID`  
  [in] 이 호출의 ID입니다. 참조 [CALL_ID 구조체](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)합니다.  
   
@@ -46,7 +46,7 @@ HRESULT OnSyncCallOut
  [out] 버퍼를 호출 합니다.  
   
  `out_pBufferSize`  
- [out] 호출 버퍼의 바이트의 크기입니다.  
+ [out] 호출 버퍼 바이트의 크기입니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK입니다.  
@@ -54,7 +54,8 @@ HRESULT OnSyncCallOut
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>참고 항목  
- [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

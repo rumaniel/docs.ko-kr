@@ -1,0 +1,73 @@
+- name: 도구
+  href: index.md
+  items:
+    - name: Al.exe(어셈블리 링커)
+      href: al-exe-assembly-linker.md
+    - name: Aximp.exe (Windows Forms ActiveX 컨트롤 가져오기)
+      href: aximp-exe-windows-forms-activex-control-importer.md
+    - name: Caspol.exe(코드 액세스 보안 정책 도구)
+      href: caspol-exe-code-access-security-policy-tool.md
+    - name: Cert2spc.exe(SPC 테스트 도구)
+      href: cert2spc-exe-software-publisher-certificate-test-tool.md
+    - name: Certmgr.exe(인증서 관리자 도구)
+      href: certmgr-exe-certificate-manager-tool.md
+    - name: Clrver.exe(CLR 버전 도구)
+      href: clrver-exe-clr-version-tool.md
+    - name: 명령 프롬프트
+      href: developer-command-prompt-for-vs.md
+    - name: CorFlags.exe(CorFlags 변환 도구)
+      href: corflags-exe-corflags-conversion-tool.md
+    - name: Fuslogvw.exe(어셈블리 바인딩 로그 뷰어)
+      href: fuslogvw-exe-assembly-binding-log-viewer.md
+    - name: Gacutil.exe(전역 어셈블리 캐시 도구)
+      href: gacutil-exe-gac-tool.md
+    - name: Ilasm.exe(IL 어셈블러)
+      href: ilasm-exe-il-assembler.md
+    - name: Ildasm.exe(IL 디스어셈블러)
+      href: ildasm-exe-il-disassembler.md
+    - name: Installutil.exe(설치 관리자 도구)
+      href: installutil-exe-installer-tool.md
+    - name: Lc.exe(라이선스 컴파일러)
+      href: lc-exe-license-compiler.md
+    - name: Mage.exe(매니페스트 생성 및 편집 도구)
+      href: mage-exe-manifest-generation-and-editing-tool.md
+    - name: 'MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)'
+      href: mageui-exe-manifest-generation-and-editing-tool-graphical-client.md
+    - name: MDbg.exe(.NET Framework 명령줄 디버거)
+      href: mdbg-exe.md
+    - name: Mgmtclassgen.exe(강력하게 형식화된 관리 클래스 생성기)
+      href: mgmtclassgen-exe.md
+    - name: Mpgo.exe(관리되는 프로필 기반 최적화 도구)
+      href: mpgo-exe-managed-profile-guided-optimization-tool.md
+    - name: Ngen.exe(네이티브 이미지 생성기)
+      href: ngen-exe-native-image-generator.md
+    - name: Peverify.exe(PEVerify 도구)
+      href: peverify-exe-peverify-tool.md
+    - name: Regasm.exe(어셈블리 등록 도구)
+      href: regasm-exe-assembly-registration-tool.md
+    - name: Regsvcs.exe(.NET 서비스 설치 도구)
+      href: regsvcs-exe-net-services-installation-tool.md
+    - name: Resgen.exe(리소스 파일 생성기)
+      href: resgen-exe-resource-file-generator.md
+    - name: SecAnnotate.exe(.NET Security Annotator 도구)
+      href: secannotate-exe-net-security-annotator-tool.md
+    - name: SignTool.exe(서명 도구)
+      href: signtool-exe.md
+    - name: Sn.exe(강력한 이름 도구)
+      href: sn-exe-strong-name-tool.md
+    - name: SOS.dll(SOS 디버깅 확장명)
+      href: sos-dll-sos-debugging-extension.md
+    - name: SqlMetal.exe(코드 생성 도구)
+      href: sqlmetal-exe-code-generation-tool.md
+    - name: Storeadm.exe(격리된 스토리지 도구)
+      href: storeadm-exe-isolated-storage-tool.md
+    - name: Tlbexp.exe(형식 라이브러리 내보내기)
+      href: tlbexp-exe-type-library-exporter.md
+    - name: Tlbimp.exe(형식 라이브러리 가져오기)
+      href: tlbimp-exe-type-library-importer.md
+    - name: Winmdexp.exe(Windows 런타임 메타데이터 내보내기 도구)
+      href: winmdexp-exe-windows-runtime-metadata-export-tool.md
+    - name: Winmdexp.exe 오류 메시지
+      href: winmdexp-exe-error-messages.md
+    - name: Winres.exe(Windows Forms 리소스 편집기)
+      href: winres-exe-windows-forms-resource-editor.md

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fa360c46-e5f8-411e-a711-46997771133d
-ms.openlocfilehash: 5d86095586af273f62980fcf8ddf10804b1cfa5a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1dbaa159314bf7bb05ff75287f601f619834fd7c
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514331"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70794619"
 ---
 # <a name="paging-through-a-query-result"></a>쿼리 결과를 통해 페이징
 쿼리 결과 페이징은 쿼리의 결과를 작은 단위의 데이터 하위 집합, 즉 페이지로 반환하는 프로세스입니다. 이 방법은 관리하기 쉬운 작은 청크 단위로 결과를 표시하기 위해 일반적으로 사용됩니다.  
   
- 합니다 **DataAdapter** 오버 로드를 통해 데이터를 페이지에 대해서만 반환 하는 것에 대 한 기능을 제공 합니다 **채우기** 메서드. 그러나이 아닐 이므로 많은 양의 쿼리 결과 페이징에 가장 적합 한 있지만 합니다 **DataAdapter** 대상 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet> 만 요청 된 레코드를 반환 하도록 리소스를 사용 하 여는 전체 쿼리도 사용할 수 있습니다. 전체 쿼리를 반환하기 위한 리소스를 사용하지 않고 데이터 소스에서 데이터 페이지를 반환하려면 필요한 쿼리에만 반환되는 행을 줄이도록 쿼리에 추가 조건을 지정합니다.  
+ **DataAdapter** 는 **Fill** 메서드의 오버 로드를 통해 데이터 페이지를 반환 하는 기능을 제공 합니다. 그러나 **DataAdapter** 가 대상 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet> 요청 된 레코드만을 채우기는 하지만 전체 쿼리를 반환 하는 리소스는 계속 사용 되기 때문에이는 많은 쿼리 결과를 페이징 하는 데 가장 적합 한 선택이 아닐 수 있습니다. . 전체 쿼리를 반환하기 위한 리소스를 사용하지 않고 데이터 소스에서 데이터 페이지를 반환하려면 필요한 쿼리에만 반환되는 행을 줄이도록 쿼리에 추가 조건을 지정합니다.  
   
- 사용 하는 **채우기** 페이지 데이터를 반환 하는 방법 지정를 **startRecord** 데이터의 페이지에서 첫 번째 레코드에 대 한 매개 변수 및 **maxRecords** 수에 대 한 매개 변수를 데이터 페이지에 기록 합니다.  
+ **Fill** 메서드를 사용 하 여 데이터 페이지를 반환 하려면 데이터 페이지의 첫 번째 레코드에 대해 **startRecord** 매개 변수를 지정 하 고 데이터 페이지의 레코드 수에 대해 **maxRecords** 매개 변수를 지정 합니다.  
   
- 다음 코드 예제를 사용 하는 방법을 보여 줍니다 합니다 **채우기** 페이지 크기가 5 개 레코드가 쿼리 결과의 첫 번째 페이지를 반환 하는 방법입니다.  
+ 다음 코드 예제에서는 **Fill** 메서드를 사용 하 여 페이지 크기가 5 인 쿼리 결과의 첫 번째 페이지를 반환 하는 방법을 보여 줍니다.  
   
 ```vb  
 Dim currentIndex As Integer = 0  
@@ -46,7 +46,7 @@ DataSet dataSet = new DataSet();
 adapter.Fill(dataSet, currentIndex, pageSize, "Orders");  
 ```  
   
- 이전 예에서 합니다 **데이터 집합** 5 개 레코드가 있고 전체만 채워집니다 **주문** 테이블이 반환 됩니다. 입력에 **데이터 집합** 레코드 다섯 개만 반환 하지만 이러한 동일한 5 개의 레코드를 사용 하 여 사용 및 다음 코드 예제와 같이 SQL 문의 WHERE 절.  
+ 이전 예제에서 **데이터 집합** 은 5 개의 레코드로만 채워지며 전체 **Orders** 테이블이 반환 됩니다. **데이터 집합** 을 동일한 5 개의 레코드로 채우지만 5 개의 레코드만 반환 하려면 다음 코드 예제와 같이 SQL 문에 TOP 및 WHERE 절을 사용 합니다.  
   
 ```vb  
 Dim pageSize As Integer = 5  
@@ -83,7 +83,7 @@ string lastRecord =
   dataSet.Tables["Orders"].Rows[pageSize - 1]["OrderID"].ToString();  
 ```  
   
- 오버 로드를 사용 하 여 레코드의 다음 페이지를 반환 하는 **채우기** 메서드를 합니다 **startRecord** 및 **maxRecords** 매개 변수에서 현재 레코드 인덱스를 증가 시킵니다. 페이지 크기와 채우기는 테이블입니다. 데이터베이스 서버 레코드 하나만 페이지가 추가 된 경우에 전체 쿼리 결과 반환 하는 **데이터 집합**합니다. 다음 코드 예제에서는 다음 데이터 페이지로 채워지기 전에 테이블 행이 지워집니다. 데이터베이스 서버로의 트립을 줄이기 위해 반환되는 행의 일부를 로컬 캐시에 보존할 수도 있습니다.  
+ **StartRecord** 및 **maxRecords** 매개 변수를 사용 하는 **Fill** 메서드의 오버 로드를 사용 하 여 다음 레코드 페이지를 반환 하려면 현재 레코드 인덱스를 페이지 크기로 증가 시키고 표를 채웁니다. **데이터 집합**에 하나의 레코드 페이지만 추가 되더라도 데이터베이스 서버는 전체 쿼리 결과를 반환 합니다. 다음 코드 예제에서는 다음 데이터 페이지로 채워지기 전에 테이블 행이 지워집니다. 데이터베이스 서버로의 트립을 줄이기 위해 반환되는 행의 일부를 로컬 캐시에 보존할 수도 있습니다.  
   
 ```vb  
 currentIndex = currentIndex + pageSize  
@@ -123,6 +123,7 @@ dataSet.Tables["Orders"].Rows.Clear();
 adapter.Fill(dataSet, "Orders");  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [DataAdapter 및 DataReader](dataadapters-and-datareaders.md)
+- [ADO.NET 개요](ado-net-overview.md)

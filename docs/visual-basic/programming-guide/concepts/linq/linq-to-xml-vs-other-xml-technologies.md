@@ -2,12 +2,12 @@
 title: LINQ to XML과 비교 다른 XML Technologies2
 ms.date: 07/20/2015
 ms.assetid: 72ce3a82-ffc6-488c-98e7-b9b40f3591ec
-ms.openlocfilehash: 926f1a1ab49a627331a614ef68790ea289b3dcff
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 80d3d034454d4de74e8aafd41679b82d111e6f3e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42908078"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021208"
 ---
 # <a name="linq-to-xml-vs-other-xml-technologies"></a>LINQ to XML과 비교 기타 XML 기술 비교
 이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)], <xref:System.Xml.XmlReader>, XSLT, MSXML 및 XmlLite와 같은 XML 기술을 비교합니다. 이 정보는 사용할 기술을 결정할 때 유용할 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "42908078"
 ## <a name="linq-to-xml-vs-xslt"></a>LINQ to XML과 비교 XSLT  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 XSLT는 모두 광범위한 XML 문서 변환 기능을 제공합니다. XSLT는 규칙 기반의 선언적 방법입니다. 고급 XSLT 프로그래머는 상태 비저장 방법을 강조하는 함수형 프로그래밍 스타일로 XSLT를 작성합니다. 이 경우 부작용 없이 구현되는 순수 함수를 사용하여 변환을 작성할 수 있습니다. 이 규칙 기반 방법 또는 함수 방법은 대부분의 개발자에게 익숙하지 않으며 배우는 데 많은 시간과 노력이 필요할 수 있습니다.  
   
- XSLT는 고성능 응용 프로그램을 생성하는 생산성이 매우 높은 시스템일 수 있습니다. 예를 들어 규모가 큰 일부 웹 회사에서는 다양한 데이터 저장소에서 가져온 XML에서 HTML을 생성하는 방법으로 XSLT를 사용합니다. 관리되는 XSLT 엔진은 XSLT를 CLR 코드로 컴파일하며 일부 시나리오에서 네이티브 XSLT 엔진보다 성능이 훨씬 좋습니다.  
+ XSLT는 고성능 애플리케이션을 생성하는 생산성이 매우 높은 시스템일 수 있습니다. 예를 들어 규모가 큰 일부 웹 회사에서는 다양한 데이터 저장소에서 가져온 XML에서 HTML을 생성하는 방법으로 XSLT를 사용합니다. 관리되는 XSLT 엔진은 XSLT를 CLR 코드로 컴파일하며 일부 시나리오에서 네이티브 XSLT 엔진보다 성능이 훨씬 좋습니다.  
   
  그러나 XSLT에서는 개발자가 C# 및 Visual Basic 지식을 활용할 수 없으며 복잡하고 다른 프로그래밍 언어로 코드를 작성해야 합니다. C#(또는 Visual Basic) 및 XSLT와 같은 통합되지 않은 두 가지 개발 시스템을 사용하면 소프트웨어 시스템을 개발하고 유지 관리하기가 더 어렵습니다.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "42908078"
 ## <a name="linq-to-xml-vs-msxml"></a>LINQ to XML과 비교 MSXML  
  MSXML은 Microsoft Windows에 포함된 XML을 처리할 수 있는 COM 기반 기술입니다. MSXML은 XPath 및 XSLT를 지원하는 DOM의 기본적인 구현을 제공하며 캐시하지 않는 이벤트 기반의 SAX2 파서도 포함하고 있습니다.  
   
- MSXML은 성능이 좋으며 대부분의 시나리오에서 기본적으로 안전합니다. AJAX 스타일의 응용 프로그램에서 클라이언트측 XML 처리를 수행하기 위해 Internet Explorer에서 MSXML에 액세스할 수 있습니다. C++, JavaScript 및 Visual Basic 6.0을 비롯한 COM을 지원하는 모든 프로그래밍 언어에서 MSXML을 사용할 수 있습니다.  
+ MSXML은 성능이 좋으며 대부분의 시나리오에서 기본적으로 안전합니다. AJAX 스타일의 애플리케이션에서 클라이언트측 XML 처리를 수행하기 위해 Internet Explorer에서 MSXML에 액세스할 수 있습니다. C++, JavaScript 및 Visual Basic 6.0을 비롯한 COM을 지원하는 모든 프로그래밍 언어에서 MSXML을 사용할 수 있습니다.  
   
  CLR(공용 언어 런타임) 기반의 관리 코드에서는 MSXML을 사용하지 않는 것이 좋습니다.  
   
@@ -52,5 +52,6 @@ ms.locfileid: "42908078"
   
  XmlLite는 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]와 통합되지 않았으며 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]에 핵심적인 프로그래머 생산성 향상 기능을 제공하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [시작(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>참고자료
+
+- [시작(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

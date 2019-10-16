@@ -1,5 +1,5 @@
 ---
-title: '&lt;PreferComInsteadOfManagedRemoting&gt; 요소'
+title: <PreferComInsteadOfManagedRemoting> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <PreferComInsteadOfManagedRemoting> element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: a279a42a-c415-4e79-88cf-64244ebda613
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c05e27226a58086c806e8977ba50a55873d1167e
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d793c8d84a15f554ada78f3c0dd1f0e936893fd4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002075"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252403"
 ---
-# <a name="ltprefercominsteadofmanagedremotinggt-element"></a>&lt;PreferComInsteadOfManagedRemoting&gt; 요소
-런타임에서 사용할지 여부를 COM interop 원격 대신 모든 호출에 대 한 응용 프로그램 도메인 경계에 걸쳐 지정 합니다.  
+# <a name="prefercominsteadofmanagedremoting-element"></a>\<PreferComInsteadOfManagedRemoting > 요소
+런타임이 응용 프로그램 도메인 경계를 넘어 모든 호출에 대해 원격 대신 COM interop을 사용할지 여부를 지정 합니다.  
   
- \<configuration>  
-\<runtime>  
-\<PreferComInsteadOfManagedRemoting >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<PreferComInsteadOfManagedRemoting>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,14 +34,14 @@ ms.locfileid: "46002075"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`enabled`|필수 특성입니다.<br /><br /> 런타임에서 사용할지 여부를 COM interop 원격 대신 응용 프로그램 도메인 경계를 넘어 나타냅니다.|  
+|`enabled`|필수 특성입니다.<br /><br /> 런타임이 응용 프로그램 도메인 경계를 넘어 원격이 아닌 COM interop 사용 하는지 여부를 나타냅니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|`false`|런타임에서 응용 프로그램 도메인 경계를 넘어 remoting을 사용 합니다. 이 값이 기본값입니다.|  
-|`true`|런타임에 응용 프로그램 도메인 경계를 넘어 COM interop를 사용 합니다.|  
+|`false`|런타임은 응용 프로그램 도메인 경계에서 원격 기능을 사용 합니다. 이 값이 기본값입니다.|  
+|`true`|런타임은 응용 프로그램 도메인 경계에 걸쳐 COM interop를 사용 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -50,20 +50,20 @@ ms.locfileid: "46002075"
   
 |요소|설명|  
 |-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- 설정한 경우 합니다 `enabled` 특성을 `true`, 런타임에서 다음과 같이 동작:  
+ `enabled` 특성을로 `true`설정 하면 런타임은 다음과 같이 동작 합니다.  
   
--   런타임에서 호출 하지 않습니다 [iunknown:: Queryinterface](https://go.microsoft.com/fwlink/?LinkID=144867) 에 대 한는 [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스는 [IUnknown](https://go.microsoft.com/fwlink/?LinkId=148003) 인터페이스는 COM 인터페이스를 통해 도메인을 입력 합니다. 구문 대신에 [런타임 호출 가능 래퍼](../../../../../docs/framework/interop/runtime-callable-wrapper.md) (RCW) 개체 주위 합니다.  
+- 런타임은 [iunknown](https://go.microsoft.com/fwlink/?LinkId=148003) 인터페이스가 COM 인터페이스를 통해 도메인에 들어가면 [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스에 대해 [iunknown:: QueryInterface](https://go.microsoft.com/fwlink/?LinkID=144867) 를 호출 하지 않습니다. 대신, 개체 주위에서 RCW ( [런타임 호출 가능 래퍼](../../../../standard/native-interop/runtime-callable-wrapper.md) )를 생성 합니다.  
   
--   런타임에서 받으면 E_NOINTERFACE가 반환 됩니다를 `QueryInterface` 에 대 한 호출는 [IManagedObject](../../../../../docs/framework/unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스에 대 한 [COM 호출 가능 래퍼](../../../../../docs/framework/interop/com-callable-wrapper.md) (CCW)는이 도메인에 만들어졌습니다.  
+- 런타임은이 도메인에서 만들어진 ccw ( `QueryInterface` [COM 호출 가능 래퍼](../../../../standard/native-interop/com-callable-wrapper.md) )에 대 한 [IManagedObject](../../../unmanaged-api/hosting/imanagedobject-interface.md) 인터페이스 호출을 받을 때 E_NOINTERFACE를 반환 합니다.  
   
- 이러한 두 가지 동작 COM에 대 한 모든 호출 응용 프로그램 도메인 경계 사용 COM에서 관리 되는 개체 사이의 원격 대신 COM interop 인터페이스를 확인 합니다.  
+ 이러한 두 동작은 응용 프로그램 도메인 경계에서 관리 되는 개체 간의 COM 인터페이스에 대 한 모든 호출이 원격 대신 COM 및 COM interop을 사용 하도록 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예와 런타임에서 COM을 사용 해야 함을 지정 하는 방법을 interop 격리 경계를 넘어:  
+ 다음 예제에서는 런타임이 격리 경계를 넘어 COM interop를 사용 하도록 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -73,6 +73,7 @@ ms.locfileid: "46002075"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>참고자료
+
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)

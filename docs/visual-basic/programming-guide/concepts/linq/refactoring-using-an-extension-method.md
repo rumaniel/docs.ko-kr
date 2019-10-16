@@ -1,16 +1,16 @@
 ---
-title: 확장 메서드 (Visual Basic)를 사용 하 여 리팩터링
+title: 확장 메서드를 사용 하 여 리팩터링 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d87ae99a-cfa9-4a31-a5e4-9d6437be6810
-ms.openlocfilehash: e613994651ad33b8e9f4aa78c0c2897431246344
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6ed0e81a7139411507d8f3c16b34a50b2e7aebf
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33647906"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834901"
 ---
-# <a name="refactoring-using-an-extension-method-visual-basic"></a>확장 메서드 (Visual Basic)를 사용 하 여 리팩터링
-이 예제에서는 앞의 예에서 [(Visual Basic) 단락의 텍스트 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md), 확장 메서드로 구현 된 순수 함수를 사용 하 여 문자열의 연결을 리팩터링 하 합니다.  
+# <a name="refactoring-using-an-extension-method-visual-basic"></a>확장 메서드를 사용 하 여 리팩터링 (Visual Basic)
+이 예제는 확장 메서드로 구현 된 순수 함수를 사용 하 여 문자열의 연결을 리팩터링하여 이전 예제를 기반으로 하 여 [단락 텍스트 (Visual Basic)를 검색](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-text-of-the-paragraphs.md)합니다.  
   
  이전 예제에서는 <xref:System.Linq.Enumerable.Aggregate%2A> 표준 쿼리 연산자를 사용하여 여러 문자열을 한 문자열로 연결합니다. 그러나 생성되는 쿼리가 더 작고 간단하기 때문에 이 작업을 수행하는 확장 메서드를 작성하는 것이 간편합니다.  
   
@@ -19,7 +19,7 @@ ms.locfileid: "33647906"
   
  이 예제에는 `StringConcatenate` 메서드의 오버로드가 여러 개 포함되어 있습니다.  
   
- 이 예제에 대 한 소스 문서를 만들기 위한 지침을 제공 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.  
+ 원본 [Office OPEN XML 문서 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)에서이 예제에 대 한 소스 문서를 만드는 방법에 대 한 지침을 찾을 수 있습니다.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
@@ -82,7 +82,7 @@ Console.WriteLine("{0}", intNumbers.StringConcatenate(Function(i) i.ToString(), 
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```console  
 onetwothree  
 one:two:three:  
 123  
@@ -216,9 +216,9 @@ Module Module1
 End Module  
 ```  
   
- 이 예제는 다음에 설명 된 문서에 적용 하면 출력 [원본 Office Open XML 문서 (Visual Basic)를 만드는](../../../../visual-basic/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)합니다.  
+ 이 예제에서는 [소스 Office OPEN XML 문서 만들기 (Visual Basic)](creating-the-source-office-open-xml-document.md)에서 설명 하는 문서에 적용할 때 다음 출력을 생성 합니다.
   
-```  
+```console  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -241,8 +241,9 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>다음 단계  
  다음 예제에서는 순수 함수를 사용하여 다른 방식으로 이 코드를 리팩터링하는 방법을 보여 줍니다.  
   
--   [순수 함수를 사용하여 리팩터링(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
+- [순수 함수를 사용하여 리팩터링(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-a-pure-function.md)  
   
-## <a name="see-also"></a>참고 항목  
- [자습서: WordprocessingML 문서 (Visual Basic)에서 내용 조작](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
- [(Visual Basic) 순수 함수로 리팩터링](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+## <a name="see-also"></a>참조
+
+- [자습서: WordprocessingML 문서 (Visual Basic)의 콘텐츠 조작 ](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
+- [순수 함수로 리팩터링 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

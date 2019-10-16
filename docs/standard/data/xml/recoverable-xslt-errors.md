@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202987"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590053"
 ---
 # <a name="recoverable-xslt-errors"></a>복구할 수 있는 XSLT 오류
 W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가 특정 상황을 처리하는 방법을 결정할 수 있는 영역이 포함되어 있습니다. 이러한 영역은 임의 동작으로 간주됩니다. 예를 들어, 7.3단원의 처리 명령 만들기에 나오는 XSLT 1.0 권장 사항에 따르면 `xsl:processing-instruction`의 내용을 인스턴스화하여 텍스트 노드 이외의 노드가 만들어질 경우 오류가 발생합니다. XSLT 1.0 권장 사항에서는 일부 문제점에 대해 프로세서가 오류로부터 복구하기로 결정한 경우 어떤 결정을 내려야 하는지 알려 줍니다. 7.3단원에 제시된 문제점의 경우에는 W3C에서 노드 및 해당 내용을 무시함으로써 이 오류에서 구현을 복구할 수 있다고 설명합니다.  
@@ -18,11 +18,11 @@ W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가
 ## <a name="discretionary-behaviors"></a>임의 동작  
  다음 표에서는 XSLT 1.0 권장 사항에서 허용하는 임의 동작 및 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스를 사용하여 임의 동작을 처리하는 방법을 보여 줍니다.  
   
--   복구는 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스가 이 오류로부터 복구하는 것을 나타냅니다. <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> 이벤트를 사용하여 XSLT 프로세서의 모든 이벤트를 보고할 수 있습니다.  
+- 복구는 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스가 이 오류로부터 복구하는 것을 나타냅니다. <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> 이벤트를 사용하여 XSLT 프로세서의 모든 이벤트를 보고할 수 있습니다.  
   
--   오류는 이 조건에 대해 예외가 발생함을 나타냅니다.  
+- 오류는 이 조건에 대해 예외가 발생함을 나타냅니다.  
   
--   [W3C XSLT(XSL 변환) 버전 1.0 권장 사항](https://www.w3.org/TR/xslt) 및 [W3C XSLT(XSL 변환) 버전 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/)에서 섹션 참조를 찾을 수 있습니다.  
+- [W3C XSLT(XSL 변환) 버전 1.0 권장 사항](https://www.w3.org/TR/xslt) 및 [W3C XSLT(XSL 변환) 버전 1.0 Specification Errata](https://www.w3.org/1999/11/REC-xslt-19991116-errata/)에서 섹션 참조를 찾을 수 있습니다.  
   
 |XSLT 조건|단원|XslCompiledTransform 동작|  
 |--------------------|-------------|-----------------------------------|  
@@ -41,7 +41,7 @@ W3C XSLT(XSL Transformations) 버전 1.0 권장 사항에는 구현 공급자가
 |`xsl:processing-instruction`의 내용을 인스턴스화한 결과에 "--" 문자열이 있거나 결과가 "-"로 끝납니다.|7.4|복구|  
 |`xsl:comment`의 내용을 인스턴스화한 결과에 텍스트 노드가 아닌 노드가 만들어집니다.|7.4|오류*|  
 |가변 바인딩 요소 내의 템플릿에서 특성 노드나 네임스페이스 노드를 반환합니다.|11.2|오류*|  
-|문서 함수에 전달된 URI의 리소스를 검색하는 중에 오류가 발생합니다.|12.1|Error|  
+|문서 함수에 전달된 URI의 리소스를 검색하는 중에 오류가 발생합니다.|12.1|오류|  
 |문서 함수의 URI 참조에 조각 식별자가 있으며 해당 조각 식별자를 처리하는 중에 오류가 발생합니다.|12.1|복구*|  
 |가져오기 우선 순위가 같은 `xsl:output`에는 이름이 같지만 값이 다르며 명명된 cdata-section 요소가 아닌 여러 특성이 있습니다.|16|복구|  
 |프로세서는 `xsl:output` 인코딩 특성에서 인코딩을 지원하지 않습니다.|16.1|복구|  

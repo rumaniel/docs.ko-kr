@@ -11,23 +11,23 @@ helpviewer_keywords:
 - WPF [WPF], localization
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
-ms.openlocfilehash: b1931b17c0902eec590c3c998c52f6e9d84133dc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010282"
 ---
 # <a name="globalization-and-localization"></a>전역화 및 지역화
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 지역화 대비 응용 프로그램 개발에 대 한 광범위 한 지원을 제공합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 세계 시장 대응 응용 프로그램 개발에 대 한 광범위 한 지원을 제공합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [WPF 전역화 및 지역화 개요](../../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md)  
- [WPF의 전역화](../../../../docs/framework/wpf/advanced/globalization-for-wpf.md)  
- [자동 레이아웃 사용 개요](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)  
- [지역화 특성 및 주석](../../../../docs/framework/wpf/advanced/localization-attributes-and-comments.md)  
- [WPF의 양방향 기능 개요](../../../../docs/framework/wpf/advanced/bidirectional-features-in-wpf-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/advanced/globalization-and-localization-how-to-topics.md)  
+ [WPF 전역화 및 지역화 개요](wpf-globalization-and-localization-overview.md)  
+ [WPF의 전역화](globalization-for-wpf.md)  
+ [자동 레이아웃 사용 개요](use-automatic-layout-overview.md)  
+ [지역화 특성 및 주석](localization-attributes-and-comments.md)  
+ [WPF의 양방향 기능 개요](bidirectional-features-in-wpf-overview.md)  
+ [방법 항목](globalization-and-localization-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Globalization>  
@@ -36,6 +36,6 @@ ms.locfileid: "33543457"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML의 xml:lang 처리](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML의 xml:lang 처리](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>관련 단원

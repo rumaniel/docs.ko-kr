@@ -6,32 +6,30 @@ helpviewer_keywords:
 - UI Automation, Table Item control pattern
 - TableItem control pattern
 ms.assetid: ac178408-1485-436f-8d3e-eee3bf80cb24
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: e5d5e82c5c2cfc48c98559bd6ce14519bdfaa522
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cdbfc8d24dce3b63801682528a49c13d89660935
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196566"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71043172"
 ---
 # <a name="implementing-the-ui-automation-tableitem-control-pattern"></a>UI 자동화 TableItem 컨트롤 패턴 구현
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- 지침 및 규칙을 구현 하기 위한이 항목에서는 소개 <xref:System.Windows.Automation.Provider.ITableItemProvider>, 이벤트 및 속성에 대 한 정보를 포함 합니다. 추가 참조에 대한 링크는 개요의 끝에 나열되어 있습니다.  
+ 이 항목에서는 이벤트 및 속성에 대한 정보를 포함하여 <xref:System.Windows.Automation.Provider.ITableItemProvider>를 구현하기 위한 지침 및 규칙을 제공합니다. 추가 참조에 대한 링크는 개요의 끝에 나열되어 있습니다.  
   
- 합니다 <xref:System.Windows.Automation.TableItemPattern> 컨트롤 패턴을 구현 하는 컨테이너의 자식 컨트롤에 사용 되는 <xref:System.Windows.Automation.Provider.ITableProvider>합니다. 필수 동시 구현에서 개별 셀 기능에 대 한 액세스 제공 <xref:System.Windows.Automation.Provider.IGridItemProvider>합니다. 이 컨트롤 패턴은 비슷합니다 <xref:System.Windows.Automation.Provider.IGridItemProvider> 차이 구현 하는 컨트롤을 사용 하 여 <xref:System.Windows.Automation.Provider.ITableItemProvider> 개별 셀 및 행 및 열 정보 간의 관계를 프로그래밍 방식으로 노출 해야 합니다. 이 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
+ <xref:System.Windows.Automation.TableItemPattern> 컨트롤 패턴은 <xref:System.Windows.Automation.Provider.ITableProvider>를 구현하는 컨테이너의 자식 컨트롤을 지원하는 데 사용됩니다. 개별 셀 기능에 대한 액세스는 <xref:System.Windows.Automation.Provider.IGridItemProvider>의 필수 동시 구현에서 제공됩니다. 이 컨트롤 패턴은 <xref:System.Windows.Automation.Provider.IGridItemProvider>와 유사하지만, <xref:System.Windows.Automation.Provider.ITableItemProvider>를 구현하는 컨트롤은 개별 셀과 셀의 행 및 열 정보 간의 관계를 프로그래밍 방식으로 노출해야 한다는 점이 다릅니다. 이 컨트롤 패턴을 구현하는 컨트롤의 예제를 보려면 [Control Pattern Mapping for UI Automation Clients](control-pattern-mapping-for-ui-automation-clients.md)을 참조하세요.  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>구현 지침 및 규칙  
   
--   관련된 표 항목 기능을 참조 하세요 [UI 자동화 GridItem 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)합니다.  
+- 관련 그리드 항목 기능에 대해서는 [UI 자동화 GridItem 컨트롤 패턴 구현](implementing-the-ui-automation-griditem-control-pattern.md)을 참조 하세요.  
   
 <a name="Required_Members_for_ITableItemProvider"></a>   
 ## <a name="required-members-for-itableitemprovider"></a>ITableItemProvider에 필요한 멤버  
   
-|필요한 멤버|멤버 형식|노트|  
+|필요한 멤버|멤버 형식|참고|  
 |---------------------|-----------------|-----------|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider.GetColumnHeaderItems%2A>|메서드|없음|  
 |<xref:System.Windows.Automation.Provider.ITableItemProvider.GetRowHeaderItems%2A>|메서드|없음|  
@@ -42,11 +40,12 @@ ms.locfileid: "47196566"
 ## <a name="exceptions"></a>예외  
  이 컨트롤 패턴에 연결된 예외가 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI 자동화 공급자의 컨트롤 패턴 지원](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)  
- [클라이언트용 UI 자동화 컨트롤 패턴](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)  
- [UI 자동화 Table 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-table-control-pattern.md)  
- [UI 자동화 GridItem 컨트롤 패턴 구현](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)  
- [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI 자동화의 캐싱 사용](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+## <a name="see-also"></a>참고자료
+
+- [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)
+- [UI 자동화 공급자의 컨트롤 패턴 지원](support-control-patterns-in-a-ui-automation-provider.md)
+- [클라이언트용 UI 자동화 컨트롤 패턴](ui-automation-control-patterns-for-clients.md)
+- [UI 자동화 Table 컨트롤 패턴 구현](implementing-the-ui-automation-table-control-pattern.md)
+- [UI 자동화 GridItem 컨트롤 패턴 구현](implementing-the-ui-automation-griditem-control-pattern.md)
+- [UI 자동화 트리 개요](ui-automation-tree-overview.md)
+- [UI 자동화의 캐싱 사용](use-caching-in-ui-automation.md)

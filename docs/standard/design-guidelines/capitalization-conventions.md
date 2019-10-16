@@ -1,6 +1,6 @@
 ---
 title: 대/소문자 표기법
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - camel-case names [.NET Framework]
@@ -9,14 +9,13 @@ helpviewer_keywords:
 - case sensitivity, capitalization conventions
 - names [.NET Framework], capitalization
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 070fc69728c2cb38e465dab9f6f591a77a857531
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+author: KrzysztofCwalina
+ms.openlocfilehash: e0da4cd747846921d170d9c07d6f1fb91dbd4ed7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47089025"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615260"
 ---
 # <a name="capitalization-conventions"></a>대/소문자 표기법
 형식, 멤버 및 매개 변수를 읽기 쉽게 확인 식별자를 일관 되 게 적용 하는 경우의 지침에는 간단한 방법 사용 하 여이 장 레이아웃을 만드는 경우는입니다.  
@@ -24,9 +23,9 @@ ms.locfileid: "47089025"
 ## <a name="capitalization-rules-for-identifiers"></a>식별자에 대 한 대/소문자 규칙  
  식별자에서 단어를 구별 하 식별자에서 각 단어의 첫 번째 글자를 대문자로 바꿉니다. 단어를 구분 하기 위해 밑줄을 사용 하지 않는 또는 식별자 어디에서 나 해당 문제에 대 한 합니다. 두 가지 적절 한 식별자의 사용에 따라 식별자를 활용 하려면:  
   
--   PascalCasing  
+- PascalCasing  
   
--   camelCasing  
+- camelCasing  
   
  매개 변수 이름 제외한 모든 식별자에 사용 되는 PascalCasing 규칙을 다음 예와에서 같이 (머리 글자어 길이가 두 문자를 통해) 각 단어의 첫 번째 문자를 대문자로 표시:  
   
@@ -103,9 +102,9 @@ ms.locfileid: "47089025"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

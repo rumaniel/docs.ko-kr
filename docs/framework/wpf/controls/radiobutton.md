@@ -7,19 +7,19 @@ helpviewer_keywords:
 - RadioButton control [WPF]
 - controls [WPF], RadioButton
 ms.assetid: 6c9ba847-eab7-4bba-9c74-6b56ef72067b
-ms.openlocfilehash: 936b2d72a73a6937bd0c0415cb86ead89062da7a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 32db3436b536cd1a27dd79e0e98cdc3e6f21c4c9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024131"
 ---
 # <a name="radiobutton"></a>RadioButton
-<xref:System.Windows.Controls.RadioButton> 컨트롤은 일반적으로 함께 그룹화 되어 사용자에 게 단일; 여러 옵션 중 한 번에 하나만 단추를 선택할 수 있습니다.  
+<xref:System.Windows.Controls.RadioButton> 컨트롤은 일반적으로 그룹화 사용자에 게 몇 가지 옵션 중 단일 선택 항목을 제공 하려면 한 번에 하나의 단추를 선택할 수 있습니다.  
   
- 다음 그림의 예가 나와 <xref:System.Windows.Controls.RadioButton> 제어 합니다.  
+ 다음 그림의 예를 보여 줍니다.는 <xref:System.Windows.Controls.RadioButton> 제어 합니다.  
   
- ![라디오 단추 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
+ ![라디오 단추 상태](./media/ss-ctl-radiobuttons.gif "SS_CTL_radiobuttons")  
 일반적인 RadioButton  
   
 ## <a name="reference"></a>참조  

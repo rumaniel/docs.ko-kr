@@ -1,16 +1,17 @@
 ---
-title: '방법: XML 문서 기능 사용(C# 프로그래밍 가이드)'
+title: '방법: XML 문서 기능 사용 - C# 프로그래밍 가이드'
+ms.custom: seodec18
 ms.date: 06/01/2018
 helpviewer_keywords:
 - XML documentation [C#]
 - C# language, XML documentation features
 ms.assetid: 8f33917b-9577-4c9a-818a-640dbbb0b399
-ms.openlocfilehash: 48654968e5099164874bae8a00767d12c8fe4582
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: 06b0c3b7877337d8a5703403af98dbacdf3ea93c
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45514446"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834171"
 ---
 # <a name="how-to-use-the-xml-documentation-features"></a>방법: XML 문서 기능 사용
 
@@ -133,6 +134,8 @@ XML 문서는 ///로 시작합니다. 새 프로젝트를 만드는 경우 마�
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [/doc(C# 컴파일러 옵션)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)  
-- [XML 문서 주석](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+- [C# 프로그래밍 가이드](../index.md)
+- [/doc(C# 컴파일러 옵션)](../../language-reference/compiler-options/doc-compiler-option.md)
+- [XML 문서 주석](./index.md)
+- [DocFX 설명서 프로세서](https://dotnet.github.io/docfx/)
+- [Sandcastle 설명서 프로세서](https://github.com/EWSoftware/SHFB)

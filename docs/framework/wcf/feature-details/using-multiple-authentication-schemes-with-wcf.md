@@ -2,12 +2,12 @@
 title: WCF와 함께 여러 인증 스키마 사용
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: cdf40d6c0ca25a21cbdac07abab04d2bc144bf69
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b0f5da9a4c6fdfede9a86434f49f9e9821778176
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932683"
 ---
 # <a name="using-multiple-authentication-schemes-with-wcf"></a>WCF와 함께 여러 인증 스키마 사용
 이제 WCF를 사용하여 단일 엔드포인트에 여러 인증 체계를 지정할 수 있습니다. 또한 웹 호스팅 서비스가 IIS에서 직접 인증 설정을 상속할 수 있습니다. 자체 호스팅 서비스는 사용할 수 있는 인증 체계를 지정할 수 있습니다. IIS에서 인증 설정을 설정 하는 방법에 대 한 자세한 내용은 참조 하세요. [IIS 인증](https://go.microsoft.com/fwlink/?LinkId=232458)  
@@ -119,11 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
- [엔드포인트: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
- [시스템 제공 바인딩 구성](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [사용자 지정 바인딩을 사용하는 보안 기능](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)  
- [바인딩](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [바인딩](../../../../docs/framework/wcf/feature-details/bindings.md)  
- [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a>참고자료
+
+- [바인딩 및 보안](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [끝점: 주소, 바인딩 및 계약](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [시스템 제공 바인딩 구성](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [사용자 지정 바인딩을 사용하는 보안 기능](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [바인딩](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [사용자 지정 바인딩](../../../../docs/framework/wcf/extending/custom-bindings.md)

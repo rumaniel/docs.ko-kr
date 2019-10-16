@@ -1,0 +1,24 @@
+- name: 암호화 설정 스키마
+  href: index.md
+  items:
+    - name: 암호화 설정에 대한 <mscorlib> 요소
+      href: mscorlib-element-for-cryptography-settings.md
+      items:
+        - name: <cryptographySettings> 요소
+          href: cryptographysettings-element.md
+          items:
+            - name: <cryptoNameMapping> 요소
+              href: cryptonamemapping-element.md
+              items:
+                - name: <cryptoClasses> 요소
+                  href: cryptoclasses-element.md
+                  items:
+                    - name: <cryptoClass> 요소
+                      href: cryptoclass-element.md
+                - name: <nameEntry> 요소
+                  href: nameentry-element.md
+            - name: <oidMap> 요소
+              href: oidmap-element.md
+              items:
+                - name: <oidEntry> 요소
+                  href: oidentry-element.md

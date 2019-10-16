@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], DockPanel
 - DockPanel control [WPF]
 ms.assetid: 8d3d290b-d38c-47d0-918e-cee2baeb92ae
-ms.openlocfilehash: dd50045b7f0da350a75157d8e17e6c41cade78c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 92dc0d9982e8ef92f4aa99e2bdd694a8585237cf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911874"
 ---
 # <a name="dockpanel"></a>DockPanel
-<xref:System.Windows.Controls.DockPanel> 요소 레이아웃 컨테이너의 가장자리를 따라 자식 콘텐츠의 위치를 사용 합니다.  
+<xref:System.Windows.Controls.DockPanel> 요소가 레이아웃 컨테이너의 가장자리를 따라 자식 콘텐츠 위치로 사용 됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법 항목](../../../../docs/framework/wpf/controls/dockpanel-how-to-topics.md)  
+ [방법 항목](dockpanel-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Panel>  
@@ -36,8 +36,8 @@ ms.locfileid: "33550815"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>관련 단원  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)  
+ [레이아웃](../advanced/layout.md)  
   
- [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 개요](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 개요](scrollviewer-overview.md)

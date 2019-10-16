@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959497"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593375"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic에서 파일 읽기
 이 섹션에서는 파일 읽기와 관련된 작업을 수행하는 방법을 설명합니다.  
@@ -64,4 +64,4 @@ ms.locfileid: "37959497"
  파일과 디렉터리에서 `My` 기능을 사용하는 방법을 보여 줍니다.  
   
  [연습: .NET Framework 메서드를 사용하여 파일 조작](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- 파일과 디렉터리에서 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 메서드를 사용하는 방법을 보여 줍니다.
+ 파일과 디렉터리에서 .NET Framework 메서드를 사용하는 방법을 보여 줍니다.

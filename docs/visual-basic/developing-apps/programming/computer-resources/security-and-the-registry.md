@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [Visual Basic], registry
 - registry [Visual Basic], security issues
 ms.assetid: 9980aff7-2f69-492b-8f66-29a9a76d3df5
-ms.openlocfilehash: ddfe8f88763ee2db78d25d72e6c9cb3456ccd13f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2fdb8003365841a4eef298eb853765dd3bc4587d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583931"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916525"
 ---
 # <a name="security-and-the-registry-visual-basic"></a>보안 및 레지스트리(Visual Basic)
 이 페이지에서는 레지스트리에 데이터를 저장할 경우 보안에 미치는 영향을 설명합니다.  
@@ -36,8 +36,9 @@ ms.locfileid: "33583931"
  레지스트리 값을 만들 때 해당 값이 이미 있는 경우 수행할 작업을 결정해야 합니다. 다른 악성 프로세스에서 값을 이미 만들고 액세스했을 수도 있습니다. 레지스트리 값에 데이터를 넣으면 다른 프로세스에서 해당 데이터를 사용할 수 있습니다. 이를 방지하려면 `GetValue` 메서드를 사용합니다. 키가 아직 없는 경우 `Nothing`이 반환됩니다.  
   
 > [!IMPORTANT]
->  웹 응용 프로그램에서 레지스트리를 읽는 경우 현재 사용자의 ID는 웹 응용 프로그램에 구현된 인증 및 가장에 따라 결정됩니다.  
+> 웹 애플리케이션에서 레지스트리를 읽는 경우 현재 사용자의 ID는 웹 애플리케이션에 구현된 인증 및 가장에 따라 결정됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>  
- [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)
+## <a name="see-also"></a>참고 항목
+
+- <xref:Microsoft.VisualBasic.MyServices.RegistryProxy>
+- [레지스트리 읽기 및 쓰기](../../../../visual-basic/developing-apps/programming/computer-resources/reading-from-and-writing-to-the-registry.md)

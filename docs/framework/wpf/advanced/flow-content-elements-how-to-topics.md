@@ -7,32 +7,32 @@ helpviewer_keywords:
 - flow content elements [WPF], how-to topics
 - documents [WPF], flow content reference
 ms.assetid: ef5175df-6ab9-4096-be0c-804003b44c64
-ms.openlocfilehash: e5be189ed6bf5cf2baf676825dffca49e57a3dec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 241f3736eef55fcca13d4cb9994bb04aaf4eda66
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962528"
 ---
 # <a name="flow-content-elements-how-to-topics"></a>유동 콘텐츠 요소 방법 항목
-이 섹션의 항목에는 다양 한 유동 콘텐츠 요소 및 관련된 기능을 사용 하 여 일반적인 작업을 수행 하는 방법을 설명 합니다.  
+이 섹션의에서 항목에서는 다양 한 유동 콘텐츠 요소 및 관련된 기능을 사용 하 여 일반적인 작업을 수행 하는 방법에 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [단락 사이 간격 조정](../../../../docs/framework/wpf/advanced/how-to-adjust-spacing-between-paragraphs.md)  
- [프로그래밍 방식으로 표 작성](../../../../docs/framework/wpf/advanced/how-to-build-a-table-programmatically.md)  
- [프로그래밍 방식으로 콘텐츠의 FlowDirection 변경](../../../../docs/framework/wpf/advanced/how-to-change-the-flowdirection-of-content-programmatically.md)  
- [프로그래밍 방식으로 TextWrapping 속성 변경](../../../../docs/framework/wpf/advanced/how-to-change-the-textwrapping-property-programmatically.md)  
- [XAML로 테이블 정의](../../../../docs/framework/wpf/advanced/how-to-define-a-table-with-xaml.md)  
- [텍스트 입력 체계 변경](../../../../docs/framework/wpf/advanced/how-to-alter-the-typography-of-text.md)  
- [텍스트 잘라내기 사용](../../../../docs/framework/wpf/advanced/how-to-enable-text-trimming.md)  
- [프로그래밍 방식으로 요소를 텍스트에 삽입](../../../../docs/framework/wpf/advanced/how-to-insert-an-element-into-text-programmatically.md)  
- [Blocks 속성을 통한 유동 콘텐츠 요소 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
- [Inlines 속성을 통한 유동 콘텐츠 요소 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
- [Blocks 속성을 통한 FlowDocument 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
- [Columns 속성을 통해 테이블의 열 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-columns-through-the-columns-property.md)  
- [RowGroups 속성을 통한 테이블의 행 그룹 조작](../../../../docs/framework/wpf/advanced/how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
- [유동 콘텐츠 요소 사용](../../../../docs/framework/wpf/advanced/how-to-use-flow-content-elements.md)  
- [FlowDocument 열 구분 속성 사용](../../../../docs/framework/wpf/advanced/how-to-use-flowdocument-column-separating-attributes.md)  
+ [단락 사이 간격 조정](how-to-adjust-spacing-between-paragraphs.md)  
+ [프로그래밍 방식으로 표 작성](how-to-build-a-table-programmatically.md)  
+ [프로그래밍 방식으로 콘텐츠의 FlowDirection 변경](how-to-change-the-flowdirection-of-content-programmatically.md)  
+ [프로그래밍 방식으로 TextWrapping 속성 변경](how-to-change-the-textwrapping-property-programmatically.md)  
+ [XAML로 테이블 정의](how-to-define-a-table-with-xaml.md)  
+ [텍스트 입력 체계 변경](how-to-alter-the-typography-of-text.md)  
+ [텍스트 잘라내기 사용](how-to-enable-text-trimming.md)  
+ [프로그래밍 방식으로 요소를 텍스트에 삽입](how-to-insert-an-element-into-text-programmatically.md)  
+ [Blocks 속성을 통한 유동 콘텐츠 요소 조작](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)  
+ [Inlines 속성을 통한 유동 콘텐츠 요소 조작](how-to-manipulate-flow-content-elements-through-the-inlines-property.md)  
+ [Blocks 속성을 통한 FlowDocument 조작](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)  
+ [Columns 속성을 통해 테이블의 열 조작](how-to-manipulate-table-columns-through-the-columns-property.md)  
+ [RowGroups 속성을 통한 테이블의 행 그룹 조작](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)  
+ [유동 콘텐츠 요소 사용](how-to-use-flow-content-elements.md)  
+ [FlowDocument 열 구분 속성 사용](how-to-use-flowdocument-column-separating-attributes.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -40,4 +40,4 @@ ms.locfileid: "33546376"
   <xref:System.Windows.Documents.Inline>  
   
 ## <a name="related-sections"></a>관련 단원  
- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [WPF의 문서](documents-in-wpf.md)

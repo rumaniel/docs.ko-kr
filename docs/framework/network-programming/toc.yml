@@ -1,0 +1,228 @@
+- name: .NET Framework의 네트워크 프로그래밍
+  href: index.md
+  items:
+    - name: 네트워크 프로그래밍 방법 항목
+      href: network-programming-how-to-topics.md
+    - name: 플러그형 프로토콜 소개
+      href: introducing-pluggable-protocols.md
+    - name: 데이터 요청
+      href: requesting-data.md
+      items:
+        - name: 인터넷 요청 만들기
+          href: creating-internet-requests.md
+        - name: '방법: 웹 페이지 요청 및 결과를 스트림으로 검색'
+          href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
+        - name: '방법: WebRequest 클래스를 사용하여 데이터 요청'
+          href: how-to-request-data-using-the-webrequest-class.md
+        - name: '방법: WebRequest 클래스를 사용하여 데이터 보내기'
+          href: how-to-send-data-using-the-webrequest-class.md
+        - name: '방법: WebRequest와 일치하는 프로토콜 관련 WebResponse 검색'
+          href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
+        - name: 네트워크에서 스트림 사용
+          href: using-streams-on-the-network.md
+        - name: 비동기 요청 수행
+          href: making-asynchronous-requests.md
+        - name: 오류 처리
+          href: handling-errors.md
+    - name: 플러그형 프로토콜 프로그래밍
+      href: programming-pluggable-protocols.md
+      items:
+        - name: '방법: WebRequest를 사용하여 사용자 지정 프로토콜 등록'
+          href: how-to-register-a-custom-protocol-using-webrequest.md
+        - name: '방법: 프로토콜 관련 속성에 액세스하기 위해 WebRequest 형식 캐스팅'
+          href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
+        - name: WebRequest에서 파생
+          href: deriving-from-webrequest.md
+        - name: WebResponse에서 파생
+          href: deriving-from-webresponse.md
+    - name: 애플리케이션 프로토콜 사용
+      href: using-application-protocols.md
+      items:
+        - name: HTTP
+          href: http.md
+          items:
+            - name: HttpListener
+              href: httplistener.md
+        - name: '방법: HTTP 관련 속성에 액세스'
+          href: how-to-access-http-specific-properties.md
+        - name: 연결 관리
+          href: managing-connections.md
+          items:
+            - name: 연결 그룹화
+              href: connection-grouping.md
+            - name: '방법: 그룹 연결에 사용자 정보 할당'
+              href: how-to-assign-user-information-to-group-connections.md
+        - name: TCP-UDP
+          href: tcp-udp.md
+          items:
+            - name: TCP 서비스 사용
+              href: using-tcp-services.md
+            - name: UDP 서비스 사용
+              href: using-udp-services.md
+        - name: 소켓
+          href: sockets.md
+          items:
+            - name: '방법: 소켓 만들기'
+              href: how-to-create-a-socket.md
+            - name: 클라이언트 소켓 사용
+              href: using-client-sockets.md
+              items:
+                - name: 동기 클라이언트 소켓 사용
+                  href: using-a-synchronous-client-socket.md
+                - name: 비동기 클라이언트 소켓 사용
+                  href: using-an-asynchronous-client-socket.md
+            - name: 소켓으로 수신
+              href: listening-with-sockets.md
+              items:
+                - name: 동기 서버 소켓 사용
+                  href: using-a-synchronous-server-socket.md
+                - name: 비동기 서버 소켓 사용
+                  href: using-an-asynchronous-server-socket.md
+            - name: 소켓 코드 예제
+              href: socket-code-examples.md
+              items:
+                - name: 동기 클라이언트 소켓 예제
+                  href: synchronous-client-socket-example.md
+                - name: 동기 서버 소켓 예제
+                  href: synchronous-server-socket-example.md
+                - name: 비동기 클라이언트 소켓 예제
+                  href: asynchronous-client-socket-example.md
+                - name: 비동기 서버 소켓 예제
+                  href: asynchronous-server-socket-example.md
+        - name: FTP
+          href: ftp.md
+          items:
+            - name: '방법: FTP를 사용하여 파일 다운로드'
+              href: how-to-download-files-with-ftp.md
+            - name: '방법: FTP를 사용하여 파일 업로드'
+              href: how-to-upload-files-with-ftp.md
+            - name: '방법: FTP를 사용하여 디렉터리 내용 나열'
+              href: how-to-list-directory-contents-with-ftp.md
+        - name: WebRequest 문제 및 예외 이해
+          href: understanding-webrequest-problems-and-exceptions.md
+    - name: 인터넷 프로토콜 버전 6
+      href: internet-protocol-version-6.md
+      items:
+        - name: IPv6 주소 지정
+          href: ipv6-addressing.md
+        - name: IPv6 라우팅
+          href: ipv6-routing.md
+        - name: IPv6 자동 구성
+          href: ipv6-auto-configuration.md
+        - name: IPv6 사용 및 사용 안 함
+          href: enabling-and-disabling-ipv6.md
+        - name: '방법: IPv6 지원을 사용하도록 컴퓨터 구성 파일 수정'
+          href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
+    - name: 인터넷 애플리케이션 구성
+      href: configuring-internet-applications.md
+    - name: .NET Framework의 네트워크 추적
+      href: network-tracing.md
+      items:
+        - name: 네트워크 추적 해석
+          href: interpreting-network-tracing.md
+        - name: 네트워크 추적 사용
+          href: enabling-network-tracing.md
+        - name: '방법: 네트워크 추적 구성'
+          href: how-to-configure-network-tracing.md
+    - name: 네트워크 애플리케이션에 대한 캐시 관리
+      href: cache-management-for-network-applications.md
+      items:
+        - name: 캐시 정책
+          href: cache-policy.md
+        - name: 위치 기반 캐시 정책
+          href: location-based-cache-policies.md
+        - name: 시간 기반 캐시 정책
+          href: time-based-cache-policies.md
+          items:
+            - name: 캐시 정책 조작 -최대 사용 기간 및 최대 부실
+              href: cache-policy-interaction-maximum-age-and-maximum-staleness.md
+            - name: 캐시 정책 상호 작용 - 최대 보존 기간 및 최소 새로 고침
+              href: cache-policy-interaction-maximum-age-and-minimum-freshness.md
+        - name: 네트워크 애플리케이션에서 캐싱 구성
+          href: configuring-caching-in-network-applications.md
+          items:
+            - name: '방법: 애플리케이션에 대해 위치 기반 캐시 정책 설정'
+              href: how-to-set-a-location-based-cache-policy-for-an-application.md
+            - name: '방법: 애플리케이션의 기본 시간 기반 캐시 정책 설정'
+              href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
+            - name: '방법: 시간 기반 캐시 정책 사용자 지정'
+              href: how-to-customize-a-time-based-cache-policy.md
+            - name: '방법: 요청에 캐시 정책 설정'
+              href: how-to-set-cache-policy-for-a-request.md
+    - name: 네트워크 프로그래밍의 보안
+      href: security-in-network-programming.md
+      items:
+        - name: TLS(전송 계층 보안) 모범 사례
+          href: tls.md
+        - name: SSL(Secure Sockets Layer) 사용
+          href: using-secure-sockets-layer.md
+          items:
+            - name: 인증서 선택 및 유효성 검사
+              href: certificate-selection-and-validation.md
+        - name: 인터넷 인증
+          href: internet-authentication.md
+          items:
+            - name: 기본 인증 및 다이제스트 인증
+              href: basic-and-digest-authentication.md
+            - name: NTLM 및 Kerberos 인증
+              href: ntlm-and-kerberos-authentication.md
+        - name: 웹 및 소켓 사용 권한
+          href: web-and-socket-permissions.md
+    - name: System.Net 클래스에 대한 모범 사례
+      href: best-practices-for-system-net-classes.md
+    - name: 프록시를 통해 인터넷 액세스
+      href: accessing-the-internet-through-a-proxy.md
+      items:
+        - name: 프록시 구성
+          href: proxy-configuration.md
+        - name: 자동 프록시 검색
+          href: automatic-proxy-detection.md
+        - name: '방법: 프록시를 사용하여 인터넷과 통신하도록 WebRequest 설정'
+          href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
+        - name: '방법: 글로벌 프록시 선택 재정의'
+          href: how-to-override-a-global-proxy-selection.md
+    - name: NetworkInformation
+      href: networkinformation.md
+      items:
+        - name: '방법: 네트워크 가용성 및 주소 변경 내용 검색'
+          href: how-to-detect-network-availability-and-address-changes.md
+        - name: '방법: 인터페이스 및 프로토콜 정보 가져오기'
+          href: how-to-get-interface-and-protocol-information.md
+        - name: '방법: 호스트 Ping'
+          href: how-to-ping-a-host.md
+    - name: 버전 2.0에서 System.Uri 네임스페이스 변경 내용
+      href: changes-to-the-system-uri-namespace-in-version-2-0.md
+    - name: System.Uri의 국가별 리소스 식별자 지원
+      href: international-resource-identifier-support-in-system-uri.md
+    - name: 버전 3.5의 소켓 성능 향상
+      href: socket-performance-enhancements-in-version-3-5.md
+    - name: 피어 이름 확인 프로토콜
+      href: peer-name-resolution-protocol.md
+      items:
+        - name: 피어 이름 및 PNRP ID
+          href: peer-names-and-pnrp-ids.md
+        - name: 피어 이름 게시 및 확인
+          href: peer-name-publication-and-resolution.md
+        - name: PNRP 클라우드
+          href: pnrp-clouds.md
+        - name: PNRP 캐시
+          href: pnrp-caches.md
+        - name: 애플리케이션 개발의 PNRP
+          href: pnrp-in-application-development.md
+    - name: 피어 투 피어 협업
+      href: peer-to-peer-collaboration.md
+      items:
+        - name: System.Net.PeerToPeer.Collaboration 네임스페이스 정보
+          href: about-the-system-net-peertopeer-collaboration-namespace.md
+        - name: 피어 투 피어 네트워킹 시나리오
+          href: peer-to-peer-networking-scenarios.md
+    - name: 버전 3.5 SP1에서 HttpWebRequest에 대한 NTLM 인증 변경 내용
+      href: changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md
+    - name: 확장된 보호를 사용하는 Windows 통합 인증
+      href: integrated-windows-authentication-with-extended-protection.md
+    - name: IPv6 및 Teredo를 사용하는 NAT 통과
+      href: nat-traversal-using-ipv6-and-teredo.md
+    - name: Windows 스토어 앱에 대한 네트워크 격리
+      href: network-isolation-for-windows-store-apps.md
+    - name: 네트워크 프로그래밍 샘플
+      href: network-programming-samples.md

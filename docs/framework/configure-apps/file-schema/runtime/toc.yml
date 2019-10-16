@@ -1,0 +1,113 @@
+- name: 런타임 설정 스키마
+  href: index.md
+  items:
+    - name: <runtime> 요소
+      href: runtime-element.md
+      items:
+        - name: <alwaysFlowImpersonationPolicy> 요소
+          href: alwaysflowimpersonationpolicy-element.md
+        - name: <AppContextSwitchOverrides> 요소
+          href: appcontextswitchoverrides-element.md
+        - name: <appDomainManagerAssembly> 요소
+          href: appdomainmanagerassembly-element.md
+        - name: <appDomainManagerType> 요소
+          href: appdomainmanagertype-element.md
+        - name: <appDomainResourceMonitoring> 요소
+          href: appdomainresourcemonitoring-element.md
+        - name: <assemblyBinding> 요소
+          href: assemblybinding-element-for-runtime.md
+          items:
+            - name: <dependentAssembly> 요소
+              href: dependentassembly-element.md
+              items:
+                - name: <assemblyIdentity> 요소
+                  href: assemblyidentity-element-for-runtime.md
+                - name: <bindingRedirect> 요소
+                  href: bindingredirect-element.md
+                - name: <codeBase> 요소
+                  href: codebase-element.md
+                - name: <publisherPolicy> 요소
+                  href: publisherpolicy-element.md
+            - name: <probing> 요소
+              href: probing-element.md
+            - name: <qualifyAssembly> 요소
+              href: qualifyassembly-element.md
+            - name: <supportPortability> 요소
+              href: supportportability-element.md
+        - name: <bypassTrustedAppStrongNames> 요소
+          href: bypasstrustedappstrongnames-element.md
+        - name: <CompatSortNLSVersion> 요소
+          href: compatsortnlsversion-element.md
+        - name: <Crst_DisableSpinWait> 요소
+          href: crst-disablespinwait-element.md
+        - name: <developmentMode> 요소
+          href: developmentmode-element.md
+        - name: <disableCachingBindingFailures> 요소
+          href: disablecachingbindingfailures-element.md
+        - name: <disableCommitThreadStack> 요소
+          href: disablecommitthreadstack-element.md
+        - name: <disableFusionUpdatesFromADManager> 요소
+          href: disablefusionupdatesfromadmanager-element.md
+        - name: <EnableAmPmParseAdjustment> 요소
+          href: enableampmparseadjustment-element.md
+        - name: <enforceFIPSPolicy> 요소
+          href: enforcefipspolicy-element.md
+        - name: <etwEnable> 요소
+          href: etwenable-element.md
+        - name: <forcePerformanceCounterUniqueSharedMemoryReads> 요소
+          href: forceperformancecounteruniquesharedmemoryreads-element.md
+        - name: <gcAllowVeryLargeObjects> 요소
+          href: gcallowverylargeobjects-element.md
+        - name: <gcConcurrent> 요소
+          href: gcconcurrent-element.md
+        - name: <GCCpuGroup> 요소
+          href: gccpugroup-element.md
+        - name: <gcServer> 요소
+          href: gcserver-element.md
+        - name: <generatePublisherEvidence> 요소
+          href: generatepublisherevidence-element.md
+        - name: <legacyCorruptedStateExceptionsPolicy> 요소
+          href: legacycorruptedstateexceptionspolicy-element.md
+        - name: <legacyImpersonationPolicy> 요소
+          href: legacyimpersonationpolicy-element.md
+        - name: <loadFromRemoteSources>
+          href: loadfromremotesources-element.md
+        - name: <NetFx40_LegacySecurityPolicy> 요소
+          href: netfx40-legacysecuritypolicy-element.md
+        - name: <NetFx40_PInvokeStackResilience> 요소
+          href: netfx40-pinvokestackresilience-element.md
+        - name: <NetFx45_CultureAwareComparerGetHashCode_LongStrings> 요소
+          href: netfx45-cultureawarecomparergethashcode-longstrings-element.md
+        - name: <PreferComInsteadOfManagedRemoting> 요소
+          href: prefercominsteadofmanagedremoting-element.md
+        - name: <relativeBindForResources> 요소
+          href: relativebindforresources-element.md
+        - name: <shadowCopyVerifyByTimestamp> 요소
+          href: shadowcopyverifybytimestamp-element.md
+        - name: <Thread_UseAllCpuGroups> 요소
+          href: thread-useallcpugroups-element.md
+        - name: <ThrowUnobservedTaskExceptions> 요소
+          href: throwunobservedtaskexceptions-element.md
+        - name: <TimeSpan_LegacyFormatMode> 요소
+          href: timespan-legacyformatmode-element.md
+        - name: <useLegacyJit> 요소
+          href: uselegacyjit-element.md
+        - name: <UseRandomizedStringHashAlgorithm> 요소
+          href: userandomizedstringhashalgorithm-element.md
+        - name: <UseSmallInternalThreadStacks> 요소
+          href: usesmallinternalthreadstacks-element.md
+    - name: <system.runtime.caching> 요소(캐시 설정)
+      href: system-runtime-caching-element-cache-settings.md
+      items:
+        - name: <memoryCache> 요소(캐시 설정)
+          href: memorycache-element-cache-settings.md
+          items:
+            - name: <namedCaches> 요소(캐시 설정)
+              href: namedcaches-element-cache-settings.md
+              items:
+                - name: <namedCaches>에 대한 <add> 요소
+                  href: add-element-for-namedcaches.md
+                - name: <namedCaches>에 대한 <clear> 요소
+                  href: clear-element-for-namedcaches.md
+                - name: <namedCaches>에 대한 <remove> 요소
+                  href: remove-element-for-namedcaches.md

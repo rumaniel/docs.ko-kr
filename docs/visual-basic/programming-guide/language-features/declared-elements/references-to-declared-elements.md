@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 18f9920891e35517efe7adcfd4c03e03ac771478
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.openlocfilehash: 616599e15c0d3d4c2177622d6820269bcff3ea39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43254743"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592804"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>선언된 요소 참조(Visual Basic)
 코드에서 선언 된 요소를 참조 하는 경우 Visual Basic 컴파일러에서는 해당 이름의 적절 한 선언 참조 이름과 일치 합니다. 동일한 이름을 가진 둘 이상의 요소가 선언 된 경우 참조 하는 데는 이러한 요소는 제어할 수 있습니다 *한정* 이름입니다.  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>해당 이름을 정규화 하 여 선언 된 요소에 액세스 하려면  
   
-1.  요소에 정의 된 위치를 결정 합니다. 이 네임 스페이스 또는 네임 스페이스의 계층 구조가 포함 될 수 있습니다. 가장 낮은 수준의 네임 스페이스 내에서 요소 모듈, 클래스 또는 구조에 포함 되어야 합니다.  
+1. 요소에 정의 된 위치를 결정 합니다. 이 네임 스페이스 또는 네임 스페이스의 계층 구조가 포함 될 수 있습니다. 가장 낮은 수준의 네임 스페이스 내에서 요소 모듈, 클래스 또는 구조에 포함 되어야 합니다.  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  대상 요소의 위치에 따라 한정 경로 확인 합니다. 최상위 네임 스페이스를 사용 하 여 시작한 계속 가장 낮은 수준의 네임 스페이스에는 모듈, 클래스 또는 대상 요소를 포함 하는 구조를 사용 하 여 종료 합니다. 경로의 각 요소는 다음에 오는 요소를 포함 해야 합니다.  
+2. 대상 요소의 위치에 따라 한정 경로 확인 합니다. 최상위 네임 스페이스를 사용 하 여 시작한 계속 가장 낮은 수준의 네임 스페이스에는 모듈, 클래스 또는 대상 요소를 포함 하는 구조를 사용 하 여 종료 합니다. 경로의 각 요소는 다음에 오는 요소를 포함 해야 합니다.  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  대상 요소의 한정 문자열을 준비 합니다. 에 마침표 (`.`) 경로 있는 모든 요소 뒤 합니다. 응용 프로그램에서 한정 문자열의 모든 요소에 액세스할 수 있어야 합니다.  
+3. 대상 요소의 한정 문자열을 준비 합니다. 에 마침표 (`.`) 경로 있는 모든 요소 뒤 합니다. 응용 프로그램에서 한정 문자열의 모든 요소에 액세스할 수 있어야 합니다.  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  식 또는 대입문은 일반적인 방법으로 대상 요소에 참조를 작성 합니다.  
+4. 식 또는 대입문은 일반적인 방법으로 대상 요소에 참조를 작성 합니다.  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  대상 요소 이름 한정 문자열 앞에 야 합니다. 이름을 마침표 바로 다음에 나와야 (`.`) 모듈, 클래스 또는 구조 요소를 포함 하는 다음과 같습니다.  
+5. 대상 요소 이름 한정 문자열 앞에 야 합니다. 이름을 마침표 바로 다음에 나와야 (`.`) 모듈, 클래스 또는 구조 요소를 포함 하는 다음과 같습니다.  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  컴파일러는 대상 요소 참조를 일치 시킬 수의 선택을 취소 하 고 명확한 선언의 찾을 한정 문자열을 사용 합니다.  
+6. 컴파일러는 대상 요소 참조를 일치 시킬 수의 선택을 취소 하 고 명확한 선언의 찾을 한정 문자열을 사용 합니다.  
   
  응용 프로그램에 동일한 이름을 가진 둘 이상의 프로그래밍 요소에 액세스 하는 경우 이름 참조를 한정할 수도 수 있습니다. 예를 들어, 합니다 <xref:System.Windows.Forms> 및 <xref:System.Web.UI.WebControls> 네임 스페이스 모두 포함을 `Label` 클래스 (<xref:System.Windows.Forms.Label?displayProperty=nameWithType> 및 <xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>). 응용 프로그램 모두를 사용 하거나 자체 정의 하는 경우 `Label` 클래스를 서로 다른 구별 해야 `Label` 개체입니다. 변수 선언에 네임 스페이스 또는 가져오기 별칭을 포함 합니다. 다음 예제에서는 가져오기 별칭을 사용 합니다.  
   
@@ -152,7 +152,7 @@ End Module
 ## <a name="references-to-projects"></a>프로젝트에 대 한 참조  
  사용 하도록 [공용](../../../../visual-basic/language-reference/modifiers/public.md) 다른 프로젝트에 정의 된 요소를 먼저 설정 해야를 *참조* 해당 프로젝트의 어셈블리 또는 형식 라이브러리입니다. 참조를 설정 하려면 **참조 추가** 에 **프로젝트** 메뉴나 사용 합니다 [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md) 명령줄 컴파일러 옵션.  
   
- 예를 들어, XML 개체 모델을 따르면는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]합니다. 대 한 참조를 설정 하는 경우는 <xref:System.Xml> 네임 스페이스를 선언 하 고 수와 같은 해당 클래스 중 하나를 사용 하 여 <xref:System.Xml.XmlDocument>입니다. 다음 예제에서는 <xref:System.Xml.XmlDocument>합니다.  
+ 예를 들어,.NET Framework의 XML 개체 모델을 사용할 수 있습니다. 대 한 참조를 설정 하는 경우는 <xref:System.Xml> 네임 스페이스를 선언 하 고 수와 같은 해당 클래스 중 하나를 사용 하 여 <xref:System.Xml.XmlDocument>입니다. 다음 예제에서는 <xref:System.Xml.XmlDocument>합니다.  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  
@@ -193,11 +193,12 @@ Dim xDoc As xD.XmlDocument
 ## <a name="shadowing"></a>섀도잉  
  동일한 이름을 공유 하는 두 가지 프로그래밍 요소를 숨길 수 중 하나, 또는 *섀도*, 다른 하나입니다. 숨겨진된 요소 참조를 사용할 수 없는 경우 대신, 숨겨진된 요소 이름을 사용 하는 코드를 Visual Basic 컴파일러는 섀도잉 요소 확인 합니다. 예제를 사용 하 여 더 자세한 내용은 참조 하세요. [Visual Basic의 숨김 기능](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  
- [선언 요소의 특징](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)  
- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)  
- [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)  
- [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)  
- [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md)  
- [공용](../../../../visual-basic/language-reference/modifiers/public.md)
+## <a name="see-also"></a>참고자료
+
+- [선언 요소 이름](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [선언 요소의 특징](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
+- [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)
+- [변수](../../../../visual-basic/programming-guide/language-features/variables/index.md)
+- [Imports 문(.NET 네임스페이스 및 형식)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
+- [New 연산자](../../../../visual-basic/language-reference/operators/new-operator.md)
+- [공용](../../../../visual-basic/language-reference/modifiers/public.md)

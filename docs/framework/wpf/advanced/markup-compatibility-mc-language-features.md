@@ -11,14 +11,14 @@ helpviewer_keywords:
 - XAML Namespace [WPF]
 - namespaces [WPF], XML
 ms.assetid: 67992d76-8bcc-456c-8232-03807803d69e
-ms.openlocfilehash: 50c50a1407778d4cc5fbd72bf423bb72db21e42c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2e81877eb41828a1d92edf0e8126c6e2ef966d20
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028667"
 ---
 # <a name="markup-compatibility-mc-language-features"></a>태그 호환성(mc:) 언어 기능
 ## <a name="in-this-section"></a>섹션 내용  
- [mc:Ignorable 특성](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)  
-  [mc:ProcessContent 특성](../../../../docs/framework/wpf/advanced/mc-processcontent-attribute.md)
+ [mc:Ignorable 특성](mc-ignorable-attribute.md)  
+  [mc:ProcessContent 특성](mc-processcontent-attribute.md)

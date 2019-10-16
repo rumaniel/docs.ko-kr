@@ -2,12 +2,12 @@
 title: '방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)'
 ms.date: 07/20/2015
 ms.assetid: 560e3879-b0b3-4549-ad02-0a53aff2f83c
-ms.openlocfilehash: 2b353ec17284235a97135003bc07f7224082cb4a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c1ecaad7e4fb4538331ba8f8076c9795acc52877
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43500909"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592906"
 ---
 # <a name="how-to-query-for-files-with-a-specified-attribute-or-name-c"></a>방법: 지정된 특성 또는 이름을 갖는 파일 쿼리(C#)
 이 예제에서는 지정된 디렉터리 트리에서 지정된 파일 이름 확장명(예: ".txt")을 가진 파일을 모두 찾는 방법을 보여 줍니다. 또한 생성 시간을 기준으로 트리에서 가장 최신 파일이나 가장 오래된 파일을 반환하는 방법을 보여 줍니다.  
@@ -64,9 +64,9 @@ class FindFileByExtension
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
+  System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to Objects(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
-- [LINQ 및 파일 디렉터리(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ to Objects(C#)](./linq-to-objects.md)
+- [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

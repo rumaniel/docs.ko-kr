@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: 4d5de5ed3f557842fb28a3cf92b1923a709195d2
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 322325b765f62d04e5713557f2ef9c97e1746ae0
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45641614"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70792050"
 ---
 # <a name="manipulating-data"></a>데이터 조작
-MARS(Multiple Active Result Sets)가 도입되기 전까지 개발자는 다중 연결이나 서버측 커서를 사용하여 특정 시나리오를 해결해야 했습니다. 또한 트랜잭션 상황에서 여러 연결 된 사용할 바운드 연결 (사용 하 여 **sp_getbindtoken** 하 고 **sp_bindsession**) 필요 했습니다. 다음 시나리오에서는 다중 연결 대신 MARS 사용 연결을 사용하는 방법을 보여 줍니다.  
+MARS(Multiple Active Result Sets)가 도입되기 전까지 개발자는 다중 연결이나 서버측 커서를 사용하여 특정 시나리오를 해결해야 했습니다. 또한 여러 연결이 트랜잭션 상황에서 사용 된 경우에는 바인딩된 연결 ( **sp_getbindtoken** 및 **sp_bindsession**)이 필요 했습니다. 다음 시나리오에서는 다중 연결 대신 MARS 사용 연결을 사용하는 방법을 보여 줍니다.  
   
 ## <a name="using-multiple-commands-with-mars"></a>MARS로 여러 명령 사용  
- 다음 콘솔 응용 프로그램에서는 두 개의 <xref:System.Data.SqlClient.SqlDataReader> 개체와 MARS가 활성화된 두 개의 <xref:System.Data.SqlClient.SqlCommand> 개체 및 하나의 <xref:System.Data.SqlClient.SqlConnection> 개체를 함께 사용하는 방법을 보여 줍니다.  
+ 다음 콘솔 애플리케이션에서는 두 개의 <xref:System.Data.SqlClient.SqlDataReader> 개체와 MARS가 활성화된 두 개의 <xref:System.Data.SqlClient.SqlCommand> 개체 및 하나의 <xref:System.Data.SqlClient.SqlConnection> 개체를 함께 사용하는 방법을 보여 줍니다.  
   
 ### <a name="example"></a>예제  
- 이 예제에서는 단일 연결을 엽니다는 **AdventureWorks** 데이터베이스입니다. <xref:System.Data.SqlClient.SqlCommand> 개체를 사용하면 <xref:System.Data.SqlClient.SqlDataReader>가 만들어집니다. 판독기를 사용하면 두 번째 <xref:System.Data.SqlClient.SqlDataReader>가 열리고 첫 번째 <xref:System.Data.SqlClient.SqlDataReader>의 데이터가 두 번째 판독기의 WHERE 절에 대한 입력으로 사용됩니다.  
+ 이 예에서는 **AdventureWorks** 데이터베이스에 대 한 단일 연결을 엽니다. <xref:System.Data.SqlClient.SqlCommand> 개체를 사용하면 <xref:System.Data.SqlClient.SqlDataReader>가 만들어집니다. 판독기를 사용하면 두 번째 <xref:System.Data.SqlClient.SqlDataReader>가 열리고 첫 번째 <xref:System.Data.SqlClient.SqlDataReader>의 데이터가 두 번째 판독기의 WHERE 절에 대한 입력으로 사용됩니다.  
   
 > [!NOTE]
->  다음 예제에서는 샘플 **AdventureWorks** SQL Server에 포함 된 데이터베이스입니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
+> 다음 예에서는 SQL Server에 포함 된 샘플 **AdventureWorks** 데이터베이스를 사용 합니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
   
 ```vb  
 Option Strict On  
@@ -85,7 +85,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=(local);Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks; MultipleActiveResultSets=True"  
   End Function  
@@ -156,7 +156,7 @@ static void Main()
   private static string GetConnectionString()  
   {  
     // To avoid storing the connection string in your code,  
-    // you can retrive it from a configuration file.  
+    // you can retrieve it from a configuration file.  
     return "Data Source=(local);Integrated Security=SSPI;" +   
       "Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";  
   }  
@@ -164,13 +164,13 @@ static void Main()
 ```  
   
 ## <a name="reading-and-updating-data-with-mars"></a>MARS로 데이터 읽기 및 업데이트  
- MARS를 사용하면 하나의 연결을 둘 이상의 보류 중인 작업과 함께 읽기 작업 및 DML(데이터 조작 언어) 작업 모두에 사용할 수 있습니다. 이 기능을 사용하면 응용 프로그램에서 연결 사용 오류를 처리할 필요가 없습니다. 또한 MARS는 일반적으로 더 많은 리소스를 사용하는 서버측 커서의 사용자를 대체할 수 있습니다. 마지막으로, 단일 연결에서 여러 작업 실행 될 수, 있으므로 사용 하지 않아도 동일한 트랜잭션 컨텍스트를 공유할 수 있습니다 **sp_getbindtoken** 하 고 **sp_bindsession** 시스템 저장 절차입니다.  
+ MARS를 사용하면 하나의 연결을 둘 이상의 보류 중인 작업과 함께 읽기 작업 및 DML(데이터 조작 언어) 작업 모두에 사용할 수 있습니다. 이 기능을 사용하면 응용 프로그램에서 연결 사용 오류를 처리할 필요가 없습니다. 또한 MARS는 일반적으로 더 많은 리소스를 사용하는 서버측 커서의 사용자를 대체할 수 있습니다. 마지막으로 여러 작업이 단일 연결에 대해 작동할 수 있으므로 동일한 트랜잭션 컨텍스트를 공유 하 여 **sp_getbindtoken** 및 **sp_bindsession** 시스템 저장 프로시저를 사용할 필요가 없습니다.  
   
 ### <a name="example"></a>예제  
- 다음 콘솔 응용 프로그램에서는 두 개의 <xref:System.Data.SqlClient.SqlDataReader> 개체와 MARS가 활성화된 세 개의 <xref:System.Data.SqlClient.SqlCommand> 개체 및 하나의 <xref:System.Data.SqlClient.SqlConnection> 개체를 함께 사용하는 방법을 보여 줍니다. 첫 번째 명령 개체에서는 신용 등급이 5인 공급업체 목록을 검색합니다. 두 번째 명령 개체는 <xref:System.Data.SqlClient.SqlDataReader>에서 제공한 공급업체 ID를 사용하여 두 번째 <xref:System.Data.SqlClient.SqlDataReader>와 함께 특정 공급업체의 모든 제품을 로드합니다. 각 제품 레코드에는 두 번째 <xref:System.Data.SqlClient.SqlDataReader>에서 액세스합니다. 새로운 결정할 계산을 수행 **OnOrderQty** 이어야 합니다. 세 번째 명령 개체는 다음 업데이트 하는 데는 **ProductVendor** 새 값이 있는 테이블입니다. 이 전체 프로세스가 단일 트랜잭션에서 발생하며 프로세스가 끝나면 롤백됩니다.  
+ 다음 콘솔 응용 프로그램에서는 두 개의 <xref:System.Data.SqlClient.SqlDataReader> 개체와 MARS가 활성화된 세 개의 <xref:System.Data.SqlClient.SqlCommand> 개체 및 하나의 <xref:System.Data.SqlClient.SqlConnection> 개체를 함께 사용하는 방법을 보여 줍니다. 첫 번째 명령 개체에서는 신용 등급이 5인 공급업체 목록을 검색합니다. 두 번째 명령 개체는 <xref:System.Data.SqlClient.SqlDataReader>에서 제공한 공급업체 ID를 사용하여 두 번째 <xref:System.Data.SqlClient.SqlDataReader>와 함께 특정 공급업체의 모든 제품을 로드합니다. 각 제품 레코드에는 두 번째 <xref:System.Data.SqlClient.SqlDataReader>에서 액세스합니다. 새 **Onorderqty** 를 결정 하기 위해 계산이 수행 됩니다. 그런 다음 세 번째 명령 개체를 사용 하 여 새 값으로 **제품 공급 업체** 테이블을 업데이트 합니다. 이 전체 프로세스가 단일 트랜잭션에서 발생하며 프로세스가 끝나면 롤백됩니다.  
   
 > [!NOTE]
->  다음 예제에서는 샘플 **AdventureWorks** SQL Server에 포함 된 데이터베이스입니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
+> 다음 예에서는 SQL Server에 포함 된 샘플 **AdventureWorks** 데이터베이스를 사용 합니다. 샘플 코드에 제공된 연결 문자열은 데이터베이스가 로컬 컴퓨터에 설치되었으며 사용 가능하다고 가정합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정합니다.  
   
 ```vb  
 Option Strict On  
@@ -276,7 +276,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=(local);Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks;MultipleActiveResultSets=True"  
   End Function  
@@ -394,7 +394,7 @@ static void Main()
 private static string GetConnectionString()  
 {  
   // To avoid storing the connection string in your code,  
-  // you can retrive it from a configuration file.  
+  // you can retrieve it from a configuration file.  
   return "Data Source=(local);Integrated Security=SSPI;" +   
     "Initial Catalog=AdventureWorks;" +   
     "MultipleActiveResultSets=True";  
@@ -402,6 +402,7 @@ private static string GetConnectionString()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [MARS(Multiple Active Result Sets)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [MARS(Multiple Active Result Sets)](multiple-active-result-sets-mars.md)
+- [ADO.NET 개요](../ado-net-overview.md)

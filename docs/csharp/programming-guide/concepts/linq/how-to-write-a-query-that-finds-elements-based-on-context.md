@@ -2,12 +2,12 @@
 title: '방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성(C#)'
 ms.date: 07/20/2015
 ms.assetid: 3ff79ef0-fc8b-42fe-8cc0-10dc32b06b4e
-ms.openlocfilehash: c1c43bc47df1612be26c78351a9d30272a020160
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e3ac8fc965132521b85cce6391908634cdb17127
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45987957"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253211"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-c"></a>방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성(C#)
 컨텍스트에 따라 요소를 선택하는 쿼리를 작성해야 하는 경우가 있습니다. 이전 또는 다음 형제 요소를 기준으로 필터링하거나, 자식 또는 상위 요소를 기준으로 필터링하려고 할 수 있습니다.  
@@ -49,14 +49,14 @@ foreach (XElement e in items)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  
 ```  
   
 ## <a name="example"></a>예  
- 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)을 참조하세요.  
+ 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)를 참조하세요.  
   
 ```csharp  
 XElement doc = XElement.Parse(@"<Root xmlns='http://www.adatum.com'>  
@@ -92,7 +92,7 @@ foreach (XElement e in items)
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 id = 1  
 id = 3  
 id = 6  
@@ -100,8 +100,7 @@ id = 6
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.Linq.XElement.Parse%2A>  
-- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
-- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
-- <xref:System.Linq.Enumerable.FirstOrDefault%2A>  
-- [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+- <xref:System.Xml.Linq.XElement.Parse%2A>
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>
+- <xref:System.Linq.Enumerable.FirstOrDefault%2A>

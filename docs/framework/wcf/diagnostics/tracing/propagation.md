@@ -2,18 +2,18 @@
 title: 전파
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 1d5ac743e94edd845650a1b550b3e982929d1b32
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ab8b6c003f9e483dccd7b9c7b2687a409f27fdc3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198252"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600027"
 ---
 # <a name="propagation"></a>전파
 Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 합니다.  
   
 ## <a name="using-propagation-to-correlate-activities-across-endpoints"></a>전파를 통해 엔드포인트 내의 동작 상호 연결  
- 전파는 사용자에게 응용 프로그램 엔드포인트를 통해 동일한 처리 단위(예: 요청)에 대한 오류 추적의 직접적인 상관 관계를 제공합니다. 동일한 처리 단위에 대해 다른 엔드포인트에서 내보내진 오류는 응용 프로그램 도메인에서도 동일한 동작에서 그룹화됩니다. 이는 메시지 헤더에서 동작 ID의 전파를 통해 수행됩니다. 그러므로 서버의 내부 오류로 인해 클라이언트의 시간이 초과되면 두 오류 모두 직접 상관 관계에 대해 동일한 동작에서 표시됩니다.  
+ 전파는 사용자에게 애플리케이션 엔드포인트를 통해 동일한 처리 단위(예: 요청)에 대한 오류 추적의 직접적인 상관 관계를 제공합니다. 동일한 처리 단위에 대해 다른 엔드포인트에서 내보내진 오류는 애플리케이션 도메인에서도 동일한 동작에서 그룹화됩니다. 이는 메시지 헤더에서 동작 ID의 전파를 통해 수행됩니다. 그러므로 서버의 내부 오류로 인해 클라이언트의 시간이 초과되면 두 오류 모두 직접 상관 관계에 대해 동일한 동작에서 표시됩니다.  
   
  이 작업을 수행하려면 앞의 예제에서 설명한 대로 `ActivityTracing` 설정을 사용하세요. 또한 모든 엔드포인트에서 `propagateActivity` 추적 소스에 대해 `System.ServiceModel` 특성을 설정하세요.  
   
@@ -26,11 +26,11 @@ Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 
 ## <a name="propagation-definition"></a>전파 정의  
  다음 조건이 모두 충족되면 동작 M의 gAId가 동작 N에 전파됩니다.  
   
--   N은 M으로 인해 만들어집니다.  
+- N은 M으로 인해 만들어집니다.  
   
--   M의 gAId가 N에 알려집니다.  
+- M의 gAId가 N에 알려집니다.  
   
--   N의 gAId가 M의 gAId와 같습니다.  
+- N의 gAId가 M의 gAId와 같습니다.  
   
  다음 XML 스키마에 설명된 것처럼 gAId는 ActivityId 메시지 헤더를 통해 전파됩니다.  
   
@@ -76,8 +76,9 @@ Windows Communication Foundation (WCF) 추적 모델의 동작 전파에 설명 
 ## <a name="synchronization"></a>동기화  
  서로 다른 컴퓨터에서 실행되는 엔드포인트에서 이벤트를 동기화하기 위해 CorrelationId가 메시지에 전파되는 ActivityId 헤더에 추가됩니다. 도구에서 이 ID를 사용하여 클럭이 일치하지 않는 시스템 간의 이벤트를 동기화할 수 있습니다. 특히 Service Trace Viewer 도구는 이 ID를 사용하여 엔드포인트 간의 메시지 흐름을 표시합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a>참고자료
+
+- [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [엔드투엔드 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

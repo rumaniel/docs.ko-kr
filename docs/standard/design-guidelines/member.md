@@ -1,6 +1,6 @@
 ---
 title: 멤버 디자인 지침
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines [.NET Framework], about member design guidelines
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - class library design guidelines [.NET Framework], members
 - member design guidelines [.NET Framework]
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: d1598ac63af38f1ca3e11104bc8e1cd6323d35ed
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+author: KrzysztofCwalina
+ms.openlocfilehash: d7023bbe59eb3590af47952a2fe24c5f40b3ca68
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945524"
 ---
 # <a name="member-design-guidelines"></a>멤버 디자인 지침
 메서드, 속성, 이벤트, 생성자 및 필드가 통칭 하 여 멤버 라고 합니다. 멤버는 궁극적으로 프레임 워크 기능 프레임 워크의 최종 사용자에 게 노출 되는 의미입니다.  
@@ -35,7 +34,7 @@ ms.locfileid: "44259969"
  [매개 변수 디자인](../../../docs/standard/design-guidelines/parameter-design.md)  
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 

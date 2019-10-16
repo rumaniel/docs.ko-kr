@@ -1,15 +1,13 @@
 ---
-title: dotnet 명령 - .NET Core CLI
+title: dotnet 명령
 description: dotnet 명령(.NET Core CLI 도구에 대한 일반 드라이버) 및 사용법에 대해 알아봅니다.
-author: mairaw
-ms.author: mairaw
 ms.date: 06/04/2018
-ms.openlocfilehash: 53e8f8bab1cbaabaa7926aa68197c18843b0b637
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: a22340c26ca2e483e43857e2ecb31f2ab53b60f4
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45615579"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117512"
 ---
 # <a name="dotnet-command"></a>dotnet 명령
 
@@ -21,28 +19,37 @@ ms.locfileid: "45615579"
 
 ## <a name="synopsis"></a>개요
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+```dotnetcli
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [--list-runtimes] [--list-sdks] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
-```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
+```dotnetcli
+dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [--depsfile]
+    [-d|--diagnostics] [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx]
+    [--runtimeconfig] [-v|--verbosity] [--version]
 ```
-dotnet [command] [arguments] [--additional-deps] [--additionalprobingpath] [-d|--diagnostics]
-    [--fx-version] [-h|--help] [--info] [--roll-forward-on-no-candidate-fx] [-v|--verbosity] [--version]
-```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
+```dotnetcli
+dotnet [command] [arguments] [--additionalprobingpath] [--depsfile] [-d|--diagnostics]
+    [--fx-version] [-h|--help] [--info] [--runtimeconfig] [-v|--verbosity] [--version]
 ```
-dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-version]
-    [-h|--help] [--info] [-v|--verbosity] [--version]
-```
+
 ---
 
 ## <a name="description"></a>설명
 
 `dotnet`은 .NET 소스 코드 및 이진 파일을 관리하기 위한 도구입니다. [`dotnet build`](dotnet-build.md) 및 [`dotnet run`](dotnet-run.md)와 같은 특정 작업을 수행하는 명령을 표시합니다. 각 명령은 자체 인수를 정의합니다. 각 명령 다음에 `--help`를 입력하면 간단한 도움말 설명서에 액세스할 수 있습니다.
 
-`dotnet`은 `dotnet myapp.dll`과 같은 응용 프로그램 DLL을 지정하여 응용 프로그램을 실행하는 데 사용할 수 있습니다. 배포 옵션에 대해 자세히 알아보려면 [.NET Core 응용 프로그램 배포](../deploying/index.md)를 참조하세요.
+`dotnet`은 `dotnet myapp.dll`과 같은 애플리케이션 DLL을 지정하여 애플리케이션을 실행하는 데 사용할 수 있습니다. 배포 옵션에 대해 자세히 알아보려면 [.NET Core 애플리케이션 배포](../deploying/index.md)를 참조하세요.
 
 ## <a name="options"></a>옵션
 
@@ -50,11 +57,17 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additional-deps <PATH>`
 
-추가적인 *deps.json* 파일의 경로입니다.
+추가적인 *.deps.json* 파일의 경로입니다.
 
 `--additionalprobingpath <PATH>`
 
 검색 정책 및 검색할 어셈블리를 포함하는 경로입니다.
+
+`--depsfile`
+
+*deps.json* 파일의 경로입니다.
+
+*deps.json* 파일에는 어셈블리 충돌을 해결하는 데 사용되는 종속성, 컴파일 종속성 및 버전 정보 목록이 포함됩니다. 이 파일에 대한 자세한 내용은 GitHub에서 [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
 `-d|--diagnostics`
 
@@ -62,7 +75,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-응용 프로그램 실행에 사용할 .NET Core 런타임의 버전입니다.
+애플리케이션 실행에 사용할 .NET Core 런타임의 버전입니다.
 
 `-h|--help`
 
@@ -80,9 +93,21 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 설치된 .NET Core SDK를 표시합니다.
 
-`--roll-forward-on-no-candidate-fx`
+`--roll-forward-on-no-candidate-fx <N>`
 
- `0`으로 설정된 경우 부 버전 롤포워드를 사용하지 않도록 설정합니다. 자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
+필요한 공유 프레임워크를 사용할 수 없을 때 동작을 정의합니다. `N`는 다음이 될 수 있습니다.
+
+- `0` - 부 버전 롤포워드도 사용하지 않도록 설정합니다.
+- `1` - 부 버전에서는 롤포워드하지만 주 버전에서는 롤포워드하지 않습니다. 이것은 기본적인 동작입니다.
+- `2` - 부 버전과 주 버전에서 롤포워드합니다.
+
+ 자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
+
+`--runtimeconfig`
+
+*runtimeconfig.json* 파일의 경로입니다.
+
+*runtimeconfig.json* 파일은 런타임 구성 설정을 포함하는 구성 파일입니다. 자세한 내용은 GitHub에서 [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
 `-v|--verbosity <LEVEL>`
 
@@ -96,11 +121,17 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--additional-deps <PATH>`
 
-추가적인 *deps.json* 파일의 경로입니다.
+추가적인 *.deps.json* 파일의 경로입니다.
 
 `--additionalprobingpath <PATH>`
 
 검색 정책 및 검색할 어셈블리를 포함하는 경로입니다.
+
+`--depsfile`
+
+*deps.json* 파일의 경로입니다.
+
+*deps.json* 파일에는 어셈블리 충돌을 해결하는 데 사용되는 종속성, 컴파일 종속성 및 버전 정보 목록이 포함됩니다. 이 파일에 대한 자세한 내용은 [GitHub에서 런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
 `-d|--diagnostics`
 
@@ -108,7 +139,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `--fx-version <VERSION>`
 
-응용 프로그램 실행에 사용할 .NET Core 런타임의 버전입니다.
+애플리케이션 실행에 사용할 .NET Core 런타임의 버전입니다.
 
 `-h|--help`
 
@@ -121,6 +152,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--roll-forward-on-no-candidate-fx`
 
  `0`으로 설정된 경우 부 버전 롤포워드를 사용하지 않도록 설정합니다. 자세한 내용은 [롤포워드](../whats-new/dotnet-core-2-1.md#roll-forward)를 참조하세요.
+
+`--runtimeconfig`
+
+*runtimeconfig.json* 파일의 경로입니다.
+
+*runtimeconfig.json* 파일은 런타임 구성 설정을 포함하는 구성 파일입니다. 자세한 내용은 [GitHub에서 런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
 `-v|--verbosity <LEVEL>`
 
@@ -136,13 +173,19 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 검색 정책 및 검색할 어셈블리를 포함하는 경로입니다.
 
+`--depsfile`
+
+*deps.json* 파일의 경로입니다.
+
+*deps.json* 파일에는 어셈블리 충돌을 해결하는 데 사용되는 종속성, 컴파일 종속성 및 버전 정보 목록이 포함됩니다. 이 파일에 대한 자세한 내용은 [GitHub에서 런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
+
 `-d|--diagnostics`
 
 진단 출력을 사용합니다.
 
 `--fx-version <VERSION>`
 
-응용 프로그램 실행에 사용할 .NET Core 런타임의 버전입니다.
+애플리케이션 실행에 사용할 .NET Core 런타임의 버전입니다.
 
 `-h|--help`
 
@@ -151,6 +194,12 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--info`
 
 .NET Core 설치 및 머신 환경(예: 현재 운영 체제)에 대한 자세한 정보를 인쇄하고 .NET Core 버전의 SHA를 커밋합니다.
+
+`--runtimeconfig`
+
+*runtimeconfig.json* 파일의 경로입니다.
+
+*runtimeconfig.json* 파일은 런타임 구성 설정을 포함하는 구성 파일입니다. 자세한 내용은 [GitHub에서 런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)을 참조하세요.
 
 `-v|--verbosity <LEVEL>`
 
@@ -170,7 +219,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 | 명령                                       | 함수                                                            |
 | --------------------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)               | .NET Core 응용 프로그램을 빌드합니다.                                     |
+| [dotnet build](dotnet-build.md)               | .NET Core 애플리케이션을 빌드합니다.                                     |
 | [dotnet build-server](dotnet-build-server.md) | 빌드에서 시작된 서버와 상호 작용합니다.                          |
 | [dotnet clean](dotnet-clean.md)               | 빌드 출력을 정리합니다.                                                |
 | [dotnet help](dotnet-help.md)                 | 명령에 대한 자세한 온라인 설명서를 표시합니다.           |
@@ -178,9 +227,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 | [dotnet msbuild](dotnet-msbuild.md)           | MSBuild 명령줄에 대한 액세스 권한을 제공합니다.                        |
 | [dotnet new](dotnet-new.md)                   | 지정한 템플릿에 대해 C# 또는 F# 프로젝트를 초기화합니다.                |
 | [dotnet pack](dotnet-pack.md)                 | 코드의 NuGet 패키지를 만듭니다.                               |
-| [dotnet publish](dotnet-publish.md)           | .NET Framework 종속형 또는 자체 포함 응용 프로그램을 게시합니다. |
-| [dotnet restore](dotnet-restore.md)           | 지정된 응용 프로그램에 대한 종속성을 복원합니다.                  |
-| [dotnet run](dotnet-run.md)                   | 소스에서 응용 프로그램을 실행합니다.                                   |
+| [dotnet publish](dotnet-publish.md)           | .NET Framework 종속형 또는 자체 포함 애플리케이션을 게시합니다. |
+| [dotnet restore](dotnet-restore.md)           | 지정된 애플리케이션에 대한 종속성을 복원합니다.                  |
+| [dotnet run](dotnet-run.md)                   | 소스에서 애플리케이션을 실행합니다.                                   |
 | [dotnet sln](dotnet-sln.md)                   | 솔루션 파일에 프로젝트를 추가, 제거 및 나열하는 옵션입니다.       |
 | [dotnet store](dotnet-store.md)               | 어셈블리를 런타임 패키지 저장소에 저장합니다.                     |
 | [dotnet test](dotnet-test.md)                 | Test Runner를 사용하여 테스트를 실행합니다.                                     |
@@ -189,16 +238,16 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 | 명령                             | 함수                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)     | .NET Core 응용 프로그램을 빌드합니다.                                     |
+| [dotnet build](dotnet-build.md)     | .NET Core 애플리케이션을 빌드합니다.                                     |
 | [dotnet clean](dotnet-clean.md)     | 빌드 출력을 정리합니다.                                              |
 | [dotnet help](dotnet-help.md)       | 명령에 대한 자세한 온라인 설명서를 표시합니다.           |
 | [dotnet migrate](dotnet-migrate.md) | 유효한 Preview 2 프로젝트를 .NET Core SDK 1.0 프로젝트로 마이그레이션합니다.  |
 | [dotnet msbuild](dotnet-msbuild.md) | MSBuild 명령줄에 대한 액세스 권한을 제공합니다.                        |
 | [dotnet new](dotnet-new.md)         | 지정한 템플릿에 대해 C# 또는 F# 프로젝트를 초기화합니다.                |
 | [dotnet pack](dotnet-pack.md)       | 코드의 NuGet 패키지를 만듭니다.                               |
-| [dotnet publish](dotnet-publish.md) | .NET Framework 종속형 또는 자체 포함 응용 프로그램을 게시합니다. |
-| [dotnet restore](dotnet-restore.md) | 지정된 응용 프로그램에 대한 종속성을 복원합니다.                  |
-| [dotnet run](dotnet-run.md)         | 소스에서 응용 프로그램을 실행합니다.                                   |
+| [dotnet publish](dotnet-publish.md) | .NET Framework 종속형 또는 자체 포함 애플리케이션을 게시합니다. |
+| [dotnet restore](dotnet-restore.md) | 지정된 애플리케이션에 대한 종속성을 복원합니다.                  |
+| [dotnet run](dotnet-run.md)         | 소스에서 애플리케이션을 실행합니다.                                   |
 | [dotnet sln](dotnet-sln.md)         | 솔루션 파일에 프로젝트를 추가, 제거 및 나열하는 옵션입니다.       |
 | [dotnet store](dotnet-store.md)     | 어셈블리를 런타임 패키지 저장소에 저장합니다.                     |
 | [dotnet test](dotnet-test.md)       | Test Runner를 사용하여 테스트를 실행합니다.                                     |
@@ -207,15 +256,15 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 | 명령                             | 함수                                                            |
 | ----------------------------------- | ------------------------------------------------------------------- |
-| [dotnet build](dotnet-build.md)     | .NET Core 응용 프로그램을 빌드합니다.                                     |
+| [dotnet build](dotnet-build.md)     | .NET Core 애플리케이션을 빌드합니다.                                     |
 | [dotnet clean](dotnet-clean.md)     | 빌드 출력을 정리합니다.                                              |
 | [dotnet migrate](dotnet-migrate.md) | 유효한 Preview 2 프로젝트를 .NET Core SDK 1.0 프로젝트로 마이그레이션합니다.  |
 | [dotnet msbuild](dotnet-msbuild.md) | MSBuild 명령줄에 대한 액세스 권한을 제공합니다.                        |
 | [dotnet new](dotnet-new.md)         | 지정한 템플릿에 대해 C# 또는 F# 프로젝트를 초기화합니다.                |
 | [dotnet pack](dotnet-pack.md)       | 코드의 NuGet 패키지를 만듭니다.                               |
-| [dotnet publish](dotnet-publish.md) | .NET Framework 종속형 또는 자체 포함 응용 프로그램을 게시합니다. |
-| [dotnet restore](dotnet-restore.md) | 지정된 응용 프로그램에 대한 종속성을 복원합니다.                  |
-| [dotnet run](dotnet-run.md)         | 소스에서 응용 프로그램을 실행합니다.                                   |
+| [dotnet publish](dotnet-publish.md) | .NET Framework 종속형 또는 자체 포함 애플리케이션을 게시합니다. |
+| [dotnet restore](dotnet-restore.md) | 지정된 애플리케이션에 대한 종속성을 복원합니다.                  |
+| [dotnet run](dotnet-run.md)         | 소스에서 애플리케이션을 실행합니다.                                   |
 | [dotnet sln](dotnet-sln.md)         | 솔루션 파일에 프로젝트를 추가, 제거 및 나열하는 옵션입니다.       |
 | [dotnet test](dotnet-test.md)       | Test Runner를 사용하여 테스트를 실행합니다.                                     |
 
@@ -271,11 +320,11 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 ## <a name="examples"></a>예제
 
-새 .NET Core 콘솔 응용 프로그램을 만듭니다.
+새 .NET Core 콘솔 애플리케이션을 만듭니다.
 
 `dotnet new console`
 
-지정된 응용 프로그램에 대한 종속성을 복원합니다.
+지정된 애플리케이션에 대한 종속성을 복원합니다.
 
 `dotnet restore`
 
@@ -285,7 +334,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `dotnet build`
 
-`myapp.dll`과 같은 응용 프로그램 DLL을 실행합니다.
+`myapp.dll`과 같은 애플리케이션 DLL을 실행합니다.
 
 `dotnet myapp.dll`
 
@@ -295,7 +344,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_PACKAGES`
 
-주 패키지 캐시입니다. 설정하지 않으면 기본적으로 Unix에서는 `$HOME/.nuget/packages`, Windows에서는 `%HOME%\NuGet\Packages`로 지정됩니다.
+글로벌 패키지 폴더입니다. 설정하지 않으면 기본적으로 Unix에서는 `~/.nuget/packages`, Windows에서는 `%userprofile%\.nuget\packages`로 지정됩니다.
 
 `DOTNET_SERVICING`
 
@@ -317,7 +366,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_PACKAGES`
 
-주 패키지 캐시입니다. 설정하지 않으면 기본적으로 Unix에서는 `$HOME/.nuget/packages`, Windows에서는 `%HOME%\NuGet\Packages`로 지정됩니다.
+주 패키지 캐시입니다. 설정하지 않으면 기본적으로 Unix에서는 `$HOME/.nuget/packages`, Windows에서는 `%userprofile%\.nuget\packages`로 지정됩니다.
 
 `DOTNET_SERVICING`
 
@@ -335,7 +384,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 
 `DOTNET_PACKAGES`
 
-주 패키지 캐시입니다. 설정하지 않으면 기본적으로 Unix에서는 `$HOME/.nuget/packages`, Windows에서는 `%HOME%\NuGet\Packages`로 지정됩니다.
+주 패키지 캐시입니다. 설정하지 않으면 기본적으로 Unix에서는 `$HOME/.nuget/packages`, Windows에서는 `%userprofile%\.nuget\packages`로 지정됩니다.
 
 `DOTNET_SERVICING`
 
@@ -346,3 +395,7 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 .NET Core 도구 사용에 대한 데이터를 수집하여 Microsoft에 전송할지 여부를 지정합니다. 원격 분석 기능을 옵트아웃하려면 `true`로 설정합니다(값 `true`, `1` 또는 `yes`가 허용됨). 이외의 경우 원격 분석 기능을 옵트인하려면 `false`로 설정합니다(`false`, `0` 또는 `no`가 허용됨). 설정하지 않으면 기본적으로 `false`이고 원격 분석 기능은 활성화됩니다.
 
 ---
+
+## <a name="see-also"></a>참고 항목
+
+- [런타임 구성 파일](https://github.com/dotnet/cli/blob/master/Documentation/specs/runtime-configuration-file.md)

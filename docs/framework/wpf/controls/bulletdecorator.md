@@ -7,21 +7,19 @@ helpviewer_keywords:
 - controls [WPF], BulletDecorator
 - BulletDecorator control [WPF]
 ms.assetid: 1756cabf-59b4-47a7-883d-1bdf2e5abe00
-ms.openlocfilehash: 39fb0dcfe0110a0badcd552d711db40086d46fd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d5839a75434f71ff6dd91b86474aeab2e8b0ad64
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052666"
 ---
 # <a name="bulletdecorator"></a>BulletDecorator
-<xref:System.Windows.Controls.Primitives.BulletDecorator> 는 <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>과 <xref:System.Windows.Controls.Decorator.Child%2A> 라는 두가지 콘텐츠 속성들을 가지고 있습니다.
-<xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> 속성은 <xref:System.Windows.UIElement>를 글머리 기호로 사용하도록 정의합니다.
-<xref:System.Windows.Controls.Decorator.Child%2A> 속성은 <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A>과 나란히 있는 <xref:System.Windows.UIElement>를 정의 합니다.
-
-다음 그림은 <xref:System.Windows.Controls.Primitives.BulletDecorator>를 사용하는 컨트롤에 대한 예제를 보여주는 그림입니다.
+<xref:System.Windows.Controls.Primitives.BulletDecorator> 두 개의 콘텐츠 속성이: <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> 고 <xref:System.Windows.Controls.Decorator.Child%2A>입니다. 합니다 <xref:System.Windows.Controls.Primitives.BulletDecorator.Bullet%2A> 속성을 정의 합니다 <xref:System.Windows.UIElement> 글머리 기호로 사용 하 합니다. <xref:System.Windows.Controls.Decorator.Child%2A> 속성 정의 <xref:System.Windows.UIElement> 글머리 기호를 시각적으로 하는 게 부합 합니다.  
   
- ![3 BulletDecorators: 확인란, 라디오 단추, 텍스트 상자에 붙여넣습니다](../../../../docs/framework/wpf/controls/media/bulletdecorator.png "BulletDecorator")  
+ 다음 그림은 <xref:System.Windows.Controls.Primitives.BulletDecorator>를 사용하는 컨트롤에 대한 예제를 보여주는 그림입니다.  
+  
+ ![확인란, 라디오 단추, 및 TextBox/구성 decorator의 예입니다.](./media/bulletdecorator/three-bullet-decorators.png)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Primitives.BulletDecorator>

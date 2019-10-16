@@ -2,14 +2,14 @@
 title: dotnet store 명령
 description: "'dotnet store' 명령은 지정된 어셈블리를 런타임 패키지 저장소에 저장합니다."
 author: bleroy
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: a12738d0cc8edcbb65d5b6fab6e7c8b209b0f4b5
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: seodec18
+ms.openlocfilehash: 58889039d117a2231cda693e4aca7790f018d1b5
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48029897"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54606753"
 ---
 # <a name="dotnet-store"></a>dotnet store
 
@@ -83,4 +83,4 @@ ms.locfileid: "48029897"
 
 ## <a name="see-also"></a>참고 항목
 
-* [런타임 패키지 저장소](../deploying/runtime-store.md)
+- [런타임 패키지 저장소](../deploying/runtime-store.md)

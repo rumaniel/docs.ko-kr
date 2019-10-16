@@ -1,5 +1,6 @@
 ---
-title: '방법: 플랫폼 호출을 사용하여 웨이브 파일 재생(C# 프로그래밍 가이드)'
+title: '방법: 플랫폼 호출을 사용하여 웨이브 파일 재생 - C# 프로그래밍 가이드'
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - platform invoke, sound files
@@ -7,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: a83d0a11aacac3676aa78d9952f24f505949d24c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: cf8415b2d501ae2394fa76170eb232da33c3e308
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43522555"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69589105"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>방법: 플랫폼 호출을 사용하여 웨이브 파일 재생(C# 프로그래밍 가이드)
 다음 C# 코드 예제에서는 플랫폼 호출 서비스를 사용하여 Windows 운영 체제에서 .wav 사운드 파일을 재생하는 방법을 설명합니다.  
@@ -22,30 +23,25 @@ ms.locfileid: "43522555"
   
  **파일 열기** 대화 상자가 필터 설정을 통해 .wav 확장명을 가진 파일만 표시하도록 필터링됩니다.  
   
- [!code-csharp[csProgGuideInterop#5](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_1.cs)]  
+ [!code-csharp[csProgGuideInterop#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#5)]  
   
- [!code-csharp[csProgGuideInterop#3](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_2.cs)]  
+ [!code-csharp[csProgGuideInterop#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#3)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
-### <a name="to-compile-the-code"></a>코드를 컴파일하려면  
+1. Visual Studio에서 새 C# Windows 애플리케이션 프로젝트를 만들고 이름을 **WinSound**로 지정합니다.  
   
-1.  Visual Studio에서 새 C# Windows 응용 프로그램 프로젝트를 만들고 이름을 **WinSound**로 지정합니다.  
+2. 위의 코드를 복사하여 `Form1.cs` 파일 내용 위에 붙여넣습니다.  
   
-2.  위의 코드를 복사하여 `Form1.cs` 파일 내용 위에 붙여넣습니다.  
+3. 다음 코드를 복사하여 `Form1.Designer.cs` 파일의 `InitializeComponent()` 메서드에서 기존 코드 뒤에 붙여넣습니다.  
   
-3.  다음 코드를 복사하여 `Form1.Designer.cs` 파일의 `InitializeComponent()` 메서드에서 기존 코드 뒤에 붙여넣습니다.  
+     [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
-     [!code-csharp[csProgGuideInterop#4](../../../csharp/programming-guide/interop/codesnippet/CSharp/how-to-use-platform-invoke-to-play-a-wave-file_3.cs)]  
-  
-4.  코드를 컴파일하고 실행합니다.  
-  
-## <a name="net-framework-security"></a>.NET Framework 보안  
- 자세한 내용은 [.NET의 보안](../../../standard/security/index.md)을 참조하세요.  
+4. 코드를 컴파일하고 실행합니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [상호 운용성 개요](../../../csharp/programming-guide/interop/interoperability-overview.md)  
-- [플랫폼 호출 자세히 보기](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)  
+- [C# 프로그래밍 가이드](../index.md)
+- [상호 운용성 개요](./interoperability-overview.md)
+- [플랫폼 호출 자세히 보기](../../../framework/interop/consuming-unmanaged-dll-functions.md#a-closer-look-at-platform-invoke)
 - [플랫폼 호출을 사용하여 데이터 마샬링](../../../framework/interop/marshaling-data-with-platform-invoke.md)

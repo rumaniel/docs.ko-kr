@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: a9babe97-e457-4ff3-b528-a1bc940d5320
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eefa1b52907525059b3403e7eb20542d3b5a5c73
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: e18dd5370143dfe4faaffb49017d0a8f62c87433
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123568"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490995"
 ---
 # <a name="when-to-use-a-thread-safe-collection"></a>스레드로부터 안전한 컬렉션 사용 시기
-[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]에서는 다중 스레드 추가 및 제거 작업을 지원하도록 특별히 디자인된 5가지 새 컬렉션 형식을 도입했습니다. 이러한 새 형식은 스레드로부터의 안전성을 달성하기 위해 다양한 종류의 효율적인 잠금 및 잠금 해제 동기화 메커니즘을 사용합니다. 동기화로 인해 작업에 오버헤드가 더해집니다. 사용되는 동기화의 종류, 수행되는 작업의 종류 및 컬렉션에 동시에 액세스하려는 스레드의 수와 같은 기타 요인에 따라 오버헤드의 양이 달라집니다.  
+.NET Framework 4에서는 다중 스레드 추가 및 제거 작업을 지원하도록 특별히 디자인된 5가지 새 컬렉션 형식을 도입했습니다. 이러한 새 형식은 스레드로부터의 안전성을 달성하기 위해 다양한 종류의 효율적인 잠금 및 잠금 해제 동기화 메커니즘을 사용합니다. 동기화로 인해 작업에 오버헤드가 더해집니다. 사용되는 동기화의 종류, 수행되는 작업의 종류 및 컬렉션에 동시에 액세스하려는 스레드의 수와 같은 기타 요인에 따라 오버헤드의 양이 달라집니다.  
   
  일부 시나리오에서는 동기화 오버헤드가 거의 없고 다중 스레드 형식을 외부 잠금으로 보호하는 경우 스레드로부터 안전하지 않은 형식보다 훨씬 더 빠르게 수행하고 크기를 조정할 수 있습니다. 다른 시나리오에서는 오버헤드로 인해 스레드로부터 안전한 형식이 외부에서 잠근 스레드로부터 안전하지 않은 버전의 형식보다 동일하거나 훨씬 더 느리게 수행하고 크기를 조정하게 될 수 있습니다.  
   
@@ -64,6 +64,6 @@ ms.locfileid: "49123568"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Collections.Concurrent?displayProperty=nameWithType>  
-- [스레드로부터 안전한 컬렉션](../../../../docs/standard/collections/thread-safe/index.md)  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType>
+- [스레드로부터 안전한 컬렉션](../../../../docs/standard/collections/thread-safe/index.md)
 - [병렬 프로그래밍](../../../../docs/standard/parallel-programming/index.md)

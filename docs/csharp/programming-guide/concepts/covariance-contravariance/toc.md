@@ -1,7 +1,0 @@
-# [공 분산 및 반공 분산](index.md)
-## [제네릭 인터페이스의 가변성](variance-in-generic-interfaces.md)
-### [Variant 제네릭 인터페이스 만들기](creating-variant-generic-interfaces.md)
-### [제네릭 컬렉션용 인터페이스의 가변성 사용](using-variance-in-interfaces-for-generic-collections.md)
-## [대리자의 가변성](variance-in-delegates.md)
-### [대리자의 가변성 사용](using-variance-in-delegates.md)
-### [Func 및 Action 제네릭 대리자에 가변성 사용](using-variance-for-func-and-action-generic-delegates.md)

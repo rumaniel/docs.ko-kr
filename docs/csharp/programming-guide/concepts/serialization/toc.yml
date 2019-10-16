@@ -1,0 +1,9 @@
+- name: 'Serialization(C#)'
+  href: index.md
+  items:
+    - name: '방법: XML 파일에 개체 데이터 쓰기'
+      href: how-to-write-object-data-to-an-xml-file.md
+    - name: '방법: XML 파일에서 개체 데이터 읽기'
+      href: how-to-read-object-data-from-an-xml-file.md
+    - name: '연습: Visual Studio에서 개체 유지'
+      href: walkthrough-persisting-an-object-in-visual-studio.md

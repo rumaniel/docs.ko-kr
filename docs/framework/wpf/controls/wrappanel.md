@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WrapPanel control [WPF]
 - content [WPF], sequentially positioning
 ms.assetid: f0acb1b4-df71-4c5a-b4a4-98f189002537
-ms.openlocfilehash: a8072a90984e5b9b926ab28d7f0239a71b754b73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 530c41938ae4abb893fd91d64804c7aaa2d430b5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023795"
 ---
 # <a name="wrappanel"></a>WrapPanel
-<xref:System.Windows.Controls.WrapPanel> 요소에서 왼쪽에서 오른쪽, 내용을 포함 하는 상자의 가장자리에 다음 줄으로 자식 요소를 배치 합니다.  
+<xref:System.Windows.Controls.WrapPanel> 요소에서 왼쪽에서 오른쪽, 콘텐츠를 포함 하는 상자의 가장자리에서 다음 줄으로 자식 요소를 배치 합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Panel>  
@@ -34,8 +34,8 @@ ms.locfileid: "33554030"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>관련 단원  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)  
+ [레이아웃](../advanced/layout.md)  
   
- [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 개요](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 개요](scrollviewer-overview.md)

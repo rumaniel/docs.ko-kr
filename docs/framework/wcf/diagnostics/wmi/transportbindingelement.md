@@ -2,12 +2,12 @@
 title: TransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 54ecfbee-53c0-410c-a7fa-a98f2e40c545
-ms.openlocfilehash: 79d8b1f4a5127ca36eb57954cff6ee6a97e55e41
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bdb5ca7400a41dd724c2ad7fc76695a82874ded6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641621"
 ---
 # <a name="transportbindingelement"></a>TransportBindingElement
 TransportBindingElement  
@@ -64,5 +64,6 @@ class TransportBindingElement : BindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.TransportBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.TransportBindingElement>

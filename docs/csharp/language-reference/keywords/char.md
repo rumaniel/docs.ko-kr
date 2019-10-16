@@ -1,5 +1,6 @@
 ---
-title: char 키워드(C# 참조)
+title: char 키워드 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - char
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - char data type [C#]
 ms.assetid: b51cf4fb-124c-4067-af48-afbac122b228
-ms.openlocfilehash: 95ecfaaf1397f7a4598faba6528b38170062145a
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 63f8871926e8c279678c59a2256bef46b2ff514e
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43742028"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698784"
 ---
 # <a name="char-c-reference"></a>char(C# 참조)
 
@@ -26,29 +27,28 @@ ms.locfileid: "43742028"
 
 ## <a name="literals"></a>리터럴
 
-`char` 형식의 상수는 문자 리터럴, 16진수 이스케이프 시퀀스 또는 유니코드 표현으로 기록될 수 있습니다. 정수 문자 코드를 캐스트할 수도 있습니다. 다음 예제에서 `char` 변수 4개는 동일 문자 `X`를 사용하여 초기화됩니다.
+`char` 형식의 상수는 문자 리터럴, 16진수 이스케이프 시퀀스 또는 유니코드 표현으로 기록될 수 있습니다. 정수 문자 코드를 캐스트할 수도 있습니다. 다음 예제에서는 `char` 배열의 네 요소가 같은 문자 `X`로 초기화됩니다.
 
 [!code-csharp[csrefKeywordsTypes#19](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsTypes/CS/keywordsTypes.cs#19)]
 
 ## <a name="conversions"></a>변환
 
-`char`는 [ushort](../../../csharp/language-reference/keywords/ushort.md), [int](../../../csharp/language-reference/keywords/int.md), [uint](../../../csharp/language-reference/keywords/uint.md), [long](../../../csharp/language-reference/keywords/long.md), [ulong](../../../csharp/language-reference/keywords/ulong.md), [float](../../../csharp/language-reference/keywords/float.md), [double](../../../csharp/language-reference/keywords/double.md) 또는 [decimal](../../../csharp/language-reference/keywords/decimal.md)로 암시적으로 변환될 수 있습니다. 그러나 기타 형식에서 `char` 형식으로의 암시적 변환은 없습니다.
+`char`는 [ushort](../builtin-types/integral-numeric-types.md), [int](../builtin-types/integral-numeric-types.md), [uint](../builtin-types/integral-numeric-types.md), [double](../builtin-types/floating-point-numeric-types.md) 또는 [decimal](../builtin-types/floating-point-numeric-types.md)로 암시적으로 변환될 수 있습니다. 그러나 기타 형식에서 `char` 형식으로의 암시적 변환은 없습니다.
 
 <xref:System.Char?displayProperty=nameWithType> 형식은 `char` 값 작업을 위한 몇 가지 정적 메서드를 제공합니다.
 
-## <a name="c-language-specification"></a>C# 언어 사양
+## <a name="c-language-specification"></a>C# 언어 사양  
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+자세한 내용은 [C# 언어 사양](../language-specification/index.md)의 [정수 형식](~/_csharplang/spec/types.md#integral-types)을 참조하세요. 언어 사양은 C# 구문 및 사용법에 대 한 신뢰할 수 있는 소스 됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Char>  
-- [C# 참조](../../../csharp/language-reference/index.md)  
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
-- [정수 계열 형식 표](../../../csharp/language-reference/keywords/integral-types-table.md)  
-- [기본 제공 형식 표](../../../csharp/language-reference/keywords/built-in-types-table.md)  
-- [암시적 숫자 변환 표](../../../csharp/language-reference/keywords/implicit-numeric-conversions-table.md)  
-- [명시적 숫자 변환 표](../../../csharp/language-reference/keywords/explicit-numeric-conversions-table.md)  
-- [Nullable 형식](../../../csharp/programming-guide/nullable-types/index.md)  
-- [문자열](../../../csharp/programming-guide/strings/index.md)
+- <xref:System.Char>
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](./index.md)
+- [정수 형식](../builtin-types/integral-numeric-types.md)
+- [기본 제공 형식 표](./built-in-types-table.md)
+- [암시적 숫자 변환 표](./implicit-numeric-conversions-table.md)
+- [명시적 숫자 변환 표](./explicit-numeric-conversions-table.md)
+- [문자열](../../programming-guide/strings/index.md)

@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: ad0b5717-3d32-41ad-a4d7-072c3e492b82
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c570f812ec06c6ead0d12dc14c33fcdfd1f075c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 0fb14f919d0737b9d9c25bcd62a3cfb7228ff432
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44204879"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916085"
 ---
 # <a name="xml-schema-xsd-validation-with-xmlschemacollection"></a>XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사
 <xref:System.Xml.Schema.XmlSchemaCollection>을 사용하여 XSD(XML 스키마 정의 언어) 스키마에 대해 XML 문서의 유효성을 검사할 수 있습니다. <xref:System.Xml.Schema.XmlSchemaCollection>은 스키마를 컬렉션에 저장함으로써 유효성을 검사할 때마다 메모리에 로드되지 않으므로 성능이 향상됩니다. 스키마가 스키마 컬렉션에 있을 경우 `schemaLocation` 특성을 사용하여 컬렉션에서 스키마를 찾을 수 있습니다.  
   
 > [!IMPORTANT]
->  이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다. <xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)을 참조하세요.  
+> 이제 <xref:System.Xml.Schema.XmlSchemaCollection> 클래스는 사용되지 않으며 <xref:System.Xml.Schema.XmlSchemaSet> 클래스로 대체되었습니다. <xref:System.Xml.Schema.XmlSchemaSet> 클래스에 대한 자세한 내용은 [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)을 참조하세요.  
   
  다음 예제에서는 데이터 파일의 루트 요소를 보여 줍니다.  
   
@@ -210,7 +210,7 @@ while(vr.Read()) {
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.XmlParserContext>  
-- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>  
-- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XmlParserContext>
+- <xref:System.Xml.XmlValidatingReader.ValidationEventHandler?displayProperty=nameWithType>
+- <xref:System.Xml.XmlValidatingReader.Schemas%2A?displayProperty=nameWithType>
 - [XmlSchemaCollection 스키마 컴파일](../../../../docs/standard/data/xml/xmlschemacollection-schema-compilation.md)

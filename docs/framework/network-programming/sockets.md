@@ -15,12 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 3a8e141d79a7f261cd969dc78a656a89ffc8bc30
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: cffad6b4677a880bd63f5ae0232c639f7a262c59
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196533"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047250"
 ---
 # <a name="sockets"></a>소켓
 <xref:System.Net.Sockets> 네임스페이스에는 Windows 소켓 인터페이스의 관리되는 구현이 포함됩니다. <xref:System.Net> 네임스페이스에 있는 다른 모든 네트워크 액세스 클래스는 이 소켓 구현 위에 구축됩니다.  
@@ -29,7 +29,8 @@ ms.locfileid: "50196533"
   
  **Socket** 클래스는 동기 및 비동기의 두 가지 기본 모드를 지원합니다. 동기 모드에서 네트워크 작업을 수행하는 함수 호출(예: <xref:System.Net.Sockets.Socket.Send%2A> 및 <xref:System.Net.Sockets.Socket.Receive%2A>)은 작업이 완료될 때까지 기다린 후 제어를 호출하는 프로그램에 반환합니다. 비동기 모드에서는 이러한 호출이 즉시 반환됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- [방법: 소켓 만들기](../../../docs/framework/network-programming/how-to-create-a-socket.md)  
-    
- [응용 프로그램 프로토콜 사용](../../../docs/framework/network-programming/using-application-protocols.md)
+## <a name="see-also"></a>참고 항목
+
+- [방법: 소켓 만들기](how-to-create-a-socket.md)
+
+- [애플리케이션 프로토콜 사용](using-application-protocols.md)

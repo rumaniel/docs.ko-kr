@@ -1,25 +1,26 @@
 ---
-title: '&lt;cancelRequestedQueries&gt;'
+title: <cancelRequestedQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: eab5af7e-76fa-434d-9d36-873e995cee05
-ms.openlocfilehash: 2abb2dc05bfec4419ca49d1517084ebc208e81e4
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 0d08612ce5d74f4f7f505c538187ddecea610132
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757023"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398822"
 ---
-# <a name="ltcancelrequestedqueriesgt"></a>&lt;cancelRequestedQueries&gt;
+# <a name="cancelrequestedqueries"></a>\<cancelRequestedQueries>
 부모 활동에 의한 자식 활동 취소 요청을 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다. 추적 참가자가 취소 요청 레코드 개체를 구독하려면 쿼리가 필요합니다.  
   
- 추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md) 을 참조 하세요.  
   
-\<system.serviceModel>  
-\<tracking>  
-\<trackingProfile>  
-\<workflow>  
-\<cancelRequestedQueries>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<컴퓨터. ServiceModel >** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<추적 >** ](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Tracking&gt >** ](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<워크플로 >** ](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<cancelRequestedQueries >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -44,16 +45,17 @@ ms.locfileid: "32757023"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<cancelRequestedQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/cancelrequestedquery.md)|부모 활동에 의한 자식 활동 취소 요청을 추적하는 데 사용되는 쿼리입니다.|  
+|[\<cancelRequestedQuery>](cancelrequestedquery.md)|부모 활동에 의한 자식 활동 취소 요청을 추적하는 데 사용되는 쿼리입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소는 **activityDefinitionId** 속성입니다.|  
+|[\<workflow>](workflow.md)|**ActivityDefinitionId** 속성으로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>참고자료
+
+- [워크플로 추적](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)

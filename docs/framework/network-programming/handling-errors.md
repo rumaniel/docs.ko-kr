@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: d199219b36e2cc06314b38303fb2296f9f3794ea
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: bb478f0742e85cadd9509de823abb0d486170d37
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198343"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048505"
 ---
 # <a name="handling-errors"></a>오류 처리
 <xref:System.Net.WebRequest> 및 <xref:System.Net.WebResponse> 클래스는 시스템 예외(예: <xref:System.ArgumentException>) 및 웹 관련 예외(<xref:System.Net.WebRequest.GetResponse%2A> 메서드에서 throw된 <xref:System.Net.WebException>)를 둘 다 throw합니다.  
@@ -58,7 +58,7 @@ ms.locfileid: "50198343"
 |SendFailure|전체 요청을 원격 서버로 보낼 수 없습니다.|  
 |ServerProtocolViolation|서버 응답이 유효한 HTTP 응답이 아니었습니다.|  
 |성공|오류가 발생하지 않았습니다.|  
-|시간 제한|요청에 대해 설정된 시간 제한 내에 응답이 수신되지 않았습니다.|  
+|제한 시간|요청에 대해 설정된 시간 제한 내에 응답이 수신되지 않았습니다.|  
 |TrustFailure|서버 인증서를 유효성 검사할 수 없습니다.|  
 |MessageLengthLimitExceeded|요청을 보내거나 서버에서 응답을 받을 때 지정된 제한을 초과한 메시지를 받았습니다.|  
 |보류 중|내부 비동기 요청이 보류 중입니다.|  
@@ -163,10 +163,11 @@ Catch e As Exception
 End Try  
 ```  
   
- <xref:System.Net.Sockets.Socket> 클래스를 사용하는 응용 프로그램은 Windows 소켓에서 오류가 발생할 경우 <xref:System.Net.Sockets.SocketException>을 throw합니다. <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스는 **Socket** 클래스의 맨 위에 빌드되고 **SocketExceptions**도 throw합니다.  
+ <xref:System.Net.Sockets.Socket> 클래스를 사용하는 애플리케이션은 Windows 소켓에서 오류가 발생할 경우 <xref:System.Net.Sockets.SocketException>을 throw합니다. <xref:System.Net.Sockets.TcpClient>, <xref:System.Net.Sockets.TcpListener> 및 <xref:System.Net.Sockets.UdpClient> 클래스는 **Socket** 클래스의 맨 위에 빌드되고 **SocketExceptions**도 throw합니다.  
   
  **SocketException**이 throw되면 **SocketException** 클래스는 마지막으로 발생한 운영 체제 소켓 오류로 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 속성을 설정합니다. 소켓 오류 코드에 대한 자세한 내용은 MSDN에서 Winsock 2.0 API 오류 코드 문서를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [예외 처리 기본 사항](../../../docs/standard/exceptions/exception-handling-fundamentals.md)  
- [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>참고 항목
+
+- [예외 처리 기본 사항](../../standard/exceptions/exception-handling-fundamentals.md)
+- [데이터 요청](requesting-data.md)

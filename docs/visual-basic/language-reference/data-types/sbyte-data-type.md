@@ -14,12 +14,12 @@ helpviewer_keywords:
 - data types [Visual Basic], integral
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
-ms.openlocfilehash: 1b10379e626c8e53b2e1e6eddaa964f13f9e4b62
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f4e95aacc8e7063cbac8f9ed8e117137836f08bd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196923"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647026"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte 데이터 형식 (Visual Basic)
 
@@ -58,27 +58,27 @@ Dim number As SByte = &H_F9
 
 - 사용 하 여 컴파일하면 정수 범위 검사를 사용 하지 않도록 설정 된 `/removeintchecks` 컴파일러 스위치입니다.
 
-- 사용 하 여는 [형식 문자](../../programming-guide\language-features\data-types/type-characters.md) 명시적으로 할당 하려는 리터럴 값을 정의 하는 `SByte`합니다. 다음 예제에서는 할당 음수 리터럴이 `Short` 값을 `SByte`입니다. 음수를 참고 하십시오 숫자 리터럴의 상위 단어의 상위 비트를 설정 해야 합니다. 이 예의 경우이 비트는 리터럴 15 `Short` 값입니다.
+- 사용 하 여는 [형식 문자](../../programming-guide/language-features/data-types/type-characters.md) 명시적으로 할당 하려는 리터럴 값을 정의 하는 `SByte`합니다. 다음 예제에서는 할당 음수 리터럴이 `Short` 값을 `SByte`입니다. 음수를 참고 하십시오 숫자 리터럴의 상위 단어의 상위 비트를 설정 해야 합니다. 이 예의 경우이 비트는 리터럴 15 `Short` 값입니다.
 
    [!code-vb[SByteTypeChars](../../../../samples/snippets/visualbasic/language-reference/data-types/sbyte-assignment.vb#1)]
 
 ## <a name="programming-tips"></a>프로그래밍 팁
   
--   **CLS 규격입니다.** 합니다 `SByte` 데이터 형식이 아닙니다 부분 합니다 [공용 언어 사양](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), CLS 규격 코드를 사용 하는 구성 요소를 사용할 수 없습니다 있도록 합니다.
+- **CLS 규격입니다.** 합니다 `SByte` 데이터 형식이 아닙니다 부분 합니다 [공용 언어 사양](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), CLS 규격 코드를 사용 하는 구성 요소를 사용할 수 없습니다 있도록 합니다.
 
--   **확대 합니다.** `SByte` 데이터 형식으로 확장 되는지를 `Short`, `Integer`, `Long`를 `Decimal`를 `Single`, 및 `Double`합니다. 즉, 변환할 수 있습니다 `SByte` 발생 없이 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.
+- **확대 합니다.** `SByte` 데이터 형식으로 확장 되는지를 `Short`, `Integer`, `Long`를 `Decimal`를 `Single`, 및 `Double`합니다. 즉, 변환할 수 있습니다 `SByte` 발생 없이 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.
   
--   **형식 문자입니다.** `SByte` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
+- **형식 문자입니다.** `SByte` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.SByte?displayProperty=nameWithType> 구조체입니다.
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.SByte?displayProperty=nameWithType> 구조체입니다.
   
 ## <a name="see-also"></a>참고자료
 
- <xref:System.SByte?displayProperty=nameWithType>  
- [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)  
- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Short 데이터 형식](../../../visual-basic/language-reference/data-types/short-data-type.md)  
- [Integer 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long 데이터 형식](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.SByte?displayProperty=nameWithType>
+- [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
+- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Short 데이터 형식](../../../visual-basic/language-reference/data-types/short-data-type.md)
+- [Integer 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Long 데이터 형식](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

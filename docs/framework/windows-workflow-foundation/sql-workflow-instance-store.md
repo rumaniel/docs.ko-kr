@@ -2,12 +2,12 @@
 title: SQL 워크플로 인스턴스 저장소
 ms.date: 03/30/2017
 ms.assetid: 8cd2f8a5-4bf8-46ea-8909-c7fdb314fabc
-ms.openlocfilehash: d35cf6e94b010291276b5a543df1038715a0d50c
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 7cdd852795283660b8077e14686ad7ce4af76673
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49453020"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626206"
 ---
 # <a name="sql-workflow-instance-store"></a>SQL 워크플로 인스턴스 저장소
 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]는 워크플로가 SQL Server 2005 또는 SQL Server 2008 데이터베이스에서 워크플로 인스턴스에 대한 상태 정보를 유지할 수 있는 SQL 워크플로 인스턴스 저장소와 함께 제공됩니다. 이 기능은 주로 지속성 프레임워크의 추상 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 클래스에서 파생되는 <xref:System.Runtime.DurableInstancing.InstanceStore> 클래스의 형태로 구현됩니다. SQL 워크플로 인스턴스 저장소 기능은 호스트가 지속성 명령을 저장소에 보내는 데 사용하는 지속성 API의 구체적인 구현인 SQL 지속성 공급자를 구성합니다.  
@@ -22,19 +22,20 @@ ms.locfileid: "49453020"
   
 ## <a name="in-this-section"></a>섹션 내용  
   
--   [SQL 워크플로 인스턴스 저장소의 속성](../../../docs/framework/windows-workflow-foundation/properties-of-sql-workflow-instance-store.md)  
+- [SQL 워크플로 인스턴스 저장소의 속성](properties-of-sql-workflow-instance-store.md)  
   
--   [방법: 워크플로 및 워크플로 서비스에 SQL 지속성 사용](../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
+- [방법: 워크플로 및 워크플로 서비스에 대 한 SQL 지 속성 사용](how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)  
   
--   [인스턴스 활성화](../../../docs/framework/windows-workflow-foundation/instance-activation.md)  
+- [인스턴스 활성화](instance-activation.md)  
   
--   [쿼리 지원](../../../docs/framework/windows-workflow-foundation/support-for-queries.md)  
+- [쿼리 지원](support-for-queries.md)  
   
--   [저장소 확장성](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)  
+- [저장소 확장성](store-extensibility.md)  
   
--   [보안](../../../docs/framework/windows-workflow-foundation/security.md)  
+- [보안](security.md)  
   
--   [SQL Server 지속성 데이터베이스](../../../docs/framework/windows-workflow-foundation/sql-server-persistence-database.md)  
+- [SQL Server 지속성 데이터베이스](sql-server-persistence-database.md)  
   
-## <a name="see-also"></a>참고 항목  
- [지 속성 샘플](https://go.microsoft.com/fwlink/?LinkID=177735)
+## <a name="see-also"></a>참고자료
+
+- [지 속성 샘플](https://go.microsoft.com/fwlink/?LinkID=177735)

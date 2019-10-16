@@ -8,26 +8,26 @@ helpviewer_keywords:
 - events [WPF], windows
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
-ms.openlocfilehash: b5a3b71758fea9c98c04377b910ba07b49617696
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010347"
 ---
 # <a name="events-wpf"></a>이벤트(WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 응용 프로그램의 요소 트리에 있는 다양한 리스너의 처리기를 호출할 수 있는 라우트된 이벤트를 소개합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 애플리케이션의 요소 트리에 있는 다양한 리스너의 처리기를 호출할 수 있는 라우트된 이벤트를 소개합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)  
- [연결된 이벤트 개요](../../../../docs/framework/wpf/advanced/attached-events-overview.md)  
- [개체 수명 이벤트](../../../../docs/framework/wpf/advanced/object-lifetime-events.md)  
- [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](../../../../docs/framework/wpf/advanced/marking-routed-events-as-handled-and-class-handling.md)  
- [미리 보기 이벤트](../../../../docs/framework/wpf/advanced/preview-events.md)  
- [속성 변경 이벤트](../../../../docs/framework/wpf/advanced/property-change-events.md)  
- [Visual Basic 및 WPF 이벤트 처리](../../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)  
- [약한 이벤트 패턴](../../../../docs/framework/wpf/advanced/weak-event-patterns.md)  
- [방법 항목](../../../../docs/framework/wpf/advanced/events-how-to-topics.md)  
+ [라우트된 이벤트 개요](routed-events-overview.md)  
+ [연결된 이벤트 개요](attached-events-overview.md)  
+ [개체 수명 이벤트](object-lifetime-events.md)  
+ [라우트된 이벤트를 처리된 것으로 표시 및 클래스 처리](marking-routed-events-as-handled-and-class-handling.md)  
+ [미리 보기 이벤트](preview-events.md)  
+ [속성 변경 이벤트](property-change-events.md)  
+ [Visual Basic 및 WPF 이벤트 처리](visual-basic-and-wpf-event-handling.md)  
+ [약한 이벤트 패턴](weak-event-patterns.md)  
+ [방법 항목](events-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.RoutedEvent>  
@@ -37,13 +37,13 @@ ms.locfileid: "33542589"
  <xref:System.Windows.RoutingStrategy>  
   
 ## <a name="related-sections"></a>관련 단원  
- [WPF 아키텍처](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF의 XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [기본 요소](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [요소 트리 및 Serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [속성](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [입력](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [리소스](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [WPF 콘텐츠 모델](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [스레딩 모델](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF 아키텍처](wpf-architecture.md)  
+  [WPF의 XAML](xaml-in-wpf.md)  
+  [기본 요소](base-elements.md)  
+  [요소 트리 및 Serialization](element-tree-and-serialization.md)  
+  [속성](properties-wpf.md)  
+  [입력](input-wpf.md)  
+  [리소스](resources-wpf.md)  
+  [스타일 지정 및 템플릿](../controls/styling-and-templating.md)  
+  [WPF 콘텐츠 모델](../controls/wpf-content-model.md)  
+  [스레딩 모델](threading-model.md)

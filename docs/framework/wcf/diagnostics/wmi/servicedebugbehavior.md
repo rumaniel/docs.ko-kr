@@ -2,12 +2,12 @@
 title: ServiceDebugBehavior
 ms.date: 03/30/2017
 ms.assetid: a5ec9061-1e95-43fb-b0d9-dbd0a7bc3c44
-ms.openlocfilehash: 68b2350f257bc95d8e17f4b9049d67c7f67becae
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 2e38eb2c2d42ffc5436562b254a42215ccabbab2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956964"
 ---
 # <a name="servicedebugbehavior"></a>ServiceDebugBehavior
 ServiceDebugBehavior  
@@ -72,5 +72,6 @@ class ServiceDebugBehavior : Behavior
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Description.ServiceDebugBehavior>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Description.ServiceDebugBehavior>

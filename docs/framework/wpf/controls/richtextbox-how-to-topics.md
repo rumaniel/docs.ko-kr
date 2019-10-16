@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], how-to topics
 ms.assetid: 36e9f98e-f968-42d8-adb6-9e78c814aec0
-ms.openlocfilehash: 8542076ca9552ae0d5ace74f1a287f5cd39aff21
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: f4f0cb15e1dc50fee7ca76e8cfbf31e6eaccd02b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971082"
 ---
 # <a name="richtextbox-how-to-topics"></a>RichTextBox 방법 항목
 이 섹션에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주는 예제를 제공 합니다 <xref:System.Windows.Controls.RichTextBox> 제어 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [RichTextBox에서 텍스트 콘텐츠 추출](../../../../docs/framework/wpf/controls/how-to-extract-the-text-content-from-a-richtextbox.md)  
- [프로그래밍 방식으로 RichTextBox의 선택 변경](../../../../docs/framework/wpf/controls/change-selection-in-a-richtextbox-programmatically.md)  
- [RichTextBox 콘텐츠 저장, 로드 및 인쇄](../../../../docs/framework/wpf/controls/how-to-save-load-and-print-richtextbox-content.md)  
- [RichTextBox에서 사용자 지정 상황에 맞는 메뉴의 위치 지정](../../../../docs/framework/wpf/controls/how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
- [방법: RichTextBox의 기본 콘텐츠 호스트를 대체 합니다.](https://msdn.microsoft.com/library/dec1b2ce-9ca5-4bb2-bf54-f8a80a3c8beb)  
+ [RichTextBox에서 텍스트 콘텐츠 추출](how-to-extract-the-text-content-from-a-richtextbox.md)  
+ [프로그래밍 방식으로 RichTextBox의 선택 변경](change-selection-in-a-richtextbox-programmatically.md)  
+ [RichTextBox 콘텐츠 저장, 로드 및 인쇄](how-to-save-load-and-print-richtextbox-content.md)  
+ [RichTextBox에서 사용자 지정 상황에 맞는 메뉴의 위치 지정](how-to-position-a-custom-context-menu-in-a-richtextbox.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Controls.TextBox>  
- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Controls.TextBox>
+- [WPF의 문서](../advanced/documents-in-wpf.md)
+- [유동 문서 개요](../advanced/flow-document-overview.md)

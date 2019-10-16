@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc957b345c1e66059551508f73e37e0f6d69f6cd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a5417f330040c2b6ce08a53920f9a92117624a80
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399745"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045768"
 ---
 # <a name="viewing-type-information"></a>형식 정보 보기
 <xref:System.Type?displayProperty=nameWithType> 클래스는 리플렉션의 핵심입니다. 공용 언어 런타임은 리플렉션이 요청할 때 로드된 형식의 **Type**을 만듭니다. **Type** 개체의 메서드, 필드, 속성 및 중첩 클래스를 사용하여 해당 형식에 대한 모든 것을 찾을 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "33399745"
  <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 또는 <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>를 사용하여 로드되지 않은 어셈블리에서 **Type** 개체를 가져와 원하는 형식 또는 형식 이름을 전달합니다. <xref:System.Type.GetType%2A?displayProperty=nameWithType>을 사용하여 이미 로드된 어셈블리에서 **Type** 개체를 가져옵니다. <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType> 및 <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>를 사용하여 모듈 **Type** 개체를 가져옵니다.  
   
 > [!NOTE]
->  제네릭 형식 및 메서드를 검사하고 조작하려면 [리플렉션 및 제네릭 형식](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md) 및 [방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)를 참조하세요.  
+> 제네릭 형식 및 메서드를 검사하고 조작하려면 [리플렉션 및 제네릭 형식](reflection-and-generic-types.md) 및 [방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화](how-to-examine-and-instantiate-generic-types-with-reflection.md)를 참조하세요.  
   
  다음 예제에서는 어셈블리에 대한 <xref:System.Reflection.Assembly> 개체 및 모듈을 가져오는 데 필요한 구문을 보여 줍니다.  
   
@@ -74,19 +74,20 @@ ms.locfileid: "33399745"
  [!code-csharp[Conceptual.Types.ViewInfo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.types.viewinfo/cs/source4.cs#4)]
  [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Reflection.BindingFlags>  
- <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>  
- <xref:System.Type.GetFields%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>  
- <xref:System.Reflection.MemberInfo>  
- <xref:System.Reflection.ConstructorInfo>  
- <xref:System.Reflection.MethodInfo>  
- <xref:System.Reflection.FieldInfo>  
- <xref:System.Reflection.EventInfo>  
- <xref:System.Reflection.ParameterInfo>  
- [리플렉션 및 제네릭 형식](../../../docs/framework/reflection-and-codedom/reflection-and-generic-types.md)
+## <a name="see-also"></a>참고 항목
+
+- <xref:System.Reflection.BindingFlags>
+- <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetMembers%2A?displayProperty=nameWithType>
+- <xref:System.Type.GetFields%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Module.GetType%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.Module.GetTypes%2A?displayProperty=nameWithType>
+- <xref:System.Reflection.MemberInfo>
+- <xref:System.Reflection.ConstructorInfo>
+- <xref:System.Reflection.MethodInfo>
+- <xref:System.Reflection.FieldInfo>
+- <xref:System.Reflection.EventInfo>
+- <xref:System.Reflection.ParameterInfo>
+- [리플렉션 및 제네릭 형식](reflection-and-generic-types.md)

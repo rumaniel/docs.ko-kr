@@ -1,31 +1,32 @@
 ---
-title: '&lt;endToEndTracing&gt;'
+title: <endToEndTracing>
 ms.date: 03/30/2017
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
-ms.openlocfilehash: 855f579241dfd495e7f8603ce3bd57aa2556ca2d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 1a274f15800c6a132994a2437943c83982de9de0
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753471"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855289"
 ---
-# <a name="ltendtoendtracinggt"></a>&lt;endToEndTracing&gt;
-서비스 응용 프로그램 실행 중에 종단 간 추적의 다양한 측면을 사용하거나 사용하지 않도록 설정할 수 있는 구성 요소입니다.  
+# <a name="endtoendtracing"></a>\<endToEndTracing>
+서비스 애플리케이션 실행 중에 엔드투엔드 추적의 다양한 측면을 사용하거나 사용하지 않도록 설정할 수 있는 구성 요소입니다.  
   
- \<system.ServiceModel>  
-\<진단 >  
-\<endToEndTracing >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<진단 >** ](diagnostics.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<endToEndTracing >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<system.serviceModel>  
-   <diagnostics>  
-       <endToEndTracing activityTracing="Boolean"  
-          messageFlowTracing="Boolean"  
-          propagateActivity="Boolean" />  
-   </diagnostics>  
-</system.serviceModel>  
+<system.serviceModel>
+  <diagnostics>
+    <endToEndTracing activityTracing="Boolean"
+                     messageFlowTracing="Boolean"
+                     propagateActivity="Boolean" />
+  </diagnostics>
+</system.serviceModel>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -33,7 +34,7 @@ ms.locfileid: "32753471"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |`activityTracing`|활동 추적 사용 여부를 지정하는 부울 값입니다.|  
 |`messageFlowTracing`|메시지 흐름 추적 사용 여부를 지정하는 부울 값입니다.|  
@@ -46,11 +47,12 @@ ms.locfileid: "32753471"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<진단 >](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|관리자의 런타임 검사 및 제어를 위한 WCF 설정을 정의합니다.|  
+|[\<diagnostics>](diagnostics.md)|관리자의 런타임 검사 및 제어를 위한 WCF 설정을 정의합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.DiagnosticSection>  
- <xref:System.ServiceModel.Diagnostics>  
- <xref:System.ServiceModel.Configuration.DiagnosticSection.EndToEndTracing%2A>  
- <xref:System.ServiceModel.Configuration.EndToEndTracingElement>  
- [종단 간 추적](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.DiagnosticSection>
+- <xref:System.ServiceModel.Diagnostics>
+- <xref:System.ServiceModel.Configuration.DiagnosticSection.EndToEndTracing%2A>
+- <xref:System.ServiceModel.Configuration.EndToEndTracingElement>
+- [엔드투엔드 추적](../../../wcf/diagnostics/tracing/end-to-end-tracing.md)

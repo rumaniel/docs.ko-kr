@@ -24,29 +24,27 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: b27a5dec4483afb0f6c66c3a015c89967483cb61
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b2da9600e6947a1efcb13fc8b1127665cea63071
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47087504"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972197"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>구성 파일을 사용하여 앱 구성
-.NET Framework에서 개발자와 관리자는 구성 파일을 통해 응용 프로그램이 실행되는 방식을 유연하게 제어할 수 있습니다. 구성 파일은 필요에 따라 변경할 수 있는 XML 파일입니다. 관리자는 응용 프로그램에서 액세스할 수 있는 보호되는 리소스와 응용 프로그램에서 사용할 어셈블리 버전 그리고 원격 응용 프로그램과 개체의 위치를 제어할 수 있습니다. 개발자는 설정을 구성 파일에 저장할 수 있으므로, 설정이 변경될 때마다 매번 응용 프로그램을 다시 컴파일할 필요가 없습니다. 이 단원에서는 응용 프로그램 구성과 유용성에 대해 설명합니다.  
+.NET Framework에서 개발자와 관리자는 구성 파일을 통해 애플리케이션이 실행되는 방식을 유연하게 제어할 수 있습니다. 구성 파일은 필요에 따라 변경할 수 있는 XML 파일입니다. 관리자는 애플리케이션에서 액세스할 수 있는 보호되는 리소스와 애플리케이션에서 사용할 어셈블리 버전 그리고 원격 애플리케이션과 개체의 위치를 제어할 수 있습니다. 개발자는 설정을 구성 파일에 저장할 수 있으므로, 설정이 변경될 때마다 매번 애플리케이션을 다시 컴파일할 필요가 없습니다. 이 단원에서는 애플리케이션 구성과 유용성에 대해 설명합니다.  
   
 > [!NOTE]
->  관리 코드는 <xref:System.Configuration> 네임스페이스의 클래스를 사용하여 구성 파일에서 설정을 읽습니다. 그러나 구성 파일에 설정을 쓸 수는 없습니다.  
+> 관리 코드는 <xref:System.Configuration> 네임스페이스의 클래스를 사용하여 구성 파일에서 설정을 읽습니다. 그러나 구성 파일에 설정을 쓸 수는 없습니다.  
   
- 이 항목에서는 구성 파일의 구문에 대해 설명하고 컴퓨터, 응용 프로그램 및 보안 등 세 가지 유형의 구성 파일에 대한 정보를 제공합니다.  
+ 이 항목에서는 구성 파일의 구문에 대해 설명하고 컴퓨터, 애플리케이션 및 보안 등 세 가지 유형의 구성 파일에 대한 정보를 제공합니다.  
   
 ## <a name="configuration-file-format"></a>구성 파일 서식  
  구성 파일에는 구성 정보를 설정하는 논리적 데이터 구조인 요소가 포함되어 있습니다. 구성 파일에서는 태그를 사용하여 요소의 시작과 끝을 표시합니다. 예를 들어 `<runtime>` 요소는 `<runtime>`*자식 요소*`</runtime>`로 구성됩니다. 빈 요소는 `<runtime/>` 또는 `<runtime></runtime>`으로 기록됩니다.  
   
  모든 XML 파일에서와 같이 구성 파일의 구문은 대/소문자를 구분합니다.  
   
- 요소의 시작 태그 안에 이름/값 쌍으로 된 미리 정의된 특성을 사용하여 구성 설정을 지정합니다. 다음 예제에서는 런타임에 어셈블리를 찾을 위치를 지정하는 `<codeBase>` 요소의 두 가지 특성인 `version`과 `href`를 지정합니다. 자세한 내용은 [어셈블리 위치 지정](../../../docs/framework/configure-apps/specify-assembly-location.md)을 참조하세요.  
+ 요소의 시작 태그 안에 이름/값 쌍으로 된 미리 정의된 특성을 사용하여 구성 설정을 지정합니다. 다음 예제에서는 런타임에 어셈블리를 찾을 위치를 지정하는 `<codeBase>` 요소의 두 가지 특성인 `version`과 `href`를 지정합니다. 자세한 내용은 [어셈블리 위치 지정](specify-assembly-location.md)을 참조하세요.  
   
 ```xml  
 <codeBase version="2.0.0.0"  
@@ -54,80 +52,79 @@ ms.locfileid: "47087504"
 ```  
   
 ## <a name="machine-configuration-files"></a>컴퓨터 구성 파일  
- 컴퓨터 구성 파일인 Machine.config 에는 전체 컴퓨터에 적용되는 설정이 포함되어 있습니다. 이 파일은 %*런타임 설치 경로*%\Config 디렉터리에 있습니다. Machine.config는 컴퓨터 전반의 어셈블리 바인딩, 기본 제공 [원격 채널](https://msdn.microsoft.com/library/6e9b60e0-9bc0-47b4-a8ef-3b78585f9a18) 및 ASP.NET에 대한 구성 설정을 포함합니다.  
+ 컴퓨터 구성 파일인 Machine.config 에는 전체 컴퓨터에 적용되는 설정이 포함되어 있습니다. 이 파일은 %*런타임 설치 경로*%\Config 디렉터리에 있습니다. Machine.config는 컴퓨터 전반의 어셈블리 바인딩, 기본 제공 [원격 채널](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100)) 및 ASP.NET에 대한 구성 설정을 포함합니다.  
   
- 구성 시스템은 먼저 컴퓨터 구성 파일에서 [**\<appSettings>** 요소](~/docs/framework/configure-apps/file-schema/appsettings/index.md)를 찾아본 후 개발자가 정의한 다른 구성 섹션에서 찾아봅니다. 그런 다음 응용 프로그램 구성 파일에서 찾아봅니다. 컴퓨터 구성 파일을 지속적으로 관리하려면 이러한 설정을 응용 프로그램 구성 파일에 넣는 것이 가장 좋습니다. 그러나 컴퓨터 구성 파일에 설정을 넣으면 시스템을 유지 관리하기가 더 쉬울 수 있습니다. 예를 들어, 클라이언트 및 서버 응용 프로그램이 모두 사용하는 타사 제품의 구성 요소를 가지고 있을 경우에는 이 구성 요소의 설정을 한 곳에 두는 것이 더 용이합니다. 이 때 설정을 넣을 적합한 위치는 컴퓨터 구성 파일이며, 이럴 경우 동일한 설정을 서로 다른 두 파일에 둘 필요가 없습니다.  
+ 구성 시스템은 먼저 컴퓨터 구성 파일에서 [ **\<appSettings>** 요소](./file-schema/appsettings/index.md)를 찾아본 후 개발자가 정의한 다른 구성 섹션에서 찾아봅니다. 그런 다음 애플리케이션 구성 파일에서 찾아봅니다. 컴퓨터 구성 파일을 지속적으로 관리하려면 이러한 설정을 애플리케이션 구성 파일에 넣는 것이 가장 좋습니다. 그러나 컴퓨터 구성 파일에 설정을 넣으면 시스템을 유지 관리하기가 더 쉬울 수 있습니다. 예를 들어, 클라이언트 및 서버 애플리케이션이 모두 사용하는 타사 제품의 구성 요소를 가지고 있을 경우에는 이 구성 요소의 설정을 한 곳에 두는 것이 더 용이합니다. 이 때 설정을 넣을 적합한 위치는 컴퓨터 구성 파일이며, 이럴 경우 동일한 설정을 서로 다른 두 파일에 둘 필요가 없습니다.  
   
 > [!NOTE]
->  XCOPY를 사용하여 응용 프로그램을 배포하면 컴퓨터 구성 파일의 설정이 복사되지 않습니다.  
+> XCOPY를 사용하여 애플리케이션을 배포하면 컴퓨터 구성 파일의 설정이 복사되지 않습니다.  
   
- 공용 언어 런타임에서 어셈블리 바인딩에 대해 컴퓨터 구성 파일을 사용하는 방법에 대한 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.  
+ 공용 언어 런타임에서 어셈블리 바인딩에 대해 컴퓨터 구성 파일을 사용하는 방법에 대한 자세한 내용은 [런타임에서 어셈블리를 찾는 방법](../deployment/how-the-runtime-locates-assemblies.md)을 참조하세요.  
   
-## <a name="application-configuration-files"></a>응용 프로그램 구성 파일  
- 응용 프로그램 구성 파일은 응용 프로그램에 특정한 설정을 포함합니다. 이 파일에는 응용 프로그램에서 읽을 수 있는 설정과 어셈블리 바인딩 정책, 원격 개체 등과 같은 공용 언어 런타임에 읽을 구성 설정이 포함되어 있습니다.  
+## <a name="application-configuration-files"></a>애플리케이션 구성 파일  
+ 애플리케이션 구성 파일은 애플리케이션에 특정한 설정을 포함합니다. 이 파일에는 응용 프로그램에서 읽을 수 있는 설정과 어셈블리 바인딩 정책, 원격 개체 등과 같은 공용 언어 런타임에 읽을 구성 설정이 포함되어 있습니다.  
   
- 응용 프로그램 구성 파일의 이름과 위치는 응용 프로그램의 호스트에 따라 달라지는데 호스트는 다음 중 하나가 될 수 있습니다.  
+ 애플리케이션 구성 파일의 이름과 위치는 애플리케이션의 호스트에 따라 달라지는데 호스트는 다음 중 하나가 될 수 있습니다.  
   
--   실행 파일에서 호스팅되는 응용 프로그램.  
+- 실행 파일에서 호스팅되는 응용 프로그램.  
   
      이러한 응용 프로그램에는 개발 중에 개발자가 수정하는 원본 구성 파일과 응용 프로그램과 함께 배포되는 출력 파일의 두 개의 구성 파일이 있습니다.  
   
      Visual Studio에서 개발할 때는 앱용 원본 구성 파일을 프로젝트 디렉터리에 두고 **출력 디렉터리에 복사** 속성을 **항상 복사**나 **새 버전이면 복사**로 설정합니다. 구성 파일의 이름은 응용 프로그램의 이름과 같으며 .config 확장명을 갖습니다. 예를 들어, myApp.exe라는 응용 프로그램에는 myApp.exe.config라는 소스 구성 파일이 있어야 합니다.  
   
-     Visual Studio는 응용 프로그램과 함께 배포되는 출력 구성 파일을 만들기 위해 컴파일된 어셈블리가 있는 디렉터리로 소스 구성 파일을 자동으로 복사합니다. 어떤 경우에는 Visual Studio가 출력 구성 파일을 수정할 수 있습니다. 자세한 내용은 [어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md) 문서의 [앱 수준에서 어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) 섹션을 참조하세요.  
+     Visual Studio는 응용 프로그램과 함께 배포되는 출력 구성 파일을 만들기 위해 컴파일된 어셈블리가 있는 디렉터리로 소스 구성 파일을 자동으로 복사합니다. 어떤 경우에는 Visual Studio가 출력 구성 파일을 수정할 수 있습니다. 자세한 내용은 [어셈블리 버전 리디렉션](redirect-assembly-versions.md) 문서의 [앱 수준에서 어셈블리 버전 리디렉션](redirect-assembly-versions.md#BKMK_Redirectingassemblyversionsattheapplevel) 섹션을 참조하세요.  
   
--   ASP.NET에서 호스팅되는 응용 프로그램.  
+- ASP.NET에서 호스팅되는 응용 프로그램.  
   
-     ASP.NET 구성 파일에 대한 자세한 내용은 [ASP.NET 구성 설정](https://msdn.microsoft.com/library/116608f3-c03d-4413-9fc7-978703e18b0f(v=vs.100))을 참조하세요.  
+     ASP.NET 구성 파일에 대 한 자세한 내용은 [ASP.NET 구성 설정](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/b5ysx397(v=vs.100))을 참조 하세요.
   
--   Internet Explorer에서 호스팅되는 응용 프로그램.  
+- Internet Explorer에서 호스팅되는 응용 프로그램.  
   
-     Internet Explorer에서 호스팅되는 응용 프로그램에 구성 파일이 있는 경우 이 파일의 위치는 다음 구문을 사용하여 `<link>` 태그에 지정됩니다.  
+     Internet Explorer에서 호스트되는 응용 프로그램에 구성 파일이 있는 경우 이 파일의 위치는 다음 구문을 사용하여 `<link>` 태그에 지정됩니다.  
   
      \<link rel="*ConfigurationFileName*" href="*location*">  
   
      이 태그에서 `location`은 구성 파일의 URL 로서, 이것은 App base를 설정합니다. 구성 파일은 응용 프로그램의 웹 사이트와 같은 곳에 위치해야 합니다.  
   
 ## <a name="security-configuration-files"></a>보안 구성 파일  
- 보안 구성 파일에는 코드 그룹 계층 구조 및 정책 수준과 관련된 사용 권한 집합에 대한 정보가 포함되어 있습니다. 정책 변경에 의해 보안 구성 파일이 손상되지 않도록 [코드 액세스 보안 도구(Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) 또는 코드 액세스 보안 정책 도구(Caspol.exe)를 사용하여 보안 정책을 수정하는 것이 좋습니다.  
+ 보안 구성 파일에는 코드 그룹 계층 구조 및 정책 수준과 관련된 사용 권한 집합에 대한 정보가 포함되어 있습니다. 정책 변경에 의해 보안 구성 파일이 손상되지 않도록 [코드 액세스 보안 도구(Caspol.exe)](../tools/caspol-exe-code-access-security-policy-tool.md) 또는 코드 액세스 보안 정책 도구(Caspol.exe)를 사용하여 보안 정책을 수정하는 것이 좋습니다.  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 보안 구성 파일은 보안 정책이 변경된 경우에만 제공됩니다.  
+> .NET Framework 4부터 보안 구성 파일은 보안 정책이 변경 된 경우에만 제공 됩니다.  
   
  보안 구성 파일은 다음 위치에 있습니다.  
   
--   기업 정책 구성 파일: %*런타임 설치 경로*%\Config\Enterprisesec.config  
+- 기업 정책 구성 파일: %*런타임 설치 경로*%\Config\Enterprisesec.config  
   
--   컴퓨터 정책 구성 파일: %*런타임 설치 경로*%\Config\Security.config  
+- 컴퓨터 정책 구성 파일: %*런타임 설치 경로*%\Config\Security.config  
   
--   사용자 정책 구성 파일: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
+- 사용자 정책 구성 파일: %USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: DEVPATH를 사용하여 어셈블리 찾기](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [방법: DEVPATH를 사용 하 여 어셈블리 찾기](how-to-locate-assemblies-by-using-devpath.md)  
  어셈블리를 검색할 때 런타임에서 DEVPATH 환경 변수를 사용하도록 지정하는 방법에 대해 설명합니다.  
   
- [어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
+ [어셈블리 버전 리디렉션](redirect-assembly-versions.md)  
  사용할 어셈블리 버전과 어셈블리 위치를 지정하는 방법에 대해 설명합니다.  
   
- [어셈블리 위치 지정](../../../docs/framework/configure-apps/specify-assembly-location.md)  
+ [어셈블리 위치 지정](specify-assembly-location.md)  
  런타임에서 어셈블리를 검색할 위치를 지정하는 방법에 대해 설명합니다.  
   
- [암호화 클래스 구성](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
+ [암호화 클래스 구성](configure-cryptography-classes.md)  
  암호화 클래스에 알고리즘 이름을 매핑하고 암호화 알고리즘에 개체 식별자를 매핑하는 방법에 대해 설명합니다.  
   
- [방법: 게시자 정책 만들기](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [방법: 게시자 정책 만들기](how-to-create-a-publisher-policy.md)  
  게시자 정책 파일을 추가하여 어셈블리 리디렉션 및 코드베이스 설정을 지정하는 시기와 방법에 대해 설명합니다.  
   
- [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)  
+ [구성 파일 스키마](./file-schema/index.md)  
  시작, 런타임, 네트워크 및 구성 설정의 다른 형식에 대한 스키마 계층 구조를 설명합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [구성 파일 스키마](../../../docs/framework/configure-apps/file-schema/index.md)  
- [어셈블리 위치 지정](../../../docs/framework/configure-apps/specify-assembly-location.md)  
- [어셈블리 버전 리디렉션](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
- [구성 파일을 사용 하 여 원격 개체 등록](https://msdn.microsoft.com/library/bc503ee1-c811-4f82-9525-470343326adc)  
- [ASP.NET 웹 사이트 관리](https://msdn.microsoft.com/library/1298034b-5f7d-464d-abd1-ad9e6b3eeb7e)  
- [NIB: 보안 정책 관리](https://msdn.microsoft.com/library/d754e05d-29dc-4d3a-a2c2-95eaaf1b82b9)  
- [Caspol.exe(코드 액세스 보안 정책 도구)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- [공용 언어 런타임의 어셈블리](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)  
- [원격 개체](https://msdn.microsoft.com/library/515686e6-0a8d-42f7-8188-73abede57c58)
+## <a name="see-also"></a>참고자료
+
+- [구성 파일 스키마](./file-schema/index.md)
+- [어셈블리 위치 지정](specify-assembly-location.md)
+- [어셈블리 버전 리디렉션](redirect-assembly-versions.md)
+- [ASP.NET 웹 사이트 관리](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6hy1xzbw(v=vs.90))
+- [보안 정책 관리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c1k0eed6(v=vs.100))
+- [Caspol.exe(코드 액세스 보안 정책 도구)](../tools/caspol-exe-code-access-security-policy-tool.md)
+- [.NET 어셈블리](../../standard/assembly/index.md)

@@ -1,7 +1,0 @@
-# [여러 플랫폼 개발](index.md)
-## [이식 가능한 클래스 라이브러리](cross-platform-development-with-the-portable-class-library.md)
-## [MVVM과 함께 이식 가능한 클래스 라이브러리 사용](using-portable-class-library-with-model-view-view-model.md)
-## [여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스](app-resources-for-libraries-that-target-multiple-platforms.md)
-## [Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원](support-for-windows-store-apps-and-windows-runtime.md)
-## [Windows 런타임에 URI 전달](passing-a-uri-to-the-windows-runtime.md)
-## [WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) 메서드](windowsruntimestreamextensions-asrandomaccessstream-method.md)

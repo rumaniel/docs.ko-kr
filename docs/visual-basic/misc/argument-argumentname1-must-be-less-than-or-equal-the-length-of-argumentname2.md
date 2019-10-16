@@ -1,20 +1,21 @@
 ---
-title: 인수 &#39; &lt;argumentname1&gt; &#39; 보다 작거나 같은 인수 길이 &#39; &lt;argumentname2&gt;&#39;
+title: 인수 '<argumentname1>' 보다 작거나 같아야 합니다 인수의 길이 '<argumentname2>'
 ms.date: 07/20/2015
 ms.assetid: 55a2401f-a44d-4671-b35e-878f48594162
-ms.openlocfilehash: 975fcdd55689dad05f7c78a22c842fa3c40211a2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6ba209cb2bd5fde84db882b2947e902a3d30dc8e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599091"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659938"
 ---
-# <a name="argument-39ltargumentname1gt39-must-be-less-than-or-equal-the-length-of-argument-39ltargumentname2gt39"></a>인수 &#39; &lt;argumentname1&gt; &#39; 보다 작거나 같은 인수 길이 &#39; &lt;argumentname2&gt;&#39;
+# <a name="argument-argumentname1-must-be-less-than-or-equal-the-length-of-argument-argumentname2"></a>인수 '\<argumentname1 >' 보다 작거나 같아야 합니다 인수의 길이 '\<argumentname2 >'
 제공된 인수의 길이가 대체하는 인수의 길이를 초과합니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   첫 번째 인수의 길이를 두 번째 인수의 길이보다 작거나 같게 만듭니다.  
+- 첫 번째 인수의 길이를 두 번째 인수의 길이보다 작거나 같게 만듭니다.  
   
-## <a name="see-also"></a>참고 항목  
- [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)
+## <a name="see-also"></a>참고자료
+
+- [오류 형식](../../visual-basic/programming-guide/language-features/error-types.md)

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 859abdd713fb19bbb3698d0da72cbff33cfbc6fa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5bcc70fd048a2eb90ff9e0a98f3c7b08126dd633
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33411676"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758494"
 ---
 # <a name="icordebugilframegetstackvalue-method"></a>ICorDebugILFrame::GetStackValue 메서드
 이 메서드는 구현되지 않았습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetStackValue (  
     [in] DWORD                  dwIndex,  
     [out] ICorDebugValue        **ppValue  

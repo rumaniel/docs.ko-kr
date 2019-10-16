@@ -7,22 +7,22 @@ helpviewer_keywords:
 - controls [WPF], TreeView
 - TreeView control [WPF], how-to topics
 ms.assetid: b9e9790e-7bfd-45d1-8b7a-1e0d125182a8
-ms.openlocfilehash: 902478763a214b96c3d0565fe38f0e9cd4c2acc0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa7ef39083eb192c6ea675568b955fc78608ba88
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761314"
 ---
 # <a name="treeview-how-to-topics"></a>TreeView 방법 항목
-이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.TreeView> 컨트롤 계층 구조에 정보를 표시 합니다.  
+이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.TreeView> 컨트롤 계층 구조에 정보를 표시 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [간단하거나 복잡한 TreeView 만들기](../../../../docs/framework/wpf/controls/how-to-create-simple-or-complex-treeviews.md)  
-  [SelectedValue, SelectedValuePath 및 SelectedItem 사용](../../../../docs/framework/wpf/controls/how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
-  [깊이를 확인할 수 없는 데이터에 TreeView 바인딩](../../../../docs/framework/wpf/controls/how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
-  [TreeView의 성능 개선](../../../../docs/framework/wpf/controls/how-to-improve-the-performance-of-a-treeview.md)  
-  [TreeView에서 TreeViewItem 찾기](../../../../docs/framework/wpf/controls/how-to-find-a-treeviewitem-in-a-treeview.md)  
+ [간단하거나 복잡한 TreeView 만들기](how-to-create-simple-or-complex-treeviews.md)  
+  [SelectedValue, SelectedValuePath 및 SelectedItem 사용](how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md)  
+  [깊이를 확인할 수 없는 데이터에 TreeView 바인딩](how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md)  
+  [TreeView의 성능 개선](how-to-improve-the-performance-of-a-treeview.md)  
+  [TreeView에서 TreeViewItem 찾기](how-to-find-a-treeviewitem-in-a-treeview.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.TreeView>  

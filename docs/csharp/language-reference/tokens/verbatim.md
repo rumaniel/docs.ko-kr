@@ -1,5 +1,6 @@
 ---
-title: '@(C# 참조)'
+title: '@ - C# 참조'
+ms.custom: seodec18
 ms.date: 02/09/2017
 f1_keywords:
 - '@_CSharpKeyword'
@@ -10,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 89bc7e53-85f5-478a-866d-1cca003c4e8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d6da87159e3ec9184eaa76ad069102204e2fcfc
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b2290c87f7d4d2ba8da122d4f5ddb9ea423852ec
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48841571"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608727"
 ---
 # <a name="-c-reference"></a>@(C# 참조)
 
@@ -39,6 +40,6 @@ ms.locfileid: "48841571"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)  
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [C# 특수 문자](../../../csharp/language-reference/tokens/index.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 특수 문자](./index.md)

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
 ms.openlocfilehash: dfd9330210dd748d739cd8da2985795099beacd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907298"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic의 상수 및 열거형
-상수는 변경되지 않는 값 대신 의미 있는 이름을 사용하는 방법입니다. 상수는 응용 프로그램 실행 중 변함없이 유지되는 값을 저장합니다. 상수를 사용하여 숫자 대신 의미 있는 이름을 제공하여 코드의 가독성을 향상할 수 있습니다.  
+상수는 변경되지 않는 값 대신 의미 있는 이름을 사용하는 방법입니다. 상수는 애플리케이션 실행 중 변함없이 유지되는 값을 저장합니다. 상수를 사용하여 숫자 대신 의미 있는 이름을 제공하여 코드의 가독성을 향상할 수 있습니다.  
   
  열거형은 관련된 상수 집합으로 작업하고 이름과 상수 값을 연결하는 편리한 방법을 제공합니다. 예를 들어 요일과 연결된 정수 상수에 대한 열거형을 선언한 다음, 코드에 정수 값 대신 요일 이름을 사용할 수 있습니다.  
   

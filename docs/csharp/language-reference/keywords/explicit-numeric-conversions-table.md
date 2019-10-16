@@ -1,5 +1,6 @@
 ---
-title: 명시적 숫자 변환 표(C# 참조)
+title: 명시적 숫자 변환 표 - C# 참조
+ms.custom: seodec18
 ms.date: 09/06/2018
 helpviewer_keywords:
 - conversions [C#], explicit numeric
@@ -9,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 948961d19518343c1f8ee14cd48dc33ec72cf23d
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 4dee46d075ea3d45d53ac0f64b539231188cf867
+ms.sourcegitcommit: 29a9b29d8b7d07b9c59d46628da754a8bff57fa4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/22/2018
-ms.locfileid: "49478928"
+ms.lasthandoff: 08/17/2019
+ms.locfileid: "69566324"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>명시적 숫자 변환 표(C# 참조)
 
@@ -22,18 +23,18 @@ ms.locfileid: "49478928"
 
 |시작|대상|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`byte`, `ushort`, `uint`, `ulong` 또는 `char`|  
-|[byte](byte.md)|`sbyte` 또는 `char`|  
-|[short](short.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` 또는 `char`|  
-|[ushort](ushort.md)|`sbyte`, `byte`, `short` 또는 `char`|  
-|[int](int.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` 또는 `char`|  
-|[uint](uint.md)|`sbyte`, `byte`, `short`, `ushort`, `int` 또는 `char`|  
-|[long](long.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` 또는 `char`|  
-|[ulong](ulong.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` 또는 `char`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`byte`, `ushort`, `uint`, `ulong` 또는 `char`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`sbyte` 또는 `char`|  
+|[short](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `ushort`, `uint`, `ulong` 또는 `char`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short` 또는 `char`|  
+|[int](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `uint`, `ulong` 또는 `char`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int` 또는 `char`|  
+|[long](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `ulong` 또는 `char`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long` 또는 `char`|  
 |[char](char.md)|`sbyte`, `byte`또는 `short`|  
-|[float](float.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` 또는 `decimal`|  
-|[double](double.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` 또는 `decimal`|  
-|[decimal](decimal.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` 또는 `double`|  
+|[float](../builtin-types/floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char` 또는 `decimal`|  
+|[double](../builtin-types/floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` 또는 `decimal`|  
+|[decimal](../builtin-types/floating-point-numeric-types.md)|`sbyte`, `byte`, `short`, `ushort`, `int`, `uint`, `long`, `ulong`, `char`, `float` 또는 `double`|  
   
 ## <a name="remarks"></a>설명  
   
@@ -66,10 +67,9 @@ ms.locfileid: "49478928"
 ## <a name="see-also"></a>참고 항목
 
 - [C# 참조](../index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
 - [캐스팅 및 형식 변환](../../programming-guide/types/casting-and-type-conversions.md)
-- [() 연산자](../operators/invocation-operator.md)
-- [정수 계열 형식 표](integral-types-table.md)
-- [부동 소수점 형식 표](floating-point-types-table.md)
+- [() 연산자](../operators/type-testing-and-cast.md#cast-operator-)
+- [정수 형식](../builtin-types/integral-numeric-types.md)
+- [부동 소수점 형식 표](../builtin-types/floating-point-numeric-types.md)
 - [기본 제공 형식 표](built-in-types-table.md)
 - [암시적 숫자 변환 표](implicit-numeric-conversions-table.md)

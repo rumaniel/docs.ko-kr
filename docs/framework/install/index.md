@@ -4,12 +4,12 @@ description: Windows에서.NET Framework를 설치하는 방법을 알아봅니�
 author: rlander
 ms.author: mairaw
 ms.date: 08/03/2017
-ms.openlocfilehash: e6432c693562221969085206bc3d3a7ac77c8ba5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 284f194248687fbe3838ee7aa578ae612757cc1a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386755"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70853927"
 ---
 # <a name="installation-guide"></a>설치 가이드
 
@@ -29,7 +29,7 @@ ms.locfileid: "33386755"
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET Framework 다운로드](https://www.microsoft.com/net/download/framework?utm_source=ms-docs&utm_medium=referral)  
-[차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)  
-[개발자용 .NET Framework 설치](guide-for-developers.md)  
-[개발자용 .NET Framework 배포](../deployment/deployment-guide-for-developers.md)  
+- [.NET Framework 다운로드](https://dotnet.microsoft.com/download)
+- [차단된 .NET Framework 설치 및 제거 문제 해결](troubleshoot-blocked-installations-and-uninstallations.md)
+- [개발자용 .NET Framework 설치](guide-for-developers.md)
+- [개발자용 .NET Framework 배포](../deployment/deployment-guide-for-developers.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2997bb90f2d9034de398b901fcbd6265dcb59998
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9897e396424b9076da8f30c61b5a14cfa9539690
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430488"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795428"
 ---
-# <a name="createasmnameobjflags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS 열거형
-특성을 지정 하는 [IAssemblyName 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md) 하 여 생성 될 때 개체는 [CreateAssemblyNameObject](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md) 함수입니다.  
+# <a name="create_asm_name_obj_flags-enumeration"></a>CREATE_ASM_NAME_OBJ_FLAGS 열거형
+[Createassemblynameobject](createassemblynameobject-function.md) 함수에 의해 생성 되는 경우 [IAssemblyName Interface](iassemblyname-interface.md) 개체의 특성을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
   
     CANOF_PARSE_DISPLAY_NAME            = 0x1,  
@@ -42,21 +42,22 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`CANOF_PARSE_DISPLAY_NAME`|전달 된 매개 변수 텍스트 id 임을 나타냅니다.|  
-|`CANOF_SET_DEFAULT_VALUES`|몇 개의 기본값을 설정합니다.|  
-|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Friend 어셈블리 규칙 (이름 및 공개 키)를 확인합니다. 이 멤버는 내부적 으로만 사용 합니다.|  
-|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|조합 된 `CANOF_PARSE_DISPLAY_NAME` 및 `CANOF_VERIFY_FRIEND_ASSEMBLYNAME` 플래그입니다. 이 멤버는 내부적 으로만 사용 합니다.|  
+|`CANOF_PARSE_DISPLAY_NAME`|전달 된 매개 변수가 텍스트 id 임을 나타냅니다.|  
+|`CANOF_SET_DEFAULT_VALUES`|몇 가지 기본값을 설정 합니다.|  
+|`CANOF_VERIFY_FRIEND_ASSEMBLYNAME`|Friend 어셈블리 규칙 (이름 및 공개 키만)을 확인 합니다. 이 멤버는 내부용 으로만 사용 됩니다.|  
+|`CANOF_PARSE_FRIEND_DISPLAY_NAME`|`CANOF_PARSE_DISPLAY_NAME` 및`CANOF_VERIFY_FRIEND_ASSEMBLYNAME` 플래그의 조합입니다. 이 멤버는 내부용 으로만 사용 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Fusion.h  
+ **헤더:** Fusion. h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IAssemblyName 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)  
- [CreateAssemblyNameObject 함수](../../../../docs/framework/unmanaged-api/fusion/createassemblynameobject-function.md)  
- [Fusion 열거형](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [IAssemblyName 인터페이스](iassemblyname-interface.md)
+- [CreateAssemblyNameObject 함수](createassemblynameobject-function.md)
+- [Fusion 열거형](fusion-enumerations.md)

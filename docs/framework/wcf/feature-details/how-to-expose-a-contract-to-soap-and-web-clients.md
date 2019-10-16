@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-ms.openlocfilehash: d82c5e3fc33528eadc3c404cca59a3dcf905e0e2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 303367c85e311ac5c07c11b849b5586354980a3c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396957"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636149"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>방법: SOAP 및 웹 클라이언트에 계약 공개
 
@@ -72,7 +72,7 @@ ms.locfileid: "47396957"
      [!code-csharp[htSoapWeb#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htsoapweb/cs/program.cs#8)]
      [!code-vb[htSoapWeb#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htsoapweb/vb/program.vb#8)]
 
-## <a name="to-call-service-operations-on-the-soap-endpoint"></a>SOAP 끝점에서 서비스 작업을 호출하려면
+## <a name="to-call-service-operations-on-the-soap-endpoint"></a>SOAP 엔드포인트에서 서비스 작업을 호출하려면
 
 1. 다음 코드와 같이 <xref:System.ServiceModel.ChannelFactory> 블록 내에서 `using` 인스턴스를 만듭니다.
 

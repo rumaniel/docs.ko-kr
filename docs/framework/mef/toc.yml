@@ -1,0 +1,9 @@
+- name: MEF(Managed Extensibility Framework)
+  href: index.md
+  items:
+    - name: 특성을 사용하는 프로그래밍 모델 개요(MEF)
+      href: attributed-programming-model-overview-mef.md
+    - name: 컴퍼지션 분석 도구(Mefx)
+      href: composition-analysis-tool-mefx.md
+    - name: Windows 스토어 앱용 .NET을 위한 MEF
+      href: mef-for-net-for-windows-store-apps.md

@@ -1,17 +1,17 @@
 ---
-title: '루프: for...to 식(F#)'
-description: '참조 하는 방법을 F # 하십시오... 식으로 루프 변수 값의 범위에 대해 루프를 반복에 사용 됩니다.'
+title: '루프: for...to 식'
+description: F# 자세한 내용은 다음을 참조 하세요. to expression은 루프 변수의 값 범위에 대해 루프를 반복 하는 데 사용 됩니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 8160fd30c4f3afe8bb6b58f468802ef1c0ef32ee
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 910c04aa4ea6b2c637dcad147347c1c317b5e0c0
+ms.sourcegitcommit: f20dd18dbcf2275513281f5d9ad7ece6a62644b4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43800471"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68626618"
 ---
 # <a name="loops-forto-expression"></a>루프: for...to 식
 
-`for...to` 식은 루프 변수 값의 범위에 대해 루프를 반복 하는 데 사용 됩니다.
+루프 변수의 값 범위에 대해 루프를 반복 하는 데 식이사용됩니다.`for...to`
 
 ## <a name="syntax"></a>구문
 
@@ -22,11 +22,11 @@ for identifier = start [ to | downto ] finish do
 
 ## <a name="remarks"></a>설명
 
-식별자의 형식은 형식에서 유추 됩니다 합니다 *시작* 하 고 *마침* 식입니다. 이러한 식에 대 한 형식에는 32 비트 정수 여야 합니다.
+식별자의 형식은 *start* 및 *finish* 식의 형식에서 유추 됩니다. 이러한 식의 형식은 32 비트 정수 여야 합니다.
 
-하지만 식을 기술적 `for...to` 명령형 프로그래밍 언어에서 일반적인 문에 같습니다. 반환 형식은 합니다 *식 본문* 이어야 합니다 `unit`합니다. 다음 예제에서는 표시의 다양 한 용도 `for...to` 식입니다.
+기술적으로 `for...to` 는 식이 명령형 프로그래밍 언어의 일반적인 문과 유사 합니다. *본문 식* 의 반환 형식은 여야 `unit`합니다. 다음 예에서는 다양 한 `for...to` 식 사용을 보여 줍니다.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5101.fs)]
 
 위 코드는 다음과 같이 출력됩니다.
 
@@ -39,5 +39,5 @@ for identifier = start [ to | downto ] finish do
 ## <a name="see-also"></a>참고자료
 
 - [F# 언어 참조](index.md)
-- [루프: `for...in` 식](loops-for-in-expression.md)
-- [루프: `while...do` 식](loops-while-do-expression.md)
+- [하며 `for...in`식](loops-for-in-expression.md)
+- [하며 `while...do`식](loops-while-do-expression.md)

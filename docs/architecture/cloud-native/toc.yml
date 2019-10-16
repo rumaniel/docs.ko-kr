@@ -1,0 +1,93 @@
+- name: Azure용 클라우드 네이티브 .NET 앱 설계
+  href: index.md
+  items:
+    - name: 클라우드 네이티브 애플리케이션 소개
+      href: introduction.md
+      items:
+        - name: 클라우드 네이티브 정의
+          href: definition.md
+        - name: 클라우드 네이티브용 후보 앱
+          href: candidate-apps.md
+    - name: eShopOnContainers 참조 앱 소개
+      href: introduce-eshoponcontainers-reference-app.md
+      items:
+        - name: Azure 서비스에 eShopOnContainers 매핑
+          href: map-eshoponcontainers-azure-services.md
+        - name: Azure에 eShopOnContainers 배포
+          href: deploy-eshoponcontainers-azure.md
+        - name: 중앙 집중식 구성
+          href: centralized-configuration.md
+    - name: 클라우드 네이티브 .NET 애플리케이션 크기 조정
+      href: scale-applications.md
+      items:
+        - name: 컨테이너 및 오케스트레이터 활용
+          href: leverage-containers-orchestrators.md
+        - name: 서버리스 기능 활용
+          href: leverage-serverless-functions.md
+        - name: 컨테이너 및 서버리스 접근 방식 결합
+          href: combine-containers-serverless-approaches.md
+        - name: Azure에서 컨테이너 배포
+          href: deploy-containers-azure.md
+        - name: 컨테이너 및 서버리스 애플리케이션 크기 조정
+          href: scale-containers-serverless.md
+        - name: 다른 배포 옵션
+          href: other-deployment-options.md
+    - name: 클라우드 네이티브 통신 패턴
+      href: communication-patterns.md
+      items:
+        - name: 프런트 엔드 클라이언트 통신
+          href: front-end-communication.md
+        - name: 서비스 대 서비스 통신
+          href: service-to-service-communication.md
+        - name: REST 및 gRPC
+          href: rest-grpc.md
+        - name: 서비스 메시 통신 인프라
+          href: service-mesh-communication-infrastructure.md
+    - name: 분산 데이터
+      href: distributed-data.md
+      items:
+        - name: 클라우드 네이티브 데이터 패턴
+          href: data-patterns.md
+        - name: Azure의 데이터 스토리지
+          href: azure-data-storage.md
+    - name: 클라우드 네이티브 복원력
+      href: resiliency.md
+      items:
+        - name: 애플리케이션 복원력 패턴
+          href: application-resiliency-patterns.md
+        - name: Azure를 통한 클라우드 인프라 복원력
+          href: infrastructure-resiliency-azure.md
+        - name: 복원력 있는 통신
+          href: resilient-communications.md
+    - name: 모니터링 및 상태
+      href: monitoring-health.md
+      items:
+        - name: 가시성 패턴
+          href: observability-patterns.md
+        - name: 탄력적 스택으로 로깅
+          href: logging-with-elastic-stack.md
+        - name: Azure Kubernetes Service의 모니터링
+          href: monitoring-azure-kubernetes.md
+        - name: Azure Monitor
+          href: azure-monitor.md
+    - name: 클레임
+      href: identity.md
+      items:
+        - name: 클라우드 네이티브 앱의 인증 및 권한 부여
+          href: authentication-authorization.md
+        - name: Azure Active Directory
+          href: azure-active-directory.md
+        - name: ID 서버
+          href: identity-server.md
+    - name: 보안
+      href: security.md
+      items:
+        - name: 클라우드 네이티브 앱을 위한 Azure 보안
+          href: azure-security.md
+    - name: 클라우드 네이티브 DevOps
+      href: devops.md
+      items:
+        - name: 코드 제공 인프라(Infrastructure as Code)
+          href: infrastructure-as-code.md
+        - name: 클라우드 네이티브 애플리케이션 번들
+          href: application-bundles.md

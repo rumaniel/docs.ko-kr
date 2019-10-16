@@ -2,17 +2,17 @@
 title: C#의 문자열 보간
 description: 문자열 보간을 사용하여 C#으로 결과 문자열에 서식이 지정된 식 결과를 포함하는 방법을 알아봅니다.
 author: pkulikov
-ms.date: 05/09/2018
-ms.openlocfilehash: b28890034cc0ab73f96c825b5548223e1c5cd1f4
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.date: 09/02/2019
+ms.openlocfilehash: d3a3a08d5911b5323aa61c571f05318d10380339
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086705"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252924"
 ---
-# <a name="string-interpolation-in-c"></a>C#의 문자열 보간 #
+# <a name="string-interpolation-in-c"></a>C\#의 문자열 보간
 
-이 자습서에서는 [문자열 보간](../language-reference/tokens/interpolated.md)을 사용하여 결과 문자열에서 식 결과의 서식을 지정하고 포함하는 방법을 보여줍니다. 예제에서는 사용자가 기본 C# 개념 및 .NET 형식 서식 지정에 익숙하다고 가정합니다. 문자열 보간 또는 .NET 형식 서식 지정을 처음 접하는 경우 [대화형 문자열 보간 빠른 시작](../quick-starts/interpolated-strings.yml)을 먼저 체크 아웃합니다. .NET에서 형식 서식 지정하는 방법에 대한 자세한 내용은 [.NET의 형식 지정](../../standard/base-types/formatting-types.md) 항목을 참조하세요.
+이 자습서에서는 [문자열 보간](../language-reference/tokens/interpolated.md)을 사용하여 결과 문자열에서 식 결과의 서식을 지정하고 포함하는 방법을 보여줍니다. 예제에서는 사용자가 기본 C# 개념 및 .NET 형식 서식 지정에 익숙하다고 가정합니다. 문자열 보간 또는 .NET 형식 서식 지정을 처음 접하는 경우 [대화형 문자열 보간 자습서](exploration/interpolated-strings.yml)을 먼저 체크 아웃합니다. .NET에서 형식 서식 지정하는 방법에 대한 자세한 내용은 [.NET의 형식 지정](../../standard/base-types/formatting-types.md) 항목을 참조하세요.
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 
@@ -26,18 +26,18 @@ ms.locfileid: "44086705"
 
 이 예제에서 볼 수 있듯이 중괄호를 포함하여 보간된 문자열에 식을 포함합니다.
 
+```csharp
+{<interpolationExpression>}
 ```
-{<interpolatedExpression>}
-```
 
-컴파일 시 보간된 문자열은 일반적으로 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드 호출로 변환됩니다. [문자열 복합 서식 지정](../../standard/base-types/composite-formatting.md) 기능의 모든 기능을 사용할 수 있도록 하여 보간된 문자열도 함께 사용합니다.
+보간된 문자열은 [문자열 복합 서식 지정](../../standard/base-types/composite-formatting.md) 기능의 모든 기능을 지원합니다. 따라서 <xref:System.String.Format%2A?displayProperty=nameWithType> 메서드를 사용할 때 보다 읽기 쉬운 대안이 됩니다.
 
-## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>보간된 식의 서식 문자열을 지정하는 방법
+## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>보간 식에 대한 서식 문자열을 지정하는 방법
 
-콜론(":")과 형식 문자열을 사용하여 보간된 식에 따라 식 결과의 형식에서 지원하는 형식 문자열을 지정합니다.
+콜론(":")과 형식 문자열을 사용하여 보간 식에 따라 식 결과의 형식에서 지원하는 형식 문자열을 지정합니다.
 
-```
-{<interpolatedExpression>:<formatString>}
+```csharp
+{<interpolationExpression>:<formatString>}
 ```
 
 다음 예제에서는 날짜 및 시간 또는 숫자 결과를 생성하는 식의 표준 및 사용자 지정 서식 지정 문자열을 지정하는 방법을 보여줍니다.
@@ -46,20 +46,20 @@ ms.locfileid: "44086705"
 
 자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md) 항목의 [문자열 구성 요소 서식 지정](../../standard/base-types/composite-formatting.md#format-string-component) 섹션을 참조하세요. 해당 섹션에서는 .NET 기본 형식에서 지원하는 표준 및 사용자 지정 서식 지정 문자열을 설명하는 항목에 대한 링크를 제공합니다.
 
-## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>필드 너비와 서식이 지정된 보간된 식의 맞춤을 제어하는 방법
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>필드 너비와 서식이 지정된 보간 식의 맞춤을 제어하는 방법
 
-쉼표(",") 및 상수 식을 포함한 보간된 식에 따라 최소 필드 너비 및 서식이 지정된 식 결과의 맞춤을 지정합니다.
+쉼표(",") 및 상수 식을 포함한 보간 식에 따라 최소 필드 너비 및 서식이 지정된 식 결과의 맞춤을 지정합니다.
 
-```
-{<interpolatedExpression>,<alignment>}
+```csharp
+{<interpolationExpression>,<alignment>}
 ```
 
 *맞춤* 값이 양수이면 서식이 지정된 식 결과는 오른쪽 맞춤입니다. 값이 음수이면 왼쪽 맞춤입니다.
 
 맞춤 및 서식 문자열을 모두 지정해야 할 경우 맞춤 구성 요소를 시작합니다.
 
-```
-{<interpolatedExpression>,<alignment>:<formatString>}
+```csharp
+{<interpolationExpression>,<alignment>:<formatString>}
 ```
 
 다음 예제에서는 맞춤을 지정하고 파이프 문자("|")를 사용하여 텍스트 필드를 구분하는 방법을 보여줍니다.
@@ -74,7 +74,7 @@ ms.locfileid: "44086705"
 
 보간된 문자열에서는 일반 문자열 리터럴을 사용할 수 있는 모든 이스케이프 시퀀스를 지원합니다. 자세한 내용은 [문자열 이스케이프 시퀀스](../programming-guide/strings/index.md#string-escape-sequences)를 참조하세요.
 
-이스케이프 시퀀스를 문자 그대로 해석하려면 [약어](../language-reference/tokens/verbatim.md) 리터럴 문자열을 사용합니다. 약어 보간된 문자열은 `@` 문자가 뒤에 오는 `$` 문자로 시작합니다.
+이스케이프 시퀀스를 문자 그대로 해석하려면 [약어](../language-reference/tokens/verbatim.md) 리터럴 문자열을 사용합니다. 보간된 약어 문자열은 `@` 문자가 뒤에 오는 `$` 문자로 시작합니다. C# 8.0부터는 `$` 및 `@` 토큰을 순서에 관계없이 사용할 수 있습니다. `$@"..."` 및 `@$"..."`는 모두 유효한 보간된 약어 문자열입니다.
 
 중괄호("{" 또는 "}")를 포함하려면 결과 문자열에서 2개의 중괄호("{{" 또는 "}}")를 사용합니다. 자세한 내용은 [복합 서식 지정](../../standard/base-types/composite-formatting.md) 항목의 [중괄호 이스케이프 처리](../../standard/base-types/composite-formatting.md#escaping-braces) 섹션을 참조하세요.
 
@@ -82,9 +82,9 @@ ms.locfileid: "44086705"
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>보간된 식에서 3개로 구성된 `?:` 조건부 연산자를 사용하는 방법
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>보간 식에서 3개로 구성된 `?:` 조건부 연산자를 사용하는 방법
 
-보간된 식에서 콜론(":")에 특별한 의미가 있으므로 식에서 [조건부 연산자](../language-reference/operators/conditional-operator.md)를 사용하기 위해 다음 예제에서 볼 수 있듯이 해당 식을 괄호로 묶습니다.
+보간 식에서 콜론(":")에 특별한 의미가 있으므로 식에서 [조건부 연산자](../language-reference/operators/conditional-operator.md)를 사용하기 위해 다음 예제에서 볼 수 있듯이 해당 식을 괄호로 묶습니다.
 
 [!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
 
@@ -108,7 +108,7 @@ ms.locfileid: "44086705"
 
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.String.Format%2A?displayProperty=nameWithType>  
-- <xref:System.FormattableString?displayProperty=nameWithType>  
-- <xref:System.IFormattable?displayProperty=nameWithType>  
-- [문자열](../programming-guide/strings/index.md)  
+- <xref:System.String.Format%2A?displayProperty=nameWithType>
+- <xref:System.FormattableString?displayProperty=nameWithType>
+- <xref:System.IFormattable?displayProperty=nameWithType>
+- [문자열](../programming-guide/strings/index.md)

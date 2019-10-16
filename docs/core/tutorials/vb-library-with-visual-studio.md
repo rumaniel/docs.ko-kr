@@ -1,22 +1,22 @@
 ---
-title: Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드
-description: Visual Studio 2017을 사용하여 Visual Basic으로 작성된 클래스 라이브러리를 빌드하는 방법 알아보기
+title: Visual Studio 2017에서 Visual Basic .NET Standard 클래스 라이브러리 빌드
+description: Visual Studio 2017을 사용하여 Visual Basic으로 작성된 .NET Standard 클래스 라이브러리를 빌드하는 방법 알아보기
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/07/2017
 dev_langs:
 - vb
-ms.custom: vs-dotnet
-ms.openlocfilehash: 52bbae330afe4a9ea376c6388a06941f74f6606a
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: vs-dotnet, seodec18
+ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157302"
 ---
-# <a name="building-a-class-library-with-visual-basic-and-net-core-in-visual-studio-2017"></a>Visual Studio 2017에서 Visual Basic 및 .NET Core로 클래스 라이브러리 빌드
+# <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017에서 Visual Basic 및 .NET Core SDK를 사용하여 .NET Standard 라이브러리 빌드
 
-*클래스 라이브러리*는 응용 프로그램에서 호출되는 형식 및 메서드를 정의합니다. .NET Standard 2.0을 대상으로 하는 클래스 라이브러리는 .NET Standard의 해당 버전을 지원하는 모든 .NET 구현에서 라이브러리를 호출할 수 있습니다. 클래스 라이브러리를 마칠 때 타사 구성 요소로 배포할지 또는 하나 이상의 응용 프로그램과 함께 번들 구성 요소로 포함할지 결정할 수 있습니다.
+*클래스 라이브러리*는 애플리케이션에서 호출되는 형식 및 메서드를 정의합니다. .NET Standard 2.0을 대상으로 하는 클래스 라이브러리는 .NET Standard의 해당 버전을 지원하는 모든 .NET 구현에서 라이브러리를 호출할 수 있습니다. 클래스 라이브러리를 마칠 때 타사 구성 요소로 배포할지 또는 하나 이상의 애플리케이션과 함께 번들 구성 요소로 포함할지 결정할 수 있습니다.
 
 > [!NOTE]
 > .NET Standard 버전 및 지원되는 플랫폼 목록은 [.NET Standard](../../standard/net-standard.md)를 참조하세요.
@@ -31,7 +31,7 @@ ms.locfileid: "48035976"
 
 1. **새 프로젝트** 대화 상자에서 **기타 프로젝트 형식** 노드를 확장하고 **Visual Studio 솔루션**을 선택합니다. 솔루션의 이름을 "ClassLibraryProjects"로 지정하고 **확인** 단추를 선택합니다.
 
-   ![새 프로젝트 대화 상자](./media/library-with-visual-studio/newproject.png)
+   ![Visual Studio에서 새 테스트 프로젝트 대화 상자를 만듭니다.](./media/library-with-visual-studio/new-project-dialog.png)
 
 ## <a name="creating-the-class-library-project"></a>클래스 라이브러리 프로젝트 만들기
 
@@ -41,15 +41,15 @@ ms.locfileid: "48035976"
 
 1. **새 프로젝트 추가** 대화 상자에서 **Visual Basic** 노드를 확장하고 **.NET Standard** 노드, **클래스 라이브러리(.NET Standard)** 프로젝트 템플릿을 차례로 선택합니다. **이름** 텍스트 상자에 프로젝트 이름으로 "StringLibrary"를 입력합니다. **확인**을 선택하여 클래스 라이브러리 프로젝트를 만듭니다.
 
-   ![새 프로젝트 추가 대화 상자](./media/vb-library-with-visual-studio/libproject.png)
+   ![Visual Studio에서 새 라이브러리 프로젝트 대화 상자를 만듭니다.](./media/vb-library-with-visual-studio/create-new-library-project.png)
 
    그런 다음 코드 창이 Visual Studio 개발 환경에서 열립니다. 
  
-   ![기본 클래스 라이브러리 템플릿 코드를 보여 주는 Visual Studio 응용 프로그램 창](./media/vb-library-with-visual-studio/stringlibrary.png)
+   ![기본 클래스 라이브러리 템플릿 코드를 보여 주는 Visual Studio 애플리케이션 창](./media/vb-library-with-visual-studio/visual-studio-library.png)
 
 1. 라이브러리에 올바른 버전의 .NET Standard가 대상으로 지정되었는지 확인합니다. **솔루션 탐색기** 창에서 라이브러리 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **대상 프레임워크** 텍스트 상자에 .NET Standard 2.0을 대상으로 하는 것이 표시됩니다.
 
-   ![클래스 라이브러리에 대한 프로젝트 속성](./media/library-with-visual-studio/properties.png)
+   ![클래스 라이브러리에 대한 프로젝트 속성](./media/library-with-visual-studio/library-project-properties.png)
 
 1. 또한 **속성** 대화 상자에서 **루트 네임스페이스** 텍스트 상자의 텍스트를 지웁니다. 각 프로젝트에 대해 Visual Basic에서는 프로젝트 이름에 해당하는 네임스페이스를 자동으로 만들고, 소스 코드 파일에 정의된 네임스페이스는 해당 네임스페이스의 부모입니다. [`namespace`](../../visual-basic/language-reference/statements/namespace-statement.md) 키워드를 사용하여 최상위 네임스페이스를 정의하고자 합니다.
   
@@ -61,9 +61,7 @@ ms.locfileid: "48035976"
 
 1. 메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택합니다. 프로젝트가 오류 없이 컴파일되어야 합니다.
 
-   ![빌드에 성공했음을 표시하는 출력 창](./media/library-with-visual-studio/buildsucceeds.png)
-
-
+   ![빌드에 성공했음을 표시하는 출력 창](./media/library-with-visual-studio/output-pane-successful-build.png)
 
 ## <a name="next-step"></a>다음 단계
 

@@ -1,14 +1,14 @@
 ---
 title: 그룹화 작업에서 하위 쿼리 수행(C#의 LINQ)
 description: C#의 LINQ를 사용하여 그룹화 작업에서 하위 쿼리를 수행하는 방법입니다.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: d75a588e-9b6f-4f37-b195-f99ec8503855
-ms.openlocfilehash: 514db81b80557a3026589f00177910cc9446c0f4
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a3757a7d358a310dd1404f85e34178f6e561bcb9
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/29/2018
-ms.locfileid: "47193475"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857439"
 ---
 # <a name="perform-a-subquery-on-a-grouping-operation"></a>그룹화 작업에서 하위 쿼리 수행
 
@@ -18,12 +18,16 @@ ms.locfileid: "47193475"
   
 연속에 대한 자세한 내용은 [into](../language-reference/keywords/into.md)를 참조하세요. 다음 예제에서는 메모리 내 데이터 구조를 데이터 소스로 사용하지만 모든 종류의 LINQ 데이터 소스에 대해 동일한 원칙이 적용됩니다.  
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 > [!NOTE]
 > 이 예제에는 [개체의 컬렉션 쿼리](query-a-collection-of-objects.md)에서 샘플 코드에 정의된 개체에 대한 참조가 포함됩니다.
 
-[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)]  
+[!code-csharp[csProgGuideLINQ#23](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_1.cs)] 
+
+위의 코드 조각에 있는 쿼리는 메서드 구문을 사용하여 작성할 수도 있습니다. 다음 코드 조각은 메서드 구문을 사용하여 작성된 의미상 동일한 쿼리입니다.
+
+[!code-csharp[csProgGuideLINQ#86](~/samples/snippets/csharp/concepts/linq/how-to-perform-a-subquery-on-a-grouping-operation_2.cs)]
 
 ## <a name="see-also"></a>참고 항목
 

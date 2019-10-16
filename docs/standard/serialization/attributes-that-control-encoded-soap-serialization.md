@@ -8,18 +8,18 @@ helpviewer_keywords:
 - attributes [.NET Framework], XML serialization
 - serialization, attributes
 ms.assetid: 93ee258c-9c0f-4a08-897c-c10db7a00f91
-ms.openlocfilehash: 7b5a48003ff9bfb398c05c8d70a9076d49ad83d6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 2961d9abc6c32e78b5a61e8f2bbea5cfcf6677bd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794942"
 ---
 # <a name="attributes-that-control-encoded-soap-serialization"></a>인코딩된 SOAP Serialization을 제어하는 특성
 
 이라는 World Wide Web Consortium (W3C) 문서 [단순 개체 액세스 프로토콜 (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/) SOAP 매개 변수를 인코딩할 수 있는 방법을 설명 하는 선택적 단원 (5 단원)를 포함 합니다. 사양의 5단원을 따르려면 <xref:System.Xml.Serialization> 네임스페이스에 속한 특별한 특성 집합을 사용해야 합니다. 이러한 특성을 클래스 및 클래스 멤버에 적절하게 적용한 다음 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 클래스의 인스턴스를 serialize합니다.
 
-다음 표에서는 특성, 해당 특성을 적용할 수 있는 위치 및 해당 특성이 수행하는 작업을 보여 줍니다. 이러한 특성을 사용하여 XML serialization을 제어하는 방법에 대한 자세한 내용은 [방법: 개체를 SOAP 인코드된 XML 스트림으로 직렬화](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) 및 [방법: 인코드된 SOAP XML Serialization 재정의](how-to-override-encoded-soap-xml-serialization.md)를 참조하세요.
+다음 표에서는 특성, 해당 특성을 적용할 수 있는 위치 및 해당 특성이 수행하는 작업을 보여 줍니다. 이러한 특성이 XML serialization 제어를 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: SOAP 인코딩된 XML Stream 개체 직렬화](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md) 고 [방법: 인코딩된 SOAP XML Serialization 재정의](how-to-override-encoded-soap-xml-serialization.md)합니다.
 
 특성에 대한 자세한 내용은 [특성](../../../docs/standard/attributes/index.md)을 참조하세요.
 
@@ -34,10 +34,10 @@ ms.locfileid: "46003245"
 
 ## <a name="see-also"></a>참고자료
 
-- [XML 및 SOAP serialization](xml-and-soap-serialization.md)  
-- [방법: 개체를 SOAP 인코딩된 XML 스트림으로 직렬화](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)  
-- [방법: 인코딩된 SOAP XML serialization 재정의](how-to-override-encoded-soap-xml-serialization.md)  
-- [특성](../../../docs/standard/attributes/index.md)  
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [방법: 개체 직렬화](how-to-serialize-an-object.md)  
+- [XML 및 SOAP serialization](xml-and-soap-serialization.md)
+- [방법: SOAP 인코딩된 XML Stream으로 개체를 serialize 합니다.](how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md)
+- [방법: 인코딩된 SOAP XML Serialization 재정의](how-to-override-encoded-soap-xml-serialization.md)
+- [특성](../../../docs/standard/attributes/index.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [방법: 개체 serialize](how-to-serialize-an-object.md)
 - [방법: 개체 deserialize](how-to-deserialize-an-object.md)

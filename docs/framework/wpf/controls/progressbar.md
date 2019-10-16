@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ProgressBar
 - ProgressBar control [WPF]
 ms.assetid: 4545b358-b93c-47df-88e4-9946d7db9e3f
-ms.openlocfilehash: eb446cf47bcfc3d97a6435c00ef24ab3d112c8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 27a2f54edac2add67b938300dc342744475466cc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33552898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770549"
 ---
 # <a name="progressbar"></a>ProgressBar
-A <xref:System.Windows.Controls.ProgressBar> 작업의 진행률을 나타냅니다. <xref:System.Windows.Controls.ProgressBar> 제어 작업이 진행 됨에 따라 시스템 강조 색으로 채워진 창 구성 됩니다.  
+<xref:System.Windows.Controls.ProgressBar> 작업의 진행률을 나타냅니다. <xref:System.Windows.Controls.ProgressBar> 제어는 작업이 진행 됨에 따라 시스템 강조 색으로 채워진 창으로 구성 됩니다.  
   
- 다음 그림에는 일반적인 나와 <xref:System.Windows.Controls.ProgressBar>합니다.  
+ 다음 그림에서는 일반적인 <xref:System.Windows.Controls.ProgressBar>합니다.  
   
- ![진행률 표시줄](../../../../docs/framework/wpf/controls/media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
+ ![진행률 표시줄](./media/ss-ctl-progressbar.GIF "SS_CTL_progressbar")  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

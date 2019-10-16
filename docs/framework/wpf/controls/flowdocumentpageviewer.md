@@ -7,18 +7,19 @@ helpviewer_keywords:
 - FlowDocumentPageViewer control [WPF]
 - controls [WPF], FlowDocumentPageViewer
 ms.assetid: 1ed5a30e-f415-4c26-a52f-9f028a68f66f
-ms.openlocfilehash: bad83378863cbc8b05fd3b74fe126e8147a20494
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ef041fad1bb9195d9fc6cba172de8c2fdc7507bd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911741"
 ---
 # <a name="flowdocumentpageviewer"></a>FlowDocumentPageViewer
-<xref:System.Windows.Controls.FlowDocumentPageViewer> 컨트롤 보는 데 사용 됩니다 <xref:System.Windows.Documents.FlowDocument> 당 페이지 별로 콘텐츠입니다. 와 대비는 <xref:System.Windows.Controls.FlowDocumentScrollViewer>를 표시 합니다. 어떤 <xref:System.Windows.Documents.FlowDocument> 스크롤 뷰어에서 콘텐츠.  
+<xref:System.Windows.Controls.FlowDocumentPageViewer> 컨트롤은 보기 데 <xref:System.Windows.Documents.FlowDocument> 페이지 단위로 콘텐츠. 대비를 <xref:System.Windows.Controls.FlowDocumentScrollViewer>에 표시 <xref:System.Windows.Documents.FlowDocument> 스크롤 뷰어의 콘텐츠입니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Documents.FlowDocument>  
- [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Documents.FlowDocument>
+- [유동 문서 개요](../advanced/flow-document-overview.md)
+- [방법 항목](../advanced/flow-content-elements-how-to-topics.md)
+- [WPF의 문서](../advanced/documents-in-wpf.md)

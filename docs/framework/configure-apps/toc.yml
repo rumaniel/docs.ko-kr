@@ -1,0 +1,25 @@
+- name: 앱 구성
+  href: index.md
+  items:
+    - name: '방법: DEVPATH를 사용하여 어셈블리 찾기'
+      href: how-to-locate-assemblies-by-using-devpath.md
+    - name: 어셈블리 버전 리디렉션
+      href: redirect-assembly-versions.md
+      items:
+        - name: '방법: 자동 바인딩 리디렉션 사용 설정 및 해제'
+          href: how-to-enable-and-disable-automatic-binding-redirection.md
+        - name: 어셈블리 바인딩 리디렉션 보안 권한
+          href: assembly-binding-redirection-security-permission.md
+    - name: 어셈블리 위치 지정
+      href: specify-assembly-location.md
+    - name: 암호화 클래스 구성
+      href: configure-cryptography-classes.md
+      items:
+        - name: 알고리즘 이름을 암호화 클래스에 매핑
+          href: map-algorithm-names-to-cryptography-classes.md
+        - name: 개체 식별자를 암호화 알고리즘에 매핑
+          href: map-object-identifiers-to-cryptography-algorithms.md
+    - name: '방법: 게시자 정책 만들기'
+      href: how-to-create-a-publisher-policy.md
+    - name: 구성 파일 스키마
+      href: file-schema/index.md

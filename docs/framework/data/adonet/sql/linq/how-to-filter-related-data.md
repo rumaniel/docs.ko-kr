@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec8b8f97-5d01-4f31-9b97-d1556df6a4bc
-ms.openlocfilehash: b40de7201610c58b9b8e86045afe5869d958bdf6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e8e63c139f38d6de46390925428e18682a65818d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33360837"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70793598"
 ---
 # <a name="how-to-filter-related-data"></a>방법: 관련 데이터 필터링
 <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 메서드를 사용하여 검색된 데이터의 양을 제한하기 위한 하위 쿼리를 지정합니다.  
@@ -21,5 +21,6 @@ ms.locfileid: "33360837"
  [!code-csharp[System.Data.Linq.DataLoadOptions#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/system.data.linq.dataloadoptions/cs/program.cs#1)]
  [!code-vb[System.Data.Linq.DataLoadOptions#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.dataloadoptions/vb/module1.vb#1)]  
   
-## <a name="see-also"></a>참고 항목  
- [데이터베이스 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)
+## <a name="see-also"></a>참고자료
+
+- [데이터베이스 쿼리](querying-the-database.md)

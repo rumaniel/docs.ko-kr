@@ -6,27 +6,27 @@ f1_keywords:
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 09f3a88d-b132-4505-a8bb-55cbfc6bb55a
-ms.openlocfilehash: df9628fab80faf6431290bbc4176a6e0d148dc8d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f0d53d1ec37d200c20ed1b0053b8992cf89c4e0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33540464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926466"
 ---
 # <a name="base-elements-how-to-topics"></a>기본 요소 방법 항목
-이 섹션의 항목에는 4 개의 WPF 기본 요소를 사용 하는 방법을 설명: <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.FrameworkContentElement>합니다.  
+이 섹션의에서 항목에서는 네 가지 WPF 기본 요소를 사용 하는 방법에 설명 합니다. <xref:System.Windows.UIElement>, <xref:System.Windows.ContentElement>, <xref:System.Windows.FrameworkElement>, 및 <xref:System.Windows.FrameworkContentElement>합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [UIElement를 투명하거나 반투명하게 만들기](../../../../docs/framework/wpf/advanced/how-to-make-a-uielement-transparent-or-semi-transparent.md)  
- [FrameworkElement의 크기에 애니메이션 효과 적용](../../../../docs/framework/wpf/advanced/how-to-animate-the-size-of-a-frameworkelement.md)  
- [Freezable의 고정 여부 확인](../../../../docs/framework/wpf/advanced/how-to-determine-whether-a-freezable-is-frozen.md)  
- [Loaded 이벤트 처리](../../../../docs/framework/wpf/advanced/how-to-handle-a-loaded-event.md)  
- [요소 및 컨트롤의 여백 설정](../../../../docs/framework/wpf/advanced/how-to-set-margins-of-elements-and-controls.md)  
- [Freezable을 읽기 전용으로 설정](../../../../docs/framework/wpf/advanced/how-to-make-a-freezable-read-only.md)  
- [읽기 전용 Freezable의 쓰기 가능한 복사본 가져오기](../../../../docs/framework/wpf/advanced/how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
- [UIElement를 좌우 또는 상하 대칭 이동](../../../../docs/framework/wpf/advanced/how-to-flip-a-uielement-horizontally-or-vertically.md)  
- [ThicknessConverter 개체 사용](../../../../docs/framework/wpf/advanced/how-to-use-a-thicknessconverter-object.md)  
- [ContextMenuOpening 이벤트 처리](../../../../docs/framework/wpf/advanced/how-to-handle-the-contextmenuopening-event.md)  
+ [UIElement를 투명하거나 반투명하게 만들기](how-to-make-a-uielement-transparent-or-semi-transparent.md)  
+ [FrameworkElement의 크기에 애니메이션 효과 적용](how-to-animate-the-size-of-a-frameworkelement.md)  
+ [Freezable의 고정 여부 확인](how-to-determine-whether-a-freezable-is-frozen.md)  
+ [Loaded 이벤트 처리](how-to-handle-a-loaded-event.md)  
+ [요소 및 컨트롤의 여백 설정](how-to-set-margins-of-elements-and-controls.md)  
+ [Freezable을 읽기 전용으로 설정](how-to-make-a-freezable-read-only.md)  
+ [읽기 전용 Freezable의 쓰기 가능한 복사본 가져오기](how-to-obtain-a-writable-copy-of-a-read-only-freezable.md)  
+ [UIElement를 좌우 또는 상하 대칭 이동](how-to-flip-a-uielement-horizontally-or-vertically.md)  
+ [ThicknessConverter 개체 사용](how-to-use-a-thicknessconverter-object.md)  
+ [ContextMenuOpening 이벤트 처리](how-to-handle-the-contextmenuopening-event.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.UIElement>  
@@ -38,4 +38,4 @@ ms.locfileid: "33540464"
  <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="related-sections"></a>관련 단원  
- [기본 요소](../../../../docs/framework/wpf/advanced/base-elements.md)
+ [기본 요소](base-elements.md)

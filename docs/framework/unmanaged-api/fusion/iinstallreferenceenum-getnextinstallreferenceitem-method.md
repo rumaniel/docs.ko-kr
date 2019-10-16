@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b756cdcbbc852280e88fef2d1a2bf5f0125cbd73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 20e2bff4257df64f761fd8fff880643d4e786748
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429213"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796451"
 ---
 # <a name="iinstallreferenceenumgetnextinstallreferenceitem-method"></a>IInstallReferenceEnum::GetNextInstallReferenceItem 메서드
-다음에 대 한 포인터를 가져옵니다 [IInstallReferenceItem](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md) 이에 포함 된 개체 [IInstallReferenceEnum](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md) 개체입니다.  
+이 [Iinstallreferenceitem](iinstallreferenceenum-interface.md) 개체에 포함 된 다음 [Iinstallreferenceitem](iinstallreferenceitem-interface.md) 개체에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetNextInstallReferenceItem (  
     [out] IInstallReferenceItem **ppRefItem,  
     [in]  DWORD dwFlags,  
@@ -37,23 +37,24 @@ HRESULT GetNextInstallReferenceItem (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppRefItem`  
- [out] 반환 된 `IInstallReferenceItem` 포인터입니다.  
+ 제한이 반환 `IInstallReferenceItem` 된 포인터입니다.  
   
  `dwFlags`  
- [in] 다음 버전의 확장에 대 한 예약 되어 있습니다. `dwFlags` 0 (영) 이어야 합니다.  
+ 진행 향후 확장성을 위해 예약 되었습니다. `dwFlags`0 이어야 합니다.  
   
  `pvReserved`  
- [in] 다음 버전의 확장에 대 한 예약 되어 있습니다. `pvReserved` null 참조 여야 합니다.  
+ 진행 향후 확장성을 위해 예약 되었습니다. `pvReserved`는 null 참조 여야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Fusion.h  
+ **헤더:** Fusion. h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IInstallReferenceItem 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceitem-interface.md)  
- [IInstallReferenceEnum 인터페이스](../../../../docs/framework/unmanaged-api/fusion/iinstallreferenceenum-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IInstallReferenceItem 인터페이스](iinstallreferenceitem-interface.md)
+- [IInstallReferenceEnum 인터페이스](iinstallreferenceenum-interface.md)

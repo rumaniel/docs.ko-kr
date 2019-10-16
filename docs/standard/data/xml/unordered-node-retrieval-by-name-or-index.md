@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584002"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589867"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>이름 또는 인덱스별로 정렬되지 않은 노드 검색
 **XmlNamedNodeMap**은 W3C(World Wide Web 컨소시엄) 사양에서 NamedNodeMap으로 설명되며 이름이나 인덱스를 사용하여 노드를 참조할 수 있는 정렬되지 않은 노드 집합 처리에 필수적입니다. **XmlNamedNodeMap**에 액세스할 수 있는 유일한 방법은 메서드나 속성을 통해 **XmlNamedNodeMap**을 반환하는 경우입니다. 다음과 같은 세 가지 메서드나 속성이 **XmlNamedNodeMap**을 반환합니다.  
   
--   XmlElement.Attributes  
+- XmlElement.Attributes  
   
--   XmlDocumentType.Entities  
+- XmlDocumentType.Entities  
   
--   XmlDocumentType.Notations  
+- XmlDocumentType.Notations  
   
  예를 들어, **XmlDocumentType.Entities** 속성은 문서 형식 선언에 선언된 **XmlEntity** 노드의 컬렉션을 가져옵니다. 이 컬렉션은 **XmlNamedNodeMap**으로 반환되고 **Count** 속성을 사용하여 컬렉션을 반복하고 엔터티 정보를 표시할 수 있습니다. **XmlNamedNodeMap**을 반복하는 예를 보려면 <xref:System.Xml.XmlDocumentType.Entities%2A>를 참조하세요.  
   

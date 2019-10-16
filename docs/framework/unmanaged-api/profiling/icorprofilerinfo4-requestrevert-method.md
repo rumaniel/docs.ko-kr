@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43a1954d75d37f68eb967eb714070a097573100a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5e74cb663f968cc9b1b04a912307e3b4a12e86d4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33460326"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748667"
 ---
 # <a name="icorprofilerinfo4requestrevert-method"></a>ICorProfilerInfo4::RequestRevert 메서드
 지정된 함수의 모든 인스턴스를 원래 버전으로 되돌립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT RequestRevert (  
    [in] ULONG    cFunctions,  
    [in, size_is(cFunctions)]  ModuleID    moduleIds[],  
@@ -37,7 +37,7 @@ HRESULT RequestRevert (
    [out, size_is(cFunctions)]  HRESULT status[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cFunctions`  
  [in] 되돌릴 함수 개수입니다.  
   
@@ -53,17 +53,17 @@ HRESULT RequestRevert (
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다.  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|모든 요청을 되돌리려고 했습니다. 그러나 반환된 상태 배열을 검사하여 성공적으로 되돌려진 함수를 확인해야 합니다.|  
-|CORPROF_E_CALLBACK4_REQUIRED|프로파일러를 구현 해야 합니다는 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 지원 되는 데이 호출에 대 한 인터페이스입니다.|  
-|CORPROF_E_REJIT_NOT_ENABLED|JIT 다시 컴파일이 사용하도록 설정되지 않았습니다. 사용 하 여 초기화 하는 동안 JIT 다시 컴파일을 사용 하도록 설정 해야 하면는 [icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 설정 하는 메서드는 `COR_PRF_ENABLE_REJIT` 플래그입니다.|  
+|CORPROF_E_CALLBACK4_REQUIRED|프로파일러를 구현 해야 합니다 [ICorProfilerCallback4](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md) 지원 되는 데이 호출에 대 한 인터페이스입니다.|  
+|CORPROF_E_REJIT_NOT_ENABLED|JIT 다시 컴파일이 사용하도록 설정되지 않았습니다. 초기화 하는 동안 JIT 다시 컴파일을 사용 하 여 설정 해야 합니다는 [icorprofilerinfo:: Seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md) 설정 하는 메서드를 `COR_PRF_ENABLE_REJIT` 플래그입니다.|  
 |E_INVALIDARG|`cFunctions`가 0이거나 `moduleIds` 또는 `methodIds`가 `NULL`입니다.|  
 |E_OUTOFMEMORY|메모리 부족 때문에 CLR에서 요청을 완료하지 못했습니다.|  
   
 ## <a name="status-hresults"></a>상태 HRESULTS  
   
-|상태 배열 HRESULT|설명|  
+|상태 배열 HRESULT|Description|  
 |--------------------------|-----------------|  
 |S_OK|해당 함수를 성공적으로 되돌렸습니다.|  
 |E_INVALIDARG|`moduleID` 또는 `methodDef` 매개 변수가 `NULL`인 경우|  
@@ -76,15 +76,16 @@ HRESULT RequestRevert (
  되돌려진 함수 인스턴스 중 하나를 다음에 호출하면 함수의 원래 버전이 실행됩니다. 함수가 이미 실행되고 있으면 실행 중인 버전의 실행을 완료합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorProfilerInfo4 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)  
- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorProfilerInfo4 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)

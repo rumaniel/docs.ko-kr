@@ -5,15 +5,15 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 53c1421bf14c598611e116c61353c4ecd465f1aa
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856559"
 ---
 # <a name="data-transfer-and-serialization"></a>데이터 전송 및 Serialization
-연결된 시스템에서 서비스 및 클라이언트는 데이터 교환에 의존하여 작업을 수행합니다. 개발자는 서비스 또는 클라이언트의 Windows Communication Foundation (WCF)는 효율적이 고 유지 관리 하기 쉬운 응용 프로그램을 만들기 위해 데이터 및 데이터 serialization을 처리 방법을 알고 있어야 합니다.  
+연결된 시스템에서 서비스 및 클라이언트는 데이터 교환에 의존하여 작업을 수행합니다. 서비스나 클라이언트의 개발자는 또한 Windows Communication Foundation (WCF) 효율적이 고 쉽게 유지 관리할 수 있는 응용 프로그램을 만들기 위해 데이터 및 데이터 serialization을 처리 하는 방법을 이해 해야 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [서비스 계약에서 데이터 전송 지정](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)  
@@ -44,7 +44,7 @@ ms.locfileid: "33489208"
  데이터 전송 및 serialization을 프로그래밍할 때 알고 있어야 하는 항목에 대해 설명합니다.  
   
  [데이터 전송 아키텍처 개요](../../../../docs/framework/wcf/feature-details/data-transfer-architectural-overview.md)  
- WCF에서 전송할 데이터의 전체 디자인의 보기를 설명합니다.  
+ WCF에서 데이터 전송의 전반적인 디자인의 뷰를 설명합니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.ServiceModel>  
@@ -60,6 +60,7 @@ ms.locfileid: "33489208"
 ## <a name="related-sections"></a>관련 단원  
  [인코더 및 직렬 변환기 확장](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
-## <a name="see-also"></a>참고 항목  
- [모범 사례: 데이터 계약 버전 관리](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)  
- [서비스 버전 관리](../../../../docs/framework/wcf/service-versioning.md)
+## <a name="see-also"></a>참고자료
+
+- [모범 사례: 데이터 계약 버전 관리](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
+- [서비스 버전 관리](../../../../docs/framework/wcf/service-versioning.md)

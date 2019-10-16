@@ -2,12 +2,12 @@
 title: ClientCredentials
 ms.date: 03/30/2017
 ms.assetid: 41dffd6b-8f14-4fed-aefb-2a1bb168efb3
-ms.openlocfilehash: 8b6200f84f352d49cf142d9c8b97d1c2b36149b2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c3adc675bb6c1e9011459a88fd7dc8e8cf63a880
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963979"
 ---
 # <a name="clientcredentials"></a>ClientCredentials
 ClientCredentials  
@@ -46,7 +46,7 @@ class ClientCredentials : Behavior
   
  액세스 형식: 읽기 전용  
   
- 현재 Http Digest 자격 증명입니다.  
+ 현재 Http 다이제스트 자격 증명입니다.  
   
 ### <a name="issuedtoken"></a>IssuedToken  
  데이터 형식: string  
@@ -96,5 +96,6 @@ class ClientCredentials : Behavior
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Description.ClientCredentials>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Description.ClientCredentials>

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2b86b63-08b2-4943-b344-3c2cf46ccd31
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b03b4f3f8c5b6e3e86903a240259ddf2fbf5c71
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0bea73a30cb103f0e72caf73a633229a0719dc6c
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386368"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052323"
 ---
 # <a name="reportavoncomrelease-mda"></a>reportAvOnComRelease MDA
 `reportAvOnComRelease` MDA(관리 디버깅 도우미)는 COM interop를 수행하고 원시 COM 호출과 결합된 <xref:System.Runtime.InteropServices.Marshal.Release%2A> 또는 <xref:System.Runtime.InteropServices.Marshal.ReleaseComObject%2A> 메서드를 사용하는 동안 사용자 참조 계산 오류로 인해 예외가 throw되면 활성화됩니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "33386368"
 ## <a name="output"></a>출력  
  가능한 경우 출력에 COM 인터페이스 포인터의 원래 vtable이 포함됩니다. 그러지 않으면 정보 메시지가 표시됩니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -48,7 +48,8 @@ ms.locfileid: "33386368"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
+- [interop 마샬링](../interop/interop-marshaling.md)

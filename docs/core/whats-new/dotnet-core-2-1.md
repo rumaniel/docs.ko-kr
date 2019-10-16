@@ -1,15 +1,18 @@
 ---
 title: .NET Core 2.1의 새로운 기능
 description: .NET Core 2.1에서 볼 수 있는 새로운 기능에 대해 알아봅니다.
+dev_langs:
+- csharp
+- vb
 author: rpetrusha
 ms.author: ronpet
-ms.date: 06/06/2018
-ms.openlocfilehash: aa80e6b7214f91c49803adde49a1e03d1971b3f6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.date: 10/10/2018
+ms.openlocfilehash: 18c8d566c3b79c131a3d031e5bdf3b37996d9115
+ms.sourcegitcommit: 10db6551ea3c971470cf5d2cc21ba1cbcefe5c55
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400069"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72031855"
 ---
 # <a name="whats-new-in-net-core-21"></a>.NET Core 2.1의 새로운 기능
 
@@ -36,7 +39,7 @@ ms.locfileid: "47400069"
 
 - 여러 개별 `dotnet build` 호출에서 사용되는 프로세스인 장기 실행 SDK 빌드 서버의 사용. `dotnet build`가 실행될 때마다 코드의 큰 블록을 JIT 컴파일할 필요가 없습니다. 다음 명령을 사용하여 빌드 서버 프로세스를 자동으로 종료할 수 있습니다.
 
-   ```console
+   ```dotnetcli
    dotnet buildserver shutdown
    ```
 
@@ -46,7 +49,7 @@ ms.locfileid: "47400069"
 
 - `dotnet watch`는 지정된 명령 집합을 실행하기 전에 파일이 변경될 때까지 대기하는 파일 시스템 감시자를 제공합니다. 예를 들어 다음 명령은 자동으로 현재 프로젝트를 다시 빌드하고 파일이 변경될 때마다 자세한 정보 출력을 생성합니다.
 
-   ```console
+   ```dotnetcli
    dotnet watch -- --verbose build
    ```
 
@@ -54,21 +57,21 @@ ms.locfileid: "47400069"
   
    자세한 내용은 [dotnet watch를 사용한 ASP.NET Core 앱 개발](/aspnet/core/tutorials/dotnet-watch)을 참조하세요.
 
-- `dotnet dev-certs`는 ASP.NET Core 응용 프로그램에서 개발하는 동안 사용되는 인증서를 생성하고 관리합니다.
+- `dotnet dev-certs`는 ASP.NET Core 애플리케이션에서 개발하는 동안 사용되는 인증서를 생성하고 관리합니다.
 
-- `dotnet user-secrets`는 ASP.NET Core 응용 프로그램의 사용자 비밀 저장소에서 비밀을 관리합니다.
+- `dotnet user-secrets`는 ASP.NET Core 애플리케이션의 사용자 비밀 저장소에서 비밀을 관리합니다.
 
 - `dotnet sql-cache`는 분산 캐싱에 사용할 Microsoft SQL Server 데이터베이스에 테이블 및 인덱스를 만듭니다.
 
-- `dotnet ef`는 Entity Framework Core 응용 프로그램에서 데이터베이스, <xref:Microsoft.EntityFrameworkCore.DbContext> 개체 및 마이그레이션을 관리하기 위한 도구입니다. 자세한 내용은 [EF Core .NET 명령줄 도구](/ef/core/miscellaneous/cli/dotnet)를 참조하세요.
+- `dotnet ef`는 Entity Framework Core 애플리케이션에서 데이터베이스, <xref:Microsoft.EntityFrameworkCore.DbContext> 개체 및 마이그레이션을 관리하기 위한 도구입니다. 자세한 내용은 [EF Core .NET 명령줄 도구](/ef/core/miscellaneous/cli/dotnet)를 참조하세요.
 
 ### <a name="global-tools"></a>전역 도구
 
-.NET Core 2.1은 명령줄에서 전역으로 사용할 수 있는 사용자 지정 도구인 ‘전역 도구’를 지원합니다. 이전 버전 .NET Core의 확장성 모델은 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools)를 사용하여 프로젝트별로만 사용 가능한 사용자 지정 도구를 만들었습니다.
+.NET Core 2.1은 명령줄에서 전역으로 사용할 수 있는 사용자 지정 도구인 ‘전역 도구’를 지원합니다.  이전 버전 .NET Core의 확장성 모델은 [`DotnetCliToolReference`](../tools/extensibility.md#consuming-per-project-tools)를 사용하여 프로젝트별로만 사용 가능한 사용자 지정 도구를 만들었습니다.
 
 전역 도구를 설치하려면 [dotnet tool install](../tools/dotnet-tool-install.md) 명령을 사용합니다. 예:
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -76,7 +79,7 @@ dotnet tool install -g dotnetsay
 
 ### <a name="tool-management-with-the-dotnet-tool-command"></a>`dotnet tool` 명령을 사용한 도구 관리
 
-.NET Core SDK 2.1(v 2.1.300)에서 모든 도구 작업에는 `dotnet tool` 명령을 사용합니다. 다음 옵션을 사용할 수 있습니다.
+.NET Core 2.1 SDK에서 모든 도구 작업은 `dotnet tool` 명령을 사용합니다. 다음 옵션을 사용할 수 있습니다.
 
 - [`dotnet tool install`](../tools/dotnet-tool-install.md) - 도구를 설치합니다.
 
@@ -88,38 +91,46 @@ dotnet tool install -g dotnetsay
 
 ## <a name="roll-forward"></a>롤포워드
 
-.NET Core 2.0부터 모든 .NET Core 응용 프로그램은 시스템에 설치된 최신 ‘부 버전’으로 자동으로 롤포워드됩니다.
+.NET Core 2.0부터 모든 .NET Core 애플리케이션은 시스템에 설치된 최신 *부 버전*으로 자동으로 롤포워드됩니다.
 
-.NET Core 2.0부터 응용 프로그램 빌드에 사용된 .NET Core 버전이 런타임에 없는 경우에는 응용 프로그램이 .NET Core의 설치된 최신 *부 버전*에 대해 자동으로 실행됩니다. 즉, 응용 프로그램이 .NET Core 2.0을 사용하여 빌드되고 .NET Core 2.0이 호스트 시스템에 없지만 .NET Core 2.1이 있는 경우 응용 프로그램은 .NET Core 2.1을 사용하여 실행됩니다.
+.NET Core 2.0부터 애플리케이션 빌드에 사용된 .NET Core 버전이 런타임에 없는 경우에는 애플리케이션이 .NET Core의 설치된 최신 *부 버전*에 대해 자동으로 실행됩니다. 즉, 애플리케이션이 .NET Core 2.0을 사용하여 빌드되고 .NET Core 2.0이 호스트 시스템에 없지만 .NET Core 2.1이 있는 경우 애플리케이션은 .NET Core 2.1을 사용하여 실행됩니다.
 
 > [!IMPORTANT]
-> 이 롤포워드 동작은 미리 보기 릴리스에는 적용되지 않습니다. 주요 릴리스에도 적용되지 않습니다. 예를 들어 .NET Core 1.0 응용 프로그램은 .NET Core 2.0 또는 .NET Core 2.1로 롤포워드되지 않습니다.
+> 이 롤포워드 동작은 미리 보기 릴리스에는 적용되지 않습니다. 기본적으로 주요 릴리스에도 적용되지 않지만 아래 설정으로 변경할 수 있습니다.
 
-다음 세 가지 방법으로 부 버전 롤포워드를 사용하지 않도록 설정할 수도 있습니다.
+후보 공유 프레임워크에서 롤포워드 설정을 변경하여 이 동작을 수정할 수 있습니다. 사용 가능한 설정은 다음과 같습니다.
 
-- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 환경 변수를 0으로 설정합니다.
+- `0` - 부 버전 롤포워드 동작을 비활성화합니다. 이 설정을 사용하면 .NET Core 2.0.0용으로 빌드된 애플리케이션이 .NET Core 2.0.1 롤포워드되지만 .NET Core 2.2.0 또는 .NET Core 3.0.0에서는 롤포워드되지 않습니다.
+- `1` - 부 버전 롤포워드 동작을 활성화합니다. 이는 설정의 기본값입니다. 이 설정을 사용하면 .NET Core 2.0.0용으로 빌드된 애플리케이션은 설치된 .NET Core 2.0.1 또는 .NET Core 2.2.0에 따라 하나를 롤포워드하지만 .NET Core 3.0.0으로 롤포워드되지 않습니다.
+- `2` - 부 버전 및 주 버전 롤포워드 동작을 활성화합니다. 설정한 경우 다른 주 버전도 고려되므로 .NET Core 2.0.0용으로 빌드된 애플리케이션은 NET Core 3.0.0으로 롤포워드됩니다.
 
-- 다음 줄을 runtimeconfig.json 파일에 추가합니다.
+다음 세 가지 방법 중 하나로 이 설정을 수정할 수 있습니다.
+
+- `DOTNET_ROLL_FORWARD_ON_NO_CANDIDATE_FX` 환경 변수를 원하는 값으로 설정합니다.
+
+- 원하는 값이 포함된 다음 줄을 *.runtimeconfig.json* 파일에 추가합니다.
 
    ```json
    "rollForwardOnNoCandidateFx" : 0
    ```
 
-- [.NET Core CLI 도구](../tools/index.md)를 사용할 경우 `run`과 같은 .NET Core 명령과 함께 다음 옵션을 포함합니다.
+- [.NET Core CLI 도구](../tools/index.md)를 사용하는 경우 `run`과 같은 .NET Core 명령에 원하는 값을 포함하여 다음 옵션을 추가합니다.
 
-   ```console
+   ```dotnetcli
    dotnet run --rollForwardOnNoCandidateFx=0
    ```
 
+패치 버전 롤포워드는 이 설정과는 무관하며 잠재적인 부 버전 롤포워드가 적용된 후에 수행됩니다.
+
 ## <a name="deployment"></a>배포
 
-### <a name="self-contained-application-servicing"></a>자체 포함 응용 프로그램 제공
+### <a name="self-contained-application-servicing"></a>자체 포함 애플리케이션 제공
 
-`dotnet publish`는 이제 서비스 런타임 버전이 포함된 자체 포함 응용 프로그램을 게시합니다. .NET Core 2.1 SDK(v 2.1.300)를 사용하여 자체 포함 응용 프로그램을 게시하면 응용 프로그램에는 해당 SDK가 인식하는 최신 서비스 런타임 버전이 포함됩니다. 최신 SDK로 업그레이드하면 최신 .NET Core 런타임 버전으로 게시됩니다. 이는 .NET Core 1.0 런타임 이상에 적용됩니다.
+`dotnet publish`는 이제 서비스 런타임 버전이 포함된 자체 포함 애플리케이션을 게시합니다. .NET Core 2.1 SDK(v 2.1.300)를 사용하여 자체 포함 애플리케이션을 게시하면 애플리케이션에는 해당 SDK가 인식하는 최신 서비스 런타임 버전이 포함됩니다. 최신 SDK로 업그레이드하면 최신 .NET Core 런타임 버전으로 게시됩니다. 이는 .NET Core 1.0 런타임 이상에 적용됩니다.
 
 자체 포함 게시에는 NuGet.org의 런타임 버전을 사용합니다. 컴퓨터에 서비스 런타임이 있어야 할 필요는 없습니다.
 
-.NET Core 2.0 SDK를 사용하면 `RuntimeFrameworkVersion` 속성을 통해 다른 버전이 지정되지 않는 한 자체 포함 응용 프로그램은 .NET Core 2.0.0 런타임으로 게시됩니다. 이 새 동작을 사용하면 더 이상 자체 포함 응용 프로그램의 상위 런타임 버전을 선택하기 위해 이 속성을 설정할 필요가 없습니다. 앞으로 가장 쉬운 방법은 항상 .NET Core 2.1 SDK(v 2.1.300)로 게시하는 것입니다.
+.NET Core 2.0 SDK를 사용하면 `RuntimeFrameworkVersion` 속성을 통해 다른 버전이 지정되지 않는 한 자체 포함 애플리케이션은 .NET Core 2.0.0 런타임으로 게시됩니다. 이 새 동작을 사용하면 더 이상 자체 포함 애플리케이션의 상위 런타임 버전을 선택하기 위해 이 속성을 설정할 필요가 없습니다. 앞으로 가장 쉬운 방법은 항상 .NET Core 2.1 SDK(v 2.1.300)로 게시하는 것입니다.
 
 자세한 내용은 [자체 포함 배포 런타임 롤포워드](../deploying/runtime-patch-selection.md)를 참조하세요.
 ## <a name="windows-compatibility-pack"></a>Windows 호환 기능 팩
@@ -128,7 +139,7 @@ dotnet tool install -g dotnetsay
 
 ## <a name="jit-compiler-improvements"></a>JIT 컴파일러 개선
 
-.NET Core는 성능을 상당히 개선할 수 있는 ‘계층화된 컴파일’(‘적응형 최적화’라고도 함)이라는 새로운 JIT 컴파일러 기술을 통합합니다. 계층화된 컴파일은 옵트인 설정입니다.
+.NET Core는 성능을 상당히 개선할 수 있는 ‘계층화된 컴파일’(‘적응형 최적화’라고도 함)이라는 새로운 JIT 컴파일러 기술을 통합합니다.   계층화된 컴파일은 옵트인 설정입니다.
 
 JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을 최적화하는 것입니다. 그러나 자주 사용되지 않는 코드 경로의 경우 컴파일러가 코드 최적화에 사용하는 시간이 런타임이 최적화되지 않은 코드 실행에 사용하는 시간보다 길 수 있습니다. 계층화된 컴파일은 JIT 컴파일에 다음과 같은 두 단계를 도입합니다.
 
@@ -166,15 +177,19 @@ JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을
 
 이러한 형식이 없다면 배열의 일부 또는 메모리 버퍼의 섹션과 같은 항목을 전달할 경우 데이터의 일부를 복사한 다음, 메서드에 전달해야 합니다. 이러한 형식은 추가 메모리 할당 및 복사 작업이 없어도 해당 데이터의 가상 보기를 제공합니다.
 
-다음 예제에서는 <xref:System.Span%601> 인스턴스를 사용하여 배열의 10개 요소에 대한 가상 보기를 제공합니다.
+다음 예제에서는 <xref:System.Span%601> 및 <xref:System.Memory%601> 인스턴스를 사용하여 배열의 10개 요소에 대한 가상 보기를 제공합니다.
 
-[!CODE-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+[!code-csharp[Span\<T>](~/samples/core/whats-new/whats-new-in-21/cs/program.cs)]
+
+[!code-vb[Memory\<T>](~/samples/core/whats-new/whats-new-in-21/vb/program.vb)]
 
 ### <a name="brotli-compression"></a>Brotli 압축
 
 .NET Core 2.1은 Brotli 압축 및 압축 풀기에 대한 지원을 추가합니다. Brotli는 [RFC 7932](https://www.ietf.org/rfc/rfc7932.txt)에 정의되어 있고 대부분의 웹 브라우저와 주요 웹 서버에서 지원되는 범용 무손실 압축 알고리즘입니다. 스트림 기반 <xref:System.IO.Compression.BrotliStream?displayProperty=nameWithType> 클래스 또는 고성능 범위 기반 <xref:System.IO.Compression.BrotliEncoder?displayProperty=nameWithType> 및 <xref:System.IO.Compression.BrotliDecoder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 다음 예제는 <xref:System.IO.Compression.BrotliStream> 클래스를 사용한 압축을 보여 줍니다.
 
-[!CODE-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+[!code-csharp[Brotli compression](~/samples/core/whats-new/whats-new-in-21/cs/brotli.cs#1)]
+
+[!code-vb[Brotli compression](~/samples/core/whats-new/whats-new-in-21/vb/brotli.vb#1)]
 
 <xref:System.IO.Compression.BrotliStream> 동작은 <xref:System.IO.Compression.DeflateStream> 및 <xref:System.IO.Compression.GZipStream>과 동일하므로, 이러한 API를 호출하는 코드를 <xref:System.IO.Compression.BrotliStream>으로 쉽게 변환할 수 있습니다.
 
@@ -198,7 +213,7 @@ JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을
 
 - <xref:System.Security.Cryptography.RandomNumberGenerator.Fill%2A?displayProperty=nameWithType> 정적 메서드는 <xref:System.Span%601>를 임의 값으로 채웁니다.
 
-- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>는 이제 Linux 및 maxOS에서 지원됩니다.
+- <xref:System.Security.Cryptography.Pkcs.EnvelopedCms?displayProperty=nameWithType>는 이제 Linux 및 macOS에서 지원됩니다.
 
 - ECDH(타원 곡선 Diffie-Hellman)는 이제 <xref:System.Security.Cryptography.ECDiffieHellman?displayProperty=nameWithType> 클래스 제품군에서 사용할 수 있습니다. 노출 영역은 .NET Framework의 것과 같습니다.
 
@@ -216,7 +231,7 @@ JIT 컴파일러가 수행하는 중요한 작업 중 하나는 코드 실행을
 
 - 모든 .NET Core 플랫폼에서 일관된 동작.
 
-<xref:System.Net.Http.SocketsHttpHandler>는 .NET Core 2.1의 기본 구현입니다. 그러나 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 메서드를 호출하여 이전 <xref:System.Net.Http.HttpClientHandler> 클래스를 사용하도록 응용 프로그램을 구성할 수 있습니다.
+<xref:System.Net.Http.SocketsHttpHandler>는 .NET Core 2.1의 기본 구현입니다. 그러나 <xref:System.AppContext.SetSwitch%2A?displayProperty=nameWithType> 메서드를 호출하여 이전 <xref:System.Net.Http.HttpClientHandler> 클래스를 사용하도록 애플리케이션을 구성할 수 있습니다.
 
 ```csharp
 AppContext.SetSwitch("System.Net.Http.UseSocketsHttpHandler", false);
@@ -234,6 +249,6 @@ Linux 및 macOS에서는 프로세스별로 <xref:System.Net.Http.HttpClient>만
 
 ## <a name="see-also"></a>참고 항목
 
-* [.NET Core의 새로운 기능](index.md)  
-* [EF Core 2.1의 새로운 기능](/ef/core/what-is-new/ef-core-2.1)  
-* [ASP.NET Core 2.1의 새로운 기능](/aspnet/core/aspnetcore-2.1)
+- [.NET Core의 새로운 기능](index.md)
+- [EF Core 2.1의 새로운 기능](/ef/core/what-is-new/ef-core-2.1)
+- [ASP.NET Core 2.1의 새로운 기능](/aspnet/core/aspnetcore-2.1)

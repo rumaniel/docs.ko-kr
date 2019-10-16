@@ -2,12 +2,12 @@
 title: 명명된 형식 생성자(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 549dea04-d93d-4c87-a292-f81b1598dbfd
-ms.openlocfilehash: 9ffaf55ed54e8479a56e6f9fc4d7a5efe47f8e2a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c7027614e5667acedb02d871a09df1ac9d799405
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32763165"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70250014"
 ---
 # <a name="named-type-constructor-entity-sql"></a>명명된 형식 생성자(Entity SQL)
 엔터티 형식이나 복합 형식과 같은 개념적 모델 명목 형식의 인스턴스를 만드는 데 사용됩니다.  
@@ -20,7 +20,7 @@ ms.locfileid: "32763165"
   
 ## <a name="arguments"></a>인수  
  `identifier`  
- 단순 식별자 또는 따옴표 붙은 식별자인 값입니다. 자세한 내용은 참조 하십시오 [식별자](../../../../../../docs/framework/data/adonet/ef/language-reference/identifiers-entity-sql.md)  
+ 단순 식별자 또는 따옴표 붙은 식별자인 값입니다. 자세한 내용은 [식별자](identifiers-entity-sql.md) 를 참조 하세요.  
   
  `expression`  
  형식의 특성으로서, 형식 선언에 나타나는 것과 동일한 순서일 것으로 가정됩니다.  
@@ -52,12 +52,13 @@ ms.locfileid: "32763165"
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 명명된 형식 생성자를 사용하여 개념적 모델 형식의 인스턴스를 만듭니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1.  [방법: StructuralType 결과를 반환하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
+1. [방법: StructuralType 결과](../how-to-execute-a-query-that-returns-structuraltype-results.md)를 반환 하는 쿼리를 실행 합니다.  
   
-2.  다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
+2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
  [!code-csharp[DP EntityServices Concepts 2#NAMED_TYPE_CONSTRUCTOR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#named_type_constructor)]  
   
-## <a name="see-also"></a>참고 항목  
- [형식 생성](../../../../../../docs/framework/data/adonet/ef/language-reference/constructing-types-entity-sql.md)  
- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>참고자료
+
+- [형식 생성](constructing-types-entity-sql.md)
+- [엔터티 SQL 참조](entity-sql-reference.md)

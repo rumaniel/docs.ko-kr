@@ -1,15 +1,15 @@
 ---
-title: '엔드포인트: Security Calls Not Authorized'
+title: '끝점: Security Calls Not Authorized'
 ms.date: 03/30/2017
 ms.assetid: d25095ff-9ff0-4c69-a674-4e6a9fe3f4dc
 ms.openlocfilehash: b37d4cd33c41c6e978dd82ca7ce6332302a843de
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916281"
 ---
-# <a name="endpoint-security-calls-not-authorized"></a>엔드포인트: Security Calls Not Authorized
+# <a name="endpoint-security-calls-not-authorized"></a>끝점: Security Calls Not Authorized
 카운터 이름: Security Calls Not Authorized  
   
 ## <a name="description"></a>설명  

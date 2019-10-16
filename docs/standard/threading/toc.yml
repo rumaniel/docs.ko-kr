@@ -1,0 +1,78 @@
+- name: 스레딩
+  href: index.md
+  items:
+    - name: 관리되는 스레딩 기본 사항
+      href: managed-threading-basics.md
+      items:
+        - name: 스레드 및 스레딩
+          href: threads-and-threading.md
+        - name: 관리되는 스레드의 예외
+          href: exceptions-in-managed-threads.md
+        - name: 다중 스레딩을 위한 데이터 동기화
+          href: synchronizing-data-for-multithreading.md
+        - name: 포그라운드 및 백그라운드 스레드
+          href: foreground-and-background-threads.md
+        - name: Windows에서 관리되는 스레딩 및 관리되지 않는 스레딩
+          href: managed-and-unmanaged-threading-in-windows.md
+        - name: '스레드 로컬 스토리지: 스레드 상대 정적 필드 및 데이터 슬롯'
+          href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
+    - name: 스레드 및 스레딩 사용
+      href: using-threads-and-threading.md
+      items:
+        - name: 스레드 만들기 및 시작할 때 데이터 전달
+          href: creating-threads-and-passing-data-at-start-time.md
+        - name: 스레드 일시 중지 및 중단
+          href: pausing-and-resuming-threads.md
+        - name: 스레드 제거
+          href: destroying-threads.md
+        - name: 스레드 스케줄링
+          href: scheduling-threads.md
+        - name: 관리형 스레드의 취소
+          href: cancellation-in-managed-threads.md
+          items:
+            - name: 스레드 함께 취소
+              href: canceling-threads-cooperatively.md
+            - name: '방법: 폴링을 통해 취소 요청 수신 대기'
+              href: how-to-listen-for-cancellation-requests-by-polling.md
+            - name: '방법: 취소 요청에 대한 콜백 등록'
+              href: how-to-register-callbacks-for-cancellation-requests.md
+            - name: '방법: 대기 핸들이 있는 취소 요청 수신 대기'
+              href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
+            - name: '방법: 여러 개의 취소 요청 수신 대기'
+              href: how-to-listen-for-multiple-cancellation-requests.md
+    - name: 관리되는 스레딩을 구현하는 최선의 방법
+      href: managed-threading-best-practices.md
+    - name: 스레딩 개체 및 기능
+      href: threading-objects-and-features.md
+      items:
+        - name: 관리되는 스레드 풀
+          href: the-managed-thread-pool.md
+        - name: 타이머
+          href: timers.md
+        - name: 동기화 기본 형식 개요
+          href: overview-of-synchronization-primitives.md
+        - name: EventWaitHandle
+          href: eventwaithandle.md
+        - name: CountdownEvent
+          href: countdownevent.md
+        - name: 뮤텍스
+          href: mutexes.md
+        - name: 세마포 및 SemaphoreSlim
+          href: semaphore-and-semaphoreslim.md
+        - name: 장벽
+          href: barrier.md
+          items:
+            - name: '방법: 동시 실행 작업을 배리어와 동기화'
+              href: how-to-synchronize-concurrent-operations-with-a-barrier.md
+        - name: SpinLock
+          href: spinlock.md
+          items:
+            - name: '방법: 낮은 수준의 동기화에 SpinLock 사용'
+              href: how-to-use-spinlock-for-low-level-synchronization.md
+            - name: '방법: SpinLock에서 스레드-추적 모드 사용'
+              href: how-to-enable-thread-tracking-mode-in-spinlock.md
+        - name: SpinWait
+          href: spinwait.md
+          items:
+            - name: '방법: SpinWait을 사용하여 2단계 대기 작업 구현'
+              href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md

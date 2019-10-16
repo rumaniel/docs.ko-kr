@@ -5,13 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
-author: BrucePerlerMS
-ms.openlocfilehash: e26665b76518e33de266c73600e1da918eb2a51d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a5e3e96ce8c8bb3304c8abcc93a881998382c6ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47203500"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638007"
 ---
 # <a name="message-security-with-a-user-name-client"></a>사용자 이름 클라이언트를 사용하는 메시지 보안
 다음 그림에는 Windows Communication Foundation (WCF) 서비스 및 메시지 수준 보안을 사용 하 여 보호 하는 클라이언트를 보여 줍니다. 서비스는 X.509 인증서를 사용하여 인증됩니다. 클라이언트는 사용자 이름 및 암호를 사용하여 인증합니다.  
@@ -34,12 +33,12 @@ ms.locfileid: "47203500"
 ## <a name="service"></a>서비스  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
   
--   구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
+- 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
   
--   제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
+- 제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
   
 ### <a name="code"></a>코드  
- 다음 코드에서는 메시지 보안을 사용하는 서비스 끝점을 만드는 방법을 보여 줍니다.  
+ 다음 코드에서는 메시지 보안을 사용하는 서비스 엔드포인트를 만드는 방법을 보여 줍니다.  
   
  [!code-csharp[C_SecurityScenarios#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#9)]
  [!code-vb[C_SecurityScenarios#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#9)]  
@@ -90,7 +89,7 @@ ms.locfileid: "47203500"
 ## <a name="client"></a>클라이언트  
   
 ### <a name="code"></a>코드  
- 다음 코드에서는 클라이언트를 만듭니다. 바인딩은 메시지 모드 보안으로 설정되며 클라이언트 자격 증명 형식은 `UserName`로 설정됩니다. 사용자 이름 및 암호는 코드(구성할 수 없음)를 사용해서만 지정할 수 있습니다. 사용자 이름 및 암호를 반환할 코드는 응용 프로그램 수준에서 수행되는 작업이기 때문에 여기에 표시되지 않습니다. 예를 들어 데이터에 대한 사용자를 쿼리하려면 Windows Forms 대화 상자를 사용합니다.  
+ 다음 코드에서는 클라이언트를 만듭니다. 바인딩은 메시지 모드 보안으로 설정되며 클라이언트 자격 증명 형식은 `UserName`로 설정됩니다. 사용자 이름 및 암호는 코드(구성할 수 없음)를 사용해서만 지정할 수 있습니다. 사용자 이름 및 암호를 반환할 코드는 애플리케이션 수준에서 수행되는 작업이기 때문에 여기에 표시되지 않습니다. 예를 들어 데이터에 대한 사용자를 쿼리하려면 Windows Forms 대화 상자를 사용합니다.  
   
  [!code-csharp[C_SecurityScenarios#16](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#16)]
  [!code-vb[C_SecurityScenarios#16](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#16)]  
@@ -126,9 +125,10 @@ ms.locfileid: "47203500"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
- [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)  
- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>참고자료
+
+- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [메시지 보안 사용자 이름](../../../../docs/framework/wcf/samples/message-security-user-name.md)
+- [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [\<identity>](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)
+- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

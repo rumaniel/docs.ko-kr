@@ -3,12 +3,12 @@ title: C# 문 - C# 언어 둘러보기
 description: 문을 사용하여 C# 프로그램 동작 만들기
 ms.date: 11/06/2016
 ms.assetid: 5409c379-5622-4fae-88b5-1654276ea8d4
-ms.openlocfilehash: 2f25c07ccc0af27a503465b9414bf607c61d1b2e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 26b151bc116dde9120757f954bdcf3aee041c5f5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351981"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634538"
 ---
 # <a name="statements"></a>문
 
@@ -109,5 +109,5 @@ ms.locfileid: "33351981"
  [!code-csharp[UsingStatement](../../../samples/snippets/csharp/tour/statements/Program.cs#L198-L206)]
 
 >[!div class="step-by-step"]
-[이전](expressions.md)
-[다음](classes-and-objects.md)
+>[이전](expressions.md)
+>[다음](classes-and-objects.md)

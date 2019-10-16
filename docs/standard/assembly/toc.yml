@@ -1,0 +1,66 @@
+- name: .NET 어셈블리
+  href: index.md
+  items:
+    - name: 어셈블리 콘텐츠
+      href: contents.md
+    - name: 어셈블리 매니페스트
+      href: manifest.md
+    - name: 강력한 이름의 어셈블리
+      href: strong-named.md
+    - name: 어셈블리 보안 고려 사항
+      href: security-considerations.md
+    - name: 어셈블리 버전 관리
+      href: versioning.md
+    - name: 어셈블리 및 Side-by-Side 실행
+      href: side-by-side-execution.md
+    - name: 어셈블리 파일 형식
+      href: file-format.md
+    - name: '방법: .NET Core에서 어셈블리 언로드 기능 사용 및 디버그'
+      href: unloadability.md
+    - name: 어셈블리 로드 해결
+      href: resolve-loads.md
+    - name: 어셈블리를 사용한 프로그램
+      href: program.md
+      items:
+        - name: 어셈블리 만들기
+          href: create.md
+        - name: 어셈블리 이름
+          href: names.md
+        - name: '방법: 어셈블리의 정규화된 이름 찾기'
+          href: find-fully-qualified-name.md
+        - name: 어셈블리 위치
+          href: location.md
+        - name: 어셈블리 특성 설정
+          href: set-attributes.md
+        - name: 강력한 이름의 어셈블리 만들기 및 사용
+          href: create-use-strong-named.md
+          items:
+            - name: '방법: 퍼블릭/프라이빗 키 쌍 만들기'
+              href: create-public-private-key-pair.md
+            - name: '방법: 강력한 이름으로 어셈블리 서명'
+              href: sign-strong-name.md
+            - name: 향상된 강력한 이름 지정
+              href: enhanced-strong-naming.md
+            - name: '방법: 강력한 이름의 어셈블리 참조'
+              href: reference-strong-named.md
+            - name: '방법: 강력한 이름 건너뛰기 기능 사용 안 함'
+              href: disable-strong-name-bypass-feature.md
+        - name: 어셈블리 지연 서명
+          href: delay-sign.md
+        - name: '방법: 어셈블리 콘텐츠 보기'
+          href: view-contents.md
+        - name: 공용 언어 런타임의 형식 전달
+          href: type-forwarding.md
+        - name: Friend 어셈블리
+          href: friend.md
+          items:
+            - name: '방법: 서명되지 않은 Friend 어셈블리 만들기'
+              href: create-unsigned-friend.md
+            - name: '방법: 서명된 Friend 어셈블리 만들기'
+              href: create-signed-friend.md
+        - name: '방법: 파일이 어셈블리인지 확인'
+          href: identify.md
+        - name: '방법: 어셈블리 로드 및 언로드'
+          href: load-unload.md
+        - name: '연습: Visual Studio에 관리되는 어셈블리의 형식 포함'
+          href: embed-types-visual-studio.md

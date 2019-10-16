@@ -7,29 +7,29 @@ helpviewer_keywords:
 ms.assetid: 8104d208-7813-4a1d-8a75-58f9a7bcb8c9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d00fb16ac5b71c8fb8f8560f68d20f1f33987d7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 146aef8c1e085ee3146585c3b5b1cda8004b9f7e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195389"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044207"
 ---
 # <a name="secannotateexe-net-security-annotator-tool"></a>SecAnnotate.exe(.NET Security Annotator 도구)
-.NET Security Annotator 도구(SecAnnotate.exe)는 하나 이상의 어셈블리의 `SecurityCritical` 및 `SecuritySafeCritical` 부분을 식별하는 명령줄 응용 프로그램입니다.  
+.NET Security Annotator 도구(SecAnnotate.exe)는 하나 이상의 어셈블리의 `SecurityCritical` 및 `SecuritySafeCritical` 부분을 식별하는 명령줄 애플리케이션입니다.  
   
  Visual Studio 확장인 [Security Annotator](https://go.microsoft.com/fwlink/?LinkId=198007)는 SecAnnotate.exe에 대한 그래픽 사용자 인터페이스를 제공하며 Visual Studio에서 도구를 실행할 수 있습니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
   
  명령 프롬프트에서 다음을 입력하세요. *parameters*는 다음 섹션에서 설명하며 *assemblies*는 공백으로 구분된 하나 이상의 어셈블리 이름으로 구성됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 SecAnnotate.exe [parameters] [assemblies]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
   
 |옵션|설명|  
 |------------|-----------------|  
@@ -54,4 +54,4 @@ SecAnnotate.exe [parameters] [assemblies]
   
  .NET Security Annotator에 대한 자세한 내용은 .NET Security 블로그의 [SecAnnotate를 사용하여 어셈블리의 투명도 위반 분석](https://go.microsoft.com/fwlink/?LinkId=187648) 항목을 참조하세요.  
   
-## <a name="examples"></a>예제
+## <a name="examples"></a>예

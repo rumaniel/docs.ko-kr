@@ -6,30 +6,30 @@ helpviewer_keywords:
 - FontDialog component [Windows Forms]
 - Font dialog box [Windows Forms], Windows Forms
 ms.assetid: 54015df3-aab2-4338-84e5-ba78cedbfdfc
-ms.openlocfilehash: c30f6029c35e9a96b3defde73925f555f1440cd3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: de3a6b8f59d5ae83d55ea408f70d54d37761f693
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971355"
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog 구성 요소(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 미리 구성된 대화 상자입니다. 동일 **글꼴** Windows 운영 체제에 의해 노출 되는 대화 상자. 상속 되는 구성 요소는 <xref:System.Windows.Forms.CommonDialog> 클래스입니다.  
+Windows Forms <xref:System.Windows.Forms.FontDialog> 구성 요소는 미리 구성된 대화 상자입니다. 동일 **글꼴** Windows 운영 체제에서 노출 하는 대화 상자. 구성 요소에서 상속 된 <xref:System.Windows.Forms.CommonDialog> 클래스입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [FontDialog 구성 요소 개요](../../../../docs/framework/winforms/controls/fontdialog-component-overview-windows-forms.md)  
- 일반적인 개념을 소개는 <xref:System.Windows.Forms.FontDialog> 미리 구성 된 대화 상자를 표시 하는 데 사용할 수 있는 구성 요소입니다. 글꼴 및 설정을 조작 하 여 대화 상자를 사용할 수 있습니다.  
+ [FontDialog 구성 요소 개요](fontdialog-component-overview-windows-forms.md)  
+ 일반적인 개념을 소개 합니다 <xref:System.Windows.Forms.FontDialog> 미리 구성 된 대화 상자를 표시 하는 데 사용할 수 있는 구성 요소입니다. 사용자 글꼴 및 해당 설정을 조작 하는 대화 상자를 사용할 수 있습니다.  
   
- [방법: FontDialog 구성 요소를 사용하여 글꼴 목록 표시](../../../../docs/framework/winforms/controls/how-to-show-a-font-list-with-the-fontdialog-component.md)  
- 인스턴스를 통해 런타임 시 글꼴을 선택 하는 방법에 설명 된 <xref:System.Windows.Forms.FontDialog> 구성 요소입니다.  
+ [방법: FontDialog 구성 요소를 사용 하 여 글꼴 목록 표시](how-to-show-a-font-list-with-the-fontdialog-component.md)  
+ 인스턴스를 통해 런타임에 글꼴을 선택 하는 방법에 설명 합니다 <xref:System.Windows.Forms.FontDialog> 구성 요소입니다.  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Forms.FontDialog>  
  <xref:System.Windows.Forms.FontDialog> 클래스 및 해당 멤버에 대한 참조 정보를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [대화 상자 컨트롤 및 구성 요소](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)  
- 컨트롤 및 응용 프로그램 또는 시스템 상호 작용을 수행 하는 데 사용할 수 있는 구성 요소를 설명 합니다.  
+ [대화 상자 컨트롤 및 구성 요소](dialog-box-controls-and-components-windows-forms.md)  
+ 컨트롤 및 사용자가 응용 프로그램 또는 시스템에서 표준 조작을 수행할 수 있는 구성 요소 집합을 설명 합니다.  
   
- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
- Windows Forms 컨트롤의 전체 목록을 사용 하는 방법에 대 한 정보 링크를 제공합니다.
+ [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)  
+ 용도 대 한 정보에 대 한 링크를 사용 하 여 Windows Forms 컨트롤의 전체 목록을 제공합니다.

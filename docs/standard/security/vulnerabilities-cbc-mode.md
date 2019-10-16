@@ -1,17 +1,17 @@
 ---
-title: 타이밍 취약점 패딩을 사용 하 여 CBC 모드 대칭적 암호 해독을
+title: 패딩을 사용하는 CBC 모드 대칭 암호 해독의 타이밍 취약성
 description: 검색 및 패딩을 사용 하 여 Cipher Block Chaining CBC () 모드 대칭 해독을 사용 하 여 타이밍 취약성을 완화 하는 방법에 알아봅니다.
 ms.date: 06/12/2018
 author: blowdart
 ms.author: mairaw
-ms.openlocfilehash: 4f1d6df3c0368fa0273d871ff32564c159e62a2c
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 6d8c2593cdbc4bbff2b1507196989282b16aa9a8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933902"
 ---
-# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>타이밍 취약점 패딩을 사용 하 여 CBC 모드 대칭적 암호 해독을
+# <a name="timing-vulnerabilities-with-cbc-mode-symmetric-decryption-using-padding"></a>패딩을 사용하는 CBC 모드 대칭 암호 해독의 타이밍 취약성
 
 Microsoft가는 것이 더 이상 안전 안정형 안쪽 여백을 제외 하 고 암호화 텍스트의 무결성을 확인 하지 않고 적용 된 경우 대칭 암호화의 Cipher Block Chaining (CBC) 모드를 사용 하 여 암호화 된 데이터를 암호 해독에 매우 구체적인 상황입니다. 이 결정을이 내리도록 현재 알려진된 암호화 연구를 기반으로 합니다. 
 
@@ -29,7 +29,7 @@ Oracle을 "알릴" 실행 하는 작업을 올바른 인지 여부에 대 한 �
 
 공격자는 안쪽 여백 oracle CBC 데이터를 구조화 하는 방법을 함께에서 사용할 수 있습니다, 그리고 oracle를 노출 하는 코드를 약간 변경 된 메시지를 보내고 oracle 알려 될 때까지 데이터를 전송할 데이터가 올바른 합니다. 이 응답에서 공격자는 바이트 단위로 메시지를 해독할 수 있습니다.
 
-최신 컴퓨터 네트워크는 이러한 높은 품질 공격자를 매우 작은 (0.1 밀리초 미만) 원격 시스템에서 실행의 차이점 시간을 검색할 수 있습니다. 데이터 변조 되지 않은 경우 성공적으로 해독만 발생할 수 있음을 가정 하는 응용 프로그램 성공 및 실패 한 암호 해독의 차이 관찰 하도록 설계 된 도구에서 공격에 취약할 수 있습니다. 이 시간 차이 다른 항목 보다 일부 언어 또는 라이브러리에서 더 중요 수 있지만, 이제 믿고이 모든 언어 및 라이브러리에 대 한 실용적인 위협 실패에 대 한 응용 프로그램의 응답은 고려 하는 경우.
+최신 컴퓨터 네트워크는 이러한 높은 품질 공격자를 매우 작은 (0.1 밀리초 미만) 원격 시스템에서 실행의 차이점 시간을 검색할 수 있습니다. 데이터 변조 되지 않은 경우 성공적으로 해독만 발생할 수 있음을 가정 하는 응용 프로그램 성공 및 실패 한 암호 해독의 차이 관찰 하도록 설계 된 도구에서 공격에 취약할 수 있습니다. 이 시간 차이 다른 항목 보다 일부 언어 또는 라이브러리에서 더 중요 수 있지만, 이제 믿고이 모든 언어 및 라이브러리에 대 한 실용적인 위협 실패에 대 한 응용 프로그램의 응답은 고려 하는 경우.
 
 이 공격은 암호화 된 데이터를 변경 하 고 oracle 사용 하 여 결과 테스트 하는 기능에 의존 합니다. 완벽 하 게 공격을 완화 하는 유일한 방법은 암호화 된 데이터의 변경 내용을 감지 하 여 모든 작업을 수행할 거부 됩니다. 이 작업을 수행 하는 표준 방법은 데이터에 대 한 서명을 만들고 모든 작업을 수행 하기 전에 해당 서명 유효성을 검사 하는 경우 서명을 확인할 수 있어야 합니다. 공격자가 만들 수 없으므로, 그렇지 않으면 암호화 된 데이터를 변경는 다음 서명을 계산 하는 새 변경된 데이터를 기반으로 합니다. 한 가지 일반적인 유형의 적절 한 시그니처가 키 해시 메시지 인증 코드 (HMAC) 라고 합니다. HMAC 걸리는 비밀 키, 사용자 유효성을 검사 하는 HMAC를 생성 하는 사용자 에게만 알려진 점에서 체크섬과 다릅니다. 키를 소유 하지 않고 올바른 HMAC를 생성할 수 없습니다. 데이터를 받으면 암호화 된 데이터를 독립적으로 계산 HMAC 비밀 키를 사용 하는 보낸 사람에 게 공유 하 고 해당 보낸 것에 대해 HMAC를 계산 하는 비교 하 합니다. 이 비교 상수 시간 이어야 합니다. 그렇지 않으면 추가한 다음 또 다른 검색 가능한 oracle, 다른 유형의 공격을 허용 합니다.
 
@@ -92,24 +92,24 @@ Oracle을 "알릴" 실행 하는 작업을 올바른 인지 여부에 대 한 �
   - 또한이 공격자가 다양 한 메시지 오프셋을 사용 하 여 여러 번 암호화 같은 일반 텍스트 강제 변환할 수 있는 상황에서 일반 텍스트 복구를 방지 하지 않습니다.
 - 게이트 평가에 대 한 암호 해독 호출 타이밍 신호를 완화 합니다.
   - 보류 시간 계산에 안쪽 여백을 포함 하는 모든 데이터 세그먼트에 대 한 암호 해독 작업 걸리는 시간의 최대 크기를 초과 하는 최소가 있어야 합니다.
-  - 지침에 따라 시간 계산을 수행 해야 [고해상도 타임 스탬프를 획득](https://msdn.microsoft.com/library/windows/desktop/dn55340.aspx)를 사용 하 여 <xref:System.Environment.TickCount?displayProperty=nameWithType> (오버플로) 롤포워드-조치 될 수 있습니다 (NTP 조정에 따라 두 가지 시스템 타임 스탬프를 뺀 또는 오류)입니다.
-  - 시간 계산의 모든 잠재적 예외를 포함 하 여 암호 해독 작업을 포함 하 여 관리 해야 또는 c + + 응용 프로그램 뿐 아니라 끝에 패딩 합니다.
+  - 지침에 따라 시간 계산을 수행 해야 [고해상도 타임 스탬프를 획득](/windows/desktop/sysinfo/acquiring-high-resolution-time-stamps)를 사용 하 여 <xref:System.Environment.TickCount?displayProperty=nameWithType> (오버플로) 롤포워드-조치 될 수 있습니다 (NTP 조정에 따라 두 가지 시스템 타임 스탬프를 뺀 또는 오류)입니다.
+  - 시간 계산의 모든 잠재적 예외를 포함 하 여 암호 해독 작업을 포함 하 여 관리 해야 하거나 C++ 응용 프로그램 뿐 아니라 끝에 패딩 합니다.
   - 성공 또는 실패 확인 된 경우에 아직, 타이밍 성문 만료 되 면 오류를 반환 해야 합니다.
 - 인증 되지 않은 암호 해독을 수행 하는 서비스에에서 모니터링을 통해 대량의 "잘못 된" 메시지에 올라오는 검색할 설정 해야 합니다.
   - 이 신호는 거짓 긍정 (합법적인 방식으로 손상 된 데이터) 및 거짓 부정 (검색을 피할 충분히 긴 시간이 지남에 따라 공격 확산)는 것을 염두에 두십시오.
 
 ## <a name="finding-vulnerable-code---native-applications"></a>취약 한 코드-네이티브 응용 프로그램 찾기
 
-Windows 암호화에 대해 빌드된 프로그램에 대 한: 차세대 (CNG) 라이브러리:
+Windows 암호화에 대해 빌드된 프로그램: 다음 세대 (CNG) 라이브러리:
 
 - 암호 해독 호출 하는 것 [BCryptDecrypt](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptdecrypt)을 지정 하 고는 `BCRYPT_BLOCK_PADDING` 플래그입니다.
-- 키 핸들을 호출 하 여 활성화 되었습니다 [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) 사용 하 여 [BCRYPT_CHAINING_MODE](https://msdn.microsoft.com/library/windows/desktop/aa376211.aspx#BCRYPT_CHAINING_MODE) 로 `BCRYPT_CHAIN_MODE_CBC`합니다.
+- 키 핸들을 호출 하 여 활성화 되었습니다 [BCryptSetProperty](/windows/desktop/api/bcrypt/nf-bcrypt-bcryptsetproperty) 사용 하 여 [BCRYPT_CHAINING_MODE](/windows/desktop/SecCNG/cng-property-identifiers#BCRYPT_CHAINING_MODE) 로 `BCRYPT_CHAIN_MODE_CBC`합니다.
   - 이후 `BCRYPT_CHAIN_MODE_CBC` 기본값인 영향을 받는 코드에 대 한 값 할당 하지 `BCRYPT_CHAINING_MODE`합니다.
 
 이전 Windows 암호화 API에 대해 빌드된 프로그램:
 
 - 암호 해독 호출 하는 것 [CryptDecrypt](/windows/desktop/api/wincrypt/nf-wincrypt-cryptdecrypt) 사용 하 여 `Final=TRUE`입니다.
-- 키 핸들을 호출 하 여 활성화 되었습니다 [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) 사용 하 여 [KP_MODE](https://msdn.microsoft.com/library/windows/desktop/aa379949.aspx#KP_MODE) 로 `CRYPT_MODE_CBC`합니다.
+- 키 핸들을 호출 하 여 활성화 되었습니다 [CryptSetKeyParam](/windows/desktop/api/wincrypt/nf-wincrypt-cryptsetkeyparam) 사용 하 여 [KP_MODE](/windows/desktop/api/wincrypt/nf-wincrypt-cryptgetkeyparam) 로 `CRYPT_MODE_CBC`합니다.
   - 이후 `CRYPT_MODE_CBC` 기본값인 영향을 받는 코드에 대 한 값 할당 하지 `KP_MODE`합니다.
 
 ## <a name="finding-vulnerable-code---managed-applications"></a>취약 한 코드 찾기-관리 되는 응용 프로그램

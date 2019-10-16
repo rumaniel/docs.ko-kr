@@ -1,79 +1,106 @@
 ---
 title: Linux에서 .NET Core의 필수 구성 요소
-description: Linux 컴퓨터에서 .NET Core 응용 프로그램을 개발, 배포 및 실행하기 위해 지원되는 Linux 버전 및 .NET Core 종속성입니다.
-author: jralexander
-ms.author: johalex
-ms.date: 08/20/2018
-ms.openlocfilehash: d0e5b203dc8e1ec6807f28de7d910c74a2ffe665
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+description: Linux 컴퓨터에서 .NET Core 애플리케이션을 개발, 배포 및 실행하기 위해 지원되는 Linux 버전 및 .NET Core 종속성입니다.
+author: leecow
+ms.author: leecow
+ms.date: 09/25/2019
+ms.openlocfilehash: 4c5d79459c9d69111ca6452d9305f0deb37212b8
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506851"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591694"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux에서 .NET Core의 필수 구성 요소
 
-이 문서에서는 Linux에서 .NET Core 응용 프로그램을 개발하는 데 필요한 종속성을 보여 줍니다. 다음에 나오는 지원되는 Linux 배포/버전 및 종속성은 Linux에서 .NET Core 앱을 개발하기 위한 두 가지 방법에 적용됩니다.
+이 문서에서는 Linux에서 .NET Core 애플리케이션을 개발하는 데 필요한 종속성을 보여 줍니다. 다음에 나오는 지원되는 Linux 배포/버전 및 종속성은 Linux에서 .NET Core 앱을 개발하기 위한 두 가지 방법에 적용됩니다.
 
 * [즐겨 찾는 편집기를 사용하는 명령줄](tutorials/using-with-xplat-cli.md)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
-> .NET Core SDK 패키지는 프로덕션 서버/환경에서 필요하지 않습니다. .NET Core 런타임 패키지만 프로덕션 환경에 배포된 앱에 필요합니다. NET Core 런타임은 자체 포함된 배포의 일부로 앱으로 배포되지만 프레임워크 종속 배포된 앱에 대해 별도로 배포되어야 합니다. 프레임워크 종속 및 자체 포함된 배포 형식에 대한 자세한 내용은 [.NET Core 응용 프로그램 배포](./deploying/index.md)를 참조하세요. 또한 특정 지침은 [자체 포함된 Linux 응용 프로그램](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)을 참조하세요.
+> .NET Core SDK 패키지는 프로덕션 서버/환경에서 필요하지 않습니다. .NET Core 런타임 패키지만 프로덕션 환경에 배포된 앱에 필요합니다. NET Core 런타임은 자체 포함된 배포의 일부로 앱으로 배포되지만 프레임워크 종속 배포된 앱에 대해 별도로 배포되어야 합니다. 프레임워크 종속 및 자체 포함된 배포 형식에 대한 자세한 내용은 [.NET Core 애플리케이션 배포](./deploying/index.md)를 참조하세요. 또한 특정 지침은 [자체 포함된 Linux 애플리케이션](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)을 참조하세요.
 
 ## <a name="supported-linux-versions"></a>지원되는 Linux 버전
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+<!-- markdownlint-disable MD025 -->
 
-.NET Core 2.x는 단일 운영 체제로 Linux를 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처당)가 있습니다.
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
 
-**NET Core 2.1**
+.NET Core 3.0에서는 Linux를 단일 운영 체제로 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다. 
+
+다운로드 링크 및 자세한 내용은 [.NET Core 3.0 다운로드](https://dotnet.microsoft.com/download/dotnet-core/3.0)를 참조하세요.
+
+.NET Core 3.0은 다음 Linux 배포/버전에서 지원됩니다.
+
+> [!NOTE]
+> `+` 기호는 최소 버전을 나타냅니다.
+
+| OS                             | 버전               | 아키텍처    |
+| ------------------------------ | --------------------- | ---------------- |
+| Red Hat Enterprise Linux       | 6+, 7                 | X64 |
+| Oracle Linux                   | 7                     | X64 |
+| CentOS                         | 7                     | X64 |
+| Fedora                         | 29+                   | X64 |
+| Debian                         | 9+                    | x64, ARM32, ARM64 |
+| Ubuntu                         | 16.04+                | x64, ARM32, ARM64 |
+| Linux Mint                     | 18+                   | X64 |
+| openSUSE                       | 15+                   | X64 |
+| SLES(SUSE Enterprise Linux)   | 12 SP2+               | X64 |
+| Alpine Linux                   | 3.8+                  | x64, ARM64 |
+
+지원 OS 버전 중 .NET Core 3.0이 지원되는 운영 체제, 배포 및 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 3.0이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)을 참조하세요.
+
+ARM64에 .NET Core 3.0을 설치하는 방법에 대한 자세한 내용은 [Linux ARM64에 .NET Core 3.0 설치](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)를 참조하세요.
+
+# <a name="net-core-22tabnetcore22"></a>[.NET Core 2.2](#tab/netcore22)
+
+.NET Core 2.2에서는 Linux를 단일 운영 체제로 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다.
+
+다운로드 링크 및 자세한 내용은 [.NET Core 2.2 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.2)를 참조하세요.
+
+.NET Core 2.2는 다음 Linux 배포/버전에서 지원됩니다.
+
+> [!NOTE]
+> `+` 기호는 최소 버전을 나타냅니다.
+
+| OS                             |  버전                |  아키텍처   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7                   | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| CentOS                         |  7                      | X64 |
+| Fedora                         |  29, 30                 | X64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16.04, 18.04, 18.10    | x64, ARM32 |
+| Linux Mint                     |  17, 18                 | X64 |
+| openSUSE                       |  15+                    | X64 |
+| SLES(SUSE Enterprise Linux)   |  12 SP2+                | X64 |
+| Alpine Linux                   |  3.7+                   | X64 |
+
+.NET Core 2.2 지원 운영 체제, 배포 및 버전, 지원되지 않는 OS 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 2.2 지원 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)을 참조하세요.
+
+# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
+.NET Core 2.1에서는 Linux를 단일 운영 체제로 처리합니다. 지원되는 Linux 배포에 대한 단일 Linux 빌드(칩 아키텍처마다)가 있습니다.
+
+다운로드 링크 및 자세한 내용은 [.NET Core 2.1 다운로드](https://dotnet.microsoft.com/download/dotnet-core/2.1)를 참조하세요.
 
 .NET Core 2.1은 다음 Linux 배포/버전에서 지원됩니다.
 
-* Red Hat Enterprise Linux 7, 6 - 64비트(`x86_64` 또는 `amd64`)
-* CentOS 7 - 64비트(`x86_64` 또는 `amd64`) 
-* Oracle Linux 7 - 64비트(`x86_64` 또는 `amd64`) 
-* Fedora 28, 27 - 64비트(`x86_64` 또는 `amd64`) 
-* Debian 9(64비트, ARM32), 8.7 이상 버전 - 64비트(`x86_64` 또는 `amd64`)
-* Ubuntu 18.04(64비트, ARM32), 16.04, 14.04 - 64비트(`x86_64` 또는 `amd64`)
-* Linux Mint 18, 17 - 64비트(`x86_64` 또는 `amd64`)
-* openSUSE 42.3 이상 버전 - 64비트(`x86_64` 또는 `amd64`)
-* SUSE Enterprise Linux(SLES) 12 서비스 팩 2 이상 - 64비트(`x86_64` 또는 `amd64`)
-* Alpine Linux 3.7 이상 버전 - 64비트(`x86_64` 또는 `amd64`)
+| OS                             |  버전                |  아키텍처   |
+| ------------------------------ | ----------------------- | ---------------- |
+| Red Hat Enterprise Linux       |  6, 7, 8                | X64 |
+| Oracle Linux                   |  7                      | X64 |
+| CentOS                         |  7                      | X64 |
+| Fedora                         |  29, 30                 | X64 |
+| Debian                         |  9                      | x64, ARM32 |
+| Ubuntu                         |  16.04, 18.04, 19.04    | x64, ARM32 |
+| Linux Mint                     |  17, 18                 | X64 |
+| openSUSE                       |  42.3+                  | X64 |
+| SLES(SUSE Enterprise Linux)   |  12 SP2+                | X64 |
+| Alpine Linux                   |  3.7+                   | X64 |
 
 지원 OS 버전 중 .NET Core 2.1이 지원되는 운영 체제, 배포 및 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 2.1이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)을 참조하세요.
-
-**NET Core 2.0**
-
-NET Core 2.0은 다음 Linux 64비트(`x86_64` 또는 `amd64`) 배포/버전에서 지원됩니다.
-
-* Red Hat Enterprise Linux 7, 6
-* CentOS 7
-* Oracle Linux 7
-* Fedora 27
-* Debian 9, 8.7 이상 버전
-* Ubuntu 18.04, 16.04, 14.04
-* Linux Mint 18, 17
-* openSUSE 42.3 이상 버전
-* SUSE Enterprise Linux(SLES) 12 서비스 팩 2 이상
-
-지원 OS 버전 중 .NET Core 2.0이 지원되는 운영 체제, 배포 및 버전, 수명 주기 정책 링크의 전체 목록은 [.NET Core 2.0이 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)을 참조하세요.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-.NET Core 1.x는 다음 Linux 64비트(`x86_64` 또는 `amd64`) 배포/버전에서 지원됩니다.
-
-* Red Hat Enterprise Linux 7
-* CentOS 7
-* Oracle Linux 7
-* Fedora 28(.NET Core 1.1), 27
-* Debian 8.2 이상 버전
-* Ubuntu 18.04(.NET Core 1.1), 16.04, 14.04
-* Linux Mint 17
-* openSUSE 42.3 이상 버전(.NET Core 1.1)
-
-지원 OS 버전 중 .NET Core 1.x를 지원하는 운영 체제 및 수명 주기 정책 링크는 [.NET Core 1.x Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)(.NET Core 1.x가 지원되는 OS 버전)를 참조하세요.
 
 ---
 
@@ -86,7 +113,8 @@ NET Core 2.0은 다음 Linux 64비트(`x86_64` 또는 `amd64`) 배포/버전에�
 Ubuntu 배포에는 다음과 같은 라이브러리 설치가 필요합니다.
 
 * liblttng-ust0
-* libcurl3
+* libcurl3(14.x 및 16.x용)
+* libcurl4(18.x용)
 * libssl1.0.0
 * libkrb5-3
 * zlib1g
@@ -118,7 +146,7 @@ Fedora 사용자: openssl 버전 >= 1.1인 경우 compat-openssl10을 설치해�
 * libunwind
 * libuuid
 
-종속성에 대한 자세한 내용은 [자체 포함 Linux 응용 프로그램](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)을 참조하세요.
+종속성에 대한 자세한 내용은 [자체 포함 Linux 애플리케이션](https://github.com/dotnet/core/blob/master/Documentation/self-contained-linux-apps.md)을 참조하세요.
 
 ## <a name="installing-net-core-dependencies-with-the-native-installers"></a>기본 설치 관리자를 사용하여 .NET Core 종속성 설치
 
@@ -131,481 +159,22 @@ Linux에는 두 가지 패키지 선택 항목이 있습니다.
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core 설치 관리자 스크립트를 사용하여 설치 스크립팅
 
-[dotnet-install 스크립트](./tools/dotnet-install-script.md)는 CLI 도구 체인 및 공유 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. [https://dot.net/v1/dotnet-install.sh](https://dot.net/v1/dotnet-install.sh)에서 스크립트를 다운로드할 수 있습니다.
+[dotnet-install 스크립트](./tools/dotnet-install-script.md)는 CLI 도구 체인 및 공유 런타임의 관리자가 아닌 일반 설치를 수행하는 데 사용됩니다. <https://dot.net/v1/dotnet-install.sh>에서 스크립트를 다운로드할 수 있습니다.
 
-스크립트는 기본적으로 현재 .NET Core 1.1인 최신 "LTS" 버전을 설치합니다. .NET Core 2.x를 설치하려면 다음 스위치를 사용하여 스크립트를 실행합니다.
+스크립트는 기본적으로 현재 .NET Core 1.1인 최신 "LTS" 버전을 설치합니다. .NET Core 2.1을 설치하려면 다음 스위치를 사용하여 스크립트를 실행합니다.
 
-```console
+```bash
 ./dotnet-install.sh -c Current
 ```
 
 설치 관리자 bash 스크립트는 자동화 시나리오 및 비관리자 설치에 사용됩니다. 또한 이 스크립트는 PowerShell 스위치를 읽으므로 Linux/OS X 시스템에서 스크립트와 함께 사용할 수 있습니다.
 
-## <a name="install-net-core-for-supported-red-hat-enterprise-linux-rhel-versions"></a>지원되는 RHEL(Red Hat Enterprise Linux) 버전에 대한 .NET Core 설치
-
-지원되는 RHEL 버전에 .NET Core를 설치하려면:
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-**.NET Core 2.1**
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. Red Hat Enterprise Linux 설치 정보에서 최신 .NET Core 2.1은 [.NET Core 2.1 시작 가이드](https://access.redhat.com/documentation/en-us/net_core/2.1/html/getting_started_guide/)를 참조하세요.
-
-**.NET Core 2.0**
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. Red Hat Enterprise Linux 설치 정보에서 최신 .NET Core 2.0은 [.NET Core 2.0 시작 가이드](https://access.redhat.com/documentation/en-us/net_core/2.0/html/getting_started_guide/)를 참조하세요. 
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-**.NET Core 1.1**
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2.  Red Hat Enterprise Linux 설치 정보에서 최신 .NET Core 1.1은 [.NET Core 1.1 시작 가이드](https://access.redhat.com/documentation/en-us/net_core/1.1/html/getting_started_guide/)를 참조하세요.
-     
-**.NET Core 1.0**
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2.  Red Hat Enterprise Linux 설치 정보에서 최신 .NET Core 1.0은 [.NET Core 1.0 시작 가이드](https://access.redhat.com/documentation/en-us/net_core/1.0/html/getting_started_guide/)를 참조하세요.
-
-Red Hat .NET 채널 액세스 등록 도움말은 Red Hat에서 [Chapter 1 of the .NET Core 1.1 Getting Started Guide](https://access.redhat.com/documentation/en/net-core/1.1/paged/getting-started-guide/)(.NET Core 1.1 1장 시작 가이드)를 참조하세요.
-
----
-
-## <a name="install-net-core-for-supported-ubuntu-and-linux-mint-distributionsversions-64-bit"></a>지원되는 Ubuntu 및 Linux Mint 배포/버전(64비트)에 대한 .NET Core 설치
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. 지원되는 Ubuntu 및 Linux Mint 배포/버전(64비트)에 대한 .NET Core 2.x 설치:
-
-**.NET Core 2.0**
-
-|런타임/SDK          |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04/Linux Mint 18|Ubuntu 14.04/Linux Mint 17|
-|-------------------------|----------------|----------------|----------------------------|----------------------------|
-|.NET Core 런타임 2.0.9  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.9)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.9)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.9)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.9)            |
-|.NET Core 런타임 2.0.8  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.8)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.8)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.8)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.8)            |
-|.NET Core 런타임 2.0.7  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.7)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.7)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.7)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.7)            |
-|.NET Core 런타임 2.0.6  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.6)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.6)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.6)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.6)            |
-|.NET Core 런타임 2.0.5  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.0.5)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.0.5)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.0.5)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.0.5)            |
-|.NET Core SDK 2.1.202    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.202)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.202)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.202)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.202)            |
-|.NET Core SDK 2.1.201    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.201)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.201)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.201)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.201)            |
-|.NET Core SDK 2.1.200    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.200)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.200)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.200)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.200)            |
-|.NET Core SDK 2.1.105    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.105)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.105)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.105)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.105)            |
-|.NET Core SDK 2.1.103    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.103)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.103)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.103)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.103)            |
-|.NET Core SDK 2.0.3      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.3)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.3)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.3)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.3)            |
-|.NET Core SDK 2.0.0      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.0.0)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.0.0)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.0.0)          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.0.0)            |
-
-**.NET Core 2.1**
-
->[!IMPORTANT]
-> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 이상을 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)해야 합니다.
-
-|런타임/SDK          |Ubuntu 18.04    |Ubuntu 17.10    |Ubuntu 16.04/Linux Mint 18|Ubuntu 14.04/Linux Mint 17|
-|-------------------------|----------------|----------------|----------------------------|----------------------------|
-|.NET Core 런타임 2.1.2          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.2)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.2)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.2)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.2)            |
-|.NET Core SDK 2.1.400     |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.400)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.400)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.400)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.400)            |
-|.NET Core SDK 2.1.302     |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.302)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.302)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.302)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.302)            |
-|.NET Core 런타임 2.1.1          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.1)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.1)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.1)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.1)            |
-|.NET Core SDK 2.1.301     |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.301)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.301)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.301)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.301)            |
-|.NET Core 런타임 2.1.0          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/runtime-2.1.0)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/runtime-2.1.0)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/runtime-2.1.0)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/runtime-2.1.0)            |
-|.NET Core SDK 2.1.300     |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu18-04/sdk-2.1.300)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu17-10/sdk-2.1.300)|[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu16-04/sdk-2.1.300)            |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/ubuntu14-04/sdk-2.1.300)            |
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. 지원되는 Ubuntu 및 Linux Mint 배포/버전(64비트)에 대한 .NET Core 1.x 설치:
-
-| 런타임/SDK         |Ubuntu 16.04/Linux Mint 18|Ubuntu 14.04/Linux Mint 17|
-|-------------------------|----------------------------|----------------------------|
-|.NET Core 런타임 1.1.9  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.9-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.8-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.1.8  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.1.7  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.1.6  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.1.5  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.5-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.5-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.1.4  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.4-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.4-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.0.10 |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.0.9  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.0.8  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.8-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.8-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.0.7  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.7-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.7-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.0.5  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.5-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.5-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core 런타임 1.0.4  |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.4-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.4-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core SDK 1.1.10     |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.10-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.10-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core SDK 1.1.9      |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.9-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.9-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core SDK 1.1.8      |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core SDK 1.1.7      |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core SDK 1.1.5      |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.5-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.5-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core SDK 1.1.4      |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.4-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.4-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core SDK 1.0.4      |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-ubuntu-14.04-x64-binaries)            |
-|.NET Core SDK 1.0.1      |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-ubuntu-16.04-x64-binaries)            |[설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-ubuntu-14.04-x64-binaries)            |
-
----
-
-## <a name="install-net-core-for-supported-debian-versions-64-bit"></a>지원되는 Debian 버전(64비트)에 대한 .NET Core 설치
-
-지원되는 Debian 버전(64비트)에 .NET Core를 설치하려면:
-
-> [!NOTE]
-> tar.gz에서 Linux 시스템을 설치하는 데 사용자 제어 디렉터리가 필요합니다.
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. 지원되는 Debian 버전(64비트)에 .NET Core 2.x를 설치하려면:
-
-**.NET Core 2.0**
-
-|런타임/SDK          |Debian 9       |Debian 8       |
-|-------------------------|---------------|---------------|
-|.NET Core 런타임 2.0.9  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.9)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.9)   |
-|.NET Core 런타임 2.0.8  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.8)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.8)   |
-|.NET Core 런타임 2.0.7  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.7)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.7)   |
-|.NET Core 런타임 2.0.6  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.6)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.6)   |
-|.NET Core 런타임 2.0.5  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.5)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.5)   |
-|.NET Core 런타임 2.0.3  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.3)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.3)   |
-|.NET Core 런타임 2.0.0  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.0.0)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.0.0)   |
-|.NET Core SDK 2.1.202    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.202)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.202)   |
-|.NET Core SDK 2.1.201    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.201)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.201)   |
-|.NET Core SDK 2.1.200    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.200)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.200)   |
-|.NET Core SDK 2.1.105    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.105)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.105)   |
-|.NET Core SDK 2.1.105    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.105)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.105)   |
-|.NET Core SDK 2.1.104    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.104)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.104)   |
-|.NET Core SDK 2.1.103    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.103)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.103)   |
-|.NET Core SDK 2.1.102    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.102)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.102)   |
-|.NET Core SDK 2.1.101    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.101)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.101)   |
-|.NET Core SDK 2.0.3      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.3)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.3)   |
-|.NET Core SDK 2.0.0      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.0.0)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.0.0)   |
-
-**.NET Core 2.1**
-
->[!IMPORTANT]
-> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 이상을 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)해야 합니다.
-
-|런타임/SDK                  |Debian 9       |Debian 8       |
-|---------------------------------|---------------|---------------|
-|.NET Core 런타임 2.1.2          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.2)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.2)   |
-|.NET Core SDK 2.1.400        |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.400)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.400)        |
-|.NET Core SDK 2.1.302        |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.302)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.302)        |
-|.NET Core 런타임 2.1.1          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.1)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.1)   |
-|.NET Core SDK 2.1.301        |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.301)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.301)        |
-|.NET Core 런타임 2.1.0          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/runtime-2.1.0)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/runtime-2.1.0)   |
-|.NET Core SDK 2.1.300        |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian9/sdk-2.1.300)   |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/debian8/sdk-2.1.300)        |
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. Debian 9 또는 Debian 8에 .NET Core 1.x 설치:
-
-* .NET Core 런타임 1.1.9 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.9-linux-debian-x64-binaries)
-* .NET Core 런타임 1.1.8 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.8-linux-debian-x64-binaries)
-* .NET Core 런타임 1.1.7 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-debian-x64-binaries)
-* .NET Core 런타임 1.1.6 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-debian-x64-binaries)
-* .NET Core 런타임 1.1.5 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.5-linux-debian-x64-binaries)
-* .NET Core 런타임 1.1.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.4-linux-debian-x64-binaries)
-* .NET Core 런타임 1.1.2 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.2-linux-debian-x64-binaries)
-* .NET Core 런타임 1.1.1 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.1-linux-debian-x64-binaries)
-* .NET Core 런타임 1.1.0 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.0-linux-debian-x64-binaries)
-* .NET Core 런타임 1.0.10 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-debian-x64-binaries)
-* .NET Core 런타임 1.0.9 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-debian-x64-binaries)
-* .NET Core 런타임 1.0.8 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.8-linux-debian-x64-binaries)
-* .NET Core 런타임 1.0.7 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.7-linux-debian-x64-binaries)
-* .NET Core 런타임 1.0.5 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.5-linux-debian-x64-binaries)
-* .NET Core 런타임 1.0.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.4-linux-debian-x64-binaries)
-* .NET Core SDK 1.1.10 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.10-linux-debian-x64-binaries)
-* .NET Core SDK 1.1.9 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.9-linux-debian-x64-binaries)
-* .NET Core SDK 1.1.8 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-debian-x64-binaries)
-* .NET Core SDK 1.1.7 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-debian-x64-binaries)
-* .NET Core SDK 1.1.5 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.5-linux-debian-x64-binaries)
-* .NET Core SDK 1.1.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.4-linux-debian-x64-binaries)
-* .NET Core SDK 1.0.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-debian-x64-binaries)
-* .NET Core SDK 1.0.1 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-debian-x64-binaries)
-
----
-
-## <a name="install-net-core-for-supported-fedora-versions-64-bit"></a>지원되는 Fedora 버전(64비트)에 대한 .NET Core 설치
-
-지원되는 Fedora 버전에 .NET Core를 설치하려면:
-
-> [!NOTE]
-> tar.gz에서 Linux 시스템을 설치하는 데 사용자 제어 디렉터리가 필요합니다.
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. 지원되는 Fedora 버전(64비트)에 대한 .NET Core 2.x 설치:
-
-**.NET Core 2.0**
-
-|런타임/SDK          |Fedora 26 이상 |Fedora 25 이전 |
-|-------------------------|-------------------|----------------------|
-|.NET Core 런타임 2.0.9  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.9)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.9)           |
-|.NET Core 런타임 2.0.8  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.8)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.8)           |
-|.NET Core 런타임 2.0.7  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.7)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.7)           |
-|.NET Core 런타임 2.0.6  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.6)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.6)           |
-|.NET Core 런타임 2.0.5  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.5)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.5)           |
-|.NET Core 런타임 2.0.3  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.3)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.3)           |
-|.NET Core 런타임 2.0.0  |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/runtime-2.0.0)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/runtime-2.0.0)           |
-|.NET Core SDK 2.1.200    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.200)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.200)           |
-|.NET Core SDK 2.1.105    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.105)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.105)           |
-|.NET Core SDK 2.1.103    |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.1.103)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.1.103)           |
-|.NET Core SDK 2.0.3      |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora26/sdk-2.0.3)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora25/sdk-2.0.3)           |
-
-**.NET Core 2.1**
-
->[!IMPORTANT]
-> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 이상을 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)해야 합니다.
-
-|런타임/SDK                  |Fedora 28          |Fedora 27             |
-|---------------------------------|-------------------|----------------------|
-|.NET Core 런타임 2.1.2          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora28/runtime-2.1.2)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.2)           |
-|.NET Core SDK 2.1.400          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora28/sdk-2.1.400)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.400)           |
-|.NET Core SDK 2.1.302          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora28/sdk-2.1.302)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.302)           |
-|.NET Core 런타임 2.1.1          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora28/runtime-2.1.1)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.1)           |
-|.NET Core SDK 2.1.301          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora28/sdk-2.1.301)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.301)           |
-|.NET Core 런타임 2.1.0          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora28/runtime-2.1.0)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/runtime-2.1.0)           |
-|.NET Core SDK 2.1.300          |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora28/sdk-2.1.300)       |[설치 링크](https://www.microsoft.com/net/download/linux-package-manager/fedora27/sdk-2.1.300)           |
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. 지원되는 Fedora 버전(64비트)에 .NET Core 1.x 설치:
-
-**Fedora 24**
-
-* .NET Core 런타임 1.1.8 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.8-linux-fedora-24-x64-binaries)
-* .NET Core 런타임 1.1.7 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-fedora-24-x64-binaries)
-* .NET Core 런타임 1.1.6 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-fedora-24-x64-binaries)
-* .NET Core 런타임 1.1.5 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.5-linux-fedora-24-x64-binaries)
-* .NET Core 런타임 1.1.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.4-linux-fedora-24-x64-binaries)
-* .NET Core 런타임 1.1.2 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.2-linux-fedora-24-x64-binaries)
-* .NET Core 런타임 1.1.1 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.1-linux-fedora-24-x64-binaries)
-* .NET Core SDK 1.1.9 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.9-linux-fedora-24-x64-binaries)
-* .NET Core SDK 1.1.8 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-fedora-24-x64-binaries)
-* .NET Core SDK 1.1.7 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-fedora-24-x64-binaries)
-* .NET Core SDK 1.1.5 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.5linux-fedora-24-x64-binaries)
-* .NET Core SDK 1.1.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.5linux-fedora-24-x64-binaries)
-* .NET Core SDK 1.0.1 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-debian-x64-binaries)
-
-**Fedora 23**
-
-* .NET Core 런타임 1.1.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.4-linux-fedora-23-x64-binaries)
-* .NET Core 런타임 1.1.2 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.2-linux-fedora-23-x64-binaries)
-* .NET Core 런타임 1.1.1 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.1-linux-fedora-23-x64-binaries)
-* .NET Core 런타임 1.0.9 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-fedora-23-x64-binaries)
-* .NET Core 런타임 1.0.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.4-linux-fedora-23-x64-binaries)
-* .NET Core SDK 1.1.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.4linux-fedora-23-x64-binaries)
-* .NET Core SDK 1.1.2 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.2linux-fedora-23-x64-binaries)
-* .NET Core SDK 1.1.2 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.2linux-fedora-23-x64-binaries)
-* .NET Core SDK 1.0.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-fedora-23-x64-binaries)
-* .NET Core SDK 1.0.1 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-fedora-23-x64-binaries)
-
----
-
-## <a name="install-net-core-for-supported-centos-and-oracle-linux-distributionsversions-64-bit"></a>지원되는 CentOS 및 Oracle Linux 배포/버전(64비트)에 대한 .NET Core 설치
-
-지원되는 CentOS 및 Oracle Linux 배포/버전(64비트)에 .NET Core를 설치하려면:
-
-> [!NOTE]
-> tar.gz에서 Linux 시스템을 설치하는 데 사용자 제어 디렉터리가 필요합니다.
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. 지원되는 CentOS 및 Oracle Linux 배포/버전(64비트)에 .NET Core 2.x 설치:
-
-**.NET Core 2.0**
-
-* .NET Core 런타임 2.0.9 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.9)
-* .NET Core 런타임 2.0.8 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.8)
-* .NET Core 런타임 2.0.7 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.7)
-* .NET Core 런타임 2.0.6 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.6)
-* .NET Core 런타임 2.0.5 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.5)
-* .NET Core 런타임 2.0.3 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.3)
-* .NET Core 런타임 2.0.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.0.0)
-* .NET Core SDK 2.1.202 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.202)
-* .NET Core SDK 2.1.201 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.201)
-* .NET Core SDK 2.1.200 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.200)
-* .NET Core SDK 2.1.105 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.105)
-* .NET Core SDK 2.1.104 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.104)
-* .NET Core SDK 2.1.103 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.103)
-* .NET Core SDK 2.1.102 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.102)
-* .NET Core SDK 2.0.3 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.3)
-* .NET Core SDK 2.0.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.0.0)
- 
-**.NET Core 2.1**
-
->[!IMPORTANT]
-> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 이상을 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)해야 합니다.
-
-* .NET Core 런타임 2.1.2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.2)
-* .NET Core SDK 2.1.400 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.400)
-* .NET Core SDK 2.1.302 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.302)
-* .NET Core 런타임 2.1.1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.1)
-* .NET Core SDK 2.1.301 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.301)
-* .NET Core 런타임 2.1.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/runtime-2.1.0)
-* .NET Core SDK 2.1.300 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/centos/sdk-2.1.300)
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. 지원되는 CentOS 및 Oracle Linux 배포/버전(64비트)에 .NET Core 1.x 설치:
-
-* .NET Core 런타임 1.1.9 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.9-linux-centos-x64-binaries)
-* .NET Core 런타임 1.1.8 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.8-linux-centos-x64-binaries)
-* .NET Core 런타임 1.1.7 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-centos-x64-binaries)
-* .NET Core 런타임 1.1.6 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-centos-x64-binaries)
-* .NET Core 런타임 1.1.5 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.5-linux-centos-x64-binaries)
-* .NET Core 런타임 1.1.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.4-linux-centos-x64-binaries)
-* .NET Core 런타임 1.1.2 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.2-linux-centos-x64-binaries)
-* .NET Core 런타임 1.1.1 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.1-linux-centos-x64-binaries)
-* .NET Core 런타임 1.0.12 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.12-linux-centos-x64-binaries)
-* .NET Core 런타임 1.0.11 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.11-linux-centos-x64-binaries)
-* .NET Core 런타임 1.0.10 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.10-linux-centos-x64-binaries)
-* .NET Core 런타임 1.0.9 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.9-linux-centos-x64-binaries)
-* .NET Core 런타임 1.0.8 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.8-linux-centos-x64-binaries)
-* .NET Core 런타임 1.0.7 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.7-linux-centos-x64-binaries)
-* .NET Core 런타임 1.0.5 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.5-linux-centos-x64-binaries)
-* .NET Core 런타임 1.0.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.0.4-linux-centos-x64-binaries)
-* .NET Core SDK 1.1.10 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.10-linux-centos-x64-binaries)
-* .NET Core SDK 1.1.9 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.9-linux-centos-x64-binaries)
-* .NET Core SDK 1.1.8 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.8-linux-centos-x64-binaries)
-* .NET Core SDK 1.1.7 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-centos-x64-binaries)
-* .NET Core SDK 1.1.5 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.5-linux-centos-x64-binaries)
-* .NET Core SDK 1.1.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.4-linux-centos-x64-binaries)
-* .NET Core SDK 1.0.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-centos-x64-binaries)
-* .NET Core SDK 1.0.1 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-centos-x64-binaries)
-
----
-
-## <a name="install-net-core-for-supported-suse-linux-enterprise-server-and-opensuse-distributionsversions-64-bit"></a>지원되는 SUSE Linux Enterprise Server 및 OpenSUSE 배포/버전(64비트)에 .NET Core 설치
-
-지원되는 SUSE Linux Enterprise Server 및 OpenSUSE 배포/버전(64비트)에 .NET Core 2.x를 설치하려면:
-
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. 지원되는 SUSE Linux Enterprise Server 및 OpenSUSE 배포/버전(64비트)에 .NET Core 2.x 설치:
-
-**.NET Core 2.0**
-
-**SUSE Linux Enterprise Server**
-
-* .NET Core 런타임 2.0.9 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.9)
-* .NET Core 런타임 2.0.8 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.8)
-* .NET Core 런타임 2.0.7 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.7)
-* .NET Core 런타임 2.0.6 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.6)
-* .NET Core 런타임 2.0.5 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.5)
-* .NET Core 런타임 2.0.3 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.3)
-* .NET Core 런타임 2.0.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.0.0)
-* .NET Core SDK 2.1.202 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.202)
-* .NET Core SDK 2.1.201 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.201)
-* .NET Core SDK 2.1.200 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.200)
-* .NET Core SDK 2.1.105 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.105)
-* .NET Core SDK 2.1.104 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.104)
-* .NET Core SDK 2.1.103 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.103)
-* .NET Core SDK 2.1.102 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.102)
-* .NET Core SDK 2.1.101 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.101)
-* .NET Core SDK 2.1.100 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.100)
-* .NET Core SDK 2.1.4 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.4)
-* .NET Core SDK 2.1.2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.2)
-* .NET Core SDK 2.0.3 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.3)
-* .NET Core SDK 2.0.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.0.0)
-
-**openSUSE**
-
-* .NET Core 런타임 2.0.9 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.9)
-* .NET Core 런타임 2.0.8 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.8)
-* .NET Core 런타임 2.0.7 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.7)
-* .NET Core 런타임 2.0.6 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.6)
-* .NET Core 런타임 2.0.5 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.5)
-* .NET Core 런타임 2.0.3 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.3)
-* .NET Core 런타임 2.0.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.0.0)
-* .NET Core SDK 2.1.202 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.202)
-* .NET Core SDK 2.1.201 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.201)
-* .NET Core SDK 2.1.200 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.200)
-* .NET Core SDK 2.1.105 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.105)
-* .NET Core SDK 2.1.103 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.103)
-* .NET Core SDK 2.1.102 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.102)
-* .NET Core SDK 2.1.101 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.101)
-* .NET Core SDK 2.1.100 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.100)
-* .NET Core SDK 2.1.4 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.4)
-* .NET Core SDK 2.1.2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.2)
-* .NET Core SDK 2.0.3 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.3)
-* .NET Core SDK 2.0.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.0.0)
- 
-**.NET Core 2.1**
-
->[!IMPORTANT]
-> Visual Studio와 함께 .NET Core 2.1을 사용하려면 [Visual Studio 2017 15.7 이상을 설치](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)해야 합니다.
-
-**SUSE Linux Enterprise Server**
-
-* .NET Core 런타임 2.1.2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.2)
-* .NET Core SDK 2.1.400 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.400)
-* .NET Core SDK 2.1.302 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.302)
-* .NET Core 런타임 2.1.1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.1)
-* .NET Core SDK 2.1.301 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.301)
-* .NET Core 런타임 2.1.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/runtime-2.1.0)
-* .NET Core SDK 2.1.300 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/sles/sdk-2.1.300)
-
-**openSUSE**
-
-* .NET Core 런타임 2.1.2 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.2)
-* .NET Core SDK 2.1.400 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.400)
-* .NET Core SDK 2.1.302 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.302)
-* .NET Core 런타임 2.1.1 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.1)
-* .NET Core SDK 2.1.301 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.301)
-* .NET Core 런타임 2.1.0 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/runtime-2.1.0)
-* .NET Core SDK 2.1.300 [설치 링크](https://www.microsoft.com/net/download/linux-package-manager/opensuse/sdk-2.1.300)
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-1. 시스템에서 .NET Core의 **이전 미리 보기** 버전을 제거하세요.
-
-2. 지원되는 SUSE Linux Enterprise Server 및 OpenSUSE 배포/버전(64비트)에 .NET Core 1.x 설치:
-
-**SUSE Linux Enterprise Server 13.2**
-
-* .NET Core 런타임 1.1.7 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.7-linux-opensuse-13.2-x64-binaries)
-* .NET Core 런타임 1.1.6 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-1.1.6-linux-opensuse-13.2-x64-binaries)
-* .NET Core SDK 1.1.7 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-linux-opensuse-13.2-x64-binaries)
-* .NET Core SDK 1.0.4 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.4-linux-opensuse-13.2-x64-binaries)
-* .NET Core SDK 1.0.1 [설치 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.0.1-linux-opensuse-13.2-x64-binaries)
-
----
-
-## <a name="install-net-core-for-supported-alpine-linux-versions-64-bit"></a>지원되는 Alpine Linux 버전(64비트)에 대한 .NET Core 설치
-
-> [!NOTE]
-> tar.gz에서 Linux 시스템을 설치하는 데 사용자 제어 디렉터리가 필요합니다.
-
-다음 링크에서 지원되는 Alpine Linux 버전(64비트)에 대한 .NET Core 2.1 설치 지침을 다운로드하여 따르세요.
-
-* .NET Core 런타임 2.1.2 [다운로드 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.2-linux-x64-alpine-binaries)
-* .NET Core SDK 2.1.400 [다운로드 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.400-linux-x64-alpine-binaries)
-* .NET Core SDK 2.1.302 [다운로드 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.302-linux-x64-alpine-binaries)
-* .NET Core 런타임 2.1.1 [다운로드 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.1-linux-x64-alpine-binaries)
-* .NET Core SDK 2.1.301 [다운로드 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.301-linux-x64-alpine-binaries)
-* .NET Core 런타임 2.1.0 [다운로드 링크](https://www.microsoft.com/net/download/thank-you/dotnet-runtime-2.1.0-linux-x64-alpine-binaries)
-* .NET Core SDK 2.1.300 [다운로드 링크](https://www.microsoft.com/net/download/thank-you/dotnet-sdk-2.1.300-linux-x64-alpine-binaries)
-
-> [!IMPORTANT]
-> 지원되는 Linux 배포/버전에 .NET Core 설치에 문제가 있는 경우 설치된 배포/버전에 대한 다음 항목을 참조하세요.
-> * [.NET Core 2.1 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/2.1)
-> * [.NET Core 2.0 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/2.0)
-> * [.NET Core 1.1 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.1)
-> * [.NET Core 1.0 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.0)
+## <a name="troubleshoot"></a>문제 해결
+
+지원되는 Linux 배포/버전에 .NET Core 설치에 문제가 있는 경우 설치된 배포/버전에 대한 다음 항목을 참조하세요.
+
+* [.NET Core 3.0 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/3.0)
+* [.NET Core 2.2 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/2.2)
+* [.NET Core 2.1 알려진 문제](https://github.com/dotnet/core/tree/master/release-notes/2.1)
+* [.NET Core 1.1 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.1)
+* [.NET Core 1.0 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/1.0)

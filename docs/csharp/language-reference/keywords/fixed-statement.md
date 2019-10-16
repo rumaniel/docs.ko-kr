@@ -1,31 +1,32 @@
 ---
-title: fixed 문(C# 참조)
+title: fixed 문 - C# 참조
+ms.custom: seodec18
 ms.date: 05/10/2018
 f1_keywords:
 - fixed_CSharpKeyword
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: 021fc3bd63922394bd70495bd4335b068fc51cdd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d3c87f0e71095bbcc7c5a1d64b026e92838a6306
+ms.sourcegitcommit: 1e7ac70be1b4d89708c0d9552897515f2cbf52c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237152"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68433748"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed 문(C# 참조)
 
-`fixed` 문은 가비지 수집기에서 이동 가능한 변수를 재배치할 수 없도록 합니다. `fixed` 문은 [unsafe](unsafe.md) 컨텍스트에서만 허용됩니다. `fixed`를 사용하여 [고정 크기 버퍼](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)를 만들 수도 있습니다.
+`fixed` 문은 가비지 수집기에서 이동 가능한 변수를 재배치할 수 없도록 합니다. `fixed` 문은 [unsafe](unsafe.md) 컨텍스트에서만 허용됩니다. `fixed` 키워드를 사용하여 [고정 크기 버퍼](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)를 만들수도 있습니다.
 
 `fixed` 문은 관리되는 변수에 대한 포인터를 설정하고 문을 실행하는 동안 해당 변수를 "고정"합니다. 이동 가능한 관리되는 변수에 대한 포인터는 `fixed` 컨텍스트에만 유용합니다. `fixed` 컨텍스트 없는 가비지 수집은 예기치 않게 변수를 재배치할 수 있습니다. C# 컴파일러만 `fixed` 문에서 관리되는 변수에 대한 포인터를 할당할 수 있습니다.
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#1)]
 
-배열, 문자열, 고정 크기 버퍼 또는 변수의 주소를 사용하여 포인터를 초기화할 수 있습니다. 다음 예제에서는 변수 주소, 배열 및 문자열의 사용을 보여 줍니다. 고정 크기 버퍼에 대한 자세한 내용은 [고정 크기 버퍼](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)를 참조하세요.
+배열, 문자열, 고정 크기 버퍼 또는 변수의 주소를 사용하여 포인터를 초기화할 수 있습니다. 다음 예제에서는 변수 주소, 배열 및 문자열의 사용을 보여 줍니다.
 
 [!code-csharp[Initializing fixed size buffers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#2)]
 
-C# 7.3부터 `fixed` 문은 배열, 문자열, 고정 크기 버퍼 또는 관리되지 않는 변수 외의 추가 형식에서 작동합니다. `GetPinnableReference` 메서드를 구현하는 모든 형식을 고정할 수 있습니다. `GetPinnableReference`는 `ref` 변수를 관리되지 않는 형식으로 반환해야 합니다. 자세한 내용은 [pointer types](../../programming-guide/unsafe-code-pointers/pointer-types.md)(포인터 형식)에 대한 항목을 참조하세요. .NET Core 2.0에 도입된 .NET 형식 <xref:System.Span%601?displayProperty=nameWithType> 및 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>은 이 패턴을 사용하며 고정될 수 있습니다. 이는 다음 예제에서 확인할 수 있습니다.
+C# 7.3부터 `fixed` 문은 배열, 문자열, 고정 크기 버퍼 또는 비관리형 변수 외의 추가 형식에서 작동합니다. `GetPinnableReference` 메서드를 구현하는 모든 형식을 고정할 수 있습니다. `GetPinnableReference`는 `ref` 변수를 [비관리형 형식](../builtin-types/unmanaged-types.md)으로 반환해야 합니다. .NET Core 2.0에 도입된 .NET 형식 <xref:System.Span%601?displayProperty=nameWithType> 및 <xref:System.ReadOnlySpan%601?displayProperty=nameWithType>은 이 패턴을 사용하며 고정될 수 있습니다. 이는 다음 예제에서 확인할 수 있습니다.
 
 [!code-csharp[Accessing fixed memory](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#FixedSpan)]
 
@@ -62,19 +63,17 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-
-안전하지 않은 모드에서는 가비지 수집되지 않아 고정할 필요가 없는 스택에서 메모리를 할당할 수 있습니다. 자세한 내용은 [stackalloc](stackalloc.md)를 참조하세요.
-
-[!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#4)]
+가비지 수집의 대상이 아니므로 고정할 필요가 없는 스택에서 메모리를 할당할 수 있습니다. 이를 위해 [`stackalloc` 연산자](../operators/stackalloc.md)를 사용합니다.
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [fixed 문](~/_csharplang/spec/unsafe-code.md#the-fixed-statement) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../index.md)  
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)  
-- [C# 키워드](index.md)  
-- [unsafe](unsafe.md)  
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](index.md)
+- [unsafe](unsafe.md)
+- [포인터 형식](../../programming-guide/unsafe-code-pointers/pointer-types.md)
 - [고정 크기 버퍼](../../programming-guide/unsafe-code-pointers/fixed-size-buffers.md)

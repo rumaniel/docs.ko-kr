@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: daf2c3dcaf16e949f8770121d8324cbfe6c7d05b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 77d54f6c8f67dda5132518d1fbd579a91ce82071
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404081"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777446"
 ---
 # <a name="emitassemblycustomattribute-method"></a>EmitAssemblyCustomAttribute 메서드
-호출 어셈블리 수준의 사용자 지정 특성을 설정 합니다.  
+을 호출 하 여 어셈블리 수준 사용자 지정 특성을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EmitAssemblyCustomAttribute(  
     mdAssembly   AssemblyID,  
     mdToken      FileToken,  
@@ -41,35 +41,36 @@ HRESULT EmitAssemblyCustomAttribute(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
  어셈블리의 ID입니다.  
   
  `FileToken`  
- 특성을 정의 하는 파일입니다. 경우 NULL이 될 수 `AssemblyID` 바인딩되지 않은 어셈블리를 나타내지 않습니다.  
+ 특성의 파일을 제거 하는 파일입니다. 가 바인딩되지 않은 .netmodule `AssemblyID` 을 나타내지 않는 경우 NULL 일 수 있습니다.  
   
  `tkType`  
  사용자 지정 특성의 형식입니다.  
   
  `pCustomValue`  
- 데이터 사용자 지정 값입니다.  
+ 사용자 지정 값 데이터입니다.  
   
  `cbCustomValue`  
  사용자 지정 값 데이터의 길이입니다.  
   
  `bSecurity`  
- 사용자 지정 특성은 어셈블리 서명을에 연결 하는 경우 TRUE입니다.  
+ 사용자 지정 특성이 어셈블리 서명과 관련 되어 있으면 TRUE입니다.  
   
  `bAllowMulti`  
- TRUE 이면 특성이 여러 개를 생성할 수 있습니다.  
+ 여러 특성을 내보내야 하는 경우 TRUE입니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h 필요  
+ Alink 필요  
   
-## <a name="see-also"></a>참고 항목  
- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>참고자료
+
+- [IALink 인터페이스](ialink-interface.md)
+- [IALink2 인터페이스](ialink2-interface.md)
+- [ALink API](index.md)

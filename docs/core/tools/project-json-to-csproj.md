@@ -1,15 +1,15 @@
 ---
-title: project.json 및 csproj 비교 - .NET Core
+title: project.json 및 csproj 비교
 description: project.json 및 csproj e요소 간 매핑을 참조하세요.
 author: natemcmaster
-ms.author: mairaw
 ms.date: 03/13/2017
-ms.openlocfilehash: 0079164470f87df665be6f9de62bc98d3fb51696
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.custom: seodec18
+ms.openlocfilehash: 6ac63f18bd42193e964aaeae3c54c887c9c63163
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47397714"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56747413"
 ---
 # <a name="a-mapping-between-projectjson-and-csproj-properties"></a>project.json 및 csproj 속성 간 매핑
 
@@ -39,7 +39,7 @@ ms.locfileid: "47397714"
 }
 ```
 
-더 이상 지원되지 않습니다. csproj에서는 디렉터리 이름으로 정의되는 프로젝트 파일 이름으로 결정됩니다. 예를 들어, `MyProjectName.csproj`을 입력합니다.
+더 이상 지원되지 않습니다. csproj에서는 보통 디렉터리 이름과 일치하는 프로젝트 파일 이름으로 결정됩니다. 예를 들어 `MyProjectName.csproj`과 같은 형식입니다.
 
 기본적으로 프로젝트 파일 이름은 `<AssemblyName>` 및 `<PackageId>` 속성의 값도 지정합니다.
 
@@ -676,4 +676,4 @@ MSBuild에서는 [항목](/visualstudio/msbuild/common-msbuild-project-items)을
 
 ## <a name="see-also"></a>참고 항목
 
-* [CLI의 변경 내용에 대한 대략적인 개요](../tools/cli-msbuild-architecture.md)
+- [CLI의 변경 내용에 대한 대략적인 개요](../tools/cli-msbuild-architecture.md)

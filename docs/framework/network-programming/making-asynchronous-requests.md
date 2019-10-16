@@ -11,18 +11,18 @@ helpviewer_keywords:
 - Network Resources
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
-ms.openlocfilehash: 38ebe2d53bf2f22f6d28452dbc8763247382cc54
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3668975c31e9086ee15250dae939b75587f5c0c6
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197166"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71047656"
 ---
 # <a name="making-asynchronous-requests"></a>비동기 요청 수행
 <xref:System.Net> 클래스에서는 인터넷 리소스에 비동기적으로 액세스하기 위해 .NET Framework의 표준 비동기 프로그래밍 모델을 사용합니다. <xref:System.Net.WebRequest> 클래스의 <xref:System.Net.WebRequest.BeginGetResponse%2A> 및 <xref:System.Net.WebRequest.EndGetResponse%2A> 메서드를 통해 인터넷 리소스의 비동기 요청을 시작하고 완료합니다.  
   
 > [!NOTE]
->  비동기 콜백 메서드에서 동기 호출을 사용하면 심각한 성능 저하가 발생할 수 있습니다. **WebRequest** 및 해당 종속 항목을 사용하는 인터넷 요청에서는 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType>을 사용하여 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 매서드에서 반환한 스트림을 읽어야 합니다.  
+> 비동기 콜백 메서드에서 동기 호출을 사용하면 심각한 성능 저하가 발생할 수 있습니다. **WebRequest** 및 해당 종속 항목을 사용하는 인터넷 요청에서는 <xref:System.IO.Stream.BeginRead%2A?displayProperty=nameWithType>을 사용하여 <xref:System.Net.WebResponse.GetResponseStream%2A?displayProperty=nameWithType> 매서드에서 반환한 스트림을 읽어야 합니다.  
   
  다음 샘플 코드는 **WebRequest** 클래스에서 비동기 호출을 사용하는 방법을 보여 줍니다. 이 샘플은 명령줄에서 URI를 받아 URI에서 리소스를 요청한 다음 인터넷에서 수신하는 동시에 콘솔에 데이터를 인쇄하는 콘솔 프로그램입니다.  
   
@@ -32,18 +32,18 @@ ms.locfileid: "50197166"
   
  **ClientGetAsync** 클래스에서 인터넷 리소스에 대한 비동기 요청을 구현하고 결과적으로 받은 응답을 콘솔에 씁니다. 다음 목록에 설명되어 있는 메서드와 속성이 포함되어 있습니다.  
   
--   `allDone` 속성에는 요청 완료를 알리는 <xref:System.Threading.ManualResetEvent> 클래스의 인스턴스가 있습니다.  
+- `allDone` 속성에는 요청 완료를 알리는 <xref:System.Threading.ManualResetEvent> 클래스의 인스턴스가 있습니다.  
   
--   `Main()` 메서드에서 명령줄을 읽고 지정된 인터넷 리소스의 요청을 시작합니다. **WebRequest** `wreq` 및 **RequestState** `rs`를 만들고 **BeginGetResponse**를 호출하여 요청 처리를 시작한 다음 `allDone.WaitOne()` 메서드를 호출합니다. 그러면 콜백이 완료될 때까지 응용 프로그램이 종료되지 않습니다. 인터넷 리소스에서 응답을 읽은 다음 `Main()`에서 콘솔에 응답을 쓰고 응용 프로그램이 종료됩니다.  
+- `Main()` 메서드에서 명령줄을 읽고 지정된 인터넷 리소스의 요청을 시작합니다. **WebRequest**`wreq` 및 **RequestState**`rs`를 만들고 **BeginGetResponse**를 호출하여 요청 처리를 시작한 다음 `allDone.WaitOne()` 메서드를 호출합니다. 그러면 콜백이 완료될 때까지 애플리케이션이 종료되지 않습니다. 인터넷 리소스에서 응답을 읽은 다음 `Main()`에서 콘솔에 응답을 쓰고 애플리케이션이 종료됩니다.  
   
--   `showusage()` 메서드를 통해 콘솔에 예제 명령줄을 씁니다. 명령줄에 URI가 제공되지 않으면 `Main()`을 통해 호출합니다.  
+- `showusage()` 메서드를 통해 콘솔에 예제 명령줄을 씁니다. 명령줄에 URI가 제공되지 않으면 `Main()`을 통해 호출합니다.  
   
--   `RespCallBack()` 메서드에서 인터넷 요청의 비동기 콜백 메서드를 구현합니다. 인터넷 리소스에서 응답을 포함하는 **WebResponse** 인스턴스를 만들고, 응답 스트림을 가져온 다음, 스트림에서 비동기식으로 데이터 읽기를 시작합니다.  
+- `RespCallBack()` 메서드에서 인터넷 요청의 비동기 콜백 메서드를 구현합니다. 인터넷 리소스에서 응답을 포함하는 **WebResponse** 인스턴스를 만들고, 응답 스트림을 가져온 다음, 스트림에서 비동기식으로 데이터 읽기를 시작합니다.  
   
--   `ReadCallBack()` 메서드에서는 응답 스트림을 읽는 비동기 콜백 메서드를 구현합니다. 인터넷 리소스에서 받은 데이터를 **RequestState** 인스턴스의 **ResponseData** 속성으로 전송한 다음, 데이터가 더 이상 반환되지 않을 때까지 응답 스트림의 또 다른 비동기 읽기를 시작합니다. 모든 데이터를 읽고 나면 `ReadCallBack()`에서 응답 스트림을 닫고 `allDone.Set()` 메서드를 호출하여 **ResponseData**에 전체 응답이 있음을 표시합니다.  
+- `ReadCallBack()` 메서드에서는 응답 스트림을 읽는 비동기 콜백 메서드를 구현합니다. 인터넷 리소스에서 받은 데이터를 **RequestState** 인스턴스의 **ResponseData** 속성으로 전송한 다음, 데이터가 더 이상 반환되지 않을 때까지 응답 스트림의 또 다른 비동기 읽기를 시작합니다. 모든 데이터를 읽고 나면 `ReadCallBack()`에서 응답 스트림을 닫고 `allDone.Set()` 메서드를 호출하여 **ResponseData**에 전체 응답이 있음을 표시합니다.  
   
     > [!NOTE]
-    >  모든 네트워크 스트림을 닫는 것이 중요합니다. 각 응답과 스트림을 닫지 않으면 응용 프로그램이 서버에 대한 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다.  
+    > 모든 네트워크 스트림을 닫는 것이 중요합니다. 각 응답과 스트림을 닫지 않으면 애플리케이션이 서버에 대한 연결을 모두 사용하여 추가 요청을 처리하지 못하게 될 수 있습니다.  
   
 ```csharp  
 using System;  
@@ -272,7 +272,7 @@ Class ClientGetAsync
        Dim resp As HttpWebResponse = _  
            CType(req.EndGetResponse(ar), HttpWebResponse)  
   
-       ' Start reading data from the respons stream.  
+       ' Start reading data from the response stream.  
        Dim ResponseStream As Stream = resp.GetResponseStream()  
   
        ' Store the reponse stream in RequestState to read  
@@ -334,5 +334,6 @@ Class ClientGetAsync
 End Class  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [데이터 요청](../../../docs/framework/network-programming/requesting-data.md)
+## <a name="see-also"></a>참고 항목
+
+- [데이터 요청](requesting-data.md)

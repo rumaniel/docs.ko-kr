@@ -1,27 +1,28 @@
 ---
-title: '&lt;clientVia&gt;'
+title: <clientVia>
 ms.date: 03/30/2017
 ms.assetid: c27ee94e-babd-459b-9574-2a6d67d11314
-ms.openlocfilehash: 6218bb3f205f2825eb3f10fabf834cfd0396ac87
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: a1c2ee68fb039e24e1462148cb52daf1bb57f8ed
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32754134"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398106"
 ---
-# <a name="ltclientviagt"></a>&lt;clientVia&gt;
+# <a name="clientvia"></a>\<clientVia>
 전송 채널을 만들어야 하는 URI를 지정합니다. 자세한 내용은 <xref:System.ServiceModel.Description.ClientViaBehavior>을 참조하세요.  
   
- \<system.ServiceModel>  
-\<동작 >  
-\<endpointBehaviors>  
-\<동작 >  
-\<clientVia >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<clientVia >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<clientVia viaUri="String"/>  
+<clientVia viaUri="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -40,8 +41,9 @@ ms.locfileid: "32754134"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<동작 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|끝점 동작을 지정합니다.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.ClientViaElement>  
- <xref:System.ServiceModel.Description.ClientViaBehavior>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.ClientViaElement>
+- <xref:System.ServiceModel.Description.ClientViaBehavior>

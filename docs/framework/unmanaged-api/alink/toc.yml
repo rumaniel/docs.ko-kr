@@ -1,0 +1,106 @@
+- name: ALink API
+  href: index.md
+  items:
+    - name: AssemblyAttributesGoHere
+      href: assemblyattributesgohere.md
+    - name: AssemblyAttributesGoHereM
+      href: assemblyattributesgoherem.md
+    - name: AssemblyAttributesGoHereS
+      href: assemblyattributesgoheres.md
+    - name: AssemblyAttributesGoHereSM
+      href: assemblyattributesgoheresm.md
+    - name: AssemblyOptions 열거형
+      href: assemblyoptions-enumeration.md
+    - name: CreateALink 함수
+      href: createalink-function.md
+    - name: GetALinkMessageDll 함수
+      href: getalinkmessagedll-function.md
+    - name: IALink 인터페이스
+      href: ialink-interface.md
+      items:
+        - name: Init 메서드
+          href: init-method.md
+        - name: ImportFile 메서드
+          href: importfile-method.md
+        - name: SetAssemblyFile 메서드
+          href: setassemblyfile-method.md
+        - name: AddFile 메서드
+          href: addfile-method.md
+        - name: AddImport 메서드
+          href: addimport-method.md
+        - name: GetScope 메서드
+          href: getscope-method.md
+        - name: GetAssemblyRefHash 메서드
+          href: getassemblyrefhash-method.md
+        - name: ImportTypes 메서드
+          href: importtypes-method.md
+        - name: EnumCustomAttributes 메서드
+          href: enumcustomattributes-method.md
+        - name: EnumImportTypes 메서드
+          href: enumimporttypes-method.md
+        - name: CloseEnum 메서드
+          href: closeenum-method.md
+        - name: ExportType 메서드
+          href: exporttype-method.md
+        - name: ExportNestedType 메서드
+          href: exportnestedtype-method.md
+        - name: EmbedResource 메서드
+          href: embedresource-method.md
+        - name: LinkResource 메서드
+          href: linkresource-method.md
+        - name: GetResolutionScope 메서드
+          href: getresolutionscope-method.md
+        - name: SetAssemblyProps 메서드
+          href: setassemblyprops-method.md
+        - name: EmitAssemblyCustomAttribute 메서드
+          href: emitassemblycustomattribute-method.md
+        - name: GetWin32ResBlob 메서드
+          href: getwin32resblob-method.md
+        - name: FreeWin32ResBlob 메서드
+          href: freewin32resblob-method.md
+        - name: EmitManifest 메서드
+          href: emitmanifest-method.md
+        - name: PreCloseAssembly 메서드
+          href: precloseassembly-method.md
+        - name: CloseAssembly 메서드
+          href: closeassembly-method.md
+        - name: EndMerge 메서드
+          href: endmerge-method.md
+        - name: SetNonAssemblyFlags 메서드
+          href: setnonassemblyflags-method.md
+        - name: ImportFile2 메서드
+          href: importfile2-method.md
+        - name: ExportTypeForwarder 메서드
+          href: exporttypeforwarder-method.md
+        - name: ExportNestedTypeForwarder 메서드
+          href: exportnestedtypeforwarder-method.md
+    - name: IALink2 인터페이스
+      href: ialink2-interface.md
+      items:
+        - name: SetAssemblyFile2 메서드
+          href: setassemblyfile2-method.md
+        - name: AddFile2 메서드
+          href: addfile2-method.md
+        - name: GetScope2 메서드
+          href: getscope2-method.md
+        - name: ImportTypes2 메서드
+          href: importtypes2-method.md
+        - name: GetFileDef 메서드
+          href: getfiledef-method.md
+        - name: GetPublicKeyToken 메서드
+          href: getpublickeytoken-method.md
+        - name: EmitInternalExportedTypes 메서드
+          href: emitinternalexportedtypes-method.md
+        - name: ImportFileEx 메서드
+          href: importfileex-method.md
+        - name: ImportFileEx2 메서드
+          href: importfileex2-method.md
+        - name: SetPEKind 메서드
+          href: setpekind-method.md
+        - name: EmitAssembly 메서드
+          href: emitassembly-method.md
+    - name: IALink3 인터페이스
+      href: ialink3-interface.md
+      items:
+        - name: SetManifestFile 메서드
+          href: setmanifestfile-method.md

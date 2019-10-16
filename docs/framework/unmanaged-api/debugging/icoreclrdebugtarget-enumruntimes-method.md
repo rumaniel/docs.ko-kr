@@ -19,19 +19,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14b5f2227991e38ba66889d7e966ab24e714294c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 08f34822099468b8c52f1d7ea2c665205f1b6c01
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422584"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774426"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 메서드
 원격 컴퓨터에서 실행 중인 지정된 프로세스의 CLR(공용 언어 런타임)을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumRuntimes (  
       [in] DWORD       dwInternalProcessID,  
       [out] DWORD*     pcRuntimes,  
@@ -39,9 +39,9 @@ HRESULT EnumRuntimes (
     );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwInternalProcessID`  
- [in] 런타임을 열거하려는 프로세스의 내부 프로세스 ID입니다. 이 `m_dwInternalID` 해당 [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)합니다.  
+ [in] 런타임을 열거하려는 프로세스의 내부 프로세스 ID입니다. 이 됩니다 `m_dwInternalID` 해당 [CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)합니다.  
   
  `pcRuntimes`  
  [out] `ppRuntimes`에 반환된 런타임 수입니다. 이 값은 0일 수 있습니다.  
@@ -66,7 +66,7 @@ HRESULT EnumRuntimes (
  이 메서드에 의해 할당 된 메모리를 확보 하기 위해 호출 된 [icoreclrdebugtarget:: Freememory](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-freememory-method.md) 메서드.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CoreClrRemoteDebuggingInterfaces.h  
   
@@ -74,5 +74,6 @@ HRESULT EnumRuntimes (
   
  **.NET framework 버전:** 3.5 SP1  
   
-## <a name="see-also"></a>참고 항목  
- [ICoreClrDebugTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICoreClrDebugTarget 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

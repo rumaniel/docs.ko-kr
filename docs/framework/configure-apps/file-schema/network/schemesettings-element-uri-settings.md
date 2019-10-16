@@ -1,20 +1,20 @@
 ---
-title: '&lt;schemeSettings&gt; 요소 (Uri 설정)'
+title: <schemeSettings> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
-ms.openlocfilehash: 7c75e9a6d29637e1701fe0b9e05adf0ccc3596b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 498aef77a1dfd8cffcac73b704b8d1bb6df5d165
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192553"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697763"
 ---
-# <a name="ltschemesettingsgt-element-uri-settings"></a>&lt;schemeSettings&gt; 요소 (Uri 설정)
+# <a name="schemesettings-element-uri-settings"></a>\<schemeSettings > 요소 (Uri 설정)
 특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.  
   
- \<configuration>  
-\<uri >  
-\<schemeSettings >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t **\<schemeSettings >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,15 +33,15 @@ ms.locfileid: "50192553"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|스키마 이름에 대 한 스키마 설정을 추가합니다.|  
-|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|모든 기존 구성표 설정을 지웁니다.|  
-|[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|스키마 이름에 대 한 스키마 설정을 제거합니다.|  
+|[add](add-element-for-schemesettings-uri-settings.md)|구성표 이름에 대 한 구성표 설정을 추가 합니다.|  
+|[clear](clear-element-for-schemesettings-uri-settings.md)|기존 구성표 설정을 모두 지웁니다.|  
+|[remove](remove-element-for-schemesettings-uri-settings.md)|구성표 이름에 대 한 구성표 설정을 제거 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[Uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|.NET Framework uniform resource identifier (Uri)를 사용 하 여 표현 하는 웹 주소를 처리 하는 방법을 지정 하는 설정을 포함 합니다.|  
+|[uri](uri-element-uri-settings.md)|.NET Framework Uri (uniform resource identifier)를 사용 하 여 표현 된 웹 주소를 처리 하는 방법을 지정 하는 설정을 포함 합니다.|  
   
 ## <a name="remarks"></a>설명  
  기본적으로 <xref:System.Uri?displayProperty=nameWithType> 클래스 이스케이프 해제 백분율로 인코딩된 경로 압축을 실행 하기 전에 경로 구분 기호입니다. 다음과 같은 공격에 대 한 보안 메커니즘으로 구현 되었습니다.  
@@ -56,13 +56,13 @@ ms.locfileid: "50192553"
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- SchemeSettings 구성 옵션을 사용 하 여 특정 스키마에 대 한 이스케이프 해제 백분율로 인코딩된 경로 구분 되지에이 기본 동작을 수정할 수 있습니다.  
+ 이 기본 동작은 특정 스키마에 대 한 schemeSettings 구성 옵션을 사용 하 여 인코딩된 경로 구분 기호를 이스케이프 해제 하지 않도록 수정할 수 있습니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서 사용 하는 구성을 보여 줍니다는 <xref:System.Uri> http 체계에 대 한 백분율로 인코딩된 경로 구분 기호를 이스케이프 하지 않아도 되도록 지원 하기 위해 클래스입니다.  
+ 다음 예제에서는 http 체계의 백분율 인코딩된 경로 구분 기호를 이스케이프 하지 않도록 지원 하기 위해 <xref:System.Uri> 클래스에서 사용 하는 구성을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -81,13 +81,14 @@ ms.locfileid: "50192553"
 |네임스페이스|시스템|  
 |스키마 이름||  
 |유효성 검사 파일||  
-|비워 둘 수 있습니다.||  
+|비워 둘 수 있음||  
   
-## <a name="see-also"></a>참고 항목  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>참조
+
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
+- [네트워크 설정 스키마](index.md)

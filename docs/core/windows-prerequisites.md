@@ -1,139 +1,133 @@
 ---
 title: Windows에서 .NET Core의 필수 구성 요소
-description: Windows 컴퓨터에서 .NET Core 응용프로그램을 개발 및 실행하기 위해 필요한 종속성이 무엇인지 살펴보세요.
-author: mairaw
-ms.author: mairaw
-ms.date: 08/31/2018
-ms.openlocfilehash: 63c0de2b413f38458dba89506f4070760b3f53f8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+description: Windows 컴퓨터에서 .NET Core 애플리케이션을 개발 및 실행하기 위해 필요한 종속성이 무엇인지 살펴보세요.
+f1_keywords:
+- NETSDK1045
+ms.custom: updateeachvsrelease
+ms.date: 09/20/2019
+ms.openlocfilehash: b1557e6910cb6d0b6d7e2b3ce2aec97d3715fec7
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45747470"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591667"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows에서 .NET Core의 필수 구성 요소
 
-이 문서에서는 Windows에서 .NET Core 응용 프로그램을 개발하는 데 필요한 종속성을 보여 줍니다. 다음에 나오는 지원되는 OS 버전 및 종속성은 Windows에서 .NET Core 앱을 개발하기 위한 세 가지 방법에 적용됩니다.
+이 문서에서는 Windows에서 .NET Core 애플리케이션을 실행하도록 지원되는 OS 버전을 보여 줍니다. 다음에 나오는 지원되는 OS 버전 및 종속성은 Windows에서 .NET Core 앱을 개발하기 위한 세 가지 방법에 적용됩니다.
 
-* [명령줄](tutorials/using-with-xplat-cli.md)
-* [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+* [명령줄](./tutorials/using-with-xplat-cli.md)
+* [Visual Studio](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-## <a name="net-core-supported-windows-versions"></a>.NET Core가 지원되는 Windows 버전
-
-.NET Core는 다음 버전에서 지원됩니다.
-
-* Windows 7 SP1
-* Windows 8.1
-* Windows 10 1주년 업데이트(버전 1607) 이상 버전
-* Windows Server 2008 R2 SP1(전체 서버 또는 Server Core)
-* Windows Server 2012 SP1(전체 서버 또는 Server Core)
-* Windows Server 2012 R2(전체 서버 또는 Server Core)
-* Windows Server 2016 이상 버전(전체 서버, Server Core 또는 Nano Server)
+또한 Windows에서 Visual Studio를 사용하여 개발하는 경우, [Visual Studio를 사용하여 .NET Core 앱을 개발하기 위한 필수 조건](#prerequisites-to-develop-net-core-apps-with-visual-studio) 섹션에서 .NET Core 개발에 지원되는 최소 버전에 대해 자세히 설명합니다.
 
 ## <a name="net-core-supported-operating-systems"></a>.NET Core 지원 운영 체제
 
 다음 문서에는 버전별 .NET Core 지원 운영 체제의 전체 목록이 있습니다.
 
-* [.NET Core 2.1 - 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
-* [.NET Core 2.0 - 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/2.0/2.0-supported-os.md)
-* [.NET Core 1.x - 지원되는 OS 버전](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)
+* [.NET Core 3.0](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md)
+* [.NET Core 2.2](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)
+* [.NET Core 2.1](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)
+
+다운로드 링크 및 자세한 내용은 최신 버전 다운로드의 경우 [.NET 다운로드](https://dotnet.microsoft.com/download)를 참조하고, 이전 버전의 경우 [.NET 다운로드 보관](https://dotnet.microsoft.com/download/archives#dotnet-core)를 참조하세요.
 
 ## <a name="net-core-dependencies"></a>.NET Core 종속성
-
-.NET Core 1.1 이전 버전을 Windows 10 및 Windows Server 2016보다 이전 버전의 Windows에서 실행하는 경우 Visual C++ 재배포 가능 패키지가 필요합니다. 이 종속성은 .NET Core 설치 관리자에 의해 자동으로 설치됩니다.
 
 다음과 같은 경우에는 [Microsoft Visual C++ 2015 재배포 가능 패키지 업데이트 3](https://www.microsoft.com/download/details.aspx?id=52685)을 수동으로 설치해야 합니다.
 
 * [설치 관리자 스크립트](./tools/dotnet-install-script.md)를 사용하여 .NET Core 설치.
-* 자체 포함된 .NET Core 응용 프로그램 배포.
+* 자체 포함된 .NET Core 애플리케이션 배포.
 * 원본에서 제품 빌드.
 * *.zip* 파일을 통해 .NET Core 설치. 여기에는 빌드/CI/CD 서버가 포함될 수 있습니다.
 
 > [!NOTE]
 > **Windows 8.1 이전 버전 또는 Windows Server 2012 R2 이전 버전의 경우:**
 >
-> 설치된 Windows가 최신 버전이며 Windows 업데이트를 통해 설치할 수 있는 [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows)이 포함되어 있는지 확인하세요. 이 업데이트를 설치하지 않는 경우 .NET Core 응용 프로그램을 시작할 때 `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`과 같은 오류가 표시됩니다.
+> 설치된 Windows가 최신 버전이며 Windows 업데이트를 통해 설치할 수 있는 [KB2999226](https://support.microsoft.com/help/2999226/update-for-universal-c-runtime-in-windows)이 포함되어 있는지 확인하세요. 이 업데이트를 설치하지 않는 경우 .NET Core 애플리케이션을 시작할 때 `The program can't start because api-ms-win-crt-runtime-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`과 같은 오류가 표시됩니다.
 >
 > **Windows 7 또는 Windows Server 2008 R2의 경우:**
 >
-> KB2999226 외에 [KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)도 설치되어 있는지 확인하세요. 이 업데이트를 설치하지 않는 경우 .NET Core 응용 프로그램을 시작할 때 `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`와 같은 오류가 표시됩니다.
+> KB2999226 외에 [KB2533623](https://support.microsoft.com/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot)도 설치되어 있는지 확인하세요. 이 업데이트를 설치하지 않는 경우 .NET Core 애플리케이션을 시작할 때 `The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`와 같은 오류가 표시됩니다.
 
-## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 필수 구성 요소
-
-.NET Core SDK를 사용하여 .NET Core 응용 프로그램을 개발하기 위해 원하는 편집기를 사용할 수 있습니다. Visual Studio 2017에서는 Windows 기반 .NET Core 앱에 대한 통합 개발 환경을 제공합니다.
-
-[릴리스 정보](/visualstudio/releasenotes/vs2017-relnotes)에서 Visual Studio 2017의 변경 내용에 대해 자세히 알아볼 수 있습니다.
-
-# <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
-
-Visual Studio 2017에서 .NET Core 2.1 앱을 개발하려면:
-
- 1. **기타 도구 집합** 섹션에서 **.NET Core 플랫폼 간 개발** 워크로드를 선택하고 [Visual Studio 2017 버전 15.7.0 이상을 다운로드하여 설치](/visualstudio/install/install-visual-studio)합니다.
-
-![".NET Core 플랫폼 간 개발" 워크플로가 선택된 Visual Studio 2017 설치 스크린샷](./media/windows-prerequisites/vs-15-8-workloads.jpg)
-
-**.NET Core 플랫폼 간 개발** 도구 집합이 설치되면 기본적으로 Visual Studio 2017 15.7에서는 .NET Core 2.0 SDK를 사용하고 Visual Studio 2017 15.8에서는 2.1 SDK를 사용합니다.
-
- 2. Visual Studio 2017 15.7을 사용하는 경우 [.NET Core 2.1 SDK](https://www.microsoft.com/net/download/core)를 설치하거나 Visual Studio 2017 15.8로 업그레이드합니다.
-
- 3. 다음 지침에 따라 기존 또는 새로운 .NET Core 프로젝트의 대상을 .NET Core 2.1로 변경합니다.
-    * **프로젝트** 메뉴에서 **속성**을 선택합니다.
-    * **대상 프레임워크** 선택 메뉴에서 값을 **.NET Core 2.1**로 설정합니다.
-
-![“.NET Core 2.0” 대상 프레임워크 메뉴 항목을 선택한 Visual Studio 2017 응용 프로그램 프로젝트 속성의 스크린샷](./media/windows-prerequisites/Targeting-dotnetCore2.png)
-
-Visual Studio를 .NET Core 2.1 SDK로 구성한 후에는 다음 작업을 수행할 수 있습니다.
-
-* 기존 .NET Core 1.x 및 2.x 프로젝트를 열고, 빌드하고, 실행합니다.
-* .NET Core 1.x 및 2.0 프로젝트의 대상을 .NET Core 2.1로 변경하고 빌드 및 실행합니다.
-* 새로운 .NET Core 2.1 프로젝트를 만듭니다.
-
-# <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
-
-Visual Studio 2017에서 .NET Core 2.0 앱을 개발하려면:
-
- 1. **기타 도구 집합** 섹션에서 **.NET Core 플랫폼 간 개발** 워크로드를 선택하고 [Visual Studio 2017 버전 15.3.0 이상을 다운로드하여 설치](/visualstudio/install/install-visual-studio)합니다.
-
-![".NET Core 플랫폼 간 개발" 워크플로가 선택된 Visual Studio 2017 설치 스크린샷](./media/windows-prerequisites/vs-15-3-workloads.jpg)
-
-**.NET Core 플랫폼 간 개발** 도구 집합이 설치된 후 Visual Studio 2017에서는 기본적으로 .NET Core 1.x를 사용합니다. .NET Core 2.0 SDK를 설치하여 Visual Studio 2017에 .NET Core 2.0 지원을 가져옵니다.
-
- 2. [.NET Core 2.0 SDK](https://www.microsoft.com/net/download/dotnet-core/2.0)를 설치합니다.
- 3. 다음 지침에 따라 기존 또는 새로운 .NET Core 1.x 프로젝트의 대상을 .NET Core 2.0으로 변경합니다.
-    * **프로젝트** 메뉴에서 **속성**을 선택합니다.
-    * **대상 프레임워크** 선택 메뉴에서 값을 **.NET Core 2.0**으로 설정합니다.
-
-![“.NET Core 2.0” 대상 프레임워크 메뉴 항목을 선택한 Visual Studio 2017 응용 프로그램 프로젝트 속성의 스크린샷](./media/windows-prerequisites/Targeting-dotnetCore2.png)
-
-.NET Core 2.0 SDK가 설치된 후 Visual Studio 2017에서는 기본적으로 .NET Core SDK 2.0를 사용하고 다음 작업을 지원합니다.
-
-* 기존 .NET Core 1.x 프로젝트를 열고, 빌드하고, 실행합니다.
-* .NET Core 1.x 프로젝트의 대상을 .NET Core 2.0으로 변경하고 빌드 및 실행합니다.
-* 새로운 .NET Core 2.0 프로젝트를 만듭니다.
-
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
-
-Visual Studio에서 .NET Core 1.x 앱을 개발하려면 **기타 도구 집합** 섹션에서 **“.NET Core 플랫폼 간 개발”** 워크로드를 선택하고 [Visual Studio 2017을 다운로드하여 설치](/visualstudio/install/install-visual-studio)합니다.
-
-![".NET Core 플랫폼 간 개발" 워크플로가 선택된 Visual Studio 2017 설치 스크린샷](./media/windows-prerequisites/vs_workloads.jpg)
-
-> [!IMPORTANT]
-> .NET Core 1.x 개발에 Visual Studio 2015를 사용할 수 있지만 다음 이유로 권장하지 않습니다.
-  > * .NET Core 도구는 지원되지 않는 미리 보기 버전입니다.
-  > * 프로젝트는 더 이상 사용되지 않는 project.json을 기반으로 작성되었습니다.
->
-> 프로젝트 형식 변경에 대한 자세한 내용은 [변경 내용에 대한 대략적인 개요](./tools/cli-msbuild-architecture.md)를 참조하세요.
----
+## <a name="prerequisites-to-develop-net-core-apps-with-visual-studio"></a>Visual Studio를 사용하여 .NET Core 앱을 개발하기 위한 필수 조건
+    
+임의 편집기로 .NET Core SDK를 사용하여 .NET Core 애플리케이션을 개발할 수 있지만, Visual Studio 2017 이상 버전에서는 Windows용 .NET Core 앱에 대한 통합 개발 환경을 제공합니다.
 
 <a name="vs-mapping"></a>
 
-> [!TIP]
-> Visual Studio 2017 버전을 확인하려면:
->
-> * **도움말** 메뉴에서 **Microsoft Visual Studio 정보**를 선택합니다.
-> * **Microsoft Visual Studio 정보** 대화 상자에서 버전 번호를 확인합니다.
->   * .NET Core 2.2 미리 보기 1 앱의 경우 Visual Studio 2017 버전 15.9(현재 미리 보기) 이상.
->   * .NET Core 2.1 앱의 경우 Visual Studio 2017 버전 15.7 이상.
->   * .NET Core 2.0 앱의 경우 Visual Studio 2017 버전 15.3 이상.
->   * .NET Core 1.x 앱의 경우 Visual Studio 2017 버전 15.0 이상.
+.NET Core 버전마다 최소 버전의 Visual Studio가 필요합니다. Visual Studio 버전을 확인하려면
+
+* **도움말** 메뉴에서 **Microsoft Visual Studio 정보**를 선택합니다.
+* **Microsoft Visual Studio 정보** 대화 상자에서 버전 번호를 확인합니다.
+
+다음 표에는 각 SDK의 최소 버전이 나와 있습니다.
+
+| .NET Core SDK 버전 | Visual Studio 버전                      |
+| --------------------- | ------------------------------------------ |
+| 3.0                   | Visual Studio 2019 버전 16.3 이상 |
+| 2.2                   | Visual Studio 2017 버전 15.9 이상 |
+| 2.1                   | Visual Studio 2017 버전 15.7 이상 |
+| 1.x                   | Visual Studio 2017 버전 15.0 이상 |
+
+<!-- markdownlint-disable MD025 -->
+
+# <a name="net-core-30tabnetcore30"></a>[.NET Core 3.0](#tab/netcore30)
+
+Visual Studio 2019에서 .NET Core 3.0 SDK를 사용하여 .NET Core 앱을 개발하려면 다음을 수행합니다.
+
+* [Visual Studio 2019 버전 16.3 이상을 다운로드하여 설치](/visualstudio/install/install-visual-studio)하고, 빌드하는 애플리케이션 종류에 따라 .NET Core SDK를 포함하는 다음 워크로드 중 하나를 선택합니다.
+
+  * **기타 도구 세트** 섹션의 **.NET Core 플랫폼 간 개발** 워크로드
+  * **웹 및 클라우드** 섹션의 **ASP.NET 및 웹 개발** 워크로드
+  * **Windows** 섹션의 **.NET 데스크톱 개발** 워크로드
+
+다음 이미지는 Visual Studio UI에서 선택된 **.NET Core 플랫폼 간 개발** 워크로드를 보여 줍니다.
+
+![“.NET Core 플랫폼 간 개발” 워크로드가 선택된 Visual Studio 2019 설치 스크린샷](./media/windows-prerequisites/vs-2019-workloads.jpg)
+
+Visual Studio 2019 16.3에서는 이러한 워크로드 중 하나가 설치된 후 기본적으로 .NET Core 3.0 SDK를 사용합니다.
+
+기존 프로젝트에서 최신 .NET Core 런타임을 사용하려면, 다음 지침에 따라 기존 .NET Core 프로젝트의 대상을 .NET Core 3.0으로 변경합니다.
+
+* **프로젝트** 메뉴에서 **속성**을 선택합니다.
+* **대상 프레임워크** 선택 메뉴에서 값을 **.NET Core 3.0**으로 설정합니다.
+
+![“.NET Core 3.0” 대상 프레임워크 메뉴 항목이 선택된 Visual Studio 2019 애플리케이션 프로젝트 속성 스크린샷](./media/windows-prerequisites/target-dotnet-core-3-0.jpg)
+
+.NET Core 3.0 SDK를 사용하여 Visual Studio를 구성한 후에는 다음 작업을 수행할 수 있습니다.
+
+* 기존 .NET Core 1.x 및 2.x 프로젝트를 열고, 빌드하고, 실행합니다.
+* .NET Core 1.x 및 2.x 프로젝트의 대상을 .NET Core 3.0으로 변경하고 빌드 및 실행합니다.
+* 새로운 .NET Core 3.0 프로젝트를 만듭니다.
+
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+
+Visual Studio 2017에서 .NET Core 2.2 SDK를 사용하여 .NET Core 앱을 개발하려면
+
+* **기타 도구 세트** 섹션에서 **.NET Core 플랫폼 간 개발** 워크로드를 선택하고 [Visual Studio 2019 버전 16.3 이상을 다운로드하여 설치](/visualstudio/install/install-visual-studio)합니다.
+* **기타 도구 집합** 섹션에서 **.NET Core 플랫폼 간 개발** 워크로드를 선택하고 [Visual Studio 2017 버전 15.9.0 이상을 다운로드하여 설치](/visualstudio/install/install-visual-studio)합니다.
+
+![".NET Core 플랫폼 간 개발" 워크플로가 선택된 Visual Studio 2017 설치 스크린샷](./media/windows-prerequisites/vs-2017-workloads.jpg)
+
+**.NET Core 플랫폼 간 개발** 도구 집합이 설치된 후 Visual Studio에서는 일반적으로 이전 버전의 .NET Core SDK를 설치합니다.
+예를 들어 Visual Studio 2017 15.9에서는 워크로드가 설치된 후 기본적으로 .NET Core 2.1 SDK를 사용합니다.
+
+.NET Core 2.2 SDK를 사용하도록 Visual Studio를 업데이트하려면
+
+ 1. [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)를 설치합니다.
+
+ 1. 프로젝트에서 최신 .NET Core 런타임을 사용하려면, 다음 지침에 따라 기존 또는 새 .NET Core 프로젝트의 대상을 각각 .NET Core 2.2로 변경합니다.
+
+    * **프로젝트** 메뉴에서 **속성**을 선택합니다.
+    * **대상 프레임워크** 선택 메뉴에서 값을 **.NET Core 2.2**로 설정합니다.
+
+![“.NET Core 2.2” 대상 프레임워크 메뉴 항목이 선택된 Visual Studio 2017 애플리케이션 프로젝트 속성 스크린샷](./media/windows-prerequisites/targeting-dotnet-core.jpg)
+
+.NET Core 2.2 SDK를 사용하여 Visual Studio를 구성한 후에는 다음 작업을 수행할 수 있습니다.
+
+* 기존 .NET Core 1.x 및 2.x 프로젝트를 열고, 빌드하고, 실행합니다.
+* .NET Core 1.x 및 2.x 프로젝트의 대상을 .NET Core 2.2로 변경하고 빌드 및 실행합니다.
+* 새로운 .NET Core 2.2 프로젝트를 만듭니다.
+
+---

@@ -2,12 +2,12 @@
 title: 전송
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 360367803fc014c83ae377309b9029dafa3040bd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c3f9420ac798bf2722f825d14ca64653127432b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202896"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662881"
 ---
 # <a name="transfer"></a>전송
 이 항목에서는 Windows Communication Foundation (WCF) 동작 추적 모델에서 전송을 설명합니다.  
@@ -21,7 +21,7 @@ ms.locfileid: "50202896"
 <source name="System.ServiceModel" switchValue="Verbose,ActivityTracing">  
 ```  
   
-## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>끝점 내에서 동작을 상호 연결하기 위해 전송 사용  
+## <a name="using-transfer-to-correlate-activities-within-endpoints"></a>엔드포인트 내에서 동작을 상호 연결하기 위해 전송 사용  
  동작 및 전송은 사용자가 오류의 근본 원인을 찾도록 도와줍니다. 예를 들어 동작 M과 N 간에 각각 구성 요소 M과 N에서 전송을 주고 받을 때 M으로 전송을 되돌린 직후에 N에서 충돌이 발생하면 M으로 보내는 N의 전달 데이터로 인해 오류가 발생했다고 결론을 내릴 수 있습니다.  
   
  M과 N 간에 컨트롤의 흐름이 있을 때 Transfer 추적이 동작 M으로부터 동작 N으로 내보내집니다. 예를 들어 동작의 경계를 넘나드는 메서드 호출로 인해 N은 M에 대한 일부 작업을 수행합니다. N이 이미 존재하거나 만들어졌을 수 있습니다. N이 M에 대한 일부 작업을 수행하는 새 동작일 경우 N이 M에 의해 생성됩니다.  
@@ -35,28 +35,28 @@ ms.locfileid: "50202896"
 ## <a name="example-of-transfers"></a>전송 예제  
  다음은 두 가지 전송 예제입니다.  
   
--   서비스 호스트를 만들 때 생성자가 호출 코드로부터 컨트롤을 얻거나 호출 코드가 생성자에게 전송됩니다. 생성자는 실행을 마치면 컨트롤을 호출 코드로 반환하거나 호출 코드로 다시 전송합니다. 이는 중첩된 관계의 경우입니다.  
+- 서비스 호스트를 만들 때 생성자가 호출 코드로부터 컨트롤을 얻거나 호출 코드가 생성자에게 전송됩니다. 생성자는 실행을 마치면 컨트롤을 호출 코드로 반환하거나 호출 코드로 다시 전송합니다. 이는 중첩된 관계의 경우입니다.  
   
--   수신기가 전송 데이터 처리를 시작하면 새 스레드를 만들고, 처리를 위해 적절한 컨텍스트를 바이트 수신 동작(예: 컨트롤 및 데이터 전달)으로 전달합니다. 스레드가 요청 처리를 완료하면 바이트 수신 동작은 수신기로 아무 것도 전달하지 않습니다. 이 경우 새 스레드 동작 내에는 전송이 있지만 외부에는 전송이 없습니다. 두 개의 동작은 연관되지만 중첩되지는 않습니다.  
+- 수신기가 전송 데이터 처리를 시작하면 새 스레드를 만들고, 처리를 위해 적절한 컨텍스트를 바이트 수신 동작(예: 컨트롤 및 데이터 전달)으로 전달합니다. 스레드가 요청 처리를 완료하면 바이트 수신 동작은 수신기로 아무 것도 전달하지 않습니다. 이 경우 새 스레드 동작 내에는 전송이 있지만 외부에는 전송이 없습니다. 두 개의 동작은 연관되지만 중첩되지는 않습니다.  
   
 ## <a name="activity-transfer-sequence"></a>동작 전송 시퀀스  
  올바른 형식의 동작 전송 시퀀스에는 다음 단계가 포함됩니다.  
   
-1.  새 gAId 선택으로 구성된 새 동작 시작  
+1. 새 gAId 선택으로 구성된 새 동작 시작  
   
-2.  현재 동작 ID로부터 새 gAId에 대한 Transfer 추적 내보내기  
+2. 현재 동작 ID로부터 새 gAId에 대한 Transfer 추적 내보내기  
   
-3.  TLS에서 새 ID 설정  
+3. TLS에서 새 ID 설정  
   
-4.  새 동작의 시작을 나타내기 위해 Start 추적 내보내기  
+4. 새 동작의 시작을 나타내기 위해 Start 추적 내보내기  
   
-5.  원래 동작으로 돌아가기는 다음으로 구성됩니다.  
+5. 원래 동작으로 돌아가기는 다음으로 구성됩니다.  
   
-6.  원래 gAId로 Transfer 추적 내보내기  
+6. 원래 gAId로 Transfer 추적 내보내기  
   
-7.  새 동작의 종료를 나타내기 위해 Stop 추적 내보내기  
+7. 새 동작의 종료를 나타내기 위해 Stop 추적 내보내기  
   
-8.  이전 gAId로 TLS 설정  
+8. 이전 gAId로 TLS 설정  
   
  다음 코드 예제에서는 이 작업을 수행하는 방법을 보여 줍니다. 이 샘플은 차단 호출이 새 동작으로 전송 중일 때 만들어지며, Suspend/Resume 추적을 포함한다고 가정합니다.  
   
@@ -102,8 +102,9 @@ Trace.CorrelationManager.ActivityId = oldGuid;
 ts.TraceEvent(TraceEventType.Resume, 667, "Resume: Activity " + i-1);  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)  
- [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)  
- [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+## <a name="see-also"></a>참고자료
+
+- [추적 구성](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
+- [Service Trace Viewer를 사용하여 상호 관련된 추적 보기 및 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [엔드투엔드 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
+- [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

@@ -17,21 +17,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ce139669c0a31301f3eecdef4b4d61f83d5e4e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 08247c1ec5b868055e4836b3c0fb520a536374e8
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33458941"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798921"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 함수
-제공 된 경로의 어셈블리 매니페스트는 강력한 이름 서명을 포함 되는지 여부를 나타내는 값을 가져옵니다.  
+제공된 경로의 어셈블리 매니페스트에 강력한 이름 서명이 포함되는지 여부를 나타내는 값을 가져옵니다.  
   
- 이 함수는 더 이상 사용 되지 않습니다. 사용 하 여 [iclrstrongname:: Strongnamesignatureverificationex](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md) 메서드 대신 합니다.  
+ 이 함수는 더 이상 사용 되지 않습니다. 대신 [ICLRStrongName:: StrongNameSignatureVerificationEx](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md) 메서드를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureVerificationEx (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  BOOLEAN   fForceVerification,  
@@ -39,32 +39,33 @@ BOOLEAN StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wszFilePath`  
- [in] 이식 가능한 실행 (.exe 또는.dll) 파일에 어셈블리를 확인할 수에 대 한 경로입니다.  
+ 진행 확인할 어셈블리의 이식 가능한 실행 파일 (.exe 또는 .dll) 파일에 대 한 경로입니다.  
   
  `fForceVerification`  
- [in] `true` 고, 그렇지 않으면 레지스트리 설정을 재정의 하는 데 필요한 경우에 유효성 검사를 수행 하려면 `false`합니다.  
+ 진행 레지스트리 설정을 재정의 해야 하는 경우에도 유효성 검사를 수행 하려면이 고 `false`, 그렇지 않으면입니다. `true`  
   
  `pfWasVerified`  
- [out] `true` 강력한 이름 서명을 했으면 확인 된, `false`합니다. `pfWasVerified` 도로 설정 `false` 레지스트리 설정으로 인해 확인 되 면 합니다.  
+ 제한이 강력한 이름 서명을 확인 했으면이 고, `false`그렇지 않으면입니다. `true` `pfWasVerified`레지스트리 설정으로 인해 `false` 확인이 성공적으로 수행 된 경우에도로 설정 됩니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 확인에 성공 하면 그렇지 않으면 `false`합니다.  
+ `true`확인에 성공 했으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false`입니다.  
   
 ## <a name="remarks"></a>설명  
- `StrongNameSignatureVerificationEx` 유사한 기능을 제공 된 [StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md) 함수입니다. 그러나 두 번째 입력 매개 변수와 출력 매개 변수를 `StrongNameSignatureVerificationEx` 형식의 `BOOLEAN` 대신 `DWORD`합니다.  
+ `StrongNameSignatureVerificationEx`[StrongNameSignatureVerification](strongnamesignatureverification-function.md) 함수와 비슷한 기능을 제공 합니다. 그러나에 대 한 `StrongNameSignatureVerificationEx` 두 번째 입력 매개 변수 및 출력 매개 변수는 대신 `DWORD`형식 `BOOLEAN` 입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** StrongName.h  
   
- **라이브러리:** mscoree.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [StrongNameSignatureVerificationEx 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  
- [StrongNameSignatureVerification 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  
- [ICLRStrongName 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [StrongNameSignatureVerificationEx 메서드](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [StrongNameSignatureVerification 메서드](../hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [ICLRStrongName 인터페이스](../hosting/iclrstrongname-interface.md)

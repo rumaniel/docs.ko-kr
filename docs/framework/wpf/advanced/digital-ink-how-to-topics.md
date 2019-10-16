@@ -7,21 +7,21 @@ helpviewer_keywords:
 - ink [WPF], digital
 - digital ink [WPF]
 ms.assetid: c29f8728-bfcb-4af7-9fbc-8169e180109f
-ms.openlocfilehash: 3af90c33d6b4e993cc9599b5eefa5ac492c28e04
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f67642342777a4b5b26b902161c83dc98893c63f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33538876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799361"
 ---
 # <a name="digital-ink-how-to-topics"></a>디지털 잉크 방법 항목
 ## <a name="in-this-section"></a>섹션 내용  
- [사용자 지정 컨트롤에서 잉크 선택](../../../../docs/framework/wpf/advanced/how-to-select-ink-from-a-custom-control.md)  
-  [잉크 데이터에 사용자 지정 데이터 추가](../../../../docs/framework/wpf/advanced/how-to-add-custom-data-to-ink-data.md)  
-  [사용자 지정 컨트롤에서 잉크 지우기](../../../../docs/framework/wpf/advanced/how-to-erase-ink-on-a-custom-control.md)  
-  [응용 프로그램 제스처 인식](../../../../docs/framework/wpf/advanced/how-to-recognize-application-gestures.md)  
-  [잉크 끌어서 놓기](../../../../docs/framework/wpf/advanced/how-to-drag-and-drop-ink.md)  
-  [InkCanvas에 데이터 바인딩](../../../../docs/framework/wpf/advanced/how-to-data-bind-to-an-inkcanvas.md)  
-  [분석 힌트를 사용하여 잉크 분석](../../../../docs/framework/wpf/advanced/how-to-analyze-ink-with-analysis-hints.md)  
-  [잉크 회전](../../../../docs/framework/wpf/advanced/how-to-rotate-ink.md)  
-  [WPF 응용 프로그램에 대해 RealTimeStylus를 사용하지 않도록 설정](../../../../docs/framework/wpf/advanced/disable-the-realtimestylus-for-wpf-applications.md)
+ [사용자 지정 컨트롤에서 잉크 선택](how-to-select-ink-from-a-custom-control.md)  
+  [잉크 데이터에 사용자 지정 데이터 추가](how-to-add-custom-data-to-ink-data.md)  
+  [사용자 지정 컨트롤에서 잉크 지우기](how-to-erase-ink-on-a-custom-control.md)  
+  [애플리케이션 제스처 인식](how-to-recognize-application-gestures.md)  
+  [잉크 끌어서 놓기](how-to-drag-and-drop-ink.md)  
+  [InkCanvas에 데이터 바인딩](how-to-data-bind-to-an-inkcanvas.md)  
+  [분석 힌트를 사용하여 잉크 분석](how-to-analyze-ink-with-analysis-hints.md)  
+  [잉크 회전](how-to-rotate-ink.md)  
+  [WPF 애플리케이션에 대해 RealTimeStylus를 사용하지 않도록 설정](disable-the-realtimestylus-for-wpf-applications.md)

@@ -3,11 +3,11 @@ title: 1140 - FlowchartStart
 ms.date: 03/30/2017
 ms.assetid: 9aa2c71e-a4ab-4aed-b76d-4795e8493b70
 ms.openlocfilehash: 556fd0421966083b29c925bf7555f9d8a2e7d7f0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512257"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924516"
 ---
 # <a name="1140---flowchartstart"></a>1140 - FlowchartStart
 ## <a name="properties"></a>속성  
@@ -17,7 +17,7 @@ ms.locfileid: "33512257"
 |ID|1140|  
 |키워드|WFActivities|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  Flowchart 시작이 예약되었음을 나타냅니다.  

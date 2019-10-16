@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 9e1c38abd1c9cacfd4db953d9fb875437b2f1093
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 40bde7d9bd2735dfd6f1a18f9359533db0e11724
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199619"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989832"
 ---
 # <a name="impersonating-the-client"></a>Impersonating the Client
-Impersonation 샘플에서는 서비스가 호출자를 대신하여 시스템 리소스에 액세스할 수 있도록 서비스에서 호출자 응용 프로그램을 가장하는 방법을 보여 줍니다.  
+Impersonation 샘플에서는 서비스가 호출자를 대신하여 시스템 리소스에 액세스할 수 있도록 서비스에서 호출자 애플리케이션을 가장하는 방법을 보여 줍니다.  
   
- 이 샘플은 기반 합니다 [Self-host](../../../../docs/framework/wcf/samples/self-host.md) 샘플입니다. 서비스 및 클라이언트 구성 파일의와 동일 합니다 [Self-host](../../../../docs/framework/wcf/samples/self-host.md) 샘플입니다.  
+ 이 샘플은 [자체 호스트](../../../../docs/framework/wcf/samples/self-host.md) 샘플을 기반으로 합니다. 서비스 및 클라이언트 구성 파일은 [자체 호스트](../../../../docs/framework/wcf/samples/self-host.md) 샘플과 동일 합니다.  
   
 > [!NOTE]
->  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
+> 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
  다음 샘플 코드와 같이 서비스 코드는 `Add`를 사용하여 서비스의 <xref:System.ServiceModel.OperationBehaviorAttribute> 메서드가 호출자를 가장하도록 수정되었습니다.  
   
@@ -102,27 +102,25 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
  샘플을 실행하면 작업 요청 및 응답이 서비스와 클라이언트 콘솔 창 모두에 표시됩니다. 서비스와 클라이언트를 종료하려면 각 콘솔 창에서 Enter 키를 누릅니다.  
   
 > [!NOTE]
->  서비스 관리자 계정으로 실행 해야 합니다 또는 실행 되는 계정에 등록할 수 있는 권한이 부여 해야 합니다 `http://localhost:8000/ServiceModelSamples` HTTP 계층을 사용 하 여 URI입니다. 설정 하 여 이러한 권한을 부여할 수 있습니다는 [Namespace 예약](https://go.microsoft.com/fwlink/?LinkId=95012) 사용 하는 [Httpcfg.exe 도구](https://go.microsoft.com/fwlink/?LinkId=95010)합니다.  
+> 서비스는 관리 계정에서 실행 하거나, 실행 하는 계정에는 HTTP 계층에 `http://localhost:8000/ServiceModelSamples` URI를 등록할 수 있는 권한을 부여 해야 합니다. [Httpcfg.exe 도구](https://go.microsoft.com/fwlink/?LinkId=95010)를 사용 하 여 [네임 스페이스 예약](https://go.microsoft.com/fwlink/?LinkId=95012) 을 설정 하 여 이러한 권한을 부여할 수 있습니다.  
   
 > [!NOTE]
->  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]을 실행하는 컴퓨터에서는 Host.exe 응용 프로그램에 가장 권한이 있는 경우에만 가장이 지원됩니다. 기본적으로 관리자만 이 사용 권한을 가집니다. 로 이동 하는 서비스를 실행 하는 계정에이 권한을 추가할 **관리 도구**오픈 **로컬 보안 정책**오픈 **로컬 정책**, 클릭 **사용자 권한 할당**, 선택한 **인증 후 클라이언트 가장** 를 두 번 클릭 하 고 **속성** 사용자 또는 그룹을 추가 합니다.  
+> [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]을 실행하는 컴퓨터에서는 Host.exe 애플리케이션에 가장 권한이 있는 경우에만 가장이 지원됩니다. 기본적으로 관리자만 이 사용 권한을 가집니다. 서비스를 실행 하는 계정에이 권한을 추가 하려면 **관리 도구**로 이동 하 여 **로컬 보안 정책**, **로컬 정책**을 차례로 연 다음 **사용자 권한 할당**을 클릭 하 고 **다음 이후 클라이언트 가장을 선택 합니다. 인증** 을 클릭 하 고 **속성** 을 두 번 클릭 하 여 사용자 또는 그룹을 추가 합니다.  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-2.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-3.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
   
-4.  서비스가 호출자를 가장하는 것을 보기 위해 서비스가 실행 중인 계정이 아닌 다른 계정으로 클라이언트를 실행합니다. 이렇게 하려면 명령 프롬프트에서 다음을 입력합니다.  
+4. 서비스가 호출자를 가장하는 것을 보기 위해 서비스가 실행 중인 계정이 아닌 다른 계정으로 클라이언트를 실행합니다. 이렇게 하려면 명령 프롬프트에서 다음을 입력합니다.  
   
-    ```  
+    ```console  
     runas /user:<machine-name>\<user-name> client.exe  
     ```  
   
      그런 다음 암호를 묻는 메시지가 나타납니다. 이전에 지정한 계정에 대한 암호를 입력합니다.  
   
-5.  클라이언트를 다른 자격 증명으로 실행하기 전과 후의 ID에 주의합니다.  
-  
-## <a name="see-also"></a>참고 항목
+5. 클라이언트를 다른 자격 증명으로 실행하기 전과 후의 ID에 주의합니다.  

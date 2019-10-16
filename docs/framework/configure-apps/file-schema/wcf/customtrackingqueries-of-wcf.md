@@ -1,30 +1,31 @@
 ---
-title: WCF의 &lt;customTrackingQueries&gt;
+title: <customTrackingQueries>WCF의
 ms.date: 03/30/2017
 ms.assetid: 14cfe47e-9935-4120-84f1-8f38de8ca4c1
-ms.openlocfilehash: 060e2b5c8efd51f6245a39bd9562a69f0111fd41
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2c4bd74ae346c536e8bc0ae454e638b7c76a40fc
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50202226"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855438"
 ---
-# <a name="ltcustomtrackingqueriesgt-of-wcf"></a>WCF의 &lt;customTrackingQueries&gt;
+# <a name="customtrackingqueries-of-wcf"></a>\<WCF의 customTrackingQueries >
 
 코드 활동에서 정의하는 이벤트를 추적하는 데 사용되는 쿼리의 컬렉션을 나타냅니다. 추적 참가자가 사용자 지정 추적 레코드를 구독하려면 쿼리가 필요합니다.  
   
- 추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)합니다.
+추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)을 참조 하세요.
   
-\<system.serviceModel>  
-\<tracking>  
-\<프로필 >  
-\<trackingProfile>  
-\<workflow>  
-\<customTrackingQueries >  
-  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<추적 >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<프로필 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Tracking&gt >** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<워크플로 >** ](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<customTrackingQueries >**  
+
 ## <a name="syntax"></a>구문  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -36,7 +37,7 @@ ms.locfileid: "50202226"
       </workflow>
     </trackingProfile>
   </profiles>
-</tracking>  
+</tracking>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소
@@ -51,17 +52,17 @@ ms.locfileid: "50202226"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<customTrackingQuery >](customtrackingquery-of-wcf.md)|코드 활동에서 정의하는 이벤트를 추적하기 위해 사용되는 쿼리입니다.|  
+|[\<customTrackingQuery>](customtrackingquery-of-wcf.md)|코드 활동에서 정의하는 이벤트를 추적하기 위해 사용되는 쿼리입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|`activityDefinitionId` 속성에 의해 식별되는 특정 워크플로에 대한 모든 쿼리를 포함하는 구성 요소입니다.|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|`activityDefinitionId` 속성에 의해 식별되는 특정 워크플로에 대한 모든 쿼리를 포함하는 구성 요소입니다.|  
   
 ## <a name="see-also"></a>참고자료
 
-- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>       
-- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>       
-- [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
-- [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
+- [워크플로 추적](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)

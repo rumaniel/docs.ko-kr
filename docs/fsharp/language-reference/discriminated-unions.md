@@ -1,17 +1,17 @@
 ---
-title: Discriminated Unions(F#)
-description: 'F #을 사용 하는 방법을 알아봅니다 구별 된 공용 구조체입니다.'
+title: 구별된 공용 구조체
+description: 구별 된 공용 구조체 F# 를 사용 하는 방법을 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 06d6c154790f659c0c7ff73290357ab50a134362
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 79da6c6ff9d3699818014d86f6c95edc3e43b4c1
+ms.sourcegitcommit: a2d0e1f66367367065bc8dc0dde488ab536da73f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43788125"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71083036"
 ---
 # <a name="discriminated-unions"></a>구별된 공용 구조체
 
-구별 된 공용 구조체 형식과 다른 값을 사용 하 여 각 명명 된 사례 수 중 하나가 될 수 있는 값에 대 한 지원을 제공 합니다. 구별 된 공용 구조체 유형이 다른 데이터에 유용 유효한을 비롯 한 특수 사례 및 오류 사례; 가질 수 있는 데이터 한 인스턴스에서 다른; 형식에 따라 달라 지는 데이터 및 작은 개체 계층에 대 한 대안입니다. 또한 재귀적인 구별 된 공용 구조체 트리 데이터 구조를 나타내는 데 사용 됩니다.
+구별 된 공용 구조체는 여러 개의 명명 된 사례 중 하나일 수 있는 값을 지원 합니다. 각각의 값과 형식이 서로 다를 수 있습니다. 구별 된 공용 구조체는 다른 유형의 데이터에 유용 합니다. 유효한 및 오류 사례를 포함 하 여 특수 한 경우를 포함 하는 데이터 한 인스턴스에서 다른 인스턴스로의 형식에 따라 달라 지는 데이터 및는 작은 개체 계층 구조에 대 한 대 안으로 사용할 수도 있습니다. 또한 재귀적으로 구분 된 공용 구조체는 트리 데이터 구조를 나타내는 데 사용 됩니다.
 
 ## <a name="syntax"></a>구문
 
@@ -26,11 +26,11 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>설명
 
-구별 된 공용 구조체는 다른 언어의 공용 구조체 형식과 비슷하지만 있지만 차이가 있습니다. 으로 c + +에서 공용 구조체 형식 또는 Visual Basic의 variant 형식과 값에 저장 된 데이터를 수정 하지 않으면; 여러 가지 옵션 중 하나일 수 있습니다. 그러나와 달리 이러한 기타 언어의 공용 구조체, 각각 가능한 옵션은 부여는 *케이스 식별자*합니다. 케이스 식별자는이 형식의 개체 수; 값의 가능한 다양 한 형식에 이름이 값은 선택적입니다. 값이 있는 경우에 해당 열거형 케이스 동일 합니다. 값이 있는 경우 각 값에는 단일 값, 지정된 된 형식 또는 같거나 다른 형식의 여러 필드를 집계 하는 튜플 일 수 있습니다. 이름을 개별 필드를 지정할 수 있습니다 하지만 같은 사례의 다른 필드 라고 하는 경우에 이름은 선택 사항입니다.
+구별 된 공용 구조체는 다른 언어의 공용 구조체 형식과 비슷하지만 차이가 있습니다. 의 C++ union 형식 또는 Visual Basic의 variant 형식과 마찬가지로 값에 저장 된 데이터는 수정 되지 않습니다. 여러 가지 다른 옵션 중 하나를 사용할 수 있습니다. 그러나 이러한 다른 언어의 공용 구조체와는 달리 각각의 가능한 옵션에는 *case 식별자*가 제공 됩니다. Case 식별자는 이러한 형식의 개체가 가질 수 있는 다양 한 형식의 값에 대 한 이름입니다. 값은 선택 사항입니다. 값이 없는 경우 대/소문자는 열거 사례와 동일 합니다. 값이 있는 경우 각 값은 지정 된 형식의 단일 값 이거나 동일 하거나 다른 형식의 여러 필드를 집계 하는 튜플입니다 수 있습니다. 개별 필드에 이름을 지정할 수 있지만 동일한 사례의 다른 필드가 명명 된 경우에도 이름은 선택 사항입니다.
 
-구별 된 공용 구조체에 대 한 내게 필요한 옵션을 기본값으로 `public`합니다.
+구분 된 공용 구조체에 대 `public`한 접근성은 기본적으로로 설정 됩니다.
 
-예를 들어, 다음 Shape 형식 선언의 것이 좋습니다.
+예를 들어 다음과 같은 모양 형식의 선언을 살펴보겠습니다.
 
 ```fsharp
 type Shape =
@@ -39,9 +39,9 @@ type Shape =
     | Prism of width : float * float * height : float
 ```
 
-위의 코드는 선언 구별된 된 공용 구조체의 세 가지 경우 중 하나는 값을 포함할 수 있는 셰이프: 사각형, 원 및 프리즘 합니다. 각각의 경우에는 다른 필드 집합이 있습니다. 사각형 경우 두 개의 명명 된 필드의 형식은 모두 `float`, 이름 너비 및 길이가 있는 합니다. 원형 케이스는 하나의 명명 된 필드, 반지름입니다. 프리즘의 경우 세 개의 필드가 있는 (너비 및 높이)의 두 필드 라고 합니다. 명명 되지 않은 필드는 익명 필드 라고 합니다.
+위의 코드는 다음과 같은 세 가지 경우의 값을 가질 수 있는 구별 된 공용 구조체 셰이프를 선언 합니다. 사각형, 원 및 프리즘입니다. 각 사례에는 서로 다른 필드 집합이 있습니다. 사각형의 경우에는 두 개의 명명 된 필드 ( `float`형식)가 있으며 이름에는 너비와 길이가 있습니다. 원 케이스에는 하나의 명명 된 필드인 반지름이 있습니다. 프리즘 사례에는 세 개의 필드가 있으며,이 필드에는 두 개의 필드 (너비와 높이)가 명명 된 필드가 있습니다. 명명 되지 않은 필드를 익명 필드 라고 합니다.
 
-다음 예제에 따라 명명 된 형식과 익명 필드에 대 한 값을 제공 하 여 개체를 생성 합니다.
+다음 예제에 따라 명명 된 필드 및 익명 필드에 값을 제공 하 여 개체를 생성 합니다.
 
 ```fsharp
 let rect = Rectangle(length = 1.3, width = 10.0)
@@ -49,9 +49,9 @@ let circ = Circle (1.0)
 let prism = Prism(5., 2.0, height = 3.0)
 ```
 
-이 코드는 초기화에서 명명된 된 필드를 사용할 수 있습니다 하거나 선언에서 필드의 순서에 의존 하 고 차례로 각 필드에 대 한 값을 방금 제공 보여 줍니다. 에 대 한 생성자 호출 `rect` 이전 코드에서 명명된 된 필드를 하지만 대 한 생성자 호출을 사용 하 여 `circ` 순서 지정을 사용 합니다. 순서가 지정 된 필드를 혼합할 수 및 생성와 같이 라는 `prism`합니다.
+이 코드에서는 초기화에 명명 된 필드를 사용 하거나, 선언의 필드 순서를 사용 하 고, 각 필드의 값을 차례로 제공 하는 방법에 대해 설명 합니다. 이전 코드의에 `rect` 대 한 생성자 호출은 명명 된 필드를 사용 하지만의 `circ` 생성자 호출은 순서를 사용 합니다. 의 `prism`생성에서와 같이 순서가 지정 된 필드와 명명 된 필드를 혼합할 수 있습니다.
 
-`option` 형식은 F # 핵심 라이브러리의 간단한 구별 된 공용 구조체입니다. `option` 형식을 다음과 같이 선언 됩니다.
+`option` 형식은 F# 핵심 라이브러리의 단순한 구별 된 공용 구조체입니다. `option` 형식은 다음과 같이 선언 됩니다.
 
 ```fsharp
 // The option type is a discriminated union.
@@ -60,17 +60,17 @@ type Option<'a> =
     | None
 ```
 
-앞의 코드를 지정 하는 형식을 `Option` 이라는 두 케이스가 있는 구별된 된 공용 구조체는 `Some` 고 `None`입니다. 합니다 `Some` 사례에 해당 형식을 형식 매개 변수로 표현 하는 익명 필드 하나로 구성 된 연결된 값 `'a`합니다. `None` 케이스에 관련된 값이 없습니다. 따라서는 `option` 형식은 하거나 일부 형식 또는 값이 없는 값을 가진 제네릭 형식을 지정 합니다. 형식 `Option` 소문자 형식 별칭을 역시 `option`, 즉 더 일반적으로 사용 합니다.
+이전 코드에서는 형식이 `Option` 와 `None`이라는 두 가지 경우를 `Some` 포함 하는 구별 된 공용 구조체 임을 지정 합니다. Case에는 형식이 형식 매개 변수로 `'a`표시 되는 익명 필드 하나로 구성 된 연결 된 값이 있습니다. `Some` `None` 케이스에 연결 된 값이 없습니다. `option` 따라서 형식이 일부 형식의 값 또는 값이 없는 제네릭 형식을 지정 합니다. 또한이 `Option` 형식에는 보다 일반적으로 사용 `option`되는 소문자 형식 별칭이 있습니다.
 
-케이스 식별자는 구별 된 공용 구조체 형식에 대 한 생성자로 사용할 수 있습니다. 예를 들어, 다음 코드는 값을 만드는 데는 `option` 형식입니다.
+Case 식별자를 구별 된 공용 구조체 형식에 대 한 생성자로 사용할 수 있습니다. 예를 들어 다음 코드는 `option` 형식의 값을 만드는 데 사용 됩니다.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2001.fs)]
 
-케이스 식별자는 패턴 일치 식에에서도 사용 됩니다. 패턴 일치 식에서 식별자는 개별 사례와 연결 된 값에 대해 제공 됩니다. 예를 들어, 다음 코드에서에서 `x` 식별자와 연결 된 값이 지정 되는 `Some` 케이스는 `option` 형식입니다.
+Case 식별자는 패턴 일치 식에도 사용 됩니다. 패턴 일치 식에서 개별 사례와 관련 된 값에 대 한 식별자가 제공 됩니다. 예를 들어 다음 코드 `x` 에서는 `option` 형식의 `Some` 케이스와 연결 된 값을 제공 하는 식별자입니다.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2002.fs)]
 
-패턴 일치 식에서에서 구별 된 공용 구조체 일치 항목을 지정 하려면 명명 된 필드를 사용할 수 있습니다. 이전에 선언 된 셰이프 형식의 필드의 값을 추출 하려면 다음 코드와 같이 명명된 된 필드를 사용할 수 있습니다.
+패턴 일치 식에서 명명 된 필드를 사용 하 여 구별 된 공용 구조체 일치를 지정할 수 있습니다. 이전에 선언 된 셰이프 형식의 경우 다음 코드와 같이 명명 된 필드를 사용 하 여 필드 값을 추출할 수 있습니다.
 
 ```fsharp
 let getShapeHeight shape =
@@ -80,14 +80,14 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-일반적으로 케이스 식별자는 공용 구조체의 이름으로 정규화 하지 않고도 사용할 수 있습니다. 공용 구조체의 이름이 항상 정규화 하려면 이름, 원하는 경우 적용할 수 있습니다 합니다 [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15) 공용 구조체 형식 정의에 대 한 특성입니다.
+일반적으로 대/소문자 식별자는 공용 구조체의 이름으로 한정 하지 않고 사용할 수 있습니다. 이름을 항상 공용 구조체의 이름으로 정규화 하려면 [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp]) 특성을 공용 구조체 형식 정의에 적용 하면 됩니다.
 
 ### <a name="unwrapping-discriminated-unions"></a>래핑 해제 구별 된 공용 구조체
 
-F # 구별 된 공용 구조체의에서 자주 사용 되 도메인 모델링 래핑 단일 형식에 대 한 합니다. 패턴으로 일치를 통해 기본 값을 추출 하는 것이 쉽습니다. 일치 식을 사용 하 여 단일 사례에 대 한 필요가 없습니다.
+F# 구분 된 공용 구조체는 단일 형식을 래핑하는 도메인 모델링에 자주 사용 됩니다. 패턴 일치를 통해 내부 값을 추출 하는 것도 쉽습니다. 단일 사례에 대해 일치 식을 사용할 필요는 없습니다.
 
 ```fsharp
-let ([UnionCaseName] [values]) = [UnionValue]
+let ([UnionCaseIdentifier] [values]) = [UnionValue]
 ```
 
 다음은 이에 대한 예입니다.
@@ -95,15 +95,23 @@ let ([UnionCaseName] [values]) = [UnionValue]
 ```fsharp
 type ShaderProgram = | ShaderProgram of id:int
 
-let someMethodUsingShaderProgram shaderProgram =
+let someFunctionUsingShaderProgram shaderProgram =
     let (ShaderProgram id) = shaderProgram
     // Use the unwrapped value
-    ..
+    ...
 ```
 
-## <a name="struct-discriminated-unions"></a>구조체를 구별 된 공용 구조체
+또한 패턴 일치는 함수 매개 변수에서 직접 사용할 수 있으므로 단일 사례를 래핑을 해제할 수 있습니다.
 
-F # 4.1 부터는 구조체로 구별 된 공용 구조체를도 나타낼 수 있습니다.  그러려면는 `[<Struct>]` 특성입니다.
+```fsharp
+let someFunctionUsingShaderProgram (ShaderProgram id) =
+    // Use the unwrapped value
+    ...
+```
+
+## <a name="struct-discriminated-unions"></a>구별 된 공용 구조체 구조체
+
+구별 된 공용 구조체를 구조체로 나타낼 수도 있습니다.  이 작업은 `[<Struct>]` 특성을 사용 하 여 수행 됩니다.
 
 ```fsharp
 [<Struct>]
@@ -116,54 +124,86 @@ type Multicase =
     | Case3 of Case3 : double
 ```
 
-없기 때문에 이러한 값 형식이 며 형식을 참조 하지, 추가 구별 된 공용 구조체 참조에 비해 고려 사항:
+이러한 값 형식은 참조 형식이 아니라 값 형식 이므로 참조 구별 된 공용 구조체와 비교 하 여 추가로 고려해 야 할 사항이 있습니다.
 
-1. 이러한 값 형식으로 복사 되 고 값 형식 의미 체계를 가집니다.
-2. Multicase 구조체 구별 된 공용 구조체를 사용 하 여 재귀 형식 정의 사용할 수 없습니다.
-3. Multicase 구조체 구별 된 공용 구조체에 대 한 사례 고유한 이름을 제공 해야 합니다.
+1. 값 형식으로 복사 되 고 값 형식 의미 체계가 있습니다.
+2. Multicase 구조체와 구별 된 공용 구조체에는 재귀 형식 정의를 사용할 수 없습니다.
+3. Multicase 구조체 구별 된 공용 구조체에 대 한 고유한 대/소문자 이름을 제공 해야 합니다.
 
-## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>개체 계층 구조 대신 구별 된 공용 구조체를 사용 하 여
+## <a name="using-discriminated-unions-instead-of-object-hierarchies"></a>개체 계층 구조 대신 구별 된 공용 구조체 사용
 
-흔히 작은 개체 계층에 단순한 대안인 구별된 된 공용 구조체를 사용할 수 있습니다. 대신 다음과 같은 구별 된 공용 구조체를 사용할 수 있습니다 예를 들어, 한 `Shape` 기본 클래스에 대 한 파생 형식이 원, 정사각형 등입니다.
+종종 구별 된 공용 구조체를 작은 개체 계층에 대 한 보다 간단한 방법으로 사용할 수 있습니다. 예를 들어 원, 사각형 등에 대해 파생 된 형식이 있는 `Shape` 기본 클래스 대신 다음과 같은 구별 된 공용 구조체를 사용할 수 있습니다.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2003.fs)]
 
-대신 면적이 나 둘레를 계산 하는 가상 메서드로, 사용 되는 개체 지향 구현에서 적절 한 수식으로 분기에 패턴 일치를 사용 하 여 이러한 수량을 계산할 수 있습니다. 다음 예제에서는 서로 다른 수식은 면적을 계산 합니다, 도형에 따라 사용 됩니다.
+영역 또는 둘레를 계산 하는 가상 메서드 대신 개체 지향 구현에서 사용 하는 것 처럼 패턴 일치를 사용 하 여 적절 한 수식으로 분기 하 고 이러한 수량을 계산할 수 있습니다. 다음 예에서는 도형에 따라 서로 다른 수식을 사용 하 여 영역을 계산 합니다.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2004.fs)]
 
 출력은 다음과 같습니다.
 
-```
+```console
 Area of circle that has radius 15.000000: 706.858347
 Area of square that has side 10.000000: 100.000000
 Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 ```
 
-## <a name="using-discriminated-unions-for-tree-data-structures"></a>구별 된 공용 구조체를 사용 하 여 트리 데이터 구조에 대 한
+## <a name="using-discriminated-unions-for-tree-data-structures"></a>트리 데이터 구조에 대해 구별 된 공용 구조체 사용
 
-구별 된 공용 구조체는 재귀 공용 구조체 자체가 하나 이상의 경우의 형식에 포함 될 수 있는지를 수 있습니다. 재귀 구별 된 공용 구조체는 프로그래밍 언어에서 식을 모델링 하는 데 사용 되는 트리 구조를 만드는 데 사용할 수 있습니다. 다음 코드에서는 재귀적인 구별 된 공용 구조체는 이진 트리 데이터 구조를 만드는 데 사용 됩니다. 두 경우의 통합 구성 `Node`, 정수 값과 왼쪽 및 오른쪽 하위 트리 노드인 및 `Tip`, 트리를 종료 하는 합니다.
+구분 된 공용 구조체는 재귀적 일 수 있습니다. 즉, union 자체는 하나 이상의 사례 형식에 포함 될 수 있습니다. 재귀 구별 된 공용 구조체를 사용 하 여 프로그래밍 언어로 식을 모델링 하는 데 사용 되는 트리 구조를 만들 수 있습니다. 다음 코드에서 재귀적으로 구분 된 공용 구조체를 사용 하 여 이진 트리 데이터 구조를 만듭니다. Union은 정수 값과 왼쪽 및 `Node`오른쪽 하위 트리가 포함 된 노드인 및 `Tip`트리를 종료 하는 두 가지 case로 구성 됩니다.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2005.fs)]
 
-이전 코드에서 `resultSumTree` 값 10이 됩니다. 다음 그림에 대 한 트리 구조를 보여 줍니다. `myTree`합니다.
+이전 코드 `resultSumTree` 에서의 값은 10입니다. 다음 그림에서는의 `myTree`트리 구조를 보여 줍니다.
 
-![Mytree의 트리 구조](../media/TreeStructureDiagram.png)
+![MyTree의 트리 구조를 표시 하는 다이어그램입니다.](../media/discriminated-unions/tree-structure-mytree.png)
 
-구별 된 공용 구조체에는 트리에서 노드 유형이 다른 경우에 작동 합니다. 다음 코드에서 형식 `Expression` 숫자와 변수의 곱하기 및 추가 지 원하는 간단한 프로그래밍 언어에서 식의 추상 구문 트리를 나타냅니다. 재귀 없는 공용 구조체 케이스의 일부 및 중 하나를 나타내고 (`Number`) 또는 변수 (`Variable`). 다른 경우는 재귀적 이며 및 작업을 나타내는 (`Add` 및 `Multiply`), 피연산자가 식도 합니다. `Evaluate` 함수를 재귀적으로 처리 구문 트리 일치 식을 사용 합니다.
+구별 된 공용 구조체는 트리의 노드가 다른 유형이 면 잘 작동 합니다. 다음 코드에서 형식은 `Expression` 숫자 및 변수의 더하기와 곱셈을 지 원하는 간단한 프로그래밍 언어의 식에 대 한 추상 구문 트리를 나타냅니다. 일부 공용 구조체 케이스는 재귀적이 아니고 숫자 (`Number`) 또는 변수 (`Variable`)를 나타냅니다. 다른 경우는 재귀이 고 연산자 (`Add` 및 `Multiply`)를 나타내지만 피연산자도 식입니다. 함수 `Evaluate` 는 일치 식을 사용 하 여 구문 트리를 재귀적으로 처리 합니다.
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet2006.fs)]
 
-이 코드를 실행할 때, 변수의 `result` 은 5입니다.
+이 코드가 실행 되 면의 `result` 값은 5입니다.
+
+## <a name="members"></a>멤버
+
+구별 된 공용 구조체에 멤버를 정의할 수 있습니다. 다음 예제에서는 속성을 정의 하 고 인터페이스를 구현 하는 방법을 보여 줍니다.
+
+```fsharp
+open System
+
+type IPrintable =
+    abstract Print: unit -> unit
+
+type Shape =
+    | Circle of float
+    | EquilateralTriangle of float
+    | Square of float
+    | Rectangle of float * float
+
+    member this.Area =
+        match this with
+        | Circle r -> 2.0 * Math.PI * r
+        | EquilateralTriangle s -> s * s * sqrt 3.0 / 4.0
+        | Square s -> s * s
+        | Rectangle(l, w) -> l * w
+
+    interface IPrintable with
+        member this.Print () =
+            match this with
+            | Circle r -> printfn "Circle with radius %f" r
+            | EquilateralTriangle s -> printfn "Equilateral Triangle of side %f" s
+            | Square s -> printfn "Square with side %f" s
+            | Rectangle(l, w) -> printfn "Rectangle with length %f and width %f" l w
+```
 
 ## <a name="common-attributes"></a>공통 특성
 
-다음 특성은 일반적으로 구별 된 공용 구조체에 표시 됩니다.
+다음 특성은 일반적으로 구분 된 공용 구조체에서 볼 수 있습니다.
 
-* `[RequireQualifiedAccess]`
-* `[NoEquality]`
-* `[NoComparison]`
-* `[Struct]`
+- `[<RequireQualifiedAccess>]`
+- `[<NoEquality>]`
+- `[<NoComparison>]`
+- `[<Struct>]`
 
 ## <a name="see-also"></a>참고자료
 

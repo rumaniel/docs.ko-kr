@@ -17,42 +17,42 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a06d57348cfbdfb8bb57580a48e54e298e27e166
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e3b17ca32051cd5fc0673ef26124b855a66f9785
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33438196"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779986"
 ---
 # <a name="icorruntimehostcreateevidence-method"></a>ICorRuntimeHost::CreateEvidence 메서드
-형식의 인터페이스 포인터를 가져옵니다 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>를 허용 하는 호스트를 만드는 보안 증명 정보를 전달 하는 [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) 또는 [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) 메서드.  
+형식의 인터페이스 포인터를 가져옵니다 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>에 전달할 보안 증명을 만들려면 호스트를 허용 하는 합니다 [CreateDomain](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomain-method.md) 또는 [CreateDomainEx](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-createdomainex-method.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CreateEvidence (  
     [out] IUnknown** pEvidence  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pEvidence`  
- [out] 에 대 한 인터페이스 포인터는 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> 인스턴스를 보안 증명을 만드는 데 사용 합니다. 이 포인터 형식이 `IUnknown`호출자에 게 일반적으로 호출 해야 하므로 `QueryInterface` 이 인터페이스에 대 한 포인터를 가져올 수에 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>합니다.  
+ [out] 에 대 한 인터페이스 포인터를 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType> 인스턴스 보안 증명을 만드는 데 사용 합니다. 이 포인터를 입력 `IUnknown`호출자에 게 일반적으로 호출 해야 하므로 `QueryInterface` 에 대 한 포인터를 얻기 위해이 인터페이스에는 <xref:System.Security.Principal.IIdentity?displayProperty=nameWithType>합니다.  
   
 ## <a name="return-value"></a>반환 값  
   
 |HRESULT|설명|  
 |-------------|-----------------|  
-|S_OK|작업이 성공 했습니다.|  
+|S_OK|작업에 성공 합니다.|  
 |S_FALSE|작업을 완료 하지 못했습니다.|  
-|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환 하는 경우 공용 언어 런타임 (CLR)을 하는 프로세스에서 사용할 수 없습니다. 호스팅 Api에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환합니다.|  
-|HOST_E_CLRNOTAVAILABLE|CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
+|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. E_FAIL을 반환 하는 메서드는 CLR (공용 언어 런타임) 더 이상 사용할 수 진행에서 합니다. 호스팅 Api에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환합니다.|  
+|HOST_E_CLRNOTAVAILABLE|CLR이 로드 된 프로세스에 또는 CLR 상태인는 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 메서드는 네이티브 코드에서 채울 수 있는 빈 컬렉션을 반환 합니다. 사용 해야는 <xref:System.Security.Policy.Evidence> 메서드 대신 합니다.  
+ 이 메서드는 네이티브 코드에서 채울 수 있는 빈 컬렉션을 반환 합니다. 기능을 사용할지는 <xref:System.Security.Policy.Evidence> 메서드 대신 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
@@ -60,7 +60,8 @@ HRESULT CreateEvidence (
   
  **.NET framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System._AppDomain>  
- <xref:System.AppDomain>  
- [ICorRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System._AppDomain>
+- <xref:System.AppDomain>
+- [ICorRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

@@ -1,5 +1,6 @@
 ---
-title: extern 한정자(C# 참조)
+title: extern 한정자 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - extern_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - DllImport attribute
 - extern keyword [C#]
 ms.assetid: 9c3f02c4-51b8-4d80-9cb2-f2b6e1ae15c7
-ms.openlocfilehash: 92ba2324345a6fc196dc3702e5f84886fba09ffc
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 387ef707166705c4df501bd6740d438683aa2d69
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "43892761"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70203010"
 ---
 # <a name="extern-c-reference"></a>extern(C# 참조)
 
@@ -42,46 +43,46 @@ extern 키워드는 C++보다 C#에서 사용이 제한적입니다. C# 키워�
 
 1. 다음 C 파일을 만들고 이름을 `cmdll.c`로 지정합니다.
 
-```c
-// cmdll.c
-// Compile with: -LD
-int __declspec(dllexport) SampleMethod(int i)
-{
-  return i*10;
-}
-```
+    ```c
+    // cmdll.c
+    // Compile with: -LD
+    int __declspec(dllexport) SampleMethod(int i)
+    {
+      return i*10;
+    }
+    ```
 
 2. Visual Studio 설치 디렉터리에서 Visual Studio x64(또는 x32) 네이티브 도구 명령 프롬프트 창을 열고 명령 프롬프트에서 **cl -LD cmdll.c**를 입력하여 `cmdll.c` 파일을 컴파일합니다.
 
 3. 같은 디렉터리에서 다음 C# 파일을 만들고 이름을 `cm.cs`로 지정합니다.
 
-```csharp
-// cm.cs
-using System;
-using System.Runtime.InteropServices;
-public class MainClass
-{
-    [DllImport("Cmdll.dll")]
-      public static extern int SampleMethod(int x);
-
-    static void Main()
+    ```csharp
+    // cm.cs
+    using System;
+    using System.Runtime.InteropServices;
+    public class MainClass
     {
-        Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        [DllImport("Cmdll.dll")]
+          public static extern int SampleMethod(int x);
+
+        static void Main()
+        {
+            Console.WriteLine("SampleMethod() returns {0}.", SampleMethod(5));
+        }
     }
-}
-```
+    ```
 
 4. Visual Studio 설치 디렉터리에서 Visual Studio x64(또는 x32) 네이티브 도구 명령 프롬프트 창을 열고 명령 프롬프트에서 다음을 입력하여 `cm.cs` 파일을 컴파일합니다.
 
-> **csc cm.cs**(x64 명령 프롬프트의 경우) —또는— **csc -platform:x86 cm.cs**(x32 명령 프롬프트의 경우)
+    > **csc cm.cs**(x64 명령 프롬프트의 경우) —또는— **csc -platform:x86 cm.cs**(x32 명령 프롬프트의 경우)
 
-이렇게 하면 실행 파일 `cm.exe`가 만들어집니다.
+    이렇게 하면 실행 파일 `cm.exe`가 만들어집니다.
 
 5. `cm.exe`를 실행합니다. `SampleMethod` 메서드가 값 5를 DLL 파일에 전달하면 10을 곱한 값이 반환됩니다.  프로그램에서는 다음이 출력됩니다.
 
-```
-SampleMethod() returns 50.
-```
+    ```output
+    SampleMethod() returns 50.
+    ```
 
 ## <a name="c-language-specification"></a>C# 언어 사양
 
@@ -89,8 +90,8 @@ SampleMethod() returns 50.
 
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>  
-- [C# 참조](../index.md)  
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)  
-- [C# 키워드](index.md)  
-- [한정자](modifiers.md)  
+- <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=nameWithType>
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](index.md)
+- [한정자](modifiers.md)

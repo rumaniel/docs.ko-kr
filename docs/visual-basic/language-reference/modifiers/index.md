@@ -2,12 +2,12 @@
 title: 한정자(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a49a0e51-d700-4705-9196-3e0eb582dda6
-ms.openlocfilehash: 5e4a37a53d04174c53fdbdc30139d61ecd9998cc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 466d69ec966037ae3a980bba381fc61be52f30e6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051184"
 ---
 # <a name="modifiers-visual-basic"></a>한정자(Visual Basic)
 이 단원의 항목에서는 Visual Basic 런타임 한정자를 설명합니다.  
@@ -63,7 +63,11 @@ ms.locfileid: "33600635"
   
  [전용](../../../visual-basic/language-reference/modifiers/private.md)  
   
+ [Private Protected](../../../visual-basic/language-reference/modifiers/private-protected.md)  
+  
  [보호됨](../../../visual-basic/language-reference/modifiers/protected.md)  
+
+ [Protected Friend](../../../visual-basic/language-reference/modifiers/protected-friend.md)  
   
  [공용](../../../visual-basic/language-reference/modifiers/public.md)  
   

@@ -16,24 +16,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f0ab07377b9e5db36ca9e4f1fd93aacd3464df4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 44241d02051c9bd54f93a19fa6044e4973fdef9e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33436311"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950266"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen 클래스
-네이티브 이식 가능한 실행 (PE) 파일을 만들기 위한 기능을 제공 합니다. 인터페이스 컴파일된 출력 실행 파일을 생성 하는 컴파일러에 일반적으로 사용 됩니다.  
+네이티브 PE (이식 가능한 실행) 파일을 만드는 기능을 제공 합니다. 일반적으로이 인터페이스는 컴파일러에서 컴파일된 출력 실행 파일을 생성 하는 데 사용 됩니다.  
   
 > [!NOTE]
->  `ICeeFileGen` .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
+> `ICeeFileGen`는 .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
   
- 이 인터페이스 되지 않으며 이후 릴리스에서 제거 됩니다.  
+ 이 인터페이스는 더 이상 사용 되지 않으며 이후 릴리스에서 제거 될 예정입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 class ICeeFileGen {  
 public:  
     virtual HRESULT CreateCeeFile(HCEEFILE *ceeFile);  
@@ -237,11 +237,12 @@ public:
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** ICeeFileGen.h  
   
- **.NET framework 버전:** 1.0  
+ **.NET Framework 버전:** 1.0  
   
-## <a name="see-also"></a>참고 항목  
- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

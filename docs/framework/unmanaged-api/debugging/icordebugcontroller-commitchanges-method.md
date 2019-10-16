@@ -17,15 +17,13 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ed8c616fd71855f3c2313cee0b9fee3ba31babd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 29b32bd986479ffc9c37f5631148cc333c543021
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415177"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71700755"
 ---
 # <a name="icordebugcontrollercommitchanges-method"></a>ICorDebugController::CommitChanges 메서드
-`CommitChanges`는 사용되지 않습니다. 이 메서드를 호출 하지 마십시오.  
-  
-## <a name="see-also"></a>참고 항목  
- 
+
+`CommitChanges`는 사용되지 않습니다. 이 메서드를 호출 하지 마세요.

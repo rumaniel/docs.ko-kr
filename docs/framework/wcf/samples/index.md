@@ -1,13 +1,13 @@
 ---
-title: Windows Communication Foundation (WCF) 설명서 샘플
+title: Windows Communication Foundation (WCF) 샘플
 ms.date: 09/24/2018
 ms.assetid: 89d4efce-7832-4dd5-82a8-0e574b3302f9
-ms.openlocfilehash: 29e2bb7e5e8654801dbbfd3c2a07fae32851e2cf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 408b0df9d6e3691d7c9b7e7c1934846880bd38cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954674"
 ---
 # <a name="windows-communication-foundation-wcf-samples"></a>Windows Communication Foundation (WCF) 샘플
 

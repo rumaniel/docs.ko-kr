@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 48b15429d40d3a69db52615592fc1697f385d319
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5cd2add7e96a8edaff8509563ae1846e80132001
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403733"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740094"
 ---
 # <a name="cordebugexceptionobjectstackframe-structure"></a>CorDebugExceptionObjectStackFrame 구조체
 예외 개체의 스택 프레임 정보를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct CorDebugExceptionObjectStackFrame {  
     ICorDebugModule* pModule;  
     CORDB_ADDRESS ip;  
@@ -44,20 +44,21 @@ typedef struct CorDebugExceptionObjectStackFrame {
 |`pModule`|현재 프레임에 대 한 ICorDebugModule 개체에 대 한 포인터입니다.|  
 |`ip`|현재 프레임에 대 한 명령 포인터 (EIP/RIP)의 값입니다.|  
 |`methodDef`|현재 프레임에 대 한 메서드 토큰입니다.|  
-|`isLastForeignExceptionFrame`|프레임은 마지막 외부 예외 프레임 있는지 여부를 나타내는 값입니다.|  
+|`isLastForeignExceptionFrame`|프레임 마지막 프레임 외래 예외에서 인지 여부를 나타내는 값입니다.|  
   
 ## <a name="remarks"></a>설명  
- 호출자에 게 더 이상 사용에서 되 면 ICorDebugModule 개체에 대 한 포인터를 해제 해야 합니다.  
+ 호출자에 게는 더 이상 사용에서 되 면 ICorDebugModule 개체에 대 한 포인터를 해제 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>참고자료
+
+- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

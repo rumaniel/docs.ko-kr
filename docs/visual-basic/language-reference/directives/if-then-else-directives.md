@@ -1,5 +1,5 @@
 ---
-title: '#다음과 같은 경우... Then... #Else 지시문 (Visual Basic)'
+title: '#... Then ... #Else 지시문 (Visual Basic)'
 ms.date: 04/11/2018
 f1_keywords:
 - vb.#EndIf
@@ -18,19 +18,19 @@ helpviewer_keywords:
 - else directive (#else)
 - '#Else directive [Visual Basic]'
 ms.assetid: 10bba104-e3fd-451b-b672-faa472530502
-ms.openlocfilehash: c98868e16fc609a49721724fdd32221a380ff834
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c5357dca24b03ddd03779866019baf14175be992
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182894"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698540"
 ---
 # <a name="ifthenelse-directives"></a>#If...Then...#Else 지시문
-선택한 Visual Basic 코드 블록을을 조건부로 컴파일합니다.  
+선택한 Visual Basic 코드 블록을 조건부로 컴파일합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```vb  
 #If expression Then  
    statements  
 [ #ElseIf expression Then  
@@ -45,25 +45,25 @@ ms.locfileid: "50182894"
   
 ## <a name="parts"></a>요소  
  `expression`  
- 에 필요한 `#If` 및 `#ElseIf` 선택적 문을 다른 곳입니다. 만으로 구성 된 하나 이상의 조건부 컴파일러 상수, 리터럴 및 연산자 계산 되는 식일 `True` 또는 `False`합니다.  
+ @No__t-0 및 `#ElseIf` 문에 필요 하며, 다른 위치에 선택적입니다. 하나 이상의 조건부 컴파일러 상수, 리터럴 및 연산자로만 구성 되는 식으로, `True` 또는 `False`로 계산 됩니다.  
   
  `statements`  
- 에 필요한 `#If` 문 블록에서는 선택적 다른 곳입니다. Visual Basic 프로그램 선 또는 연결 된 식이 계산 되는 경우 컴파일되는 컴파일러 지시문 `True`합니다.  
+ @No__t-0 문 블록에 필요 합니다 (선택 사항). 연결 된 식이 `True`으로 계산 되는 경우 컴파일되는 프로그램 줄 또는 컴파일러 지시문을 Visual Basic 합니다.  
   
  `#End If`  
- 종료는 `#If` 문 블록입니다.  
+ @No__t-0 문 블록을 종료 합니다.  
   
 ## <a name="remarks"></a>설명  
- 동작 화면에서를 `#If...Then...#Else` 지시문 동일 하 게와 표시는 `If...Then...Else` 문. 그러나 합니다 `#If...Then...#Else` 지시문은 컴파일러에 의해 컴파일되는 내용을 반면 평가 `If...Then...Else` 문은 런타임에 조건을 평가 합니다.  
+ 화면에서 `#If...Then...#Else` 지시문의 동작은 `If...Then...Else` 문과 동일 하 게 표시 됩니다. 그러나 `#If...Then...#Else` 지시문은 컴파일러에 의해 컴파일되는 항목을 평가 하는 반면, `If...Then...Else` 문은 런타임에 조건을 평가 합니다.  
   
- 조건부 컴파일은 일반적으로 다양 한 플랫폼에 대 한 동일한 프로그램을 컴파일하는 데 사용 됩니다. 방지 하기 위해 사용 되는 실행 파일에 표시 되는 코드를 디버깅 합니다. 조건부 컴파일 중에 제외 되는 코드 크기 또는 성능에 영향을 주지 것이 아니므로 완전히 최종 실행 파일에서 생략 됩니다.  
+ 조건부 컴파일은 일반적으로 여러 플랫폼에 대해 동일한 프로그램을 컴파일하는 데 사용 됩니다. 또한 실행 파일에 디버깅 코드가 나타나지 않도록 하는 데 사용 됩니다. 조건부 컴파일을 수행 하는 동안 제외 된 코드는 최종 실행 파일에서 완전히 생략 되므로 크기 또는 성능에 영향을 주지 않습니다.  
   
- 모든 평가의 결과 관계 없이 모든 식을 사용 하 여 평가 됩니다 `Option Compare Binary`합니다. 합니다 `Option Compare` 문 식에 영향을 주지 않습니다 `#If` 및 `#ElseIf` 문입니다.  
+ 모든 계산 결과에 관계 없이 모든 식은 `Option Compare Binary`을 사용 하 여 계산 됩니다. @No__t-0 문은 `#If` 및 `#ElseIf` 문의 식에 영향을 주지 않습니다.  
   
 > [!NOTE]
->  없는 한 줄 형식의 합니다 `#If`, `#Else`, `#ElseIf`, 및 `#End If` 지시문 존재 합니다. 다른 코드가 없어야 지시문와 동일한 줄에 나타날 수 있습니다. 
+> @No__t-0, `#Else`, `#ElseIf` 및 `#End If` 지시문이 한 줄로 구성 되어 있지 않습니다. 지시문과 동일한 줄에 다른 코드를 표시할 수 없습니다. 
 
-조건부 컴파일 블록 내에서 문을 논리 문을 완료 해야 합니다. 예를 들어 함수의 특성만 조건부로 컴파일할 수 없습니다 있지만 특성과 함께 함수를 조건적으로 선언할 수 있습니다.
+조건부 컴파일 블록 내의 문은 완전 한 논리적 문 이어야 합니다. 예를 들어 함수 특성만 조건부로 컴파일할 수는 없지만 해당 특성과 함께 함수를 조건부로 선언할 수 있습니다.
 
 ```vb
    #If DEBUG Then
@@ -76,14 +76,13 @@ ms.locfileid: "50182894"
 ```
 
 ## <a name="example"></a>예제
- 이 예제에서는 `#If...Then...#Else` 구문을 특정 문은 컴파일 여부를 결정 합니다.  
+ 이 예제에서는 `#If...Then...#Else` 구문을 사용 하 여 특정 문을 컴파일할 것인지 여부를 결정 합니다.  
   
- [!code-vb[VbVbalrConditionalComp#1](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/if-then-else-directives_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>참고 항목  
-[#Const 지시문](../../../visual-basic/language-reference/directives/const-directive.md)  
-[If...Then...Else 문](../../../visual-basic/language-reference/statements/if-then-else-statement.md)  
-[조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)   
-<xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>   
+## <a name="see-also"></a>참조
 
-
+- [#Const 지시문](../../../visual-basic/language-reference/directives/const-directive.md)
+- [If...Then...Else 문](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
+- [조건부 컴파일](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
+- <xref:System.Diagnostics.ConditionalAttribute?displayProperty=nameWithType>

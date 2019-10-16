@@ -1,5 +1,6 @@
 ---
-title: '&lt;include&gt;(C# 프로그래밍 가이드)'
+title: <include> - C# 프로그래밍 가이드
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - include
@@ -8,21 +9,21 @@ helpviewer_keywords:
 - <include> C# XML tag
 - include C# XML tag
 ms.assetid: a8a70302-6196-4643-bd09-ef33f411f18f
-ms.openlocfilehash: 854c8b61fa8164bccfc9451f2f163dab4a56388f
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 26241dab70a3b6a0cf80b374868fa759647cd8d9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48035190"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69588003"
 ---
-# <a name="ltincludegt-c-programming-guide"></a>&lt;include&gt;(C# 프로그래밍 가이드)
+# <a name="include-c-programming-guide"></a>\<include>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
   
 ```xml  
 <include file='filename' path='tagpath[@name="id"]' />  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `filename`  
  문서가 포함된 XML 파일의 이름입니다. 파일 이름은 소스 코드 파일에 상대 경로로 한정될 수 있습니다. `filename`을 작은따옴표(‘ ’)로 묶습니다.  
   
@@ -43,7 +44,7 @@ ms.locfileid: "48035190"
 ## <a name="example"></a>예  
  다중 파일 예제입니다. 아래에는 \<include>를 사용하는 첫 번째 파일이 나와 있습니다.  
   
- [!code-csharp[csProgGuideDocComments#5](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/include_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#5)]  
   
  두 번째 파일인 xml_include_tag.doc에는 다음과 같은 문서 주석이 포함되어 있습니다.  
   
@@ -66,7 +67,7 @@ The summary for this other type.
 ```  
   
 ## <a name="program-output"></a>프로그램 출력  
- `/doc:DocFileName.xml.` 명령줄을 사용하여 Test 및 Test2 클래스를 컴파일하면 다음 출력이 생성됩니다. Visual Studio에서 프로젝트 디자이너의 빌드 창에 있는 XML 문서 주석 옵션을 지정합니다. C# 컴파일러는 \<inclue> 태그를 발견할 경우 현재 소스 파일 대신 xml_include_tag.doc에서 문서 주석을 검색합니다. 그런 다음 컴파일러는 DocFileName.xml을 생성합니다. 이 파일은 [Sandcastle](https://github.com/EWSoftware/SHFB) 등의 문서 도구에서 최종 문서를 생성하는 데 사용하는 파일입니다.  
+ 다음 명령줄을 사용하여 테스트 및 Test2 클래스를 컴파일하는 경우 다음 출력이 생성됩니다. `/doc:DocFileName.xml.` Visual Studio에서 프로젝트 디자이너의 빌드 창에 XML 문서 주석 옵션을 지정합니다. C# 컴파일러는 \<inclue> 태그를 발견할 경우 현재 소스 파일 대신 xml_include_tag.doc에서 문서 주석을 검색합니다. 그런 다음, 컴파일러는 DocFileName.xml을 생성합니다. 이 파일은 [DocFX](https://dotnet.github.io/docfx/) 및 [Sandcastle](https://github.com/EWSoftware/SHFB) 등의 문서화 도구에서 최종 문서를 생성하는 데 사용하는 파일입니다.  
   
 ```xml  
 <?xml version="1.0"?>   
@@ -91,5 +92,5 @@ The summary for this other type.
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

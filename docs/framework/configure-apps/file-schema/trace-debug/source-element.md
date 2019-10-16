@@ -1,5 +1,5 @@
 ---
-title: '&lt;원본&gt; 요소'
+title: <source> 요소
 ms.date: 09/29/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source
@@ -7,22 +7,20 @@ f1_keywords:
 helpviewer_keywords:
 - <source> element
 - source element
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 818324077322fffb40a192c9197efde6e8ff7591
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c4f7e31422ccd8129599db1120f9b0cb327d9319
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231891"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697204"
 ---
-# <a name="ltsourcegt-element"></a>&lt;원본&gt; 요소
+# <a name="source-element"></a>\<source > 요소
 추적 메시지를 시작하는 추적 소스를 지정합니다.  
   
- \<configuration>  
-\<system.diagnostics >  
-\<원본 >  
-\<원본 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<source >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,30 +37,30 @@ ms.locfileid: "47231891"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`name`|선택적 특성입니다.<br /><br /> 추적 소스의 이름을 지정합니다.|  
-|`switchName`|선택적 특성입니다.<br /><br /> 응용 프로그램에서 추적 스위치 인스턴스의 이름을 지정합니다. 스위치에서 식별 되지 않는 경우는 `<switches>` 요소 값에 스위치의 수준을 지정 합니다.|  
-|`switchType`|선택적 특성입니다.<br /><br /> 추적 스위치의 형식을 지정합니다. 있는 경우 형식을 유효한 클래스 이름 이어야 합니다 하 고 빈 문자열일 수 없습니다.|  
-|`extraAttribute`|선택적 특성입니다.<br /><br /> 로 식별 되는 추적 소스 관련 특성의 값을 지정 합니다 <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> 메서드는 추적 소스에 대 한 합니다.|  
+|`name`|선택적 특성입니다.<br /><br /> 추적 원본의 이름을 지정 합니다.|  
+|`switchName`|선택적 특성입니다.<br /><br /> 응용 프로그램에서 추적 스위치 인스턴스의 이름을 지정 합니다. @No__t-0 요소에서 스위치가 식별 되지 않은 경우이 값은 스위치의 수준을 지정 합니다.|  
+|`switchType`|선택적 특성입니다.<br /><br /> 추적 스위치의 유형을 지정 합니다. 있는 경우 형식은 올바른 클래스 이름 이어야 하며 빈 문자열일 수 없습니다.|  
+|`extraAttribute`|선택적 특성입니다.<br /><br /> 해당 추적 소스에 대 한 <xref:System.Diagnostics.TraceSource.GetSupportedAttributes%2A> 메서드로 식별 되는 추적 소스 관련 특성의 값을 지정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<listeners>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/listeners-element-for-source.md)|수집, 저장 하 고 메시지를 라우팅하는 수신기를 포함 합니다.|  
+|[\<listeners>](listeners-element-for-source.md)|메시지를 수집, 저장 및 라우팅하는 수신기를 포함 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
 |`sources`|추적 메시지를 시작하는 추적 소스가 포함되어 있습니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 요소는 응용 프로그램 구성 파일과 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다 `<source>` 추적 소스를 추가할 요소의 `mySource` 명명 된 소스 스위치의 수준을 설정 하 고 `sourceSwitch`입니다. 콘솔 추적 수신기는 추적 정보를 콘솔에 쓰는 추가 됩니다.  
+ 다음 예제에서는 `<source>` 요소를 사용 하 여 추적 소스 `mySource`을 추가 하 고 `sourceSwitch` 라는 원본 스위치의 수준을 설정 하는 방법을 보여 줍니다. 콘솔에 추적 정보를 기록 하는 콘솔 추적 수신기가 추가 됩니다.  
   
 ```xml  
 <configuration>  
@@ -84,6 +82,7 @@ ms.locfileid: "47231891"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [추적 스위치](../../../../../docs/framework/debug-trace-profile/trace-switches.md)
+## <a name="see-also"></a>참조
+
+- [추적 및 디버그 설정 스키마](index.md)
+- [추적 스위치](../../../debug-trace-profile/trace-switches.md)

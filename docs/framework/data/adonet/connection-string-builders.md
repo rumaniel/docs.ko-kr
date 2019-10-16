@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 1c65b0c2c9ae19aa008ecd8fb453d8e41b7c4167
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: afafe5d1eaddaef3b9f0069908b365e40ea4ed29
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43737505"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785688"
 ---
 # <a name="connection-string-builders"></a>연결 문자열 작성기
-이전 버전의 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]컴파일 시간 실행 시 잘못 된 키워드가 생성 되도록 값 발생 하지 않은 연결된 문자열을 사용 하 여 연결 문자열의 검사는 <xref:System.ArgumentException>합니다. [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자는 각각 다른 연결 문자열 키워드 구문을 지원하므로 수동으로 유효한 연결 문자열을 구성하는 것이 어렵습니다. 이 문제를 해결하기 위해 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0에는 각 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자에 사용할 수 있는 새로운 연결 문자열 작성기가 추가되었습니다. 각 데이터 공급자에는 <xref:System.Data.Common.DbConnectionStringBuilder>에서 상속되는 강력한 형식의 연결 문자열 작성기 클래스가 있습니다. 다음 표에는 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 데이터 공급자와 그와 관련된 연결 문자열 작성기 클래스가 나와 있습니다.  
+이전 버전의 ADO.NET에서는 연결 된 문자열 값이 있는 연결 문자열의 컴파일 타임 검사가 수행 되지 않으므로 런타임에 잘못 된 키워드에서을 (를) 생성 <xref:System.ArgumentException>했습니다. 각 .NET Framework 데이터 공급자는 연결 문자열 키워드에 대해 서로 다른 구문을 지원 합니다 .이 키워드는 수동으로 수행 하는 경우 유효한 연결 문자열을 구성 하기가 어렵습니다. 이 문제를 해결 하기 위해 ADO.NET 2.0에는 각 .NET Framework 데이터 공급자에 대 한 새로운 연결 문자열 작성기가 도입 되었습니다. 각 데이터 공급자에는 <xref:System.Data.Common.DbConnectionStringBuilder>에서 상속되는 강력한 형식의 연결 문자열 작성기 클래스가 있습니다. 다음 표에서는 .NET Framework 데이터 공급자와 연결 된 연결 문자열 작성기 클래스를 보여 줍니다.  
   
 |공급자|ConnectionStringBuilder 클래스|  
 |--------------|-----------------------------------|  
@@ -59,7 +59,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  연결 문자열 작성기의 오버로드된 생성자 중 하나는 <xref:System.String>을 인수로 사용하므로 작성기를 사용하면 부분 연결 문자열을 제공하여 이러한 사용자 입력을 통해 연결 문자열을 완성하는 것이 가능합니다. 이 부분 연결 문자열을 구성 파일에 저장한 후 런타임에 검색할 수 있습니다.  
   
 > [!NOTE]
->  <xref:System.Configuration> 네임스페이스를 사용하면 <xref:System.Web.Configuration.WebConfigurationManager>(웹 응용 프로그램의 경우) 및 <xref:System.Configuration.ConfigurationManager>(Windows 응용 프로그램의 경우)를 통해 구성 파일에 프로그래밍 방식으로 액세스할 수 있습니다. 연결 문자열 및 구성 파일을 사용 하 여 작업에 대 한 자세한 내용은 참조 하세요. [연결 문자열 및 구성 파일](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)합니다.  
+> <xref:System.Configuration> 네임스페이스를 사용하면 <xref:System.Web.Configuration.WebConfigurationManager>(웹 애플리케이션의 경우) 및 <xref:System.Configuration.ConfigurationManager>(Windows 애플리케이션의 경우)를 통해 구성 파일에 프로그래밍 방식으로 액세스할 수 있습니다. 연결 문자열 및 구성 파일을 사용 하는 방법에 대 한 자세한 내용은 [연결 문자열 및 구성 파일](connection-strings-and-configuration-files.md)을 참조 하세요.  
   
 ### <a name="example"></a>예제  
  이 예제에서는 구성 파일에서 부분 연결 문자열을 검색한 후 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.DataSource%2A>의 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserID%2A>, <xref:System.Data.SqlClient.SqlConnectionStringBuilder.Password%2A> 및 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 속성을 설정하여 완성하는 방법을 보여 줍니다. 구성 파일은 다음과 같이 정의됩니다.  
@@ -74,12 +74,13 @@ initial catalog="AdventureWorks;NewValue=Bad"
 ```  
   
 > [!NOTE]
->  코드를 실행하려면 프로젝트에서 `System.Configuration.dll`에 대한 참조를 설정해야 합니다.  
+> 코드를 실행하려면 프로젝트에서 `System.Configuration.dll`에 대한 참조를 설정해야 합니다.  
   
  [!code-csharp[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/CS/source.cs#1)]
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
-## <a name="see-also"></a>참고 항목  
- [연결 문자열](../../../../docs/framework/data/adonet/connection-strings.md)  
- [개인 정보 및 데이터 보안](../../../../docs/framework/data/adonet/privacy-and-data-security.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [연결 문자열](connection-strings.md)
+- [개인 정보 및 데이터 보안](privacy-and-data-security.md)
+- [ADO.NET 개요](ado-net-overview.md)

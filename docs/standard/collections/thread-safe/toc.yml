@@ -1,0 +1,26 @@
+items:
+- name: 스레드로부터 안전한 컬렉션
+  href: index.md
+  items:
+  - name: BlockingCollection 개요
+    href: blockingcollection-overview.md
+  - name: 스레드로부터 안전한 컬렉션 사용 시기
+    href: when-to-use-a-thread-safe-collection.md
+  - name: '방법: BlockingCollection에서 개별적으로 항목 추가 및 가져오기'
+    href: how-to-add-and-take-items.md
+  - name: '방법: ForEach를 사용하여 BlockingCollection의 항목 제거'
+    href: how-to-use-foreach-to-remove.md
+  - name: '방법: ConcurrentDictionary에서 항목 추가 및 제거'
+    href: how-to-add-and-remove-items.md
+  - name: '방법: 컬렉션에 경계 지정 및 차단 기능 추가'
+    href: how-to-add-bounding-and-blocking.md
+  - name: '방법: 파이프라인에서 차단 컬렉션 배열 사용'
+    href: how-to-use-arrays-of-blockingcollections.md
+  - name: '방법: ConcurrentBag을 사용하여 개체 풀 만들기'
+    href: how-to-create-an-object-pool.md
+ms.openlocfilehash: 6b17867548e1089eaa58d2c8a262fe4c6438948f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58470161"

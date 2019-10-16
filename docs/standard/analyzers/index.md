@@ -2,15 +2,15 @@
 title: Roslyn 기반 분석기 - .NET
 description: 문제를 찾고 해당 문제에 대한 수정 사항을 제안하는 Roslyn 기반 분석기에 대해 알아봅니다.
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: ec153b8fed08ef245a3a0f58970b4e3955dfacb5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003056"
 ---
 # <a name="the-roslyn-based-analyzers"></a>Roslyn 기반 분석기
 
@@ -27,11 +27,12 @@ Roslyn 기반 분석기에서는 잠재적 문제를 문제의 심각도에 따�
 Roslyn 기반 분석기는 프로젝트에서 NuGet 패키지로 설치합니다. 구성된 분석기와 각 분석기의 설정은 모든 개발자의 컴퓨터에서 해당 프로젝트에 대해 복원되고 실행됩니다.
 
 > [!NOTE]
-> Roslyn 기반 분석기의 사용자 환경은 이전 버전의 FxCop 및 보안 분석 도구와 같은 코드 분석 라이브러리와 다릅니다.  Roslyn 기반 분석기는 명시적으로 실행할 필요가 없습니다. Visual Studio의 “분석” 메뉴에서 “코드 분석 실행” 메뉴 항목을 사용할 필요가 없습니다. Roslyn 기반 분석기는 작업하는 과정에 비동기적으로 실행됩니다. 
+> Roslyn 기반 분석기의 사용자 환경은 이전 버전의 FxCop 및 보안 분석 도구와 같은 코드 분석 라이브러리와 다릅니다.  Roslyn 기반 분석기는 명시적으로 실행할 필요가 없습니다. Visual Studio의 “분석” 메뉴에서 “코드 분석 실행” 메뉴 항목을 사용할 필요가 없습니다. Roslyn 기반 분석기는 작업하는 과정에 비동기적으로 실행됩니다.
 
 ## <a name="more-information-on-specific-analyzers"></a>특정 분석기에 대한 자세한 정보
 
 이 섹션에서는 다음과 같은 분석기를 다룹니다.
 
-[API 분석기](api-analyzer.md): 이 분석기는 코드에서 잠재적인 호환성 위험이나 더 이상 사용되지 않는 API의 사용이 있는지 검사합니다.    
-[프레임워크 분석기](framework-analyzer.md): 이 분석기는 코드가 .NET Framework 응용 프로그램에 대한 지침을 따르는지 검사합니다. 이러한 규칙에는 여러 보안 기반 권장 사항이 포함됩니다.
+* [API 분석기](api-analyzer.md): 이 분석기는 코드에서 잠재적인 호환성 위험이나 더 이상 사용되지 않는 API의 사용이 있는지 검사합니다.
+* [프레임워크 분석기](framework-analyzer.md): 이 분석기는 코드가 .NET Framework 애플리케이션에 대한 지침을 따르는지 검사합니다. 이러한 규칙에는 여러 보안 기반 권장 사항이 포함됩니다.
+* [.NET 이식성 분석기](portability-analyzer.md): 이 분석기는 코드를 검사하여 애플리케이션이 iOS, Android 및 Mac용 .NET Core, .NET 표준, UWP 및 Xamarin을 비롯한 다른 .NET 구현 및 프로필과 호환되도록 하는 데 필요한 작업량을 확인합니다.

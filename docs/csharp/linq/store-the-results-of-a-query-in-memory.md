@@ -3,12 +3,12 @@ title: 쿼리 결과를 메모리에 저장
 description: 결과 저장 방법
 ms.date: 11/30/2016
 ms.assetid: 5b863961-1750-4cf9-9607-acea5054d15a
-ms.openlocfilehash: 98a300b2c11eb037ed4ce34caea2673a4e0f8e6b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 66a7a95c74db4062e76c54d4339ccb7343f44067
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43525232"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633561"
 ---
 # <a name="store-the-results-of-a-query-in-memory"></a>쿼리 결과를 메모리에 저장
 
@@ -24,7 +24,7 @@ ms.locfileid: "43525232"
 
  쿼리 결과를 저장하는 경우 다음 예제와 같이 반환된 컬렉션 개체를 새 변수에 할당하는 것이 좋습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 [!code-csharp[csProgGuideLINQ#25](~/samples/snippets/csharp/concepts/linq/how-to-store-the-results-of-a-query-in-memory_1.cs)]
 

@@ -13,16 +13,16 @@ helpviewer_keywords:
 ms.assetid: 52b32222-e185-4f42-91a7-eaca65c0ab6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 028f8b978a7809fa9ae4710ab85d7dc84e7b04fc
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: c231c946897772a6f02cce6eb2d3c4936b72a35e
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45744010"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54716041"
 ---
 # <a name="creating-threads-and-passing-data-at-start-time"></a>스레드 만들기 및 시작할 때 데이터 전달
 
-운영 체제 프로세스가 작성될 때 운영 체제에서는 원래 응용 프로그램 도메인을 포함하여 이 프로세스에서 코드를 실행하는 스레드를 삽입합니다. 이 시점부터, 운영 체제 스레드를 꼭 만들거나 삭제하지 않고도 응용 프로그램 도메인을 만들거나 삭제할 수 있습니다. 실행되는 코드가 관리 코드인 경우 현재 응용 프로그램 도메인에서 실행 중인 스레드에 대한 <xref:System.Threading.Thread> 개체는 <xref:System.Threading.Thread> 형식의 정적 <xref:System.Threading.Thread.CurrentThread%2A> 속성을 검색하여 얻을 수 있습니다. 이 항목에서는 스레드 만들기를 설명하고 스레드 프로시저에 데이터를 전달하기 위한 대체 방법을 설명합니다.  
+운영 체제 프로세스가 작성될 때 운영 체제에서는 원래 애플리케이션 도메인을 포함하여 이 프로세스에서 코드를 실행하는 스레드를 삽입합니다. 이 시점부터, 운영 체제 스레드를 꼭 만들거나 삭제하지 않고도 애플리케이션 도메인을 만들거나 삭제할 수 있습니다. 실행되는 코드가 관리 코드인 경우 현재 애플리케이션 도메인에서 실행 중인 스레드에 대한 <xref:System.Threading.Thread> 개체는 <xref:System.Threading.Thread> 형식의 정적 <xref:System.Threading.Thread.CurrentThread%2A> 속성을 검색하여 얻을 수 있습니다. 이 항목에서는 스레드 만들기를 설명하고 스레드 프로시저에 데이터를 전달하기 위한 대체 방법을 설명합니다.  
   
 ## <a name="creating-a-thread"></a>스레드 만들기
 
@@ -61,9 +61,9 @@ ms.locfileid: "45744010"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Threading.Thread>  
-- <xref:System.Threading.ThreadStart>  
-- <xref:System.Threading.ParameterizedThreadStart>  
-- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>  
-- [스레딩](index.md)  
+- <xref:System.Threading.Thread>
+- <xref:System.Threading.ThreadStart>
+- <xref:System.Threading.ParameterizedThreadStart>
+- <xref:System.Threading.Thread.Start%2A?displayProperty=nameWithType>
+- [스레딩](index.md)
 - [스레드 및 스레딩 사용](using-threads-and-threading.md)

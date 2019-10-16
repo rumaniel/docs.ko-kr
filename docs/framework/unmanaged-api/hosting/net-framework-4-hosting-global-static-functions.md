@@ -8,20 +8,21 @@ helpviewer_keywords:
 ms.assetid: 07a1a6e1-db73-4555-81df-bc4054c51492
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 019a17b38eb1cfccab4537d5f27b7625fdef1268
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6cb46d3684e36ca203b3ea5b58491150af4ffd58
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33441470"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490150"
 ---
 # <a name="net-framework-4-hosting-global-static-functions"></a>.NET Framework 4 호스팅 전역 정적 함수
-[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] MSCorEE.dll의 새로운 내보낸된 방법으로 하나의 소개: [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)합니다.  
+.NET Framework 4 MSCorEE.dll에 새 내보낸된 메서드를 제공합니다. [CLRCreateIntstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [CLRCreateInstance 함수](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md)  
- 세 가지 인터페이스 중 하나를 제공: [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md), [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), 또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)합니다.  
+ 세 가지 인터페이스 중 하나를 제공 합니다. [ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)하십시오 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md), 또는 [ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [호스팅 전역 정적 함수](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)  
- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>참고자료
+
+- [호스팅 전역 정적 함수](../../../../docs/framework/unmanaged-api/hosting/hosting-global-static-functions.md)
+- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

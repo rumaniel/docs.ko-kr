@@ -1,5 +1,6 @@
 ---
-title: into(C# 참조)
+title: into - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - into_CSharpKeyword
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - into keyword [C#]
 ms.assetid: 81ec62c1-f0b1-4755-8a31-959876e77f65
-ms.openlocfilehash: 6d46ae67dd84650172125c62ea70dc109671a89b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dc1e2ee004c21bb3d05155eec3e42ea80bf641a1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507845"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608643"
 ---
 # <a name="into-c-reference"></a>into(C# 참조)
 
@@ -30,6 +31,6 @@ ms.locfileid: "43507845"
 
 ## <a name="see-also"></a>참고 항목
 
-- [쿼리 키워드(LINQ)](query-keywords.md)  
-- [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)  
-- [group 절](group-clause.md)  
+- [쿼리 키워드(LINQ)](query-keywords.md)
+- [LINQ 쿼리 식](../../programming-guide/linq-query-expressions/index.md)
+- [group 절](group-clause.md)

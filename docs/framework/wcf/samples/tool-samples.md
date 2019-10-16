@@ -3,14 +3,14 @@ title: 도구 샘플
 ms.date: 03/30/2017
 ms.assetid: ccf90c64-31de-4a18-9208-28887735ce80
 ms.openlocfilehash: 87073aae7c7645e934490174f45ecca58b6a1868
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33500418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949996"
 ---
 # <a name="tool-samples"></a>도구 샘플
-이 섹션에는 Windows Communication Foundation (WCF) 도구가 들어 있습니다.  
+이 섹션에서는 Windows Communication Foundation (WCF) 도구를 포함합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ConfigurationCodeGenerator](../../../../docs/framework/wcf/samples/configurationcodegenerator.md)  

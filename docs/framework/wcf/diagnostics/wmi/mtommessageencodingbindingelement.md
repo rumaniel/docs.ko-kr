@@ -2,12 +2,12 @@
 title: MtomMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 4a9c6c3d-e561-4b2d-a693-7e84bdd3534a
-ms.openlocfilehash: 49a640a666131491366646d6d486d25a515e35bf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: aed65311d2b36a5dc764511de04e34c4bfb69d7b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963257"
 ---
 # <a name="mtommessageencodingbindingelement"></a>MtomMessageEncodingBindingElement
 MtomMessageEncodingBindingElement  
@@ -64,5 +64,6 @@ class MtomMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>

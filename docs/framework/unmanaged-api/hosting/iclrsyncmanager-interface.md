@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ede896cdb93217fcfba9d66ed7102bcc1ba762e9
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: d3e4affa363083ce55ac3764c26412a0d60ba3f6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50041832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763596"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 인터페이스
 요청 된 작업에 대 한 정보를 가져오려면 호스트가 동기화 구현에서 교착 상태를 감지 하는 데 사용할 수 있는 메서드를 정의 합니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "50041832"
 |[GetRWLockOwnerNext 메서드](iclrsyncmanager-getrwlockownernext-method.md)|현재 판독기-기록기 잠금을 기다리고 있는 다음 작업을 가져옵니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
@@ -44,8 +44,9 @@ ms.locfileid: "50041832"
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Threading.Thread>  
- [IHostSyncManager 인터페이스](ihostsyncmanager-interface.md)  
- [관리 되는 스레딩과 관리 되지 않는 스레딩](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))  
- [호스팅 인터페이스](hosting-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Threading.Thread>
+- [IHostSyncManager 인터페이스](ihostsyncmanager-interface.md)
+- [관리 되는 스레딩과 관리 되지 않는 스레딩](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))
+- [호스팅 인터페이스](hosting-interfaces.md)

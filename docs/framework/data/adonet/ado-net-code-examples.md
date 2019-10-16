@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c119657a-9ce6-4940-91e4-ac1d5f0d9584
-ms.openlocfilehash: a809dbc34d08fc864f6cfe8263489ab52ce41e35
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 86d5fc63168330502f81dfa464fcd2c04f014760
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183804"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785056"
 ---
 # <a name="adonet-code-examples"></a>ADO.NET 코드 예제
 이 항목에 나열된 코드에서는 다음과 같은 ADO.NET 기술을 사용하여 데이터베이스에서 데이터를 검색하는 방법을 보여 줍니다.
@@ -36,10 +36,10 @@ ms.locfileid: "50183804"
 - [LINQ to SQL](#linq-to-sql)
 
 ## <a name="adonet-data-provider-examples"></a>ADO.NET 데이터 공급자 예제
-다음에 나열된 코드에서는 ADO.NET 데이터 공급자를 사용하여 데이터베이스에서 데이터를 검색하는 방법을 보여 줍니다. 데이터는 `DataReader`에서 반환됩니다. 자세한 내용은 [DataReader를 사용 하 여 데이터 검색](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)합니다.
+다음에 나열된 코드에서는 ADO.NET 데이터 공급자를 사용하여 데이터베이스에서 데이터를 검색하는 방법을 보여 줍니다. 데이터는 `DataReader`에서 반환됩니다. 자세한 내용은 [DataReader를 사용 하 여 데이터 검색](retrieving-data-using-a-datareader.md)을 참조 하세요.
 
 ### <a name="sqlclient"></a>SqlClient
-이 예제의 코드에 연결할 수 있는지를 가정 합니다 `Northwind` Microsoft SQL server 예제 데이터베이스. 이 코드에서는 Products 테이블에서 행을 선택하는 <xref:System.Data.SqlClient.SqlCommand>를 만들고 <xref:System.Data.SqlClient.SqlParameter>를 추가하여 UnitPrice가 지정한 매개 변수 값(이 경우 5)보다 큰 행만 반환되도록 제한합니다. 합니다 <xref:System.Data.SqlClient.SqlConnection> 내부에서 열리면는 `using` 블록 리소스 닫히고 코드가 종료 될 때 삭제 되도록 합니다. 이 코드에서는 <xref:System.Data.SqlClient.SqlDataReader>를 사용하여 명령을 실행하고 결과를 콘솔 창에 표시합니다.
+이 예제의 코드는 Microsoft SQL Server에서 `Northwind` 예제 데이터베이스에 연결할 수 있다고 가정 합니다. 이 코드에서는 Products 테이블에서 행을 선택하는 <xref:System.Data.SqlClient.SqlCommand>를 만들고 <xref:System.Data.SqlClient.SqlParameter>를 추가하여 UnitPrice가 지정한 매개 변수 값(이 경우 5)보다 큰 행만 반환되도록 제한합니다. 는 <xref:System.Data.SqlClient.SqlConnection> 블록`using` 내에서 열리므로 코드가 종료 될 때 리소스가 닫히고 삭제 되도록 합니다. 이 코드에서는 <xref:System.Data.SqlClient.SqlDataReader>를 사용하여 명령을 실행하고 결과를 콘솔 창에 표시합니다.
 
  [!code-csharp[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/CS/source.cs#1)]
  [!code-vb[DataWorks SampleApp.SqlClient#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.SqlClient/VB/source.vb#1)]
@@ -51,7 +51,7 @@ ms.locfileid: "50183804"
  [!code-vb[DataWorks SampleApp.OleDb#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.OleDb/VB/source.vb#1)]
 
 ### <a name="odbc"></a>Odbc
-이 예제 코드에서는 Microsoft Access Northwind 샘플 데이터베이스에 연결할 수 있다고 가정합니다. 이 코드에서는 Products 테이블에서 행을 선택하는 <xref:System.Data.Odbc.OdbcCommand>를 만들고 <xref:System.Data.Odbc.OdbcParameter>를 추가하여 UnitPrice가 지정한 매개 변수 값(이 경우 5)보다 큰 행만 반환되도록 제한합니다. 합니다 <xref:System.Data.Odbc.OdbcConnection> 내부에서 열리면는 `using` 블록 리소스 닫히고 코드가 종료 될 때 삭제 되도록 합니다. 이 코드에서는 <xref:System.Data.Odbc.OdbcDataReader>를 사용하여 명령을 실행하고 결과를 콘솔 창에 표시합니다.
+이 예제 코드에서는 Microsoft Access Northwind 샘플 데이터베이스에 연결할 수 있다고 가정합니다. 이 코드에서는 Products 테이블에서 행을 선택하는 <xref:System.Data.Odbc.OdbcCommand>를 만들고 <xref:System.Data.Odbc.OdbcParameter>를 추가하여 UnitPrice가 지정한 매개 변수 값(이 경우 5)보다 큰 행만 반환되도록 제한합니다. 는 <xref:System.Data.Odbc.OdbcConnection> 블록`using` 내에서 열리므로 코드가 종료 될 때 리소스가 닫히고 삭제 되도록 합니다. 이 코드에서는 <xref:System.Data.Odbc.OdbcDataReader>를 사용하여 명령을 실행하고 결과를 콘솔 창에 표시합니다.
 
 [!code-csharp[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/CS/source.cs#1)] 
 [!code-vb[DataWorks SampleApp.Odbc#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Odbc/VB/source.vb#1)] 
@@ -63,10 +63,10 @@ ms.locfileid: "50183804"
  [!code-vb[DataWorks SampleApp.Oracle#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SampleApp.Oracle/VB/source.vb#1)]
 
 ## <a name="entity-framework-examples"></a>Entity Framework 예제
-다음에 나열된 코드에서는 EDM(엔터티 데이터 모델)의 엔터티를 쿼리하여 데이터 소스에서 데이터를 검색하는 방법을 보여 줍니다. 이러한 예에서 사용 된 [Northwind 모델](https://msdn.microsoft.com/74521f8c-e974-48cb-8858-c08deff52638)합니다. 자세한 내용은 [Entity Framework 개요](../../../../docs/framework/data/adonet/ef/overview.md)합니다.
+다음에 나열된 코드에서는 EDM(엔터티 데이터 모델)의 엔터티를 쿼리하여 데이터 소스에서 데이터를 검색하는 방법을 보여 줍니다. 이 예에서는 Northwind 샘플 데이터베이스를 기반으로 하는 모델을 사용 합니다. Entity Framework에 대 한 자세한 내용은 [Entity Framework 개요](./ef/overview.md)를 참조 하세요.
 
 ### <a name="linq-to-entities"></a>LINQ to Entities
-이 예제 코드에서는 LINQ 쿼리를 사용하여 CategoryID와 CategoryName 속성만 포함된 익명 형식으로 프로젝션된 Categories 개체로 데이터를 반환합니다. 자세한 내용은 [LINQ to Entities 개요](../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)합니다.
+이 예제 코드에서는 LINQ 쿼리를 사용하여 CategoryID와 CategoryName 속성만 포함된 익명 형식으로 프로젝션된 Categories 개체로 데이터를 반환합니다. 자세한 내용은 [LINQ to Entities 개요](./ef/language-reference/linq-to-entities.md)를 참조 하세요.
 
 ```csharp
 using System;
@@ -137,7 +137,7 @@ End Class
 ```
 
 ### <a name="typed-objectquery"></a>형식화된 ObjectQuery
-이 예제 코드에서는 <xref:System.Data.Objects.ObjectQuery%601>을 사용하여 데이터를 Categories 개체로 반환합니다. 자세한 내용은 [개체 쿼리](https://msdn.microsoft.com/0768033c-876f-471d-85d5-264884349276)합니다.
+이 예제 코드에서는 <xref:System.Data.Objects.ObjectQuery%601>을 사용하여 데이터를 Categories 개체로 반환합니다. 자세한 내용은 [개체 쿼리](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))합니다.
 
 ```csharp
 using System;
@@ -187,7 +187,7 @@ End Class
 ```
 
 ### <a name="entityclient"></a>EntityClient
-이 예제 코드에서는 <xref:System.Data.EntityClient.EntityCommand>를 사용하여 Entity SQL 쿼리를 실행합니다. 이 쿼리는 Categories 엔터티 형식의 인스턴스를 나타내는 레코드 목록을 반환합니다. <xref:System.Data.EntityClient.EntityDataReader>를 사용하여 결과 집합의 데이터 레코드에 액세스합니다. 자세한 내용은 [Entity Framework 용 EntityClient 공급자](../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)합니다.
+이 예제 코드에서는 <xref:System.Data.EntityClient.EntityCommand>를 사용하여 Entity SQL 쿼리를 실행합니다. 이 쿼리는 Categories 엔터티 형식의 인스턴스를 나타내는 레코드 목록을 반환합니다. <xref:System.Data.EntityClient.EntityDataReader>를 사용하여 결과 집합의 데이터 레코드에 액세스합니다. 자세한 내용은 [Entity Framework에 대 한 EntityClient 공급자](./ef/entityclient-provider-for-the-entity-framework.md)를 참조 하세요.
 
 ```csharp
 using System;
@@ -271,7 +271,7 @@ End Class
 ```
 
 ## <a name="linq-to-sql"></a>LINQ to SQL
-이 예제 코드에서는 LINQ 쿼리를 사용하여 CategoryID와 CategoryName 속성만 포함된 익명 형식으로 프로젝션된 Categories 개체로 데이터를 반환합니다. 이 예제는 Northwind 데이터 컨텍스트를 기반으로 합니다. 자세한 내용은 [시작](../../../../docs/framework/data/adonet/sql/linq/getting-started.md)을 참조하십시오.
+이 예제 코드에서는 LINQ 쿼리를 사용하여 CategoryID와 CategoryName 속성만 포함된 익명 형식으로 프로젝션된 Categories 개체로 데이터를 반환합니다. 이 예제는 Northwind 데이터 컨텍스트를 기반으로 합니다. 자세한 내용은 [시작](./sql/linq/getting-started.md)을 참조하십시오.
 
 ```csharp
 using System;
@@ -344,9 +344,9 @@ End Class
 ```
 
 ## <a name="see-also"></a>참고자료
- [ADO.NET 개요](../../../../docs/framework/data/adonet/ado-net-overview.md)  
- [ADO.NET에서 데이터 검색 및 수정](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
- [데이터 응용 프로그램 만들기](https://msdn.microsoft.com/library/ab334d5f-4f49-4346-bce0-3325d6130b3e)  
- [엔터티 데이터 모델 (Entity Framework 작업) 쿼리](https://msdn.microsoft.com/187f1caa-e4d3-4e31-bd99-5d5c2b329c77)  
- [방법: 익명 형식 개체를 반환 하는 쿼리 실행](https://msdn.microsoft.com/3b264025-e911-4d73-90ce-992d2b9d189d)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)  
+
+- [ADO.NET 개요](ado-net-overview.md)
+- [ADO.NET에서 데이터 검색 및 수정](retrieving-and-modifying-data.md)
+- [데이터 응용 프로그램 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/h0y4a0f6(v=vs.120))
+- [엔터티 데이터 모델 쿼리 (Entity Framework 작업)](https://docs.microsoft.com/previous-versions/bb738455(v=vs.90))
+- [방법: 익명 형식 개체를 반환 하는 쿼리 실행](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738512(v=vs.100))

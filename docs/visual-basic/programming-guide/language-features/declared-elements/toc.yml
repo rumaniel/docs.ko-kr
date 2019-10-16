@@ -1,0 +1,35 @@
+- name: 선언 요소
+  href: index.md
+  items:
+    - name: Declared Element Names
+      href: declared-element-names.md
+    - name: 선언 요소의 특징
+      href: declared-element-characteristics.md
+      items:
+        - name: 수명
+          href: lifetime.md
+        - name: 범위
+          href: scope.md
+          items:
+            - name: '방법: 변수의 범위 제어'
+              href: how-to-control-the-scope-of-a-variable.md
+            - name: 형식 승격
+              href: type-promotion.md
+        - name: 액세스 수준
+          href: access-levels.md
+          items:
+            - name: '방법: 변수의 사용 가능성 제어'
+              href: how-to-control-the-availability-of-a-variable.md
+        - name: References to Declared Elements
+          href: references-to-declared-elements.md
+        - name: 섀도잉
+          href: shadowing.md
+          items:
+            - name: 섀도잉과 재정의 간의 차이점
+              href: differences-between-shadowing-and-overriding.md
+            - name: '방법: 사용자 변수와 이름이 같은 변수 숨기기'
+              href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
+            - name: '방법: 상속된 변수 숨기기'
+              href: how-to-hide-an-inherited-variable.md
+            - name: '방법: 파생 클래스에 의해 숨겨진 변수에 액세스'
+              href: how-to-access-a-variable-hidden-by-a-derived-class.md

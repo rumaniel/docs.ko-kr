@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74cb2c7d1f79d23e1331cc7192ba2d6acfd9835c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 948e97064d12dc5b2044faf35aa374e5ba5f2592
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423665"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764789"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager 함수
 프로세스 및 런타임 열거형의 원격 대상에 연결할 전송 관리자를 초기화합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT InitDbgTransportManager ();  
 ```  
   
@@ -45,7 +45,7 @@ HRESULT InitDbgTransportManager ();
  기타 실패  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CoreClrRemoteDebuggingInterfaces.h  
   

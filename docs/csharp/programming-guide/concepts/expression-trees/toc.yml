@@ -1,0 +1,13 @@
+- name: 식 트리
+  href: index.md
+  items:
+    - name: '방법: 식 트리 실행'
+      href: how-to-execute-expression-trees.md
+    - name: '방법: 식 트리 수정'
+      href: how-to-modify-expression-trees.md
+    - name: '방법: 식 트리를 사용하여 동적 쿼리 빌드'
+      href: how-to-use-expression-trees-to-build-dynamic-queries.md
+    - name: Visual Studio에서 식 트리 디버그
+      href: debugging-expression-trees-in-visual-studio.md
+    - name: DebugView 구문
+      href: debugview-syntax.md

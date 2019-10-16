@@ -7,22 +7,21 @@ helpviewer_keywords:
 - Panel control [WPF], how-to topics
 - controls [WPF], Panel
 ms.assetid: 28d8faf2-490c-4e17-a447-df25a66f6679
-ms.openlocfilehash: d8ead1a799f1bd7524d171beb3e262baeb4b5fbe
-ms.sourcegitcommit: dfb2a100cfb4d3902c042f17b3204f49bc7635e7
+ms.openlocfilehash: 45a5b67edeea46a29e5c2fc3aea86d34fa4f5e7a
+ms.sourcegitcommit: 83ecdf731dc1920bca31f017b1556c917aafd7a0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46493534"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860067"
 ---
 # <a name="panel-how-to-topics"></a>Panel 방법 항목
-이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.Panel> 요소 및 관련 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]합니다.  
+이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.Panel> 요소 및 관련된 Api.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법: layouttransform 속성을 요소에 적용](https://msdn.microsoft.com/library/8221db67-d99f-4783-b65e-a6c5a52c03ab)  
- [사용자 지정 패널 요소 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-custom-panel-element.md)  
- [Panel의 OnRender 메서드 재정의](../../../../docs/framework/wpf/controls/how-to-override-the-panel-onrender-method.md)  
- [요소의 높이 속성 설정](../../../../docs/framework/wpf/controls/how-to-set-the-height-properties-of-an-element.md)  
- [요소의 너비 속성 설정](../../../../docs/framework/wpf/controls/how-to-set-the-width-properties-of-an-element.md)  
+ [사용자 지정 패널 요소 만들기](how-to-create-a-custom-panel-element.md)  
+ [Panel의 OnRender 메서드 재정의](how-to-override-the-panel-onrender-method.md)  
+ [요소의 높이 속성 설정](how-to-set-the-height-properties-of-an-element.md)  
+ [요소의 너비 속성 설정](how-to-set-the-width-properties-of-an-element.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Panel>  
@@ -40,8 +39,8 @@ ms.locfileid: "46493534"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>관련 단원  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)  
+ [레이아웃](../advanced/layout.md)  
   
- [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 개요](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 개요](scrollviewer-overview.md)

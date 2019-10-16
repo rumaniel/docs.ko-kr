@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
-ms.openlocfilehash: a488432dadcfb700c62fd7f847cb31c8ed95aba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551062"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932580"
 ---
 # <a name="listview-overviews"></a>ListView 개요
-이 섹션의 항목 사용 하는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.ListView> 제어 합니다.  
+이 섹션의에서 항목에서는 사용 하는 방법을 보여 줍니다.는 <xref:System.Windows.Controls.ListView> 제어 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [ListView 개요](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView 개요](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [GridView 열 머리글 스타일 및 템플릿 개요](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+ [ListView 개요](listview-overview.md)  
+ [GridView 개요](gridview-overview.md)  
+ [GridView 열 머리글 스타일 및 템플릿 개요](gridview-column-header-styles-and-templates-overview.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.ListView>  
@@ -28,4 +28,4 @@ ms.locfileid: "33551062"
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>관련 단원  
- [방법 항목](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [방법 항목](listview-how-to-topics.md)

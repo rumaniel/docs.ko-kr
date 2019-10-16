@@ -3,12 +3,12 @@ title: 식 트리 설명
 description: 식 트리에 대해 알아보고 외부 실행을 위한 알고리즘 변환 및 실행 전 코드 검사에 식 트리가 어떻게 유용한지 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 97cba9e5ec388729d23fb2689dfc1842a42af9b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c5d4b2ad54fab547567d430f11a31542a11d03f3
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33216871"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70104801"
 ---
 # <a name="expression-trees-explained"></a>식 트리 설명
 
@@ -16,12 +16,14 @@ ms.locfileid: "33216871"
 
 식 트리는 코드를 정의하는 데이터 구조이며, 컴파일러에서 코드를 분석하고 컴파일된 출력을 생성하는 데 사용하는 것과 동일한 구조를 기반으로 합니다. 이 자습서를 읽다 보면 식 트리와 Roslyn API에서 [Analyzers and CodeFixes](https://github.com/dotnet/roslyn-analyzers)(분석기 및 CodeFix)를 빌드하는 데 사용된 형식 사이에 상당히 많은 유사성이 있음을 확인할 수 있습니다.
 분석기 및 CodeFix는 코드에 대해 정적 분석을 수행하고 개발자에게 잠재적 해결 방법을 제안할 수 있는 NuGet 패키지입니다. 개념이 유사하며 최종 결과는 의미 있는 방식으로 소스 코드를 검사할 수 있는 데이터 구조입니다. 그러나 식 트리는 Roslyn API와 완전히 다른 클래스 및 API 집합을 기반으로 합니다.
-    
+
 간단한 예제를 살펴보겠습니다.
 코드 줄은 다음과 같습니다.
+
 ```csharp
 var sum = 1 + 2;
 ```
+
 이 코드를 식 트리로 분석하려는 경우 트리에 여러 개의 노드가 포함됩니다.
 가장 바깥쪽 노드는 할당을 사용하는 변수 선언문(`var sum = 1 + 2;`)입니다. 이 가장 바깥쪽 노드에는 변수 선언, 대입 연산자 및 등호의 오른쪽을 나타내는 식과 같은 여러 개의 자식 노드가 포함됩니다. 이 식은 더하기 연산을 나타내는 식, 더하기의 왼쪽과 오른쪽 피연산자로 다시 구분됩니다.
 
@@ -31,16 +33,17 @@ var sum = 1 + 2;
 시각적으로 전체 문은 트리입니다. 루트 노드에서 시작하여 트리의 각 노드로 이동하면서 문을 구성하는 코드를 확인할 수 있습니다.
 
 - 할당을 사용하는 변수 선언문(`var sum = 1 + 2;`)
-    * 암시적 변수 형식 선언(`var sum`)
-        - 암시적 var 키워드(`var`)
-        - 변수 이름 선언(`sum`)
-    * 대입 연산자(`=`)
-    * 이진 더하기 식(`1 + 2`)
-        - 왼쪽 피연산자(`1`)
-        - 더하기 연산자(`+`)
-        - 오른쪽 피연산자(`2`)
+  - 암시적 변수 형식 선언(`var sum`)
+    - 암시적 var 키워드(`var`)
+    - 변수 이름 선언(`sum`)
+  - 대입 연산자(`=`)
+  - 이진 더하기 식(`1 + 2`)
+    - 왼쪽 피연산자(`1`)
+    - 더하기 연산자(`+`)
+    - 오른쪽 피연산자(`2`)
 
 다음 코드는 복잡해 보이지만 매우 강력합니다. 동일한 프로세스에 따라 훨씬 더 복잡한 식을 분해할 수 있습니다. 다음 식을 살펴보세요.
+
 ```csharp
 var finalAnswer = this.SecretSauceFunction(
     currentState.createInterimResult(), currentState.createSecondValue(1, 2),
@@ -64,6 +67,6 @@ var finalAnswer = this.SecretSauceFunction(
 
 식 트리에 대한 API에서는 거의 모든 유효한 코드 구문을 나타내는 트리를 만들 수 있습니다. 그러나 최대한 간단하게 유지하기 위해 식 트리에는 일부 C# 관용구를 만들 수 없습니다. 한 가지 예는 비동기 식(`async` 및 `await` 키워드 사용)입니다. 비동기 알고리즘이 필요한 경우 컴파일러 지원을 사용하기 보다는 `Task` 개체를 직접 조작해야 합니다. 또 다른 예로 루프 만들기가 있습니다. 일반적으로 `for`, `foreach`, `while` 또는 `do` 루프를 사용하여 만듭니다. [이 시리즈의 뒷부분](expression-trees-building.md)에서 살펴보겠지만 식 트리에 대한 API는 루프 반복을 제어하는 `break` 및 `continue` 식과 함께 단일 루프 식을 지원합니다.
 
-단, 식 트리는 수정할 수 없습니다.  식 트리는 변경할 수 없는 데이터 구조입니다. 식 트리를 변경하려면 원하는 변경 사항을 포함하여 원본의 복사본인 새 트리를 만들어야 합니다. 
+단, 식 트리는 수정할 수 없습니다.  식 트리는 변경할 수 없는 데이터 구조입니다. 식 트리를 변경하려면 원하는 변경 사항을 포함하여 원본의 복사본인 새 트리를 만들어야 합니다.
 
 [다음 -- 식 트리를 지원하는 프레임워크 형식](expression-classes.md)

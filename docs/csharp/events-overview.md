@@ -3,12 +3,12 @@ title: 이벤트 소개
 description: 이 개요에서는 .NET Core의 이벤트와 이벤트에 대한 언어 디자인 목표를 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45747097"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051935"
 ---
 # <a name="introduction-to-events"></a>이벤트 소개
 
@@ -65,7 +65,8 @@ Progress?.Invoke(this, new FileListArgs(file));
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += onProgress;
+
+fileLister.Progress += onProgress;
 ```
 
 위에 표시된 대로 처리기 메서드는 일반적으로 접두사 'On'과 그다음에 오는 이벤트 이름입니다.
@@ -73,7 +74,7 @@ lister.Progress += onProgress;
 `-=` 연산자를 사용하여 구독 취소합니다.
 
 ```csharp
-lister.Progress -= onProgress;
+fileLister.Progress -= onProgress;
 ```
 
 이벤트 처리기를 나타내는 식에 대해 지역 변수를 선언했습니다. 따라서 구독 취소하면 처리기가 제거됩니다.

@@ -1,28 +1,29 @@
 ---
-title: 활성화를 위한 &lt;diagnostics&gt;
+title: <diagnostics>활성화
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: 4e5332eed87ded51cebcd614f45cbc8e80e570fb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 33b2cd4c5ae1b4076892a61aa7e2b927efa1ddc1
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747933"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400404"
 ---
-# <a name="ltdiagnosticsgt-for-activation"></a>활성화를 위한 &lt;diagnostics&gt;
-Windows Communication Foundation (WCF) 리스너의 진단 기능을 구성합니다.  
+# <a name="diagnostics-for-activation"></a>\<정품 인증을 위한 진단 >
+WCF (Windows Communication Foundation) 수신기의 진단 기능을 구성 합니다.  
   
- \<system.serviceModel.activation>  
-\<진단 >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<진단 >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<configuration>  
-   <system.serviceModel.activation>  
-       <diagnostics performanceCountersEnabled="Boolean" />  
-   </system.serviceModel.activation>  
-</configuration>  
+<configuration>
+  <system.serviceModel.activation>
+    <diagnostics performanceCountersEnabled="Boolean" />
+  </system.serviceModel.activation>
+</configuration>
 ```  
   
 ## <a name="type"></a>형식  
@@ -44,7 +45,8 @@ Windows Communication Foundation (WCF) 리스너의 진단 기능을 구성합�
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|수신기 프로세스 SMSvcHost.exe에 대한 구성 설정을 포함합니다.|  
+|[\<system.serviceModel.activation>](system-servicemodel-activation.md)|수신기 프로세스 SMSvcHost.exe에 대한 구성 설정을 포함합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Activation.Configuration.DiagnosticSection>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Activation.Configuration.DiagnosticSection>

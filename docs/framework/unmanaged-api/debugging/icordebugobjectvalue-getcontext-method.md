@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 61e8a8d1a923a52b678771f79122e5ab36a99706
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4ad5ce0296dde073b58b3ea9986cae05c6699dc9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415318"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756944"
 ---
 # <a name="icordebugobjectvaluegetcontext-method"></a>ICorDebugObjectValue::GetContext 메서드
 `GetContext` 이 버전의.NET Framework에서 구현 되지 않았습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetContext (  
     [out] ICorDebugContext   **ppContext  
 );  
@@ -38,6 +38,4 @@ HRESULT GetContext (
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorDebug.idl, CorDebug.h  
   
-## <a name="see-also"></a>참고 항목  
-    
- 
+## <a name="see-also"></a>참고자료

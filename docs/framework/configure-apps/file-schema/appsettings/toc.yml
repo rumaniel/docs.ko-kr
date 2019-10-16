@@ -1,0 +1,12 @@
+- name: 앱 설정 스키마
+  href: index.md
+  items:
+    - name: <configuration>에 대한 <appSettings> 요소
+      href: appsettings-element-for-configuration.md
+      items:
+        - name: <add> 요소
+          href: add-element-for-appsettings.md
+        - name: <clear> 요소
+          href: clear-element-for-appsettings.md
+        - name: <remove> 요소
+          href: remove-element-for-appsettings.md

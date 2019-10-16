@@ -1,0 +1,10 @@
+- name: 시작 설정 스키마
+  href: index.md
+  items:
+    - name: <startup> 요소
+      href: startup-element.md
+      items:
+        - name: <requiredRuntime> 요소
+          href: requiredruntime-element.md
+        - name: <supportedRuntime> 요소
+          href: supportedruntime-element.md

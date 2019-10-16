@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99770573-c815-4428-a38c-e4335c8bd7ce
-ms.openlocfilehash: f435136bb08876b759087b9cdd258f6ae7881be5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fb68487746a7dc9cec1d1473b445bccc7b2b23c2
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191118"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424871"
 ---
 # <a name="message-security-with-a-certificate-client"></a>인증서 클라이언트를 사용하는 메시지 보안
-다음 시나리오에서는 메시지 보안 모드를 사용 하 여 보안 서비스를 Windows Communication Foundation (WCF) 클라이언트를 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다. 자세한 내용은 [분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)합니다.  
+다음 시나리오에서는 메시지 보안 모드를 사용 하 여 보안 서비스를 Windows Communication Foundation (WCF) 클라이언트를 보여 줍니다. 클라이언트 및 서비스는 인증서를 사용하여 인증됩니다. 자세한 내용은 [분산 응용 프로그램 보안](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)합니다.
+
+ ![인증서를 사용 하 여 클라이언트를 보여 주는 스크린샷.](./media/message-security-with-a-certificate-client/client-with-certificate.gif)  
   
  샘플 응용 프로그램을 참조 하세요 [메시지 보안 인증서](../../../../docs/framework/wcf/samples/message-security-certificate.md)합니다.  
-  
- ![인증서를 사용 하 여 클라이언트](../../../../docs/framework/wcf/feature-details/media/clientwithcertificate.gif "ClientWithCertificate")  
-  
+
 |특성|설명|  
 |--------------------|-----------------|  
 |보안 모드|메시지|  
@@ -33,9 +33,9 @@ ms.locfileid: "50191118"
 ## <a name="service"></a>서비스  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
   
--   구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
+- 구성 없이 코드를 사용하여 독립 실행형 서비스를 만듭니다.  
   
--   제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
+- 제공된 구성을 사용하여 서비스를 만들지만 엔드포인트를 정의하지 않습니다.  
   
 ### <a name="code"></a>코드  
  다음 코드에서는 안전한 컨텍스트를 설정하기 위해 메시지 보안을 사용하는 서비스 엔드포인트를 만드는 방법을 보여 줍니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "50191118"
                name="ServiceModel.Calculator">  
         <endpoint address="http://localhost/Calculator"   
                   binding="wsHttpBinding"  
-                  bindingConfiguration="MessageAndCerficiateClient"   
+                  bindingConfiguration="MessageAndCertificateClient"   
                   name="SecuredByClientCertificate"  
                   contract="ServiceModel.ICalculator" />  
       </service>  
@@ -87,9 +87,9 @@ ms.locfileid: "50191118"
 ## <a name="client"></a>클라이언트  
  다음 코드와 구성은 독립적으로 실행되어야 합니다. 다음 작업 중 하나를 수행합니다.  
   
--   이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
+- 이 코드와 클라이언트 코드를 사용하여 독립 실행형 클라이언트를 만듭니다.  
   
--   엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들면 다음과 같습니다.  
+- 엔드포인트 주소를 정의하지 않는 클라이언트를 만듭니다. 대신 구성 이름을 인수로 사용하는 클라이언트 생성자를 사용합니다. 예를 들어:  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
@@ -143,8 +143,9 @@ ms.locfileid: "50191118"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)  
- [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)  
- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a>참고자료
+
+- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [서비스 ID 및 인증](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)
+- [인증서 작업](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
+- [Windows Server appfabric 보안 모델](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

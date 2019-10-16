@@ -2,33 +2,33 @@
 title: Token Authenticator
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: 198994acb322ece374ba0e04bc4d15cb2754f995
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a8a8713cd35e73b5126dadd7e0e17a3f8304188b
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582647"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70045453"
 ---
 # <a name="token-authenticator"></a>Token Authenticator
-이 샘플에서는 사용자 지정 토큰 인증자를 구현하는 방법을 보여 줍니다. Windows Communication Foundation (WCF)에서 토큰 인증자를 자체 일관성을 토큰과 연결 된 id를 인증 확인 메시지와 함께 사용 되는 토큰의 유효성 검사에 사용 됩니다.
+이 샘플에서는 사용자 지정 토큰 인증자를 구현하는 방법을 보여 줍니다. WCF (Windows Communication Foundation)의 토큰 인증자는 메시지에 사용 되는 토큰의 유효성을 검사 하 고, 자체 일관성이 있는지 확인 하 고, 토큰과 연결 된 id를 인증 하는 데 사용 됩니다.
 
  사용자 지정 토큰 인증자는 다음과 같은 여러 경우에 유용합니다.
 
--   토큰과 연관된 기본 인증 메커니즘을 재정의하려는 경우
+- 토큰과 연관된 기본 인증 메커니즘을 재정의하려는 경우
 
--   사용자 지정 토큰을 빌드하고 있는 경우
+- 사용자 지정 토큰을 빌드하고 있는 경우
 
  이 샘플은 다음을 보여 줍니다.
 
--   클라이언트에서 사용자 이름/암호 쌍을 사용하여 인증하는 방법.
+- 클라이언트에서 사용자 이름/암호 쌍을 사용하여 인증하는 방법.
 
--   서버에서 사용자 지정 토큰 인증자를 사용하여 클라이언트 자격 증명의 유효성을 검사하는 방법
+- 서버에서 사용자 지정 토큰 인증자를 사용하여 클라이언트 자격 증명의 유효성을 검사하는 방법
 
--   하는 방법을 사용자 지정 토큰 인증자를 사용 하 여 WCF 서비스 코드를 연결 합니다.
+- WCF 서비스 코드가 사용자 지정 토큰 인증자와 연결 되는 방식입니다.
 
--   서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
+- 서버의 X.509 인증서를 사용하여 서버를 인증하는 방법
 
- 이 샘플에는 사용자 지정 토큰 인증 프로세스 후 WCF에서 액세스할 수 있는 호출자의 id가 하는 방법을 보여 줍니다.
+ 또한이 샘플에서는 사용자 지정 토큰 인증 프로세스 후 WCF에서 호출자의 id에 액세스할 수 있는 방법을 보여 줍니다.
 
  서비스에서는 서비스와의 통신에 사용할 수 있는 단일 엔드포인트를 노출하며, 이 엔드포인트는 App.config 구성 파일을 사용하여 정의합니다. 엔드포인트는 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 `wsHttpBinding`의 기본 모드인 message로 설정된 보안 모드가 있는 표준 `wsHttpBinding`을 사용하여 구성됩니다. 이 샘플에서는 클라이언트 사용자 이름 인증을 사용하도록 표준 `wsHttpBinding`를 설정합니다. 또한 서비스는 `serviceCredentials` 동작을 사용하여 서비스 인증서를 구성합니다. `securityCredentials` 동작을 통해 서비스 인증서를 지정할 수 있습니다. 서비스 인증서는 클라이언트에서 서비스를 인증하고 메시지 보호를 제공하는 데 사용됩니다. 다음 구성에서는 뒤에 나오는 설치 지침에 설명된 대로 샘플 설치 중에 설치되는 localhost 인증서를 참조합니다.
 
@@ -121,7 +121,7 @@ static void Main()
 ## <a name="custom-token-authenticator"></a>사용자 지정 토큰 인증자
  다음 단계에 따라 사용자 지정 토큰 인증자를 만듭니다.
 
-1.  사용자 지정 토큰 인증자를 작성합니다.
+1. 사용자 지정 토큰 인증자를 작성합니다.
 
      샘플에서는 사용자 이름에 유효한 전자 메일 형식이 있는지 유효성을 검사하는 사용자 지정 토큰 인증자를 구현합니다. <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator>가 파생됩니다. 이 클래스에서 가장 중요한 메서드는 <xref:System.IdentityModel.Selectors.UserNameSecurityTokenAuthenticator.ValidateUserNamePasswordCore%28System.String%2CSystem.String%29>입니다. 이 메서드에서 인증자는 사용자 이름 형식의 유효성을 검사하고 호스트 이름이 악의적인 도메인의 것이 아닌지 확인합니다. 두 조건을 모두 충족할 경우 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 인스턴스의 읽기 전용 컬렉션이 반환되며 이 컬렉션은 사용자 이름 토큰에 저장된 정보를 나타내는 클레임을 제공하는 데 사용됩니다.
 
@@ -140,7 +140,7 @@ static void Main()
     }
     ```
 
-2.  사용자 지정 토큰 인증자에 의해 반환되는 권한 부여 정책을 제공합니다.
+2. 사용자 지정 토큰 인증자에 의해 반환되는 권한 부여 정책을 제공합니다.
 
      이 샘플에서는 생성자를 통해 전달된 클레임 및 ID 집합을 반환하는 <xref:System.IdentityModel.Policy.IAuthorizationPolicy>라는 `UnconditionalPolicy`의 고유한 구현을 제공합니다.
 
@@ -210,7 +210,7 @@ static void Main()
     }
     ```
 
-3.  사용자 지정 보안 토큰 관리자를 작성합니다.
+3. 사용자 지정 보안 토큰 관리자를 작성합니다.
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager>는 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 메서드를 통해 전달되는 특정 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 개체에 대한 `CreateSecurityTokenAuthenticator`를 만드는 데 사용됩니다. 또한 보안 토큰 관리자는 토큰 공급자와 토큰 serializer를 만드는 데 사용되지만 이 샘플에서는 설명하지 않습니다. 이 샘플에서 사용자 지정 보안 토큰 관리자는 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 클래스에서 상속되며 `CreateSecurityTokenAuthenticator` 메서드를 재정의하여 전달된 토큰 요구 사항에서 사용자 이름 인증자가 요청됨을 나타낼 때 사용자 지정 사용자 이름 토큰 인증자를 반환합니다.
 
@@ -240,7 +240,7 @@ static void Main()
     }
     ```
 
-4.  사용자 지정 서비스 자격 증명을 작성합니다.
+4. 사용자 지정 서비스 자격 증명을 작성합니다.
 
      서비스 자격 증명 클래스는 서비스에 대해 구성된 자격 증명을 나타내는 데 사용되며 토큰 인증자, 토큰 공급자 및 토큰 serializer를 가져오는 데 사용되는 보안 토큰 관리자를 만듭니다.
 
@@ -266,7 +266,7 @@ static void Main()
     }
     ```
 
-5.  사용자 지정 서비스 자격 증명을 사용하도록 서비스를 구성합니다.
+5. 사용자 지정 서비스 자격 증명을 사용하도록 서비스를 구성합니다.
 
      서비스에서 사용자 지정 서비스 자격 증명을 사용할 수 있도록 여기서는 이미 기본 서비스 자격 증명에 미리 구성된 서비스 인증서를 캡처한 후 기본 서비스 자격 증명 클래스를 삭제합니다. 그런 다음 미리 구성된 서비스 인증서를 사용하도록 새 서비스 자격 증명 인스턴스를 구성하고 이 서비스 자격 증명 인스턴스를 서비스 동작에 추가합니다.
 
@@ -297,7 +297,7 @@ static void DisplayIdentityInformation()
 
  다음 부분에는 적절한 구성에서 실행할 수 있게 배치 파일을 수정하는 데에 도움이 되는 여러 섹션의 간략한 개요가 소개되어 있습니다.
 
--   서버 인증서 만들기
+- 서버 인증서 만들기
 
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다. `%SERVER_NAME%`변수는 서버 이름을 지정합니다. 이 변수를 변경하여 고유의 서버 이름을 지정합니다. 이 배치 파일에서의 기본값은 localhost입니다.
 
@@ -311,7 +311,7 @@ static void DisplayIdentityInformation()
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치
 
      Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 
@@ -320,51 +320,49 @@ static void DisplayIdentityInformation()
     ```
 
     > [!NOTE]
-    >  설치 배치 파일은 Windows SDK 명령 프롬프트에서 실행하도록 설계되었습니다. MSSDK 환경 변수는 SDK가 설치되는 디렉터리를 가리켜야 합니다. 이 환경 변수는 Windows SDK 명령 프롬프트 내에서 자동으로 설정됩니다.
+    > 설치 배치 파일은 Windows SDK 명령 프롬프트에서 실행하도록 설계되었습니다. MSSDK 환경 변수는 SDK가 설치되는 디렉터리를 가리켜야 합니다. 이 환경 변수는 Windows SDK 명령 프롬프트 내에서 자동으로 설정됩니다.
 
 #### <a name="to-set-up-and-build-the-sample"></a>샘플을 설치하고 빌드하려면
 
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
-2.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.
+2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1.  관리자 권한으로 연 Visual Studio 2012 명령 프롬프트에서 샘플 설치 폴더에서 Setup.bat를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
+1. 관리자 권한으로 연 Visual Studio 2012 명령 프롬프트 내의 샘플 설치 폴더에서 Setup.exe를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
 
     > [!NOTE]
-    >  Setup.bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 설계 되었습니다. 경로 환경 변수 집합을 Visual Studio 2012 명령 프롬프트 내에서 Setup.bat 스크립트에 필요한 실행 파일이 포함 된 디렉터리를 가리킵니다.  
+    > 설치 .bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup. .bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다.  
   
-2.  service\bin에서 service.exe를 실행합니다.  
+2. service\bin에서 service.exe를 실행합니다.  
   
-3.  \client\bin에서 client.exe를 실행합니다. 클라이언트 콘솔 응용 프로그램에 클라이언트 동작이 표시됩니다.  
+3. \client\bin에서 client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-4.  클라이언트와 서비스가 통신할 수 없는 경우 참조 [문제 해결 팁](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)합니다.  
+4. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 #### <a name="to-run-the-sample-across-computers"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  서비스 컴퓨터에 서비스 이진 파일용 디렉터리를 만듭니다.  
+1. 서비스 컴퓨터에 서비스 이진 파일용 디렉터리를 만듭니다.  
   
-2.  서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
+2. 서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
   
-3.  컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. 이 새로운 인증서 이름을 반영하도록 서비스 App.config 파일을 업데이트해야 합니다. `%SERVER_NAME%` 변수를 서비스가 실행되는 컴퓨터의 정규화된 호스트 이름으로 설정할 경우 Setup.bat를 사용하여 만들 수 있습니다. 관리자 권한으로 연 Visual Studio 명령 프롬프트에서 Setup.bat 파일을 실행해야 합니다.  
+3. 컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. 이 새로운 인증서 이름을 반영하도록 서비스 App.config 파일을 업데이트해야 합니다. `%SERVER_NAME%` 변수를 서비스가 실행되는 컴퓨터의 정규화된 호스트 이름으로 설정할 경우 Setup.bat를 사용하여 만들 수 있습니다. Setup.exe 파일은 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트에서 실행 해야 합니다.  
   
-4.  서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 서버 인증서가 클라이언트의 신뢰할 수 있는 발급자에 의해 발급된 경우를 제외하고는 이 작업을 수행할 필요가 없습니다.  
+4. 서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 서버 인증서가 클라이언트의 신뢰할 수 있는 발급자에 의해 발급된 경우를 제외하고는 이 작업을 수행할 필요가 없습니다.  
   
-5.  서비스 컴퓨터의 App.config 파일에서 기본 주소 값을 변경하여 localhost 대신 정규화된 컴퓨터 이름을 지정합니다.  
+5. 서비스 컴퓨터의 App.config 파일에서 기본 주소 값을 변경하여 localhost 대신 정규화된 컴퓨터 이름을 지정합니다.  
   
-6.  서비스 컴퓨터의 명령 프롬프트에서 service.exe를 실행합니다.  
+6. 서비스 컴퓨터의 명령 프롬프트에서 service.exe를 실행합니다.  
   
-7.  언어별 폴더의 \client\bin\ 폴더에서 클라이언트 프로그램 파일을 클라이언트 컴퓨터로 복사합니다.  
+7. 언어별 폴더의 \client\bin\ 폴더에서 클라이언트 프로그램 파일을 클라이언트 컴퓨터로 복사합니다.  
   
-8.  클라이언트 컴퓨터의 Client.exe.config 파일에서 엔드포인트의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.  
+8. 클라이언트 컴퓨터의 Client.exe.config 파일에서 엔드포인트의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.  
   
 9. 클라이언트 컴퓨터의 명령 프롬프트에서 Client.exe를 실행합니다.  
   
-10. 클라이언트와 서비스가 통신할 수 없는 경우 참조 [문제 해결 팁](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)합니다.  
+10. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
-1.  샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
-  
-## <a name="see-also"></a>참고 항목
+1. 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  

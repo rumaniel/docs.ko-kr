@@ -3,12 +3,12 @@ title: WSTrustChannelFactory 및 WSTrustChannel
 ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
-ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e00f3ae25a50c2fb3f34f4c04d02cde574b3da17
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839425"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044910"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory 및 WSTrustChannel
 WCF(Windows Communication Foundation)에 알고 있다면 WCF 클라이언트가 이미 페더레이션을 인식한다는 것을 알고 있습니다. <xref:System.ServiceModel.WSFederationHttpBinding> 또는 유사한 사용자 지정 바인딩을 사용하여 WCF 클라이언트를 구성하면 서비스에 페더레이션된 인증을 사용하도록 설정할 수 있습니다.
@@ -25,7 +25,7 @@ WCF(Windows Communication Foundation)에 알고 있다면 WCF 클라이언트가
 
 - WIF를 단독으로 사용하여 STS에서 토큰을 가져온 다음 WCF 클라이언트가 이 토큰으로 인증할 수 있도록 설정 자세한 내용은 [ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) 샘플을 참조하세요.
 
- 첫 번째 시나리오는 특별한 설명이 필요 없습니다. 기존 WCF 클라이언트는 계속해서 WIF 신뢰 당사자 및 STS로 작동합니다. 이 항목에서는 나머지 두 시나리오에 대해 설명합니다.
+ 첫 번째 시나리오는 다음과 같이 설명이 필요 하지 않습니다. 기존 WCF 클라이언트는 WIF 신뢰 당사자 및 STSs와 계속 작동 합니다. 이 항목에서는 나머지 두 시나리오에 대해 설명합니다.
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>ActAs/OnBehalfOf를 사용하여 기존 WCF 클라이언트 향상
 일반적인 ID 위임 시나리오에서 클라이언트는 중간 계층 서비스를 호출한 다음 백 엔드 서비스를 호출합니다. 중간 계층 서비스는 클라이언트로 작동하거나 클라이언트 대신 작동합니다.
@@ -33,12 +33,12 @@ WCF(Windows Communication Foundation)에 알고 있다면 WCF 클라이언트가
 > [!TIP]
 > ActAs와 OnBehalfOf 간의 차이점은 무엇일까요?
 >
-> Ws-trust 프로토콜 관점:
+> WS-TRUST 프로토콜 관점에서:
 >
 > 1. ActAs RST 요소는 요청자가 두 개의 고유 엔터티인 요청자와 ActAs 요소의 토큰이 나타내는 외부 엔터티에 대한 클레임을 포함하는 토큰을 원함을 나타냅니다.
 > 2. OnBehalfOf RST 요소는 요청자가 OnBehalfOf 요소의 토큰이 나타내는 외부 엔터티 하나에 대한 클레임만 포함하는 토큰을 원함을 나타냅니다.
 >
-> ActAs 기능은 일반적으로 복합 위임이 필요한 시나리오에서 사용됩니다. 이 경우 발급된 토큰의 최종 수신자가 전체 위임 체인을 검사하고 클라이언트뿐 아니라 모든 매개 지점을 확인할 수 있습니다. 따라서 전체 ID 위임 체인에 따라 액세스 제어, 감사 및 기타 관련 활동을 수행할 수 있습니다. ActAs 기능은 일반적으로 응용 프로그램/비즈니스 논리 계층에서 정보를 전달할 필요가 없도록 계층 간에 인증하고 ID 정보를 전달하기 위해 다중 계층 시스템에서 사용됩니다.
+> ActAs 기능은 일반적으로 복합 위임이 필요한 시나리오에서 사용됩니다. 이 경우 발급된 토큰의 최종 수신자가 전체 위임 체인을 검사하고 클라이언트뿐 아니라 모든 매개 지점을 확인할 수 있습니다. 따라서 전체 ID 위임 체인에 따라 액세스 제어, 감사 및 기타 관련 활동을 수행할 수 있습니다. ActAs 기능은 일반적으로 애플리케이션/비즈니스 논리 계층에서 정보를 전달할 필요가 없도록 계층 간에 인증하고 ID 정보를 전달하기 위해 다중 계층 시스템에서 사용됩니다.
 >
 > OnBehalfOf 기능은 원래 클라이언트의 ID만 중요한 시나리오에서 사용되며, 실제로 Windows에서 사용할 수 있는 ID 가장 기능과 동일합니다. OnBehalfOf를 사용하는 경우 발급된 토큰의 최종 수신자는 원래 클라이언트에 대한 클레임만 볼 수 있으며, 매개 지점에 대한 정보는 유지되지 않습니다. OnBehalfOf 기능이 사용되는 한 가지 일반적인 패턴은 클라이언트가 STS에 직접 액세스할 수 없고 프록시 게이트웨이를 통해 통신하는 프록시 패턴입니다. 프록시 게이트웨이는 호출자를 인증하고 호출자에 대한 정보를 RST 메시지의 OnBehalfOf 요소에 넣은 다음 처리를 위해 실제 STS로 보냅니다. 결과 토큰에는 프록시의 클라이언트와 관련된 클레임만 포함되어 프록시를 발급된 토큰의 수신자에 완전히 투명하게 만듭니다. WIF는 \<wsse:SecurityTokenReference> 또는 \<wsa:EndpointReferences>를 \<wst:OnBehalfOf>의 자식으로 지원하지 않습니다. WS-Trust 사양에서는 프록시가 대신 작동하는 원래 요청자를 식별하는 세 가지 방법을 허용합니다. 이러한 항목은 다음과 같습니다.
 >
@@ -81,7 +81,7 @@ SecurityToken token = channel.Issue(rst, out rstr);
 
 <xref:System.ServiceModel.Security.WSTrustChannel.Issue%2A> 메서드의 `out` 매개 변수는 클라이언트 쪽 검사를 위한 RSTR 액세스를 허용합니다.
 
-지금 토큰을 가져오는 방법만 확인 했습니다. <xref:System.ServiceModel.Security.WSTrustChannel> 개체에서 반환되는 토큰은 신뢰 당사자에 인증하는 데 필요한 모든 정보를 포함하는 `GenericXmlSecurityToken`입니다. 다음 코드 예제에서는 이 토큰을 사용하는 방법을 보여 줍니다.
+지금까지 토큰을 가져오는 방법만 살펴보았습니다. <xref:System.ServiceModel.Security.WSTrustChannel> 개체에서 반환되는 토큰은 신뢰 당사자에 인증하는 데 필요한 모든 정보를 포함하는 `GenericXmlSecurityToken`입니다. 다음 코드 예제에서는 이 토큰을 사용하는 방법을 보여 줍니다.
 
 ```csharp
 IHelloService serviceChannel = channelFactory.CreateChannelWithIssuedToken<IHelloService>( token );
@@ -102,4 +102,4 @@ serviceChannel.Hello("Hi!");
 
 ## <a name="see-also"></a>참고자료
 
-- [WIF 기능](../../../docs/framework/security/wif-features.md)
+- [WIF 기능](wif-features.md)

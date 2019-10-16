@@ -5,37 +5,37 @@ ms.technology: dotnet-standard
 ms.assetid: 6c2b9789-b61a-49f9-b33f-db01a945edf2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 390ffa1dd9f2e76372b0e4fcbf2916918b64d748
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 59ac88b2e7c6b3ecd4d06c0183a2f8a7f4a9e2d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260099"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590260"
 ---
 # <a name="create-new-nodes-in-the-dom"></a>DOM에서 새 노드 만들기
 <xref:System.Xml.XmlDocument>에는 모든 노드 형식에 대한 create 메서드가 있습니다. 필요에 따라 메서드에 이름을 제공하고, 텍스트 노드처럼 내용이 있는 노드에 대한 내용이나 기타 매개 변수를 지정하면 노드가 생성됩니다. 다음은 적합한 노드를 만들기 위해 이름 및 몇 개의 매개 변수를 제공해야 하는 메서드입니다.  
   
--   <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  
+- <xref:System.Xml.XmlDocument.CreateCDataSection%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateComment%2A>  
+- <xref:System.Xml.XmlDocument.CreateComment%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateDocumentFragment%2A>  
+- <xref:System.Xml.XmlDocument.CreateDocumentFragment%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateDocumentType%2A>  
+- <xref:System.Xml.XmlDocument.CreateDocumentType%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateElement%2A>  
+- <xref:System.Xml.XmlDocument.CreateElement%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateNode%2A>  
+- <xref:System.Xml.XmlDocument.CreateNode%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateProcessingInstruction%2A>  
+- <xref:System.Xml.XmlDocument.CreateProcessingInstruction%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateSignificantWhitespace%2A>  
+- <xref:System.Xml.XmlDocument.CreateSignificantWhitespace%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateTextNode%2A>  
+- <xref:System.Xml.XmlDocument.CreateTextNode%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateWhitespace%2A>  
+- <xref:System.Xml.XmlDocument.CreateWhitespace%2A>  
   
--   <xref:System.Xml.XmlDocument.CreateXmlDeclaration%2A>  
+- <xref:System.Xml.XmlDocument.CreateXmlDeclaration%2A>  
   
  다른 노드 형식에는 매개 변수에 데이터를 제공하는 것 이상의 요구 사항이 있습니다.  
   

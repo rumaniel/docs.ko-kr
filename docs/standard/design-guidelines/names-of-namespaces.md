@@ -1,6 +1,6 @@
 ---
 title: 네임스페이스의 이름
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 helpviewer_keywords:
 - names [.NET Framework], conflicts
 - names [.NET Framework], namespaces
@@ -8,14 +8,13 @@ helpviewer_keywords:
 - namespaces [.NET Framework], names
 - names [.NET Framework], type names
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 6d68966f60c5039fd67195a03facc1586b9ed154
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: b8b6ec195fd3f95a4255ea820f2bffcb3e27ba19
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45991274"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615213"
 ---
 # <a name="names-of-namespaces"></a>네임스페이스의 이름
 으로 다른 명명 지침을 사용 하 여 목표 네임 스페이스의 이름을 지정할 때 만드는 것 충분 한 명확성 프레임 워크를 사용 하 여 즉시 무엇이 있는지 아는 네임 스페이스의 내용을 짧을 수 프로그래머입니다. 다음 템플릿 네임 스페이스 이름에 대 한 일반 규칙을 지정 합니다.  
@@ -37,7 +36,7 @@ ms.locfileid: "45991274"
   
  **✓ CONSIDER** 적절 한 복수형 네임 스페이스 이름을 사용 합니다.  
   
- 사용 예를 들어 `System.Collections` 대신 `System.Collection`합니다. 하지만 브랜드 이름 및 머리글자어가이 규칙에 대 한 예외를 됩니다. 사용 예를 들어 `System.IO` 대신 `System.IOs`합니다.  
+ 예를 들어 `System.Collection` 대신 `System.Collections`을 사용합니다. 하지만 브랜드 이름 및 머리글자어가이 규칙에 대 한 예외를 됩니다. 예를 들어 `System.IOs` 대신 `System.IO`을 사용합니다.  
   
  **X DO NOT** 해당 네임 스페이스에서 네임 스페이스 및 형식에 대 한 동일한 이름을 사용 합니다.  
   
@@ -50,7 +49,7 @@ ms.locfileid: "45991274"
   
  네임 스페이스의 다른 범주에 대 한 형식 이름 충돌을 방지 하는 것에 대 한 지침이 있습니다.  
   
--   **응용 프로그램 모델 네임 스페이스**  
+- **응용 프로그램 모델 네임 스페이스**  
   
      단일 응용 프로그램 모델에 속한 네임 스페이스는 종종 매우 함께 사용 하지만 다른 응용 프로그램 모델의 네임 스페이스를 사용 하 여 사용할 거의 없습니다. 예를 들어 합니다 <xref:System.Windows.Forms?displayProperty=nameWithType> 네임 스페이스와 함께 사용 되는 거의 <xref:System.Web.UI?displayProperty=nameWithType> 네임 스페이스입니다. 다음은 잘 알려진 응용 프로그램 모델 네임 스페이스 그룹 목록입니다.  
   
@@ -61,11 +60,11 @@ ms.locfileid: "45991274"
   
      예를 들어 이라는 형식을 추가 하지 마십시오 `Page` 에 <xref:System.Web.UI.Adapters?displayProperty=nameWithType> 네임 스페이스 때문에 <xref:System.Web.UI?displayProperty=nameWithType> 네임 스페이스에는 이미 명명 된 형식이 포함 되어 `Page`입니다.  
   
--   **인프라 네임 스페이스**  
+- **인프라 네임 스페이스**  
   
      이 그룹에 일반적인 응용 프로그램을 개발 하는 동안 거의 가져온 네임 스페이스를 포함 합니다. 예를 들어 `.Design` 네임 스페이스는 프로그래밍 개발 도구 때 주로 사용 됩니다. 이러한 네임 스페이스의 형식을 사용 하 여 충돌을 방지 합니다. 중요 하지 않습니다.  
   
--   **핵심 네임 스페이스**  
+- **핵심 네임 스페이스**  
   
      모든 핵심 네임 스페이스 포함 `System` 네임 스페이스를 응용 프로그램 모델 및 인프라 네임 스페이스를 제외 합니다. 특히, 핵심 네임 스페이스를 포함 `System`, `System.IO`를 `System.Xml`, 및 `System.Net`합니다.  
   
@@ -73,7 +72,7 @@ ms.locfileid: "45991274"
   
      예를 들어, 사용 하지 마십시오 `Stream` 형식 이름으로 합니다. 충돌 <xref:System.IO.Stream?displayProperty=nameWithType>, 매우 일반적으로 형식을 사용 합니다.  
   
--   **기술 네임 스페이스 그룹**  
+- **기술 네임 스페이스 그룹**  
   
      이 범주에 동일한 처음 두 개의 네임 스페이스 노드를 사용 하 여 모든 네임 스페이스를 포함 `(<Company>.<Technology>*`), 같은 `Microsoft.Build.Utilities` 및 `Microsoft.Build.Tasks`합니다. 것이 단일 기술을에 속하는 형식에 서로 충돌 하지 않는지 중요 합니다.  
   
@@ -83,9 +82,9 @@ ms.locfileid: "45991274"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

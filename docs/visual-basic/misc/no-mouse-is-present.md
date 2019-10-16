@@ -4,25 +4,26 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoMouseIsPresent
 ms.assetid: 4472fd57-4217-4463-9d3c-dc4a8fe88f1b
-ms.openlocfilehash: ee04ed880f8aa24bbd155c5658ad6de856e2c388
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 5493cea8c87a40b0c9663aaa7f36ce6cb423d346
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259982"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624859"
 ---
 # <a name="no-mouse-is-present"></a>마우스가 없습니다.
 `My.Computer.Mouse` 개체의 속성 중 하나를 호출했지만 컴퓨터에 마우스 또는 마우스 포트가 설치되어 있지 않습니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   `Try...Catch` 개체의 속성을 호출하는 주변에 `My.Computer.Mouse` 블록을 추가합니다.  
+- `Try...Catch` 개체의 속성을 호출하는 주변에 `My.Computer.Mouse` 블록을 추가합니다.  
   
      — 또는 —  
   
--   컴퓨터에 마우스를 설치합니다.  
+- 컴퓨터에 마우스를 설치합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [My.Computer.Mouse](xref:Microsoft.VisualBasic.Devices.Mouse)  
- [예외 및 Visual Basic에서의 오류 처리](https://msdn.microsoft.com/library/3e351e73-cf23-40ab-8b60-05794160529e)  
- [Try...Catch...Finally 문](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
+## <a name="see-also"></a>참고자료
+
+- [My.Computer.Mouse](xref:Microsoft.VisualBasic.Devices.Mouse)
+- [.NET의 예외 처리 및 Throw](../../standard/exceptions/index.md)
+- [Try...Catch...Finally 문](../../visual-basic/language-reference/statements/try-catch-finally-statement.md)

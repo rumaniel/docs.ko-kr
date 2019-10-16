@@ -1,19 +1,18 @@
 ---
 title: 속성 디자인
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - member design guidelines, properties
 - properties [.NET Framework], design guidelines
 ms.assetid: 127cbc0c-cbed-48fd-9c89-7c5d4f98f163
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 7e6bc0230afe2dfc03b1aeeae46a3ba54599c8da
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+author: KrzysztofCwalina
+ms.openlocfilehash: e4ed4fd39a9ebd63b9d5dbff38dc15647d65934f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026318"
 ---
 # <a name="property-design"></a>속성 디자인
 속성 메서드 기술적으로 매우 유사 하지만, 사용 시나리오는 큰 차이가 됩니다. 스마트 필드로 보여야 합니다. 필드가 호출 구문 및 메서드의 유연성을가지고 있습니다.  
@@ -86,9 +85,9 @@ ms.locfileid: "44084936"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)  
+- [멤버 디자인 지침](../../../docs/standard/design-guidelines/member.md)
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)

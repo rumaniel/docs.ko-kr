@@ -1,5 +1,5 @@
 ---
-title: '&lt;지우기&gt; bypasslist (네트워크 설정)에 대 한 요소'
+title: bypasslist의 <clear> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/clear
@@ -10,21 +10,21 @@ helpviewer_keywords:
 - <bypasslist>, clear element
 - bypasslist, clear element
 ms.assetid: 301584ca-a914-4100-b180-3b288d3b099e
-ms.openlocfilehash: 5c26857496d52f9fb98ef76a72cb72fe8d852349
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4d078dac14103560423bfccdd4a1717031e7a60f
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201415"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699505"
 ---
-# <a name="ltcleargt-element-for-bypasslist-network-settings"></a>&lt;지우기&gt; bypasslist (네트워크 설정)에 대 한 요소
+# <a name="clear-element-for-bypasslist-network-settings"></a>bypasslist에 대 한 \<clear > 요소 (네트워크 설정)
 프록시 무시 목록을 지웁니다.  
   
- \<configuration>  
-\<system.net>  
-\<defaultProxy >  
-\<bypasslist >  
-\<지우기 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<defaultProxy >** ](defaultproxy-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<bypasslist >** ](bypasslist-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7 **\<clear >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,16 +45,16 @@ ms.locfileid: "50201415"
   
 |**요소**|**설명**|  
 |-----------------|---------------------|  
-|[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.|  
+|[bypasslist](bypasslist-element-network-settings.md)|프록시를 사용 하지 않는 주소를 설명 하는 정규식 집합을 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
- `clear` 요소 무시 목록에서 모든 항목을 제거 합니다.  
+ @No__t-0 요소는 바이패스 목록에서 모든 항목을 지웁니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 바이패스 목록에는 지우고 바이패스 목록에 두 개의 주소를 추가 합니다. 첫 번째는 contoso.com 도메인의 모든 서버에 대 한 프록시를 무시합니다. 두 번째 192.168 사용 하 여 IP 주소가 시작 되는 모든 서버에 대 한 프록시를 무시 합니다.  
+ 다음 예에서는 바이패스 목록을 지운 다음 바이패스 목록에 두 개의 주소를 추가 합니다. 첫 번째는 contoso.com 도메인에 있는 모든 서버에 대 한 프록시를 무시 합니다. 두 번째는 IP 주소가 192.168으로 시작 하는 모든 서버에 대해 프록시를 무시 합니다.  
   
 ```xml  
 <configuration>  
@@ -70,6 +70,7 @@ ms.locfileid: "50201415"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>참고 항목  
-- <xref:System.Net.WebProxy?displayProperty=nameWithType>  
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>참조
+
+- <xref:System.Net.WebProxy?displayProperty=nameWithType>
+- [네트워크 설정 스키마](index.md)

@@ -3,11 +3,11 @@ title: 2024 - InternalCacheMetadataStart
 ms.date: 03/30/2017
 ms.assetid: 18758528-6d3b-4d25-9427-12d2d3f4ec4e
 ms.openlocfilehash: c456e657e05a0870543234d9f637efc1f59ae06c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923749"
 ---
 # <a name="2024---internalcachemetadatastart"></a>2024 - InternalCacheMetadataStart
 ## <a name="properties"></a>속성  
@@ -16,8 +16,8 @@ ms.locfileid: "33511097"
 |-|-|  
 |ID|2024|  
 |키워드|WFRuntime|  
-|수준|Verbose|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|수준|자세히|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  작업에서 InternalCacheMetadata의 시작을 나타냅니다.  

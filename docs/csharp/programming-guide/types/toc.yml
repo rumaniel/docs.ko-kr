@@ -1,0 +1,18 @@
+- name: 유형
+  items:
+    - name: 형식 사용 및 정의
+      href: index.md
+    - name: 캐스팅 및 형식 변환
+      href: casting-and-type-conversions.md
+    - name: boxing 및 unboxing
+      href: boxing-and-unboxing.md
+    - name: '방법: 바이트 배열을 정수로 변환'
+      href: how-to-convert-a-byte-array-to-an-int.md
+    - name: '방법: 문자열을 숫자로 변환'
+      href: how-to-convert-a-string-to-a-number.md
+    - name: '방법: 16진수 문자열과 숫자 형식 간 변환'
+      href: how-to-convert-between-hexadecimal-strings-and-numeric-types.md
+    - name: 동적 형식 사용
+      href: using-type-dynamic.md
+    - name: '연습: 동적 개체 만들기 및 사용(C# 및 Visual Basic)'
+      href: walkthrough-creating-and-using-dynamic-objects.md

@@ -16,18 +16,18 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79b7684d6dad5ffecaf9c359ac004d7ecc982f0b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8d245afe2d34c06a5bb9ca39b1c0dd4924fadada
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437445"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911243"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool 인터페이스
 스레드 풀에 액세스 하기 위한 메서드를 제공 합니다.  
   
 > [!NOTE]
->  이 인터페이스는 내부 용도로 예약 되어 있습니다.  
+> 이 인터페이스는 내부 전용으로 예약 되어 있습니다.  
   
 ## <a name="methods"></a>메서드  
   
@@ -46,13 +46,14 @@ ms.locfileid: "33437445"
 |[CorGetAvailableThreads 메서드](../../../../docs/framework/unmanaged-api/hosting/icorthreadpool-corgetavailablethreads-method.md)|내부용으로 예약되어 있습니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

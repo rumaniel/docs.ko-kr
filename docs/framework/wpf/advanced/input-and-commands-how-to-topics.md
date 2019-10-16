@@ -7,28 +7,28 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: a5c266b6-969c-4049-a471-ddca7b10fb89
-ms.openlocfilehash: 2fb3472456e709c0f9f395789fd42ed38a3d2ed7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3cd3bd0861ef2e2896d33e52594b0712e984149
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942781"
 ---
 # <a name="input-and-commands-how-to-topics"></a>입력 및 명령 방법 항목
-이 섹션의 항목에는 Windows Presentation Foundation (WPF)의 입력 및 명령 인프라를 사용 하는 방법을 설명 합니다.  
+이 섹션의에서 항목에서는 Windows Presentation Foundation (WPF)에서 입력 및 명령 인프라를 사용 하는 방법에 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [명령 사용](../../../../docs/framework/wpf/advanced/how-to-enable-a-command.md)  
- [커서 형식 변경](../../../../docs/framework/wpf/advanced/how-to-change-the-cursor-type.md)  
- [포커스 이벤트를 사용하여 요소의 색 변경](../../../../docs/framework/wpf/advanced/how-to-change-the-color-of-an-element-using-focus-events.md)  
- [컨트롤에 FocusVisualStyle 적용](../../../../docs/framework/wpf/advanced/how-to-apply-a-focusvisualstyle-to-a-control.md)  
- [Enter 키를 누르는 시점 감지](../../../../docs/framework/wpf/advanced/how-to-detect-when-the-enter-key-pressed.md)  
- [이벤트를 사용하여 롤오버 효과 만들기](../../../../docs/framework/wpf/advanced/how-to-create-a-rollover-effect-using-events.md)  
- [마우스 포인터를 따라 개체 이동](../../../../docs/framework/wpf/advanced/how-to-make-an-object-follow-the-mouse-pointer.md)  
- [RoutedCommand 만들기](../../../../docs/framework/wpf/advanced/how-to-create-a-routedcommand.md)  
- [ICommandSource 구현](../../../../docs/framework/wpf/advanced/how-to-implement-icommandsource.md)  
- [명령을 지원하지 않는 컨트롤에 명령 후크](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
- [명령을 지원하는 컨트롤에 명령 후크](../../../../docs/framework/wpf/advanced/how-to-hook-up-a-command-to-a-control-with-command-support.md)  
+ [명령 사용](how-to-enable-a-command.md)  
+ [커서 형식 변경](how-to-change-the-cursor-type.md)  
+ [포커스 이벤트를 사용하여 요소의 색 변경](how-to-change-the-color-of-an-element-using-focus-events.md)  
+ [컨트롤에 FocusVisualStyle 적용](how-to-apply-a-focusvisualstyle-to-a-control.md)  
+ [Enter 키를 누르는 시점 감지](how-to-detect-when-the-enter-key-pressed.md)  
+ [이벤트를 사용하여 롤오버 효과 만들기](how-to-create-a-rollover-effect-using-events.md)  
+ [마우스 포인터를 따라 개체 이동](how-to-make-an-object-follow-the-mouse-pointer.md)  
+ [RoutedCommand 만들기](how-to-create-a-routedcommand.md)  
+ [ICommandSource 구현](how-to-implement-icommandsource.md)  
+ [명령을 지원하지 않는 컨트롤에 명령 후크](how-to-hook-up-a-command-to-a-control-with-no-command-support.md)  
+ [명령을 지원하는 컨트롤에 명령 후크](how-to-hook-up-a-command-to-a-control-with-command-support.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.UIElement>  

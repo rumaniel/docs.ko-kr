@@ -1,15 +1,15 @@
 ---
-title: 속성 vs입니다. 인수
+title: 속성 및 인수
 ms.date: 03/30/2017
 ms.assetid: 14651389-4a49-4cbb-9ddf-c83fdc155df1
 ms.openlocfilehash: a6ea4755599f18e8bbaa8187941623578d2168ac
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962632"
 ---
-# <a name="properties-vs-arguments"></a>속성 vs입니다. 인수
+# <a name="properties-vs-arguments"></a>속성 및 인수
 데이터를 작업으로 전달하는 데 사용할 수 있는 여러 가지 옵션이 있습니다. <xref:System.Activities.InArgument>를 사용하는 것 외에 표준 CLR 속성이나 공용 <xref:System.Activities.ActivityAction> 속성을 사용하여 데이터를 받는 작업을 개발할 수도 있습니다. 이 항목에서는 적절한 메서드 형식을 선택하는 방법에 대해 설명합니다.  
   
 ## <a name="using-clr-properties"></a>CLR 속성 사용  

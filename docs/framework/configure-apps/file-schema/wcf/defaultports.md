@@ -1,32 +1,34 @@
 ---
-title: '&lt;a d d&gt;'
+title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
-ms.openlocfilehash: 2f7de066a1b91e9fa22fbe0213e221c6f4bbe617
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 89ebad118c1c9210357d8fd281c9216b7f64b450
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747176"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398068"
 ---
-# <a name="ltdefaultportsgt"></a>&lt;a d d&gt;
-클라이언트 응용 프로그램에서 수신하는 기본 통신 끝점을 나열하는 기본 포트의 컬렉션입니다.  
+# <a name="defaultports"></a>\<defaultPorts>
+클라이언트 애플리케이션에서 수신하는 기본 통신 엔드포인트를 나열하는 기본 포트의 컬렉션입니다.  
   
-\<system.ServiceModel>  
-\<동작 >  
-\<serviceBehaviors>  
-\<동작 >  
-\<useRequestHeadersForMetadataAddress >  
-\<a d d >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<useRequestHeadersForMetadataAddress >** ](userequestheadersformetadataaddress.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<defaultPorts >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
 <useRequestHeadersForMetadataAddress>
   <defaultPorts>
-    <add scheme="http" port="integer" />
+    <add scheme="http"
+         port="integer" />
   </defaultPorts>
-</useRequestHeadersForMetadataAddress>  
+</useRequestHeadersForMetadataAddress>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -37,15 +39,16 @@ ms.locfileid: "32747176"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<추가 >의 \<a d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-defaultports.md)|클라이언트 응용 프로그램에서 수신하는 기본 통신 끝점입니다.|  
+|[\<defaultports의 \<> 추가 >](add-of-defaultports.md)|클라이언트 애플리케이션에서 수신하는 기본 통신 엔드포인트입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<useRequestHeadersForMetadataAddress >](../../../../../docs/framework/configure-apps/file-schema/wcf/userequestheadersformetadataaddress.md)|기본 포트의 목록입니다.|  
+|[\<useRequestHeadersForMetadataAddress>](userequestheadersformetadataaddress.md)|기본 포트의 목록입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.DefaultPortElementCollection>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.DefaultPortElementCollection>

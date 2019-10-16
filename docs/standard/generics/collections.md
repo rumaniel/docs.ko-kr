@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5b646751-6ab7-465c-916c-b1a76aefa9f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cdead5a54c6e8dbe6fd61f82fc3985913bd7d381
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 51938dade8ebd1b84010533e04b26cf989ed5f24
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47202579"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353949"
 ---
 # <a name="generic-collections-in-net"></a>.NET의 제네릭 컬렉션
 
@@ -40,11 +40,11 @@ ms.locfileid: "47202579"
  <xref:System.Nullable%601> 제네릭 구조체를 통해 `null`이 할당될 수 있는 것처럼 값 형식을 사용할 수 있습니다. 이 기능은 값 형식을 포함하는 필드가 누락될 수 있는 데이터베이스 쿼리를 사용할 때 유용할 수 있습니다. 제네릭 형식 매개 변수는 임의의 값 형식일 수 있습니다.  
   
 > [!NOTE]
->  C# 및 Visual Basic에서는 언어에 nullable 형식에 대한 구문이 있기 때문에 명시적으로 <xref:System.Nullable%601>을 사용할 필요가 없습니다. [Nullable 형식(C# 프로그래밍 가이드)](../../csharp/programming-guide/nullable-types/index.md) 및 [Nullable 값 형식(Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)을 참조하세요. 
+> C# 및 Visual Basic에서는 언어에 nullable 형식에 대한 구문이 있기 때문에 명시적으로 <xref:System.Nullable%601>을 사용할 필요가 없습니다. [Nullable 값 형식(C# 프로그래밍 가이드)](../../csharp/programming-guide/nullable-types/index.md) 및 [Nullable 값 형식(Visual Basic)](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)을 참조하세요.
   
  <xref:System.ArraySegment%601> 제네릭 구조체는 0부터 시작하는 임의 형식의 1차원 배열 내에서 요소 범위를 구분하는 방법을 제공합니다. 제네릭 형식 매개 변수는 배열 요소의 형식입니다.  
   
- 이벤트가 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]에서 사용되는 이벤트 처리 패턴을 따르는 경우 <xref:System.EventHandler%601> 제네릭 대리자를 사용하면 이벤트를 처리할 대리자 형식을 선언할 필요가 없습니다. 예를 들어 이벤트 데이터를 저장할 <xref:System.EventArgs>에서 파생된 `MyEventArgs` 클래스를 만들었다고 가정합니다. 그런 다음 이벤트를 다음과 같이 선언할 수 있습니다.  
+ 이벤트가 .NET Framework에서 사용되는 이벤트 처리 패턴을 따르는 경우 <xref:System.EventHandler%601> 제네릭 대리자를 사용하면 이벤트를 처리할 대리자 형식을 선언할 필요가 없습니다. 예를 들어 이벤트 데이터를 저장할 <xref:System.EventArgs>에서 파생된 `MyEventArgs` 클래스를 만들었다고 가정합니다. 그런 다음 이벤트를 다음과 같이 선언할 수 있습니다.  
   
  [!code-cpp[Conceptual.Generics.Overview#7](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source2.cpp#7)]
  [!code-csharp[Conceptual.Generics.Overview#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source2.cs#7)]
@@ -52,8 +52,8 @@ ms.locfileid: "47202579"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Collections.Generic?displayProperty=nameWithType>  
-- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>  
-- [제네릭](../../../docs/standard/generics/index.md)  
-- [배열과 목록을 조작하기 위한 제네릭 대리자](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)  
+- <xref:System.Collections.Generic?displayProperty=nameWithType>
+- <xref:System.Collections.ObjectModel?displayProperty=nameWithType>
+- [제네릭](../../../docs/standard/generics/index.md)
+- [배열과 목록을 조작하기 위한 제네릭 대리자](../../../docs/standard/generics/delegates-for-manipulating-arrays-and-lists.md)
 - [제네릭 인터페이스](../../../docs/standard/generics/interfaces.md)

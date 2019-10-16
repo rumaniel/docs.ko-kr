@@ -1,21 +1,21 @@
 ---
-title: 데이터 집합에서 XPath 쿼리 수행
+title: 데이터 세트에서 XPath 쿼리 수행
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: a1718429360d79c4628e9948eb1b052c3ac01964
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: 6082a171d24c55ea52c153bbd920bb7486be78a7
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49086169"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784366"
 ---
-# <a name="performing-an-xpath-query-on-a-dataset"></a>데이터 집합에서 XPath 쿼리 수행
-동기화 관계 <xref:System.Data.DataSet> 및 <xref:System.Xml.XmlDataDocument> XML을 활용할 수 있습니다와 같은 서비스 XML Path Language (XPath) 쿼리를 액세스 하는 합니다 **XmlDataDocument** 특정 기능을 수행할 수 있습니다 액세스할 때 보다 더 편리 하 게 합니다 **데이터 집합** 직접. 예를 들어, 사용 하는 대신를 **선택** 메서드를 <xref:System.Data.DataTable> 다른 테이블에 관계를 탐색 하는 **데이터 집합**에서 XPath 쿼리를 수행할 수 있습니다는 **XmlDataDocument**  와 동기화 된 합니다 **데이터 집합**, 형태로 XML 요소의 목록을 가져오려면는 <xref:System.Xml.XmlNodeList>합니다. 노드를 **XmlNodeList**로 캐스팅 <xref:System.Xml.XmlElement> 노드를 전달할 수 있습니다 합니다 **GetRowFromElement** 메서드의 **XmlDataDocument**일치 하는 반환 하려는 경우 <xref:System.Data.DataRow> 동기화 된 테이블의 행에 대 한 참조가 **데이터 집합**합니다.  
+# <a name="performing-an-xpath-query-on-a-dataset"></a>데이터 세트에서 XPath 쿼리 수행
+동기화 <xref:System.Data.DataSet> 된와 <xref:System.Xml.XmlDataDocument> 간의 관계를 사용 하면 XPath (xml Path Language) 쿼리와 같은 xml 서비스를 사용 하 여 **XmlDataDocument** 에 액세스 하 고 특정 기능을 보다 편리 하 게 수행할 수 있습니다. **데이터 집합** 에 직접 액세스 합니다. 예를 들어 <xref:System.Data.DataTable> 의 **Select** 메서드를 사용 하 여 **데이터 집합**의 다른 테이블에 대 한 관계를 탐색 하는 대신, **데이터 집합과**동기화 된 **XmlDataDocument** 에 대해 XPath 쿼리를 수행 하 여을 가져올 수 있습니다. 형식의 XML 요소 <xref:System.Xml.XmlNodeList>목록입니다. **XmlNodeList**의 노드를 <xref:System.Xml.XmlElement> 노드로 캐스팅 하면 **XmlDataDocument**의 <xref:System.Data.DataRow> **GetRowFromElement** 메서드에 전달 되어 동기화 **된의 테이블 행에 대 한 일치 하는 참조를 반환할 수 있습니다. 데이터 집합**.  
   
- 예를 들어, 다음 코드 샘플에서는 "최하위" XPath 쿼리를 수행합니다. **데이터 집합** 테이블로 채워집니다: **고객**를 **주문**, 및 **OrderDetails**합니다. 이 샘플에서는 부모-자식 관계를 먼저 사이 만들어집니다 합니다 **고객** 및 **주문** 테이블와는 **주문** 및 **OrderDetails** 테이블입니다. 반환할 XPath 쿼리가 수행 됩니다는 **XmlNodeList** 의 **고객** 노드 위치를 손자 **OrderDetails** 노드에 **ProductID**값이 43 인 노드가 있습니다. 기본적으로 샘플 쿼리를 사용 하는 XPath가 있는 제품 주문한 고객을 확인 하는 **ProductID** 43입니다.  
+ 예를 들어, 다음 코드 샘플에서는 "최하위" XPath 쿼리를 수행합니다. **데이터 집합** 은 3 개의 테이블로 채워집니다. **고객**, **주문**및 **OrderDetails**입니다. 이 샘플에서 부모-자식 관계는 먼저 **Customers** 테이블과 **orders** 테이블 간에, 그리고 **orders** 테이블과 **OrderDetails** 테이블 사이에 만들어집니다. 그런 다음 XPath 쿼리가 수행 되어 손자 **OrderDetails** 노드에 값이 43 인 **ProductID** 노드가 있는 **Customers** 노드의 **XmlNodeList** 을 반환 합니다. 기본적으로이 예제에서는 XPath 쿼리를 사용 하 여 **ProductID** 가 43 인 제품을 주문한 고객을 확인 합니다.  
   
 ```vb  
 ' Assumes that connection is a valid SqlConnection.  
@@ -101,6 +101,7 @@ foreach (XmlNode xmlNode in nodeList)
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [데이터 집합 및 XmlDataDocument 동기화](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [데이터 세트 및 XmlDataDocument 동기화](dataset-and-xmldatadocument-synchronization.md)
+- [ADO.NET 개요](../ado-net-overview.md)

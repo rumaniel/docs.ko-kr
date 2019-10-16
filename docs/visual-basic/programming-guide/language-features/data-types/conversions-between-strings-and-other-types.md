@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [Visual Basic], string
 - regional options
 ms.assetid: c3a99596-f09a-44a5-81dd-1b89a094f1df
-ms.openlocfilehash: 38acd9056f9517e6d8b62691cdeb1a2960bec800
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 1e42fca7800a76cab10fd60058e34d31ae8b8830
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43516576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907324"
 ---
 # <a name="conversions-between-strings-and-other-types-visual-basic"></a>문자열과 다른 형식 사이의 변환(Visual Basic)
 숫자를 변환할 수 있습니다 `Boolean`, 또는 날짜/시간 값을 `String`입니다. 반대 방향으로 변환할 수도 있습니다-숫자 문자열 값에서 `Boolean`, 또는 `Date` -문자열의 내용을 대상 데이터 형식의 유효한 값으로 해석 될 수 있습니다. 그렇지 않을 경우 런타임 오류가 발생 합니다.  
@@ -40,12 +40,13 @@ Str = "The total count is " & count
   
  문자열을 숫자 값으로 변환 하는 Visual Basic을 사용 하 여는 **국가별 옵션** 는 Windows에 지정 된 설정을 **제어판** 1000 단위를 해석 하 구분 기호, 소수 구분 기호 및 통화 기호입니다. 즉, 설정 중 하나에 변환이 성공할 수도 있습니다. 예를 들어 `"$14.20"` 허용 되는 모든 프랑스어 로캘이 있지만 영어 (미국) 로캘을에 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [확대 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)  
- [암시적 변환과 명시적 변환](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)  
- [방법: Visual Basic에서 다른 형식으로 변환할 개체](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)  
- [배열 규칙](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)  
- [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)  
- [형식 변환 함수](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [.NET Framework 기반의 국가별 응용 프로그램 소개](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)
+## <a name="see-also"></a>참고자료
+
+- [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [확대 변환과 축소 변환](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [암시적 변환과 명시적 변환](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
+- [방법: Visual Basic에서 다른 형식으로 변환할 개체](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)
+- [배열 규칙](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)
+- [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)
+- [형식 변환 함수](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [.NET Framework 기반의 국가별 응용 프로그램 소개](/visualstudio/ide/introduction-to-international-applications-based-on-the-dotnet-framework)

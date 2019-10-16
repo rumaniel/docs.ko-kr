@@ -1,15 +1,15 @@
 ---
-title: XDocument 쿼리와 (Visual Basic) XElement 쿼리 비교
+title: XDocument 쿼리와 XElement (Visual Basic) 쿼리
 ms.date: 07/20/2015
 ms.assetid: 2d111f84-0ded-4cde-8d93-5440557a726d
-ms.openlocfilehash: 6bc7af08544f00a87246b748d0419f11b57ed2da
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: 4aba08319abeb21de79b3b8511044b8272402984
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220937"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834942"
 ---
-# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>XDocument 쿼리와 (Visual Basic) XElement 쿼리 비교
+# <a name="querying-an-xdocument-vs-querying-an-xelement-visual-basic"></a>XDocument 쿼리와 XElement (Visual Basic) 쿼리
 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>를 통해 문서를 로드하는 경우에는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>를 통해 로드하는 경우와 약간 다르게 쿼리를 작성해야 합니다.  
   
 ## <a name="comparison-of-xdocumentload-and-xelementload"></a>XDocument.Load와 XElement.Load의 비교  
@@ -38,7 +38,7 @@ Next
   
  예상대로 이 예제는 다음과 같이 출력됩니다.  
   
-```  
+```console
 Querying tree loaded with XElement.Load  
 ----  
 <Child1>1</Child1>  
@@ -69,7 +69,7 @@ Next
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```console
 Querying tree loaded with XDocument.Load  
 ----  
 <Root>  
@@ -104,7 +104,7 @@ Next
   
  이 쿼리는 이제 <xref:System.Xml.Linq.XElement>에서 시작하는 트리에 대한 쿼리와 동일한 방식으로 수행됩니다. 예제의 결과는 다음과 같습니다.  
   
-```  
+```console
 Querying tree loaded with XDocument.Load  
 ----  
 <Child1>1</Child1>  
@@ -112,5 +112,6 @@ Querying tree loaded with XDocument.Load
 <Child3>3</Child3>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>참조
+
+- [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - serialization [WCF], setting default values
 - OnSerializedAttribute [WCF]
 ms.assetid: aa4a3a6f-05ec-4efd-bdbf-2181e13e6468
-ms.openlocfilehash: 84e38451f10acc341642c0bf0923cc73b79d771f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 0736f94b1fe1a91b20ee76da673e0bc139aa802a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497934"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959563"
 ---
 # <a name="version-tolerant-serialization-callbacks"></a>버전 독립적 Serialization 콜백
 데이터 계약 프로그래밍 모델에서는 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 및 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 클래스에서 지원하는 버전 독립적 serialization 콜백 메서드를 완전히 지원합니다.  
@@ -41,10 +41,11 @@ ms.locfileid: "33497934"
  [!code-csharp[C_DataContract#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_datacontract/cs/source.cs#9)]
  [!code-vb[C_DataContract#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontract/vb/source.vb#9)]  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.Serialization.OnSerializingAttribute>  
- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
- <xref:System.Runtime.Serialization.StreamingContext>  
- [버전 독립적 serialization](../../../../docs/standard/serialization/version-tolerant-serialization.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>
+- <xref:System.Runtime.Serialization.StreamingContext>
+- [버전 독립적 serialization](../../../standard/serialization/version-tolerant-serialization.md)

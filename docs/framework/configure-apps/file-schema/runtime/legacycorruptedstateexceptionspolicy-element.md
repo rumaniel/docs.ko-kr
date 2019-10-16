@@ -1,5 +1,5 @@
 ---
-title: '&lt;legacyCorruptedStateExceptionsPolicy&gt; 요소'
+title: <legacyCorruptedStateExceptionsPolicy> 요소
 ms.date: 03/30/2017
 helpviewer_keywords:
 - <legacyCorruptedStateExceptionsPolicy> element
@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: e0a55ddc-bfa8-4f3e-ac14-d1fc3330e4bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6228aaf4c7da70337d9d1a99adcb78f71a0039b2
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 6566437d899b768cda1bab74bb1310deb7aa74db
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32744618"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252511"
 ---
-# <a name="ltlegacycorruptedstateexceptionspolicygt-element"></a>&lt;legacyCorruptedStateExceptionsPolicy&gt; 요소
-공용 언어 런타임에서 액세스 위반 및 기타 손상 된 상태 예외를 catch 하는 관리 되는 코드를 허용 하는지 여부를 지정 합니다.  
+# <a name="legacycorruptedstateexceptionspolicy-element"></a>\<legacyCorruptedStateExceptionsPolicy > 요소
+공용 언어 런타임에서 관리 코드에서 액세스 위반 및 기타 손상 된 상태 예외를 catch 할 수 있는지 여부를 지정 합니다.  
   
- \<configuration>  
-\<runtime>  
-\<legacyCorruptedStateExceptionsPolicy >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<legacyCorruptedStateExceptionsPolicy>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -34,14 +34,14 @@ ms.locfileid: "32744618"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`enabled`|필수 특성입니다.<br /><br /> 응용 프로그램은 catch 지정 액세스 위반과 같이 손상 된 상태 예외입니다.|  
+|`enabled`|필수 특성입니다.<br /><br /> 응용 프로그램에서 액세스 위반과 같은 손상 된 상태 예외 오류를 catch 하도록 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
-|`false`|응용 프로그램이 검색 되지 것입니다 액세스 위반과 같이 손상 된 상태 예외입니다. 이 값이 기본값입니다.|  
-|`true`|응용 프로그램은 catch 액세스 위반과 같이 손상 된 상태 예외입니다.|  
+|`false`|응용 프로그램은 액세스 위반과 같은 손상 된 상태 예외 오류를 catch 하지 않습니다. 이 값이 기본값입니다.|  
+|`true`|응용 프로그램은 액세스 위반과 같은 손상 된 상태 예외 오류를 catch 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -50,24 +50,24 @@ ms.locfileid: "32744618"
   
 |요소|설명|  
 |-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|어셈블리 바인딩 및 가비지 컬렉션에 대한 정보를 포함합니다.|  
   
 ## <a name="remarks"></a>설명  
- .NET Framework 버전 3.5 및 이전 버전에서는 공용 언어 런타임 손상 된 프로세스 상태에 의해 발생 된 예외를 catch 하는 관리 되는 코드를 허용 합니다. 액세스 위반은 이러한 유형의 예외의 예시입니다.  
+ .NET Framework 버전 3.5 및 이전 버전에서 공용 언어 런타임에서는 관리 코드를 허용 하 여 손상 된 프로세스 상태에 의해 발생 한 예외를 catch 했습니다. 액세스 위반은 이러한 형식의 예외에 대 한 예입니다.  
   
- 부터는 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], 관리 되는 코드는 더 이상 이러한 유형의 예외를 catch `catch` 블록입니다. 그러나 이러한 변경 내용을 재정의 수 있고 두 가지 방법으로 손상 된 상태 예외 처리를 유지 관리 됩니다.  
+ .NET Framework 4부터 관리 코드는 더 이상 블록에서 `catch` 이러한 형식의 예외를 catch 하지 않습니다. 그러나 다음과 같은 두 가지 방법으로이 변경을 재정의 하 고 손상 된 상태 예외 처리를 유지할 수 있습니다.  
   
--   설정의 `<legacyCorruptedStateExceptionsPolicy>` 요소의 `enabled` 특성을 `true`합니다. 이 구성 설정은 프로세스 전체에 적용된 되 고 모든 메서드에 영향을 줍니다.  
+- 요소의 특성을 로`true`설정 합니다. `enabled` `<legacyCorruptedStateExceptionsPolicy>` 이 구성 설정은 processwide로 적용 되 고 모든 메서드에 영향을 줍니다.  
   
- -또는-  
+ 또는  
   
--   적용 된 <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> 특성을 제외 하 고 포함 된 메서드에 `catch` 블록입니다.  
+- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute?displayProperty=nameWithType> 예외`catch` 블록이 포함 된 메서드에 특성을 적용 합니다.  
   
- 이 구성 요소는 에서만 사용할 수는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 이상.  
+ 이 구성 요소는 .NET Framework 4 이상 에서만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 앞의 동작으로 응용 프로그램을 되돌려야 함을 지정 하는 방법을 보여 줍니다는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)], 모든 손상 된 상태 예외 오류를 catch 합니다.  
+ 다음 예제에서는 응용 프로그램이 .NET Framework 4 이전의 동작으로 되돌아가고 모든 손상 상태 예외 오류를 catch 하도록 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -77,7 +77,8 @@ ms.locfileid: "32744618"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>  
- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Runtime.ExceptionServices.HandleProcessCorruptedStateExceptionsAttribute>
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)

@@ -1,16 +1,16 @@
 ---
-title: '자습서: 첫 번째 분석기 및 코드 수정 사항 작성'
+title: '자습서: 첫 번째 분석기 및 코드 수정 작성'
 description: 이 자습서에서는 .NET Complier SDK(Roslyn API)를 사용하여 분석기 및 코드 수정 사항을 빌드하는 단계별 지침을 제공합니다.
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 2959fe3008bfca972d3a164ed27d05c2a8b0e69a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d6645a2a6e83f68c1959c255756393c9251dc1ba
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47398000"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105753"
 ---
-# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>자습서: 첫 번째 분석기 및 코드 수정 사항 작성
+# <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>자습서: 첫 번째 분석기 및 코드 수정 작성
 
 .NET Compiler Platform SDK는 C# 또는 Visual Basic 코드를 대상으로 하는 사용자 지정 경고를 만드는 데 필요한 도구를 제공합니다. **분석기**에는 규칙 위반을 인식하는 코드가 포함됩니다. **코드 수정 사항**에는 위반을 수정하는 코드가 포함됩니다. 구현하는 규칙은 코드 구조에서 코딩 스타일, 명명 규칙 등에 이를 수 있습니다. .NET Compiler Platform은 개발자가 코드를 작성할 때 분석을 실행하기 위한 프레임워크와 코드를 수정하기 위한 모든 Visual Studio UI 기능(편집기에 물결선 표시, Visual Studio 오류 목록 채우기, “전구” 제안 만들기, 제안된 수정 사항의 다양한 미리 보기 표시)을 제공합니다.
 
@@ -18,9 +18,10 @@ ms.locfileid: "47398000"
 
 ## <a name="prerequisites"></a>전제 조건
 
-* [Visual Studio 2017](https://www.visualstudio.com/downloads)
+- [Visual Studio 2017](https://visualstudio.microsoft.com/vs/older-downloads/#visual-studio-2017-and-other-products)
+- [Visual Studio 2019](https://www.visualstudio.com/downloads)
 
-**.NET Compiler Platform SDK**를 설치해야 합니다.
+Visual Studio Intaller를 통해 **.NET Compiler Platform SDK**를 설치해야 합니다.
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -50,16 +51,16 @@ Console.WriteLine(x);
 
 변수를 상수로 설정할 수 있는지 여부를 판별하기 위한 분석이 포함되며, 변수가 작성되지 않는지 확인하려면 구문 분석, 상수 분석, 이니셜라이저 식의 상수 분석 및 데이터 흐름 분석이 필요합니다. .NET Compiler Platform은 이 분석을 보다 쉽게 수행할 수 있는 API를 제공합니다. 첫 번째 단계는 새로운 C# **코드 수정 사항이 포함된 분석기** 프로젝트는 만드는 것입니다.
 
-* Visual Studio에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택하여 [새 프로젝트] 대화 상자를 표시합니다.
-* **Visual C# > 확장성**에서 **코드 수정 사항이 포함된 분석기(.NET Standard)** 를 선택합니다.
-* 프로젝트 이름을 “**MakeConst**”로 지정하고 [확인]을 클릭합니다.
+- Visual Studio에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택하여 [새 프로젝트] 대화 상자를 표시합니다.
+- **Visual C# > 확장성**에서 **코드 수정 사항이 포함된 분석기(.NET Standard)** 를 선택합니다.
+- 프로젝트 이름을 “**MakeConst**”로 지정하고 [확인]을 클릭합니다.
 
 코드 수정 사항 템플릿이 포함된 분석기는 세 개의 프로젝트를 만듭니다. 하나에는 분석기 및 코드 수정 사항이 포함되고, 두 번째는 단위 테스트 프로젝트이고, 세 번째는 VSIX 프로젝트입니다. 기본 시작 프로젝트는 VSIX 프로젝트입니다. **F5** 키를 눌러 VSIX 프로젝트를 시작합니다. 그러면 새 분석기를 로드한 Visual Studio의 두 번째 인스턴스가 시작됩니다.
 
 > [!TIP]
 > 분석기를 실행할 때 Visual Studio의 두 번째 복사본을 시작합니다. 이 두 번째 복사본은 다른 레지스트리 하이브를 사용하여 설정을 저장합니다. 이렇게 하면 Visual Studio의 두 복사본에서 시각적 설정을 구별할 수 있습니다. Visual Studio의 실험 실행에 서로 다른 테마를 선택할 수 있습니다. 또한 Visual Studio의 실험 실행을 사용하여 사용자 설정 또는 로그인을 Visual Studio 계정에 로밍하지 마세요. 이렇게 하면 설정이 다르게 유지됩니다.
 
-방금 시작한 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 응용 프로그램 프로젝트를 만듭니다(.NET Core 또는 .NET Framework 프로젝트가 작동함 - 분석기는 소스 수준에서 작동함). 물결 무늬 밑줄이 있는 토큰을 마우스로 가리키면 분석기가 제공하는 경고 텍스트가 나타납니다.
+방금 시작한 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만듭니다(.NET Core 또는 .NET Framework 프로젝트가 작동함 - 분석기는 소스 수준에서 작동함). 물결 무늬 밑줄이 있는 토큰을 마우스로 가리키면 분석기가 제공하는 경고 텍스트가 나타납니다.
 
 템플릿은 다음 그림에 표시된 대로 형식 이름에 소문자가 포함된 각 형식 선언에 대한 경고를 보고하는 분석기를 만듭니다.
 
@@ -76,8 +77,8 @@ Console.WriteLine(x);
 
 템플릿은 **MakeConstAnalyzer.cs** 파일에서 초기 `DiagnosticAnalyzer` 클래스를 만듭니다. 이 초기 분석기는 모든 분석기의 두 가지 중요한 속성을 표시합니다.
 
-* 모든 진단 분석기는 사용되는 언어를 설명하는 `[DiagnosticAnalyzer]` 특성을 제공해야 합니다.
-* 모든 진단 분석기는 <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> 클래스에서 파생되어야 합니다.
+- 모든 진단 분석기는 사용되는 언어를 설명하는 `[DiagnosticAnalyzer]` 특성을 제공해야 합니다.
+- 모든 진단 분석기는 <xref:Microsoft.CodeAnalysis.Diagnostics.DiagnosticAnalyzer> 클래스에서 파생되어야 합니다.
 
 템플릿은 분석기의 일부인 기본 기능도 표시합니다.
 
@@ -88,9 +89,9 @@ Console.WriteLine(x);
 
 첫 번째 단계는 이러한 상수가 “Make Const” 분석기를 나타내도록 등록 상수 및 `Initialize` 메서드를 업데이트하는 것입니다. 대부분의 문자열 상수는 문자열 리소스 파일에 정의됩니다. 더 쉽게 지역화하려면 해당 사례를 따라야 합니다. **MakeConst** 분석기 프로젝트에 대한 **Resources.resx** 파일을 엽니다. 리소스 편집기가 표시됩니다. 다음과 같이 문자열 리소스를 업데이트합니다.
 
-* `AnalyzerTitle`을 “Variable can be made constant”(변수를 상수로 설정할 수 있음)로 변경합니다.
-* `AnalyzerMessageFormat`을 “Can be made constant”(상수로 설정할 수 있음)로 변경합니다.
-* `AnalyzerDescription`을 “Make Constant”(상수 만들기)로 변경합니다.
+- `AnalyzerTitle`을 “Variable can be made constant”(변수를 상수로 설정할 수 있음)로 변경합니다.
+- `AnalyzerMessageFormat`을 “Can be made constant”(상수로 설정할 수 있음)로 변경합니다.
+- `AnalyzerDescription`을 “Make Constant”(상수 만들기)로 변경합니다.
 
 또한 **액세스 한정자** 드롭다운을 `public`으로 변경합니다. 이렇게 하면 단위 테스트에서 이러한 상수를 더 쉽게 사용할 수 있습니다. 작업을 마치면 리소스 편집기가 다음 그림과 같이 표시됩니다.
 
@@ -169,7 +170,7 @@ if (dataFlowAnalysis.WrittenOutside.Contains(variableSymbol))
 context.ReportDiagnostic(Diagnostic.Create(Rule, context.Node.GetLocation()));
 ```
 
-**F5** 키를 눌러 분석기를 실행하여 진행 상황을 확인할 수 있습니다. 이전에 만든 콘솔 응용 프로그램을 로드한 후 다음 테스트 코드를 추가할 수 있습니다.
+**F5** 키를 눌러 분석기를 실행하여 진행 상황을 확인할 수 있습니다. 이전에 만든 콘솔 애플리케이션을 로드한 후 다음 테스트 코드를 추가할 수 있습니다.
 
 ```csharp
 int x = 0;
@@ -195,11 +196,11 @@ Console.WriteLine(x);
 
 그런 다음, `MakeUppercaseAsync` 메서드를 삭제합니다. 코드가 더 이상 적용되지 않습니다.
 
-모든 코드 수정 사항은 <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>에서 파생됩니다. 모두 <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType>을 재정의하여 사용 가능한 코드 수정 사항을 보고합니다. `RegisterCodeFixesAsync`에서 진단과 일치하도록 검색 중인 상위 노드 형식을 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>로 변경합니다.
+모든 코드 픽스 공급자는 <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider>에서 파생됩니다. 모두 <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType>을 재정의하여 사용 가능한 코드 수정 사항을 보고합니다. `RegisterCodeFixesAsync`에서 진단과 일치하도록 검색 중인 상위 노드 형식을 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>로 변경합니다.
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
-그런 다음, 마지막 줄을 변경하여 코드 수정 사항을 등록합니다. 이 수정은 기존 선언에 `const` 한정자를 추가함으로써 생성되는 새 문서를 만듭니다.  
+그런 다음, 마지막 줄을 변경하여 코드 수정 사항을 등록합니다. 이 수정은 기존 선언에 `const` 한정자를 추가함으로써 생성되는 새 문서를 만듭니다.
 
 [!code-csharp[Register the new code fix](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#RegisterCodeFix  "Register the new code fix")]
 
@@ -250,7 +251,7 @@ using Microsoft.CodeAnalysis.Formatting;
 
 [!code-csharp[replace the declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#ReplaceDocument  "Generate a new document by replacing the declaration")]
 
-코드 수정 사항을 시도할 준비가 되었습니다.  F5 키를 눌러 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다. Visual Studio의 두 번째 인스턴스에서 새 C# 콘솔 응용 프로그램 프로젝트를 만들고 상수 값으로 초기화된 몇 개의 지역 변수 선언을 Main 메서드에 추가합니다. 아래와 같이 경고로 보고되었음을 알 수 있습니다.
+코드 수정 사항을 시도할 준비가 되었습니다.  F5 키를 눌러 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다. Visual Studio의 두 번째 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만들고 상수 값으로 초기화된 몇 개의 지역 변수 선언을 Main 메서드에 추가합니다. 아래와 같이 경고로 보고되었음을 알 수 있습니다.
 
 ![const 경고를 만들 수 있음](media/how-to-write-csharp-analyzer-code-fix/make-const-warning.png)
 
@@ -275,14 +276,14 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 }
 ```
 
-진단이 경고를 트리거하지 않도록 해야 하는 코드 조각을 정의하여 이 테스트에 대한 새 데이터 행을 만들 수 있습니다. `VerifyCSharpDiagnostic`의 이 오버로드는 소스 코드 조각에 대해 트리거된 진단이 없는 경우에 성공합니다.  
+진단이 경고를 트리거하지 않도록 해야 하는 코드 조각을 정의하여 이 테스트에 대한 새 데이터 행을 만들 수 있습니다. `VerifyCSharpDiagnostic`의 이 오버로드는 소스 코드 조각에 대해 트리거된 진단이 없는 경우에 성공합니다.
 
 다음으로, `TestMethod2`를 진단이 실행되고 소스 코드 조각에 대한 코드 수정 사항이 적용되는지 확인하는 이 테스트로 바꿉니다.
 
 ```csharp
 [DataTestMethod]
 [DataRow(LocalIntCouldBeConstant, LocalIntCouldBeConstantFixed, 10, 13)]
-public void WhenDiagosticIsRaisedFixUpdatesCode(
+public void WhenDiagnosticIsRaisedFixUpdatesCode(
     string test,
     string fixTest,
     int line,
@@ -328,15 +329,15 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 이 테스트도 성공합니다. 다음으로, 아직 처리하지 않은 조건에 대한 상수를 추가합니다.
 
-* 이미 상수이므로 이미 `const`인 선언:
+- 이미 상수이므로 이미 `const`인 선언:
 
    [!code-csharp[already const declaration](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#AlreadyConst "a declaration that is already const should not raise the diagnostic")]
 
-* 사용할 값이 없으므로 이니셜라이저가 없는 선언:
+- 사용할 값이 없으므로 이니셜라이저가 없는 선언:
 
    [!code-csharp[declarations that have no initializer](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#NoInitializer "a declaration that has no initializer should not raise the diagnostic")]
 
-* 컴파일 시간 상수일 수 없으므로 이니셜라이저가 상수가 아닌 선언:
+- 컴파일 시간 상수일 수 없으므로 이니셜라이저가 상수가 아닌 선언:
 
    [!code-csharp[declarations where the initializer isn't const](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#InitializerNotConstant "a declaration where the initializer is not a compile-time constant should not raise the diagnostic")]
 
@@ -363,9 +364,9 @@ public void WhenTestCodeIsValidNoDiagnosticIsTriggered(string testCode)
 
 이러한 조건과 일치하는 코드를 필터링하려면 분석기의 `AnalyzeNode` 메서드에 대한 몇 가지 개선 사항이 필요합니다. 개선 사항은 모두 관련된 조건이므로 유사한 변경 내용이 이러한 모든 조건을 수정합니다. `AnalyzeNode`에 다음 변경 내용을 적용합니다.
 
-* 의미 체계 분석이 단일 변수 선언을 검사했습니다. 이 코드는 동일한 문에 선언된 모든 변수를 검사하는 `foreach` 루프에 있어야 합니다.
-* 선언된 각 변수에는 이니셜라이저가 있어야 합니다.
-* 선언된 각 변수의 이니셜라이저는 컴파일 시간 상수여야 합니다.
+- 의미 체계 분석이 단일 변수 선언을 검사했습니다. 이 코드는 동일한 문에 선언된 모든 변수를 검사하는 `foreach` 루프에 있어야 합니다.
+- 선언된 각 변수에는 이니셜라이저가 있어야 합니다.
+- 선언된 각 변수의 이니셜라이저는 컴파일 시간 상수여야 합니다.
 
 `AnalyzeNode` 메서드에서 다음 원래 의미 체계 분석을
 
@@ -426,7 +427,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 [!code-csharp[Mismatched types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsInvalid "When the variable type and the constant type don't match, there's no diagnostic")]
 
-또한 참조 형식이 제대로 처리되지 않습니다. 참조 형식에 허용되는 유일한 상수 값은 문자열 리터럴을 허용하는 <xref:System.String?displayPropert=nameWIthType>의 이 경우를 제외하고 `null`입니다. 즉, `const string s = "abc"`는 적합하지만 `const object s = "abc"`는 적합하지 않습니다. 이 코드 조각은 해당 조건을 확인합니다.
+또한 참조 형식이 제대로 처리되지 않습니다. 참조 형식에 허용되는 유일한 상수 값은 문자열 리터럴을 허용하는 <xref:System.String?displayProperty=nameWIthType>의 이 경우를 제외하고 `null`입니다. 즉, `const string s = "abc"`는 적합하지만 `const object s = "abc"`는 적합하지 않습니다. 이 코드 조각은 해당 조건을 확인합니다.
 
 [!code-csharp[Reference types don't raise diagnostics](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#DeclarationIsntString "When the variable type is a reference type other than string, there's no diagnostic")]
 
@@ -444,7 +445,7 @@ foreach (var variable in localDeclaration.Declaration.Variables)
 
 다행히도 위의 버그는 모두 방금 알아본 동일한 기술을 사용하여 해결할 수 있습니다.
 
-첫 번째 버그를 수정하려면 먼저 **DiagnosticAnalyzer.cs**를 열고 상수 값과 함께 할당되었는지 확인하기 위해 각 로컬 선언의 이니셜라이저가 검사되는 foreach 루프를 찾습니다. 첫 번째 foreach 루프 바로 ‘앞’에서 `context.SemanicModel.GetTypeInfo()`를 호출하여 로컬 선언의 선언된 형식에 대한 자세한 정보를 검색합니다.
+첫 번째 버그를 수정하려면 먼저 **DiagnosticAnalyzer.cs**를 열고 상수 값과 함께 할당되었는지 확인하기 위해 각 로컬 선언의 이니셜라이저가 검사되는 foreach 루프를 찾습니다. 첫 번째 foreach 루프 바로 ‘앞’에서 `context.SemanticModel.GetTypeInfo()`를 호출하여 로컬 선언의 선언된 형식에 대한 자세한 정보를 검색합니다. 
 
 ```csharp
 var variableTypeName = localDeclaration.Declaration.Type;
@@ -486,11 +487,11 @@ else if (variableType.IsReferenceType && constantValue.Value != null)
 
 var' 키워드를 올바른 형식 이름으로 바꾸려면 코드 수정 사항 공급자에서 약간의 코드를 추가로 작성해야 합니다. **CodeFixProvider.cs**로 돌아갑니다. 추가할 코드는 다음 단계를 수행합니다.
 
-* 선언이 `var` 선언인지, 그리고 다음과 같은지 검사합니다.
-* 유추 형식에 대한 새 형식을 만듭니다.
-* 형식 선언이 별칭이 아닌지 확인합니다. 별칭이 아니면 `const var`을 선언하는 것이 적합합니다.
-* `var`이 이 프로그램의 형식 이름이 아닌지 확인합니다. 아닌 경우 `const var`이 적합합니다.
-* 전체 형식 이름 단순화
+- 선언이 `var` 선언인지, 그리고 다음과 같은지 검사합니다.
+- 유추 형식에 대한 새 형식을 만듭니다.
+- 형식 선언이 별칭이 아닌지 확인합니다. 별칭이 아니면 `const var`을 선언하는 것이 적합합니다.
+- `var`이 이 프로그램의 형식 이름이 아닌지 확인합니다. 아닌 경우 `const var`이 적합합니다.
+- 전체 형식 이름 단순화
 
 코드가 다소 많아 보이지만 그렇지 않습니다. `newLocal`을 선언 및 초기화하는 줄을 다음 코드로 바꿉니다. 코드는 `newModifiers` 초기화 바로 뒤에 옵니다.
 
@@ -504,10 +505,10 @@ using Microsoft.CodeAnalysis.Simplification;
 
 테스트를 실행하면 모두 성공합니다. 완료된 분석기를 직접 실행할 수 있습니다. Ctrl+F5를 눌러 Roslyn 미리 보기 확장이 로드된 Visual Studio의 두 번째 인스턴스에서 분석기 프로젝트를 실행합니다.
 
-* 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 응용 프로그램 프로젝트를 만들고 `int x = "abc";`을 Main 메서드에 추가합니다. 첫 번째 버그 수정 덕분에 이 지역 변수 선언에 대한 경고가 보고되지 않습니다(컴파일러 오류는 예상대로 발생함).
-* 그런 다음, `object s = "abc";`을 Main 메서드에 추가합니다. 두 번째 버그 수정으로 인해 경고가 보고되지 않습니다.
-* 마지막으로 `var` 키워드를 사용하는 다른 지역 변수를 추가합니다. 경고가 보고되고 제안이 왼쪽 바로 아래에 표시됩니다.
-* 편집기 캐럿을 물결선 위로 이동하고 Ctrl+.를 눌러 제안된 코드 수정 사항을 표시합니다. 코드 수정 사항을 선택하면 var' 키워드가 올바르게 처리됩니다.
+- 두 번째 Visual Studio 인스턴스에서 새 C# 콘솔 애플리케이션 프로젝트를 만들고 `int x = "abc";`을 Main 메서드에 추가합니다. 첫 번째 버그 수정 덕분에 이 지역 변수 선언에 대한 경고가 보고되지 않습니다(컴파일러 오류는 예상대로 발생함).
+- 그런 다음, `object s = "abc";`을 Main 메서드에 추가합니다. 두 번째 버그 수정으로 인해 경고가 보고되지 않습니다.
+- 마지막으로 `var` 키워드를 사용하는 다른 지역 변수를 추가합니다. 경고가 보고되고 제안이 왼쪽 바로 아래에 표시됩니다.
+- 편집기 캐럿을 물결선 위로 이동하고 Ctrl+.를 눌러 제안된 코드 수정 사항을 표시합니다. 코드 수정 사항을 선택하면 var' 키워드가 올바르게 처리됩니다.
 
 마지막으로 다음 코드를 추가합니다.
 

@@ -10,22 +10,22 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], horizontal
 - windows [Windows Forms], splitting horizontally
 ms.assetid: a1f74f29-048c-4723-85fa-b9d375ab8f4b
-ms.openlocfilehash: 1e097ce5623fab4c3c8c1d59d9bc8c9206abee2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7ef3fe1210ae42c52a4fd7f23633d6566bc102a5
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33533129"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69956066"
 ---
 # <a name="how-to-split-a-window-horizontally"></a>방법: 가로로 창 분할
-다음 코드 예제에서는 나누는 분할자를 사용 하면는 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 가로로 합니다.  
+다음 코드 예제에서는 컨트롤을 <xref:System.Windows.Forms.SplitContainer> 가로로 나누는 분할자를 만듭니다.  
   
 > [!NOTE]
->  <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 의 속성은 <xref:System.Windows.Forms.SplitContainer> 컨트롤 컨트롤 자체 아닌 분할자의 방향을 결정 합니다.  
+> 컨트롤의 속성은 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 컨트롤이 아니라 분할자의 방향을 결정 합니다. <xref:System.Windows.Forms.SplitContainer>  
   
-### <a name="to-split-a-window-horizontally"></a>가로로 창 분할 하려면  
+### <a name="to-split-a-window-horizontally"></a>창을 가로로 분할 하려면  
   
-1.  프로시저 내에서 설정할는 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> 의 속성은 <xref:System.Windows.Forms.SplitContainer> 컨트롤을 <xref:System.Windows.Forms.Orientation.Horizontal>합니다.  
+1. 프로시저 내에서 <xref:System.Windows.Forms.SplitContainer.Orientation%2A> <xref:System.Windows.Forms.SplitContainer> 컨트롤의 속성을로 <xref:System.Windows.Forms.Orientation.Horizontal>설정 합니다.  
   
     ```vb  
     Sub ShowSplitContainer()  
@@ -55,6 +55,7 @@ ms.locfileid: "33533129"
     }  
     ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.SplitContainer>  
- [SplitContainer 컨트롤](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.SplitContainer>
+- [SplitContainer 컨트롤](splitcontainer-control-windows-forms.md)

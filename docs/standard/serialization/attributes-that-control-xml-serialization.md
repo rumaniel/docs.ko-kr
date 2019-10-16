@@ -9,12 +9,12 @@ helpviewer_keywords:
 - serialization, attributes
 - XML Schema, serializing
 ms.assetid: 414b820f-a696-4206-b576-2711d85490c7
-ms.openlocfilehash: 4acc17db83817d5aa78c9a91bfdac4e775de3743
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0d1aee4650ea29083348af482e445011289e9581
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44076542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794968"
 ---
 # <a name="attributes-that-control-xml-serialization"></a>XML Serialization을 제어하는 특성
 다음 표의 특성을 클래스 및 클래스 멤버에 적용하여 <xref:System.Xml.Serialization.XmlSerializer>가 클래스 인스턴스를 serialize 또는 deserialize하는 방법을 제어할 수 있습니다. 이러한 특성이 XML serialization을 제어하는 방법을 이해하려면 [특성을 사용하여 XML Serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)를 참조하세요.  
@@ -45,9 +45,9 @@ ms.locfileid: "44076542"
   
 ## <a name="see-also"></a>참고자료
 
-- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)  
-- <xref:System.Xml.Serialization.XmlSerializer>  
-- [특성을 사용하여 XML serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)  
-- [방법: XML 스트림의 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)  
-- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)  
+- [XML 및 SOAP serialization](../../../docs/standard/serialization/xml-and-soap-serialization.md)
+- <xref:System.Xml.Serialization.XmlSerializer>
+- [특성을 사용하여 XML serialization 제어](../../../docs/standard/serialization/controlling-xml-serialization-using-attributes.md)
+- [방법: XML Stream에 대 한 대체 요소 이름 지정](../../../docs/standard/serialization/how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [방법: 개체 serialize](../../../docs/standard/serialization/how-to-serialize-an-object.md)
 - [방법: 개체 deserialize](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

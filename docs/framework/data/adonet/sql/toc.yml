@@ -1,0 +1,147 @@
+- name: SQL Server 및 ADO.NET
+  href: index.md
+- name: SQL Server 보안
+  href: sql-server-security.md
+  items:
+    - name: SQL Server 보안 개요
+      href: overview-of-sql-server-security.md
+      items:
+        - name: SQL Server에서 인증
+          href: authentication-in-sql-server.md
+        - name: SQL Server의 서버 및 데이터베이스 역할
+          href: server-and-database-roles-in-sql-server.md
+        - name: SQL Server에서 소유권 및 사용자와 스키마 분리
+          href: ownership-and-user-schema-separation-in-sql-server.md
+        - name: SQL Server에서 권한 부여 및 권한
+          href: authorization-and-permissions-in-sql-server.md
+        - name: SQL Server에서 데이터 암호화
+          href: data-encryption-in-sql-server.md
+        - name: SQL Server의 CLR 통합 보안
+          href: clr-integration-security-in-sql-server.md
+    - name: SQL Server의 애플리케이션 보안 시나리오
+      href: application-security-scenarios-in-sql-server.md
+      items:
+        - name: SQL Server에서 저장 프로시저를 사용하여 권한 관리
+          href: managing-permissions-with-stored-procedures-in-sql-server.md
+        - name: SQL Server에서 동적 보안 SQL 작성
+          href: writing-secure-dynamic-sql-in-sql-server.md
+        - name: SQL Server에서 저장 프로시저에 서명
+          href: signing-stored-procedures-in-sql-server.md
+        - name: SQL Server에서 가장으로 권한 사용자 지정
+          href: customizing-permissions-with-impersonation-in-sql-server.md
+        - name: SQL Server에서 행 수준 권한 부여
+          href: granting-row-level-permissions-in-sql-server.md
+        - name: SQL Server에서 애플리케이션 역할 만들기
+          href: creating-application-roles-in-sql-server.md
+        - name: SQL Server에서 데이터베이스간 액세스 활성화
+          href: enabling-cross-database-access-in-sql-server.md
+    - name: SQL Server Express 보안
+      href: sql-server-express-security.md
+- name: SQL Server 데이터 형식 및 ADO.NET
+  href: sql-server-data-types.md
+  items:
+    - name: SqlType 및 DataSet
+      href: sqltypes-and-the-dataset.md
+    - name: Null 값 처리
+      href: handling-null-values.md
+    - name: GUID 및 uniqueidentifier 값 비교
+      href: comparing-guid-and-uniqueidentifier-values.md
+    - name: 날짜 및 시간 데이터
+      href: date-and-time-data.md
+    - name: 큰 UDT
+      href: large-udts.md
+    - name: SQL Server의 XML 데이터
+      href: xml-data-in-sql-server.md
+      items:
+        - name: SQL XML 열 값
+          href: sql-xml-column-values.md
+        - name: XML 값을 매개 변수로 지정
+          href: specifying-xml-values-as-parameters.md
+- name: SQL Server 이진 및 큰 값 데이터
+  href: sql-server-binary-and-large-value-data.md
+  items:
+    - name: ADO.NET에서 큰 값(최대값) 데이터 수정
+      href: modifying-large-value-max-data.md
+    - name: FILESTREAM 데이터
+      href: filestream-data.md
+    - name: 파일에서 이미지 삽입
+      href: inserting-an-image-from-a-file.md
+- name: ADO.NET에서 SQL Server 데이터 작업
+  href: sql-server-data-operations.md
+  items:
+    - name: SQL Server에서 대량 복사 작업
+      href: bulk-copy-operations-in-sql-server.md
+      items:
+        - name: 대량 복사 예제 설정
+          href: bulk-copy-example-setup.md
+        - name: 단일 대량 복사 작업
+          href: single-bulk-copy-operations.md
+        - name: 여러 개의 대량 복사 작업
+          href: multiple-bulk-copy-operations.md
+        - name: 트랜잭션 및 대량 복사 작업
+          href: transaction-and-bulk-copy-operations.md
+    - name: MARS(Multiple Active Result Sets)
+      href: multiple-active-result-sets-mars.md
+      items:
+        - name: MARS(Multiple Active Result Sets) 사용
+          href: enabling-multiple-active-result-sets.md
+        - name: 데이터 조작
+          href: manipulating-data.md
+    - name: 비동기 작업
+      href: asynchronous-operations.md
+      items:
+        - name: 콜백을 사용하는 Windows 애플리케이션
+          href: windows-applications-using-callbacks.md
+        - name: 대기 핸들을 사용한 ASP.NET 애플리케이션
+          href: aspnet-apps-using-wait-handles.md
+        - name: 콘솔 애플리케이션에서 폴링
+          href: polling-in-console-applications.md
+    - name: 테이블 반환 매개 변수
+      href: table-valued-parameters.md
+- name: SQL Server 기능 및 ADO.NET
+  href: sql-server-features-and-adonet.md
+  items:
+    - name: SQL Server의 인스턴스 열거(ADO.NET)
+      href: enumerating-instances-of-sql-server.md
+    - name: SQL Server용 공급자 통계
+      href: provider-statistics-for-sql-server.md
+    - name: SQL Server Express 사용자 인스턴스
+      href: sql-server-express-user-instances.md
+    - name: SQL Server에서 데이터베이스 미러링
+      href: database-mirroring-in-sql-server.md
+    - name: SQL Server 공용 언어 런타임 통합
+      href: sql-server-common-language-runtime-integration.md
+      items:
+        - name: SQL Server CLR 통합 소개
+          href: introduction-to-sql-server-clr-integration.md
+        - name: CLR 사용자 정의 함수
+          href: clr-user-defined-functions.md
+        - name: CLR 사용자 정의 형식
+          href: clr-user-defined-types.md
+        - name: CLR 저장 프로시저
+          href: clr-stored-procedures.md
+        - name: CLR 트리거
+          href: clr-triggers.md
+        - name: 컨텍스트 연결
+          href: the-context-connection.md
+        - name: ADO.NET의 SQL Server In-Process별 동작
+          href: sql-server-in-process-specific-behavior-of-adonet.md
+    - name: SQL Server에서 쿼리 알림
+      href: query-notifications-in-sql-server.md
+      items:
+        - name: 쿼리 알림 사용
+          href: enabling-query-notifications.md
+        - name: ASP.NET 애플리케이션에서 SqlDependency
+          href: sqldependency-in-an-aspnet-app.md
+        - name: SqlDependency로 변경 내용 감지
+          href: detecting-changes-with-sqldependency.md
+        - name: SqlNotificationRequest를 사용하여 SqlCommand 실행
+          href: sqlcommand-execution-with-a-sqlnotificationrequest.md
+    - name: SQL Server의 스냅샷 격리
+      href: snapshot-isolation-in-sql-server.md
+    - name: 고가용성 및 재해 복구에 대한 SqlClient 지원
+      href: sqlclient-support-for-high-availability-disaster-recovery.md
+    - name: LocalDB에 대한 SqlClient 지원
+      href: sqlclient-support-for-localdb.md
+- name: LINQ to SQL
+  href: linq/

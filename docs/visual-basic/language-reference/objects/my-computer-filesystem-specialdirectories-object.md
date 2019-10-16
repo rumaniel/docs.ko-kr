@@ -5,28 +5,29 @@ helpviewer_keywords:
 - My.Computer.FileSystem.SpecialDirectories object
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
-ms.openlocfilehash: 5556a71fbe6f4ca90fb07966fb5fa0203eb8aaee
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 77f2ae02a5a38db4b505b14d0771c4f46a7aa5a2
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863175"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041530"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories 개체
 일반적으로 참조되는 디렉터리에 액세스하기 위한 속성을 제공합니다.  
   
 ## <a name="remarks"></a>설명  
- 메서드 및 속성에 대 한 자세한 합니다 `My.Computer.FileSystem.SpecialDirectories` 개체를 참조 하십시오 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>합니다.  
+ `My.Computer.FileSystem.SpecialDirectories` 개체의 메서드 및 속성에 대한 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>를 참조하세요.  
   
- 자세한 내용은 [방법: 내 문서 디렉터리의 콘텐츠를 검색](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)합니다.  
+ 자세한 내용은 [방법: 콘텐츠를 검색 합니다 내 문서 디렉터리](../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-retrieve-the-contents-of-the-my-documents-directory.md)합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Namespace:** <xref:Microsoft.VisualBasic.MyServices>  
+ **네임스페이스:** <xref:Microsoft.VisualBasic.MyServices>  
   
  **클래스:** <xref:Microsoft.VisualBasic.MyServices.SpecialDirectoriesProxy> (에 대 한 액세스를 제공 <xref:Microsoft.VisualBasic.FileIO.SpecialDirectories>)  
   
- **어셈블리:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **어셈블리:** Visual Basic 런타임 라이브러리(Microsoft.VisualBasic.dll)  
   
-## <a name="see-also"></a>참고 항목  
- [My.Computer.FileSystem 개체](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)  
- [My.Computer 개체](../../../visual-basic/language-reference/objects/my-computer-object.md)
+## <a name="see-also"></a>참고자료
+
+- [My.Computer.FileSystem 개체](../../../visual-basic/language-reference/objects/my-computer-filesystem-object.md)
+- [My.Computer 개체](../../../visual-basic/language-reference/objects/my-computer-object.md)

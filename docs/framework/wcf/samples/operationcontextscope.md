@@ -2,18 +2,18 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 499d3e9824ede493043b996d581b079ec23938f8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 08f712167b502885486be3ce4398603339623415
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190829"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70039017"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
-OperationContextScope 샘플에는 헤더를 사용 하 여 Windows Communication Foundation (WCF) 호출에서 추가 정보를 보내는 방법을 보여 줍니다. 이 샘플에서는 서버와 클라이언트 모두가 콘솔 응용 프로그램입니다.  
+OperationContextScope 샘플에서는 헤더를 사용 하 여 WCF (Windows Communication Foundation) 호출에 대 한 추가 정보를 보내는 방법을 보여 줍니다. 이 샘플에서는 서버와 클라이언트 모두가 콘솔 애플리케이션입니다.  
   
 > [!NOTE]
->  이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
+> 이 샘플의 설치 절차 및 빌드 지침은 이 항목의 끝부분에 나와 있습니다.  
   
  샘플에서는 클라이언트가 <xref:System.ServiceModel.Channels.MessageHeader>를 사용하여 <xref:System.ServiceModel.OperationContextScope>로 추가 정보를 보낼 수 있는 방법을 보여 줍니다. <xref:System.ServiceModel.OperationContextScope> 개체는 채널로 범위를 지정하여 만듭니다. 원격 서비스로 해석해야 하는 헤더는 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A> 컬렉션에 추가할 수 있습니다. 이 컬렉션에 추가된 헤더는 서비스에서 <xref:System.ServiceModel.OperationContext.IncomingMessageHeaders%2A>에 액세스하여 검색할 수 있습니다. 호출은 여러 채널에 대해 수행되며, 클라이언트에 추가된 헤더는 <xref:System.ServiceModel.OperationContextScope>를 만드는 데 사용된 채널에만 적용됩니다.  
   
@@ -55,7 +55,7 @@ public bool RetrieveHeader(string guid)
 ```  
   
 ## <a name="messageheaderclient"></a>MessageHeaderClient  
- 생성 된 프록시를 사용 하는 클라이언트 구현 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 원격 서비스와 통신할 수 있습니다. 여기서는 먼저 `MessageHeaderReaderClient`의 프록시 개체 두 개를 만듭니다.  
+ 이는 [ServiceModel Metadata 유틸리티 도구 (svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 에서 생성 된 프록시를 사용 하 여 원격 서비스와 통신 하는 클라이언트 구현입니다. 여기서는 먼저 `MessageHeaderReaderClient`의 프록시 개체 두 개를 만듭니다.  
   
 ```csharp
 //Create two clients to the remote service.  
@@ -63,7 +63,7 @@ MessageHeaderReaderClient client1 = new MessageHeaderReaderClient();
 MessageHeaderReaderClient client2 = new MessageHeaderReaderClient();  
 ```  
   
- 그러면 클라이언트에서 OperationContextScope를 만들고 범위를 `client1`로 지정합니다. 여기서는 <xref:System.ServiceModel.Channels.MessageHeader>를 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A>에 추가하고 두 클라이언트 모두에 대해 한 번의 호출을 수행합니다. 헤더에만 전송 되지 않는다는 보장 `client1` 아닌 `client2` 의 반환 값을 확인 하 여는 `RetrieveHeader` 호출 합니다.  
+ 그러면 클라이언트에서 OperationContextScope를 만들고 범위를 `client1`로 지정합니다. 여기서는 <xref:System.ServiceModel.Channels.MessageHeader>를 <xref:System.ServiceModel.OperationContext.OutgoingMessageHeaders%2A>에 추가하고 두 클라이언트 모두에 대해 한 번의 호출을 수행합니다. 호출에서 반환 값 `client1` `client2` 을 확인 하 여이 아닌 에서만 헤더를 보내고 사용 하지 않도록 합니다. `RetrieveHeader`  
   
 ```csharp
 using (new OperationContextScope(client1.InnerChannel))  
@@ -77,7 +77,7 @@ using (new OperationContextScope(client1.InnerChannel))
     //Add the header to the OutgoingMessageHeader collection.  
     OperationContext.Current.OutgoingMessageHeaders.Add(customHeader);  
   
-    //Now call RetreieveHeader on both the proxies. Since the OperationContextScope is tied to   
+    //Now call RetrieveHeader on both the proxies. Since the OperationContextScope is tied to   
     //client1's InnerChannel, the header should only be added to calls made on that client.  
     //Calls made on client2 should not be sending the header across even though the call  
     //is made in the same OperationContextScope.  
@@ -115,19 +115,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>샘플을 설치, 빌드 및 실행하려면  
   
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.  
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.  
   
-2.  C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
+2. C# 또는 Visual Basic .NET 버전의 솔루션을 빌드하려면 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따릅니다.  
   
-3.  단일 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면의 지침을 따릅니다 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)합니다.  
+3. 단일 컴퓨터 또는 다중 컴퓨터 구성에서 샘플을 실행 하려면 [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)의 지침을 따르세요.  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  
-  
-## <a name="see-also"></a>참고 항목
+> `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  

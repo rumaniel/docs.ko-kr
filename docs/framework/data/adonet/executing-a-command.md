@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 40494916-c25a-4cb8-8f7c-fcb8d378464e
-ms.openlocfilehash: ed5ae1cbab40b57676219ffbe7d1d5696ac3bec4
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f749ea37e1655f006e4de26e7cb279b778fe4faf
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698126"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795114"
 ---
 # <a name="executing-a-command"></a>명령 실행
 .NET Framework에 포함된 각 .NET Framework 데이터 공급자에는 <xref:System.Data.Common.DbCommand>에서 상속되는 고유 명령 개체가 있습니다. .NET Framework Data Provider for OLE DB에는 <xref:System.Data.OleDb.OleDbCommand> 개체가 있고, .NET Framework Data Provider for SQL Server에는 <xref:System.Data.SqlClient.SqlCommand> 개체가 있으며, .NET Framework Data Provider for ODBC와 .NET Framework Data Provider for Oracle에는 각각 <xref:System.Data.Odbc.OdbcCommand> 개체와 <xref:System.Data.OracleClient.OracleCommand> 개체가 있습니다. 이러한 각 개체는 명령의 유형 및 원하는 반환 값을 기준으로 명령 실행을 위한 메서드를 노출합니다. 다음 표에는 이러한 명령 및 해당 반환 값이 나와 있습니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "45698126"
   
  강력한 형식의 각 명령 개체는 명령 문자열의 해석 방법을 지정하는 <xref:System.Data.CommandType> 열거형도 지원합니다. 다음 표에는 CommandType의 각 열거형이 나와 있습니다.  
   
-|CommandType|설명|  
+|CommandType|Description|  
 |-----------------|-----------------|  
 |`Text`|데이터 소스에 실행할 문을 정의하는 SQL 명령입니다.|  
 |`StoredProcedure`|저장 프로시저의 이름입니다. 호출하는 `Parameters` 메서드에 관계없이 명령의 `Execute` 속성을 사용하면 입력 및 출력 매개 변수와 반환 값에 액세스할 수 있습니다. `ExecuteReader`를 사용하는 경우 `DataReader`가 닫히기 전에는 반환 값과 출력 매개 변수에 액세스할 수 없습니다.|  
@@ -37,10 +37,10 @@ ms.locfileid: "45698126"
  [!code-vb[DataWorks SqlClient.StoredProcedure#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.StoredProcedure/VB/source.vb#1)]  
   
 ### <a name="troubleshooting-commands"></a>명령 문제 해결  
- .NET Framework Data Provider for SQL Server는 실패한 명령 실행과 관련된 간헐적인 문제를 감지할 수 있도록 성능 카운터를 추가합니다. 자세한 내용은 참조 [성능 카운터](../../../../docs/framework/data/adonet/performance-counters.md)합니다.  
+ .NET Framework Data Provider for SQL Server는 실패한 명령 실행과 관련된 간헐적인 문제를 감지할 수 있도록 성능 카운터를 추가합니다. 자세한 내용은 [성능 카운터](performance-counters.md)를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [명령 및 매개 변수](../../../../docs/framework/data/adonet/commands-and-parameters.md)  
- [DataAdapter 및 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
- [DataReaders 사용](https://msdn.microsoft.com/library/126a966a-d08d-4d22-a19f-f432908b2b54)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [명령 및 매개 변수](commands-and-parameters.md)
+- [DataAdapter 및 DataReader](dataadapters-and-datareaders.md)
+- [ADO.NET 개요](ado-net-overview.md)

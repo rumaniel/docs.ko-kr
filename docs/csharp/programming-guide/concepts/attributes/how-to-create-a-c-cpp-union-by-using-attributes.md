@@ -2,15 +2,15 @@
 title: '방법: 특성을 사용하여 C-C++ 공용 구조체 만들기(C#)'
 ms.date: 07/20/2015
 ms.assetid: 85f35e56-26e0-4d31-9f3a-89bd4005e71a
-ms.openlocfilehash: 8b5a88656b1172407c3e5b9f5198d5acae7bf9e0
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fdadc9505b93f40c66001ac36345efada2edd270
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43798511"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595364"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-c"></a>방법: 특성을 사용하여 C/C++ 공용 구조체 만들기(C#)
-특성을 사용하면 메모리에서 구조체가 레이아웃되는 방식을 사용자 지정할 수 있습니다. 예를 들어 `StructLayout(LayoutKind.Explicit)` 및 `FieldOffset` 특성을 사용하여 C/C++에서 공용 구조체로 알려진 항목을 만들 수 있습니다.  
+특성을 사용하면 메모리에서 구조체가 레이아웃되는 방식을 필요에 맞게 변경할 수 있습니다. 예를 들어 `StructLayout(LayoutKind.Explicit)` 및 `FieldOffset` 특성을 사용하여 C/C++에서 공용 구조체로 알려진 항목을 만들 수 있습니다.  
   
 ## <a name="example"></a>예  
  이 코드 세그먼트에서 `TestUnion`의 모든 필드는 메모리의 같은 위치에서 시작합니다.  
@@ -68,11 +68,11 @@ ms.locfileid: "43798511"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)  
-- [특성](../../../../../docs/standard/attributes/index.md)  
-- [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [특성(C#)](../../../../csharp/programming-guide/concepts/attributes/index.md)  
-- [사용자 지정 특성 만들기(C#)](../../../../csharp/programming-guide/concepts/attributes/creating-custom-attributes.md)  
-- [리플렉션을 사용하여 특성 액세스(C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [C# 프로그래밍 가이드](../../index.md)
+- [특성](../../../../standard/attributes/index.md)
+- [리플렉션(C#)](../reflection.md)
+- [특성(C#)](./index.md)
+- [사용자 지정 특성 만들기(C#)](./creating-custom-attributes.md)
+- [리플렉션을 사용하여 특성 액세스(C#)](./accessing-attributes-by-using-reflection.md)

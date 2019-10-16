@@ -1,22 +1,23 @@
 ---
-title: '&lt;remove&gt;'
+title: <remove>
 ms.date: 03/30/2017
 ms.assetid: 4058e2f1-7db4-4d1a-84dd-1b52836f2ae6
 author: BrucePerlerMS
-ms.openlocfilehash: 410fef1a43f9202d56c4957b1162c53ee056ae3f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cfdfbb3aabde253ad17b221801b20c1ac9a45c2d
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198724"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251924"
 ---
-# <a name="ltremovegt"></a>&lt;remove&gt;
-토큰 처리기 컬렉션에서 지정 된 보안 토큰 처리기를 제거합니다.  
+# <a name="remove"></a>\<remove>
+토큰 처리기 컬렉션에서 지정 된 보안 토큰 처리기를 제거 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<remove>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 제거**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +39,7 @@ ms.locfileid: "47198724"
   
 |특성|설명|  
 |---------------|-----------------|  
-|type|제거할 토큰 처리기의 CLR 형식 이름입니다. 지정 하는 방법에 대 한 자세한 내용은 합니다 `type` 특성을 참조 하십시오 [사용자 지정 형식 참조](https://msdn.microsoft.com/library/7286d2e3-c63d-49fd-abdc-ce2705f22c24)합니다. 필수.|  
+|type|제거할 토큰 처리기의 CLR 형식 이름입니다. `type` 특성을 지정 하는 방법에 대 한 자세한 내용은 [사용자 지정 형식 참조](https://docs.microsoft.com/previous-versions/windows-identity-foundation/gg638728(v=msdn.10)#custom-type-references)를 참조 하세요. 필수 요소.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -47,10 +48,10 @@ ms.locfileid: "47198724"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<securityTokenHandlers>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlers.md)|끝점을 사용 하 여 등록 된 보안 토큰 처리기 컬렉션을 지정 합니다.|  
+|[\<securityTokenHandlers>](securitytokenhandlers.md)|끝점에 등록 된 보안 토큰 처리기의 컬렉션을 지정 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 XML의 사용을 보여 줍니다.는 `<add>` 및 `<remove>` 사용자 지정 세션 토큰 처리기를 사용 하 여 기본 세션 토큰 처리기를 바꿀 요소입니다. XML에서 가져온 것은 `ClaimsAwareWebFarm` 샘플입니다.  
+ 다음 XML에서는 `<add>` 및 `<remove>` 요소를 사용 하 여 기본 세션 토큰 처리기를 사용자 지정 세션 토큰 처리기로 바꾸는 방법을 보여 줍니다. XML은 `ClaimsAwareWebFarm` 샘플에서 가져옵니다.  
   
 ```xml  
 <securityTokenHandlers>  

@@ -1,15 +1,13 @@
 ---
-title: dotnet tool install 명령 - .NET Core CLI
+title: dotnet tool install 명령
 description: dotnet tool install 명령은 컴퓨터에 지정한 .NET Core Global 도구를 설치합니다.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: aad5a3e815936749d90f40975a8b13d34e89386c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d6f691117e93a39c9837b282dca19e452515c80a
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512197"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117470"
 ---
 # <a name="dotnet-tool-install"></a>dotnet tool install
 
@@ -21,7 +19,7 @@ ms.locfileid: "43512197"
 
 ## <a name="synopsis"></a>개요
 
-```console
+```dotnetcli
 dotnet tool install <PACKAGE_NAME> <-g|--global> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <PACKAGE_NAME> <--tool-path> [--add-source] [--configfile] [--framework] [-v|--verbosity] [--version]
 dotnet tool install <-h|--help>
@@ -33,7 +31,7 @@ dotnet tool install <-h|--help>
 
 전역 도구는 `-g`(또는 `--global`) 옵션을 지정할 때 기본적으로 다음 디렉터리에 설치됩니다.
 
-| OS          | Path                          |
+| OS          | 경로                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -98,4 +96,4 @@ dotnet tool install <-h|--help>
 
 ## <a name="see-also"></a>참고 항목
 
-* [.NET Core Global Tool](global-tools.md)
+- [.NET Core Global Tool](global-tools.md)

@@ -3,12 +3,12 @@ title: 업데이트된 .NET Core 이벤트 패턴
 description: .NET Core 이벤트 패턴을 통해 이전 버전과의 호환성을 유연하게 사용하는 방법 및 비동기 구독자로 안전한 이벤트 처리를 구현하는 방법을 알아봅니다.
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 8f28c3ea9d8cf3e8fc68953c79def5744eb5abe4
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827182"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751777"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>업데이트된 .NET Core 이벤트 패턴
 
@@ -23,9 +23,23 @@ ms.locfileid: "34827182"
 
 한 가지 더 변경하는 경우 `SearchDirectoryArgs`를 구조체로 변경할 수 있습니다.
 
-[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
+```csharp
+internal struct SearchDirectoryArgs
+{
+    internal string CurrentSearchDirectory { get; }
+    internal int TotalDirs { get; }
+    internal int CompletedDirs { get; }
 
-추가 변경은 모든 필드를 초기화하는 생성자를 입력하기 전에 기본 생성자를 호출하는 것입니다. 해당 코드를 추가하지 않으면 C#의 규칙에서 속성이 할당되기 전에 액세스된다고 보고합니다.
+    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs) : this()
+    {
+        CurrentSearchDirectory = dir;
+        TotalDirs = totalDirs;
+        CompletedDirs = completedDirs;
+    }
+}
+```
+
+추가 변경은 모든 필드를 초기화하는 생성자를 입력하기 전에 매개 변수 없는 생성자를 호출하는 것입니다. 해당 코드를 추가하지 않으면 C#의 규칙에서 속성이 할당되기 전에 액세스된다고 보고합니다.
 
 `FileFoundArgs`를 클래스(참조 형식)에서 구조체(값 형식)로 변경하면 안 됩니다. 이는 취소를 처리하기 위한 프로토콜에서 이벤트 인수가 참조로 전달되도록 요구하기 때문입니다. 동일한 변경을 수행하면 파일 검색 클래스가 이벤트 구독자의 변경 내용을 관찰할 수 없습니다. 구조체의 새 복사본이 각 구독자에 사용되며, 해당 복사본은 파일 검색 개체에 표시되는 것과는 다른 복사본입니다.
 
@@ -37,7 +51,7 @@ ms.locfileid: "34827182"
 
 ## <a name="events-with-async-subscribers"></a>비동기 구독자가 포함된 이벤트
 
-알아볼 한 가지 최종 패턴은 비동기 코드를 호출하는 이벤트 구독자를 올바르게 작성하는 방법입니다. 이 과제는 [async 및 await](async.md)에 대한 문서에서 설명합니다. 비동기 메서드의 반환 형식이 void일 수도 있지만 권장되지는 않습니다. 이벤트 구독자 코드에서 비동기 메서드를 호출하는 경우 `async void` 메서드를 만들 수밖에 없습니다. 이벤트 처리기 시그니처에 이 메서드가 필요합니다.
+학습할 하나의 최종 패턴이 있습니다. 비동기 코드를 호출하는 이벤트 구독자를 올바르게 작성하는 방법입니다. 이 과제는 [async 및 await](async.md)에 대한 문서에서 설명합니다. 비동기 메서드의 반환 형식이 void일 수도 있지만 권장되지는 않습니다. 이벤트 구독자 코드에서 비동기 메서드를 호출하는 경우 `async void` 메서드를 만들 수밖에 없습니다. 이벤트 처리기 시그니처에 이 메서드가 필요합니다.
 
 이 반대 지침을 조정해야 합니다. 어떻게 해서든 안전한 `async void` 메서드를 만들어야 합니다. 구현해야 하는 패턴의 기본 사항은 아래와 같습니다.
 
@@ -59,7 +73,7 @@ worker.StartWorking += async (sender, eventArgs) =>
 
 첫째, 처리기는 비동기 처리기로 표시됩니다. 이벤트 처리기 대리자 형식에 할당되므로 void 반환 형식을 갖습니다. 즉, 처리기에 표시된 패턴을 따르고 비동기 처리기의 컨텍스트 외부에서 예외가 throw되지 않도록 해야 합니다. 작업을 반환하지 않으므로 오류 상태를 입력하여 오류를 보고할 수 있는 작업이 없습니다. 메서드가 비동기이므로 메서드에서 단순히 예외를 throw할 수 없습니다. 호출하는 메서드가 `async`이므로 실행을 계속했습니다. 실제 런타임 동작은 각 환경마다 다르게 정의됩니다. 스레드를 종료하거나, 프로그램을 종료하거나, 프로그램을 결정되지 않은 상태로 둘 수 있습니다. 모두 좋은 결과는 아닙니다.
 
-이 때문에 비동기 작업에 대한 await 문을 고유한 try 블록에 래핑해야 합니다. 오류 작업이 발생하는 경우 오류를 기록할 수 있습니다. 응용 프로그램이 복구할 수 없는 오류인 경우 빠르고 정상적으로 프로그램을 종료할 수 있습니다.
+이 때문에 비동기 작업에 대한 await 문을 고유한 try 블록에 래핑해야 합니다. 오류 작업이 발생하는 경우 오류를 기록할 수 있습니다. 애플리케이션이 복구할 수 없는 오류인 경우 빠르고 정상적으로 프로그램을 종료할 수 있습니다.
 
 이러한 기능은 .NET 이벤트 패턴에 대한 주요 업데이트입니다. 작업할 라이브러리에 이전 버전의 예제가 많이 표시됩니다. 그러나 최신 패턴이 무엇인지도 이해해야 합니다.
 

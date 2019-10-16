@@ -15,16 +15,16 @@ helpviewer_keywords:
 ms.assetid: 72bb7aa9-459b-42c4-9163-9312fab4c410
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4150658f713e626c5578c21cfada0f6410cbd37b
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c27732de448e19c4227062706c7a7d73c98e5f19
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873257"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966869"
 ---
 # <a name="enhancing-debugging-with-the-debugger-display-attributes"></a>디버거 표시 특성을 사용하여 디버깅 향상
 
-디버거 표시 특성을 통해 해당 형식의 런타임 동작을 지정하고 가장 잘 이해하는 형식의 개발자는 해당 형식이 디버거에 표시될 때 무엇이 표시되는지 지정할 수도 있습니다. 또한 `Target` 속성을 제공하는 디버거 표시 특성의 경우 소스 코드를 모르는 사용자도 어셈블리 수준에서 적용할 수 있습니다. <xref:System.Diagnostics.DebuggerDisplayAttribute> 특성은 형식 또는 멤버가 디버거 변수 창에 표시되는 방식을 제어합니다. <xref:System.Diagnostics.DebuggerBrowsableAttribute> 특성은 필드 또는 속성이 디버거 변수 창에 표시되는지 결정합니다. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 특성은 형식에 대한 대체 형식 또는 프록시를 지정하고 디버거 창에 표시되는 방식을 변경합니다. 프록시 또는 대체 형식이 있는 변수를 볼 때 대신 프록시가 디버거 표시 창에 원래 형식입니다. 디버거 변수 창에는 프록시 형식의 공용 멤버만 표시됩니다. 개인 멤버는 표시되지 않습니다.  
+디버거 표시 특성을 통해 해당 형식의 런타임 동작을 지정하고 가장 잘 이해하는 형식의 개발자는 해당 형식이 디버거에 표시될 때 무엇이 표시되는지 지정할 수도 있습니다. 또한 `Target` 속성을 제공하는 디버거 표시 특성의 경우 소스 코드를 모르는 사용자도 어셈블리 수준에서 적용할 수 있습니다. <xref:System.Diagnostics.DebuggerDisplayAttribute> 특성은 형식 또는 멤버가 디버거 변수 창에 표시되는 방식을 제어합니다. <xref:System.Diagnostics.DebuggerBrowsableAttribute> 특성은 필드 또는 속성이 디버거 변수 창에 표시되는지 결정합니다. <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 특성은 형식에 대한 대체 형식 또는 프록시를 지정하고 디버거 창에 표시되는 방식을 변경합니다. 프록시 또는 대체 형식이 있는 변수를 볼 때 프록시는 디버거 표시 창에서 원래 형식에 대 한를 나타냅니다. 디버거 변수 창에는 프록시 형식의 공용 멤버만 표시됩니다. 개인 멤버는 표시되지 않습니다.  
   
 ## <a name="using-the-debuggerdisplayattribute"></a>DebuggerDisplayAttribute 사용  
 
@@ -45,14 +45,14 @@ class MyHashtable
 ## <a name="using-the-debuggerbrowsableattribute"></a>DebuggerBrowsableAttribute 사용
  필드 또는 속성에 <xref:System.Diagnostics.DebuggerBrowsableAttribute>를 적용하여 필드나 속성이 디버거 창에 표시되는 방식을 지정합니다. 이 특성에 대한 생성자는 다음 상태 중 하나를 지정하는 <xref:System.Diagnostics.DebuggerBrowsableState> 열거형 값 중 하나를 사용합니다.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Never>는 멤버가 데이터 창에 표시되지 않음을 나타냅니다.  예를 들어 필드에서 <xref:System.Diagnostics.DebuggerBrowsableAttribute>에 이 값을 사용하면 계층 구조에서 필드가 제거됩니다. 형식 인스턴스에 대한 더하기 기호(+)를 클릭하여 바깥쪽 형식을 확장하면 필드가 표시되지 않습니다.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Never>는 멤버가 데이터 창에 표시되지 않음을 나타냅니다.  예를 들어 필드에서 <xref:System.Diagnostics.DebuggerBrowsableAttribute>에 이 값을 사용하면 계층 구조에서 필드가 제거됩니다. 형식 인스턴스에 대한 더하기 기호(+)를 클릭하여 바깥쪽 형식을 확장하면 필드가 표시되지 않습니다.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed>는 멤버가 표시되지만 기본적으로 확장되지 않음을 나타냅니다.  이것은 기본적인 동작입니다.
+- <xref:System.Diagnostics.DebuggerBrowsableState.Collapsed>는 멤버가 표시되지만 기본적으로 확장되지 않음을 나타냅니다.  이것은 기본적인 동작입니다.
 
--   <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden>은 멤버 자체가 표시되지 않지만 배열이나 컬렉션인 경우 해당 요소 개체가 표시됨을 나타냅니다.
+- <xref:System.Diagnostics.DebuggerBrowsableState.RootHidden>은 멤버 자체가 표시되지 않지만 배열이나 컬렉션인 경우 해당 요소 개체가 표시됨을 나타냅니다.
 
 > [!NOTE]
->  <xref:System.Diagnostics.DebuggerBrowsableAttribute>는 .NET Framework 버전 2.0의 Visual Basic에서 지원되지 않습니다.
+> <xref:System.Diagnostics.DebuggerBrowsableAttribute>는 .NET Framework 버전 2.0의 Visual Basic에서 지원되지 않습니다.
 
 다음 코드 예제에서는 <xref:System.Diagnostics.DebuggerBrowsableAttribute>를 사용하여 클래스에 대한 디버그 창에서 해당 특성 뒤에 속성이 나타나지 않도록 하는 방법을 보여 줍니다.
 
@@ -97,7 +97,7 @@ class MyHashtable : Hashtable
 
 ### <a name="description"></a>설명
 
-다음 코드 예제를 적용 한 결과 보려면 Visual Studio에서 볼 수 있습니다는 <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute>, 및 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 특성입니다.
+다음 코드 예제는 Visual Studio에서 볼 수 있으며 <xref:System.Diagnostics.DebuggerDisplayAttribute>, <xref:System.Diagnostics.DebuggerBrowsableAttribute>및 <xref:System.Diagnostics.DebuggerTypeProxyAttribute> 특성을 적용 한 결과를 볼 수 있습니다.
 
 ### <a name="code"></a>코드
 
@@ -105,7 +105,7 @@ class MyHashtable : Hashtable
 [!code-csharp[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/CS/program.cs#1)]
 [!code-vb[System.Diagnostics.DebuggerBrowsableAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.Diagnostics.DebuggerBrowsableAttribute/VB/module1.vb#1)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Diagnostics.DebuggerDisplayAttribute>
 - <xref:System.Diagnostics.DebuggerBrowsableAttribute>

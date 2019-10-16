@@ -1,0 +1,80 @@
+- name: '드라이브, 디렉터리 및 파일 처리'
+  href: processing.md
+  items:
+    - name: Visual Basic을 사용한 파일 액세스
+      href: file-access.md
+      items:
+        - name: 파일에서 읽기
+          href: reading-from-files.md
+          items:
+            - name: '방법: 텍스트 파일에서 읽기'
+              href: how-to-read-from-text-files.md
+            - name: '방법: 쉼표로 구분된 텍스트 파일에서 읽기'
+              href: how-to-read-from-comma-delimited-text-files.md
+            - name: '방법: 고정 너비 텍스트 파일에서 읽기'
+              href: how-to-read-from-fixed-width-text-files.md
+            - name: '방법: 여러 형식의 텍스트 파일에서 읽기'
+              href: how-to-read-from-text-files-with-multiple-formats.md
+            - name: '방법: 이진 파일에서 읽기'
+              href: how-to-read-from-binary-files.md
+            - name: '방법: StreamReader를 사용하여 파일에서 텍스트 읽기'
+              href: how-to-read-text-from-files-with-a-streamreader.md
+        - name: 파일에 쓰기
+          href: writing-to-files.md
+          items:
+            - name: '방법: 파일에 텍스트 쓰기'
+              href: how-to-write-text-to-files.md
+            - name: '방법: 텍스트 파일에 추가'
+              href: how-to-append-to-text-files.md
+            - name: '방법: 이진 파일에 쓰기'
+              href: how-to-write-to-binary-files.md
+            - name: '방법: 내 문서 디렉터리의 파일에 텍스트 쓰기'
+              href: how-to-write-text-to-files-in-the-my-documents-directory.md
+            - name: '방법: StreamWriter를 사용하여 파일에 텍스트 쓰기'
+              href: how-to-write-text-to-files-with-a-streamwriter.md
+        - name: '파일 및 디렉터리 만들기, 삭제 및 이동'
+          href: creating-deleting-and-moving-files-and-directories.md
+          items:
+            - name: '방법: 특정 패턴의 파일을 디렉터리로 복사'
+              href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
+            - name: '방법: 동일한 디렉터리에 파일의 복사본 만들기'
+              href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
+            - name: '방법: 다른 디렉터리에 파일의 복사본 만들기'
+              href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
+            - name: '방법: 파일 만들기'
+              href: how-to-create-a-file.md
+            - name: '방법: 파일 삭제'
+              href: how-to-delete-a-file.md
+            - name: '방법: 특정 패턴의 파일 찾기'
+              href: how-to-find-files-with-a-specific-pattern.md
+            - name: '방법: 파일 이동'
+              href: how-to-move-a-file.md
+            - name: '방법: 파일 이름 바꾸기'
+              href: how-to-rename-a-file.md
+            - name: '방법: 디렉터리를 다른 디렉터리에 복사'
+              href: how-to-copy-a-directory-to-another-directory.md
+            - name: '방법: 디렉터리 만들기'
+              href: how-to-create-a-directory.md
+            - name: '방법: 특정 패턴의 하위 디렉터리 찾기'
+              href: how-to-find-subdirectories-with-a-specific-pattern.md
+            - name: '방법: 디렉터리의 파일 컬렉션 가져오기'
+              href: how-to-get-the-collection-of-files-in-a-directory.md
+            - name: '방법: 내 문서 디렉터리의 내용 검색'
+              href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
+            - name: '방법: 파일 경로 구문 분석'
+              href: how-to-parse-file-paths.md
+        - name: TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석
+          href: parsing-text-files-with-the-textfieldparser-object.md
+        - name: 파일 인코딩
+          href: file-encodings.md
+        - name: '문제 해결: 텍스트 파일 읽기 및 쓰기'
+          href: troubleshooting-reading-from-and-writing-to-text-files.md
+    - name: .NET Framework 파일 I/O 및 파일 시스템의 기본 사항
+      href: basics-of-net-framework-file-io-and-the-file-system.md
+      items:
+        - name: .NET Framework 파일 I/O 및 파일 시스템에 사용되는 클래스
+          href: classes-used-in-net-framework-file-io-and-the-file-system.md
+    - name: '연습: .NET Framework 메서드를 사용하여 파일 조작'
+      href: walkthrough-manipulating-files-by-using-net-framework-methods.md
+    - name: '연습: 파일 및 디렉터리 조작'
+      href: walkthrough-manipulating-files-and-directories.md

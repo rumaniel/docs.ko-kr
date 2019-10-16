@@ -2,12 +2,12 @@
 title: 함수형 프로그래밍과 명령형 프로그래밍 비교(C#)
 ms.date: 07/20/2015
 ms.assetid: 5e35c5a0-c949-422a-873b-fca6b2254f57
-ms.openlocfilehash: 01be2758147b84af3410709aab62a0ca89b0c9cf
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: a163a62912ed2a44d6ea8cad5bc536f03343f15c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/22/2018
-ms.locfileid: "46696445"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594318"
 ---
 # <a name="functional-programming-vs-imperative-programming-c"></a>함수형 프로그래밍과 명령형 프로그래밍 비교(C#)
 이 항목에서는 함수형 프로그래밍을 더욱 일반적인 명령형(절차적) 프로그래밍과 비교하고 대조합니다.  
@@ -35,11 +35,11 @@ ms.locfileid: "46696445"
 ## <a name="advantages-of-pure-functions"></a>순수 함수의 이점  
  함수 변환을 순수 함수로 구현하는 기본적인 이유는 순수 함수가 구성 가능하기 때문입니다. 즉, 순수 함수는 상태 비저장, 자체 포함 함수입니다. 이러한 특징은 다음과 같은 여러 가지 이점을 제공합니다.  
   
--   가독성과 유지 관리 편의성이 향상됩니다. 이는 각 함수가 인수가 제공되는 경우 특정 태스크를 완료하도록 디자인되었기 때문입니다. 함수는 외부 상태에 의존하지 않습니다.  
+- 가독성과 유지 관리 편의성이 향상됩니다. 이는 각 함수가 인수가 제공되는 경우 특정 태스크를 완료하도록 디자인되었기 때문입니다. 함수는 외부 상태에 의존하지 않습니다.  
   
--   반복되는 개발이 쉬워집니다. 코드를 리팩터링하기가 쉬워서 디자인 변경 사항을 구현하기가 더욱 쉽습니다. 예를 들어, 복잡한 변환을 작성할 때 일부 코드가 변환에서 몇 번 반복되는 경우 순수 메서드를 통해 리팩터링하면 의도하지 않은 결과가 발생할 것에 대해 걱정하지 않고 원하는 대로 순수 메서드를 호출할 수 있습니다.  
+- 반복되는 개발이 쉬워집니다. 코드를 리팩터링하기가 쉬워서 디자인 변경 사항을 구현하기가 더욱 쉽습니다. 예를 들어, 복잡한 변환을 작성할 때 일부 코드가 변환에서 몇 번 반복되는 경우 순수 메서드를 통해 리팩터링하면 의도하지 않은 결과가 발생할 것에 대해 걱정하지 않고 원하는 대로 순수 메서드를 호출할 수 있습니다.  
   
--   테스트와 디버깅이 더 쉽습니다. 순수 함수를 분리하여 더 용이하게 테스트할 수 있기 때문에 일반적인 값, 유효한 경계 경우 및 무효한 경계 경우를 사용하여 순수 함수를 호출하는 테스트 코드를 작성할 수 있습니다.  
+- 테스트와 디버깅이 더 쉽습니다. 순수 함수를 분리하여 더 용이하게 테스트할 수 있기 때문에 일반적인 값, 유효한 경계 경우 및 무효한 경계 경우를 사용하여 순수 함수를 호출하는 테스트 코드를 작성할 수 있습니다.  
   
 ## <a name="transitioning-for-oop-developers"></a>OOP 개발자의 전환  
  일반적인 OOP(개체 지향 프로그래밍)에서 대부분의 개발자는 명령형/절차적 스타일로 프로그래밍하는 데 익숙합니다. 순수 함수 스타일의 개발로 전환하려면 사고 방식과 개발 방법을 전환해야 합니다.  
@@ -52,6 +52,6 @@ ms.locfileid: "46696445"
   
 ## <a name="see-also"></a>참고 항목
 
-- [순수 함수 변환 소개(C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)  
-- [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)  
-- [순수 함수로 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [순수 함수 변환 소개(C#)](./introduction-to-pure-functional-transformations.md)
+- [XSLT 변환](../../../../standard/data/xml/xslt-transformations.md)
+- [순수 함수로 리팩터링(C#)](./refactoring-into-pure-functions.md)

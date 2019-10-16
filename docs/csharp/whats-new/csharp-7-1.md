@@ -1,13 +1,13 @@
 ---
 title: C# 7.1의 새로운 기능
 description: C# 7.1의 새로운 기능에 대한 개요입니다.
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 04/09/2019
+ms.openlocfilehash: ee68cbf129d02fc58155a603d6a3f63cfb182cd0
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728656"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105547"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1의 새로운 기능
 
@@ -17,16 +17,25 @@ C# 7.1은 [언어 버전 선택](../language-reference/configure-language-versio
 
 이 릴리스의 새로운 언어 기능은 다음과 같습니다.
 
-* [`async` `Main`메서드](#async-main)
-  - 응용 프로그램에 대한 진입점은 `async` 한정자를 가질 수 있습니다.
-* [`default` 리터럴 식](#default-literal-expressions)
+- [`async` `Main`메서드](#async-main)
+  - 애플리케이션에 대한 진입점은 `async` 한정자를 가질 수 있습니다.
+- [`default` 리터럴 식](#default-literal-expressions)
   - 대상 형식을 유추할 수 있는 경우 기본 값 식에서 기본 리터럴 식을 사용할 수 있습니다.
-* [유추된 튜플 요소 이름](#inferred-tuple-element-names)
+- [유추된 튜플 요소 이름](#inferred-tuple-element-names)
   - 튜플 요소의 이름은 대부분의 경우에 튜플 초기화에서 유추할 수 있습니다.
+- [제네릭 형식 매개 변수의 패턴 일치](#pattern-matching-on-generic-type-parameters)
+  - 형식이 제네릭 형식 매개 변수인 변수에서 패턴 일치 식을 사용할 수 있습니다.
 
-마지막으로 컴파일러에는 [참조 어셈블리 생성](#reference-assembly-generation)을 제어하는 두 가지 옵션 `/refout` 및 `/refonly`가 있습니다.
+마지막으로 컴파일러에는 [참조 어셈블리 생성](#reference-assembly-generation)을 제어하는 두 가지 옵션 `-refout` 및 `-refonly`가 있습니다.
 
 포인트 릴리스에서 최신 기능을 사용하려면 [컴파일러 언어 버전을 구성](../language-reference/configure-language-version.md)하고 해당 버전을 선택해야 합니다.
+
+이 문서의 나머지 부분에서는 해당 기능에 대한 개요를 제공합니다. 각 기능의 배경과 원리를 알아봅니다. 구문을 알아봅니다. `dotnet try` 글로벌 도구를 사용하여 환경에서 다음과 같은 기능을 탐색할 수 있습니다.
+
+1. [dotnet-try](https://github.com/dotnet/try/blob/master/README.md#setup) 글로벌 도구를 설치합니다.
+1. [dotnet/try-samples](https://github.com/dotnet/try-samples) 리포지토리를 복제합니다.
+1. 현재 디렉터리를 *try-samples* 리포지토리의 *csharp7* 하위 디렉터리로 설정합니다.
+1. `dotnet try`를 실행합니다.
 
 ## <a name="async-main"></a>비동기 기본
 
@@ -60,7 +69,7 @@ static async Task Main()
 }
 ```
 
-프로그래밍 가이드의 [비동기 기본](../programming-guide/main-and-command-args/index.md) 항목에서 세부 정보에 대해 자세히 읽어볼 수 있습니다.
+프로그래밍 가이드의 [비동기 기본](../programming-guide/main-and-command-args/index.md) 문서에서 세부 정보에 대해 자세히 읽어볼 수 있습니다.
 
 ## <a name="default-literal-expressions"></a>기본 리터럴 식
 
@@ -77,9 +86,7 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-[기본값 식](../programming-guide/statements-expressions-operators/default-value-expressions.md)의 C# 프로그래밍 가이드 항목에서 이 향상된 기능에 대해 자세히 알아볼 수 있습니다.
-
-또한 이 향상된 기능은 [기본값 키워드](../language-reference/keywords/default.md)에 대한 일부 구문 분석 규칙을 변경합니다.
+자세한 내용은 [기본 연산자](../language-reference/operators/default.md) 문서의 [기본 리터럴](../language-reference/operators/default.md#default-literal) 섹션을 참조하세요.
 
 ## <a name="inferred-tuple-element-names"></a>유추된 튜플 요소 이름
 
@@ -99,9 +106,13 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-[튜플](../tuples.md) 항목에서 이 기능에 대해 자세히 알아볼 수 있습니다.
+[튜플](../tuples.md) 문서에서 이 기능에 대해 자세히 알아볼 수 있습니다.
+
+## <a name="pattern-matching-on-generic-type-parameters"></a>제네릭 형식 매개 변수의 패턴 일치
+
+C# 7.1부터 `is` 및 `switch` 형식 패턴의 패턴 식에는 제네릭 형식 매개 변수의 형식이 포함될 수 있습니다. 이 방법은 `struct` 또는 `class` 형식 중 하나일 수 있는 형식을 확인하고 boxing을 방지하려는 경우에 가장 유용합니다.
 
 ## <a name="reference-assembly-generation"></a>참조 어셈블리 생성
 
-*참조 전용 어셈블리*인 [/refout](../language-reference/compiler-options/refout-compiler-option.md) 및 [/refonly](../language-reference/compiler-options/refonly-compiler-option.md)를 생성하는 두 개의 새로운 컴파일러 옵션이 있습니다.
-링크된 항목에서는 이러한 옵션과 참조 어셈블리를 보다 자세히 설명합니다.
+*참조 전용 어셈블리*인 [-refout](../language-reference/compiler-options/refout-compiler-option.md) 및 [-refonly](../language-reference/compiler-options/refonly-compiler-option.md)를 생성하는 두 개의 새로운 컴파일러 옵션이 있습니다.
+연결된 문서에서는 이러한 옵션과 참조 어셈블리를 보다 자세히 설명합니다.

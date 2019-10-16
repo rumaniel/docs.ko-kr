@@ -1,20 +1,21 @@
 ---
-title: '&lt;persistableTypes&gt;'
+title: <persistableTypes>
 ms.date: 03/30/2017
 ms.assetid: 4d255097-45f0-4a04-945e-41d9bcfe8c54
-ms.openlocfilehash: 9ac482e1dfe0e76cc2f39cc4878e2384367f6f4f
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 34700a21b417d6018b2014662004a221b41ca878
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747566"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69933817"
 ---
-# <a name="ltpersistabletypesgt"></a>&lt;persistableTypes&gt;
+# <a name="persistabletypes"></a>\<persistableTypes>
 이 섹션에는 `persistableType` 요소 컬렉션이 포함되어 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>  
- <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>  
- [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)  
- [COM+ 응용 프로그램과 통합](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)  
- [방법: COM+ 서비스 설정 구성](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.ComPersistableTypeElementCollection>
+- <xref:System.ServiceModel.Configuration.ComPersistableTypeElement>
+- [\<comContracts>](comcontracts.md)
+- [COM+ 애플리케이션과 통합](../../../wcf/feature-details/integrating-with-com-plus-applications.md)
+- [방법: COM + 서비스 설정 구성](../../../wcf/feature-details/how-to-configure-com-service-settings.md)

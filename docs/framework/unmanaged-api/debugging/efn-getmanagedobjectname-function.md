@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f13fad537a6847ba6e19c939e72df86036e28ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d3490477f30cd1c0badaa9cfd71433a5bf9d7a99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402206"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738986"
 ---
-# <a name="efngetmanagedobjectname-function"></a>_EFN_GetManagedObjectName 함수
-제공된 된 관리 되는 개체 포인터를 사용 하는 형식의 이름을 가져옵니다.  
+# <a name="efngetmanagedobjectname-function"></a>\_EFN\_GetManagedObjectName Function
+제공 된 관리 되는 개체 포인터를 사용 하는 형식의 이름을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT _EFN_GetManagedObjectName(  
     [in]  PDEBUG_CLIENT  Client,  
     [in]  ULONG64        objAddr,  
@@ -37,7 +37,7 @@ HRESULT _EFN_GetManagedObjectName(
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `Client`  
  [in] 디버그 클라이언트에 대 한 포인터입니다.  
   
@@ -51,14 +51,15 @@ HRESULT _EFN_GetManagedObjectName(
  [out] 문자열 버퍼에서 사용할 수 있는 문자의 수입니다.  
   
 ## <a name="remarks"></a>설명  
- 관리 되는 코드가 없는 스레드의 현재 컨텍스트에서 함수 0xa0 시설 값 및 오류 코드 0 x 1000 SOS_E_NOMANAGEDCODE HRESULT를 반환 합니다.  
+ 관리 되는 코드가 없는 스레드에서 현재 컨텍스트에서 함수 HRESULT SOS_E_NOMANAGEDCODE 0xa0 기능 값 및 0x1000의 오류 코드를 사용 하 여 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** SOS_Stacktrace.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 전역 정적 함수](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+## <a name="see-also"></a>참고자료
+
+- [디버깅 전역 정적 함수](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

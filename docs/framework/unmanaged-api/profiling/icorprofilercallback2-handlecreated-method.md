@@ -17,40 +17,41 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47654d7ad1803e57f5db846ea0370d1f736deaa5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3d5ea547066663564d76008434884b6e34150efb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33452275"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779331"
 ---
 # <a name="icorprofilercallback2handlecreated-method"></a>ICorProfilerCallback2::HandleCreated 메서드
-가비지 컬렉션 핸들을 이미 만들었다고 코드 프로파일러에 알립니다.  
+가비지 컬렉션 핸들 만들어졌는지 코드 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT HandleCreated(  
     [in] GCHandleID handleId,  
     [in] ObjectID initialObjectId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `handleId`  
- [in] 가비지 수집에 대 한 핸들의 ID입니다.  
+ [in] ID는 가비지 수집에 대 한 핸들입니다.  
   
  `initialObjectId`  
- [in] 가비지 수집 핸들의 생성 된 개체의 ID입니다.  
+ [in] 가비지 컬렉션 핸들을 만든 개체의 ID입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ICorProfilerCallback2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

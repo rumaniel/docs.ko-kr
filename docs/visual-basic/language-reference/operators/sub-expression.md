@@ -6,19 +6,19 @@ helpviewer_keywords:
 - Sub Expression [Visual Basic]
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
-ms.openlocfilehash: 602212e664fa3362742fb1ba0dc033610272d3af
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2330b410f54b54d8f6cb7d8ad6f9b39a3f4d31bc
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33603537"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701345"
 ---
 # <a name="sub-expression-visual-basic"></a>하위 식(Visual Basic)
-매개 변수 및 서브루틴 람다 식을 정의 하는 코드를 선언 합니다.  
+서브루틴 람다 식을 정의 하는 매개 변수 및 코드를 선언 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```vb  
 Sub ( [ parameterlist ] ) statement  
 - or -  
 Sub ( [ parameterlist ] )  
@@ -30,36 +30,37 @@ End Sub
   
 |용어|정의|  
 |---|---|  
-|`parameterlist`|선택 사항입니다. 목록 프로시저의 매개 변수를 나타내는 지역 변수 이름입니다. 괄호는 목록이 비어 있는 경우에 있어야 합니다. 자세한 내용은 참조 [매개 변수 목록](../../../visual-basic/language-reference/statements/parameter-list.md)합니다.|  
+|`parameterlist`|(선택 사항) 프로시저의 매개 변수를 나타내는 지역 변수 이름 목록입니다. 목록이 비어 있는 경우에도 괄호가 있어야 합니다. 자세한 내용은 [Parameter List](../../../visual-basic/language-reference/statements/parameter-list.md)을 참조하세요.|  
 |`statement`|필수. 단일 문입니다.|  
 |`statements`|필수. 문 목록입니다.|  
   
 ## <a name="remarks"></a>설명  
- A *람다 식을* 이름을 없는 서브루틴은 및 하나 이상의 문을 실행 하는 합니다. 어디 람다 식을 사용할 수는 있습니다으로 사용할 수 대리자 형식을 제외 하 고 인수를 `RemoveHandler`합니다. 대리자 및 대리자와 람다 식 사용 하는 방법에 대 한 자세한 내용은 참조 [대리자 문을](../../../visual-basic/language-reference/statements/delegate-statement.md) 및 [완화 된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)합니다.  
+ *람다 식은* 이름이 없고 하나 이상의 문을 실행 하는 서브루틴입니다. @No__t-0에 대 한 인수를 제외 하 고 대리자 형식을 사용할 수 있는 모든 위치에서 람다 식을 사용할 수 있습니다. 대리자에 대 한 자세한 내용과 대리자에 람다 식을 사용 하는 방법에 대 한 자세한 내용은 [Delegate 문](../../../visual-basic/language-reference/statements/delegate-statement.md) 및 [완화 된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)을 참조 하세요.  
   
 ## <a name="lambda-expression-syntax"></a>람다 식 구문  
- 람다 식의 구문은 유사 표준 서브루틴의 합니다. 차이점은 다음과 같습니다.  
+ 람다 식의 구문은 표준 서브루틴의 구문과 유사 합니다. 차이점은 다음과 같습니다.  
   
--   람다 식에 이름이 없습니다.  
+- 람다 식에 이름이 없습니다.  
   
--   람다 식에는 한정자와 같은 없습니다 `Overloads` 또는 `Overrides`합니다.  
+- 람다 식에는 `Overloads` 또는 `Overrides`과 같은 한정자를 사용할 수 없습니다.  
   
--   한 줄 람다 식의 본문에는 문, 식 하지 이어야 합니다. Sub 프로시저를 호출 하지만 function 프로시저를 호출 하지 본문 구성할 수 있습니다.  
+- 한 줄로 된 람다 식의 본문은 식이 아니라 문 이어야 합니다. 본문은 sub 프로시저에 대 한 호출로 구성 될 수 있지만 함수 프로시저에 대 한 호출로 구성 될 수 없습니다.  
   
--   람다 식에서 모든 매개 변수에 지정 된 데이터 형식이 나 모든 매개 변수를 유추 합니다.  
+- 람다 식에서 모든 매개 변수에는 지정 된 데이터 형식이 있어야 합니다. 그렇지 않으면 모든 매개 변수가 유추 되어야 합니다.  
   
--   선택적 및 `ParamArray` 매개 변수는 람다 식에 허용 되지 않습니다.  
+- 선택적 및 `ParamArray` 매개 변수는 람다 식에서 허용 되지 않습니다.  
   
--   제네릭 매개 변수 람다 식에 허용 되지 않습니다.  
+- 람다 식에는 제네릭 매개 변수를 사용할 수 없습니다.  
   
 ## <a name="example"></a>예제  
- 다음은 콘솔에는 값을 작성 하는 람다 식의 예입니다. 서브루틴에 대 한 두에서는 한 줄 및 여러 줄 람다 식 구문을 보여 줍니다. 더 많은 예제를 참조 하십시오. [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)합니다.  
+ 다음은 값을 콘솔에 쓰는 람다 식의 예입니다. 이 예제에서는 서브루틴의 단일 줄 및 여러 줄 람다 식 구문을 보여 줍니다. 더 많은 예제는 [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)을 참조 하세요.  
   
- [!code-vb[VbVbalrLambdas#15](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/sub-expression_1.vb)]  
+ [!code-vb[VbVbalrLambdas#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>참고 항목  
- [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)  
- [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)  
- [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)  
- [문](../../../visual-basic/programming-guide/language-features/statements.md)  
- [완화된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
+## <a name="see-also"></a>참조
+
+- [Sub 문](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [람다 식](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
+- [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+- [문(C++)](../../../visual-basic/programming-guide/language-features/statements.md)
+- [완화된 대리자 변환](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)

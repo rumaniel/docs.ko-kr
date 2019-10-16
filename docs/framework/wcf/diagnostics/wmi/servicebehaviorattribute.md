@@ -2,12 +2,12 @@
 title: ServiceBehaviorAttribute
 ms.date: 03/30/2017
 ms.assetid: 5faa266f-587f-4e03-828d-1c7dd5acfe65
-ms.openlocfilehash: c2915c636aec26cfb1f58d12da49151915c52c05
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b6221e93f10b87a368bd594932a8c36ae14df8f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957016"
 ---
 # <a name="servicebehaviorattribute"></a>ServiceBehaviorAttribute
 ServiceBehaviorAttribute  
@@ -143,7 +143,7 @@ class ServiceBehaviorAttribute : Behavior
   
  액세스 형식: 읽기 전용  
   
- 시스템 또는 응용 프로그램에서 SOAP MustUnderstand 헤더 처리를 적용할지 여부를 지정합니다.  
+ 시스템 또는 애플리케이션에서 SOAP MustUnderstand 헤더 처리를 적용할지 여부를 지정합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -151,5 +151,6 @@ class ServiceBehaviorAttribute : Behavior
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.ServiceBehaviorAttribute>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.ServiceBehaviorAttribute>

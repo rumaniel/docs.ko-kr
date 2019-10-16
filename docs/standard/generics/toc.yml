@@ -1,0 +1,11 @@
+- name: 제네릭
+  href: index.md
+  items:
+    - name: .NET의 제네릭 컬렉션
+      href: collections.md
+    - name: 배열과 목록을 조작하기 위한 제네릭 대리자
+      href: delegates-for-manipulating-arrays-and-lists.md
+    - name: 제네릭 인터페이스
+      href: interfaces.md
+    - name: 공 분산 및 반공 분산
+      href: covariance-and-contravariance.md

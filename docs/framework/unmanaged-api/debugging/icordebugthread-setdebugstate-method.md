@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ada120b9cb4100bfadff83d96e0226f911958bf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 15e18888e307a14c4396966afc0a623e1acba104
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420767"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332805"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState 메서드
 이 ICorDebugThread의 디버깅 상태를 설명 하는 플래그를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetDebugState (  
     [in] CorDebugThreadState state  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `state`  
- [in] 이 스레드의 디버깅 상태를 지정 하는 CorDebugThreadState 열거형 값의 비트 조합입니다.  
+ 진행 이 스레드의 디버깅 상태를 지정 하는 CorDebugThreadState 열거형 값의 비트 조합입니다.  
   
 ## <a name="remarks"></a>설명  
- `SetDebugState` 스레드의 현재 디버그 상태를 설정합니다. ("현재 디버그 상태" 상태를 나타내는 디버그 프로세스가 계속 될 실제 현재 상태가 아니라 경우.) 이 일반적인 값은 THREAD_RUNNING입니다. 디버거에서 스레드 디버그 상태에 영향을 줄 수 있습니다. 상태 디버깅 않는 마지막 across 계속 되 면 여러 통해 THREAD_SUSPENDed 계속 스레드를 유지 하려는 경우 한 번 설정 하 고 그 후 걱정 하지 않아도 항목에 대 한 수 있도록 합니다. 스레드 일시 중단 하 고 프로세스를 다시 시작는 일반적으로 그럴 가능성은 있지만 교착 상태에 발생할 수 있습니다. 이 스레드 및 프로세스의 본래 특성 이며 디자인에 따라 합니다. 디버거 수 비동기적으로 해제 하 고 스레드는 교착 상태를 다시 시작 됩니다. 스레드의 사용자 상태 USER_UNSAFE_POINT가 포함 된 경우 스레드는 GC (가비지 수집)를 차단할 수 있습니다. 즉, 일시 중지 된 스레드 확률이 훨씬 더 높은 교착 상태를 일으킵니다. 디버그 이벤트 앱이 이미 큐에 영향을 주지 않을 수 있습니다. 따라서 디버거 전체 이벤트 큐를 드레이닝 해야 (호출 하 여 [icordebugcontroller:: Hasqueuedcallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) 중단 또는 스레드를 다시 시작 하기 전에. 다른 이벤트를 발생 것 이미 일시 중단 된 것으로 간주 된 스레드에서 않습니다.  
+ `SetDebugState`은 스레드의 현재 디버그 상태를 설정 합니다. "현재 디버그 상태"는 실제 현재 상태가 아닌 프로세스를 계속 해야 하는 경우 디버그 상태를 나타냅니다. 이에 대 한 일반 값은 THREAD_RUN입니다. 디버거만 스레드의 디버그 상태에 영향을 줄 수 있습니다. 디버그 상태는 계속 해 서 진행 되므로 여러 스레드를 계속 해 서 THREAD_SUSPENDed 유지 하려는 경우에는 한 번만 설정할 수 있으며, 그 후에는 걱정할 필요가 없습니다. 스레드를 일시 중단 하 고 프로세스를 다시 시작 하면 교착 상태가 발생할 수 있습니다. 이는 스레드와 프로세스의 내장 품질 이며 디자인 방식입니다. 디버거는 스레드를 비동기적으로 중단 하 고 다시 시작 하 여 교착 상태를 중단할 수 있습니다. 스레드의 사용자 상태에 USER_UNSAFE_POINT가 포함 된 경우 스레드는 GC (가비지 수집)를 차단할 수 있습니다. 즉, 일시 중단 된 스레드는 교착 상태를 일으킬 가능성이 훨씬 높습니다. 이미 큐에 대기 된 디버그 이벤트에는 영향을 주지 않습니다. 따라서 디버거는 스레드를 일시 중단 하거나 다시 시작 하기 전에 [ICorDebugController:: HasQueuedCallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)를 호출 하 여 전체 이벤트 큐를 드레이닝 해야 합니다. 그렇지 않으면 스레드가 이미 일시 중단 된 것으로 판단 되는 이벤트를 가져올 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

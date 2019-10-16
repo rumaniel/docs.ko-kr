@@ -7,15 +7,16 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 138c7cce83fd069f44025c57e52b2d01bcb23432
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518052"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877986"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe(C# 컴파일러 옵션)
-**-unsafe** 컴파일러 옵션을 사용하면 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 키워드를 사용하는 코드를 컴파일할 수 있습니다.  
+
+**-unsafe** 컴파일러 옵션을 사용하면 [unsafe](../keywords/unsafe.md) 키워드를 사용하는 코드를 컴파일할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -23,16 +24,17 @@ ms.locfileid: "43518052"
 -unsafe  
 ```  
   
-## <a name="remarks"></a>설명  
- 안전하지 않은 코드에 대한 자세한 내용은 [안전하지 않은 코드 및 포인터](../../../csharp/programming-guide/unsafe-code-pointers/index.md)를 참조하세요.  
+## <a name="remarks"></a>주의
+
+안전하지 않은 코드에 대한 자세한 내용은 [안전하지 않은 코드 및 포인터](../../programming-guide/unsafe-code-pointers/index.md)를 참조하세요.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트 **속성** 페이지를 엽니다.  
+1. 프로젝트 **속성** 페이지를 엽니다.  
   
-2.  **빌드** 속성 페이지를 클릭합니다.  
+2. **빌드** 속성 페이지를 클릭합니다.  
   
-3.  **안전하지 않은 코드 허용** 확인란을 선택합니다.  
+3. **안전하지 않은 코드 허용** 확인란을 선택합니다.  
   
 ### <a name="to-add-this-option-in-a-csproj-file"></a>이 옵션을 csproj 파일에 추가하려면
 
@@ -46,14 +48,15 @@ ms.locfileid: "43518052"
 
  이 컴파일러 옵션을 프로그래밍 방식으로 설정하는 방법에 대한 자세한 내용은 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>을 참조하십시오.  
   
-## <a name="example"></a>예  
- 안전하지 않은 모드에 대해 `in.cs` 컴파일:  
+## <a name="example"></a>예제
+
+안전하지 않은 모드에 대해 `in.cs` 컴파일:  
   
 ```console  
 csc -unsafe in.cs  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 컴파일러 옵션](index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

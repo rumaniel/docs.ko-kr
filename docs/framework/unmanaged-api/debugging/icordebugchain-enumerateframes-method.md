@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d408f317b546fb7e8314e904e6f5ad9e6296ae6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fc647805fcb7d8354a2540ac9424dc7155853444
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403268"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745042"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>ICorDebugChain::EnumerateFrames 메서드
-가장 최근의 프레임부터 체인에 있는 모든 관리 되는 스택 프레임을 포함 하는 열거자를 가져옵니다.  
+가장 최근의 프레임부터 체인의 모든 관리 되는 스택 프레임을 포함 하는 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumerateFrames (  
     [out] ICorDebugFrameEnum **ppFrames  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppFrames`  
- [out] 스택 프레임에 대 한 열거자를 ICorDebugFrameEnum 개체의 주소에 대 한 포인터입니다.  
+ [out] 스택 프레임에 대 한 열거자는 ICorDebugFrameEnum 개체의 주소에 대 한 포인터입니다.  
   
 ## <a name="remarks"></a>설명  
- 체인의 스레드에 대 한 실제 호출 스택을 나타냅니다.  
+ 체인 스레드의 실제 호출 스택을 나타냅니다.  
   
- `EnumerateFrames` 관리 되는 체인에 대 한 메서드를 호출 해야 합니다. 디버깅 API는 관리 되지 않는 체인에 포함 된 프레임을 가져오기 위한 메서드를 제공 하지 않습니다. 디버거는이 정보를 가져오는 다른 방법을 사용 해야 합니다.  
+ `EnumerateFrames` 관리 되는 체인에 대해서만 메서드를 호출 해야 합니다. 디버깅 API에서 관리 되지 않는 체인에 포함 된 프레임을 가져오기 위한 메서드를 제공 하지 않습니다. 디버거는이 정보를 얻으려면 다른 수단을 사용 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -2,20 +2,20 @@
 title: 집계 정식 함수
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: e4772176130fc72a22645462921c90dd5b7967b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3f4bb84c45e503fc0018e7869f3b41ddab4581a6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506640"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251349"
 ---
 # <a name="aggregate-canonical-functions"></a>집계 정식 함수
 
 집계는 일련의 입력 값을 단일 값으로 줄이는 식입니다. 집계는 일반적으로 SELECT 식의 GROUP BY 절과 함께 사용되며 사용할 수 있는 위치에 대한 제약 조건이 있습니다.
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Aggegate Entity SQL 정식 함수
+## <a name="aggregate-entity-sql-canonical-functions"></a>집계 Entity SQL 정식 함수
 
-집계 Entity SQL 정식 함수는 다음과 같습니다.
+다음은 집계 Entity SQL 정식 함수입니다.
 
 ### <a name="avgexpression"></a>Avg(expression)
 
@@ -27,11 +27,11 @@ null이 아닌 값의 평균을 반환합니다.
 
 **반환 값**
 
-유형의 `expression`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+의 `expression`형식 이거나 `null` , 모든 입력 값이 `null` 값인 경우입니다.
 
 **예제**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount(expression)
@@ -48,10 +48,10 @@ null 값과 중복 값을 비롯한 집계의 크기를 반환합니다.
 
 **예제**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Count(expression) 
+### <a name="countexpression"></a>Count(expression)
 
 null 값과 중복 값을 비롯한 집계의 크기를 반환합니다.
 
@@ -78,7 +78,7 @@ null이 아닌 값의 최대값을 반환합니다.
 
 **반환 값**
 
-유형의 `expression`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+의 `expression`형식 이거나 `null` , 모든 입력 값이 `null` 값인 경우입니다.
 
 **예제**
 
@@ -95,7 +95,7 @@ null이 아닌 값의 최소값을 반환합니다.
 
 **반환 값**
 
-유형의 `expression`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+의 `expression`형식 이거나 `null` , 모든 입력 값이 `null` 값인 경우입니다.
 
 **예제**
 
@@ -129,7 +129,7 @@ null이 아닌 값의 표준 편차를 반환합니다.
 
 **반환 값**
 
-A `Double`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
 
 **예제**
 
@@ -146,7 +146,7 @@ null이 아닌 값의 합계를 반환합니다.
 
 **반환 값**
 
-A `Double`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
 
 **예제**
 
@@ -163,7 +163,7 @@ null이 아닌 모든 값의 분산을 반환합니다.
 
 **반환 값**
 
-A `Double`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
 
 **예제**
 
@@ -180,18 +180,18 @@ null이 아닌 모든 값의 모집단에 대한 분산을 반환합니다.
 
 **반환 값**
 
-A `Double`, 또는 `null` 모든 입력된 값이 `null` 값입니다.
+`null` 이거나 `Double` ,`null` 모든 입력 값이 값 이면입니다.
 
 **예제**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
-동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다. 자세한 내용은 [Entity Framework 함수에 대 한 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)합니다.
+동일한 기능을 Microsoft SQL 클라이언트 관리 공급자에서 사용할 수 있습니다. 자세한 내용은 [Entity Framework 함수에 대 한 SqlClient](../sqlclient-for-ef-functions.md)를 참조 하세요.
 
 ## <a name="collection-based-aggregates"></a>컬렉션 기반 집계
 
-컬렉션 기반 집계(컬렉션 함수)는 컬렉션에 대해 작업을 수행하고 값을 반환합니다. 예를 들어 주문 모든 주문의 컬렉션인 경우 다음 식 사용 하 여 가장 빠른 운송 날짜를 계산할 수 있습니다.
+컬렉션 기반 집계(컬렉션 함수)는 컬렉션에 대해 작업을 수행하고 값을 반환합니다. 예를 들어 ORDERS가 모든 주문의 컬렉션인 경우 다음 식을 사용 하 여 가장 빠른 운송 날짜를 계산할 수 있습니다.
 
 ```sql
 min(select value o.ShipDate from LOB.Orders as o)
@@ -206,11 +206,11 @@ min(select value o.ShipDate from LOB.Orders as o)
 다음 예제에서는 각 제품에 대해 주문된 평균 수량을 계산합니다.
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
-SELECT 식에서 명시적 group by 절이 없는 그룹 기반 집계를 가질 수는 것입니다. 이 경우 모든 요소가 단일 그룹으로 처리 됩니다. 이 상수를 기준으로 그룹화를 지정 하는 것과 같습니다. 예를 들어, 다음 식을 살펴보겠습니다.
+SELECT 식에서 group by 절을 명시적으로 사용 하지 않고 그룹 기반 집계가 있을 수 있습니다. 이 경우 모든 요소는 단일 그룹으로 처리 됩니다. 이는 상수를 기준으로 그룹화를 지정 하는 것과 같습니다. 예를 들어, 다음 식을 살펴보겠습니다.
 
 ```sql
 select avg(ol.Quantity) from LOB.OrderLines as ol
@@ -222,10 +222,10 @@ select avg(ol.Quantity) from LOB.OrderLines as ol
 select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 ```
 
-그룹 기반 집계 내의 식은 WHERE 절 식에 표시되는 이름 결정 범위 내에서 계산됩니다.
+그룹 기반 집계 내의 식은 WHERE 절 식에 표시되는 이름 확인 범위 내에서 계산됩니다.
 
-와 같이 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)], 그룹 기반 집계는 모두를 지정할 수도 있습니다 한정자 나 DISTINCT 한정자입니다. DISTINCT 한정자를 지정하면 집계가 계산되기 전에 집계 입력 컬렉션에서 중복 항목이 제거됩니다. ALL 한정자를 지정하거나 어떠한 한정자도 지정하지 않으면 중복 항목이 제거되지 않습니다.  
+Transact-sql에서와 마찬가지로 그룹 기반 집계도 ALL 또는 DISTINCT 한정자를 지정할 수 있습니다. DISTINCT 한정자를 지정하면 집계가 계산되기 전에 집계 입력 컬렉션에서 중복 항목이 제거됩니다. ALL 한정자를 지정하거나 어떠한 한정자도 지정하지 않으면 중복 항목이 제거되지 않습니다.
 
 ## <a name="see-also"></a>참고자료
 
-[정식 함수](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
+- [정식 함수](canonical-functions.md)

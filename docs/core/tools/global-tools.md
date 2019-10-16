@@ -2,20 +2,20 @@
 title: .NET Core Global Tool
 description: .NET Core Global Tool의 개요와 사용 가능한 .NET Core CLI 명령입니다.
 author: KathleenDollard
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 077ffd53f1ba2988c80a637aaa109a66139736b0
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.custom: seodec18
+ms.openlocfilehash: 40a0aabcf523e8dac9a3ad226064bbb3c1b3ce5b
+ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697094"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71332015"
 ---
 # <a name="net-core-global-tools-overview"></a>.NET Core Global Tool 개요
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
-.NET Core Global Tool은 콘솔 응용 프로그램을 포함하는 특별한 NuGet 패키지입니다. Global Tool은 컴퓨터에서 PATH 환경 변수 또는 사용자 지정 위치에 포함된 기본 위치에 설치할 수 있습니다.
+.NET Core Global Tool은 콘솔 애플리케이션을 포함하는 특별한 NuGet 패키지입니다. Global Tool은 컴퓨터에서 PATH 환경 변수 또는 사용자 지정 위치에 포함된 기본 위치에 설치할 수 있습니다.
 
 .NET Core Global Tool을 사용하려는 경우:
 
@@ -49,7 +49,7 @@ ms.locfileid: "34697094"
 
 Global Tool을 설치하려면 [dotnet tool install](dotnet-tool-install.md) .NET Core CLI 명령을 사용합니다. 다음 예제에서는 기본 위치에 Global Tool을 설치하는 방법을 보여 줍니다.
 
-```console
+```dotnetcli
 dotnet tool install -g dotnetsay
 ```
 
@@ -57,20 +57,20 @@ dotnet tool install -g dotnetsay
 
 이전 릴리스 버전 또는 특정 버전의 도구를 설치하려는 경우 다음 형식을 사용하여 버전 번호를 지정할 수 있습니다.
 
-```console
+```dotnetcli
 dotnet tool install -g <package-name> --version <version-number>
 ```
 
 설치에 성공하면 다음 예와 같이 도구와 설치된 버전을 호출하는 데 사용되는 명령을 보여 주는 메시지가 표시됩니다.
 
-```
+```output
 You can invoke the tool using the following command: dotnetsay
 Tool 'dotnetsay' (version '2.0.0') was successfully installed.
 ```
 
 Global Tool은 기본 디렉터리 또는 특정 위치에 설치할 수 있습니다. 기본 디렉터리는 다음과 같습니다.
 
-| OS          | Path                          |
+| OS          | 경로                          |
 |-------------|-------------------------------|
 | Linux/macOS | `$HOME/.dotnet/tools`         |
 | Windows     | `%USERPROFILE%\.dotnet\tools` |
@@ -94,7 +94,7 @@ dotnetsay
 
 도구 작성자가 도구를 `dotnet` 프롬프트 컨텍스트에 표시하려면 도구를 다음과 같이 `dotnet <command>`로 호출하는 방식으로 작성했을 수 있습니다.
 
-```console
+```dotnetcli
 dotnet doc
 ```
 
@@ -107,31 +107,6 @@ dotnet doc
 dotnet <command> --help
 ```
 
-### <a name="what-could-go-wrong"></a>발생 가능한 문제
-
-Global Tool은 [프레임워크 종속 응용 프로그램](../deploying/index.md#framework-dependent-deployments-fdd)입니다. 즉, 컴퓨터에 설치된 .NET Core 런타임에 의존합니다. 예상된 런타임을 찾을 수 없으면 다음과 같은 일반적인 .NET Core 런타임 롤포워드 규칙을 따릅니다.
-
-* 응용 프로그램은 지정된 주 및 부 버전의 가장 높은 패치 릴리스로 롤포워드합니다.
-* 일치하는 주 및 부 버전 번호와 일치하는 런타임이 없으면 다음으로 높은 부 버전이 사용됩니다.
-* 런타임의 미리 보기 버전 간 또는 미리 보기 버전과 릴리스 버전 간에는 롤포워드가 발생하지 않습니다. 따라서 미리 보기 버전을 사용하여 만든 Global Tool은 작성자가 다시 빌드하여 다시 게시하고 다시 설치해야 합니다.
-* .NET Core 2.1 미리 보기 1에서 만든 Global Tool에서 추가 문제가 발생할 수 있습니다. 자세한 내용은 [.NET Core 2.1 미리 보기 2 알려진 문제](https://github.com/dotnet/core/blob/master/release-notes/2.1/Preview/2.1.0-preview2-known-issues.md)를 참조하세요.
-
-응용 프로그램이 적절한 런타임을 찾을 수 없으면 실행에 실패하고 오류를 보고합니다.
-
-발생할 수 있는 또 다른 문제는 이전 미리 보기에서 만들어진 Global Tool이 현재 설치된 .NET Core 런타임으로 실행되지 않는 경우입니다. 다음 명령을 사용하여 컴퓨터에 설치된 런타임을 확인할 수 있습니다.
-
-```console
-dotnet --list-runtimes
-```
-
-Global Tool 작성자에게 문의하여 업데이트된 버전 번호로 NuGet에 해당 도구 패키지를 다시 컴파일하고 다시 게시할 수 있는지 확인합니다. NuGet에서 패키지를 업데이트하면 복사본을 업데이트할 수 있습니다.
-
-.NET Core CLI는 처음 사용 시 PATH 환경 변수에 기본 위치를 추가하려고 시도합니다. 그러나 다음과 같이 위치가 PATH에 자동으로 추가되지 않는 몇 가지 시나리오가 있습니다.
-
-* `DOTNET_SKIP_FIRST_TIME_EXPERIENCE` 환경 변수를 설정한 경우
-* macOS에서 *.tar.gz* 파일을 사용하여 NET Core SDK를 설치하고 *.pkg* 파일을 설치하지 않은 경우
-* Linux에서는 셸 환경 파일을 편집하여 PATH를 구성해야 합니다.
-
 ## <a name="other-cli-commands"></a>기타 CLI 명령
 
 .NET Core SDK에는 .NET Core Global Tool을 지원하는 다른 명령이 포함되어 있습니다. 다음 옵션 중 하나와 함께 `dotnet tool` 명령을 사용합니다.
@@ -141,24 +116,28 @@ Global Tool 작성자에게 문의하여 업데이트된 버전 번호로 NuGet�
 
 Global Tool에 사용할 수 있는 명령을 확인하려면:
 
-```console
+```dotnetcli
 dotnet tool --help
 ```
 
 Global Tool을 업데이트하려면 원래 버전을 제거하고 안정적인 최신 버전으로 다시 설치해야 합니다. Global Tool을 업데이트하려면 [dotnet tool update](dotnet-tool-update.md) 명령을 사용합니다.
 
-```console
+```dotnetcli
 dotnet tool update -g <packagename>
 ```
 
 [dotnet tool uninstall](dotnet-tool-uninstall.md)을 사용하여 Global Tool을 제거합니다.
 
-```console
+```dotnetcli
 dotnet tool uninstall -g <packagename>
 ```
 
 현재 컴퓨터에 설치된 모든 Global Tool과 해당 버전 및 명령을 표시하려면 [dotnet tool list](dotnet-tool-list.md) 명령을 사용합니다.
 
-```console
+```dotnetcli
 dotnet tool list -g
 ```
+
+## <a name="see-also"></a>참고 항목
+
+* [.NET Core 도구 사용 문제 해결](troubleshoot-usage-issues.md)

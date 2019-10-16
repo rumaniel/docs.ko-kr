@@ -2,12 +2,12 @@
 title: XDocument 쿼리와 XElement 쿼리 비교(C#)
 ms.date: 07/20/2015
 ms.assetid: 46221ff5-62ee-4de8-93ba-66465facb5c1
-ms.openlocfilehash: 991cbf14fde1c2e3e1e76ef10066db3408ca51c5
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 475c77934ad535bad9ef79ff58bbddf991dc8f5c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44200830"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253133"
 ---
 # <a name="querying-an-xdocument-vs-querying-an-xelement-c"></a>XDocument 쿼리와 XElement 쿼리 비교(C#)
 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>를 통해 문서를 로드하는 경우에는 <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>를 통해 로드하는 경우와 약간 다르게 쿼리를 작성해야 합니다.  
@@ -37,7 +37,7 @@ foreach (XElement e in childList)
   
  예상대로 이 예제는 다음과 같이 출력됩니다.  
   
-```  
+```output  
 Querying tree loaded with XElement.Load  
 ----  
 <Child1>1</Child1>  
@@ -67,7 +67,7 @@ foreach (XElement e in childList)
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 Querying tree loaded with XDocument.Load  
 ----  
 <Root>  
@@ -101,7 +101,7 @@ foreach (XElement e in childList)
   
  이 쿼리는 이제 <xref:System.Xml.Linq.XElement>에서 시작하는 트리에 대한 쿼리와 동일한 방식으로 수행됩니다. 예제의 결과는 다음과 같습니다.  
   
-```  
+```output  
 Querying tree loaded with XDocument.Load  
 ----  
 <Child1>1</Child1>  
@@ -109,6 +109,3 @@ Querying tree loaded with XDocument.Load
 <Child3>3</Child3>  
 ```  
   
-## <a name="see-also"></a>참고 항목
-
-- [기본 쿼리(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

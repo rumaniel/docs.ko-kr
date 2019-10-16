@@ -6,19 +6,19 @@ helpviewer_keywords:
 - codepage compiler option [Visual Basic]
 - -codepage compiler option [Visual Basic]
 ms.assetid: be36ec33-6800-4505-838c-4124564f5cc9
-ms.openlocfilehash: fda75383435fdff718d1d50bc8583afc9858e7e2
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: e4cdc27ab021fe055f157b78946538f2b76870e1
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46562179"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002365"
 ---
 # <a name="-codepage-visual-basic"></a>-codepage (Visual Basic)
 컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 -codepage:id  
 ```  
   
@@ -26,16 +26,16 @@ ms.locfileid: "46562179"
   
 |용어|정의|  
 |---|---|  
-|`id`|필수. 컴파일러에서 지정한 코드 페이지를 사용 하 여 `id` 원본 파일의 인코딩을 해석 합니다.|  
+|`id`|필수. 컴파일러는 `id`으로 지정 된 코드 페이지를 사용 하 여 소스 파일의 인코딩을 해석 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 특정 인코딩을 사용 하 여 저장 된 소스 코드를 컴파일하는 데 사용할 수 있습니다 `-codepage` 사용할 코드 페이지를 지정 합니다. `-codepage` 옵션 컴파일에서 모든 소스 코드 파일에 적용 됩니다. 자세한 내용은 [.NET Framework의 문자 인코딩](../../../standard/base-types/character-encoding.md)합니다.  
+ 특정 인코딩으로 저장 된 소스 코드를 컴파일하려면 `-codepage`을 사용 하 여 사용할 코드 페이지를 지정할 수 있습니다. @No__t-0 옵션은 컴파일의 모든 소스 코드 파일에 적용 됩니다. 자세한 내용은 [.NET Framework의 문자 인코딩](../../../standard/base-types/character-encoding.md)을 참조 하세요.  
   
- `-codepage` 옵션의 현재 ANSI 코드 페이지, Unicode 또는 u t F-8을 사용 하 여 서명을 사용 하 여 소스 코드 파일을 저장 한 경우에 필요 하지 않습니다. Visual Studio 저장 모든 소스 코드 파일의 현재 ANSI 코드 페이지를 사용 하 여 기본적으로 사용자에서 다른 인코딩을 지정 하지 않는 경우는 **Encoding** 대화 상자. Visual Studio에서 사용 하는 **Encoding** 대화 상자를 다른 코드 페이지를 사용 하 여 저장 하는 소스 코드 파일을 엽니다.  
+ 소스 코드 파일이 시그니처와 함께 현재 ANSI 코드 페이지, 유니코드 또는 u t f-8을 사용 하 여 저장 된 경우에는 `-codepage` 옵션이 필요 하지 않습니다. 사용자가 **인코딩** 대화 상자에서 다른 인코딩을 지정 하지 않는 한 Visual Studio는 기본적으로 현재 ANSI 코드 페이지를 사용 하 여 모든 소스 코드 파일을 저장 합니다. Visual Studio는 **인코딩** 대화 상자를 사용 하 여 다른 코드 페이지로 저장 된 소스 코드 파일을 엽니다.  
   
 > [!NOTE]
->  `-codepage` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 있는 명령줄에서 컴파일할 경우에 사용할 수 있는 것입니다.  
+> @No__t-0 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
 - [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)

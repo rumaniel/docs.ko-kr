@@ -10,18 +10,18 @@ helpviewer_keywords:
 ms.assetid: 11ee0b38-d663-4617-b793-35eb6c64e9fc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86376919d7456167c58ada4145d213b39e050e33
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d9c90a3bd272b54d2884d013e62123dd67d836e3
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702779"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960049"
 ---
 # <a name="eventwaithandle"></a>EventWaitHandle
 <xref:System.Threading.EventWaitHandle> 클래스를 사용하면 여러 스레드가 신호를 보내고 신호를 대기하여 서로 통신할 수 있습니다. 이벤트 대기 핸들(단순히 이벤트라고도 함)은 하나 이상의 대기 스레드를 해제하기 위해 신호를 보낼 수 있는 대기 핸들입니다. 신호를 받은 후 이벤트 대기 핸들은 수동으로 또는 자동으로 다시 설정됩니다. <xref:System.Threading.EventWaitHandle> 클래스는 로컬 이벤트 대기 핸들(로컬 이벤트) 또는 명명된 시스템 이벤트 대기 핸들(모든 프로세스에 표시되는 명명된 이벤트 또는 시스템 이벤트)을 나타낼 수 있습니다.  
   
 > [!NOTE]
->  이벤트 대기 핸들은 .NET [이벤트](../events/index.md)가 아닙니다. 관련된 대리자 또는 이벤트 처리기가 없습니다. “이벤트”라는 단어는 기존에는 운영 체제 이벤트라고 했고 대기 핸들에 신호를 보내는 동작이 이벤트가 발생한 대기 스레드를 나타내기 때문에 이벤트를 설명하는 데 사용됩니다.  
+> 이벤트 대기 핸들은 .NET [이벤트](../events/index.md)가 아닙니다. 관련된 대리자 또는 이벤트 처리기가 없습니다. “이벤트”라는 단어는 기존에는 운영 체제 이벤트라고 했고 대기 핸들에 신호를 보내는 동작이 이벤트가 발생한 대기 스레드를 나타내기 때문에 이벤트를 설명하는 데 사용됩니다.  
   
  로컬 및 명명된 이벤트 대기 핸들은 모두 <xref:Microsoft.Win32.SafeHandles.SafeWaitHandle> 래퍼로 보호되는 시스템 동기화 개체를 사용하여 리소스가 해제되도록 합니다. <xref:System.Threading.WaitHandle.Dispose%2A> 메서드를 사용하여 개체 사용을 완료했을 때 즉시 리소스를 해제할 수 있습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "46702779"
  자동 재설정 이벤트는 일반적으로 한 번에 하나의 스레드에만 리소스에 대한 액세스를 제공하는 데 사용됩니다. 스레드는 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 호출하여 리소스를 요청합니다. 다른 스레드가 대기 핸들을 보유하고 있지 않으면 메서드는 `true`를 반환하고 호출 스레드가 리소스를 제어합니다.  
   
 > [!IMPORTANT]
->  모든 동기화 메커니즘과 마찬가지로 보호된 리소스에 액세스하기 전에 모든 코드 경로가 적절한 대기 핸들에서 대기하도록 해야 합니다. 스레드 동기화는 협조적입니다.  
+> 모든 동기화 메커니즘과 마찬가지로 보호된 리소스에 액세스하기 전에 모든 코드 경로가 적절한 대기 핸들에서 대기하도록 해야 합니다. 스레드 동기화는 협조적입니다.  
   
  대기 중인 스레드가 없을 때 신호를 받은 자동 재설정 이벤트는 스레드가 이 이벤트에서 대기를 시도할 때까지 신호를 받은 것으로 유지됩니다. 이벤트는 스레드를 해제하고 즉시 다시 설정되어 후속 스레드를 차단합니다.  
   
@@ -53,19 +53,18 @@ ms.locfileid: "46702779"
  이벤트 이름을 지정하는 생성자 중 하나를 사용하여 명명된 시스템 이벤트를 나타내는 <xref:System.Threading.EventWaitHandle> 개체를 만들 수 있습니다.  
   
 > [!NOTE]
->  명명된 이벤트는 시스템 전체 이벤트이므로 같은 명명된 이벤트를 나타내는 <xref:System.Threading.EventWaitHandle> 개체를 여러 개 사용할 수 있습니다. 생성자 또는 <xref:System.Threading.EventWaitHandle.OpenExisting%2A> 메서드를 호출할 때마다 새 <xref:System.Threading.EventWaitHandle> 개체가 만들어집니다. 같은 이름을 반복적으로 지정하면 같은 명명된 이벤트를 나타내는 개체가 여러 개 만들어집니다.  
+> 명명된 이벤트는 시스템 전체 이벤트이므로 같은 명명된 이벤트를 나타내는 <xref:System.Threading.EventWaitHandle> 개체를 여러 개 사용할 수 있습니다. 생성자 또는 <xref:System.Threading.EventWaitHandle.OpenExisting%2A> 메서드를 호출할 때마다 새 <xref:System.Threading.EventWaitHandle> 개체가 만들어집니다. 같은 이름을 반복적으로 지정하면 같은 명명된 이벤트를 나타내는 개체가 여러 개 만들어집니다.  
   
  명명된 이벤트를 사용할 경우 주의하는 것이 좋습니다. 이러한 이벤트는 시스템 전체 이벤트이므로 같은 이름을 사용하는 다른 프로세스가 예기치 않게 스레드를 차단할 수 있습니다. 그러면 동일 컴퓨터에서 실행되는 악성 코드가 이를 악용해 서비스 거부 공격을 수행할 수 있습니다.  
   
  명명된 이벤트를 나타내는 <xref:System.Threading.EventWaitHandle> 개체를 보호하려면 액세스 제어 보안을 사용합니다. 이때 <xref:System.Security.AccessControl.EventWaitHandleSecurity> 개체를 지정하는 생성자를 사용하는 것이 좋습니다. <xref:System.Threading.EventWaitHandle.SetAccessControl%2A> 메서드를 사용하여 액세스 제어 보안을 적용할 수도 있지만 이렇게 하면 이벤트 작성 시간과 보호가 적용되는 시간 사이에 취약한 기간이 생기게 됩니다. 액세스 제어 보안을 통해 이벤트를 보호하면 악의적인 공격을 방지할 수는 있지만 의도하지 않은 이름 충돌 문제는 해결되지 않습니다.  
   
 > [!NOTE]
->  <xref:System.Threading.EventWaitHandle> 클래스와 달리 파생된 클래스 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>는 로컬 대기 핸들만 나타낼 수 있습니다. 명명된 시스템 이벤트를 나타낼 수 없습니다.  
+> <xref:System.Threading.EventWaitHandle> 클래스와 달리 파생된 클래스 <xref:System.Threading.AutoResetEvent> 및 <xref:System.Threading.ManualResetEvent>는 로컬 대기 핸들만 나타낼 수 있습니다. 명명된 시스템 이벤트를 나타낼 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Threading.EventWaitHandle>  
-- <xref:System.Threading.WaitHandle>  
-- <xref:System.Threading.AutoResetEvent>  
-- <xref:System.Threading.ManualResetEvent>  
-- [EventWaitHandle, AutoResetEvent, CountdownEvent, ManualResetEvent](../../../docs/standard/threading/eventwaithandle-autoresetevent-countdownevent-manualresetevent.md)
+- <xref:System.Threading.EventWaitHandle>
+- <xref:System.Threading.WaitHandle>
+- <xref:System.Threading.AutoResetEvent>
+- <xref:System.Threading.ManualResetEvent>

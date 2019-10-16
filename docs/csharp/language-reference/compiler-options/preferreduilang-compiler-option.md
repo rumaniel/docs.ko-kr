@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /preferreduilang compiler option [C#]
 - -preferreduilang compiler option [C#]
 ms.assetid: 68b2462f-6778-48d7-8052-62805fe8e02c
-ms.openlocfilehash: a1fbbb8415e5e3405f039489aa071b0624065a9d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7ebafcf446c9033c93e0c5fa5e11ea2930bd2e1e
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43530145"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602565"
 ---
 # <a name="-preferreduilang-c-compiler-options"></a>-preferreduilang(C# 컴파일러 옵션)
 `-preferreduilang` 컴파일러 옵션을 사용하여 C# 컴파일러에서 오류 메시지 등의 출력을 표시하는 언어를 지정할 수 있습니다.  
@@ -39,4 +39,4 @@ csc.exe -preferreduilang:ja-JP
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)
+- [C# 컴파일러 옵션](./index.md)

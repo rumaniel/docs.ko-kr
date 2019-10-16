@@ -1,16 +1,16 @@
 ---
-title: 추적을 사용하여 응용 프로그램 문제 해결
+title: 추적을 사용하여 애플리케이션 문제 해결
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 684fd79e2aa8062ddeb183576cb449bf838aa6c3
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.openlocfilehash: a173596b5b4bfbc97a1d013251d654d8073a5c10
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33809159"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964478"
 ---
-# <a name="using-tracing-to-troubleshoot-your-application"></a>추적을 사용하여 응용 프로그램 문제 해결
-이 단원에는 추적을 사용하여 응용 프로그램 문제를 해결할 수 있는 방법에 대해 설명하는 항목이 포함되어 있습니다.  
+# <a name="using-tracing-to-troubleshoot-your-application"></a>추적을 사용하여 애플리케이션 문제 해결
+이 단원에는 추적을 사용하여 애플리케이션 문제를 해결할 수 있는 방법에 대해 설명하는 항목이 포함되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [추적 및 메시지 로깅에 권장되는 설정](../../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)  
@@ -23,15 +23,16 @@ ms.locfileid: "33809159"
  WCF에서 내보낸 주요 추적의 목록입니다.  
   
  [클라이언트에서의 디버깅](../../../../../docs/framework/wcf/diagnostics/tracing/debugging-on-the-client.md)  
- 클라이언트가 응용 프로그램을 디버깅할 수 있도록 합니다.  
+ 클라이언트가 애플리케이션을 디버깅할 수 있도록 합니다.  
   
- [종단 간 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
- 예를 들어 E2E WCF 시나리오에 사용 하는 추적, 동기 wsHttp 요청-회신, 및 비동기 TCP 단방향 요청에 설명 합니다.  
+ [엔드투엔드 추적 시나리오](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)  
+ 예를 들어 E2E WCF 시나리오에 사용 되는 추적, 동기 wsHttp 요청-회신, 및 비동기 TCP 단방향 요청에 설명 합니다.  
   
  [사용자 코드 추적 내보내기](../../../../../docs/framework/wcf/diagnostics/tracing/emitting-user-code-traces.md)  
  사용자 코드에서 프로그래밍 방식으로 추적을 내보내는 방법에 대해 설명합니다. 이 방법을 통해 나중에 진단을 위해 사용하거나 WCF 추적과 상호 연결하여 사용할 계측 데이터를 사전에 만들 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)  
- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [종단 간 추적](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
+## <a name="see-also"></a>참고자료
+
+- [Service Trace Viewer 도구(SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
+- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [엔드투엔드 추적](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)

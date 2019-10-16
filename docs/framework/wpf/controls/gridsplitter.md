@@ -8,18 +8,18 @@ helpviewer_keywords:
 - GridSplitter control [WPF]
 - content [WPF], GridSplitter control
 ms.assetid: 98b007e8-ea6b-41b5-8120-ca7134e8239f
-ms.openlocfilehash: d173843c17a1881224cffadcfd1538547ce763b3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fd1b50e4c3f79218de2d0d54f98d645ebb5fd61
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911432"
 ---
 # <a name="gridsplitter"></a>GridSplitter
-<xref:System.Windows.Controls.GridSplitter> 간격의 열 또는 행을 재배포는 <xref:System.Windows.Controls.Grid> 제어 합니다.  
+합니다 <xref:System.Windows.Controls.GridSplitter> 의 열 또는 행에 대 한 간격을 재배포는 <xref:System.Windows.Controls.Grid> 제어 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법 항목](../../../../docs/framework/wpf/controls/gridsplitter-how-to-topics.md)  
+ [방법 항목](gridsplitter-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.GridSplitter>  

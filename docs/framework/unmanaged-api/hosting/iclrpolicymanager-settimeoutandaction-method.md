@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c375fdffacccb27c20878c4e6adef9dd947148e1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 120dbfdc463a7441cce8ca7d87561998a8e28eda
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33435526"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916962"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction 메서드
-지정된 된 작업에 대 한 제한 시간 값을 설정 하 고 공용 언어 런타임 (CLR)는 작업이 수행 될 때 수행 해야 하는 정책 동작을 지정 합니다.  
+지정 된 작업에 대 한 시간 제한 값을 설정 하 고, 작업이 발생할 때 CLR (공용 언어 런타임)이 수행 해야 하는 정책 동작을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetTimeoutAndAction (  
     [in] EClrOperation operation,  
     [in] DWORD dwMilliseconds,  
@@ -37,54 +37,55 @@ HRESULT SetTimeoutAndAction (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `operation`  
- [in] 중 하나는 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 를 설정할 시간 제한 및 정책에 대 한 작업을 나타내는 값을 `action`합니다. 다음 값이 지원 됩니다.  
+ 진행 제한 시간 및 `action` 정책을 설정할 작업을 나타내는 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) 값 중 하나입니다. 다음 값이 지원 됩니다.  
   
--   OPR_AppDomainUnload  
+- OPR_AppDomainUnload  
   
--   OPR_ProcessExit  
+- OPR_ProcessExit  
   
--   OPR_ThreadRudeAbortInCriticalRegion  
+- OPR_ThreadRudeAbortInCriticalRegion  
   
--   OPR_ThreadRudeAbortInNonCriticalRegion  
+- OPR_ThreadRudeAbortInNonCriticalRegion  
   
  `dwMilliseconds`  
- [in] 새 시간 제한 값, 시간 (밀리초)입니다. 값이 무한 원인 `operation` 시간 초과를 하지 않습니다.  
+ 진행 새 시간 제한 값 (밀리초)입니다. 값이 INFINITE 이면 `operation` 시간 제한이 없습니다.  
   
  `action`  
- [in] 중 하나는 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) CLR 때 수행 해야 정책 작업을 나타내는 값을 `operation` 발생 합니다.  
+ 진행 [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) 값 중 하나로, CLR이 발생할 때 `operation` 수행 해야 하는 정책 작업을 나타냅니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`SetTimeoutAndAction` 성공적으로 반환 합니다.|  
-|HOST_E_CLRNOTAVAILABLE|CLR은 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
+|S_OK|`SetTimeoutAndAction`성공적으로 반환 되었습니다.|  
+|HOST_E_CLRNOTAVAILABLE|CLR이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
-|HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
-|HOST_E_ABANDONED|차단 된 스레드 이벤트 취소 되었습니다 또는 파이버가 기다리던 합니다.|  
-|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. E_FAIL을 반환 하는 메서드 후 CLR을 프로세스 내에서 사용할 수 없습니다. 호스팅 방법에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.|  
-|E_INVALIDARG|시간 초과 설정할 수 없습니다 지정 된 `operation`, 또는 잘못 된 값에 대 한 제공 된 `action`합니다.|  
+|HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
+|HOST_E_ABANDONED|차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.|  
+|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환한 후에는 프로세스 내에서 CLR을 더 이상 사용할 수 없습니다. 호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.|  
+|E_INVALIDARG|지정 `operation`된에 대 한 제한 시간을 설정할 수 없거나에 `action`잘못 된 값이 제공 된 경우|  
   
 ## <a name="remarks"></a>설명  
- `SetTimeoutAndAction` 기능을 캡슐화는 [iclrpolicymanager:: Settimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) 및 [iclrpolicymanager:: Setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) 메서드를 다음 두 가지 방법에 대 한 순차적 호출 대신 호출 될 수 있습니다.  
+ `SetTimeoutAndAction`는 [ICLRPolicyManager:: SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) 및 [ICLRPolicyManager:: SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) 메서드의 기능을 캡슐화 하며 이러한 두 메서드에 대 한 순차적 호출 대신 호출 될 수 있습니다.  
   
 > [!IMPORTANT]
->  CLR 작업에 대 한 제한 시간 동작으로 정책 작업 값 중 일부를 지정할 수 있습니다. 유효한 값에 대 한 이러한 두 가지 방법에 대 한 항목의 설명 섹션을 참조 하십시오.  
+> 모든 정책 동작 값을 CLR 작업의 시간 제한 동작으로 지정할 수 있는 것은 아닙니다. 유효한 값은 이러한 두 메서드에 대 한 항목의 설명 섹션을 참조 하세요.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [EClrOperation 열거형](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)  
- [EPolicyAction 열거형](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)  
- [ICLRPolicyManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)  
- [SetActionOnTimeout 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)  
- [Iclrpolicymanager:: Settimeoutandaction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeoutandaction-method.md)
+## <a name="see-also"></a>참고자료
+
+- [EClrOperation 열거형](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
+- [EPolicyAction 열거형](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [ICLRPolicyManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [SetActionOnTimeout 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)
+- [ICLRPolicyManager::SetTimeoutAndAction](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeoutandaction-method.md)

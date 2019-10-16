@@ -2,19 +2,19 @@
 title: EXCEPT(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 69cc23e5-3f8f-4b49-b20e-2f84ff11c80d
-ms.openlocfilehash: fb7f8040e9e310798b003ad02614cd464e996389
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: c4df8c2b72ee60a425c98c64a13a1e2d43d4506e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760208"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71833866"
 ---
 # <a name="except-entity-sql"></a>EXCEPT(Entity SQL)
 EXCEPT 피연산자 오른쪽 쿼리 식에서 반환되지 않은 모든 고유한 값 컬렉션을 EXCEPT 피연산자 왼쪽에 있는 쿼리 식에서 반환합니다. 모든 식은 형식이 같거나 기본 형식 또는 파생 형식이 `expression`이어야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```sql  
 expression EXCEPT expression  
 ```  
   
@@ -38,11 +38,12 @@ expression EXCEPT expression
 ## <a name="example"></a>예제  
  다음 Entity SQL 쿼리에서는 EXCEPT 연산자를 사용하여 두 쿼리 식에서 모든 고유한 값의 컬렉션을 반환합니다. 쿼리는 AdventureWorks Sales 모델을 기반으로 합니다. 이 쿼리를 컴파일하고 실행하려면 다음 단계를 수행하세요.  
   
-1.  [방법: StructuralType 결과를 반환하는 쿼리 실행](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)의 절차를 따릅니다.  
+1. @No__t-0How to: StructuralType 결과 @ no__t-0을 반환 하는 쿼리를 실행 합니다.  
   
-2.  다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
+2. 다음 쿼리를 `ExecuteStructuralTypeQuery` 메서드에 인수로 전달합니다.  
   
- [!code-csharp[DP EntityServices Concepts 2#EXCEPT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#except)]  
+ [!code-sql[DP EntityServices Concepts#EXCEPT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#except)]  
   
-## <a name="see-also"></a>참고 항목  
- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>참조
+
+- [엔터티 SQL 참조](entity-sql-reference.md)

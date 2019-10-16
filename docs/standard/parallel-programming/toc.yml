@@ -1,0 +1,136 @@
+- name: 병렬 프로그래밍
+  href: index.md
+  items:
+    - name: TPL(작업 병렬 라이브러리)
+      href: task-parallel-library-tpl.md
+      items:
+        - name: 데이터 병렬 처리
+          href: data-parallelism-task-parallel-library.md
+          items:
+            - name: '방법: 간단한 Parallel.For 루프 작성'
+              href: how-to-write-a-simple-parallel-for-loop.md
+            - name: '방법: 간단한 Parallel.ForEach 루프 작성'
+              href: how-to-write-a-simple-parallel-foreach-loop.md
+            - name: '방법: 스레드 로컬 변수를 사용하는 Parallel.For 루프 작성'
+              href: how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+            - name: '방법: 파티션 로컬 변수를 사용하여 Parallel.ForEach 루프 작성'
+              href: how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+            - name: '방법: Parallel.For 또는 ForEach 루프 취소'
+              href: how-to-cancel-a-parallel-for-or-foreach-loop.md
+            - name: '방법: 병렬 루프의 예외 처리'
+              href: how-to-handle-exceptions-in-parallel-loops.md
+            - name: '방법: 작은 루프 본문 속도 개선'
+              href: how-to-speed-up-small-loop-bodies.md
+            - name: '방법: 병렬 클래스를 사용하여 파일 디렉터리 반복'
+              href: how-to-iterate-file-directories-with-the-parallel-class.md
+        - name: 작업 기반 비동기 프로그래밍
+          href: task-based-asynchronous-programming.md
+          items:
+            - name: 연속 작업을 사용하여 작업 연결
+              href: chaining-tasks-by-using-continuation-tasks.md
+            - name: 연결된 자식 작업 및 분리된 자식 작업
+              href: attached-and-detached-child-tasks.md
+            - name: 작업 취소
+              href: task-cancellation.md
+            - name: 예외 처리
+              href: exception-handling-task-parallel-library.md
+            - name: '방법: Parallel.Invoke를 사용하여 병렬 작업 실행'
+              href: how-to-use-parallel-invoke-to-execute-parallel-operations.md
+            - name: '방법: 작업에서 값 반환'
+              href: how-to-return-a-value-from-a-task.md
+            - name: '방법: 작업 및 해당 자식 취소'
+              href: how-to-cancel-a-task-and-its-children.md
+            - name: '방법: 미리 계산된 작업 만들기'
+              href: how-to-create-pre-computed-tasks.md
+            - name: '방법: 병렬 작업을 사용하여 이진 트리 트래버스'
+              href: how-to-traverse-a-binary-tree-with-parallel-tasks.md
+            - name: '방법: 중첩된 작업 래핑 취소'
+              href: how-to-unwrap-a-nested-task.md
+            - name: '방법: 자식 작업이 부모 작업에 연결되지 않도록 방지'
+              href: how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+        - name: 데이터 흐름
+          href: dataflow-task-parallel-library.md
+          items:
+            - name: '방법: 데이터 흐름 블록에 메시지 쓰기 및 테이터 흐름 블록에서 메시지 읽기'
+              href: how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+            - name: '방법: 공급자-소비자 데이터 흐름 패턴 구현'
+              href: how-to-implement-a-producer-consumer-dataflow-pattern.md
+            - name: '방법: 데이터 흐름 블록에서 데이터를 받을 경우 작업 수행'
+              href: how-to-perform-action-when-a-dataflow-block-receives-data.md
+            - name: '연습: 데이터 흐름 파이프라인 만들기'
+              href: walkthrough-creating-a-dataflow-pipeline.md
+            - name: '방법: 데이터 흐름 블록 링크 끊기'
+              href: how-to-unlink-dataflow-blocks.md
+            - name: '연습: Windows Forms 애플리케이션에서 데이터 흐름 사용'
+              href: walkthrough-using-dataflow-in-a-windows-forms-application.md
+            - name: '방법: 데이터 흐름 블록 취소'
+              href: how-to-cancel-a-dataflow-block.md
+            - name: '연습: 사용자 지정 데이터 흐름 블록 형식 만들기'
+              href: walkthrough-creating-a-custom-dataflow-block-type.md
+            - name: '방법: JoinBlock을 사용하여 여러 소스에서 데이터 읽기'
+              href: how-to-use-joinblock-to-read-data-from-multiple-sources.md
+            - name: '방법: 데이터 흐름 블록의 병렬 처리 수준 지정'
+              href: how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+            - name: '방법: 데이터 흐름 블록에서 작업 스케줄러 지정'
+              href: how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+            - name: '연습: BatchBlock 및 BatchedJoinBlock을 사용하여 효율성 향상'
+              href: walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+        - name: TPL과 기타 비동기 패턴 사용
+          href: using-tpl-with-other-asynchronous-patterns.md
+          items:
+            - name: TPL 및 일반적인 .NET Framework 비동기 프로그래밍
+              href: tpl-and-traditional-async-programming.md
+            - name: '방법: 작업에서 EAP 패턴 래핑'
+              href: how-to-wrap-eap-patterns-in-a-task.md
+        - name: 데이터 및 작업 병렬 처리에서 발생할 수 있는 문제
+          href: potential-pitfalls-in-data-and-task-parallelism.md
+    - name: PLINQ(병렬 LINQ)
+      href: parallel-linq-plinq.md
+      items:
+        - name: PLINQ 소개
+          href: introduction-to-plinq.md
+        - name: PLINQ의 속도 향상 이해
+          href: understanding-speedup-in-plinq.md
+        - name: PLINQ에서 순서 유지
+          href: order-preservation-in-plinq.md
+        - name: PLINQ의 병합 옵션
+          href: merge-options-in-plinq.md
+        - name: PLINQ에서 발생할 수 있는 문제
+          href: potential-pitfalls-with-plinq.md
+        - name: '방법: 간단한 PLINQ 쿼리 만들기 및 실행'
+          href: how-to-create-and-execute-a-simple-plinq-query.md
+        - name: '방법: PLINQ 쿼리의 순서 제어'
+          href: how-to-control-ordering-in-a-plinq-query.md
+        - name: '방법: 병렬 및 순차적 LINQ 쿼리 결합'
+          href: how-to-combine-parallel-and-sequential-linq-queries.md
+        - name: '방법: PLINQ 쿼리의 예외 처리'
+          href: how-to-handle-exceptions-in-a-plinq-query.md
+        - name: '방법: PLINQ 쿼리 취소'
+          href: how-to-cancel-a-plinq-query.md
+        - name: '방법: 사용자 지정 PLINQ 집계 함수 작성'
+          href: how-to-write-a-custom-plinq-aggregate-function.md
+        - name: '방법: PLINQ에 실행 모드 지정'
+          href: how-to-specify-the-execution-mode-in-plinq.md
+        - name: '방법: PLINQ에서 병합 옵션 지정'
+          href: how-to-specify-merge-options-in-plinq.md
+        - name: '방법: PLINQ를 사용하여 파일 디렉터리 반복'
+          href: how-to-iterate-file-directories-with-plinq.md
+        - name: '방법: PLINQ 쿼리 성능 측정'
+          href: how-to-measure-plinq-query-performance.md
+        - name: PLINQ 데이터 샘플
+          href: plinq-data-sample.md
+    - name: 병렬 프로그래밍을 위한 데이터 구조
+      href: data-structures-for-parallel-programming.md
+    - name: 병렬 진단 도구
+      href: parallel-diagnostic-tools.md
+    - name: PLINQ 및 TPL에 대한 사용자 지정 파티셔너
+      href: custom-partitioners-for-plinq-and-tpl.md
+      items:
+        - name: '방법: 동적 파티션 구현'
+          href: how-to-implement-dynamic-partitions.md
+        - name: '방법: 정적 분할을 위한 파티셔너 구현'
+          href: how-to-implement-a-partitioner-for-static-partitioning.md
+    - name: PLINQ 및 TPL의 람다 식
+      href: lambda-expressions-in-plinq-and-tpl.md
+    - name: 추가 정보
+      href: for-further-reading-parallel-programming.md

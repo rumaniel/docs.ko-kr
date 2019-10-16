@@ -7,18 +7,18 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 5bb7a28e314d6c0b007c1579f371a26d0a714fce
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954377"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Forms 컨트롤의 특성
 .NET Framework는 사용자 지정 컨트롤 및 구성 요소의 멤버에 적용할 수 있는 다양한 특성을 제공합니다. 이러한 특성 중 일부는 클래스의 런타임 동작에 영향을 주고, 다른 일부는 디자인 타임 동작에 영향을 줍니다.  
   
 ## <a name="attributes-for-control-and-component-properties"></a>컨트롤 및 구성 요소 속성의 특성  
- 다음 표에서는 사용자 지정 컨트롤 및 구성 요소의 속성이나 다른 멤버에 적용할 수 있는 특성을 보여 줍니다. 이러한 특성 중 많은 부분을 사용하는 예제는 [방법: Windows Forms 컨트롤에서 특성 적용](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)을 참조하세요.  
+ 다음 표에서는 사용자 지정 컨트롤 및 구성 요소의 속성이나 다른 멤버에 적용할 수 있는 특성을 보여 줍니다. 이러한 특성을 사용 하는 예제를 참조 하세요. [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)합니다.  
   
 |특성|설명|  
 |---------------|-----------------|  
@@ -60,8 +60,9 @@ ms.locfileid: "48582322"
 |<xref:System.ComponentModel.ToolboxItemAttribute>|도구 상자 항목의 특성을 나타냅니다.|  
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|도구 상자 항목에 사용할 필터 문자열과 필터 형식을 지정합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Attribute>  
- [방법: Windows Forms 컨트롤에서 특성 적용](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)  
- [디자인 타임 지원 확장](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Attribute>
+- [방법: Windows Forms 컨트롤에서 특성 적용](how-to-apply-attributes-in-windows-forms-controls.md)
+- [디자인 타임 지원 확장](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [.NET Framework에서 사용자 지정 Windows Forms 컨트롤 개발](developing-custom-windows-forms-controls.md)

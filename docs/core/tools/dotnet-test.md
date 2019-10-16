@@ -1,15 +1,13 @@
 ---
-title: dotnet test 명령 - .NET Core CLI
+title: dotnet test 명령
 description: dotnet test 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: e80ba874ec8d0fbc49858719dc3b9b6e02254c78
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: c3115d546efb1f076ae9f9731f83a12183aa4154
+ms.sourcegitcommit: 55f438d4d00a34b9aca9eedaac3f85590bb11565
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46696458"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71182506"
 ---
 # <a name="dotnet-test"></a>dotnet test
 
@@ -21,26 +19,32 @@ ms.locfileid: "46696458"
 
 ## <a name="synopsis"></a>개요
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
 
-```console
+```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [--blame] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
-    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+    [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] 
+    [-v|--verbosity] [-- <RunSettings arguments>]
+
 dotnet test [-h|--help]
 ```
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
-```console
+```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [--collect] [-d|--diag] [-f|--framework] [--filter]
     [-l|--logger] [--no-build] [--no-restore] [-o|--output] [-r|--results-directory] [-s|--settings] [-t|--list-tests] [-v|--verbosity]
+
 dotnet test [-h|--help]
 ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
-```console
+```dotnetcli
 dotnet test [<PROJECT>] [-a|--test-adapter-path] [-c|--configuration] [-d|--diag] [-f|--framework] [--filter] [-l|--logger] [--no-build] [-o|--output] [-s|--settings] [-t|--list-tests]  [-v|--verbosity]
+
 dotnet test [-h|--help]
 ```
 
@@ -48,7 +52,7 @@ dotnet test [-h|--help]
 
 ## <a name="description"></a>설명
 
-`dotnet test` 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다. `dotnet test` 명령은 프로젝트에 대해 지정된 테스트 러너 콘솔 응용 프로그램을 시작합니다. 테스트 러너는 단위 테스트 프레임워크(예: MSTest, NUnit 또는 xUnit)에 대해 정의된 테스트를 실행하고 각 테스트의 성공 여부를 보고합니다. 모든 테스트에 성공하면 Test Runner가 종료 코드로 0을 반환합니다. 테스트가 하나라도 실패하면 1을 반환합니다. 테스트 러너와 단위 테스트 라이브러리는 NuGet 패키지로 패키지되고 프로젝트에 대한 일반적인 종속성으로 복원됩니다.
+`dotnet test` 명령은 지정된 프로젝트에서 단위 테스트를 실행하는 데 사용됩니다. `dotnet test` 명령은 프로젝트에 대해 지정된 테스트 러너 콘솔 애플리케이션을 시작합니다. 테스트 러너는 단위 테스트 프레임워크(예: MSTest, NUnit 또는 xUnit)에 대해 정의된 테스트를 실행하고 각 테스트의 성공 여부를 보고합니다. 모든 테스트에 성공하면 Test Runner가 종료 코드로 0을 반환합니다. 테스트가 하나라도 실패하면 1을 반환합니다. 테스트 러너와 단위 테스트 라이브러리는 NuGet 패키지로 패키지되고 프로젝트에 대한 일반적인 종속성으로 복원됩니다.
 
 테스트 프로젝트는 다음 샘플 프로젝트 파일에서 볼 수 있듯이 일반적인 `<PackageReference>` 요소를 사용하여 테스트 러너를 지정합니다.
 
@@ -118,7 +122,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-테스트를 실행할 때 사용할 설정입니다.
+테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -127,6 +131,14 @@ dotnet test [-h|--help]
 `-v|--verbosity <LEVEL>`
 
 명령의 세부 정보 표시 수준을 설정합니다. 허용되는 값은 `q[uiet]`, `m[inimal]`, `n[ormal]`, `d[etailed]`, `diag[nostic]`입니다.
+
+`RunSettings arguments`
+
+테스트를 위해 RunSettings 구성으로 전달되는 인수입니다. 인수는 “-- ” 뒤에 `[name]=[value]` 쌍으로 지정됩니다(-- 뒤 공백 주의). 공백은 여러 `[name]=[value]` 쌍을 구분하는 데 사용됩니다.
+
+예: `dotnet test -- MSTest.DeploymentEnabled=false MSTest.MapInconclusiveToFailed=True`
+
+RunSettings에 대한 자세한 내용은 [vstest.console.exe: Passing RunSettings args(vstest.console.exe: RunSettings 인수 전달)](https://github.com/Microsoft/vstest-docs/blob/master/docs/RunSettingsArguments.md)를 참조하세요.
 
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
 
@@ -180,7 +192,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-테스트를 실행할 때 사용할 설정입니다.
+테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -230,7 +242,7 @@ dotnet test [-h|--help]
 
 `-s|--settings <SETTINGS_FILE>`
 
-테스트를 실행할 때 사용할 설정입니다.
+테스트 실행에 사용할 `.runsettings` 파일입니다. [`.runsettings` 파일을 사용하여 단위 테스트를 구성합니다.](/visualstudio/test/configure-unit-tests-by-using-a-dot-runsettings-file)
 
 `-t|--list-tests`
 
@@ -242,7 +254,7 @@ dotnet test [-h|--help]
 
 ---
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
 현재 디렉터리에 있는 프로젝트에서 테스트를 실행합니다.
 
@@ -254,7 +266,7 @@ dotnet test [-h|--help]
 
 현재 디렉터리의 프로젝트에서 테스트를 실행하고 trx 형식으로 테스트 결과 파일을 생성합니다.
 
-`dotnet test --logger:trx`
+`dotnet test --logger trx`
 
 ## <a name="filter-option-details"></a>필터 옵션 세부 정보
 
@@ -285,7 +297,7 @@ dotnet test [-h|--help]
 
 | 연산자            | 함수 |
 | ------------------- | -------- |
-| <code>&#124;</code> | 또는       |
+| <code>&#124;</code> | 또는       |
 | `&`                 | AND      |
 
 조건부 연산자를 사용 하는 경우 식을 괄호로 묶을 수 있습니다(예: `(Name~TestMethod1) | (Name~TestMethod2)`).
@@ -294,5 +306,5 @@ dotnet test [-h|--help]
 
 ## <a name="see-also"></a>참고 항목
 
-* [프레임워크 및 대상](../../standard/frameworks.md)  
-* [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)
+- [프레임워크 및 대상](../../standard/frameworks.md)
+- [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)

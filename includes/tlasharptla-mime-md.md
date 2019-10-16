@@ -1,1 +1,0 @@
-MIME(Multipurpose Internet Mail Extensions)

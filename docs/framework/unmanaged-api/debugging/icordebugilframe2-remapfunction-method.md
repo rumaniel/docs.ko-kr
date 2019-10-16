@@ -17,47 +17,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f03d8c993be1ac83ca84275bcb94f1bb3cdf884
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 75004f646c01897ef3e3016b073220ad33a0d925
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414985"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69967573"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction 메서드
-새 Microsoft MSIL (intermediate language) 오프셋을 지정 하 여 편집된 된 함수를 다시 매핑합니다.  
+새 MSIL (Microsoft 중간 언어) 오프셋을 지정 하 여 편집 된 함수를 다시 매핑합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT RemapFunction (  
     [in] ULONG32      newILOffset  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `newILOffset`  
- [in] 스택 프레임의 새로운 MSIL 오프셋 명령 포인터를 배치할입니다. 이 값은 시퀀스 위치 여야 합니다.  
+ 진행 명령 포인터가 배치 되어야 하는 스택 프레임의 새 MSIL 오프셋입니다. 이 값은 시퀀스 위치 여야 합니다.  
   
- 호출자의이 값의 유효성을 검사 합니다. 예를 들어 MSIL 오프셋 함수 범위 바깥쪽 올바르지 않습니다.  
+ 이 값의 유효성을 확인 하는 것은 호출자의 책임입니다. 예를 들어 MSIL 오프셋은 함수 범위 밖에 있을 경우 유효 하지 않습니다.  
   
 ## <a name="remarks"></a>설명  
- 프레임의 함수가 편집 되어, 디버거를 호출할 수는 `RemapFunction` 메서드를 실행할 수 있도록 최신 버전의 프레임의 함수에서 바꿀 수 있습니다. 코드 실행은 지정된 된 MSIL 오프셋에서 시작 됩니다.  
+ 프레임의 함수가 편집 된 경우 디버거는 메서드를 `RemapFunction` 호출 하 여 최신 버전의 프레임 함수를 교환 하 여 실행할 수 있습니다. 지정 된 MSIL 오프셋에서 코드 실행이 시작 됩니다.  
   
 > [!NOTE]
->  호출 `RemapFunction`처럼 호출 [icordebugilframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), 관련 된 스레드에 대 한 스택 추적을 생성 하는 모든 디버깅 인터페이스를 즉시 무효화 됩니다. 이러한 인터페이스 [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame, 및 ICorDebugNativeFrame 합니다.  
+> `RemapFunction` [ICorDebugILFrame:: SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)호출과 같이를 호출 하면 스레드의 스택 추적 생성과 관련 된 모든 디버깅 인터페이스가 즉시 무효화 됩니다. 이러한 인터페이스에는 [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame 및 ICorDebugNativeFrame가 포함 됩니다.  
   
- `RemapFunction` 메서드는 현재 프레임의 컨텍스트에서 하 고 하나는 다음과 같은 경우에만 호출할 수 있습니다.  
+ 메서드 `RemapFunction` 는 현재 프레임의 컨텍스트에서만 호출할 수 있으며, 다음 중 한 가지 경우에만 호출할 수 있습니다.  
   
--   받은 후는 [icordebugmanagedcallback2:: Functionremapopportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) 계속 하지 아직 콜백입니다.  
+- [ICorDebugManagedCallback2:: FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) 콜백이 아직 지속 되지 않은 것을 확인 한 후  
   
--   때문에 코드 실행을 중지 하는 동안는 [icordebugmanagedcallback:: Editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) 이 프레임에 대 한 이벤트입니다.  
+- 이 프레임에 대 한 [ICorDebugManagedCallback:: EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) 이벤트로 인해 코드 실행이 중지 되었습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

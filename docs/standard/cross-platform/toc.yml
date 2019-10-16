@@ -1,0 +1,13 @@
+- name: 여러 플랫폼 개발
+  href: index.md
+  items:
+    - name: 이식 가능한 클래스 라이브러리
+      href: cross-platform-development-with-the-portable-class-library.md
+    - name: MVVM과 함께 이식 가능한 클래스 라이브러리 사용
+      href: using-portable-class-library-with-model-view-view-model.md
+    - name: 여러 플랫폼을 대상으로 하는 라이브러리의 앱 리소스
+      href: app-resources-for-libraries-that-target-multiple-platforms.md
+    - name: Windows 스토어 앱 및 Windows 런타임에 대한 .NET Framework 지원
+      href: support-for-windows-store-apps-and-windows-runtime.md
+    - name: Windows 런타임에 URI 전달
+      href: passing-a-uri-to-the-windows-runtime.md

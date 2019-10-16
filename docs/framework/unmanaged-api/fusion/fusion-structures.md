@@ -8,32 +8,32 @@ helpviewer_keywords:
 ms.assetid: 3feb4fc5-a1e9-445d-929c-0a7490244114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 762b23af9eb6282a26d9b0430132023c9f76d1f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fb66e0d518abc2d337362affbd2aa951303128f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431482"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70795298"
 ---
 # <a name="fusion-structures"></a>Fusion 구조체
-이 섹션에는 fusion API에 사용 되는 관리 되지 않는 구조체를 설명 합니다.  
+이 섹션에서는 fusion API에서 사용 하는 관리 되지 않는 구조체에 대해 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [ASSEMBLY_INFO 구조체](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)  
- 전역 어셈블리 캐시에 등록 되어 있는 어셈블리에 대 한 정보를 포함 합니다.  
+ [ASSEMBLY_INFO 구조체](assembly-info-structure.md)  
+ 전역 어셈블리 캐시에 등록 된 어셈블리에 대 한 정보를 포함 합니다.  
   
- [FUSION_INSTALL_REFERENCE 구조체](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)  
- 응용 프로그램은 전역 어셈블리 캐시에는 응용 프로그램이 설치 된 어셈블리 참조를 나타냅니다.  
+ [FUSION_INSTALL_REFERENCE 구조체](fusion-install-reference-structure.md)  
+ 응용 프로그램이 전역 어셈블리 캐시에 설치 된 어셈블리에 대해 수행 하는 참조를 나타냅니다.  
   
- [IDENTITY_ATTRIBUTE 구조체](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- 에 대 한 메타 데이터 특성 정보를 포함 한 [IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md) 인스턴스.  
+ [IDENTITY_ATTRIBUTE 구조체](identity-attribute-structure.md)  
+ [Idefinitionidentity](idefinitionidentity-interface.md) 인스턴스에 대 한 메타 데이터 특성 정보를 포함 합니다.  
   
- [IDENTITY_ATTRIBUTE_BLOB 구조체](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)  
- 연결 된 작업에 대 한 오프셋된 정보를 포함 [IDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md) 구조입니다.  
+ [IDENTITY_ATTRIBUTE_BLOB 구조체](identity-attribute-blob-structure.md)  
+ 연결 된 [IDENTITY_ATTRIBUTE](identity-attribute-structure.md) 구조체에 대 한 오프셋 정보를 포함 합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [Fusion 인터페이스](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
+ [Fusion 인터페이스](fusion-interfaces.md)  
   
- [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)  
+ [Fusion 전역 정적 함수](fusion-global-static-functions.md)  
   
- [Fusion 열거형](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)
+ [Fusion 열거형](fusion-enumerations.md)

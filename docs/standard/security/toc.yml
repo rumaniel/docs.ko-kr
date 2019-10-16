@@ -1,0 +1,72 @@
+- name: 보안
+  href: index.md
+  items:
+    - name: 주요 보안 개념
+      href: key-security-concepts.md
+    - name: 역할 기반 보안
+      href: role-based-security.md
+      items:
+        - name: Principal 개체 및 Identity 개체
+          href: principal-and-identity-objects.md
+        - name: '방법: WindowsPrincipal 개체 만들기'
+          href: how-to-create-a-windowsprincipal-object.md
+        - name: '방법: GenericPrincipal 및 GenericIdentity 개체 만들기'
+          href: how-to-create-genericprincipal-and-genericidentity-objects.md
+        - name: Principal 개체 바꾸기
+          href: replacing-a-principal-object.md
+        - name: 가장 및 되돌리기
+          href: impersonating-and-reverting.md
+    - name: 암호화 모델
+      href: cryptography-model.md
+      items:
+        - name: 암호화 서비스
+          href: cryptographic-services.md
+        - name: 암호화 및 해독용 키 생성
+          href: generating-keys-for-encryption-and-decryption.md
+        - name: '방법: 키 컨테이너에 비대칭 키 저장'
+          href: how-to-store-asymmetric-keys-in-a-key-container.md
+        - name: 데이터 암호화
+          href: encrypting-data.md
+        - name: 데이터 해독
+          href: decrypting-data.md
+        - name: 암호화 서명
+          href: cryptographic-signatures.md
+        - name: 해시 코드를 사용하여 데이터 무결성 보장
+          href: ensuring-data-integrity-with-hash-codes.md
+        - name: 암호화 체계 만들기
+          href: creating-a-cryptographic-scheme.md
+        - name: '방법: 대칭 키를 사용하여 XML 요소 암호화'
+          href: how-to-encrypt-xml-elements-with-symmetric-keys.md
+        - name: '방법: 대칭 키를 사용하여 XML 요소 해독'
+          href: how-to-decrypt-xml-elements-with-symmetric-keys.md
+        - name: '방법: 비대칭 키를 사용하여 XML 요소 암호화'
+          href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
+        - name: '방법: 비대칭 키를 사용하여 XML 요소 해독'
+          href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
+        - name: '방법: X.509 인증서로 XML 요소 암호화'
+          href: how-to-encrypt-xml-elements-with-x-509-certificates.md
+        - name: '방법: X.509 인증서로 XML 요소 해독'
+          href: how-to-decrypt-xml-elements-with-x-509-certificates.md
+        - name: '방법: 디지털 서명으로 XML 문서 서명'
+          href: how-to-sign-xml-documents-with-digital-signatures.md
+        - name: '방법: XML 문서의 디지털 서명 확인'
+          href: how-to-verify-the-digital-signatures-of-xml-documents.md
+        - name: '방법: 데이터 보호 사용'
+          href: how-to-use-data-protection.md
+        - name: '방법: 하드웨어 암호화 디바이스에 액세스'
+          href: how-to-access-hardware-encryption-devices.md
+        - name: '연습: 암호화 애플리케이션 만들기'
+          href: walkthrough-creating-a-cryptographic-application.md
+    - name: 보안 코딩 지침
+      href: secure-coding-guidelines.md
+      items:
+        - name: 상태 데이터 보안
+          href: securing-state-data.md
+        - name: 보안 및 사용자 입력
+          href: security-and-user-input.md
+        - name: 보안 및 경합 상태
+          href: security-and-race-conditions.md
+        - name: 보안 및 빠른 코드 생성
+          href: security-and-on-the-fly-code-generation.md
+        - name: 패딩을 사용하는 CBC 모드 대칭 암호 해독의 타이밍 취약성
+          href: vulnerabilities-cbc-mode.md

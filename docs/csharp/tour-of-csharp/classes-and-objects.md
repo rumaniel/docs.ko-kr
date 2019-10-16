@@ -3,12 +3,12 @@ title: C#의 클래스 및 개체 - C# 언어 둘러보기
 description: C#을 처음 사용하시나요? 클래스, 개체 및 상속 개요 읽어보기
 ms.date: 08/10/2016
 ms.assetid: 63a89bde-0f05-4bc4-b0cd-4f693854f0cd
-ms.openlocfilehash: 8e6b327c8391c3a3c97f7806f87dbb9656f0d00d
-ms.sourcegitcommit: 736ec4d3e2c74895b47a0d36126657b95da383c9
+ms.openlocfilehash: be8e760b19b7ca5305918ecfdbf9ad797d7e76b2
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/30/2018
-ms.locfileid: "37140283"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105624"
 ---
 # <a name="classes-and-objects"></a>클래스 및 개체
 
@@ -18,13 +18,13 @@ ms.locfileid: "37140283"
 
 다음은 `Point`라는 간단한 클래스 선언입니다.
 
-[!code-csharp[PointClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
+[!code-csharp[PointClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L11)]
 
 클래스의 인스턴스는 새 인스턴스에 대한 메모리를 할당하고, 인스턴스를 초기화하는 생성자를 호출하고, 인스턴스에 대한 참조를 반환하는 `new` 연산자를 사용하여 만들어집니다. 다음 문은 두 개의 Point 개체를 만들고 해당 개체에 대한 참조를 두 변수에 저장합니다.
 
-[!code-csharp[PointExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
+[!code-csharp[PointExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L9-L10)]
 
-개체가 차지하는 메모리는 개체에 더 이상 연결할 수 있는 때 자동으로 회수됩니다. C#에서 개체를 명시적으로 할당 취소할 필요도 없으며 가능하지도 않습니다.
+개체가 차지하는 메모리는 개체에 더 이상 연결할 수 없을 때 자동으로 회수됩니다. C#에서 개체를 명시적으로 할당 취소할 필요도 없으며 가능하지도 않습니다.
 
 ## <a name="members"></a>멤버
 
@@ -32,54 +32,54 @@ ms.locfileid: "37140283"
 
 다음은 클래스에 포함될 수는 멤버 종류를 대략적으로 나타낸 것입니다.
 
-* 상수
-    - 클래스와 연결된 상수 값
-* 필드
-    - 클래스의 변수
-* 메서드
-    - 클래스가 수행할 수 있는 계산 및 작업
-* 속성
-    - 클래스의 명명된 속성에 대한 읽기 및 쓰기와 관련된 작업
-* 인덱서
-    - 클래스 인스턴스를 배열처럼 인덱싱하는 것과 관련된 작업
-* 이벤트
-    - 클래스에 의해 생성될 수 있는 알림
-* 연산자
-    - 클래스가 지원하는 변환 및 식 연산자
-* 생성자
-    - 클래스의 인스턴스 또는 클래스 자체를 초기화하는 데 필요한 작업
-* 종료자
-    - 클래스의 인스턴스가 영구적으로 삭제되기 전에 수행 작업
-* 유형
-    - 클래스에 의해 선언된 중첩 형식
+- 상수
+  - 클래스와 연결된 상수 값
+- 필드
+  - 클래스의 변수
+- 메서드
+  - 클래스가 수행할 수 있는 계산 및 작업
+- 속성
+  - 클래스의 명명된 속성에 대한 읽기 및 쓰기와 관련된 작업
+- 인덱서
+  - 클래스 인스턴스를 배열처럼 인덱싱하는 것과 관련된 작업
+- 이벤트
+  - 클래스에 의해 생성될 수 있는 알림
+- 연산자
+  - 클래스가 지원하는 변환 및 식 연산자
+- 생성자
+  - 클래스의 인스턴스 또는 클래스 자체를 초기화하는 데 필요한 작업
+- 종료자
+  - 클래스의 인스턴스가 영구적으로 삭제되기 전에 수행 작업
+- 유형
+  - 클래스에 의해 선언된 중첩 형식
 
 ## <a name="accessibility"></a>액세스 가능성
 
 클래스의 각 멤버에는 멤버에 액세스할 수 있는 프로그램 텍스트의 영역을 제어하는 액세스 가능성이 연결되어 있습니다. 액세스 가능성은 여섯 가지 형태로 제공됩니다. 이러한 내용은 아래에 간략하게 정리되어 있습니다.
 
-* `public`
-    - 액세스가 제한되지 않음
-* `protected`
-    - 이 클래스 또는 이 클래스에서 파생된 클래스로만 액세스가 제한됨
-* `internal`
-    - 현재 어셈블리(.exe, .dll 등)로만 액세스가 제한됨
-* `protected internal`
-    - 포함되는 클래스, 포함되는 클래스에서 파생된 클래스 또는 동일한 어셈블리 내의 클래스로만 액세스가 제한됨
-* `private`
-    - 이 클래스로만 액세스가 제한됨
-* `private protected`
-    - 동일한 어셈블리 내의 포함하는 클래스 또는 포함하는 형식에서 파생된 클래스로만 액세스가 제한됨
+- `public`
+  - 액세스가 제한되지 않음
+- `protected`
+  - 이 클래스 또는 이 클래스에서 파생된 클래스로만 액세스가 제한됨
+- `internal`
+  - 현재 어셈블리(.exe, .dll 등)로만 액세스가 제한됨
+- `protected internal`
+  - 포함되는 클래스, 포함되는 클래스에서 파생된 클래스 또는 동일한 어셈블리 내의 클래스로만 액세스가 제한됨
+- `private`
+  - 이 클래스로만 액세스가 제한됨
+- `private protected`
+  - 동일한 어셈블리 내의 포함하는 클래스 또는 포함하는 형식에서 파생된 클래스로만 액세스가 제한됨
 
 ## <a name="type-parameters"></a>형식 매개 변수
 
 클래스 정의는 클래스 이름 다음에 대괄호로 묶은 형식 매개 변수 이름 목록을 지정하여 형식 매개 변수 집합을 지정할 수 있습니다. 그런 후 형식 매개 변수를 클래스 선언 본문에 사용하여 클래스의 멤버를 정의할 수 있습니다. 다음 예제에서 `Pair`의 형식 매개 변수는 `TFirst` 및 `TSecond`입니다.
 
-[!code-csharp[Pair](../../../samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]
+[!code-csharp[Pair](~/samples/snippets/csharp/tour/classes-and-objects/Pair.cs#L3-L7)]
 
 형식 매개 변수를 사용하도록 선언된 클래스 형식을 *제네릭 클래스 형식*이라고 합니다. 구조체, 인터페이스 및 대리자 형식도 제네릭일 수 있습니다.
 제네릭 클래스를 사용하는 경우 각 형식 매개 변수에 대해 다음과 같은 형식 인수가 제공되어야 합니다.
 
-[!code-csharp[PairExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]
+[!code-csharp[PairExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L15-L17)]
 
 위의 `Pair<int,string>`과 같이 형식 인수가 제공된 제네릭 형식을 *생성된 형식*이라고 합니다.
 
@@ -87,25 +87,25 @@ ms.locfileid: "37140283"
 
 클래스 선언은 클래스 이름 및 형식 매개 변수 뒤에 콜론과 기본 클래스의 이름을 사용하여 기본 클래스를 지정할 수 있습니다. 기본 클래스 지정을 생략하면 `object` 형식에서 파생되는 클래스와 같습니다. 다음 예제에서 `Point3D`의 기본 클래스는 `Point`이고 `Point`의 기본 클래스는 `object`입니다.
 
-[!code-csharp[Point3DClass](../../../samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
+[!code-csharp[Point3DClass](~/samples/snippets/csharp/tour/classes-and-objects/Point.cs#L3-L20)]
 
 클래스는 기본 클래스의 멤버를 상속합니다. 상속은 클래스가 인스턴스 및 정적 생성자와 기본 클래스의 종결자를 제외하는 기본 클래스의 모든 멤버를 암시적으로 포함함을 의미합니다. 파생된 클래스를 상속하는 대상에 새 멤버를 추가할 수 있지만 상속된 멤버의 정의를 제거할 수 없습니다. 앞의 예제에서 `Point3D`는 `Point`에서 `x` 및 `y` 필드를 상속하고 모든 `Point3D` 인스턴스는 세 개의 필드, 즉 `x`, `y` 및 `z`를 포함합니다.
 
 클래스 형식에서 해당 기본 클래스 형식 간에 암시적 변환이 존재합니다. 따라서 클래스 형식의 변수는 해당 클래스의 인스턴스 또는 파생된 모든 클래스의 인스턴스를 참조할 수 있습니다. 예를 들어 이전 클래스 선언에서 형식 `Point`의 변수는 `Point` 또는 `Point3D`를 참조할 수 있습니다.
 
-[!code-csharp[Point3DExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
+[!code-csharp[Point3DExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L22-L23)]
 
 ## <a name="fields"></a>필드
 
 *필드*는 클래스 또는 클래스의 인스턴스와 연결된 변수입니다.
 
-static 한정자를 사용하여 선언된 필드는 정적 필드를 정의합니다. 정적 필드는 정확히 하나의 저장 위치를 식별합니다. 생성된 클래스 인스턴스 수에 관계없이 정적 필드의 복사본은 하나뿐입니다.
+static 한정자를 사용하여 선언된 필드는 정적 필드를 정의합니다. 정적 필드는 정확히 하나의 스토리지 위치를 식별합니다. 생성된 클래스 인스턴스 수에 관계없이 정적 필드의 복사본은 하나뿐입니다.
 
 static 한정자 없이 선언된 필드는 인스턴스 필드를 정의합니다. 클래스의 모든 인스턴스는 해당 클래스의 모든 인스턴스 필드의 별도 복사본을 포함합니다.
 
 다음 예제에서 `Color` 클래스의 각 인스턴스는 `r`, `g` 및 `b` 인스턴스 필드의 별도 복사본을 갖지만 `Black`, `White`, `Red`, `Green` 및 `Blue` 정적 필드의 복사본은 하나뿐입니다.
 
-[!code-csharp[ColorClass](../../../samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]
+[!code-csharp[ColorClass](~/samples/snippets/csharp/tour/classes-and-objects/Color.cs#L3-L17)]
 
 앞의 예제와 같이 *읽기 전용 필드*는 `readonly` 한정자를 사용하여 선언될 수 있습니다. `readonly` 필드에 대한 할당은 필드 선언의 일부로 또는 동일한 클래스의 생성자에서만 발생할 수 있습니다.
 
@@ -123,29 +123,29 @@ static 한정자 없이 선언된 필드는 인스턴스 필드를 정의합니�
 
 매개 변수는 메서드에 값 또는 변수 참조를 전달하는 데 사용됩니다. 메서드의 매개 변수는 메서드가 호출될 때 지정된 *인수*에서 실제 값을 가져옵니다. 매개 변수에는 값 매개 변수, 참조 매개 변수, 출력 매개 변수 및 매개 변수 배열의 네 가지 종류가 있습니다.
 
-*값 매개 변수*는 입력 매개 변수를 전달하는 데 사용됩니다. 값 매개 변수는 매개 변수에 전달된 인수에서 초기 값을 가져오는 지역 변수에 해당합니다. 값 매개 변수를 수정해도 매개 변수에 전달된 인수에는 영향을 주지 않습니다. 
+*값 매개 변수*는 입력 매개 변수를 전달하는 데 사용됩니다. 값 매개 변수는 매개 변수에 전달된 인수에서 초기 값을 가져오는 지역 변수에 해당합니다. 값 매개 변수를 수정해도 매개 변수에 전달된 인수에는 영향을 주지 않습니다.
 
 해당 인수를 생략할 수 있도록 기본값을 지정하면 값 매개 변수는 선택적일 수 있습니다.
 
-*참조 매개 변수*는 인수를 참조로 전달하는 데 사용됩니다. 참조 매개 변수에 전달되는 인수는 한정된 값을 가진 변수여야 하며, 메서드를 실행하는 동안 참조 매개 변수는 인수 변수와 동일한 저장소 위치를 나타냅니다. 참조 매개 변수는 `ref` 한정자를 사용하여 선언됩니다. 다음 예제에서는 `ref` 매개 변수를 사용하는 방법을 보여 줍니다.
+*참조 매개 변수*는 인수를 참조로 전달하는 데 사용됩니다. 참조 매개 변수에 전달되는 인수는 한정된 값을 가진 변수여야 하며, 메서드를 실행하는 동안 참조 매개 변수는 인수 변수와 동일한 스토리지 위치를 나타냅니다. 참조 매개 변수는 `ref` 한정자를 사용하여 선언됩니다. 다음 예제에서는 `ref` 매개 변수를 사용하는 방법을 보여 줍니다.
 
-[!code-csharp[swapExample](../../../samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
+[!code-csharp[swapExample](~/samples/snippets/csharp/tour/classes-and-objects/RefExample.cs#L3-L18)]
 
 *출력 매개 변수*는 인수를 참조로 전달하는 데 사용됩니다. 호출자가 제공한 인수에 값을 명시적으로 할당할 필요가 없다는 점을 제외하고 참조 매개 변수와 비슷합니다. 출력 매개 변수는 `out` 한정자를 사용하여 선언됩니다. 다음 예제에서는 C# 7에서 도입된 구문으로 `out` 매개 변수를 사용하는 방법을 보여 줍니다.
 
-[!code-csharp[OutExample](../../../samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
+[!code-csharp[OutExample](~/samples/snippets/csharp/tour/classes-and-objects/OutExample.cs#L3-L17)]
 
 *매개 변수 배열*은 다양한 개수의 인수가 메서드에 전달되도록 허용합니다. 매개 변수 배열은 `params` 한정자를 사용하여 선언됩니다. 메서드의 마지막 매개 변수만 매개 변수 배열일 수 있으며 매개 변수 배열의 형식은 1차원 배열 형식이어야 합니다. <xref:System.Console?displayProperty=nameWithType> 클래스의 Write 및 WriteLine 메서드는 매개 변수 배열 사용의 좋은 예입니다. 이러한 메서드는 다음과 같이 선언됩니다.
 
-[!code-csharp[ConsoleExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
+[!code-csharp[ConsoleExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L78-L83)]
 
 매개 변수 배열을 사용하는 메서드 내에서 매개 변수 배열은 배열 형식의 일반 매개 변수와 정확히 동일하게 동작합니다. 그러나 매개 변수 배열을 사용한 메서드 호출에서 매개 변수 배열 형식의 단일 인수 또는 매개 변수 배열에 있는 임의 개수의 요소 형식 인수를 전달할 수 있습니다. 후자의 경우 지정된 인수를 사용하여 배열 인스턴스가 자동으로 만들어지고 초기화됩니다. 다음 예제는
 
-[!code-csharp[StringFormat](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
+[!code-csharp[StringFormat](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L55-L55)]
 
 다음을 작성하는 것과 같습니다.
 
-[!code-csharp[StringFormat2](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
+[!code-csharp[StringFormat2](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L30-L35)]
 
 ### <a name="method-body-and-local-variables"></a>메서드 본문 및 지역 변수
 
@@ -153,7 +153,7 @@ static 한정자 없이 선언된 필드는 인스턴스 필드를 정의합니�
 
 메서드 본문은 메서드 호출과 관련된 변수를 선언할 수 있습니다. 이러한 변수를 *지역 변수*라고 합니다. 지역 변수 선언은 형식 이름, 변수 이름을 지정하며 초기 값을 지정할 수도 있습니다. 다음 예제에서는 초기 값이 0인 지역 변수 `i`와 초기 값이 없는 지역 변수 `j`를 선언합니다.
 
-[!code-csharp[Squares](../../../samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
+[!code-csharp[Squares](~/samples/snippets/csharp/tour/classes-and-objects/Squares.cs#L3-L17)]
 
 C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 할당*해야 합니다. 예를 들어 이전 `i`의 선언에 초기 값이 포함되지 않으면 컴파일러는 `i`의 후속 사용에 대해 오류를 보고합니다. `i`는 프로그램에서 해당 시점에 명확하게 할당되지 않은 것이기 때문입니다.
 
@@ -167,7 +167,7 @@ C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 �
 
 다음 `Entity` 클래스에는 정적 멤버와 인스턴스 멤버가 모두 있습니다.
 
-[!code-csharp[Entity](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]
+[!code-csharp[Entity](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L16-L36)]
 
 각 `Entity` 인스턴스에는 일련 번호(및 여기에 표시되지 않는 일부 정보)가 포함되어 있습니다. `Entity` 생성자(인스턴스 메서드와 유사함)는 사용 가능한 다음 일련 번호를 사용하여 새 인스턴스를 초기화합니다. 생성자가 인스턴스 멤버이기 때문에 `serialNo` 인스턴스 필드 및 `nextSerialNo` 정적 필드 둘 다에 액세스하도록 허용됩니다.
 
@@ -175,7 +175,7 @@ C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 �
 
 다음 예제에서는 Entity 클래스의 사용 방법을 보여 줍니다.
 
-[!code-csharp[EntityExample](../../../samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
+[!code-csharp[EntityExample](~/samples/snippets/csharp/tour/classes-and-objects/Entity.cs#L3-L15)]
 
 `SetNextSerialNo` 및 `GetNextSerialNo` 정적 메서드는 클래스에 대해 호출되지만 `GetSerialNo` 인스턴스 메서드는 클래스의 인스턴스에 대해 호출됩니다.
 
@@ -191,11 +191,11 @@ C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 �
 
 다음 예제에서는 식 트리 노드를 나타내는 추상 클래스 `Expression`와 상수, 변수 참조 및 산술 연산에 대한 식 트리 노드를 구현하는 세 개의 파생 클래스 `Constant`, `VariableReference` 및 `Operation`을 선언합니다. (이것은 식 트리 형식과 비슷하지만 혼동하지 않아야 합니다.)
 
-[!code-csharp[ExpressionClass](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
+[!code-csharp[ExpressionClass](~/samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L3-L61)]
 
 이전의 4개 클래스는 산술 연산자를 모델링하는 데 사용할 수 있습니다. 예를 들어 이러한 클래스의 인스턴스를 사용할 경우 식 `x + 3`을 다음과 같이 나타낼 수 있습니다.
 
-[!code-csharp[ExpressionExample](../../../samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
+[!code-csharp[ExpressionExample](~/samples/snippets/csharp/tour/classes-and-objects/Program.cs#L40-L43)]
 
 `Expression` 인스턴스의 `Evaluate` 메서드는 지정된 식을 계산하고 `double` 값을 생성하기 위해 호출됩니다. 이 메서드는 변수 이름(항목의 키)과 값(항목의 값)을 포함하는 `Dictionary` 인수를 사용합니다. `Evaluate`가 추상 메서드이기 때문에 `Expression`에서 파생된 비추상 클래스는 `Evaluate`를 재정의해야 합니다.
 
@@ -203,13 +203,13 @@ C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 �
 
 다음 프로그램에서는 `Expression` 클래스를 사용하여 `x` 및 `y`의 다른 값에 대해 식 `x * (y + 2)`를 계산합니다.
 
-[!code-csharp[ExpressionUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
+[!code-csharp[ExpressionUsage](~/samples/snippets/csharp/tour/classes-and-objects/Expressions.cs#L66-L89)]
 
 ### <a name="method-overloading"></a>메서드 오버로드
 
 메서드 *오버로드*는 동일한 클래스가 고유한 시그니처를 갖는 한, 동일한 이름을 갖도록 허용합니다. 오버로드된 메서드의 호출을 컴파일할 때 컴파일러는 *오버로드 확인*을 사용하여 호출할 특정 메서드를 결정합니다. 오버로드 확인은 인수와 가장 적합하게 일치하는 단일 메서드를 찾으며, 최상의 일치 메서드를 찾을 수 있는 경우 오류를 보고합니다. 다음 예제에서는 실제로 진행되는 오버로드 확인을 보여 줍니다. `UsageExample` 메서드의 각 호출에 대한 주석은 실제로 호출되는 메서드를 보여 줍니다.
 
-[!code-csharp[OverloadUsage](../../../samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
+[!code-csharp[OverloadUsage](~/samples/snippets/csharp/tour/classes-and-objects/Overloading.cs#L3-L41)]
 
 예제와 같이, 인수를 정확한 매개 변수 형식으로 명시적으로 캐스팅하거나 형식 인수를 명시적으로 제공하여 항상 특정 메서드를 선택할 수 있습니다.
 
@@ -217,9 +217,12 @@ C#에서는 해당 값을 얻기 위해 먼저 로컬 변수를 *명확 하게 �
 
 실행 코드를 포함하는 멤버를 통칭하여 클래스의 *함수 멤버*라고 합니다. 이전 섹션에서는 함수 멤버의 기본 종류인 메서드에 대해 설명합니다. 이 섹션에서는 C#에서 지원하는 다른 종류의 함수 멤버인 생성자, 속성, 인덱서, 이벤트, 연산자 및 종료자에 대해 설명합니다.
 
-다음에서는 증가될 수 있는 개체 목록을 구현하는 List<T>라는 제네릭 클래스를 보여 줍니다. 이 클래스는 함수 멤버의 가장 일반적인 몇 가지 예제를 포함합니다.
+다음에서는 증가될 수 있는 개체 목록을 구현하는 `MyList<T>`라는 제네릭 클래스를 보여 줍니다. 이 클래스는 함수 멤버의 가장 일반적인 몇 가지 예제를 포함합니다.
 
-[!code-csharp[ListClass](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
+> [!NOTE]
+> 이 예제는 .NET Standard <xref:System.Collections.Generic.List%601?displayProperty=nameWithType>와 동일하지 않은 `MyList` 클래스를 만듭니다. 이 둘러보기에 필요한 개념을 설명하지만 클래스를 대체하지는 않습니다.
+
+[!code-csharp[ListClass](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L4-L89)]
 
 ### <a name="constructors"></a>생성자
 
@@ -227,25 +230,25 @@ C#은 인스턴스 및 정적 생성자를 모두 지원합니다. *인스턴스
 
 생성자는 반환 형식이 없고 포함하는 클래스와 동일한 이름을 갖는 메서드처럼 선언됩니다. 생성자 선언에 static 한정자가 포함될 경우 정적 생성자를 선언합니다. 그렇지 않으면 인스턴스 생성자를 선언합니다.
 
-인스턴스 생성자는 오버로드될 수 있으며 선택적 매개 변수를 가질 수 있습니다. 예를 들어 `List<T>` 클래스는 2개의 인스턴스 생성자, 즉, 매개 변수가 없는 생성자와 `int` 매개 변수를 취하는 생성자를 선언합니다. 인스턴스 생성자는 `new` 연산자를 사용하여 호출됩니다. 다음 문은 각각 선택적 인수를 사용하거나 사용하지 않고 `List<string>` 클래스의 생성자를 사용하여 2가지 `List` 인스턴스를 할당합니다.
+인스턴스 생성자는 오버로드될 수 있으며 선택적 매개 변수를 가질 수 있습니다. 예를 들어 `MyList<T>` 클래스는 단일 선택적 `int` 매개 변수를 사용하여 하나의 인스턴스 생성자를 선언합니다. 인스턴스 생성자는 `new` 연산자를 사용하여 호출됩니다. 다음 문은 각각 선택적 인수를 사용하거나 사용하지 않고 `MyList<string>` 클래스의 생성자를 사용하여 2가지 `MyList` 인스턴스를 할당합니다.
 
-[!code-csharp[ListExample1](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
+[!code-csharp[ListExample1](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L95-L96)]
 
 다른 멤버와 달리 인스턴스 생성자는 상속되지 않으며 클래스에는 클래스에서 실제로 선언된 인스턴스 생성자만 포함됩니다. 클래스에 대해 인스턴스 생성자가 제공되지 않으면 매개 변수가 없는 빈 인스턴스 생성자가 자동으로 제공됩니다.
 
 ### <a name="properties"></a>속성
 
-*속성*은 필드의 기본 확장입니다. 둘 다 연결된 형식으로 명명되는 멤버이며, 필드 및 속성에 액세스하는 구문은 동일합니다. 그러나 필드와 달리 속성은 저장 위치를 명시하지 않습니다. 대신, 속성에는 해당 값을 읽거나 쓸 때 실행될 문을 지정하는 *접근자*가 있습니다.
+*속성*은 필드의 기본 확장입니다. 둘 다 연결된 형식으로 명명되는 멤버이며, 필드 및 속성에 액세스하는 구문은 동일합니다. 그러나 필드와 달리 속성은 스토리지 위치를 명시하지 않습니다. 대신, 속성에는 해당 값을 읽거나 쓸 때 실행될 문을 지정하는 *접근자*가 있습니다.
 
 속성은 필드처럼 선언되지만, 선언이 세미콜론으로 끝나지 않고, 구분 기호 `{` 및 `}` 사이에 쓴 get 접근자 및/또는 set 접근자로 끝난다는 점이 다릅니다. get 접근자 및 set 접근자가 둘 다 있는 속성은 *읽기/쓰기 속성*이고, get 접근자만 있는 속성은 *읽기 전용 속성*이고, set 접근자만 있는 속성은 *쓰기 전용 속성*입니다.
 
-get 접근자는 속성 형식의 반환 값을 갖는 매개 변수 없는 메서드에 해당합니다. 할당 목표에 맞게, 속성이 식에 참조될 때 속성의 get 접근자가 속성 값 계산을 위해 호출됩니다.
+get 접근자는 속성 형식의 반환 값을 갖는 매개 변수 없는 메서드에 해당합니다. 할당 목표에 맞게, 속성이 식에 참조될 때 속성의 get 접근자가 속성 값 컴퓨팅을 위해 호출됩니다.
 
 set 접근자는 value라는 단일 매개 변수를 가지며 반환 형식이 없는 메서드에 해당합니다. 속성이 할당 대상이나 ++ 또는 --의 피연산자로 참조되면 set 접근자는 새 값을 제공하는 인수를 사용하여 호출됩니다.
 
-`List<T>` 클래스는 각각 읽기 전용 및 읽기/쓰기 특성을 갖는 두 개의 속성 Count 및 Capacity를 선언합니다. 다음은 이러한 속성 사용의 예입니다.
+`MyList<T>` 클래스는 각각 읽기 전용 및 읽기/쓰기 특성을 갖는 두 개의 속성 `Count` 및 `Capacity`를 선언합니다. 다음은 이러한 속성 사용의 예입니다.
 
-[!code-csharp[ListExample2](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
+[!code-csharp[ListExample2](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L101-L104)]
 
 필드 및 메서드와 마찬가지로, C#은 인스턴스 속성 및 정적 속성을 모두 지원합니다. 정적 속성은 static 한정자를 사용하여 선언되고 인스턴스 속성은 이 한정자를 사용하지 않고 선언됩니다.
 
@@ -253,11 +256,11 @@ set 접근자는 value라는 단일 매개 변수를 가지며 반환 형식이 
 
 ### <a name="indexers"></a>인덱서
 
-*인덱서*는 개체가 배열과 같은 방식으로 인덱싱될 수 있도록 하는 멤버입니다. 인덱서는 멤버 이름과 구분 기호 `[` 및 `]` 사이에 작성된 매개 변수 목록을 합쳐서 멤버 이름으로 사용한다는 점을 제외하고 속성처럼 선언됩니다. 매개 변수는 인덱서의 접근자에서 사용할 수 있습니다. 속성과 마찬가지로 인덱서는 읽기/쓰기, 읽기 전용 및 쓰기 전용일 수 있으며 인덱서의 접근자는 가상일 수 있습니다.
+*인덱서*는 개체가 배열과 같은 방식으로 인덱싱될 수 있도록 하는 멤버입니다. 인덱서는 `this`과(와) 구분 기호 `[` 및 `]` 사이에 작성된 매개 변수 목록을 합쳐서 구성원 이름으로 사용한다는 점을 제외하고 속성처럼 선언됩니다. 매개 변수는 인덱서의 접근자에서 사용할 수 있습니다. 속성과 마찬가지로 인덱서는 읽기/쓰기, 읽기 전용 및 쓰기 전용일 수 있으며 인덱서의 접근자는 가상일 수 있습니다.
 
-`List` 클래스는 `int` 매개 변수를 사용하는 단일 읽기/쓰기 인덱서를 선언합니다. 인덱서는 `List` 인스턴스를 `int` 값으로 인덱싱할 수 있도록 합니다. 예:
+`MyList<T>` 클래스는 `int` 매개 변수를 사용하는 단일 읽기/쓰기 인덱서를 선언합니다. 인덱서는 `MyList<T>` 인스턴스를 `int` 값으로 인덱싱할 수 있도록 합니다. 예:
 
-[!code-csharp[ListExample3](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
+[!code-csharp[ListExample3](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L109-L117)]
 
 인덱서는 오버로드될 수 있습니다. 즉, 해당 매개 변수의 수와 형식이 다를 경우 한 클래스가 여러 인덱서를 선언할 수 있습니다.
 
@@ -267,23 +270,23 @@ set 접근자는 value라는 단일 매개 변수를 가지며 반환 형식이 
 
 이벤트 멤버를 선언하는 클래스 내에서 이벤트는 대리자 형식의 필드처럼 동작합니다(이벤트가 추상이 아니고 접근자를 선언하지 않을 경우). 필드는 이벤트에 추가된 이벤트 처리기를 나타내는 대리자에 대한 참조를 저장합니다. 이벤트 처리기가 없는 경우 필드는 `null`입니다.
 
-`List<T>` 클래스는 `Changed`라는 단일 이벤트 멤버를 선언합니다. 이것은 새 항목이 목록에 추가되었음을 나타냅니다. Changed 이벤트는 `OnChanged` 가상 메서드에 의해 발생합니다. 이 메서드는 먼저 이벤트가 `null`인지 확인합니다(처리기가 없음을 의미함). 이벤트 발생 개념은 이벤트가 나타내는 대리자를 호출하는 것과 정확히 동일하므로 이벤트 발생을 위한 특수한 언어 구문은 없습니다.
+`MyList<T>` 클래스는 `Changed`라는 단일 이벤트 멤버를 선언합니다. 이것은 새 항목이 목록에 추가되었음을 나타냅니다. Changed 이벤트는 `OnChanged` 가상 메서드에 의해 발생합니다. 이 메서드는 먼저 이벤트가 `null`인지 확인합니다(처리기가 없음을 의미함). 이벤트 발생 개념은 이벤트가 나타내는 대리자를 호출하는 것과 정확히 동일하므로 이벤트 발생을 위한 특수한 언어 구문은 없습니다.
 
-클라이언트는 *이벤트 처리기*를 통해 이벤트에 반응합니다. 이벤트 처리기는 `+=` 연산자를 사용하여 추가되고, `-=` 연산자를 사용하여 제거됩니다. 다음 예제에서는 이벤트 처리기를 `List<string>`의 `Changed` 이벤트에 추가합니다.
+클라이언트는 *이벤트 처리기*를 통해 이벤트에 반응합니다. 이벤트 처리기는 `+=` 연산자를 사용하여 추가되고, `-=` 연산자를 사용하여 제거됩니다. 다음 예제에서는 이벤트 처리기를 `MyList<string>`의 `Changed` 이벤트에 추가합니다.
 
-[!code-csharp[EventExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
+[!code-csharp[EventExample](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L132-L148)]
 
-이벤트의 기본 저장소를 제어하려고 하는 고급 시나리오의 경우 이벤트 선언에서 속성의 `set` 접근자와 비슷한 `add` 및 `remove` 접근자를 명시적으로 제공할 수 있습니다.
+이벤트의 기본 스토리지를 제어하려고 하는 고급 시나리오의 경우 이벤트 선언에서 속성의 `set` 접근자와 비슷한 `add` 및 `remove` 접근자를 명시적으로 제공할 수 있습니다.
 
 ### <a name="operators"></a>연산자
 
 *연산자*는 클래스 인스턴스에 특정 식 연산자를 적용하는 것의 의미를 정의하는 멤버입니다. 세 가지 종류의 연산자, 즉, 단항 연산자, 이항 연산자 및 변환 연산자를 정의할 수 있습니다. 모든 연산자는 `public` 및 `static`으로 선언해야 합니다.
 
-`List<T>` 클래스는 두 가지 연산자인 `operator ==` 및 `operator !=`를 선언하므로 해당 연산자를 `List` 인스턴스에 적용하는 새로운 의미를 식에 지정합니다. 특히, 이러한 연산자는 해당 Equals 메서드를 사용하여 포함된 각 개체를 비교할 때 두 `List<T>` 인스턴스의 같음을 정의합니다. 다음 예제에서는 `==` 연산자를 사용하여 두 `List<int>` 인스턴스를 비교합니다.
+`MyList<T>` 클래스는 두 가지 연산자인 `operator ==` 및 `operator !=`를 선언하므로 해당 연산자를 `MyList` 인스턴스에 적용하는 새로운 의미를 식에 지정합니다. 특히, 이러한 연산자는 해당 Equals 메서드를 사용하여 포함된 각 개체를 비교할 때 두 `MyList<T>` 인스턴스의 같음을 정의합니다. 다음 예제에서는 `==` 연산자를 사용하여 두 `MyList<int>` 인스턴스를 비교합니다.
 
-[!code-csharp[OperatorExample](../../../samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L121-L129)]
+[!code-csharp[OperatorExample](~/samples/snippets/csharp/tour/classes-and-objects/ListBasedExamples.cs#L121-L129)]
 
-두 목록은 같은 순서로 같은 값을 갖는 동일한 수의 개체를 포함하므로 첫 번째 `Console.WriteLine`은 `True`를 출력합니다. `List<T>`에서 `operator ==`이 정의되지 않았으면 `a` 및 `b`은 다른 `List<int>` 인스턴스를 참조하므로 첫 번째 `Console.WriteLine`은 `False`를 출력합니다.
+두 목록은 같은 순서로 같은 값을 갖는 동일한 수의 개체를 포함하므로 첫 번째 `Console.WriteLine`은 `True`를 출력합니다. `MyList<T>`에서 `operator ==`이 정의되지 않았으면 `a` 및 `b`은 다른 `MyList<int>` 인스턴스를 참조하므로 첫 번째 `Console.WriteLine`은 `False`를 출력합니다.
 
 ### <a name="finalizers"></a>종료자
 
@@ -293,6 +296,6 @@ set 접근자는 value라는 단일 매개 변수를 가지며 반환 형식이 
 
 `using` 문은 개체 소멸을 위한 더 나은 방법을 제공합니다.
 
->[!div class="step-by-step"]
-[이전](statements.md)
-[다음](structs.md)
+> [!div class="step-by-step"]
+> [이전](statements.md)
+> [다음](structs.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: a0769dd2-0f6d-48ca-8418-a9d39de7f450
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224f9273b0c8c9445a6a9e25f064e9726acc84f0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 3cc468da70d3c62c139a98a6637e7a3c7990c378
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750195"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54602054"
 ---
 # <a name="how-to-unwrap-a-nested-task"></a>방법: 중첩된 작업 래핑 취소
 메서드에서 작업을 반환한 후 다음 예제와 같이 해당 작업을 대기하거나 계속할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "45750195"
   
  <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 메서드를 사용하면 `Task<Task>` 또는 `Task<Task<TResult>>`(Visual Basic의 경우 `Task(Of Task)` 또는 `Task(Of Task(Of TResult))`)를 `Task` 또는 `Task<TResult>`(Visual Basic의 경우 `Task(Of TResult)`)로 변환할 수 있습니다. 새 작업은 내부 중첩 작업을 완전히 나타내며 취소 상태 및 모든 예외를 포함합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 <xref:System.Threading.Tasks.TaskExtensions.Unwrap%2A> 확장 메서드를 사용하는 방법을 보여줍니다.  
   
  [!code-csharp[TPL_UnWrap#04](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_unwrap/cs/unwrapprogram.cs#04)]
@@ -45,5 +45,5 @@ ms.locfileid: "45750195"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>  
+- <xref:System.Threading.Tasks.TaskExtensions?displayProperty=nameWithType>
 - [작업 기반 비동기 프로그래밍](../../../docs/standard/parallel-programming/task-based-asynchronous-programming.md)

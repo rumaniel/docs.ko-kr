@@ -1,38 +1,39 @@
 ---
 title: 단위 테스트 작성에 대한 모범 사례
-description: 코드 품질 및 탄력성을 구동하는 단위 테스트 작성에 대한 모범 사례를 알아봅니다.
+description: .NET Core 및 .NET 표준 프로젝트에 대한 코드 품질 및 탄력성을 구동하는 단위 테스트 작성에 대한 모범 사례를 알아봅니다.
 author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
-ms.openlocfilehash: 69fe0cae141d1ed1e1281eecd78bf03e6e8be961
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: afd6e7e25573cbb571b225c263b9bcfccfca5647
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527753"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70926381"
 ---
-# <a name="unit-testing-best-practices"></a>단위 테스트 모범 사례
+# <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 및.NET 표준을 사용하는 단위 테스트 모범 사례
 
-[John Reese](http://reesespieces.io), [Roy Osherove](http://osherove.com/)에 대한 특별한 감사
-
-단위 테스트 작성에는 회귀를 돕고, 문서를 제공하고, 좋은 디자인을 용이하게 하는 등에 다양한 혜택이 있습니다. 그러나 읽기 어렵고 불안정한 단위 테스트는 코드 기반을 파괴할 수 있습니다.
+단위 테스트 작성에는 회귀를 돕고, 문서를 제공하고, 좋은 디자인을 용이하게 하는 등에 다양한 혜택이 있습니다. 그러나 읽기 어렵고 불안정한 단위 테스트는 코드 기반을 파괴할 수 있습니다. 이 문서에서는.NET Core 및 .NET 표준 프로젝트용 단위 테스트 디자인과 관련된 몇 가지 모범 사례를 설명합니다.
 
 이 가이드에서는 단위 테스트를 작성할 때 테스트를 탄력적이고 이해하기 쉽게 유지하기 위한 몇 가지 모범 사례를 알아봅니다.
+
+[John Reese](https://reese.dev), [Roy Osherove](https://osherove.com/)에 대한 특별한 감사
 
 ## <a name="why-unit-test"></a>단위 테스트하는 이유는?
 
 ### <a name="less-time-performing-functional-tests"></a>기능 테스트 수행 시간 단축
-기능 테스트는 비용이 많이 듭니다. 일반적으로 응용 프로그램을 열고 사용자(또는 다른 사용자)가 예상되는 동작의 유효성을 검사하기 위해 따라야 하는 일련의 단계 수행이 포함됩니다. 이러한 단계는 항상 테스터에게 알려진 것은 아니며, 이는 테스트를 수행하기 위해 해당 영역에 더 많은 지식을 갖추어야 함을 의미합니다. 테스트 자체는 사소한 변경인 경우에는 몇 초가 걸리거나 큰 변경의 경우에는 몇 분 정도 걸릴 수 있습니다. 마지막으로, 이 프로세스는 시스템에서 수행하는 모든 변경 사항에 대해 반복되어야 합니다.
+기능 테스트는 비용이 많이 듭니다. 일반적으로 애플리케이션을 열고 사용자(또는 다른 사용자)가 예상되는 동작의 유효성을 검사하기 위해 따라야 하는 일련의 단계 수행이 포함됩니다. 이러한 단계는 항상 테스터에게 알려진 것은 아니며, 이는 테스트를 수행하기 위해 해당 영역에 더 많은 지식을 갖추어야 함을 의미합니다. 테스트 자체는 사소한 변경인 경우에는 몇 초가 걸리거나 큰 변경의 경우에는 몇 분 정도 걸릴 수 있습니다. 마지막으로, 이 프로세스는 시스템에서 수행하는 모든 변경 사항에 대해 반복되어야 합니다.
 
 반면에 단위 테스트는 밀리초가 소요되며, 단추를 눌러 실행할 수 있으며 시스템 전체에 대한 지식이 반드시 필요하지는 않습니다. 테스트 통과 또는 실패 여부는 개인이 아닌 test runner의 몫입니다.
 
 ### <a name="protection-against-regression"></a>회귀에 대한 보호
-회귀 오류는 응용 프로그램이 변경될 때 도입된 결함입니다. 테스터는 새 기능을 테스트할 뿐만 아니라 이전에 구현된 기능이 여전히 예상대로 작동하는지 확인하기 위해 이전에 존재했던 기능도 테스트하는 것이 일반적입니다.
+회귀 오류는 애플리케이션이 변경될 때 도입된 결함입니다. 테스터는 새 기능을 테스트할 뿐만 아니라 이전에 구현된 기능이 여전히 예상대로 작동하는지 확인하기 위해 이전에 존재했던 기능도 테스트하는 것이 일반적입니다.
 
 단위 테스트를 사용하면 모든 빌드 후에 또는 코드 줄을 변경한 후에도 전체 테스트 도구 모음을 다시 실행할 수 있습니다. 새 코드가 기존 기능을 중단시키지 않는다는 신뢰를 줍니다.
 
 ### <a name="executable-documentation"></a>실행 가능한 설명서
-특정 메서드가 무엇을 하는지 또는 특정 입력이 지정된 동작이 어떻게 수행되는지 항상 명확하지는 않을 수 있습니다. 빈 문자열을 전달하면 이 메서드는 어떻게 작동하는가를 직접 요청할 수 있습니다. Null?
+특정 메서드가 무엇을 하는지 또는 특정 입력이 지정된 동작이 어떻게 수행되는지 항상 명확하지는 않을 수 있습니다. 빈 문자열을 전달하면 이 메서드는 어떻게 작동하는가를 자문해 볼 수 있습니다. Null?
 
 이름이 잘 지정된 단위 테스트의 도구 모음이 있는 경우 각 테스트는 지정된 입력에 대해 예상되는 출력을 명확하게 설명할 수 있어야 합니다. 또한 실제로 작동하는지 확인할 수 있어야 합니다.
 
@@ -42,6 +43,7 @@ ms.locfileid: "43527753"
 코드 테스트를 작성하면 자연스럽게 분리됩니다. 그렇지 않으면 테스트하기가 더 어려워지기 때문입니다.
 
 ## <a name="characteristics-of-a-good-unit-test"></a>좋은 단위 테스트의 특징
+
 - **Fast**. 완성도 높은 프로젝트에서 수천 개의 단위 테스트를 수행하는 것은 드문 일이 아닙니다. 단위 테스트는 실행하는 데 시간이 거의 걸리지 않습니다. 밀리초.
 - **Isolated**. 독립형 단위 테스트는 독립적으로 실행될 수 있으며, 파일 시스템 또는 데이터베이스와 같은 외부 요인에 종속되지 않습니다.
 - **반복 가능**. 단위 테스트를 실행하는 것은 해당 결과와 일치해야 합니다. 즉, 실행 사이에 아무 것도 변경하지 않으면 항상 동일한 결과를 반환합니다.
@@ -105,11 +107,13 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 
 ### <a name="naming-your-tests"></a>테스트 이름 지정
 테스트의 이름은 다음 세 부분으로 구성되어야 합니다.
+
 - 테스트할 메서드의 이름입니다.
 - 테스트 중인 시나리오입니다.
 - 시나리오에서 호출될 때 예상되는 동작입니다.
 
 #### <a name="why"></a>이유
+
 - 이름 지정 표준은 테스트의 의도를 명시적으로 표현하기 때문에 중요합니다.
 
 테스트는 단순히 코드가 작동하는지 확인하는 것 이상이며, 문서도 제공합니다. 단위 테스트 도구 모음을 살펴봄으로써 코드 자체를 조회하지 않고도 코드의 동작을 유추할 수 있습니다. 또한 테스트가 실패하는 경우 기대치를 충족하지 못하는 시나리오를 정확히 확인할 수 있습니다.
@@ -122,11 +126,13 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 
 ### <a name="arranging-your-tests"></a>테스트 정렬
 **정렬, 동작, 어설션**은 단위 테스트 시 일반적인 패턴입니다. 이름에서 알 수 있듯이 세 가지 주요 작업으로 구성됩니다.
+
 - 개체를 *정렬*하고 필요에 따라 만들고 설정합니다.
 - 개체의 *동작*입니다.
 - 특정 항목이 예상대로라고 *assert*합니다.
 
 #### <a name="why"></a>이유
+
 - 테스트할 항목을 *정렬* 및 *assert* 단계에서 명확하게 구분합니다.
 - 어설션과 "Act" 코드를 혼합할 기회가 적습니다.
 
@@ -142,6 +148,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 단위 테스트에 사용할 입력은 현재 테스트 중인 동작을 확인하기 위해 가능한 한 가장 간단해야 합니다.
 
 #### <a name="why"></a>이유
+
 - 테스트는 코드베이스의 향후 변화에 대한 복원력이 향상됩니다.
 - 구현에 대한 테스트 동작에 근접합니다.
 
@@ -157,6 +164,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 단위 테스트의 이름 지정 변수는(프로덕션 코드의 이름 지정 변수보다 더 중요하지는 않지만) 중요합니다. 단위 테스트에는 매직 문자열이 없어야 합니다.
 
 #### <a name="why"></a>이유
+
 - 값을 특별하게 만드는 요인을 파악하기 위해 테스트의 판독기가 프로덕션 코드를 검사할 필요가 없도록 합니다.
 - *성취*하려는 것보다는 *증명*하려는 것을 명시적으로 보여 줍니다.
 
@@ -175,6 +183,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 단위 테스트를 작성할 때 수동 문자열 연결 및 `if`, `while`, `for`, `switch` 등의 논리 조건을 방지합니다.
 
 #### <a name="why"></a>이유
+
 - 테스트 중에 버그가 발생할 가능성이 줄어듭니다.
 - 구현 세부 정보보다는 최종 결과에 집중합니다.
 
@@ -193,6 +202,7 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 테스트에 비슷한 개체나 상태가 필요한 경우 Setup 및 Teardown 특성이 있는 경우보다 도우미 메서드를 선호합니다.
 
 #### <a name="why"></a>이유
+
 - 모든 코트가 각 테스트 내에서 볼 수 있기 때문에 테스트를 읽을 때 혼동이 적습니다.
 - 지정된 테스트에 대해 너무 많거나 너무 적게 설정될 가능성이 줄어듭니다.
 - 테스트 간 원치 않는 종속성을 만드는 테스트 간에 상태를 공유할 가능성이 줄어듭니다.
@@ -222,10 +232,12 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 
 ### <a name="avoid-multiple-asserts"></a>다중 어설션 방지
 테스트를 작성할 때 테스트당 하나의 Assert만 포함하려고 합니다. 하나의 어설션만 사용하는 일반적인 방법은 다음과 같습니다.
+
 - 각 어설션에 대한 별도의 테스트를 만듭니다.
 - 매개 변수화된 테스트를 사용합니다.
 
 #### <a name="why"></a>이유
+
 - 하나의 Assert가 실패하면 후속 Assert는 평가되지 않습니다.
 - 테스트에 여러 사례를 어설션하지 않도록 합니다.
 - 테스트가 실패한 이유에 대한 전체 그림을 제공합니다. 
@@ -249,17 +261,17 @@ mocks와 stubs에 대해 기억해야 할 주요 사항은 mocks는 stubs와 같
 ```csharp
 public string ParseLogLine(string input)
 {
-    var sanitizedInput = trimInput(input);
+    var sanitizedInput = TrimInput(input);
     return sanitizedInput;
 }
 
-private string trimInput(string input)
+private string TrimInput(string input)
 {
     return input.Trim();
 }
 ```
 
-첫 번째 반응은 메서드가 예상대로 작동하는지 확인하려고 하기 때문에 `trimInput`에 대한 테스트를 작성하는 것일 수 있습니다. 그러나 `ParseLogLine`에서 예상하지 못한 방식으로 `sanitizedInput`을 조작하여 쓸모없는 `trimInput`에 대한 테스트를 렌더링하는 것은 전적으로 가능합니다. 
+첫 번째 반응은 메서드가 예상대로 작동하는지 확인하려고 하기 때문에 `TrimInput`에 대한 테스트를 작성하는 것일 수 있습니다. 그러나 `ParseLogLine`에서 예상하지 못한 방식으로 `sanitizedInput`을 조작하여 쓸모없는 `TrimInput`에 대한 테스트를 렌더링하는 것은 전적으로 가능합니다. 
 
 실제 테스트는 공용 연결 메서드 `ParseLogLine`에 대해 수행되어야 합니다. 이는 최종적으로 주의를 기울여야 하는 것이기 때문이다. 
 
@@ -282,7 +294,7 @@ public void ParseLogLine_ByDefault_ReturnsTrimmedResult()
 ```csharp
 public int GetDiscountedPrice(int price)
 {
-    if(DateTime.Now == DayOfWeek.Tuesday) 
+    if(DateTime.Now.DayOfWeek == DayOfWeek.Tuesday) 
     {
         return price / 2;
     }
@@ -328,7 +340,7 @@ public interface IDateTimeProvider
     DayOfWeek DayOfWeek();
 }
 
-public bool GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
+public int GetDiscountedPrice(int price, IDateTimeProvider dateTimeProvider)
 {
     if(dateTimeProvider.DayOfWeek() == DayOfWeek.Tuesday) 
     {

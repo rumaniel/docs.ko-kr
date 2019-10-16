@@ -5,23 +5,21 @@ helpviewer_keywords:
 - side-by-side execution, assembly binding redirection
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 24a5cdff-7ed9-4195-93f3-edf6899019fc
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e6690a4f11bb1a88e2d77c67ccb29056c8e03f96
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: b59689e78f901637674c0a1df28ed74411e8e7c7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47088663"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921381"
 ---
 # <a name="assembly-binding-redirection-security-permission"></a>어셈블리 바인딩 리디렉션 보안 권한
-응용 프로그램 구성 파일에서 어셈블리 바인딩을 명시적으로 리디렉션하려면 보안 권한이 필요합니다. 이는 .NET Framework 어셈블리와 타사 어셈블리의 리디렉션 모두에 적용됩니다. 설정 하 여 사용 권한을 부여 합니다 <xref:System.Security.Permissions.SecurityPermissionFlag> 플래그를 <xref:System.Security.Permissions.SecurityPermission>. 관리 되는 어셈블리 기본적으로 권한이 없습니다.  
+응용 프로그램 구성 파일에서 어셈블리 바인딩을 명시적으로 리디렉션하려면 보안 권한이 필요합니다. 이는 .NET Framework 어셈블리와 타사 어셈블리의 리디렉션 모두에 적용됩니다. 에 플래그를 <xref:System.Security.Permissions.SecurityPermissionFlag> 설정 하 여 사용 권한을 부여 합니다. <xref:System.Security.Permissions.SecurityPermission> 관리 되는 어셈블리에는 기본적으로 권한이 없습니다.  
   
- 보안 권한은 신뢰할 수 있는 영역 (로컬 컴퓨터) 및 인트라넷 영역에서 실행 중인 응용 프로그램에 부여 됩니다. 인터넷 영역에서 실행 중인 응용 프로그램 어셈블리 바인딩 리디렉션을 수행할 수 없도록 금지 엄격 하 게 됩니다.  
+ 보안 권한은 신뢰할 수 있는 영역 (로컬 컴퓨터) 및 인트라넷 영역에서 실행 되는 응용 프로그램에 부여 됩니다. 인터넷 영역에서 실행 되는 응용 프로그램은 어셈블리 바인딩 리디렉션을 수행할 수 없습니다.  
   
- 관리자가 제어 되는 컴퓨터 구성 파일 또는 구성 요소 게시자에 의해 제어 되는 게시자 정책 파일에 어셈블리 리디렉션을 수행 하는 경우에 권한이 필요 하지 않습니다. 그러나 권한이 명시적으로 사용 하 여 게시자 정책 무시 하려면 응용 프로그램에 대 한 필요는 합니다 [ \<apply = "no" / >](../../../docs/framework/configure-apps/file-schema/runtime/publisherpolicy-element.md) 응용 프로그램 구성 파일의 요소입니다.  
+ 구성 요소 게시자가 제어 하는 게시자 정책 파일 또는 관리자가 제어 하는 컴퓨터 구성 파일에서 어셈블리 리디렉션을 수행 하는 경우에는이 권한이 필요 하지 않습니다. 그러나 응용 프로그램에서 응용 프로그램 구성 파일의 [ \<y apply apply = "no"/>](./file-schema/runtime/publisherpolicy-element.md) 요소를 사용 하 여 게시자 정책을 명시적으로 무시 하려면이 권한이 필요 합니다.  
   
- 다음 표에서 기본 보안 설정 합니다 **BindingRedirects** 플래그입니다.  
+ 다음 표에서는 **Bindingredirects** 플래그에 대 한 기본 보안 설정을 보여 줍니다.  
   
 |영역|BindingRedirects 플래그 설정|  
 |----------|-----------------------------------|  
@@ -30,9 +28,10 @@ ms.locfileid: "47088663"
 |인터넷 영역|**OFF**|  
 |신뢰할 수 없는 영역|**OFF**|  
   
- 관리자 지원 하거나 지정된 된 컴퓨터에서 특정 시나리오를 제한 하려면 이러한 보안 설정을 변경할 수 있습니다. 변경 하기 위한 도구가 합니다 **BindingRedirects** 기본값과; 설정 플래그 관리자로 수동으로 편집 해야 사용자의 컴퓨터 Security.config 파일.  
+ 관리자는 이러한 보안 설정을 변경 하 여 지정 된 컴퓨터의 특정 시나리오를 지원 하거나 제한할 수 있습니다. **바인딩 리디렉션** 플래그 설정을 기본값에서 변경 하는 데 사용할 수 있는 도구가 없습니다. 관리자는 사용자의 컴퓨터에서 web.config 파일을 수동으로 편집 해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [게시자 정책 파일 및 Side-by-side-실행](https://msdn.microsoft.com/library/97a042be-4d72-40c3-91c0-76fd36bdf133)  
- [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)  
- [Side-by-Side 실행](../../../docs/framework/deployment/side-by-side-execution.md)
+## <a name="see-also"></a>참고자료
+
+- [게시자 정책 파일 및 Side-by-side 실행](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/06d2bae3(v=vs.100))
+- [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](how-to-enable-and-disable-automatic-binding-redirection.md)
+- [Side-by-Side 실행](../deployment/side-by-side-execution.md)

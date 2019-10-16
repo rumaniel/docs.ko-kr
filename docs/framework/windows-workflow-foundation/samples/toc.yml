@@ -1,0 +1,110 @@
+- name: Windows 워크플로 샘플
+  href: index.md
+  items:
+    - name: 애플리케이션
+      href: application.md
+      items:
+        - name: 문서 승인 프로세스
+          href: document-approval-process.md
+        - name: 기업 구매 프로세스
+          href: corporate-purchase-process.md
+        - name: 채용 프로세스
+          href: hiring-process.md
+        - name: Visual Workflow Tracking
+          href: visual-workflow-tracking.md
+        - name: 일시 중단된 인스턴스 관리
+          href: suspended-instance-management.md
+    - name: Basic
+      href: basic.md
+      items:
+        - name: 기본 제공 활동
+          href: built-in-activities.md
+          items:
+            - name: Flowchart 활동에서 TryCatch를 사용하여 오류 처리
+              href: fault-handling-in-a-flowchart-activity-using-trycatch.md
+            - name: Load From XAML
+              href: load-from-xaml.md
+            - name: InvokeMethod 작업 사용
+              href: using-the-invokemethod-activity.md
+            - name: Pick 활동 사용
+              href: using-the-pick-activity.md
+        - name: 사용자 지정 활동
+          href: custom-activities.md
+          items:
+            - name: 본문 코딩
+              href: code-bodied.md
+              items:
+                - name: 기본 활동을 사용하는 사용자 지정 복합
+                  href: custom-composite-using-native-activity.md
+            - name: 사용자 지정 활동 디자이너
+              href: custom-activity-designers.md
+              items:
+                - name: 사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
+                  href: custom-composite-designers-workflow-item-presenter.md
+                - name: 사용자 지정 복합 디자이너 - 워크플로 항목 프리젠터
+                  href: custom-composite-designers-workflow-items-presenter.md
+                - name: 사용자 지정 활동 디자이너에서 ExpressionTextBox 사용
+                  href: using-the-expressiontextbox-in-a-custom-activity-designer.md
+                - name: 편집 범위 사용
+                  href: using-editing-scope.md
+        - name: Designer
+          href: designer.md
+          items:
+            - name: 디자이너를 통해 XAML 파일에 추가된 뷰 상태 제거
+              href: removing-the-view-state-the-designer-adds-to-an-xaml-file.md
+            - name: Programming Model Item Tree
+              href: programming-model-item-tree.md
+            - name: 속성 그리드 확장성
+              href: property-grid-extensibility.md
+        - name: 디자이너 재호스팅
+          href: designer-rehosting.md
+        - name: 실행
+          href: execution.md
+          items:
+            - name: 워크플로 인스턴스 만들기 및 실행
+              href: creating-and-running-a-workflow-instance.md
+            - name: WorkflowHostingEndpoint 다시 시작 책갈피
+              href: workflowhostingendpoint-resume-bookmark.md
+            - name: WorkflowHostingEndpoint에 대한 책갈피 확인자
+              href: bookmark-resolver-for-workflowhostingendpoint.md
+        - name: 추적
+          href: tracking.md
+          items:
+            - name: 사용자 지정 추적
+              href: custom-tracking.md
+            - name: Windows에서 이벤트 추적으로 이벤트 추적
+              href: tracking-events-into-event-tracing-in-windows.md
+            - name: SQL 추적
+              href: sql-tracking.md
+    - name: 시나리오
+      href: scenario.md
+      items:
+        - name: 활동 라이브러리
+          href: activity-library.md
+          items:
+            - name: SendMail 사용자 지정 활동
+              href: sendmail-custom-activity.md
+            - name: Throttled Parallel ForEach
+              href: throttled-parallel-foreach.md
+            - name: Database Access Activities
+              href: database-access-activities.md
+            - name: .NET Framework 4.5의 구체화된 정책 작업
+              href: externalized-policy-activity-in-net-framework-4-5.md
+            - name: 비제네릭 ForEach
+              href: non-generic-foreach.md
+            - name: 제네릭이 아닌 ParallelForEach
+              href: non-generic-parallelforeach.md
+            - name: WorkflowInstanceId 가져오기
+              href: get-workflowinstanceid.md
+        - name: 서비스
+          items:
+            - name: OperationContext 액세스
+              href: accessing-operationcontext.md
+            - name: LINQ 메시지 쿼리 상관 관계
+              href: linq-message-query-correlation.md
+            - name: Asynchronous Communication
+              href: asynchronous-communication.md
+        - name: XAML의 WPF 및 WF 통합
+          href: wpf-and-wf-integration-in-xaml.md
+        - name: External RuleSet Toolkit
+          href: external-ruleset-toolkit.md

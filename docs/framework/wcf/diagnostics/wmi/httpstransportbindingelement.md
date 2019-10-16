@@ -2,12 +2,12 @@
 title: HttpsTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: e78aa8c6-b53b-4105-a900-d3e7a39670f2
-ms.openlocfilehash: 6883bab2ed293541d79ac8c5045b0a1853b36e29
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8bf6df7d49c88cc93caacb92cebc23a297046e1c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963516"
 ---
 # <a name="httpstransportbindingelement"></a>HttpsTransportBindingElement
 HttpsTransportBindingElement  
@@ -40,5 +40,6 @@ class HttpsTransportBindingElement : HttpTransportBindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>

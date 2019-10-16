@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -pathmap compiler option [C#]
 - pathmap compiler option [C#]
 - /pathmap compiler option [C#]
-ms.openlocfilehash: 277ab8e094f28fd5e3cbba4de12e742bb9614730
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 48e96d2ec2ccbea83d573c0eb3630b1591c407a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47425786"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606633"
 ---
 # <a name="-pathmap-c-compiler-options"></a>-pathmap(C# 컴파일러 옵션)
 
@@ -52,5 +52,5 @@ csc -pathmap:C:\work\tests=\publish t.cs
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

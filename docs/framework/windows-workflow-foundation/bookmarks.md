@@ -1,15 +1,15 @@
 ---
-title: Bookmarks1
+title: 책갈피-WF
 ms.date: 03/30/2017
 ms.assetid: 9b51a346-09ae-455c-a70a-e2264ddeb9e2
-ms.openlocfilehash: 8b7ca9549327087e30d6c72a8b784aa37ad09f3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a15a28cc39a4227765c238a6f2b86c72197f1a39
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33515570"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68868926"
 ---
-# <a name="bookmarks"></a>책갈피
+# <a name="bookmarks"></a>Bookmarks
 책갈피는 활동이 워크플로 스레드에 그대로 유지되지 않고 입력을 수동적으로 기다릴 수 있도록 하는 메커니즘입니다. 활동에서 자극을 기다리고 있음을 알릴 때 책갈피를 만들 수 있습니다. 이는 현재 실행 중인 메서드(<xref:System.Activities.Bookmark>를 만든 메서드)에서 반환되더라도 활동 실행이 완료된 것으로 간주해서는 안 된다는 것을 런타임에 나타냅니다.  
   
 ## <a name="bookmark-basics"></a>책갈피 기본 사항  
@@ -51,7 +51,7 @@ public sealed class ReadLine : NativeActivity<string>
 }  
 ```  
   
- 이 예제에서는 `ReadLine` 활동을 사용하여 사용자 이름을 수집하고 콘솔 창에 표시하는 워크플로를 만듭니다. 호스트 응용 프로그램에서는 실제로 입력을 수집하는 작업을 수행하고 <xref:System.Activities.Bookmark>를 다시 시작하여 이를 워크플로에 전달합니다.  
+ 이 예제에서는 `ReadLine` 활동을 사용하여 사용자 이름을 수집하고 콘솔 창에 표시하는 워크플로를 만듭니다. 호스트 애플리케이션에서는 실제로 입력을 수집하는 작업을 수행하고 <xref:System.Activities.Bookmark>를 다시 시작하여 이를 워크플로에 전달합니다.  
   
 ```csharp  
 Variable<string> name = new Variable<string>  

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - markup extensions [WPF]
 - WPF Namespace [WPF]
 ms.assetid: 5e1d60e8-9403-47d0-98e4-b49aec871ee7
-ms.openlocfilehash: 72f0ab5e07e963951a477aaf44f08f0aff760df0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 91416bba9c94c26cbc107e90c2f528d94600699c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764558"
 ---
 # <a name="wpf-xaml-extensions"></a>WPF XAML 확장
 ## <a name="in-this-section"></a>섹션 내용  
- [Binding 태그 확장](../../../../docs/framework/wpf/advanced/binding-markup-extension.md)  
-  [ColorConvertedBitmap 태그 확장](../../../../docs/framework/wpf/advanced/colorconvertedbitmap-markup-extension.md)  
-  [ComponentResourceKey 태그 확장](../../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)  
-  [DynamicResource 태그 확장](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
-  [RelativeSource 태그 확장](../../../../docs/framework/wpf/advanced/relativesource-markupextension.md)  
-  [StaticResource 태그 확장](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
-  [TemplateBinding 태그 확장](../../../../docs/framework/wpf/advanced/templatebinding-markup-extension.md)  
-  [ThemeDictionary 태그 확장](../../../../docs/framework/wpf/advanced/themedictionary-markup-extension.md)  
-  [PropertyPath XAML 구문](../../../../docs/framework/wpf/advanced/propertypath-xaml-syntax.md)  
-  [PresentationOptions:Freeze 특성](../../../../docs/framework/wpf/advanced/presentationoptions-freeze-attribute.md)
+ [Binding 태그 확장](binding-markup-extension.md)  
+  [ColorConvertedBitmap 태그 확장](colorconvertedbitmap-markup-extension.md)  
+  [ComponentResourceKey 태그 확장](componentresourcekey-markup-extension.md)  
+  [DynamicResource 태그 확장](dynamicresource-markup-extension.md)  
+  [RelativeSource 태그 확장](relativesource-markupextension.md)  
+  [StaticResource 태그 확장](staticresource-markup-extension.md)  
+  [TemplateBinding 태그 확장](templatebinding-markup-extension.md)  
+  [ThemeDictionary 태그 확장](themedictionary-markup-extension.md)  
+  [PropertyPath XAML 구문](propertypath-xaml-syntax.md)  
+  [PresentationOptions:Freeze 특성](presentationoptions-freeze-attribute.md)

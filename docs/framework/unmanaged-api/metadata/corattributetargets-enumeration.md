@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 54d239c3091b29424b26fbab4cb4eb9152ff9ad9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9fb1dff80fccc920540d370797441b3a019d766c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442168"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780919"
 ---
 # <a name="corattributetargets-enumeration"></a>CorAttributeTargets 열거형
-특성을 적용하는 데 유효한 응용 프로그램 요소를 지정합니다.  
+특성을 적용하는 데 유효한 애플리케이션 요소를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorAttributeTargets  
 {  
     catAssembly            = 0x0001,  
@@ -64,34 +64,35 @@ typedef enum CorAttributeTargets
   
 |멤버|설명|  
 |------------|-----------------|  
-|`catAssembly`|특성이는 어셈블리에 적용할 수 있습니다.|  
+|`catAssembly`|어셈블리에 특성을 적용할 수 있습니다.|  
 |`catModule`|이식 가능한 실행 파일 (.dll 또는.exe) 모듈에 특성을 적용할 수 있습니다.|  
 |`catClass`|특성은 클래스에 적용할 수 있습니다.|  
-|`catStruct`|특성은 구조를 적용할 수 즉, 값을 입력 합니다.|  
+|`catStruct`|특성은 구조에 적용할 수 있습니다. 즉, 값을 입력 합니다.|  
 |`catEnum`|특성을 열거형에 적용할 수 있습니다.|  
 |`catConstructor`|특성은 생성자에 적용할 수 있습니다.|  
 |`catMethod`|메서드에 특성을 적용할 수 있습니다.|  
 |`catProperty`|특성 속성에 적용할 수 있습니다.|  
 |`catField`|특성 필드에 적용할 수 있습니다.|  
 |`catEvent`|이벤트에 특성을 적용할 수 있습니다.|  
-|`catInterface`|인터페이스에 특성을 적용할 수 있습니다.|  
+|`catInterface`|특성을 인터페이스에 적용할 수 있습니다.|  
 |`catParameter`|특성 매개 변수에 적용할 수 있습니다.|  
 |`catDelegate`|대리자에 특성을 적용할 수 있습니다.|  
 |`catGenericParameter`|제네릭 매개 변수 특성을 적용할 수 있습니다.|  
-|`catAll`|응용 프로그램 요소에 특성을 적용할 수 있습니다.|  
-|`catClassMembers`|클래스의 멤버에 특성을 적용할 수 있습니다.|  
+|`catAll`|특성은 모든 애플리케이션 요소에 적용할 수 있습니다.|  
+|`catClassMembers`|특성은 클래스의 멤버에 적용할 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  
  `CorAttributeTargets` 열거형 값은 기본 결합을 가져오도록 비트 OR 연산을 함께 사용할 수 있습니다.  
   
- `CorAttributeTargets` 관리 되는 <xref:System.AttributeTargets?displayProperty=nameWithType> 열거 합니다.  
+ 합니다 `CorAttributeTargets` 관리 되는 <xref:System.AttributeTargets?displayProperty=nameWithType> 열거형입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorHdr.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

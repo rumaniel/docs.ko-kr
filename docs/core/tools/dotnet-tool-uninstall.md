@@ -1,15 +1,13 @@
 ---
-title: dotnet tool uninstall 명령 - .NET Core CLI
+title: dotnet tool uninstall 명령
 description: dotnet tool uninstall 명령은 컴퓨터에서 지정한 .NET Core Global Tool을 제거합니다.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 93a43e19df4c7f220ac1e2d2db397cba4d791e83
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 033753f44464e78b826e908e0b6cdf276da8a179
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43738179"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117547"
 ---
 # <a name="dotnet-tool-uninstall"></a>dotnet tool uninstall
 
@@ -21,7 +19,7 @@ ms.locfileid: "43738179"
 
 ## <a name="synopsis"></a>개요
 
-```console
+```dotnetcli
 dotnet tool uninstall <PACKAGE_NAME> <-g|--global>
 dotnet tool uninstall <PACKAGE_NAME> <--tool-path>
 dotnet tool uninstall <-h|--help>
@@ -67,4 +65,4 @@ Global Tool을 제거할 위치를 지정합니다. PATH는 절대적이거나 �
 
 ## <a name="see-also"></a>참고 항목
 
-* [.NET Core Global Tool](global-tools.md)
+- [.NET Core Global Tool](global-tools.md)

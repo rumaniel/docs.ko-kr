@@ -1,18 +1,18 @@
 ---
-title: '&lt;요약&gt; (Visual Basic)'
+title: <summary> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <summary> XML tag
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
-ms.openlocfilehash: 5ef9b7a98503ff36174de4418ca7d599c365f5aa
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0fbe07884f55b7e6f460929e54520de5f718e1af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46000481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940766"
 ---
-# <a name="ltsummarygt-visual-basic"></a>&lt;요약&gt; (Visual Basic)
+# <a name="summary-visual-basic"></a>\<요약 > (Visual Basic)
 멤버의 요약을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -21,7 +21,7 @@ ms.locfileid: "46000481"
 <summary>description</summary>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `description`  
  개체에 대한 요약입니다.  
   
@@ -35,7 +35,8 @@ ms.locfileid: "46000481"
 ## <a name="example"></a>예제  
  이 예제에서는 합니다 `<summary>` 태그를 설명 하는 `ResetCounter` 메서드 및 `Counter` 속성입니다.  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/summary_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>참고 항목  
- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>참고자료
+
+- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

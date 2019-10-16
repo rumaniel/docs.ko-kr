@@ -2,12 +2,12 @@
 title: '방법: 자식 요소의 하위 항목 찾기(XPath 및 LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 505b7512-bb8b-4f85-abbf-491f039c961e
-ms.openlocfilehash: 2fbb5111cdabac5ecbdc1db43e2ce2f41ebb7303
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f17d723aa03c45daa4e7e741ea6b14c637537ccf
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523206"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253710"
 ---
 # <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-c"></a>방법: 자식 요소의 하위 항목 찾기(XPath 및 LINQ to XML)(C#)
 이 항목에서는 특정 이름을 가진 자식 요소의 하위 요소를 가져오는 방법을 보여 줍니다.  
@@ -70,11 +70,8 @@ Console.WriteLine(str2);
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>참고 항목
-
-- [XPath 사용자를 위한 LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

@@ -17,26 +17,27 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 395dc85ad638e8a790962a4aa38019612c360ce1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 323e53c45a26d5703548ebe9863978f6d3929f0b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402219"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787465"
 ---
 # <a name="getalinkmessagedll-function"></a>GetALinkMessageDll 함수
-찾아서 메시지 DLL을 로드 합니다. 0을 반환 메시지 DLL 찾거나 로드할 수 없습니다. 메시지 DLL 이름이 언어 ID, 하위 디렉터리 또는 현재 디렉터리에 이어야 합니다.  
+메시지 DLL을 찾아서 로드 합니다. 메시지 DLL을 찾을 수 없거나 로드할 수 없는 경우 0을 반환 합니다. 메시지 DLL은 이름이 언어 ID 이거나 현재 디렉터리에 있는 하위 디렉터리에 있어야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HINSTANCE WINAPI GetALinkMessageDll();  
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **헤더:** alink.h  
+ **헤더:** alink. h  
   
- **라이브러리**: alink.dll  
+ **라이브러리**: alink .dll  
   
-## <a name="see-also"></a>참고 항목  
- [Al.exe(어셈블리 링커)](../../../../docs/framework/tools/al-exe-assembly-linker.md)
+## <a name="see-also"></a>참고자료
+
+- [Al.exe(어셈블리 링커)](../../tools/al-exe-assembly-linker.md)

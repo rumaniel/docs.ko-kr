@@ -1,6 +1,6 @@
 ---
 title: 중첩 형식
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - types, nested
@@ -10,14 +10,13 @@ helpviewer_keywords:
 - members [.NET Framework], type
 - class library design guidelines [.NET Framework], nested types
 ms.assetid: 12feb7f0-b793-4d96-b090-42d6473bab8c
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 2593b85dd4747a3fbe365994c3e5d9beae3e3406
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+author: KrzysztofCwalina
+ms.openlocfilehash: 22c14d05105154ff642cb8a44eda8e7c5d0575e4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44188150"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756873"
 ---
 # <a name="nested-types"></a>중첩 형식
 중첩된 형식은 바깥쪽 형식 이라고 하는 다른 형식의 범위 내에 정의 된 형식인 합니다. 중첩된 형식은 바깥쪽 형식의 모든 멤버에 액세스할 수 있습니다. 예를 들어, 바깥쪽 형식 및 보호 된 바깥쪽 형식의 모든 상위 항목에 정의 된 필드를 정의 하는 전용 필드에 대 한 액세스를 권한이 있습니다.  
@@ -44,9 +43,9 @@ ms.locfileid: "44188150"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)  
+- [형식 디자인 지침](../../../docs/standard/design-guidelines/type.md)
 - [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)

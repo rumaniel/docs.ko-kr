@@ -1,5 +1,5 @@
 ---
-title: '방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 교대로 반복되는 행 스타일 설정'
+title: '방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 대한 대체 행 스타일 설정'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ledger-like formats
@@ -8,40 +8,39 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 5807df6d11580c22f2b754faf44fb3aa63dee14e
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: a24b4e6af98d2637ecae2352aaa881adcd1c1a45
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48836328"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666839"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 교대로 반복되는 행 스타일 설정
-테이블 형식 데이터는 종종 교대로 반복 되는 행의 배경색은 여기서 장부와 비슷한 형식으로 표시 됩니다. 이 형식을 사용하면 특히 많은 열을 포함하는 넓은 테이블에서 사용자가 각 행에 있는 셀을 쉽게 구분할 수 있습니다.  
-  
- <xref:System.Windows.Forms.DataGridView> 컨트롤을 사용하여 교대로 반복되는 행에 대한 전체 스타일 정보를 지정할 수 있습니다. 교대로 반복 되는 행을 구분할 수 전경색 및 배경색 외에도 글꼴과 같은 스타일 특성을 사용할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 셀 스타일](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)합니다.  
-  
- 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트를 만듭니다](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.  
-  
-> [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
-  
-### <a name="define-styles-for-alternating-rows"></a>교대로 반복 되는 행에 대 한 스타일을 정의 합니다.  
-  
-1.  선택 된 <xref:System.Windows.Forms.DataGridView> 디자이너에서 제어 합니다.  
-  
-2.  에 **속성** 창에서 줄임표 단추를 클릭 (![VisualStudioEllipsesButton 스크린 샷](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 옆에 <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> 속성입니다.  
-  
-3.  에 **CellStyle 작성기** 대화 상자에서 속성을 설정 하 여 스타일 정의 및 사용 합니다 **미리 보기** 선택 사항을 확인 하는 창입니다. 지정한 스타일 번째부터 컨트롤에서 표시 하는 다른 모든 행에 사용 됩니다.  
-  
-4.  나머지 행에 대 한 스타일을 정의 하려면 사용 하 여 2-3 단계를 반복 하 여 <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> 속성입니다.  
-  
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에 대한 대체 행 스타일 설정
+
+표 형식 데이터는 교대로 반복 되는 행의 배경색이 서로 다른 원장 형식으로 표시 됩니다. 이 형식을 사용하면 특히 많은 열을 포함하는 넓은 테이블에서 사용자가 각 행에 있는 셀을 쉽게 구분할 수 있습니다.
+
+<xref:System.Windows.Forms.DataGridView> 컨트롤을 사용하여 교대로 반복되는 행에 대한 전체 스타일 정보를 지정할 수 있습니다. 배경색 뿐만 아니라 전경 색 및 글꼴과 같은 스타일 특성을 사용 하 여 교대로 반복 되는 행을 구분할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다.
+
+다음 절차에는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 포함 하는 폼을 포함 하는 **Windows 응용 프로그램** 프로젝트가 필요 합니다. 이러한 프로젝트 [를 설정 하는 방법에 대 한 자세한 내용은 방법: Windows Forms 응용 프로그램 프로젝트](/visualstudio/ide/step-1-create-a-windows-forms-application-project) [를 만들고 방법: Windows Forms](how-to-add-controls-to-windows-forms.md)에 컨트롤을 추가 합니다.
+
+### <a name="define-styles-for-alternating-rows"></a>교대로 반복 되는 행에 대 한 스타일 정의
+
+1. 디자이너에서 <xref:System.Windows.Forms.DataGridView> 컨트롤을 선택 합니다.
+
+2. 속성 창 ![](./media/visual-studio-ellipsis-button.png)에서 속성<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A> 옆에 있는 줄임표 단추 (Visual Studio 속성 창의 줄임표 단추 (...)를 클릭 합니다.
+
+3. **CellStyle 작성기** 대화 상자에서 속성을 설정 하 여 스타일을 정의 하 고 **미리 보기** 창을 사용 하 여 선택 내용을 확인 합니다. 지정 하는 스타일은 두 번째 항목부터 시작 하 여 컨트롤에 표시 되는 다른 모든 행에 사용 됩니다.
+
+4. 나머지 행에 대 한 스타일을 정의 하려면 속성을 <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A> 사용 하 여 2 단계와 3 단계를 반복 합니다.
+
     > [!NOTE]
-    >  셀이 여러 속성에서 상속 하는 스타일을 사용 하 여 표시 됩니다. 스타일 상속에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)합니다.  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.DataGridView>  
- [Windows Forms DataGridView 컨트롤의 셀 스타일](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView 컨트롤의 기본 형식 및 스타일 지정](../../../../docs/framework/winforms/controls/basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)  
- [Windows Forms DataGridView 컨트롤에 디자이너 사용](../../../../docs/framework/winforms/controls/using-the-designer-with-the-windows-forms-datagridview-control.md)  
- [방법: Windows 응용 프로그램 프로젝트 만들기](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+    > 여러 속성에서 상속 된 스타일을 사용 하 여 셀이 표시 됩니다. 스타일 상속에 대 한 자세한 내용은 참조 하세요. [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)합니다.
+
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.DataGridView>
+- [Windows Forms DataGridView 컨트롤의 셀 스타일](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤의 기본 형식 및 스타일 지정](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 컨트롤에 디자이너 사용](using-the-designer-with-the-windows-forms-datagridview-control.md)
+- [방법: Windows Forms 애플리케이션 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)

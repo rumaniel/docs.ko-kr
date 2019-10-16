@@ -2,12 +2,12 @@
 title: PeerTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 40bf6be2-8087-4cb3-a66c-408d53eb9269
-ms.openlocfilehash: 58bf07b0429ca2435b5aae3683ef69951a10003e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ba9031dad96f12c7c48b03f1da4af1b3adc6dd4f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962965"
 ---
 # <a name="peertransportbindingelement"></a>PeerTransportBindingElement
 PeerTransportBindingElement  
@@ -56,5 +56,6 @@ class PeerTransportBindingElement : TransportBindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.PeerTransportBindingElement>

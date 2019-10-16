@@ -1,5 +1,6 @@
 ---
-title: enum 키워드(C# 참조)
+title: enum 키워드 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - enum
@@ -7,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: a64559ac1127f5ec296cf3892dd521c3ad8ac2be
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: fb11fb1a81b8407e2585e32d4217e08a75ea19b0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086152"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69605826"
 ---
 # <a name="enum-c-reference"></a>enum(C# 참조)
 
-`enum` 키워드는 열거자 목록이라고 하는 명명된 상수 집합으로 구성된 고유 형식인 열거형을 선언하는 데 사용됩니다.  
+`enum` 키워드는 열거자 목록이라고 하는 명명된 상수 집합으로 구성된 고유 형식인 열거형을 선언하는 데 사용됩니다.
 
 대개 네임스페이스의 모든 클래스가 같은 수준으로 열거형에 액세스할 수 있도록 네임스페이스 내에서 직접 열거형을 정의하는 것이 좋습니다. 하지만 특정 클래스나 구조체 내에 열거형이 중첩될 수도 있습니다.
 
@@ -34,22 +35,20 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 이 열거형에서 요소의 순서는 `1` 대신 `0`부터 시작합니다. 그러나 값이 0인 상수를 포함하는 것이 좋습니다. 자세한 내용은 [열거형 형식](../../programming-guide/enumeration-types.md)을 참조하세요.
 
-모든 열거형 형식에는 기본 형식이 있으며, 해당 형식은 [char](char.md) 형식을 제외한 임의의 정수 형식이 될 수 있습니다. 열거형 요소의 기본적인 기본 형식은 i [int](int.md)입니다. [바이트](byte.md)와 같은 다른 정수 형식의 열거형을 선언하려면 다음 예제에서와 같이 콜론을 사용하여 identifier 다음에 형식을 사용합니다.
+모든 열거형 형식에는 기본 형식이 있으며, 해당 형식은 [정수 숫자 형식](../builtin-types/integral-numeric-types.md)일 수 있습니다. [char](char.md) 형식은 열거형의 기본 형식일 수 없습니다. 열거형 요소의 기본적인 기본 형식은 i [int](../builtin-types/integral-numeric-types.md)입니다. [바이트](../builtin-types/integral-numeric-types.md)와 같은 다른 정수 형식의 열거형을 선언하려면 다음 예제에서와 같이 콜론을 사용하여 identifier 다음에 형식을 사용합니다.
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-열거형으로 승인된 형식은 [byte](byte.md), [sbyte](sbyte.md), [short](short.md), [ushort](ushort.md), [int](int.md), [uint](uint.md), [long](long.md) 또는 [ulong](ulong.md)입니다.
-
-`Day` 형식의 변수에는 명명된 상수뿐 아니라 기본 형식의 범위에 있는 모든 값을 할당할 수 있습니다.
+열거형 형식의 변수에는 명명된 상수뿐 아니라 기본 형식의 범위에 있는 모든 값을 할당할 수 있습니다.
 
 `enum E` 의 기본값은 식 `(E)0`으로 계산된 값입니다.
 
 > [!NOTE]
 > 열거자의 이름에는 공백이 포함될 수 없습니다.
 
-기본 형식은 각 열거자에 할당될 저장소 크기를 지정합니다. 그러나 `enum` 형식에서 정수 계열 형식으로 변환하려면 명시적 캐스트가 필요합니다. 예를 들어 다음 문은 `Sun` 을 [로 변환하는 캐스트를 사용하여 열거자](int.md) 을 `enum` int `int`형식 변수에 대입합니다.
+기본 형식은 각 열거자에 할당될 스토리지 크기를 지정합니다. 그러나 `enum` 형식에서 정수 계열 형식으로 변환하려면 명시적 캐스트가 필요합니다. 예를 들어 다음 문은 `Sun` 을 [로 변환하는 캐스트를 사용하여 열거자](../builtin-types/integral-numeric-types.md) 을 `enum` int `int`형식 변수에 대입합니다.
 
 ```csharp
 int x = (int)Day.Sun;
@@ -97,11 +96,11 @@ int x = (int)Day.Sun;
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../index.md)  
-- [열거형 형식](../../programming-guide/enumeration-types.md)  
-- [C# 키워드](index.md)  
-- [정수 계열 형식 표](integral-types-table.md)  
-- [기본 제공 형식 표](built-in-types-table.md)  
-- [암시적 숫자 변환 표](implicit-numeric-conversions-table.md)  
-- [명시적 숫자 변환 표](explicit-numeric-conversions-table.md)  
+- [C# 참조](../index.md)
+- [열거형 형식](../../programming-guide/enumeration-types.md)
+- [C# 키워드](index.md)
+- [정수 형식](../builtin-types/integral-numeric-types.md)
+- [기본 제공 형식 표](built-in-types-table.md)
+- [암시적 숫자 변환 표](implicit-numeric-conversions-table.md)
+- [명시적 숫자 변환 표](explicit-numeric-conversions-table.md)
 - [열거형 명명 규칙](../../../standard/design-guidelines/names-of-classes-structs-and-interfaces.md#naming-enumerations)

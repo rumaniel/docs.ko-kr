@@ -1,5 +1,5 @@
 ---
-title: '방법: TextBox 텍스트의 소스를 업데이트하는 시점 제어'
+title: '방법: TextBox 텍스트가 소스를 업데이트하는 시점 제어'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,41 +9,42 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 52f3a8d3a5d78a211367722b3042eb50f6ac36d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d1d624d7550a1135431b7fffc7450e3a510855a7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557227"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966464"
 ---
-# <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>방법: TextBox 텍스트의 소스를 업데이트하는 시점 제어
-이 항목에서는 사용 하는 방법을 설명는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 바인딩 소스 업데이트의 타이밍을 제어 하는 속성입니다. 항목에서는 사용 된 <xref:System.Windows.Controls.TextBox> 예를 들어 컨트롤입니다.  
+# <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>방법: TextBox 텍스트가 소스를 업데이트하는 시점 제어
+이 항목에서는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 속성을 사용 하 여 바인딩 소스 업데이트의 타이밍을 제어 하는 방법에 대해 설명 합니다. 이 항목에서는 컨트롤 <xref:System.Windows.Controls.TextBox> 을 예제로 사용 합니다.  
   
 ## <a name="example"></a>예제  
- <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> 속성에는 기본 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>합니다. 즉, 경우에 응용 프로그램에 <xref:System.Windows.Controls.TextBox> 데이터 바인딩된 <xref:System.Windows.Controls.TextBox>합니다.<xref:System.Windows.Controls.TextBox.Text%2A> 속성에 입력 한 텍스트는 <xref:System.Windows.Controls.TextBox> 될 때까지 소스를 업데이트 하지 않습니다는 <xref:System.Windows.Controls.TextBox> 포커스를 잃을 (예를 들어, 클릭 하면에서 멀리는 <xref:System.Windows.Controls.TextBox>).  
+ <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> 속성의 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>기본값은입니다. 이는 응용 프로그램에 데이터 바인딩된 <xref:System.Windows.Controls.TextBox> <xref:System.Windows.Controls.TextBox>가 있는 경우를 의미 합니다.<xref:System.Windows.Controls.TextBox.Text%2A> 속성에서에 입력 <xref:System.Windows.Controls.TextBox> 하는 텍스트는가 포커스를 <xref:System.Windows.Controls.TextBox> 잃을 때까지 원본을 업데이트 하지 않습니다 (예를 들어를 클릭 <xref:System.Windows.Controls.TextBox>한 경우).  
   
- 소스를 입력할 때 자동으로 업데이트할 수 설정는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 에 대 한 바인딩 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>합니다. 다음 예제에서는 강조 표시 된 코드 줄을 표시 하는 `Text` 둘 다는 <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.TextBlock> 동일한 소스 속성에 바인딩됩니다. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 의 속성은 <xref:System.Windows.Controls.TextBox> 바인딩으로 설정 된 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>합니다.  
+ 입력할 때 원본을 업데이트 하려면 바인딩의를 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 로 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>설정 합니다. 다음 예제에서 강조 표시 된 코드 줄은 `Text` <xref:System.Windows.Controls.TextBox> 및 <xref:System.Windows.Controls.TextBlock> 의 속성이 모두 동일한 소스 속성에 바인딩되어 있음을 보여 줍니다. 바인딩의 속성은 로<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>설정 됩니다. <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> <xref:System.Windows.Controls.TextBox>  
   
- [!code-xaml[SimpleBinding#USTHowTo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=33-39,41-42)]  
+ [!code-xaml[SimpleBinding#USTHowTo](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleBinding/VisualBasic/Page1.xaml?highlight=33-39,41-42)]  
   
- 결과적으로 <xref:System.Windows.Controls.TextBlock> 사용자가 텍스트를 (변경 되기 때문에 소스) 같은 텍스트를 표시는 <xref:System.Windows.Controls.TextBox>샘플의 다음 스크린 샷에서 예와 같이:  
+ 결과적으로,는 <xref:System.Windows.Controls.TextBlock> 샘플의 다음 스크린샷에 표시 된 것 처럼 사용자가에 <xref:System.Windows.Controls.TextBox>텍스트를 입력할 때 원본 변경 내용으로 인해 동일한 텍스트를 표시 합니다.  
   
- ![단순 데이터 바인딩 샘플 스크린샷](../../../../docs/framework/wpf/data/media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![간단한 데이터 바인딩을 보여 주는 스크린샷](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
- 대화 상자 또는 사용자가 편집 가능한 폼 하 고 사용자가 완료 되는 필드를 편집 하 고 "확인"을 클릭 될 때까지 원본 업데이트 연기 하려는 설정할 수 있습니다는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값에 대 한 바인딩 <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>다음 예제와 같이,:  
+ 대화 상자 또는 사용자가 편집할 수 있는 폼이 있고 사용자가 필드 편집을 마치고 "확인"을 클릭할 때까지 원본 업데이트를 지연 하려는 경우 다음 예제와 같이 바인딩의 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값을로 <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>설정할 수 있습니다.  
   
- [!code-xaml[UpdateSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml#2)]  
+ [!code-xaml[UpdateSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml#2)]  
   
- 설정 하는 경우는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값을 <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>, 응용 프로그램 호출 하는 경우에 소스 값 변경의 <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> 메서드. 다음 예제에서는 호출 하는 방법을 보여 줍니다. <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> 에 대 한 `itemNameTextBox`:  
+ <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값을로 <xref:System.Windows.Data.UpdateSourceTrigger.Explicit>설정 하면 응용 프로그램에서 메서드를 <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> 호출 하는 경우에만 소스 값이 변경 됩니다. 다음 예제에서는에 대해 <xref:System.Windows.Data.BindingExpression.UpdateSource%2A> `itemNameTextBox`를 호출 하는 방법을 보여 줍니다.  
   
- [!code-csharp[UpdateSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml.cs#1)]
- [!code-vb[UpdateSource#1](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UpdateSource/VisualBasic/Window1.xaml.vb#1)]  
-  
-> [!NOTE]
->  다른 컨트롤의 속성에 대 한 동일한 기법을 사용할 수 있지만 대부분의 다른 속성 기본값 한지 염두에서에 둬야 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 값 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>합니다. 자세한 내용은 참조는 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 속성 페이지.  
+ [!code-csharp[UpdateSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/UpdateSource/CSharp/Window1.xaml.cs#1)]
+ [!code-vb[UpdateSource#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/UpdateSource/VisualBasic/Window1.xaml.vb#1)]  
   
 > [!NOTE]
->  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 속성 소스 업데이트를 처리 하 고 따라서만 관련 된 <xref:System.Windows.Data.BindingMode.TwoWay> 또는 <xref:System.Windows.Data.BindingMode.OneWayToSource> 바인딩. 에 대 한 <xref:System.Windows.Data.BindingMode.TwoWay> 및 <xref:System.Windows.Data.BindingMode.OneWayToSource> 작업이 면 속성 변경 알림을 제공 하는 소스 개체 요구 사항에 대 한 바인딩을 합니다. 자세한 내용은 이 항목에 제시된 샘플을 참조하세요. 또한 [속성 변경 알림 구현](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)을 참조할 수 있습니다.  
+> 다른 컨트롤의 속성에 동일한 기법을 사용할 수 있지만 대부분의 다른 속성에는 기본값이 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>있습니다. 자세한 내용은 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 속성 페이지를 참조 하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [방법 항목](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+> [!NOTE]
+> 속성 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A> 은 원본 업데이트를 처리 하므로 <xref:System.Windows.Data.BindingMode.TwoWay> 또는 <xref:System.Windows.Data.BindingMode.OneWayToSource> 바인딩과만 관련 됩니다. <xref:System.Windows.Data.BindingMode.TwoWay> 및<xref:System.Windows.Data.BindingMode.OneWayToSource> 바인딩이 작동 하려면 소스 개체가 속성 변경 알림을 제공 해야 합니다. 자세한 내용은 이 항목에 제시된 샘플을 참조하세요. 또한 [속성 변경 알림 구현](how-to-implement-property-change-notification.md)을 참조할 수 있습니다.  
+  
+## <a name="see-also"></a>참고자료
+
+- [방법 항목](data-binding-how-to-topics.md)

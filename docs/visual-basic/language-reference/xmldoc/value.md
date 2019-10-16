@@ -1,18 +1,18 @@
 ---
-title: '&lt;값&gt; (Visual Basic)'
+title: <value> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - <value> XML tag
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
-ms.openlocfilehash: ef14836c438cf6a1de300270d9882c1e53e716ee
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 2938d485bf6c547c792431b93fc8959c9c36befa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940740"
 ---
-# <a name="ltvaluegt-visual-basic"></a>&lt;값&gt; (Visual Basic)
+# <a name="value-visual-basic"></a>\<값 > (Visual Basic)
 속성의 설명을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -21,7 +21,7 @@ ms.locfileid: "43855935"
 <value>property-description</value>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `property-description`  
  속성에 대한 설명입니다.  
   
@@ -33,7 +33,8 @@ ms.locfileid: "43855935"
 ## <a name="example"></a>예제  
  이 예제에서는 합니다 `<value>` 값에 대해 설명 하는 태그를 `Counter` 속성에 저장 합니다.  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/value_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>참고 항목  
- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>참고자료
+
+- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

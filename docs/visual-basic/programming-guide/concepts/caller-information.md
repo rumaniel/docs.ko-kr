@@ -2,12 +2,12 @@
 title: 호출자 정보 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 0074ad5bfa5907fb1d02cc92b8b5717897a36b3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d9dc542ee9b800cfe6342f868ff9c2b170a4beec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644214"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642361"
 ---
 # <a name="caller-information-visual-basic"></a>호출자 정보 (Visual Basic)
 호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다. 이 정보는 추적, 디버깅 및 진단 도구를 만드는 데 도움이 됩니다.  
@@ -55,12 +55,12 @@ End Sub
   
  선택적 인수를 명시적으로 제공하여 호출자 정보를 제어하거나 호출자 정보를 숨길 수 있습니다.  
   
-###  <a name="MEMBERNAMES"></a> 멤버 이름  
+### <a name="MEMBERNAMES"></a> 멤버 이름  
  `CallerMemberName` 특성을 사용하여 멤버 이름을 호출된 메서드에 대한 `String` 인수로 지정하는 것을 피할 수 있습니다. 이 기술을 사용하여 **이름 바꾸기 리팩터링**이 `String` 값을 변경하지 못하는 문제를 피합니다. 이 이점은 다음 작업에 특히 유용합니다.  
   
--   추적 및 진단 루틴 사용.  
+- 추적 및 진단 루틴 사용.  
   
--   데이터를 바인딩할 때 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스 구현. 이 인터페이스에서는 컨트롤에서 업데이트된 정보를 표시할 수 있도록 바운드 컨트롤의 속성이 변경되었음을 알리는 개체의 속성을 사용할 수 있습니다. `CallerMemberName` 특성이 없으면 속성 이름을 리터럴로 지정해야 합니다.  
+- 데이터를 바인딩할 때 <xref:System.ComponentModel.INotifyPropertyChanged> 인터페이스 구현. 이 인터페이스에서는 컨트롤에서 업데이트된 정보를 표시할 수 있도록 바운드 컨트롤의 속성이 변경되었음을 알리는 개체의 속성을 사용할 수 있습니다. `CallerMemberName` 특성이 없으면 속성 이름을 리터럴로 지정해야 합니다.  
   
  아래 차트는 `CallerMemberName` 특성을 사용할 때 반환되는 멤버 이름을 보여줍니다.  
   
@@ -74,8 +74,9 @@ End Sub
 |특성 생성자|특성이 적용되는 멤버의 이름입니다. 특성이 멤버 내에 있는 어떤 요소인 경우(예: 매개 변수, 반환 값 또는 제네릭 형식 매개 변수) 이 결과는 그 요소와 관련된 멤버의 이름입니다.|  
 |포함하는 멤버가 없음(예: 어셈블리 수준 또는 형식에 적용되는 특성)|선택적 매개 변수의 기본값입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [특성(Visual Basic)](../../../visual-basic/language-reference/attributes.md)  
- [일반 특성(Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)  
- [선택적 매개 변수](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)  
- [프로그래밍 개념(Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)
+## <a name="see-also"></a>참고자료
+
+- [특성(Visual Basic)](../../../visual-basic/language-reference/attributes.md)
+- [일반 특성(Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
+- [선택적 매개 변수](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
+- [프로그래밍 개념(Visual Basic)](../../../visual-basic/programming-guide/concepts/index.md)

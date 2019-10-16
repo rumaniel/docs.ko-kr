@@ -2,12 +2,12 @@
 title: SecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: ef93b6e6-3524-48a8-94d3-c8837f1872f9
-ms.openlocfilehash: 601e3fafd9aa876186b7f78dfdcb87a2336ddfcd
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1d367d0c5d14e6e75539dd2b20cdffcf2b34963d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962788"
 ---
 # <a name="securitybindingelement"></a>SecurityBindingElement
 SecurityBindingElement  
@@ -80,5 +80,6 @@ class SecurityBindingElement : BindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.SecurityBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.SecurityBindingElement>

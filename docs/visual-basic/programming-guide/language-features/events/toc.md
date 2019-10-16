@@ -1,6 +1,0 @@
-# [이벤트](index.md)
-## [연습: 이벤트 선언 및 발생](walkthrough-declaring-and-raising-events.md)
-## [연습: 이벤트 처리](walkthrough-handling-events.md)
-## [방법: 차단을 방지하는 사용자 지정 이벤트 선언](how-to-declare-custom-events-to-avoid-blocking.md)
-## [방법: 메모리를 절약하는 사용자 지정 이벤트 선언](how-to-declare-custom-events-to-conserve-memory.md)
-## [상속된 이벤트 처리기 관련 문제 해결](troubleshooting-inherited-event-handlers.md)

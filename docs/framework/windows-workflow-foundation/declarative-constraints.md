@@ -2,12 +2,12 @@
 title: 선언적 제약 조건
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945823"
 ---
 # <a name="declarative-constraints"></a>선언적 제약 조건
 선언적 제약 조건은 활동 및 활동과 다른 활동의 관계에 대한 강력한 유효성 검사 메서드를 제공합니다. 제약 조건이 제작 프로세스 중에 활동에 대해 구성되지만, 워크플로 호스트에서 추가 제약 조건을 지정할 수도 있습니다. 이 항목에서는 선언적 제약 조건을 사용하여 작업 유효성 검사를 제공하는 방법에 대해 간략하게 설명합니다.  
@@ -176,4 +176,4 @@ else
 }  
 ```  
   
- <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>의 <xref:System.Activities.Validation.ValidationSettings> 속성이 `true`인 경우 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>를 호출하여 유효성 검사를 호출하면 지정된 추가 제약 조건만 평가됩니다. 이 기능은 특정 유효성 검사 구성에 대한 워크플로를 검사할 때 유용합니다. 워크플로를 호출하면 워크플로에 구성된 유효성 검사 논리를 평가하여 통과해야 워크플로가 시작됩니다. 유효성 검사를 호출 하는 방법에 대 한 자세한 내용은 참조 하십시오 [활동 유효성 검사 호출](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)합니다.
+ <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A>의 <xref:System.Activities.Validation.ValidationSettings> 속성이 `true`인 경우 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A>를 호출하여 유효성 검사를 호출하면 지정된 추가 제약 조건만 평가됩니다. 이 기능은 특정 유효성 검사 구성에 대한 워크플로를 검사할 때 유용합니다. 워크플로를 호출하면 워크플로에 구성된 유효성 검사 논리를 평가하여 통과해야 워크플로가 시작됩니다. 유효성 검사를 호출 하는 방법에 대 한 자세한 내용은 참조 하십시오 [활동 유효성 검사 호출](invoking-activity-validation.md)합니다.

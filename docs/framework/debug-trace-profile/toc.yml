@@ -1,0 +1,123 @@
+- name: '디버깅, 추적 및 프로파일링'
+  href: index.md
+  items:
+    - name: JIT 연결 디버깅 설정
+      href: enabling-jit-attach-debugging.md
+    - name: 쉽게 디버깅할 수 있도록 이미지 만들기
+      href: making-an-image-easier-to-debug.md
+    - name: 애플리케이션 추적 및 조율
+      href: tracing-and-instrumenting-applications.md
+      items:
+        - name: 코드 계약
+          href: code-contracts.md
+        - name: 추적 스위치
+          href: trace-switches.md
+        - name: '방법: 추적 스위치 만들기, 초기화 및 구성'
+          href: how-to-create-initialize-and-configure-trace-switches.md
+        - name: 추적 수신기
+          href: trace-listeners.md
+        - name: '방법: 추적 수신기와 함께 TraceSource 및 필터 사용'
+          href: how-to-use-tracesource-and-filters-with-trace-listeners.md
+        - name: '방법: 추적 수신기 만들기 및 초기화'
+          href: how-to-create-and-initialize-trace-listeners.md
+        - name: '방법: 추적 소스 만들기 및 초기화'
+          href: how-to-create-and-initialize-trace-sources.md
+        - name: '방법: 애플리케이션 코드에 추적 문 추가'
+          href: how-to-add-trace-statements-to-application-code.md
+        - name: '방법: 추적 및 디버그를 사용하여 조건부 컴파일'
+          href: how-to-compile-conditionally-with-trace-and-debug.md
+    - name: 관리 디버깅 도우미를 사용하여 오류 진단
+      href: diagnosing-errors-with-managed-debugging-assistants.md
+      items:
+        - name: asynchronousThreadAbort
+          href: asynchronousthreadabort-mda.md
+        - name: bindingFailure
+          href: bindingfailure-mda.md
+        - name: callbackOnCollectedDelegate
+          href: callbackoncollecteddelegate-mda.md
+        - name: contextSwitchDeadlock
+          href: contextswitchdeadlock-mda.md
+        - name: dangerousThreadingAPI
+          href: dangerousthreadingapi-mda.md
+        - name: dateTimeInvalidLocalFormat
+          href: datetimeinvalidlocalformat-mda.md
+        - name: dirtyCastAndCallOnInterface
+          href: dirtycastandcalloninterface-mda.md
+        - name: disconnectedContext
+          href: disconnectedcontext-mda.md
+        - name: dllMainReturnsFalse
+          href: dllmainreturnsfalse-mda.md
+        - name: exceptionSwallowedOnCallFromCom
+          href: exceptionswallowedoncallfromcom-mda.md
+        - name: failedQI
+          href: failedqi-mda.md
+        - name: fatalExecutionEngineError
+          href: fatalexecutionengineerror-mda.md
+        - name: gcManagedToUnmanaged
+          href: gcmanagedtounmanaged-mda.md
+        - name: gcUnmanagedToManaged
+          href: gcunmanagedtomanaged-mda.md
+        - name: illegalPrepareConstrainedRegion
+          href: illegalprepareconstrainedregion-mda.md
+        - name: invalidApartmentStateChange
+          href: invalidapartmentstatechange-mda.md
+        - name: invalidCERCall
+          href: invalidcercall-mda.md
+        - name: invalidFunctionPointerInDelegate
+          href: invalidfunctionpointerindelegate-mda.md
+        - name: invalidGCHandleCookie
+          href: invalidgchandlecookie-mda.md
+        - name: invalidIUnknown
+          href: invalidiunknown-mda.md
+        - name: invalidMemberDeclaration
+          href: invalidmemberdeclaration-mda.md
+        - name: invalidOverlappedToPinvoke
+          href: invalidoverlappedtopinvoke-mda.md
+        - name: invalidVariant
+          href: invalidvariant-mda.md
+        - name: jitCompilationStart
+          href: jitcompilationstart-mda.md
+        - name: loaderLock
+          href: loaderlock-mda.md
+        - name: loadFromContext
+          href: loadfromcontext-mda.md
+        - name: marshalCleanupError
+          href: marshalcleanuperror-mda.md
+        - name: marshaling
+          href: marshaling-mda.md
+        - name: memberInfoCacheCreation
+          href: memberinfocachecreation-mda.md
+        - name: moduloObjectHashcode
+          href: moduloobjecthashcode-mda.md
+        - name: nonComVisibleBaseClass
+          href: noncomvisiblebaseclass-mda.md
+        - name: notMarshalable
+          href: notmarshalable-mda.md
+        - name: openGenericCERCall
+          href: opengenericcercall-mda.md
+        - name: overlappedFreeError
+          href: overlappedfreeerror-mda.md
+        - name: pInvokeLog
+          href: pinvokelog-mda.md
+        - name: pInvokeStackImbalance
+          href: pinvokestackimbalance-mda.md
+        - name: raceOnRCWCleanup
+          href: raceonrcwcleanup-mda.md
+        - name: reentrancy
+          href: reentrancy-mda.md
+        - name: releaseHandleFailed
+          href: releasehandlefailed-mda.md
+        - name: reportAvOnComRelease
+          href: reportavoncomrelease-mda.md
+        - name: streamWriterBufferedDataLost
+          href: streamwriterbuffereddatalost-mda.md
+        - name: virtualCERCall
+          href: virtualcercall-mda.md
+    - name: 디버거 표시 특성을 사용하여 디버깅 향상
+      href: enhancing-debugging-with-the-debugger-display-attributes.md
+    - name: 런타임 프로파일링
+      href: runtime-profiling.md
+    - name: 성능 카운터
+      href: performance-counters.md
+    - name: 성능 카운터 및 In-Process Side-By-Side 애플리케이션
+      href: performance-counters-and-in-process-side-by-side-applications.md

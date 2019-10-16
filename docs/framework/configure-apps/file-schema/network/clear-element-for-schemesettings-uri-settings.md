@@ -1,21 +1,21 @@
 ---
-title: '&lt;지우기&gt; schemeSettings (Uri 설정)에 대 한'
+title: schemeSettings의 <clear> 요소(URI 설정)
 ms.date: 03/30/2017
 ms.assetid: 65098332-ce61-4542-ab8d-e7dc0257d31f
-ms.openlocfilehash: 043ce78283c42d2cf42851e13919bf71a77b28b4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e954fef455d0279a945c33f2014913fea9d63064
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196676"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699441"
 ---
-# <a name="ltcleargt-element-for-schemesettings-uri-settings"></a>&lt;지우기&gt; schemeSettings (Uri 설정)에 대 한
-모든 기존 구성표 설정을 지웁니다.  
+# <a name="clear-element-for-schemesettings-uri-settings"></a>schemeSettings에 대 한 \<clear > 요소 (Uri 설정)
+기존 구성표 설정을 모두 지웁니다.  
   
- \<configuration>  
-\<uri >  
-\<schemeSettings >  
-\<지우기 >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<uri >** ](uri-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<schemeSettings >** ](schemesettings-element-uri-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<clear >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,7 +36,7 @@ ms.locfileid: "50196676"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<schemeSettings> 요소 (URI 설정)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.|  
+|[\<schemeSettings> 요소 (URI 설정)](schemesettings-element-uri-settings.md)|특정 체계에 대해 <xref:System.Uri>가 구문 분석되는 방법을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  기본적으로 <xref:System.Uri?displayProperty=nameWithType> 클래스 이스케이프 해제 백분율로 인코딩된 경로 압축을 실행 하기 전에 경로 구분 기호입니다. 다음과 같은 공격에 대 한 보안 메커니즘으로 구현 되었습니다.  
@@ -51,13 +51,13 @@ ms.locfileid: "50196676"
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- SchemeSettings 구성 옵션을 사용 하 여 특정 스키마에 대 한 이스케이프 해제 백분율로 인코딩된 경로 구분 되지에이 기본 동작을 수정할 수 있습니다.  
+ 이 기본 동작은 특정 스키마에 대 한 schemeSettings 구성 옵션을 사용 하 여 인코딩된 경로 구분 기호를 이스케이프 해제 하지 않도록 수정할 수 있습니다.  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서 사용 하는 구성을 보여 줍니다는 <xref:System.Uri> 모든 스키마 설정을 지우고 다음 http 체계에 대 한 백분율로 인코딩된 경로 구분 기호를 이스케이프 하지 않아도 되도록 하는 것에 대 한 지원을 추가 하는 클래스입니다.  
+ 다음 예제에서는 <xref:System.Uri> 클래스에서 사용 하는 구성을 보여 줍니다 .이 클래스는 모든 구성표 설정을 지운 다음 http 체계의 백분율 인코딩된 경로 구분 기호를 이스케이프 하지 않는 지원을 추가 합니다.  
   
 ```xml  
 <configuration>  
@@ -70,11 +70,12 @@ ms.locfileid: "50196676"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>  
-- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection?displayProperty=nameWithType>  
-- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>  
-- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>  
-- <xref:System.Uri?displayProperty=nameWithType>  
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>참조
+
+- <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
+- <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection?displayProperty=nameWithType>
+- <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
+- <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
+- <xref:System.Uri?displayProperty=nameWithType>
+- [네트워크 설정 스키마](index.md)

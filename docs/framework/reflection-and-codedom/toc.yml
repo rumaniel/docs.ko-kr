@@ -1,0 +1,56 @@
+- name: 동적 프로그래밍
+  href: index.md
+  items:
+    - name: 반사
+      href: reflection.md
+      items:
+        - name: 형식 정보 보기
+          href: viewing-type-information.md
+        - name: 리플렉션 및 제네릭 형식
+          href: reflection-and-generic-types.md
+        - name: '방법: 리플렉션을 사용하여 제네릭 형식 검사 및 인스턴스화'
+          href: how-to-examine-and-instantiate-generic-types-with-reflection.md
+        - name: 리플렉션의 보안 고려 사항
+          href: security-considerations-for-reflection.md
+        - name: 동적으로 형식 로드 및 사용
+          href: dynamically-loading-and-using-types.md
+        - name: '방법: 리플렉션 전용 컨텍스트에 어셈블리 로드'
+          href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: '방법: 리플렉션을 사용하여 형식 및 멤버 정보 가져오기'
+          href: get-type-member-information.md
+        - name: 사용자 지정 특성 액세스
+          href: accessing-custom-attributes.md
+        - name: 정규화된 형식 이름 지정
+          href: specifying-fully-qualified-type-names.md
+        - name: '방법: 리플렉션을 사용하여 대리자 후크'
+          href: how-to-hook-up-a-delegate-using-reflection.md
+        - name: Windows 스토어 앱에 대한 .NET Framework의 리플렉션
+          href: reflection-for-windows-store-apps.md
+    - name: 동적 메서드 및 어셈블리 생성
+      href: emitting-dynamic-methods-and-assemblies.md
+      items:
+        - name: 리플렉션 내보내기의 보안 문제점
+          href: security-issues-in-reflection-emit.md
+        - name: '연습: 부분 신뢰 시나리오에서 코드 내보내기'
+          href: walkthrough-emitting-code-in-partial-trust-scenarios.md
+        - name: '방법: 동적 메서드 정의 및 실행'
+          href: how-to-define-and-execute-dynamic-methods.md
+        - name: '방법: 리플렉션 내보내기를 사용하여 제네릭 형식 정의'
+          href: how-to-define-a-generic-type-with-reflection-emit.md
+        - name: '방법: 리플렉션 내보내기를 사용하여 제네릭 메서드 정의'
+          href: how-to-define-a-generic-method-with-reflection-emit.md
+        - name: 동적 형식 생성을 위해 수집 가능한 어셈블리
+          href: collectible-assemblies.md
+    - name: 동적 언어 런타임 개요
+      href: dynamic-language-runtime-overview.md
+    - name: 동적 소스 코드 생성 및 컴파일
+      href: dynamic-source-code-generation-and-compilation.md
+      items:
+        - name: CodeDOM 사용
+          href: using-the-codedom.md
+        - name: CodeDOM 그래프에서 소스 코드 생성 및 컴파일
+          href: generating-and-compiling-source-code-from-a-codedom-graph.md
+        - name: '방법: CodeDOM을 사용하여 XML 문서 파일 만들기'
+          href: how-to-create-an-xml-documentation-file-using-codedom.md
+        - name: '방법: CodeDOM을 사용하여 클래스 만들기'
+          href: how-to-create-a-class-using-codedom.md

@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59b4c832a4bbc915749aadf435b204e084828698
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 58ee2764d2e2c4c4e21effa3e0c3551a2e145f40
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434348"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796497"
 ---
-# <a name="identityattributeblob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 구조체
-어셈블리에서 단일 특성에 대 한 정보를 포함 하 고 3 개 구성 `DWORD`s입니다. 각 `DWORD` 는 생성 되는 문자 버퍼 오프셋은 `CurrentIntoBuffer` 의 메서드는 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md) 인터페이스  
+# <a name="identity_attribute_blob-structure"></a>IDENTITY_ATTRIBUTE_BLOB 구조체
+어셈블리의 단일 특성에 대 한 정보를 포함 하며 세 `DWORD`개로 구성 됩니다. 각 `DWORD` 는 [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md) 인터페이스의 `CurrentIntoBuffer` 메서드에 의해 생성 되는 문자 버퍼에 대 한 오프셋입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _IDENTITY_ATTRIBUTE_BLOB {  
     DWORD  ofsNamespace;  
     DWORD  ofsName;  
@@ -40,24 +40,24 @@ typedef struct _IDENTITY_ATTRIBUTE_BLOB {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`ofsNamespace`|문자 버퍼에 대 한 첫 번째 오프셋 합니다. 이 오프셋에서 일련의 null 문자가 아니라 특성의 네임 스페이스 나오지 않습니다. 따라서 사용 되지 않습니다.|  
-|`ofsName`|문자 버퍼에 대 한 두 번째 오프셋 합니다. 이 위치는 특성의 이름의 시작 부분을 나타냅니다.|  
-|`ofsValue`|문자 버퍼에 대 한 세 번째 오프셋 합니다. 이 위치는 특성 값의 시작을 표시 합니다.|  
+|`ofsNamespace`|문자 버퍼에 대 한 첫 번째 오프셋입니다. 이 오프셋 뒤에는 특성의 네임 스페이스가 아니라 일련의 null 문자가 있습니다. 따라서 사용 되지 않습니다.|  
+|`ofsName`|문자 버퍼에 대 한 두 번째 오프셋입니다. 이 위치는 특성 이름 시작을 표시 합니다.|  
+|`ofsValue`|문자 버퍼에 대 한 세 번째 오프셋입니다. 이 위치는 특성 값의 시작을 표시 합니다.|  
   
-## <a name="sample"></a>샘플  
- 다음 예제에서는 결과적으로 채워진에 몇 가지 기본 단계 `IDENTITY_ATTRIBUTE_BLOB` 구조:  
+## <a name="sample"></a>예제  
+ 다음 예에서는 결과적으로 채워진 `IDENTITY_ATTRIBUTE_BLOB` 구조를 생성 하는 몇 가지 기본 단계를 보여 줍니다.  
   
-1.  가져올는 [IReferenceIdentity](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md) 어셈블리에 대 한 합니다.  
+1. 어셈블리에 대 한 [IReferenceIdentity](ireferenceidentity-interface.md) 를 가져옵니다.  
   
-2.  호출 된 `IReferenceIdentity::EnumAttributes` 메서드를 가져오고,는 [IEnumIDENTITY_ATTRIBUTE](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)합니다.  
+2. `IReferenceIdentity::EnumAttributes` 메서드를 호출하고 [IEnumIDENTITY_ATTRIBUTE](ienumidentity-attribute-interface.md)를 가져옵니다.  
   
-3.  문자 버퍼를 만들고로 캐스팅 한 `IDENTITY_ATTRIBUTE_BLOB` 구조입니다.  
+3. 문자 버퍼를 만들고 `IDENTITY_ATTRIBUTE_BLOB` 구조체로 캐스팅 합니다.  
   
-4.  호출 된 `CurrentIntoBuffer` 의 메서드는 `IEnumIDENTITY_ATTRIBUTE` 인터페이스입니다. 이 메서드는 특성을 복사 `Namespace`, `Name`, 및 `Value` 문자 버퍼입니다. 이러한 문자열에 대 한 세 가지 오프셋이 제공 될 예정 된 `IDENTITY_ATTRIBUTE_BLOB` 구조입니다.  
+4. 인터페이스의 메서드를 `CurrentIntoBuffer` 호출 합니다. `IEnumIDENTITY_ATTRIBUTE` 이 메서드는, `Namespace` `Name`및 `Value` 특성을 문자 버퍼로 복사 합니다. 이러한 문자열에 대 한 세 개의 오프셋을 `IDENTITY_ATTRIBUTE_BLOB` 구조에서 사용할 수 있게 됩니다.  
   
-```  
+```cpp  
 // EnumAssemblyAttributes.cpp : main project file.  
   
 #include "stdafx.h"  
@@ -222,10 +222,10 @@ Exit:
 ```  
   
 ### <a name="to-run-the-sample"></a>이 샘플을 실행하려면  
- C:\\> EnumAssemblyAttributes.exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
+ C:\\> enumassemblyattributes .exe C:\WINDOWS\Microsoft.NET\Framework\v2.0.50727\System.dll  
   
 ### <a name="sample-output"></a>샘플 출력  
- Culture = neutral  
+ Culture = 중립  
   
  이름 = 시스템  
   
@@ -233,17 +233,18 @@ Exit:
   
  PublicKeyToken = b77a5c561934e089  
   
- 버전 2.0.0.0 =  
+ Version = 2.0.0.0  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Isolation.h  
+ **헤더:** 격리. h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IReferenceIdentity 인터페이스](../../../../docs/framework/unmanaged-api/fusion/ireferenceidentity-interface.md)  
- [IEnumIDENTITY_ATTRIBUTE 인터페이스](../../../../docs/framework/unmanaged-api/fusion/ienumidentity-attribute-interface.md)  
- [IDENTITY_ATTRIBUTE 구조체](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-structure.md)  
- [Fusion 구조체](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)
+## <a name="see-also"></a>참고자료
+
+- [IReferenceIdentity 인터페이스](ireferenceidentity-interface.md)
+- [IEnumIDENTITY_ATTRIBUTE 인터페이스](ienumidentity-attribute-interface.md)
+- [IDENTITY_ATTRIBUTE 구조체](identity-attribute-structure.md)
+- [Fusion 구조체](fusion-structures.md)

@@ -1,5 +1,6 @@
 ---
-title: '방법: .NET Framework의 기본 문자열 조작 수행'
+title: '방법: .NET에서 기본적인 문자열 조작 수행'
+description: 여러 문자열 메서드를 호출하는 예제를 참조하세요.
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,12 +11,13 @@ helpviewer_keywords:
 ms.assetid: 121d1eae-251b-44c0-8818-57da04b8215e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1206648c694c9f09a600e3c70f4aa27118b2d458
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.custom: seodec18
+ms.openlocfilehash: 11f8043745c631a642b437339240cbf06fc8df5b
+ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178054"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53130639"
 ---
 # <a name="how-to-perform-basic-string-manipulations-in-net"></a>방법: .NET에서 기본적인 문자열 조작 수행
 다음 예제에서는 [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md) 항목에 설명된 메서드 중 일부를 사용하여 실제 응용 프로그램에서 발견될 수 있는 방식으로 문자열 조작을 수행하는 클래스를 생성합니다. `MailToData` 클래스는 개인의 이름과 주소를 별도 속성에 저장하고 `City`, `State` 및 `Zip` 필드를 사용자에게 표시할 단일 문자열로 결합하는 방법을 제공합니다. 또한 이 클래스를 사용하면 사용자가 구/군/시, 시/도 및 우편 번호 정보를 단일 문자열로 입력할 수 있습니다. 응용 프로그램에서 단일 문자열을 자동으로 구문 분석하고 해당 속성에 적절한 정보를 입력합니다.  

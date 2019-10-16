@@ -14,30 +14,30 @@ helpviewer_keywords:
 ms.assetid: f120a5d9-933b-4d1d-acb6-f034a57c3749
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 05b53016712f75e45636979d77bfd27116ce8e14
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: cb99d6d78fc381e0b56efae51307eb469c535a9a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850663"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457343"
 ---
 # <a name="interop-with-other-asynchronous-patterns-and-types"></a>다른 비동기 패턴 및 형식과의 Interop
 .NET Framework 1.0에서는 <xref:System.IAsyncResult> 또는 [Begin/End](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md)패턴이라고도 하는 `Begin/End` 패턴이 도입되었습니다.  .NET Framework 2.0에서는 [Event-based Asynchronous Pattern (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)이 추가되었습니다.  .NET Framework 4부터 [Task-based Asynchronous Pattern (TAP)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 이 APM과 EAP를 둘 다 대체하지만 이전 패턴에서 마이그레이션 루틴을 쉽게 빌드할 수 있는 기능을 제공합니다.  
   
- 항목 내용:  
+ 항목 내용  
   
--   [작업 및 APM](#APM) ([APM에서 TAP로](#ApmToTap) 또는 [TAP에서 APM으로](#TapToApm))  
+- [작업 및 APM](#APM) ([APM에서 TAP로](#ApmToTap) 또는 [TAP에서 APM으로](#TapToApm))  
   
--   [작업 및 EAP](#EAP)  
+- [작업 및 EAP](#EAP)  
   
--   [작업 및 대기 핸들](#WaitHandles) ([대기 핸들에서 TAP로](#WHToTap) 또는 [TAP에서 대기 핸들로](#TapToWH))  
+- [작업 및 대기 핸들](#WaitHandles) ([대기 핸들에서 TAP로](#WHToTap) 또는 [TAP에서 대기 핸들로](#TapToWH))  
   
 <a name="APM"></a>   
 ## <a name="tasks-and-the-asynchronous-programming-model-apm"></a>작업 및 APM(비동기 프로그래밍 모델)  
   
 <a name="ApmToTap"></a>   
 ### <a name="from-apm-to-tap"></a>APM에서 TAP로  
- [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 패턴은 매우 구조적이므로 APM 구현을 TAP 구현으로 노출하는 래퍼를 쉽게 빌드할 수 있습니다. 사실상, [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]부터 .NET Framework에 이 변환을 제공하는 도우미 루틴이 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 메서드 오버로드의 형태로 포함되었습니다.  
+ [Asynchronous Programming Model (APM)](../../../docs/standard/asynchronous-programming-patterns/asynchronous-programming-model-apm.md) 패턴은 매우 구조적이므로 APM 구현을 TAP 구현으로 노출하는 래퍼를 쉽게 빌드할 수 있습니다. 사실상, .NET Framework 4부터 .NET Framework에 이 변환을 제공하는 도우미 루틴이 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 메서드 오버로드의 형태로 포함되었습니다.  
   
  동기 <xref:System.IO.Stream> 메서드에 해당하는 APM 항목을 나타내는 <xref:System.IO.Stream.BeginRead%2A> 클래스와 해당 <xref:System.IO.Stream.EndRead%2A> 및 <xref:System.IO.Stream.Read%2A> 메서드를 고려합니다.  
   
@@ -115,6 +115,6 @@ ms.locfileid: "48850663"
   
 ## <a name="see-also"></a>참고 항목
 
-- [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)  
-- [작업 기반 비동기 패턴 구현](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)  
+- [TAP(작업 기반 비동기 패턴)](../../../docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)
+- [작업 기반 비동기 패턴 구현](../../../docs/standard/asynchronous-programming-patterns/implementing-the-task-based-asynchronous-pattern.md)
 - [Consuming the Task-based Asynchronous Pattern](../../../docs/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern.md)

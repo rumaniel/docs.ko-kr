@@ -1,20 +1,20 @@
 ---
-title: '방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스'
+title: '방법: 단방향를 사용 하 여 WCF 서비스에 액세스 및 요청-회신 계약'
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 7a60d11432e95f56e8479d853e31895ba3fb266b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33494324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855116"
 ---
-# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>방법: 단방향 및 요청-회신 계약을 사용하여 WCF 서비스 액세스
+# <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>방법: 단방향를 사용 하 여 WCF 서비스에 액세스 및 요청-회신 계약
 다음 절차는 Windows Communication Foundation (WCF) 서비스에 액세스 하는 단방향 계약 및 요청-회신 계약을 정의 하 고 이중 통신 패턴을 사용 하지 않는 방법을 설명 합니다.  
   
 ### <a name="to-define-the-service"></a>서비스를 정의하려면  
   
-1.  서비스 계약을 정의합니다. 단방향이어야 할 작업의 경우 `IsOneWay``true`내에서 <xref:System.ServiceModel.OperationContractAttribute>가 로 설정되어야 합니다. 다음 코드에서는 `IOneWayCalculator`, `Add`, `Subtract``Multiply`및 `Divide`에 대한 단방향 작업을 포함하는 계약을 선언합니다. 또한 `SayHello`라고 하는 요청 응답 작업을 정의합니다.  
+1. 서비스 계약을 정의합니다. 단방향이어야 할 작업의 경우 `IsOneWay``true`내에서 <xref:System.ServiceModel.OperationContractAttribute>가 로 설정되어야 합니다. 다음 코드에서는 `IOneWayCalculator`, `Add`, `Subtract``Multiply`및 `Divide`에 대한 단방향 작업을 포함하는 계약을 선언합니다. 또한 `SayHello`라고 하는 요청 응답 작업을 정의합니다.  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ ms.locfileid: "33494324"
     }  
     ```  
   
-2.  서비스 계약을 구현합니다. 다음 코드에서는 `IOnewayCalculator` 인터페이스를 구현합니다.  
+2. 서비스 계약을 구현합니다. 다음 코드에서는 `IOnewayCalculator` 인터페이스를 구현합니다.  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -71,7 +71,7 @@ ms.locfileid: "33494324"
     }  
     ```  
   
-3.  콘솔 응용 프로그램에서 서비스를 호스팅합니다. 다음 코드에서는 서비스를 호스팅하는 방법을 보여 줍니다.  
+3. 콘솔 애플리케이션에서 서비스를 호스팅합니다. 다음 코드에서는 서비스를 호스팅하는 방법을 보여 줍니다.  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -109,7 +109,7 @@ ms.locfileid: "33494324"
   
 ### <a name="to-access-the-service"></a>서비스에 액세스하려면  
   
-1.  실행 된 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 메타 데이터 교환 끝점 주소를 사용 하 여 다음 명령줄을 사용 하 여 서비스에 대 한 클라이언트 클래스를 만들려면: `Svcutil http://localhost:8000/Service` 는 [ServiceModel 메타 데이터 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 다음 샘플 코드와 같이 인터페이스와 클래스 집합을 생성 합니다.  
+1. 실행 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 메타 데이터 교환 끝점 주소를 사용 하 여 다음 명령줄을 사용 하 여 서비스에 대 한 클라이언트 클래스를 만들려면: `Svcutil http://localhost:8000/Service` 합니다 [ServiceModel Metadata 유틸리티 도구 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 다음 샘플 코드에 나와 있는 것 처럼 인터페이스 및 클래스 집합을 생성 합니다.  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -196,7 +196,7 @@ ms.locfileid: "33494324"
   
      `IOneWayCalculator` 인터페이스에서 단방향 서비스 작업의 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 특성이 `true`로 설정되고 요청-회신 서비스 작업의 특성이 기본값인 `false`로 설정되어 있음을 확인하십시오. `OneWayCalculatorClient` 클래스도 확인하십시오. 이는 서비스를 호출하는 데 사용하는 클래스입니다.  
   
-2.  클라이언트 개체를 만듭니다.  
+2. 클라이언트 개체를 만듭니다.  
   
     ```csharp  
     // Create a client  
@@ -205,7 +205,7 @@ ms.locfileid: "33494324"
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3.  서비스 작업을 호출합니다.  
+3. 서비스 작업을 호출합니다.  
   
     ```csharp  
     // Call the Add service operation.  
@@ -239,7 +239,7 @@ ms.locfileid: "33494324"
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4.  연결을 닫고 리소스를 정리하려면 클라이언트를 닫습니다.  
+4. 연결을 닫고 리소스를 정리하려면 클라이언트를 닫습니다.  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  
@@ -400,5 +400,6 @@ namespace Microsoft.ServiceModel.Samples
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [단방향 서비스](../../../../docs/framework/wcf/feature-details/one-way-services.md)
+## <a name="see-also"></a>참고자료
+
+- [단방향 서비스](../../../../docs/framework/wcf/feature-details/one-way-services.md)

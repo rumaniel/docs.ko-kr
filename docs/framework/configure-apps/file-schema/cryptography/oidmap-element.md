@@ -1,5 +1,5 @@
 ---
-title: '&lt;oidMap&gt; 요소'
+title: <oidMap> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#oidMap
@@ -8,22 +8,20 @@ helpviewer_keywords:
 - <oidMap> element
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 4ec2ba884f0f60182dd59bb6a4491e223f43ce1a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: eec2c4745ad5a0492ccf04c8f23b901275f23c01
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196618"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698440"
 ---
-# <a name="ltoidmapgt-element"></a>&lt;oidMap&gt; 요소
-ASN.1 클래스 개체 식별자 (OID) 매핑이 들어 있습니다.  
+# <a name="oidmap-element"></a>\<oidMap > 요소
+클래스에 대 한 OID (개체 식별자) 매핑을 포함 합니다.  
   
- \<configuration>  
-\<mscorlib >  
-\<cryptographySettings >  
-\<oidMap >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\<mscorlib >** ](mscorlib-element-for-cryptography-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<cryptographySettings >** ](cryptographysettings-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<oidMap >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,18 +40,18 @@ ASN.1 클래스 개체 식별자 (OID) 매핑이 들어 있습니다.
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<oidEntry >](../../../../../docs/framework/configure-apps/file-schema/cryptography/oidentry-element.md)|ASN.1 OID 이름에 매핑됩니다.|  
+|[\<oidEntry>](oidentry-element.md)|ASN OID를 친숙 한 이름에 매핑합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`cryptographySettings`|암호화 설정이 포함되어 있습니다.|  
-|`mscorlib`|포함 된 `cryptographySettings` 요소입니다.|  
+|`mscorlib`|요소를 `cryptographySettings` 포함 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다  **\<oidMap >** 해당 해시 알고리즘의 구현에 RIPEMD-160 해시 알고리즘의 OID의 매핑을 포함 하는 요소입니다.  
+ 다음 예제에서는 **\<oidMap >** 요소를 사용 하 여 해당 해시 알고리즘의 구현에 RIPEMD-160 해시 알고리즘에 대 한 OID 매핑을 포함 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -75,9 +73,10 @@ ASN.1 클래스 개체 식별자 (OID) 매핑이 들어 있습니다.
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
- [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
- [암호화 서비스](../../../../../docs/standard/security/cryptographic-services.md)  
- [암호화 클래스 구성](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
- [개체 식별자를 암호화 알고리즘에 매핑](../../../../../docs/framework/configure-apps/map-object-identifiers-to-cryptography-algorithms.md)
+## <a name="see-also"></a>참조
+
+- [구성 파일 스키마](../index.md)
+- [암호화 설정 스키마](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [암호화 클래스 구성](../../configure-cryptography-classes.md)
+- [개체 식별자를 암호화 알고리즘에 매핑](../../map-object-identifiers-to-cryptography-algorithms.md)

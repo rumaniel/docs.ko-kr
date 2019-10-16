@@ -1,21 +1,22 @@
 ---
-title: in(제네릭 한정자)(C# 참조)
+title: in(제네릭 한정자) - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - contravariance, in keyword [C#]
 - in keyword [C#]
-ms.openlocfilehash: e515329c060bd9fc11e4415b8e77520cf68cad9a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f736540a37d3226bccfc07749dcf06ca018663e8
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523780"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54694573"
 ---
 # <a name="in-generic-modifier-c-reference"></a>in(제네릭 한정자)(C# 참조)
 
 제네릭 형식 매개 변수에서 `in` 키워드는 형식 매개 변수를 반공변(contravariant)으로 지정합니다. 제네릭 인터페이스 및 대리자에서 `in` 키워드를 사용할 수 있습니다.
 
-반공변성(Contravariance)을 통해 제네릭 매개 변수에 지정된 것보다 적은 파생 형식을 사용할 수 있습니다. 따라서 variant 인터페이스를 구현하는 클래스의 암시적 변환과 대리자 형식의 암시적 변환이 허용됩니다. 제네릭 형식 매개 변수의 공변성(Covariance) 및 반공변성(Contravariance)은 참조 형식에 대해 지원되고 값 형식에 대해서는 지원되지 않습니다.
+반공변성(Contravariance)을 통해 제네릭 매개 변수에 지정된 것보다 적은 파생 형식을 사용할 수 있습니다. 따라서 공변(contravariant) 인터페이스를 구현하는 클래스의 암시적 변환과 대리자 형식의 암시적 변환이 허용됩니다. 제네릭 형식 매개 변수의 공변성(Covariance) 및 반공변성(Contravariance)은 참조 형식에 대해 지원되고 값 형식에 대해서는 지원되지 않습니다.
 
 메서드 매개 변수의 형식을 정의하고 메서드의 반환 형식을 정의하지 않는 경우에만 형식을 제네릭 인터페이스 또는 대리자에서 반공변(contravariant)으로 선언할 수 있습니다. `In`, `ref` 및 `out` 매개 변수는 고정이어야 합니다. 즉 공변(covariant) 또는 반공변(contravariant)입니다.
 
@@ -43,6 +44,6 @@ ms.locfileid: "43523780"
 
 ## <a name="see-also"></a>참고 항목
 
-- [out](out-generic-modifier.md)  
-- [공 분산 및 반공 분산](../../programming-guide/concepts/covariance-contravariance/index.md)  
-- [한정자](modifiers.md)  
+- [out](out-generic-modifier.md)
+- [공 분산 및 반공 분산](../../programming-guide/concepts/covariance-contravariance/index.md)
+- [한정자](modifiers.md)

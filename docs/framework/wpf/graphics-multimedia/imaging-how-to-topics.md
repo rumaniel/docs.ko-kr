@@ -7,34 +7,34 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 28df9bd2f313165f233c90149d26c60856b3926b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33563375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785712"
 ---
 # <a name="imaging-how-to-topics"></a>이미징 방법 항목
-이 섹션의 항목을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시 하거나 비트맵 이미지를 변경 하기 위해 합니다.  
+이 섹션의에서 항목에서는 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시 하거나 비트맵 이미지를 변경 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [XAML에서 BitmapImage 사용](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-a-bitmapimage.md)  
- [이미지를 축소판으로 로드](../../../../docs/framework/wpf/graphics-multimedia/how-to-load-an-image-as-a-thumbnail.md)  
- [BitmapImage에 변환 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-transform-to-a-bitmapimage.md)  
- [시각적 대체에서 비트맵 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-bitmap-from-a-visual.md)  
- [시각적 요소를 이미지 파일로 인코딩](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-a-visual-to-an-image-file.md)  
- [새 BitmapSource 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-new-bitmapsource.md)  
- [여러 BitmapSource 개체 연결](../../../../docs/framework/wpf/graphics-multimedia/how-to-chain-bitmapsource-objects-together.md)  
- [BitmapSource를 다른 PixelFormat으로 변환](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
- [BitmapSource를 인덱싱된 픽셀 형식으로 변환](../../../../docs/framework/wpf/graphics-multimedia/how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
- [JPEG 이미지 인코딩 및 디코딩](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-jpeg-image.md)  
- [BMP 이미지 인코딩 및 디코딩](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-bmp-image.md)  
- [PNG 이미지 인코딩 및 디코딩](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-png-image.md)  
- [WDP 이미지 인코딩 및 디코딩](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-wdp-image.md)  
- [GIF 이미지 인코딩 및 디코딩](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-gif-image.md)  
- [TIFF 이미지 인코딩 및 디코딩](../../../../docs/framework/wpf/graphics-multimedia/how-to-encode-and-decode-a-tiff-image.md)  
- [메타데이터를 비트맵에 쓰기](../../../../docs/framework/wpf/graphics-multimedia/how-to-write-metadata-to-a-bitmap.md)  
- [비트맵에서 메타데이터 읽기](../../../../docs/framework/wpf/graphics-multimedia/how-to-read-metadata-from-a-bitmap.md)  
+ [XAML에서 BitmapImage 사용](how-to-use-a-bitmapimage.md)  
+ [이미지를 축소판으로 로드](how-to-load-an-image-as-a-thumbnail.md)  
+ [BitmapImage에 변환 적용](how-to-apply-a-transform-to-a-bitmapimage.md)  
+ [시각적 대체에서 비트맵 만들기](how-to-create-a-bitmap-from-a-visual.md)  
+ [시각적 요소를 이미지 파일로 인코딩](how-to-encode-a-visual-to-an-image-file.md)  
+ [새 BitmapSource 만들기](how-to-create-a-new-bitmapsource.md)  
+ [여러 BitmapSource 개체 연결](how-to-chain-bitmapsource-objects-together.md)  
+ [BitmapSource를 다른 PixelFormat으로 변환](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [BitmapSource를 인덱싱된 픽셀 형식으로 변환](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
+ [JPEG 이미지 인코딩 및 디코딩](how-to-encode-and-decode-a-jpeg-image.md)  
+ [BMP 이미지 인코딩 및 디코딩](how-to-encode-and-decode-a-bmp-image.md)  
+ [PNG 이미지 인코딩 및 디코딩](how-to-encode-and-decode-a-png-image.md)  
+ [WDP 이미지 인코딩 및 디코딩](how-to-encode-and-decode-a-wdp-image.md)  
+ [GIF 이미지 인코딩 및 디코딩](how-to-encode-and-decode-a-gif-image.md)  
+ [TIFF 이미지 인코딩 및 디코딩](how-to-encode-and-decode-a-tiff-image.md)  
+ [메타데이터를 비트맵에 쓰기](how-to-write-metadata-to-a-bitmap.md)  
+ [비트맵에서 메타데이터 읽기](how-to-read-metadata-from-a-bitmap.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Image>  
@@ -43,5 +43,6 @@ ms.locfileid: "33563375"
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>참고 항목  
- [이미징 개요](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
+## <a name="see-also"></a>참고자료
+
+- [이미징 개요](imaging-overview.md)

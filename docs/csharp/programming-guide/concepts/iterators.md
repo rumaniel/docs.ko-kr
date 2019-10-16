@@ -2,20 +2,20 @@
 title: C#의 컬렉션 반복
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 2b358e8272820bf6fb5bcb45763bae980b91962f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d47dcf6e7748f85978b1b0bcf739b5d1280263f3
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50191196"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594971"
 ---
 # <a name="iterators-c"></a>반복기(C#)
 
 *반복기*는 목록 및 배열과 같은 컬렉션을 단계별로 실행하는 데 사용할 수 있습니다.
 
-반복기 메서드 또는 `get` 접근자는 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기 메서드는 [yield return](../../../csharp/language-reference/keywords/yield.md) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. `yield return` 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
+반복기 메서드 또는 `get` 접근자는 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기 메서드는 [yield return](../../language-reference/keywords/yield.md) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. `yield return` 문에 도달하면 코드의 현재 위치가 기억됩니다. 다음에 반복기 함수가 호출되면 해당 위치에서 실행이 다시 시작됩니다.
 
-클라이언트 코드에서 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 문 또는 LINQ 쿼리를 사용하여 반복기를 이용합니다.
+클라이언트 코드에서 [foreach](../../language-reference/keywords/foreach-in.md) 문 또는 LINQ 쿼리를 사용하여 반복기를 이용합니다.
 
 다음 예제에서 `foreach` 루프의 첫 번째 반복은 첫 번째 `yield return` 문에 도달할 때까지 `SomeNumbers` 반복기 메서드에서 실행이 계속되도록 합니다. 이 반복은 3 값을 반환하며 반복기 메서드에서 현재 위치는 유지됩니다. 루프의 다음 반복에서는 반복기 메서드의 실행이 중지되었던 위치에서 계속되고 `yield return` 문에 도달하면 다시 중지됩니다. 이 반복은 값 5를 반환하며 반복기 메서드에서 현재 위치는 다시 유지됩니다. 루프는 반복기 메서드의 끝에 도달하면 완료됩니다.
 
@@ -43,11 +43,11 @@ public static System.Collections.IEnumerable SomeNumbers()
 `yield break` 문을 사용하여 반복기를 종료할 수 있습니다.
 
 > [!NOTE]
-> 단순 반복기 예제를 제외한 이 항목의 모든 예제에 대해 `System.Collections` 및 `System.Collections.Generic` 네임스페이스에 대한 [using](../../../csharp/language-reference/keywords/using-directive.md) 지시문을 포함하세요.
+> 단순 반복기 예제를 제외한 이 항목의 모든 예제에 대해 `System.Collections` 및 `System.Collections.Generic` 네임스페이스에 대한 [using](../../language-reference/keywords/using-directive.md) 지시문을 포함하세요.
 
 ## <a name="simple-iterator"></a>단순 반복기
 
-다음 예제에는 [for](../../../csharp/language-reference/keywords/for.md) 루프 내에 단일 `yield return` 문이 있습니다. `Main`에서 `foreach` 문 본문을 반복할 때마다 다음 `yield return` 문으로 진행하는 반복기 함수에 대한 호출이 생성됩니다.
+다음 예제에는 [for](../../language-reference/keywords/for.md) 루프 내에 단일 `yield return` 문이 있습니다. `Main`에서 `foreach` 문 본문을 반복할 때마다 다음 `yield return` 문으로 진행하는 반복기 함수에 대한 호출이 생성됩니다.
 
 ```csharp
 static void Main()
@@ -324,7 +324,7 @@ public class Stack<T> : IEnumerable<T>
 
 반복기는 메서드 또는 `get` 접근자로 발생할 수 있습니다. 이벤트, 인스턴스 생성자, 정적 생성자 또는 정적 종료자에서는 반복기가 발생할 수 없습니다.
 
-반복기에서 반환된 `yield return`IEnumerable의 형식 인수에 대한 명령문<T>의 식 형식에서 암시적 변환이 있어야 합니다.
+`yield return` 문의 식 형식을 반복기에서 반환된 IEnumerable\<T>의 형식 인수로 암시적으로 변환해야 합니다.
 
 C#에서 반복기 메서드는 `in`, `ref` 또는 `out` 매개 변수를 사용할 수 없습니다.
 
@@ -336,7 +336,7 @@ C#에서 "yield"는 예약어가 아니며 `return` 또는 `break` 키워드 앞
 
 컴파일러의 용도를 확인하려면 Ildasm.exe 도구를 사용하여 반복기 메서드에 대해 생성되는 Microsoft Intermediate Language 코드를 확인할 수 있습니다.
 
-[class](../../../csharp/language-reference/keywords/class.md) 또는 [struct](../../../csharp/language-reference/keywords/struct.md)에 대해 반복기를 만드는 경우 전체 <xref:System.Collections.IEnumerator> 인터페이스를 구현할 필요가 없습니다. 컴파일러는 반복기를 검색할 경우 <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601> 인터페이스의 `Current`, `MoveNext` 및 `Dispose` 메서드를 자동으로 생성합니다.
+[class](../../language-reference/keywords/class.md) 또는 [struct](../../language-reference/keywords/struct.md)에 대해 반복기를 만드는 경우 전체 <xref:System.Collections.IEnumerator> 인터페이스를 구현할 필요가 없습니다. 컴파일러는 반복기를 검색할 경우 <xref:System.Collections.IEnumerator> 또는 <xref:System.Collections.Generic.IEnumerator%601> 인터페이스의 `Current`, `MoveNext` 및 `Dispose` 메서드를 자동으로 생성합니다.
 
 `foreach` 루프를 연속 반복하거나 `IEnumerator.MoveNext`를 직접 호출하면 다음 반복기 코드 본문이 이전 `yield return` 문 다음에 다시 시작됩니다. 그런 후 반복기 본문의 끝에 도달하거나 `yield break` 문이 나타날 때까지 다음 `yield return` 문을 계속 실행합니다.
 
@@ -358,7 +358,7 @@ C#에서 "yield"는 예약어가 아니며 `return` 또는 `break` 키워드 앞
 
 - <xref:System.Collections.Generic>
 - <xref:System.Collections.Generic.IEnumerable%601>
-- [foreach, in](../../../csharp/language-reference/keywords/foreach-in.md)
-- [yield](../../../csharp/language-reference/keywords/yield.md)
-- [배열에 foreach 사용](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)
-- [제네릭](../../../csharp/programming-guide/generics/index.md)
+- [foreach, in](../../language-reference/keywords/foreach-in.md)
+- [yield](../../language-reference/keywords/yield.md)
+- [배열에 foreach 사용](../arrays/using-foreach-with-arrays.md)
+- [제네릭](../generics/index.md)

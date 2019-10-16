@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b905c8bb89e4b163952b9640b53fc3992ba5ca10
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9b761d31e640063e11c1e549966bb372449fe743
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50189552"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762278"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 메서드
 디버거가 요청한 작업을 완료하는 데 필요한 메타데이터가 포함된 모듈의 전체 경로를 반환하도록 디버거에 요청합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetMetaData(  
       [in] LPCWSTR wszImagePath,  
       [in] DWORD   dwImageTimeStamp,  
@@ -41,7 +41,7 @@ HRESULT GetMetaData(
       );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wszImagePath`  
  [in] 파일의 전체 경로를 나타내는 null로 종료된 문자열입니다. 전체 경로 사용할 수 없는 경우 이름 및 파일의 확장명 (*filename*. *확장*).  
   
@@ -67,7 +67,7 @@ HRESULT GetMetaData(
 ## <a name="return-value"></a>반환 값  
  이 메서드는 다음과 같은 특정 HRESULT뿐만 아니라 메서드 오류를 나타내는 HRESULT 오류도 반환합니다. 모든 기타 오류 HRESULT는 파일을 검색할 수 없음을 의미합니다.  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |S_OK|메서드가 완료되었습니다. `wszPathBuffer`는 파일의 전체 경로를 포함하고 null로 종료됩니다.|  
 |E_NOT_SUFFICIENT_BUFFER|`wszPathBuffer`의 현재 크기는 전체 경로를 포함하기에 충분하지 않습니다. 이 경우 `pcchPathBuffer`는 종료 null 문자를 비롯하여 필요한 `WCHAR` 개수를 포함하고, `GetMetaData`는 요청된 버퍼 크기와 함께 두 번째로 호출됩니다.|  
@@ -76,7 +76,7 @@ HRESULT GetMetaData(
  `wszImagePath`에 덤프부터 모듈의 전체 경로가 포함되면 이 매개 변수는 덤프가 수집된 컴퓨터의 경로를 지정합니다. 이 위치에 파일이 있을 수 없거나 같은 이름을 가진 잘못된 파일이 경로에 저장될 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -84,7 +84,8 @@ HRESULT GetMetaData(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebugThread4 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)  
- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebugThread4 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugthread4-interface.md)
+- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

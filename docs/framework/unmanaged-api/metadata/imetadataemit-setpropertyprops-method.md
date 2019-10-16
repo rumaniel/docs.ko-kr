@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 024ab8254f566e5386198fa1735af4c6b1972ca1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9e78c4d7319a931ca7090d6f99651bc9660e4af8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448038"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782047"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps 메서드
-이전 호출에서 정의한 속성에 대 한 메타 데이터에 저장 하는 기능을 설정 [DefineProperty 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)합니다.  
+에 대 한 이전 호출에서 정의 된 속성에 대 한 메타 데이터에 저장 하는 기능을 설정 [DefineProperty 메서드](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetPropertyProps (   
     [in]  mdProperty      pr,   
     [in]  DWORD           dwPropFlags,   
@@ -42,7 +42,7 @@ HRESULT SetPropertyProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pr`  
  [in] 변경할 속성에 대 한 토큰  
   
@@ -62,20 +62,21 @@ HRESULT SetPropertyProps (
  [in] 속성 값을 설정 하는 메서드.  
   
  `mdGetter`  
- [in] 속성 값을 가져오는 하는 메서드.  
+ [in] 속성 값을 가져오는 메서드.  
   
  `rmdOtherMethods[]`  
- [in] 배열 속성에 연결 된 다른 방법입니다. 이 배열의 종료는 `mdTokenNil` 토큰입니다.  
+ [in] 속성과 연결 된 다른 메서드는 배열입니다. 이 배열의 종료는 `mdTokenNil` 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MSCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

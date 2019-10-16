@@ -2,19 +2,19 @@
 title: 데이터 그룹화 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: e2732c91dfff65ebb86ef45296ba369c3073a8f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644201"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754466"
 ---
 # <a name="grouping-data-visual-basic"></a>데이터 그룹화 (Visual Basic)
 그룹화는 데이터를 그룹에 넣어 각 그룹의 요소가 공통 특성을 공유하게 하는 작업을 가리킵니다.  
   
  다음 그림은 문자 시퀀스를 그룹화한 결과를 보여 줍니다. 각 그룹에 대한 키는 문자입니다.  
   
- ![LINQ 그룹화 작업](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![LINQ 그룹화 작업을 보여 주는 다이어그램입니다.](./media/grouping-data/linq-group-operation.png)  
   
  데이터 요소를 그룹화하는 표준 쿼리 연산자 메서드가 다음 섹션에 나와 있습니다.  
   
@@ -63,9 +63,10 @@ MsgBox(sb.ToString())
 ' 208  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Linq>  
- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Group By 절](../../../../visual-basic/language-reference/queries/group-by-clause.md)  
- [방법: 파일 확장명 (LINQ) (Visual Basic)으로 그룹화](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)  
- [방법: 한 파일 그룹 (LINQ) (Visual Basic)를 사용 하 여 여러 파일로 분할](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Group By 절](../../../../visual-basic/language-reference/queries/group-by-clause.md)
+- [방법: 그룹 파일 확장명 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-group-files-by-extension-linq.md)
+- [방법: 그룹 (LINQ) (Visual Basic)를 사용 하 여 여러 파일로 분합니다](../../../../visual-basic/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)

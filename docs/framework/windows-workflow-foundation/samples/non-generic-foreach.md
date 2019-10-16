@@ -2,12 +2,12 @@
 title: 비제네릭 ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
-ms.openlocfilehash: 0274cd5b87e6039ff40afa3108986ffd113fc4fb
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: cb040d8bd5fbb34cc00b246f2e51789866fd8e78
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199564"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989031"
 ---
 # <a name="non-generic-foreach"></a>비제네릭 ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]의 도구 상자에는 <xref:System.Activities.Statements.ForEach%601> 컬렉션을 반복할 수 있도록 하는 <xref:System.Collections.Generic.IEnumerable%601>을 비롯한 흐름 제어 활동이 제공됩니다.  
@@ -24,7 +24,7 @@ ms.locfileid: "47199564"
 ## <a name="class-definition"></a>클래스 정의  
  다음 코드 예제에서는 비제네릭 `ForEach` 활동의 정의를 보여 줍니다.  
   
-```  
+```csharp  
 [ContentProperty("Body")]  
 public class ForEach : NativeActivity  
 {  
@@ -45,9 +45,9 @@ public class ForEach : NativeActivity
  반복되는 요소의 컬렉션입니다. 컬렉션의 모든 요소가 호환 가능한 형식인지 확인하는 작업은 런타임에 수행됩니다.  
   
 ## <a name="example-of-using-foreach"></a>ForEach 사용 예제  
- 다음 코드에서는 응용 프로그램에서 ForEach 활동을 사용하는 방법을 보여 줍니다.  
+ 다음 코드에서는 애플리케이션에서 ForEach 활동을 사용하는 방법을 보여 줍니다.  
   
-```  
+```csharp  
 string[] names = { "bill", "steve", "ray" };  
   
 DelegateInArgument<object> iterationVariable = new DelegateInArgument<object>() { Name = "iterationVariable" };  
@@ -67,14 +67,14 @@ Activity sampleUsage =
    };  
 ```  
   
-|조건|메시지|심각도|예외 형식|  
+|조건|메시지|Severity|예외 형식|  
 |---------------|-------------|--------------|--------------------|  
 |값은 `null`입니다.|필수 활동 인수 'Values'의 값이 제공되지 않았습니다.|오류|<xref:System.InvalidOperationException>|  
   
 ## <a name="foreach-designer"></a>ForEach 디자이너  
- 샘플의 활동 디자이너는 기본 제공 <xref:System.Activities.Statements.ForEach%601> 활동에 제공되는 디자이너와 모양이 비슷합니다. 디자이너의 도구 상자에 표시 합니다 **샘플**, **비 제네릭 활동** 범주입니다. 디자이너 **ForEachWithBodyFactory** 도구 상자에서 작업을 노출 하기 때문에 <xref:System.Activities.Presentation.IActivityTemplateFactory> 활동을 제대로 구성 된 만드는 도구 상자에서 <xref:System.Activities.ActivityAction>합니다.  
+ 샘플의 활동 디자이너는 기본 제공 <xref:System.Activities.Statements.ForEach%601> 활동에 제공되는 디자이너와 모양이 비슷합니다. 디자이너는 **샘플**, **제네릭이 아닌 작업** 범주의 도구 상자에 나타납니다. 작업은 도구 상자 에서를 노출 <xref:System.Activities.Presentation.IActivityTemplateFactory> 하 고 적절 하 게 구성 <xref:System.Activities.ActivityAction>된를 사용 하 여 작업을 만드는 도구 상자에서 디자이너의 이름이 ForEachWithBodyFactory입니다.  
   
-```  
+```csharp  
 public sealed class ForEachWithBodyFactory : IActivityTemplateFactory  
 {  
     public Activity Create(DependencyObject target)  
@@ -95,19 +95,19 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 #### <a name="to-run-this-sample"></a>이 샘플을 실행하려면  
   
-1.  선택한 프로젝트를 솔루션의 시작 프로젝트로 설정합니다.  
+1. 선택한 프로젝트를 솔루션의 시작 프로젝트로 설정합니다.  
   
-    1.  **CodeTestClient** 코드를 사용 하 여 작업을 사용 하는 방법을 보여 줍니다.  
+    1. **CodeTestClient** 는 코드를 사용 하 여 작업을 사용 하는 방법을 보여 줍니다.  
   
-    2.  **DesignerTestClient** 디자이너 내에서 작업을 사용 하는 방법을 보여 줍니다.  
+    2. **Designertestclient** 는 디자이너 내에서 활동을 사용 하는 방법을 보여 줍니다.  
   
-2.  프로젝트를 빌드하고 실행합니다.  
+2. 프로젝트를 빌드하고 실행합니다.  
   
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Scenario\ActivityLibrary\NonGenericForEach`

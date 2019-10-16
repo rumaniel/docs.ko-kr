@@ -8,24 +8,24 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: ab2d0d9456f64f215ddbc0003833db1858f0ce1a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 7b7eac942a7e857ad731c0f77389e84aee287c08
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45744104"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69952158"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 컨트롤 개요(Windows Forms)
-Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포함된 항목 목록을 표시합니다. 목록 뷰를 사용하여 Windows 탐색기의 오른쪽 창과 같은 사용자 인터페이스를 만들 수 있습니다. 컨트롤에 네 가지 보기 모드: 큰 아이콘, 작은 아이콘, 목록 및 세부 정보입니다.  
+Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포함된 항목 목록을 표시합니다. 목록 뷰를 사용하여 Windows 탐색기의 오른쪽 창과 같은 사용자 인터페이스를 만들 수 있습니다. 컨트롤에는 다음과 같은 네 가지 보기 모드가 있습니다. LargeIcon, SmallIcon, List 및 Details가 있습니다.  
   
 ## <a name="what-you-can-do-with-the-listview-control"></a>ListView 컨트롤을 사용 하 여 수행할 수 있는 작업  
   
 > [!NOTE]
->  타일 추가 뷰 모드를만 Windows XP 및 Windows Server 2003 운영 체제에서 제공 됩니다. 자세한 내용은 [방법: Windows Forms ListView 컨트롤에서 Tile 보기 사용](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)합니다.  
+> 추가 보기 모드인 타일은 Windows XP 및 Windows Server 2003 운영 체제 에서만 사용할 수 있습니다. 자세한 내용은 [방법: Windows Forms ListView 컨트롤](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)에서 Tile 보기를 사용 하도록 설정 합니다.  
   
- 큰 아이콘 모드를 표시 된 항목 텍스트 옆에 있는 큰 아이콘 항목이는 컨트롤 충분히 큰 경우 여러 열에 나타납니다. SmallIcon 모드를 작은 아이콘을 표시 하는 점을 제외 하면 동일 합니다. 목록 모드를 작은 아이콘을 표시 하지만 항상 단일 열입니다. 자세히 모드는 여러 열에서 항목을 표시합니다. 자세한 내용은 참조 하세요 [방법: Windows Forms ListView 컨트롤에 열 추가](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)합니다. 보기 모드에서 결정 됩니다는 <xref:System.Windows.Forms.ListView.View%2A> 속성입니다. 보기 모드의 모든 이미지 목록에서 이미지를 표시할 수 있습니다. 세부 정보를 참조 하세요 [방법: Windows Forms ListView 컨트롤에 대 한 표시 아이콘](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)합니다.  
+ LargeIcon 모드는 항목 텍스트 옆에 있는 긴 아이콘을 표시 합니다. 컨트롤이 충분히 크면 항목이 여러 열에 표시 됩니다. SmallIcon 모드는 작은 아이콘을 표시 한다는 점을 제외 하 고 동일 합니다. 목록 모드는 작은 아이콘을 표시 하지만 항상 단일 열에 있습니다. 세부 정보 모드는 여러 열에 항목을 표시 합니다. 자세한 내용은 [방법: Windows Forms ListView 컨트롤](how-to-add-columns-to-the-windows-forms-listview-control.md)에 열을 추가 합니다. 뷰 모드는 속성에 <xref:System.Windows.Forms.ListView.View%2A> 의해 결정 됩니다. 모든 보기 모드는 이미지 목록의 이미지를 표시할 수 있습니다. 자세한 내용은 [방법: Windows Forms ListView 컨트롤](how-to-display-icons-for-the-windows-forms-listview-control.md)의 아이콘을 표시 합니다.  
   
- 다음 표에서 몇 가지를 <xref:System.Windows.Forms.ListView> 멤버와는 사용할 수 있는 보기입니다.  
+ 다음 표에서는 일부 <xref:System.Windows.Forms.ListView> 멤버와 이러한 멤버가 유효한 뷰를 나열 합니다.  
   
 |ListView 구성원|보기|  
 |---------------------|----------|  
@@ -41,22 +41,23 @@ Windows Forms <xref:System.Windows.Forms.ListView> 컨트롤은 아이콘이 포
 |<xref:System.Windows.Forms.ListView.HeaderStyle%2A> 속성|<xref:System.Windows.Forms.View.Details>.|  
 |<xref:System.Windows.Forms.ListView.InsertionMark%2A> 속성|<xref:System.Windows.Forms.View.LargeIcon>, <xref:System.Windows.Forms.View.SmallIcon>또는 <xref:System.Windows.Forms.View.Tile>|  
   
- 키 속성을 <xref:System.Windows.Forms.ListView> 컨트롤은 <xref:System.Windows.Forms.ListView.Items%2A>, 컨트롤에서 표시 된 항목을 포함 하는 합니다. <xref:System.Windows.Forms.ListView.SelectedItems%2A> 속성 컨트롤에서 현재 선택 된 항목의 컬렉션을 포함 합니다. 사용자가 끌어서 경우 다른 컨트롤을 한 번에 여러 항목을 삭제 하는 예제에 대 한 여러 항목을 선택할 수는 <xref:System.Windows.Forms.ListView.MultiSelect%2A> 속성이 `true`합니다. <xref:System.Windows.Forms.ListView> 제어 하는 경우 항목 옆의 확인란을 표시할 수 있습니다 합니다 <xref:System.Windows.Forms.ListView.CheckBoxes%2A> 속성이 `true`합니다.  
+ <xref:System.Windows.Forms.ListView> 컨트롤의 키 속성은 컨트롤에 <xref:System.Windows.Forms.ListView.Items%2A>의해 표시 되는 항목을 포함 하는입니다. 속성 <xref:System.Windows.Forms.ListView.SelectedItems%2A> 은 컨트롤에서 현재 선택 된 항목의 컬렉션을 포함 합니다. <xref:System.Windows.Forms.ListView.MultiSelect%2A> 속성이 로`true`설정 된 경우 사용자는 여러 항목을 선택 하 여 한 번에 여러 항목을 끌어서 놓을 수 있습니다. <xref:System.Windows.Forms.ListView.CheckBoxes%2A> 속성이 <xref:System.Windows.Forms.ListView> 로`true`설정 된 경우 컨트롤은 항목 옆에 있는 확인란을 표시할 수 있습니다.  
   
- <xref:System.Windows.Forms.ListView.Activation%2A> 속성 동작 유형을 목록에서 항목을 활성화 하기 위해 사용자를 수행 해야 결정: 옵션은 <xref:System.Windows.Forms.ItemActivation.Standard>를 <xref:System.Windows.Forms.ItemActivation.OneClick>, 및 <xref:System.Windows.Forms.ItemActivation.TwoClick>합니다. <xref:System.Windows.Forms.ItemActivation.OneClick> 활성화 항목을 활성화 하려면 한 번의 클릭을 해야 합니다. <xref:System.Windows.Forms.ItemActivation.TwoClick> 활성화의 경우 항목을 활성화 하려면 두 번 클릭 항목 텍스트의 색을 변경 하는 한 번의 클릭 합니다. <xref:System.Windows.Forms.ItemActivation.Standard> 활성화의 경우 항목을 활성화 하려면 두 번 클릭 하지만 항목 모양은 변경 되지 않습니다.  
+ 속성 <xref:System.Windows.Forms.ListView.Activation%2A> 은 사용자가 목록에서 항목을 활성화 하기 위해 수행 해야 하는 동작의 유형을 결정 합니다. <xref:System.Windows.Forms.ItemActivation.Standard>옵션은 <xref:System.Windows.Forms.ItemActivation.OneClick>, 및 <xref:System.Windows.Forms.ItemActivation.TwoClick>입니다. <xref:System.Windows.Forms.ItemActivation.OneClick>활성화 하려면 한 번 클릭 하 여 항목을 활성화 해야 합니다. <xref:System.Windows.Forms.ItemActivation.TwoClick>활성화 하려면 사용자가 항목을 활성화 하려면 두 번 클릭 해야 합니다. 한 번 클릭으로 항목 텍스트의 색을 변경 합니다. <xref:System.Windows.Forms.ItemActivation.Standard>활성화 하려면 사용자가 항목을 활성화 하려면 두 번 클릭 해야 하지만 항목의 모양은 변경 되지 않습니다.  
   
- <xref:System.Windows.Forms.ListView> 그룹화, 바둑판식 뷰 및 삽입 표시를 포함 하 여 Windows XP 플랫폼에서도 지 원하는 시각적 스타일 및 기타 기능을 사용할 수 있는 컨트롤입니다. 자세한 내용은 [Windows XP 기능 및 Windows Forms 컨트롤](https://msdn.microsoft.com/library/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)합니다.  
+ 컨트롤 <xref:System.Windows.Forms.ListView> 은 그룹화, 타일 보기 및 삽입 표시를 포함 하 여 Windows XP 플랫폼에서 사용할 수 있는 비주얼 스타일 및 기타 기능도 지원 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.ListView>  
- [ListView 컨트롤](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)  
- [방법: Windows Forms ListView 컨트롤을 사용하여 항목 추가 및 제거](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)  
- [방법: Windows Forms ListView 컨트롤에 열 추가](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)  
- [방법: Windows Forms ListView 컨트롤의 아이콘 표시](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)  
- [방법: Windows Forms ListView 컨트롤을 사용하여 열에 하위 항목 표시](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)  
- [방법: Windows Forms ListView 컨트롤에서 항목 선택](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)  
- [방법: Windows Forms ListView 컨트롤에서 항목 그룹화](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)  
- [방법: Windows Forms ListView 컨트롤에 삽입 표시 나타내기](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)  
- [방법: ListView 컨트롤에 검색 기능 추가](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)  
- [방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가(Windows Forms)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)  
- [방법: Windows Forms으로 다중 창 사용자 인터페이스 만들기](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.ListView>
+- [ListView 컨트롤](listview-control-windows-forms.md)
+- [방법: Windows Forms ListView 컨트롤을 사용 하 여 항목 추가 및 제거](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤에 열 추가](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤의 아이콘 표시](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤을 사용 하 여 열에 하위 항목 표시](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤에서 항목 선택](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤에서 항목 그룹화](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [방법: Windows Forms ListView 컨트롤에 삽입 표시를 표시 합니다.](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [방법: ListView 컨트롤에 검색 기능 추가](how-to-add-search-capabilities-to-a-listview-control.md)
+- [방법: TreeView 또는 ListView 컨트롤에 사용자 지정 정보 추가 (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [방법: Windows Forms를 사용 하 여 다중 창 사용자 인터페이스 만들기](how-to-create-a-multipane-user-interface-with-windows-forms.md)

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2ed8c28b-b88d-4be7-9c87-92df01f0821f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b9eedfab68dc6aeacf9ed51ffc7205b73c062ca
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4ff9232272124c8706e64162d096eced8640c806
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698343"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966962"
 ---
 # <a name="insert-xml-data-using-xpathnavigator"></a>XPathNavigator를 사용하여 XML 데이터 삽입
 <xref:System.Xml.XPath.XPathNavigator> 클래스는 XML 문서에 형제, 자식 및 특성 노드를 삽입하는 메서드 집합을 제공합니다. 이러한 메서드를 사용하려면 <xref:System.Xml.XPath.XPathNavigator> 개체가 편집 가능한 상태여야 합니다. 즉, <xref:System.Xml.XPath.XPathNavigator.CanEdit%2A> 속성이 `true`여야 합니다.  
@@ -29,13 +29,13 @@ ms.locfileid: "45698343"
 ### <a name="inserting-sibling-nodes"></a>형제 노드 삽입  
  <xref:System.Xml.XPath.XPathNavigator> 클래스는 다음과 같은 메서드를 통해 형제 노드를 삽입합니다.  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementAfter%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.InsertElementBefore%2A>  
   
  이러한 메서드는 <xref:System.Xml.XPath.XPathNavigator> 개체가 현재 배치되어 있는 노드의 앞뒤에 형제 노드를 삽입합니다.  
   
@@ -58,13 +58,13 @@ ms.locfileid: "45698343"
 ### <a name="inserting-child-nodes"></a>자식 노드 삽입  
  <xref:System.Xml.XPath.XPathNavigator> 클래스는 다음과 같은 메서드를 통해 자식 노드를 삽입합니다.  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.AppendChildElement%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.PrependChildElement%2A>  
   
  이러한 메서드는 <xref:System.Xml.XPath.XPathNavigator> 개체가 현재 배치되어 있는 노드의 자식 노드 목록 시작과 끝 부분에 자식 노드를 추가합니다.  
   
@@ -87,9 +87,9 @@ ms.locfileid: "45698343"
 ### <a name="inserting-attribute-nodes"></a>특성 노드 삽입  
  <xref:System.Xml.XPath.XPathNavigator> 클래스는 다음과 같은 메서드를 통해 특성 노드를 삽입합니다.  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A>  
   
  이러한 메서드는 <xref:System.Xml.XPath.XPathNavigator> 개체가 현재 배치되어 있는 요소 노드에 특성 노드를 삽입합니다. <xref:System.Xml.XPath.XPathNavigator.CreateAttribute%2A> 메서드는 네임스페이스 접두사, 로컬 이름, 네임스페이스 URI 및 매개 변수로 지정된 값을 사용하여 <xref:System.Xml.XPath.XPathNavigator> 개체가 현재 배치되어 있는 요소 노드에 특성 노드를 만듭니다. <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> 메서드는 특성 노드를 삽입하는 데 사용하는 <xref:System.Xml.XmlWriter> 개체를 반환합니다.  
   
@@ -227,26 +227,26 @@ navigator.SetTypedValue(DateTime.Now);
   
  다음은 발생할 수 있는 네임스페이스 충돌입니다.  
   
--   <xref:System.Xml.XmlReader> 개체의 컨텍스트에 네임스페이스 URI 접두사 매핑이 없을 경우 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트 범위 내에 네임스페이스가 있으면 새로 삽입된 노드에 새 네임스페이스 선언이 추가됩니다.  
+- <xref:System.Xml.XmlReader> 개체의 컨텍스트에 네임스페이스 URI 접두사 매핑이 없을 경우 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트 범위 내에 네임스페이스가 있으면 새로 삽입된 노드에 새 네임스페이스 선언이 추가됩니다.  
   
--   <xref:System.Xml.XmlReader> 개체의 컨텍스트와 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트 내에서 같은 네임스페이스 URI가 범위 내에 있지만 두 컨텍스트에서 다른 접두사가 매핑된 경우 새로 삽입된 노드에 새 네임스페이스 선언이 추가되고 <xref:System.Xml.XmlReader> 개체의 접두사와 네임스페이스 URI가 사용됩니다.  
+- <xref:System.Xml.XmlReader> 개체의 컨텍스트와 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트 내에서 같은 네임스페이스 URI가 범위 내에 있지만 두 컨텍스트에서 다른 접두사가 매핑된 경우 새로 삽입된 노드에 새 네임스페이스 선언이 추가되고 <xref:System.Xml.XmlReader> 개체의 접두사와 네임스페이스 URI가 사용됩니다.  
   
--   <xref:System.Xml.XmlReader> 개체의 컨텍스트와 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트 내에서 같은 네임스페이스 접두사가 범위 내에 있지만 두 컨텍스트에 다른 네임스페이스 URI가 매핑된 경우 새로 삽입된 노드에 새 네임스페이스 선언이 추가되며 접두사가 다시 선언되고 <xref:System.Xml.XmlReader> 개체의 네임스페이스 URI가 사용됩니다.  
+- <xref:System.Xml.XmlReader> 개체의 컨텍스트와 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트 내에서 같은 네임스페이스 접두사가 범위 내에 있지만 두 컨텍스트에 다른 네임스페이스 URI가 매핑된 경우 새로 삽입된 노드에 새 네임스페이스 선언이 추가되며 접두사가 다시 선언되고 <xref:System.Xml.XmlReader> 개체의 네임스페이스 URI가 사용됩니다.  
   
--   <xref:System.Xml.XmlReader> 개체의 컨텍스트와 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트에서 네임스페이스 URI와 접두사가 같을 경우 새로 삽입된 노드에 새 네임스페이스 선언이 추가되지 않습니다.  
+- <xref:System.Xml.XmlReader> 개체의 컨텍스트와 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트에서 네임스페이스 URI와 접두사가 같을 경우 새로 삽입된 노드에 새 네임스페이스 선언이 추가되지 않습니다.  
   
 > [!NOTE]
->  위 설명은 기본 네임스페이스 선언과 같이 접두사로 빈 `string`이 있는 네임스페이스 선언에도 적용됩니다.  
+> 위 설명은 기본 네임스페이스 선언과 같이 접두사로 빈 `string`이 있는 네임스페이스 선언에도 적용됩니다.  
   
  다음은 발생할 수 있는 `xml:lang` 충돌입니다.  
   
--   `xml:lang` 개체의 컨텍스트 내 범위에 <xref:System.Xml.XmlReader> 특성이 있지만 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트에는 없을 경우 `xml:lang` 개체에서 값을 가져오는 <xref:System.Xml.XmlReader> 특성이 새로 삽입된 노드에 추가됩니다.  
+- `xml:lang` 개체의 컨텍스트 내 범위에 <xref:System.Xml.XmlReader> 특성이 있지만 <xref:System.Xml.XPath.XPathNavigator> 개체의 컨텍스트에는 없을 경우 `xml:lang` 개체에서 값을 가져오는 <xref:System.Xml.XmlReader> 특성이 새로 삽입된 노드에 추가됩니다.  
   
--   `xml:lang` 개체의 컨텍스트와 <xref:System.Xml.XmlReader> 개체의 컨텍스트 내 범위에 <xref:System.Xml.XPath.XPathNavigator> 특성이 있지만 각각 값이 다를 경우 `xml:lang` 개체에서 값을 가져오는 <xref:System.Xml.XmlReader> 특성이 새로 삽입된 노드에 추가됩니다.  
+- `xml:lang` 개체의 컨텍스트와 <xref:System.Xml.XmlReader> 개체의 컨텍스트 내 범위에 <xref:System.Xml.XPath.XPathNavigator> 특성이 있지만 각각 값이 다를 경우 `xml:lang` 개체에서 값을 가져오는 <xref:System.Xml.XmlReader> 특성이 새로 삽입된 노드에 추가됩니다.  
   
--   `xml:lang` 개체의 컨텍스트와 <xref:System.Xml.XmlReader> 개체의 컨텍스트 내 범위에 <xref:System.Xml.XPath.XPathNavigator> 특성이 있고 값이 같을 경우 새로 삽입된 노드에 새 `xml:lang` 특성이 추가되지 않습니다.  
+- `xml:lang` 개체의 컨텍스트와 <xref:System.Xml.XmlReader> 개체의 컨텍스트 내 범위에 <xref:System.Xml.XPath.XPathNavigator> 특성이 있고 값이 같을 경우 새로 삽입된 노드에 새 `xml:lang` 특성이 추가되지 않습니다.  
   
--   `xml:lang` 개체의 컨텍스트 내 범위에 <xref:System.Xml.XPath.XPathNavigator> 특성이 있지만 <xref:System.Xml.XmlReader> 개체의 컨텍스트에는 없을 경우 새로 삽입된 노드에 `xml:lang` 특성이 추가되지 않습니다.  
+- `xml:lang` 개체의 컨텍스트 내 범위에 <xref:System.Xml.XPath.XPathNavigator> 특성이 있지만 <xref:System.Xml.XmlReader> 개체의 컨텍스트에는 없을 경우 새로 삽입된 노드에 `xml:lang` 특성이 추가되지 않습니다.  
   
 ## <a name="inserting-nodes-with-xmlwriter"></a>XmlWriter를 사용하여 노드 삽입  
  "노드 및 값 삽입" 단원에 설명된 형제, 자식 및 특성 노드를 삽입하는 데 사용하는 메서드는 오버로드됩니다. <xref:System.Xml.XPath.XPathNavigator.InsertAfter%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator.InsertBefore%2A>, <xref:System.Xml.XPath.XPathNavigator.AppendChild%2A>, <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A>, <xref:System.Xml.XPath.XPathNavigator.CreateAttributes%2A> 및 <xref:System.Xml.XPath.XPathNavigator> 메서드는 노드를 삽입하는 데 사용하는 <xref:System.Xml.XmlWriter> 개체를 반환합니다.  
@@ -271,11 +271,11 @@ navigator.SetTypedValue(DateTime.Now);
   
  다음은 여러 <xref:System.Xml.XmlWriter> 개체를 사용할 때 고려해야 할 중요 참고 사항입니다.  
   
--   각 <xref:System.Xml.XmlWriter> 개체의 <xref:System.Xml.XmlWriter.Close%2A> 메서드를 호출하면 <xref:System.Xml.XmlWriter> 개체를 사용하여 작성한 XML 조각이 XML 문서에 추가됩니다. 그때까지 <xref:System.Xml.XmlWriter> 개체는 연결되지 않은 조각을 작성합니다. XML 문서에서 작업을 수행해도 <xref:System.Xml.XmlWriter>를 호출하기 전에 <xref:System.Xml.XmlWriter.Close%2A> 개체를 사용하여 작성 중인 조각에는 영향을 주지 않습니다.  
+- 각 <xref:System.Xml.XmlWriter> 개체의 <xref:System.Xml.XmlWriter.Close%2A> 메서드를 호출하면 <xref:System.Xml.XmlWriter> 개체를 사용하여 작성한 XML 조각이 XML 문서에 추가됩니다. 그때까지 <xref:System.Xml.XmlWriter> 개체는 연결되지 않은 조각을 작성합니다. XML 문서에서 작업을 수행해도 <xref:System.Xml.XmlWriter>를 호출하기 전에 <xref:System.Xml.XmlWriter.Close%2A> 개체를 사용하여 작성 중인 조각에는 영향을 주지 않습니다.  
   
--   특정 XML 하위 트리에 <xref:System.Xml.XmlWriter> 개체가 열려 있을 경우 이 하위 트리를 삭제해도 <xref:System.Xml.XmlWriter> 개체가 이 하위 트리에 추가됩니다. 하위 트리는 단순히 삭제된 조각이 됩니다.  
+- 특정 XML 하위 트리에 <xref:System.Xml.XmlWriter> 개체가 열려 있을 경우 이 하위 트리를 삭제해도 <xref:System.Xml.XmlWriter> 개체가 이 하위 트리에 추가됩니다. 하위 트리는 단순히 삭제된 조각이 됩니다.  
   
--   XML 문서의 동일한 지점에 여러 <xref:System.Xml.XmlWriter> 개체가 동시에 열려 있을 경우 <xref:System.Xml.XmlWriter> 개체를 연 순서가 아니라 닫은 순서대로 XML 문서에 추가됩니다.  
+- XML 문서의 동일한 지점에 여러 <xref:System.Xml.XmlWriter> 개체가 동시에 열려 있을 경우 <xref:System.Xml.XmlWriter> 개체를 연 순서가 아니라 닫은 순서대로 XML 문서에 추가됩니다.  
   
  다음 예제에서는 <xref:System.Xml.XmlDocument> 개체를 만들고 <xref:System.Xml.XPath.XPathNavigator> 개체를 만든 다음 <xref:System.Xml.XmlWriter> 메서드에서 반환된 <xref:System.Xml.XPath.XPathNavigator.PrependChild%2A> 개체를 사용하여 `books.xml` 파일에 첫 번째 책의 구조를 만들고 `book.xml` 파일로 저장합니다.  
   
@@ -332,9 +332,9 @@ document.Save("book.xml");
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [XPathNavigator를 사용하여 XML 데이터 수정](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [XPathNavigator를 사용하여 XML 데이터 수정](../../../../docs/standard/data/xml/modify-xml-data-using-xpathnavigator.md)
 - [XPathNavigator를 사용하여 XML 데이터 제거](../../../../docs/standard/data/xml/remove-xml-data-using-xpathnavigator.md)

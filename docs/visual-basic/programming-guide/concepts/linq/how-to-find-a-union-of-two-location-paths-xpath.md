@@ -1,15 +1,15 @@
 ---
-title: '방법: 두 위치 경로 (XPath 및 LINQ to XML)의 공용 구조체 찾기 (Visual Basic)'
+title: '방법: 두 위치 경로의 공용 구조체 찾기 (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c82c09b4-cb0a-47ec-8cc3-a124144c2788
-ms.openlocfilehash: 3f67ac24d12e7d2fcbd74e2f27a75d982c1cf00b
-ms.sourcegitcommit: a474397fd4de822f0d878d86d907e49763872b0b
+ms.openlocfilehash: 6905e6a7bd0cba37006b1fc3077ad72de36bcf56
+ms.sourcegitcommit: d7c298f6c2e3aab0c7498bfafc0a0a94ea1fe23e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/12/2018
-ms.locfileid: "42754064"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72249944"
 ---
-# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>방법: 두 위치 경로 (XPath 및 LINQ to XML)의 공용 구조체 찾기 (Visual Basic)
+# <a name="how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml-visual-basic"></a>방법: 두 위치 경로의 공용 구조체 찾기 (XPath-LINQ to XML) (Visual Basic)
 XPath를 사용하여 두 XPath 위치 경로의 통합을 찾을 수 있습니다.  
   
  XPath 식은 다음과 같습니다.  
@@ -18,10 +18,10 @@ XPath를 사용하여 두 XPath 위치 경로의 통합을 찾을 수 있습니�
   
  <xref:System.Linq.Enumerable.Concat%2A> 표준 쿼리 연산자를 사용하여 동일한 결과를 얻을 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 모든 `Category` 요소와 모든 `Price` 요소를 찾은 다음 단일 컬렉션으로 연결합니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 <xref:System.Xml.Linq.Extensions.InDocumentOrder%2A>을 호출하여 결과를 정렬합니다. XPath 식 계산의 결과도 문서 순서로 되어 있습니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 숫자 데이터(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)를 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: 숫자 데이터(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md).  
   
 ```vb  
 Dim data As XDocument = XDocument.Load("Data.xml")  
@@ -47,7 +47,7 @@ Next
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```console
 Results are identical  
 <Category>A</Category>  
 <Price>24.50</Price>  
@@ -65,5 +65,6 @@ Results are identical
 <Price>6.99</Price>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [XPath 사용자 (Visual Basic)를 위한 LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>참조
+
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

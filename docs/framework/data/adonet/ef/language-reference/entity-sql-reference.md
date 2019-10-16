@@ -2,12 +2,12 @@
 title: 엔터티 SQL 참조
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
-ms.openlocfilehash: ae0aec999d30d099467be690b8920d1413b564f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 9b666b83674cb2374409e321a2b715e9910bdd0e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034270"
 ---
 # <a name="entity-sql-reference"></a>엔터티 SQL 참조
 
@@ -30,7 +30,7 @@ ms.locfileid: "43515500"
 
 정식 함수는 모든 데이터 공급자에서 지원되며 모든 쿼리 기술에 사용될 수 있습니다. 다음 표에서 정식 함수를 나열합니다.
 
-|기능|형식|
+|함수|형식|
 |--------------|----------|
 |[집계 Entity SQL 정식 함수](aggregate-canonical-functions.md)|집계 Entity SQL 정식 함수를 설명합니다.|
 |[수학 정식 함수](math-canonical-functions.md)|수학 Entity SQL 정식 함수를 설명합니다.|
@@ -53,9 +53,9 @@ ms.locfileid: "43515500"
 |[됩니다 \[되지\] NULL](isnull-entity-sql.md)|쿼리 식이 null인지 여부를 결정합니다.|
 |[<(보다 작음)](less-than-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작은지 여부를 결정합니다.|
 |[<=(작거나 같음)](less-than-or-equal-to-entity-sql.md)|두 식을 비교하여 왼쪽 식의 값이 오른쪽 식의 값보다 작거나 같은지 여부를 결정합니다.|
-|[\[하지\] BETWEEN](between-entity-sql.md)|식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.|
+|[\[NOT\] BETWEEN](between-entity-sql.md)|식의 결과 값이 지정된 범위에 속하는지 여부를 결정합니다.|
 |[\!= (같지 않음)](not-equal-to-entity-sql.md)|두 식을 비교 하 여 왼쪽된 식이 오른쪽 식과 같지 않습니다 여부를 결정 합니다.|
-|[\[하지\] 같은](like-entity-sql.md)|특정 문자열이 지정된 패턴과 일치하는지 여부를 결정합니다.|
+|[\[NOT\] LIKE](like-entity-sql.md)|특정 문자열이 지정된 패턴과 일치하는지 여부를 결정합니다.|
 
 ## <a name="logical-and-case-expression-operators"></a>논리 및 case 식 연산자
 
@@ -67,7 +67,7 @@ ms.locfileid: "43515500"
 |[\! (논리적 NOT)](not-entity-sql.md)|논리적 NOT|
 |[&#124;&#124;(논리적 OR)](or-entity-sql.md)|논리적 OR|
 |[CASE](case-entity-sql.md)|부울 식 집합을 계산하여 결과를 확인합니다.|
-|[THEN](then-entity-sql.md)|결과 [때](https://msdn.microsoft.com/library/6233fe9f-00b0-460e-8372-64e138a5f998) 절 true로 평가 될 때입니다.|
+|[THEN](then-entity-sql.md)|결과 [때](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb387119(v=vs.100)) 절 true로 평가 될 때입니다.|
 
 ## <a name="query-operators"></a>쿼리 연산자
 
@@ -106,9 +106,9 @@ Entity SQL에는 다양 한 강력한 집합 연산을 제공합니다. 여기�
 |--------------|---------|
 |[ANYELEMENT](anyelement-entity-sql.md)|다중값 컬렉션에서 요소를 추출합니다.|
 |[EXCEPT](except-entity-sql.md)|쿼리 식에서 EXCEPT 피연산자 오른쪽 쿼리 식에서 반환 되지 않습니다는 EXCEPT 연산자의 왼쪽에 고유한 값의 컬렉션을 반환 합니다.|
-|[\[하지\] EXISTS](exists-entity-sql.md)|컬렉션이 비어 있는지 확인합니다.|
+|[\[NOT\] EXISTS](exists-entity-sql.md)|컬렉션이 비어 있는지 확인합니다.|
 |[FLATTEN](flatten-entity-sql.md)|여러 컬렉션의 컬렉션을 하나의 결합된 컬렉션으로 변환합니다.|
-|[\[하지\] IN](in-entity-sql.md)|컬렉션에 일치하는 값이 있는지 여부를 확인합니다.|
+|[\[NOT\] IN](in-entity-sql.md)|컬렉션에 일치하는 값이 있는지 여부를 확인합니다.|
 |[INTERSECT](intersect-entity-sql.md)|INTERSECT 피연산자의 왼쪽과 오른쪽에 있는 두 쿼리 식에서 반환된 고유한 값의 컬렉션을 반환합니다.|
 |[OVERLAPS](overlaps-entity-sql.md)|두 컬렉션에 공통 요소가 있는지 여부를 확인합니다.|
 |[SET](set-entity-sql.md)|중복 요소가 모두 제거된 새 컬렉션을 생성하여 개체 컬렉션을 집합으로 변환하는 데 사용됩니다.|
@@ -122,7 +122,7 @@ Entity SQL 식 (값)을 생성, 쿼리 및 조작의 유형을 허용 하는 작
 |--------------|---------|
 |[CAST](cast-entity-sql.md)|데이터 형식의 식을 다른 형식의 식으로 변환합니다.|
 |[COLLECTION](collection-entity-sql.md)|에 사용 된 [함수](function-entity-sql.md) 엔터티 형식 또는 복합 형식의 컬렉션을 선언 하는 작업.|
-|[됩니다 \[되지\] 의](isof-entity-sql.md)|식의 형식이 지정된 형식 또는 그 하위 형식인지 여부를 확인합니다.|
+|[IS \[NOT\] OF](isof-entity-sql.md)|식의 형식이 지정된 형식 또는 그 하위 형식인지 여부를 확인합니다.|
 |[OFTYPE](oftype-entity-sql.md)|쿼리 식에서 특정 형식을 가진 개체 컬렉션을 반환합니다.|
 |[명명된 형식 생성자](named-type-constructor-entity-sql.md)|엔터티 형식이나 복합 형식의 인스턴스를 만드는 데 사용됩니다.|
 |[MULTISET](multiset-entity-sql.md)|값 목록에서 multiset 인스턴스를 만듭니다.|
@@ -142,4 +142,4 @@ Entity SQL 식 (값)을 생성, 쿼리 및 조작의 유형을 허용 하는 작
 
 ## <a name="see-also"></a>참고자료
 
-[Entity SQL 언어](entity-sql-language.md)
+- [Entity SQL 언어](entity-sql-language.md)

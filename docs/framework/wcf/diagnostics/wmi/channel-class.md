@@ -2,12 +2,12 @@
 title: Channel 클래스
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
-ms.openlocfilehash: 108d5f8e3cd092863dbd48e2bb9d180798b091a4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f60a3946617b0994db1ba9e9ddf43be863be81f9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964089"
 ---
 # <a name="channel-class"></a>Channel 클래스
 채널  
@@ -36,10 +36,10 @@ class Channel
   
  액세스 형식: 읽기 전용  
   
- 채널에 대한 로컬 끝점입니다.  
+ 채널에 대한 로컬 엔드포인트입니다.  
   
 ### <a name="ref"></a>ref  
- 데이터 형식: Endpoint  
+ 데이터 형식: 엔드포인트  
   
  액세스 형식: 읽기 전용  
   
@@ -72,5 +72,6 @@ class Channel
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.ChannelBase>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.ChannelBase>

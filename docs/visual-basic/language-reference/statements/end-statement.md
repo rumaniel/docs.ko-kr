@@ -14,15 +14,15 @@ helpviewer_keywords:
 - End statement [Visual Basic]
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
-ms.openlocfilehash: 8fd489dc9f12f7e80ef2dd49c6e2dee6c28ae761
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 9307cf10e6125441bd49baa0e663a5a13f234005
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43395724"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69944458"
 ---
 # <a name="end-statement"></a>End 문
-실행을 즉시 종료 됩니다.  
+실행을 즉시 종료 합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -31,31 +31,32 @@ End
 ```  
   
 ## <a name="remarks"></a>설명  
- 배치할 수 있습니다는 `End` 어디서 나 실행을 중지 하려면 전체 응용 프로그램에서 프로시저의에서 문입니다. `End` 사용 하 여 연 파일을 닫고는 `Open` 문을 응용 프로그램의 모든 변수를 지웁니다. 응용 프로그램에는 해당 개체에 대 한 참조를 보유 하는 다른 프로그램을 실행 중인 코드의 항목이 즉시 닫습니다.  
+ 프로시저의 아무 곳 `End` 에 나 문을 추가 하 여 전체 응용 프로그램의 실행을 강제로 중단할 수 있습니다. `End``Open` 문을 사용 하 여 열린 파일을 닫고 모든 응용 프로그램의 변수를 지웁니다. 응용 프로그램은 해당 개체에 대 한 참조를 보유 하는 다른 프로그램이 없고 해당 코드가 실행 되 고 있지 않은 즉시 닫힙니다.  
   
 > [!NOTE]
->  합니다 `End` 문 코드 실행이 갑자기 중지 되 고 호출 하지 않습니다 합니다 `Dispose` 또는 `Finalize` 메서드 또는 다른 Visual Basic 코드입니다. 다른 프로그램에서의 개체 참조를 무효화 됩니다. 경우는 `End` 내에서 문이 `Try` 또는 `Catch` 제어 블록에 해당 요소에 통과 하지 못하는 `Finally` 블록입니다.  
+> 문은 코드 실행을 갑자기 중지 하 고 `Dispose` 또는 `Finalize` 메서드 또는 다른 Visual Basic 코드를 호출 하지 않습니다. `End` 다른 프로그램에서 보유 하 고 있는 개체 참조는 무효화 됩니다. 또는 블록 내에서 문이 발견 되 면 컨트롤이 해당 `Finally` 블록에 전달 되지 않습니다. `End` `Catch` `Try`  
   
- 합니다 `Stop` 문을 달리 하지만 실행을 일시 중단 `End`, 파일을 모두 닫고 하거나 컴파일된 실행 파일 (.exe) 파일에 없는 경우 변수를 지우지 않습니다.  
+ 문은 실행을 일시 중단 하지만, `End`와는 달리 컴파일된 실행 파일 (.exe)에서 발생 한 경우를 제외 하 고는 파일을 닫지 않거나 모든 변수를 지우지 않습니다. `Stop`  
   
- 때문에 `End` 처리 하지 않고 응용 프로그램을 종료 열려 있는 모든 리소스에 사용 하기 전에 완전히을 닫기 하려고 해야 합니다. 예를 들어, 응용 프로그램 열기 폼에 있으면을 닫아야 컨트롤에 도달 하기 전에 `End` 문입니다.  
+ 는 `End` 열려 있을 수 있는 리소스에 대해 참석 하지 않고 응용 프로그램을 종료 하기 때문에 사용 하기 전에 완전히 닫아야 합니다. 예를 들어 응용 프로그램에 폼이 열려 있는 경우 제어가 `End` 문에 도달 하기 전에 닫아야 합니다.  
   
- 사용 해야 `End` 만 최소화 해야 할 때 즉시 중지 합니다. 프로시저를 종료 하는 일반적인 방법 ([Return 문이](../../../visual-basic/language-reference/statements/return-statement.md) 하 고 [Exit 문](../../../visual-basic/language-reference/statements/exit-statement.md)) 뿐 아니라 프로시저 아래로 완전히 종료 되지만 기회 완전히 종료를 호출 하는 코드를 제공할 수도 있습니다. 콘솔 응용 프로그램, 예를 들어, 간단 하 게 `Return` 에서 `Main` 프로시저입니다.  
+ 을 즉시 중지 `End` 해야 하는 경우에만를 사용 해야 합니다. 프로시저를 종료 하는 일반적인 방법 ([Return 문](../../../visual-basic/language-reference/statements/return-statement.md) 및 [Exit 문](../../../visual-basic/language-reference/statements/exit-statement.md))은 프로시저를 완전히 종료 하는 것이 아니라 호출 하는 코드를 완전히 닫을 수 있는 기회를 제공 합니다. 예를 들어 콘솔 응용 프로그램은 단순히 `Return` `Main` 프로시저에서 수행할 수 있습니다.  
   
 > [!IMPORTANT]
->  `End` 문 호출 합니다 <xref:System.Environment.Exit%2A> 메서드를 <xref:System.Environment> 클래스를 <xref:System> 네임 스페이스. <xref:System.Environment.Exit%2A> 있어야 `UnmanagedCode` 권한. 없는 경우는 <xref:System.Security.SecurityException> 오류가 발생 합니다.  
+> 문은 네임 스페이스에 <xref:System.Environment.Exit%2A> 있는 <xref:System.Environment> 클래스의 메서드를 호출 합니다. <xref:System> `End` <xref:System.Environment.Exit%2A>`UnmanagedCode` 사용 권한이 있어야 합니다. 그렇지 <xref:System.Security.SecurityException> 않으면 오류가 발생 합니다.  
   
- 뒤에 키워드를 추가 하는 경우 [끝 \<키워드 > 문을](../../../visual-basic/language-reference/statements/end-keyword-statement.md) 적절 한 프로시저 또는 블록 정의의 끝을 나타냅니다. 예를 들어 `End Function` 의 정의 종료 한 `Function` 프로시저입니다.  
+ 그 다음에 추가 키워드가 나오면 [end \<keyword > 문이](../../../visual-basic/language-reference/statements/end-keyword-statement.md) 해당 프로시저 또는 블록 정의의 끝을 서술 합니다. 예 `End Function` 를 들어는 `Function` 프로시저의 정의를 종료 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 `End` 문을 사용자가 요청할 경우 코드 실행을 종료 합니다.  
+ 다음 예제에서는 `End` 문을 사용 하 여 사용자가 요청 하는 경우 코드 실행을 종료 합니다.  
   
- [!code-vb[VbVersHelp60Controls#64](../../../visual-basic/language-reference/statements/codesnippet/VisualBasic/end-statement_1.vb)]  
+ [!code-vb[VbVersHelp60Controls#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVersHelp60Controls/VB/Form1.vb#64)]  
   
-## <a name="smart-device-developer-notes"></a>스마트 장치 개발자 노트  
- 이 문은 지원 되지 않습니다.  
+## <a name="smart-device-developer-notes"></a>스마트 디바이스 개발자 노트  
+ 이 문은 지원되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Security.Permissions.SecurityPermissionFlag>  
- [Stop 문](../../../visual-basic/language-reference/statements/stop-statement.md)  
- [최종 \<키워드 > 문](../../../visual-basic/language-reference/statements/end-keyword-statement.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Security.Permissions.SecurityPermissionFlag>
+- [Stop 문](../../../visual-basic/language-reference/statements/stop-statement.md)
+- [End \<키워드 > 문](../../../visual-basic/language-reference/statements/end-keyword-statement.md)

@@ -2,12 +2,12 @@
 title: Calls Failed Per Second
 ms.date: 03/30/2017
 ms.assetid: e4ef3773-f650-4876-99cf-4d0c02aa03d4
-ms.openlocfilehash: ccb5908e9036650e3f21a9496649c8090c2e47b2
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: aa8cd4c2d9f642b525b2b9ccb931c4f2101a5129
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43736324"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421783"
 ---
 # <a name="calls-failed-per-second"></a>Calls Failed Per Second
 카운터 이름: Calls Failed Per Second  
@@ -19,7 +19,8 @@ ms.locfileid: "43736324"
   
  (N 1 - N 0 ) / ( (D 1 -D 0 ) / F)  
   
- 이 작업에 처리되지 않은 예외가 있을 때마다 이 카운터가 증가합니다.  
+ 이 작업에서 처리 되지 않은 예외가 발생 될 때마다이 카운터가 증가 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [계약 및 서비스에서 오류 지정 및 처리](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+## <a name="see-also"></a>참고자료
+
+- [계약 및 서비스에서 오류 지정 및 처리](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

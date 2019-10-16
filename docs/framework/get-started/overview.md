@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8519f7ecfc430aaa9b888f9239f669e6e54eb02
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: c7a3548cb0d7e841f32824eda52565e64279536e
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192748"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051995"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework의 개요
 
@@ -33,7 +33,7 @@ ms.locfileid: "50192748"
 - .NET Framework를 기반으로 하는 코드가 다른 모든 코드와 통합되도록 모든 통신을 산업 표준을 토대로 빌드합니다.
 
 > [!NOTE]
-> 사용자와 개발자 모두를 위한 .NET Framework에 대한 일반적인 소개는 [시작](../../../docs/framework/get-started/index.md)을 참조하십시오.
+> 사용자와 개발자 모두를 위한 .NET Framework에 대한 일반적인 소개는 [시작](index.md)을 참조하십시오.
 
 .NET Framework는 CLR(공용 언어 런타임)과 .NET Framework 클래스 라이브러리로 구성되어 있습니다. 공용 언어 런타임은 .NET Framework의 기초입니다. 런타임은 실행 시 코드를 관리하는 에이전트로서, 메모리 관리, 스레드 관리, 원격 서비스 등의 핵심 서비스를 제공하며 동시에 엄격한 형식 안전성 및 다른 형태의 코드 정확성을 유지하므로 보안과 안정성을 강화합니다. 사실, 코드 관리의 개념은 런타임의 기본 원칙입니다. 런타임을 대상으로 하는 코드는 관리 코드라고 하지만, 런타임을 대상으로 하지 않는 코드는 비관리 코드라고 합니다. 클래스 라이브러리는 재사용 가능 형식의 포괄적 개체 지향 컬렉션으로, 기존 명령줄 또는 GUI(그래픽 사용자 인터페이스) 앱에서 ASP.NET이 제공하는 Web Forms 및 XML Web services 같은 최신의 혁신적인 기능을 기반으로 하는 앱에 이르기까지 다양한 앱을 개발하는 데 사용할 수 있습니다.
 
@@ -41,11 +41,11 @@ ms.locfileid: "50192748"
 
 예를 들어, ASP.NET에서는 런타임을 호스팅하여 관리 코드에 대해 확장 가능한 서버 쪽 환경을 제공합니다. ASP.NET은 런타임과 함께 직접 작동하여 ASP.NET 앱 및 XML Web services를 활성화합니다. 이 둘에 대한 내용은 이 항목의 뒷부분에서 설명합니다.
 
-Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트하는 관리되지 않는 앱의 예입니다. Internet Explorer를 사용하여 런타임을 호스팅하면 HTML 문서에 관리되는 구성 요소 또는 Windows Forms 컨트롤을 포함시킬 수 있습니다. 이러한 방식으로 런타임을 호스트하면 관리되는 모바일 코드를 사용할 수 있게 되며, 관리 코드에서만 제공하는 부분 신뢰 실행 및 격리된 파일 저장소 등의 획기적으로 향상된 기능도 사용할 수 있습니다.
+Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트하는 관리되지 않는 앱의 예입니다. Internet Explorer를 사용하여 런타임을 호스팅하면 HTML 문서에 관리되는 구성 요소 또는 Windows Forms 컨트롤을 포함시킬 수 있습니다. 이러한 방식으로 런타임을 호스트하면 관리되는 모바일 코드를 사용할 수 있게 되며, 관리 코드에서만 제공하는 부분 신뢰 실행 및 격리된 파일 스토리지 등의 획기적으로 향상된 기능도 사용할 수 있습니다.
 
 다음 그림에서는 앱 및 전체 시스템에 대한 공용 언어 런타임과 클래스 라이브러리의 관계를 보여 줍니다. 이 그림에서는 관리 코드가 보다 큰 아키텍처에서 작동하는 방식도 보여 줍니다.
 
-![더 큰 아키텍처 내의 관리 코드](../../../docs/framework/get-started/media/circle.gif "원") 컨텍스트에 있는 .NET Framework
+![더 큰 아키텍처 내에서 관리 코드가 작동하는 방식을 보여주는 스크린샷.](./media/overview/language-runtime-class-library-relationship.gif)
 
 다음 섹션에서는 .NET Framework의 기본 기능에 대해 보다 자세히 설명합니다.
 
@@ -75,27 +75,27 @@ Internet Explorer는 MIME 형식 확장의 형식으로 런타임을 호스트�
 
 개체 지향 클래스 라이브러리에서와 마찬가지로, .NET Framework 형식을 사용하면 문자열 관리, 데이터 수집, 데이터베이스 연결, 파일 액세스 등의 작업을 비롯한 일반적인 범위의 프로그래밍 작업을 수행할 수 있습니다. 이러한 일반적인 작업 외에도 클래스 라이브러리에는 특수화된 다양한 개발 시나리오를 지원하는 형식이 포함되어 있습니다. .NET Framework를 사용하여 다음과 같은 종류의 앱 및 서비스를 개발할 수 있습니다.
 
-- 콘솔 앱. [콘솔 응용 프로그램 만들기](../../../docs/standard/building-console-apps.md)를 참조하세요.
+- 콘솔 앱. [콘솔 애플리케이션 만들기](../../standard/building-console-apps.md)를 참조하세요.
 
-- Windows GUI 앱(Windows Forms). [Windows Forms](../../../docs/framework/winforms/index.md)를 참조하세요.
+- Windows GUI 앱(Windows Forms). [Windows Forms](../winforms/index.md)를 참조하세요.
 
-- WPF(Windows Presentation Foundation) 앱. [Windows Presentation Foundation](../../../docs/framework/wpf/index.md)을 참조하세요.
+- WPF(Windows Presentation Foundation) 앱. [Windows Presentation Foundation](../wpf/index.md)을 참조하세요.
 
-- ASP.NET 앱. [ASP.NET을 사용하여 개발한 웹 응용 프로그램](../../../docs/framework/develop-web-apps-with-aspnet.md)을 참조하세요.
+- ASP.NET 앱. [ASP.NET을 사용하여 개발한 웹 애플리케이션](../develop-web-apps-with-aspnet.md)을 참조하세요.
 
-- Windows 서비스. [Windows 서비스 응용 프로그램 소개](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)를 참조하세요.
+- Windows 서비스. [Windows 서비스 애플리케이션 소개](../windows-services/introduction-to-windows-service-applications.md)를 참조하세요.
 
-- WCF(Windows Communication Foundation )를 사용하는 서비스 기반 앱. [WCF를 사용하여 개발한 서비스 기반 응용 프로그램](../../../docs/framework/wcf/index.md)을 참조하세요.
+- WCF(Windows Communication Foundation )를 사용하는 서비스 기반 앱. [WCF를 사용하여 개발한 서비스 기반 애플리케이션](../wcf/index.md)을 참조하세요.
 
-- Windows WF(Workflow Foundation)를 사용하는 워크플로 사용 앱. [.NET Framework에서 워크플로 만들기](https://msdn.microsoft.com/library/cbf3880f-dc7b-466d-b808-1109b1223f4a)를 참조하세요.
+- Windows WF(Workflow Foundation)를 사용하는 워크플로 사용 앱. [Windows Workflow Foundation](../windows-workflow-foundation/index.md)을 참조하세요.
 
 Windows Forms 클래스는 Windows GUI 개발을 매우 단순하게 하는 다시 사용할 수 있는 형식의 포괄적인 집합입니다. ASP.NET Web Form 앱을 작성하는 경우 Web Forms 클래스를 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [시스템 요구 사항](../../../docs/framework/get-started/system-requirements.md)   
-- [설치 가이드](../../../docs/framework/install/index.md)   
-- [개발 가이드](../../../docs/framework/development-guide.md)   
-- [도구](../../../docs/framework/tools/index.md)   
-- [.NET Framework 샘플](https://msdn.microsoft.com/library/177055f8-4a1f-43e7-aee6-995c196079b1)   
+- [시스템 요구 사항](system-requirements.md)
+- [설치 가이드](../install/index.md)
+- [개발 가이드](../development-guide.md)
+- [도구](../tools/index.md)
+- [.NET 샘플 및 자습서](../../samples-and-tutorials/index.md)
 - [.NET Framework 클래스 라이브러리](https://go.microsoft.com/fwlink/?LinkID=227195)

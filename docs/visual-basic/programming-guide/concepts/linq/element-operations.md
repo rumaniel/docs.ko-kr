@@ -2,11 +2,12 @@
 title: 요소 작업 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
-ms.openlocfilehash: 028445cbf5e3a498fc831d15ea435955e6834544
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d631c9d091d75c12366e17a862637bdc4f0633b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977576"
 ---
 # <a name="element-operations-visual-basic"></a>요소 작업 (Visual Basic)
 요소 작업은 시퀀스에서 특정 단일 요소를 반환합니다.  
@@ -26,7 +27,8 @@ ms.lasthandoff: 05/04/2018
 |Single|컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
 |SingleOrDefault|컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다. 이러한 요소가 없거나 컬렉션에 정확히 하나의 요소가 포함되지 않은 경우 기본값을 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Linq>  
- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [방법: 파일 또는 파일 (LINQ) (Visual Basic) 디렉터리 트리에서 가장 큰 값에 대 한 쿼리](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [방법: 가장 큰 파일 또는 디렉터리 트리 (LINQ) (Visual Basic)의 파일에 대 한 쿼리](../../../../visual-basic/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md)

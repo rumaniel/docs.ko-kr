@@ -13,29 +13,29 @@ helpviewer_keywords:
 - WPF [WPF], interoperability
 - migration [WPF]
 ms.assetid: d655de05-bf63-4814-bc64-6b3be01c70a2
-ms.openlocfilehash: a94d855a88fafd0f8faf98c98601142802701dd1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7576c8631a39a6dcf234f15b93fd5714f493276e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053329"
 ---
 # <a name="migration-and-interoperability"></a>마이그레이션 및 상호 운용성
-이 페이지에서는 사이의 상호 운용을 구현 하는 방법을 설명 하는 문서에 대 한 링크 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램 및 다른 종류의 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 응용 프로그램입니다.  
+이 페이지 간의 상호 운용성을 구현 하는 방법을 설명 하는 문서에 대 한 링크 포함 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램 및 다른 유형의 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 응용 프로그램입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [WPF 및 Windows Forms 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-windows-forms-interoperation.md)  
- [WPF 및 Win32 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)  
- [WPF 및 Direct3D9 상호 운용성](../../../../docs/framework/wpf/advanced/wpf-and-direct3d9-interoperation.md)  
+ [WPF 및 Windows Forms 상호 운용성](wpf-and-windows-forms-interoperation.md)  
+ [WPF 및 Win32 상호 운용성](wpf-and-win32-interoperation.md)  
+ [WPF 및 Direct3D9 상호 운용성](wpf-and-direct3d9-interoperation.md)  
   
 ## <a name="reference"></a>참조  
   
 |용어|정의|  
 |----------|----------------|  
-|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|사용할 수 있는 요소 호스트에는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 요소로 제어는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지.|  
+|<xref:System.Windows.Forms.Integration.WindowsFormsHost>|사용할 수 있는 요소 호스트에는 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 컨트롤의 요소로 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 페이지입니다.|  
 |<xref:System.Windows.Forms.Integration.ElementHost>|A [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 사용할 수 있는 컨트롤 호스트에는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 제어 합니다.|  
-|<xref:System.Windows.Interop.HwndSource>|호스트는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 영역 내에서 한 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램입니다.|  
-|<xref:System.Windows.Interop.HwndHost>|기본 클래스에 대 한 <xref:System.Windows.Forms.Integration.WindowsFormsHost>에서 호스팅되는 경우 모든 HWND 기반 기술을 사용 하는 몇 가지 기본 기능을 정의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 하위 클래스 호스팅하기 위해이 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 창 내에서 한 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다.|  
-|<xref:System.Windows.Interop.BrowserInteropHelper>|브라우저 환경에 대 한 상태를 보고에 대 한 도우미 클래스는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 브라우저에서 호스팅되는 응용 프로그램입니다.|  
+|<xref:System.Windows.Interop.HwndSource>|호스트는 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 내에 있는 영역을 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 응용 프로그램입니다.|  
+|<xref:System.Windows.Interop.HwndHost>|기본 클래스에 대 한 <xref:System.Windows.Forms.Integration.WindowsFormsHost>에 의해 호스팅되는 경우 모든 HWND 기반 기술을 사용 하는 몇 가지 기본 기능을 정의 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램입니다. 하위 클래스입니다 호스트에이 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 내에서 창을 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램.|  
+|<xref:System.Windows.Interop.BrowserInteropHelper>|브라우저 환경에 대 한 상태를 보고에 대 한 도우미 클래스를 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 브라우저에서 호스팅되는 응용 프로그램입니다.|  
   
 ## <a name="related-sections"></a>관련 단원

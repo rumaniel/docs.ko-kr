@@ -1,0 +1,28 @@
+- name: 마이그레이션 가이드
+  href: index.md
+  items:
+    - name: 애플리케이션 호환성
+      href: application-compatibility.md
+      items:
+        - name: 런타임 변경 내용
+          href: runtime/index.md
+        - name: 대상 다시 지정 변경 내용
+          href: retargeting/index.md
+    - name: 버전 호환성
+      href: version-compatibility.md
+    - name: 버전 및 종속성
+      href: versions-and-dependencies.md
+      items:
+        - name: '방법: 설치된 .NET Framework 버전 확인'
+          href: how-to-determine-which-versions-are-installed.md
+          items:
+            - name: .NET Framework 버전에서 릴리스 DWORD의 최솟값
+              href: minimum-release-dword.md
+        - name: '방법: 설치된 .NET Framework 업데이트 확인'
+          href: how-to-determine-which-net-framework-updates-are-installed.md
+    - name: '방법: .NET Framework 4 이상 버전을 지원하도록 앱 구성'
+      href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+    - name: .NET Framework 1.1에서 마이그레이션
+      href: migrating-from-the-net-framework-1-1.md
+    - name: .NET Framework 4 마이그레이션 문제
+      href: net-framework-4-migration-issues.md

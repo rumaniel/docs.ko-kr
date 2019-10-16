@@ -5,18 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
-ms.openlocfilehash: 3e808b836183a23fa6bd80faeb0d3cfc5921f4cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8d6f5f76787c1110e91b245a3dd2425450b4db7e
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33358858"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70781397"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>숫자 시퀀스에서 평균 값 반환
 <xref:System.Linq.Enumerable.Average%2A> 연산자는 숫자 값 시퀀스의 평균을 계산합니다.  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 정수 값의 `Average`를 변환하면 두 자리가 아닌 정수로 계산됩니다.  
+> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]에서 정수 값의 `Average`를 변환하면 두 자리가 아닌 정수로 계산됩니다.  
   
 ## <a name="example"></a>예제  
  다음 예제에서는 `Freight` 테이블에서 `Orders` 값의 평균을 반환합니다.  
@@ -114,5 +114,6 @@ ms.locfileid: "33358858"
   
  `Gravad lax`  
   
-## <a name="see-also"></a>참고 항목  
- [집계 쿼리](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+## <a name="see-also"></a>참고자료
+
+- [집계 쿼리](aggregate-queries.md)

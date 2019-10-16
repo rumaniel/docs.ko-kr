@@ -1,21 +1,21 @@
 ---
-title: 'F # 코딩 규칙'
-description: 'F # 코드를 작성할 때 일반 지침 및 코드에 알아봅니다.'
+title: F# 코딩 규칙
+description: 작성 하는 경우 일반 지침 및 코드에 알아봅니다 F# 코드입니다.
 ms.date: 05/14/2018
-ms.openlocfilehash: 21119b6d69e00f359104bfb6eab7681bdbfb8d78
-ms.sourcegitcommit: 2eb5ca4956231c1a0efd34b6a9cab6153a5438af
+ms.openlocfilehash: c8df654cbb94fff1ef7ffb909655439398f30bf5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49087390"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402371"
 ---
-# <a name="f-coding-conventions"></a>F # 코딩 규칙
+# <a name="f-coding-conventions"></a>F# 코딩 규칙
 
-다음 규칙은 큰 F #을 사용 하 여 작업 환경에서 공식화 됩니다 코드 베이스입니다. 합니다 [적합 한 F # 코드의 다섯 가지 원칙](index.md#five-principles-of-good-f-code) 각 권장 사항의 기반이 됩니다. 관련 되므로 합니다 [F # 구성 요소 디자인 지침](component-design-guidelines.md), 이지만 모든 F # 코드에서 라이브러리와 같은 뿐 아니라 구성 요소에 적용할 수 있습니다.
+다음 규칙에 작업 환경에서 공식화 됩니다 F# 코드 베이스입니다. 합니다 [good의 다섯 가지 원칙 F# 코드](index.md#five-principles-of-good-f-code) 각 권장 사항의 기반이 됩니다. 관련이 합니다 [ F# 구성 요소 디자인 지침](component-design-guidelines.md), 이지만에 적용할 수 있습니다 F# 코드 라이브러리와 같은 뿐 아니라 구성 요소입니다.
 
 ## <a name="organizing-code"></a>코드를 구성합니다.
 
-F # 코드를 구성 하는 두 가지 기능: 모듈 및 네임 스페이스입니다. 이러한 유사 하지만 다음과 같은 차이가 있습니다.
+F#코드를 구성 하는 두 가지 기능: 모듈 및 네임 스페이스입니다. 이러한 유사 하지만 다음과 같은 차이가 있습니다.
 
 * 네임 스페이스는.NET 네임 스페이스도 컴파일됩니다. 모듈은 정적 클래스로 컴파일됩니다.
 * 네임 스페이스는 항상 최상위 수준입니다. 최상위 및 다른 모듈 내에 중첩 모듈 수 있습니다.
@@ -36,7 +36,7 @@ type MyClass() =
     ...
 ```
 
-C# 소비자에 대 한 호출자가 되려면 함으로써 달라진 수 있지만 최상위 모듈을 사용 하 여 F # 에서만 호출 될 때 다른 나타날 수 없습니다 `MyClass` 사용 하 여는 `MyCode` 모듈입니다.
+최상위 모듈을 사용 하 여 다른 에서만 호출 될 때 나타날 수 없습니다 F#, 하지만 C# 소비자를 한정할 필요에서 달라진 것을 호출자에 게 수 `MyClass` 사용 하 여는 `MyCode` 모듈.
 
 ```fsharp
 // Bad!
@@ -48,7 +48,7 @@ type MyClass() =
 
 ### <a name="carefully-apply-autoopen"></a>신중 하 게 적용 `[<AutoOpen>]`
 
-`[<AutoOpen>]` 구문을 호출자에 게 사용할 수 있는 항목의 범위를 손상 시 키 지 수 및 항목에서 원본 위치에 대 한 답은 "매직"입니다. 이 일반적으로 유용 하지 않습니다. 이 규칙에 예외는 F # 핵심 라이브러리 자체 (이 사실은 다소 논쟁의 여지가 있으며 이기도 함).
+`[<AutoOpen>]` 구문을 호출자에 게 사용할 수 있는 항목의 범위를 손상 시 키 지 수 및 항목에서 원본 위치에 대 한 답은 "매직"입니다. 이 일반적으로 유용 하지 않습니다. 이 규칙의 예외는 F# (하지만 이것이 약간 논쟁의 여지가) 자체 핵심 라이브러리입니다.
 
 그러나 것 편의 위해 해당 공용 API에서 개별적으로 구성 하려는 공용 API에 대 한 도우미 기능이 있습니다.
 
@@ -58,7 +58,6 @@ module MyAPI =
     module private Helpers =
         let helper1 x y z =
             ...
-
 
     let myFunction1 x =
         let y = ...
@@ -90,13 +89,13 @@ let parsed = StringTokenization.parse s // Must qualify to use 'parse'
 
 ### <a name="sort-open-statements-topologically"></a>정렬 `open` 문을 표면
 
-F #에서는 선언 순서 중요를 비롯 한 `open` 문입니다. 이 C#과 달리 여기서 미치는 `using` 및 `using static` 파일에서 이러한 문은 순서와 무관 합니다.
+F#를 선언 측면을 비롯 한 순서 `open` 문입니다. 이 C#과 달리 여기서 미치는 `using` 및 `using static` 파일에서 이러한 문은 순서와 무관 합니다.
 
-범위로 열 요소는 F #에서는 이미 다른 사용자를 숨길 수 있습니다. 즉, 해당 재정렬 `open` 문을 코드의 의미를 변경할 수 있습니다. 결과적으로 모든 정렬 임의의 `open` 문 (예를 들어, 사전순으로) 일반적으로 권장 되지 않습니다 내용을 볼 수 있는 다른 동작을 생성 합니다.
+F#를 범위로 열 요소는 이미 다른 섀도잉할 수 있습니다. 즉, 해당 재정렬 `open` 문을 코드의 의미를 변경할 수 있습니다. 결과적으로 모든 정렬 임의의 `open` 문 (예를 들어, 사전순으로) 일반적으로 권장 되지 않습니다 내용을 볼 수 있는 다른 동작을 생성 합니다.
 
 대신 좋습니다 정렬 하기 [표면](https://en.wikipedia.org/wiki/Topological_sorting); 순서 즉, 프로그램 `open` 문은 나타나는 순서 대로 _계층_ 정의 된 시스템의 합니다. 다양 한 토폴로지 계층 정렬 영숫자 수행도 고려할 수 있습니다.
 
-예를 들어 다음과 같습니다. F # 컴파일러 서비스 공개 API 파일에 대 한 토폴로지 정렬
+예를 들어 다음은 정렬에 대 한 토폴로지는 F# 컴파일러 서비스 공개 API 파일:
 
 ```fsharp
 namespace Microsoft.FSharp.Compiler.SourceCodeServices
@@ -190,7 +189,7 @@ type MyParametricApi(dep1, dep2, dep3) =
 
 ### <a name="represent-error-cases-and-illegal-state-in-types-intrinsic-to-your-domain"></a>오류 사례 및 도메인에 기본 형식에 잘못 된 상태를 나타내는
 
-사용 하 여 [구별 된 공용 구조체](../language-reference/discriminated-unions.md), F #에서는 형식 시스템에서 잘못 된 프로그램 상태를 나타낼 수 있는 기능입니다. 예를 들어:
+사용 하 여 [구별 된 공용 구조체](../language-reference/discriminated-unions.md), F# 형식 시스템에 결함이 있는 프로그램 상태를 나타낼 수 있습니다. 예를 들어:
 
 ```fsharp
 type MoneyWithdrawalResult =
@@ -219,13 +218,13 @@ let handleWithdrawal amount =
 
 ### <a name="use-exceptions-when-errors-cannot-be-represented-with-types"></a>오류 형식으로 표현할 수 없는 경우 예외를 사용 합니다.
 
-문제 도메인의 모든 오류를 나타낼 수 있습니다. 이러한 종류의 오류를 *예외적인* 본질적으로 따라서 시키고 F #에서 예외를 catch 하는 기능입니다.
+문제 도메인의 모든 오류를 나타낼 수 있습니다. 이러한 종류의 오류를 *예외적인* 본질적으로 따라서 시키고 예외를 catch 하는 기능 F#합니다.
 
-첫째, 것이 좋습니다 읽어 합니다 [예외 디자인 지침](../../standard/design-guidelines/exceptions.md)합니다. 이 F #에 해당 됩니다.
+첫째, 것이 좋습니다 읽어 합니다 [예외 디자인 지침](../../standard/design-guidelines/exceptions.md)합니다. 이러한 경우에 적용할 F#입니다.
 
-예외를 발생 시키기 위해 F #에서 사용할 수 있는 기본 생성 된 다음 기본 설정 순서 대로 고려해 야 합니다.
+기본 구문에서 사용할 수 있는 F# 다음 우선 순위에서 예외를 발생 시키기 위해 고려해 야에 대 한 합니다.
 
-| 기능 | 구문 | 용도 |
+| 함수 | 구문 | 용도 |
 |----------|--------|---------|
 | `nullArg` | `nullArg "argumentName"` | 발생 한 `System.ArgumentNullException` 지정한 인수 이름을 사용 하 여 합니다. |
 | `invalidArg` | `invalidArg "argumentName" "message"` | 발생 한 `System.ArgumentException` 지정 된 인수 이름과 메시지를 사용 하 여 합니다. |
@@ -240,7 +239,7 @@ let handleWithdrawal amount =
 
 ### <a name="using-exception-handling-syntax"></a>예외 처리 구문을 사용 하 여
 
-F #을 통해 예외가 패턴을 지원 합니다 `try...with` 구문:
+F#통해 예외 패턴을 지원 합니다 `try...with` 구문:
 
 ```fsharp
 try
@@ -317,15 +316,15 @@ let tryReadAllTextIfPresent (path : string) =
 
 범용으로 작동 하는 대신이 함수는 이제 제대로 처리 경우 파일을 찾을 수 없습니다 하 고 반환 하는 의미를 할당 합니다. 반환 값이 모든 컨텍스트 정보를 삭제 하거나 호출자가 코드의 해당 지점에서 적절 하지 않을 경우를 처리 하도록 강제 하지 하는 동안 해당 오류 사례를 매핑할 수 있습니다.
 
-같은 형식의 `Result<'Success, 'Error>` 여기서는 중첩 되지 않습니다 하 고 F # 선택적 형식은 항목 수 반환 하는 경우를 나타내기 위한 완벽 한 기본 작업에 적합 한 *무언가* 또는 *nothing*. 예외에 대 한 대체 하지는 하지만 하며 해서는 안 시도할 때에서 예외를 교체할 수 있습니다. 대신 이러한 해야 신중 하 게 요소에 적용할 수 주소 특정 예외 및 오류 관리 정책의 대상으로 지정 된 방식에서입니다.
+와 같은 형식 `Result<'Success, 'Error>` 적합 한 기본 작업에 대 한 중첩 되지 않습니다 여기서 및 F# 선택적 형식은 완벽 한 반환 없습니다 것을 나타내는 경우에 대 한 *무언가* 또는 *아무것도*. 예외에 대 한 대체 하지는 하지만 하며 해서는 안 시도할 때에서 예외를 교체할 수 있습니다. 대신 이러한 해야 신중 하 게 요소에 적용할 수 주소 특정 예외 및 오류 관리 정책의 대상으로 지정 된 방식에서입니다.
 
 ## <a name="partial-application-and-point-free-programming"></a>부분 응용 프로그램 및 지점 무료 프로그래밍
 
-F # 지점 무료 스타일에서 부분 응용 프로그램 및 따라서 프로그램에 다양 한 방법을 지원합니다. 이 모듈 또는 항목의 구현 내에서 코드 재사용에 대 한 도움이 될 수 있지만 이것은 일반적으로 공개적으로 노출 하 합니다. 일반적으로 지점 무료 프로그래밍에 자체의 전문화 아니며 스타일을 사용 하지는 사람들에 게 중요 한 cognitive barrier를 추가할 수 있습니다.
+F#지점 무료 스타일에서 부분 응용 프로그램 및 따라서 다양 한 프로그램을 지원합니다. 이 모듈 또는 항목의 구현 내에서 코드 재사용에 대 한 도움이 될 수 있지만 이것은 일반적으로 공개적으로 노출 하 합니다. 일반적으로 지점 무료 프로그래밍에 자체의 전문화 아니며 스타일을 사용 하지는 사람들에 게 중요 한 cognitive barrier를 추가할 수 있습니다.
 
 ### <a name="do-not-use-partial-application-and-currying-in-public-apis"></a>부분 응용 프로그램 및 공용 api에서 (currying) 사용 하지 마십시오
 
-거의 예외를 제외 하 고, 공용 Api에서 부분 응용 프로그램의 사용 소비자에 대 한 혼동 될 수 있습니다. 일반적으로 `let`-F # 코드에서 바인딩된 값은 **값**가 아닌 **함수 값**합니다. 와 같은 연산자를 사용 하 여 결합 하는 경우에 특히 소수의 cognitive 오버 헤드를 줄이려면 상당한 대가로 코드 줄을 저장 하는 중 발생할 수 있습니다 함수 값과 함께 혼합 `>>` 함수를 작성 하 합니다.
+거의 예외를 제외 하 고, 공용 Api에서 부분 응용 프로그램의 사용 소비자에 대 한 혼동 될 수 있습니다. 일반적으로 `let`-값에 바인딩된 F# 코드 **값**아니라 **함수 값**. 와 같은 연산자를 사용 하 여 결합 하는 경우에 특히 소수의 cognitive 오버 헤드를 줄이려면 상당한 대가로 코드 줄을 저장 하는 중 발생할 수 있습니다 함수 값과 함께 혼합 `>>` 함수를 작성 하 합니다.
 
 ### <a name="consider-the-tooling-implications-for-point-free-programming"></a>지점 무료 프로그래밍 도구 결과 고려해 야
 
@@ -379,7 +378,7 @@ type Transactor(ctx, currentBalance) =
         ...
 ```
 
-단위 테스트 `Transactions.doTransaction` 에서 `ImplementationLogic.Tests.fspoj` 쉽습니다.
+단위 테스트 `Transactions.doTransaction` 에서 `ImplementationLogic.Tests.fsproj` 쉽습니다.
 
 ```fsharp
 namespace TransactionsTestingUtil
@@ -418,7 +417,7 @@ let ``Test withdrawal transaction with 0.0 for balance``() =
 
 ## <a name="access-control"></a>액세스 제어
 
-F #에 대 한 여러 옵션이 [액세스 제어](../language-reference/access-control.md).NET 런타임에서 사용할 수 있는 항목에서 상속 합니다. 이러한 형식에 대 한 바로 사용할 수 없는 경우-도 사용할 수 있습니다 이러한 함수에 대 한 합니다.
+F#에 대 한 여러 옵션이 [액세스 제어](../language-reference/access-control.md).NET 런타임에서 사용할 수 있는 항목에서 상속 합니다. 이러한 형식에 대 한 바로 사용할 수 없는 경우-도 사용할 수 있습니다 이러한 함수에 대 한 합니다.
 
 * 비-선호`public` 형식 및 공개적으로 사용할 수 있도록 하는 데 필요할 때까지 멤버입니다. 또한 어떤 소비자 결합을 되도록 최소화 됩니다.
 * 모든 도우미 기능을 유지 하도록 `private`합니다.
@@ -426,7 +425,7 @@ F #에 대 한 여러 옵션이 [액세스 제어](../language-reference/access-
 
 ## <a name="type-inference-and-generics"></a>형식 유추 및 제네릭
 
-형식 유추 상용구 많은 입력에서 절약할 수 있습니다. 및 사용자의 추가 작업 없이 거의 보다 일반적인 코드를 작성할 F # 컴파일러에서 자동 일반화 수 있습니다. 그러나 이러한 기능은 일반적으로 좋은 되지 않습니다.
+형식 유추 상용구 많은 입력에서 절약할 수 있습니다. 및 자동 일반화에는 F# 컴파일러는 하면 사용자의 추가 작업 없이 거의 보다 일반적인 코드를 작성할 수 있습니다. 그러나 이러한 기능은 일반적으로 좋은 되지 않습니다.
 
 * 공용 Api의 명시적 형식 인수 이름 레이블을 지정 하는 것이 좋습니다. 및이 대 한 형식 유추에 의존 하지 마십시오.
 
@@ -440,17 +439,17 @@ F #에 대 한 여러 옵션이 [액세스 제어](../language-reference/access-
 
     이것이 하므로 camelCase 또는 snake_case를 사용 하는 대신 PascalCase를 사용 하는 것이 좋습니다..NET 작업을 수행 하는 일반적인 방법은입니다.
 
-마지막으로, 자동 일반화 되지 항상 새 F # 또는 대형 코드 베이스에 있는 사용자에 게 유용 하 게 합니다. 일반적인 구성 요소를 사용 하 여 cognitive 오버 헤드가 있습니다. 또한 자동으로 다른 입력 형식 (let 마찬가지로 사용 되어야 하는 경우에), 일반화 된 함수를 사용 되지 않습니다 경우는 해당 시점에 제네릭에 실제 이점이 없습니다. 항상 코드를 작성 하는 제네릭에서 실제로 이익을 경우 하는 것이 좋습니다.
+마지막으로, 자동 일반화 되지 항상 처음 사용 하는 사람들에 게 유용 하 게 F# 또는 큰 코드 베이스입니다. 일반적인 구성 요소를 사용 하 여 cognitive 오버 헤드가 있습니다. 또한 자동으로 다른 입력 형식 (let 마찬가지로 사용 되어야 하는 경우에), 일반화 된 함수를 사용 되지 않습니다 경우는 해당 시점에 제네릭에 실제 이점이 없습니다. 항상 코드를 작성 하는 제네릭에서 실제로 이익을 경우 하는 것이 좋습니다.
 
 ## <a name="performance"></a>성능
 
-F # 값은 특정 부류의 버그 (특히 해당 관련 된 동시성 및 병렬 처리 수준)를 방지할 수 있습니다는 기본적으로 변경할 수 없습니다. 그러나 경우에 따라 실행 시간 또는 메모리 할당의 최적의 (또는 합당 한도) 효율성을 달성 하기 위해 작업의 범위를 가장 잘 구현 될 수 있습니다 상태의 전체 변형을 사용 하 여. 이 옵트인 별로 F #을 사용 하 여 사용 가능 합니다 `mutable` 키워드입니다.
+F#값은 특정 부류의 버그 (특히 해당 관련 된 동시성 및 병렬 처리 수준)를 방지할 수 있습니다는 기본적으로 변경할 수 없습니다. 그러나 경우에 따라 실행 시간 또는 메모리 할당의 최적의 (또는 합당 한도) 효율성을 달성 하기 위해 작업의 범위를 가장 잘 구현 될 수 있습니다 상태의 전체 변형을 사용 하 여. 이것이 가능한 것으로 옵트인 별로 F# 와 `mutable` 키워드입니다.
 
-그러나 사용 `mutable` F # 기능 순도 잘 어울리지 생각 될 수도 있습니다. 해도 괜찮은 사용자 기대 수준에는 순수성 조정 하는 경우 이것이 [참조 투명성](https://en.wikipedia.org/wiki/Referential_transparency)합니다. 참조 투명성-순도-최종 목표 때 F # 함수를 작성 합니다. 이 옵션을 사용 하면 성능이 중요 한 코드는 변이 기반 구현을 통해 기능 인터페이스를 작성할 수 있습니다.
+그러나 이용 `mutable` 에서 F# 기능 순도 잘 어울리지 생각 될 수도 있습니다. 해도 괜찮은 사용자 기대 수준에는 순수성 조정 하는 경우 이것이 [참조 투명성](https://en.wikipedia.org/wiki/Referential_transparency)합니다. 참조 투명성-순도-작성 하는 경우 최종 목표는 F# 함수입니다. 이 옵션을 사용 하면 성능이 중요 한 코드는 변이 기반 구현을 통해 기능 인터페이스를 작성할 수 있습니다.
 
 ### <a name="wrap-mutable-code-in-immutable-interfaces"></a>변경할 수 없는 인터페이스에서 변경할 수 있는 코드를 줄 바꿈
 
-이 목표로 참조 투명성을 사용 하 여 성능이 중요 한 함수를 변경할 수 있는 언더 벨 리를 노출 하지 않는 코드를 쓸 중요 합니다. 예를 들어, 다음 코드 구현 된 `Array.contains` F # 핵심 라이브러리의 함수:
+이 목표로 참조 투명성을 사용 하 여 성능이 중요 한 함수를 변경할 수 있는 언더 벨 리를 노출 하지 않는 코드를 쓸 중요 합니다. 예를 들어, 다음 코드 구현 된 `Array.contains` 함수는 F# 핵심 라이브러리:
 
 ```fsharp
 [<CompiledName("Contains")>]
@@ -546,7 +545,7 @@ let kernels =
 
 ## <a name="object-programming"></a>개체 프로그래밍
 
-F #은 개체 및 개체 지향 (개체 지향) 개념에 대 한 전체 지원 합니다. 여러 개체 지향 개념 강력 하 고 유용 하지만, 그 중 일부는 데 적합 합니다. 다음 목록에서는 높은 수준에서 개체 지향 기능 범주에 대 한 지침을 제공합니다.
+F#개체 및 개체 지향 (개체 지향) 개념에 대 한 전체 지원 합니다. 여러 개체 지향 개념 강력 하 고 유용 하지만, 그 중 일부는 데 적합 합니다. 다음 목록에서는 높은 수준에서 개체 지향 기능 범주에 대 한 지침을 제공합니다.
 
 **대부분의 경우에서 이러한 기능을 사용 하는 것이 좋습니다.**
 
@@ -578,7 +577,7 @@ F #은 개체 및 개체 지향 (개체 지향) 개념에 대 한 전체 지원 
 
 ### <a name="prefer-composition-over-inheritance"></a>상속을 사용 하 여 컴퍼지션 선호합니다
 
-[상속을 통해 컴포지션](https://en.wikipedia.org/wiki/Composition_over_inheritance) 좋은 F # 코드 수를 준수 하는 장기 관용구가 있습니다. 기본 원칙 해야 하지 기본 클래스를 노출 하는 호출자 기능을 활용 하려면 해당 기본 클래스에서 상속 하도록 강제 됩니다.
+[상속을 통해 컴포지션](https://en.wikipedia.org/wiki/Composition_over_inheritance) 장기 관용구는 양호 F# 코드 준수 수 있습니다. 기본 원칙 해야 하지 기본 클래스를 노출 하는 호출자 기능을 활용 하려면 해당 기본 클래스에서 상속 하도록 강제 됩니다.
 
 ### <a name="use-object-expressions-to-implement-interfaces-if-you-dont-need-a-class"></a>개체 식을 사용 하 여 클래스 필요가 없는 경우 인터페이스를 구현 합니다.
 
@@ -612,7 +611,7 @@ F #은 개체 및 개체 지향 (개체 지향) 개념에 대 한 전체 지원 
 
 ## <a name="type-abbreviations"></a>형식 약어
 
-[형식 약어](../language-reference/type-abbreviations.md) 은 함수 서명 등 보다 복잡 한 형식을 다른 형식에 레이블을 지정 하는 편리한 방법입니다. 다음 별칭 레이블을 사용 하 여 계산을 정의 하는 데 필요한 항목을 할당 하는 예를 들어 [CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/), 심층 학습 라이브러리:
+[형식 약어](../language-reference/type-abbreviations.md) 은 함수 서명 등 보다 복잡 한 형식을 다른 형식에 레이블을 지정 하는 편리한 방법입니다. 다음 별칭 레이블을 사용 하 여 계산을 정의 하는 데 필요한 항목을 할당 하는 예를 들어 [CNTK](https://docs.microsoft.com/cognitive-toolkit/), 심층 학습 라이브러리:
 
 ```fsharp
 open CNTK

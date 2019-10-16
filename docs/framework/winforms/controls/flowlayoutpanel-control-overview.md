@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 73767114da1c04222fb8ceaf812153421c4597aa
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: 260146cd901fe2b80a73c01060ccd55958cd169e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011322"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel 컨트롤 개요
 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤은 수평 또는 수직 방향으로 내용을 정렬합니다. 컨트롤의 내용을 한 행에서 다음 행으로 또는 한 열에서 다음 열로 줄 바꿈할 수 있습니다. 또는 해당 내용을 줄 바꿈하는 대신 잘라낼 수 있습니다.  
@@ -25,9 +25,10 @@ ms.locfileid: "48261409"
   
  Windows Forms 컨트롤은 <xref:System.Windows.Forms.FlowLayoutPanel>의 다른 인스턴스를 포함하여 <xref:System.Windows.Forms.FlowLayoutPanel> 컨트롤의 자식일 수 있습니다. 이 기능을 통해 런타임에 폼의 크기에 맞춰 조정되는 정교한 레이아웃을 생성할 수 있습니다.  
   
- 도 참조 하세요 [연습: Windows Forms FlowLayoutPanel을 사용 하 여 컨트롤 정렬](https://msdn.microsoft.com/library/z9w7ek2f\(v=vs.110\))합니다.  
+ 또한 참조 [연습: FlowLayoutPanel을 사용 하 여 Windows Forms에서 컨트롤 정렬](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>  
- <xref:System.Windows.Forms.TableLayoutPanel>  
- [FlowLayoutPanel 컨트롤](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>
+- <xref:System.Windows.Forms.TableLayoutPanel>
+- [FlowLayoutPanel 컨트롤](flowlayoutpanel-control-windows-forms.md)

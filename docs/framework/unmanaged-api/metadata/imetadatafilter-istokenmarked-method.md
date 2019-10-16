@@ -17,40 +17,41 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5bf5149e8e42a810a6a490767638b374f66b5679
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e15f4e8691db13b9a646a1e1d783075acfcdd896
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445866"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777076"
 ---
 # <a name="imetadatafilteristokenmarked-method"></a>IMetaDataFilter::IsTokenMarked 메서드
-지정한 메타 데이터 토큰 처리 되었다고 표시 되었는지 여부를 나타내는 값을 가져옵니다.  
+지정 된 메타 데이터 토큰 처리 표시 되었는지 여부를 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT IsTokenMarked (  
     [in]  mdToken  tk,   
     [out] BOOL     *pIsMarked  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `tk`  
- [in] 처리 표시를 검사 하는 토큰입니다.  
+ [in] 처리 표시 검사할 토큰입니다.  
   
  `pIsMarked`  
- [out] 값을 `true` 경우 `tk` 처리 받지 않았으면 `false`합니다.  
+ [out] 값을 `true` 하는 경우 `tk` 이 고 그렇지 않으면 처리 된 `false`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataFilter 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataFilter 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

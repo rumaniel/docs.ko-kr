@@ -1,0 +1,274 @@
+- name: 언어 참조
+  href: index.md
+  items:
+    - name: LINQ to Entities
+      href: linq-to-entities.md
+      items:
+        - name: LINQ to Entities에서 쿼리
+          href: queries-in-linq-to-entities.md
+          items:
+            - name: '메서드 기반 쿼리 구문 예제: 프로젝션'
+              href: method-based-query-syntax-examples-projection.md
+            - name: '메서드 기반 쿼리 구문 예제: 필터링'
+              href: method-based-query-syntax-examples-filtering.md
+            - name: '메서드 기반 쿼리 구문 예제: 순서 지정'
+              href: method-based-query-syntax-examples-ordering.md
+            - name: '메서드 기반 쿼리 구문 예제: 집계 연산자'
+              href: method-based-query-syntax-examples-aggregate-operators.md
+            - name: '메서드 기반 쿼리 구문 예제: 분할'
+              href: method-based-query-syntax-examples-partitioning.md
+            - name: '메서드 기반 쿼리 구문 예제: 변환'
+              href: method-based-query-syntax-examples-conversion.md
+            - name: '메서드 기반 쿼리 구문 예제: 조인 연산자'
+              href: method-based-query-syntax-examples-join-operators.md
+            - name: '메서드 기반 쿼리 구문 예제: 요소 연산자'
+              href: method-based-query-syntax-examples-element-operators.md
+            - name: '메서드 기반 쿼리 구문 예제: 그룹화'
+              href: method-based-query-syntax-examples-grouping.md
+            - name: '메서드 기반 쿼리 구문 예제: 관계 탐색'
+              href: method-based-query-syntax-examples-navigating-relationships.md
+            - name: '쿼리 식 구문 예제: 프로젝션'
+              href: query-expression-syntax-examples-projection.md
+            - name: '쿼리 식 구문 예제: 필터링'
+              href: query-expression-syntax-examples-filtering.md
+            - name: '쿼리 식 구문 예제: 순서 지정'
+              href: query-expression-syntax-examples-ordering.md
+            - name: '쿼리 식 구문 예제: 집계 연산자'
+              href: query-expression-syntax-examples-aggregate-operators.md
+            - name: '쿼리 식 구문 예제: 분할'
+              href: query-expression-syntax-examples-partitioning.md
+            - name: '쿼리 식 구문 예제: 조인 연산자'
+              href: query-expression-syntax-examples-join-operators.md
+            - name: '쿼리 식 구문 예제: 요소 연산자'
+              href: query-expression-syntax-examples-element-operators.md
+            - name: '쿼리 식 구문 예제: 그룹화'
+              href: query-expression-syntax-examples-grouping.md
+            - name: '쿼리 식 구문 예제: 관계 탐색'
+              href: query-expression-syntax-examples-navigating-relationships.md
+        - name: LINQ to Entities 쿼리의 식
+          href: expressions-in-linq-to-entities-queries.md
+          items:
+            - name: 상수 식
+              href: constant-expressions.md
+            - name: 식 비교
+              href: comparison-expressions.md
+            - name: null 비교
+              href: null-comparisons.md
+            - name: 초기화 식
+              href: initialization-expressions.md
+        - name: LINQ to Entities 쿼리에서 함수 호출
+          href: calling-functions-in-linq-to-entities-queries.md
+          items:
+            - name: '방법: 호출 정식 함수'
+              href: how-to-call-canonical-functions.md
+            - name: '방법: 데이터베이스 함수 호출'
+              href: how-to-call-database-functions.md
+            - name: '방법: 사용자 지정 데이터베이스 함수 호출'
+              href: how-to-call-custom-database-functions.md
+            - name: '방법: 쿼리에서 모델 정의 함수 호출'
+              href: how-to-call-model-defined-functions-in-queries.md
+            - name: '방법: 개체 메서드로 모델 정의 함수 호출'
+              href: how-to-call-model-defined-functions-as-object-methods.md
+        - name: 컴파일된 쿼리(LINQ to Entities)
+          href: compiled-queries-linq-to-entities.md
+        - name: 쿼리 실행
+          href: query-execution.md
+        - name: 쿼리 결과
+          href: query-results.md
+        - name: LINQ to Entities 쿼리에서 표준 쿼리 연산자
+          href: standard-query-operators-in-linq-to-entities-queries.md
+        - name: 정식 함수 매핑에 대한 CLR 메서드
+          href: clr-method-to-canonical-function-mapping.md
+        - name: 지원 및 미지원 LINQ 메서드 (LINQ to Entities)
+          href: supported-and-unsupported-linq-methods-linq-to-entities.md
+        - name: LINQ to Entities에서 알려진 문제 및 고려 사항
+          href: known-issues-and-considerations-in-linq-to-entities.md
+    - name: Entity SQL 언어
+      href: entity-sql-language.md
+      items:
+        - name: Entity SQL 개요
+          href: entity-sql-overview.md
+          items:
+            - name: Entity SQL과 Transact-SQL의 차이점
+              href: how-entity-sql-differs-from-transact-sql.md
+            - name: Entity SQL 빠른 참조
+              href: entity-sql-quick-reference.md
+            - name: 형식 시스템
+              href: type-system-entity-sql.md
+            - name: 형식 정의
+              href: type-definitions-entity-sql.md
+            - name: 형식 생성
+              href: constructing-types-entity-sql.md
+            - name: 쿼리 계획 캐싱
+              href: query-plan-caching-entity-sql.md
+            - name: 네임스페이스
+              href: namespaces-entity-sql.md
+            - name: 식별자
+              href: identifiers-entity-sql.md
+            - name: 매개 변수
+              href: parameters-entity-sql.md
+            - name: 변수
+              href: variables-entity-sql.md
+            - name: 지원되지 않는 식
+              href: unsupported-expressions-entity-sql.md
+            - name: 리터럴
+              href: literals-entity-sql.md
+            - name: Null 리터럴 및 형식 유추
+              href: null-literals-and-type-inference-entity-sql.md
+            - name: 입력 문자 세트
+              href: input-character-set-entity-sql.md
+            - name: 쿼리 식
+              href: query-expressions-entity-sql.md
+            - name: 함수
+              href: functions-entity-sql.md
+              items:
+                - name: 사용자 정의 함수
+                  href: user-defined-functions-entity-sql.md
+                - name: 함수 오버로드 확인
+                  href: function-overload-resolution-entity-sql.md
+                - name: 집계 함수
+                  href: aggregate-functions-entity-sql.md
+            - name: 연산자 우선 순위
+              href: operator-precedence-entity-sql.md
+            - name: 페이징
+              href: paging-entity-sql.md
+            - name: 비교 의미 체계
+              href: comparison-semantics-entity-sql.md
+            - name: 중첩 Entity SQL 쿼리 작성
+              href: composing-nested-entity-sql-queries.md
+            - name: nullable 구조적 형식
+              href: nullable-structured-types-entity-sql.md
+        - name: 엔터티 SQL 참조
+          href: entity-sql-reference.md
+          items:
+            - name: + (추가)
+              href: add.md
+            - name: + (문자열 연결)
+              href: string-concatenation-entity-sql.md
+            - name: '- (음수)'
+              href: negative-entity-sql.md
+            - name: '- (빼기)'
+              href: subtract-entity-sql.md
+            - name: '* (곱하기)'
+              href: multiply-entity-sql.md
+            - name: /(나누기)
+              href: divide-entity-sql.md
+            - name: '%(모듈로)'
+              href: modulo-entity-sql.md
+            - name: '&&(AND)'
+              href: and-entity-sql.md
+            - name: '||(OR)'
+              href: or-entity-sql.md
+            - name: '! (NOT)'
+              href: not-entity-sql.md
+            - name: =(같음)
+              href: equals-entity-sql.md
+            - name: '> (보다 큼)'
+              href: greater-than-entity-sql.md
+            - name: '>=(보다 크거나 같음)'
+              href: greater-than-or-equal-to-entity-sql.md
+            - name: <(보다 작음)
+              href: less-than-entity-sql.md
+            - name: <=(보다 작거나 같음)
+              href: less-than-or-equal-to-entity-sql.md
+            - name: '!=(같지 않음)'
+              href: not-equal-to-entity-sql.md
+            - name: . (멤버 액세스)
+              href: member-access-entity-sql.md
+            - name: '--(주석)'
+              href: comment-entity-sql.md
+            - name: ANYELEMENT
+              href: anyelement-entity-sql.md
+            - name: BETWEEN
+              href: between-entity-sql.md
+            - name: CASE
+              href: case-entity-sql.md
+            - name: CAST
+              href: cast-entity-sql.md
+            - name: COLLECTION
+              href: collection-entity-sql.md
+            - name: CREATEREF
+              href: createref-entity-sql.md
+            - name: DEREF
+              href: deref-entity-sql.md
+            - name: EXCEPT
+              href: except-entity-sql.md
+            - name: EXISTS
+              href: exists-entity-sql.md
+            - name: FLATTEN
+              href: flatten-entity-sql.md
+            - name: FROM
+              href: from-entity-sql.md
+            - name: FUNCTION
+              href: function-entity-sql.md
+            - name: GROUP BY
+              href: group-by-entity-sql.md
+            - name: GROUPPARTITION
+              href: grouppartition-entity-sql.md
+            - name: HAVING
+              href: having-entity-sql.md
+            - name: KEY
+              href: key-entity-sql.md
+            - name: IN
+              href: in-entity-sql.md
+            - name: INTERSECT
+              href: intersect-entity-sql.md
+            - name: ISNULL
+              href: isnull-entity-sql.md
+            - name: ISOF
+              href: isof-entity-sql.md
+            - name: LIKE
+              href: like-entity-sql.md
+            - name: LIMIT
+              href: limit-entity-sql.md
+            - name: MULTISET
+              href: multiset-entity-sql.md
+            - name: 명명된 형식 생성자
+              href: named-type-constructor-entity-sql.md
+            - name: NAVIGATE
+              href: navigate-entity-sql.md
+            - name: OFTYPE
+              href: oftype-entity-sql.md
+            - name: ORDER BY
+              href: order-by-entity-sql.md
+            - name: OVERLAPS
+              href: overlaps-entity-sql.md
+            - name: REF
+              href: ref-entity-sql.md
+            - name: ROW
+              href: row-entity-sql.md
+            - name: 선택
+              href: select-entity-sql.md
+            - name: SET
+              href: set-entity-sql.md
+            - name: SKIP
+              href: skip-entity-sql.md
+            - name: THEN
+              href: then-entity-sql.md
+            - name: TOP
+              href: top-entity-sql.md
+            - name: TREAT
+              href: treat-entity-sql.md
+            - name: UNION
+              href: union-entity-sql.md
+            - name: USING
+              href: using-entity-sql.md
+            - name: WHERE
+              href: where-entity-sql.md
+    - name: 정식 함수
+      href: canonical-functions.md
+      items:
+        - name: 집계 정식 함수
+          href: aggregate-canonical-functions.md
+        - name: 수학 정식 함수
+          href: math-canonical-functions.md
+        - name: 문자열 정식 함수
+          href: string-canonical-functions.md
+        - name: 날짜 및 시간 정식 함수
+          href: date-and-time-canonical-functions.md
+        - name: 비트 정식 함수
+          href: bitwise-canonical-functions.md
+        - name: 공간 함수
+          href: spatial-functions.md
+        - name: 기타 정식 함수
+          href: other-canonical-functions.md

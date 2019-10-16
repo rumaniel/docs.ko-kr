@@ -1,5 +1,6 @@
 ---
-title: out 키워드(C# 참조)
+title: out 키워드 - C# 참조
+ms.custom: seodec18
 ms.date: 03/01/2017
 f1_keywords:
 - out_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - out [C#]
 - out keyword [C#]
 ms.assetid: 7e911a0c-3f98-4536-87be-d539b7536ca8
-ms.openlocfilehash: ecdaf8e94b3b799f41d6750d6ba5fca6895f0e93
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: eccc89d3cee687f7b6ecf7b0ce2030ef709a81b1
+ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48030855"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53235831"
 ---
 # <a name="out-c-reference"></a>out(C# 참조)
 

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 91e64bb2e1c8a7b11fe70024eb4a4fa1717c06e5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c59ddec655f3127e8dab8d8c41543f03a896cf63
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407351"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274029"
 ---
-# <a name="corheapobject-structure"></a>COR_HEAPOBJECT 구조체
+# <a name="cor_heapobject-structure"></a>COR_HEAPOBJECT 구조체
 관리되는 힙의 개체에 대한 정보를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _COR_HEAPOBJECT {  
     CORDB_ADDRESS address;    
     ULONG64 size;             
@@ -41,29 +41,30 @@ typedef struct _COR_HEAPOBJECT {
 |멤버|설명|  
 |------------|-----------------|  
 |`address`|메모리에 있는 개체의 주소입니다.|  
-|`size`|전체 크기 (바이트)에서 개체입니다.|  
-|`type`|A [COR_TYPEID](../../../../docs/framework/unmanaged-api/debugging/cor-typeid-structure.md) 개체의 형식을 나타내는 토큰입니다.|  
+|`size`|개체의 총 크기 (바이트)입니다.|  
+|`type`|개체의 유형을 나타내는 [COR_TYPEID](cor-typeid-structure.md) 토큰입니다.|  
   
 ## <a name="remarks"></a>설명  
- `COR_HEAPOBJECT` 인스턴스를 열거 하 여 검색할 수는 [ICorDebugHeapEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-interface.md) 인터페이스 개체를 호출 하 여 채워지는 [icordebugprocess5:: Enumerateheap](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheap-method.md) 메서드.  
+ `COR_HEAPOBJECT`[ICorDebugProcess5:: EnumerateHeap](icordebugprocess5-enumerateheap-method.md) 메서드를 호출 하 여 채워지는 [ICorDebugHeapEnum](icordebugheapenum-interface.md) interface 개체를 열거 하 여 인스턴스를 검색할 수 있습니다.  
   
- A `COR_HEAPOBJECT` 인스턴스 또는 관리 되는 힙에 대 한 활성 개체에 대 한 모든 개체에서 루트에서 시작 하지 않지만 아직 가비지 수집기가 수집 되지 않았습니다 하는 개체에 대 한 정보를 제공 합니다.  
+ 인스턴스 `COR_HEAPOBJECT` 는 관리 되는 힙에서 라이브 개체에 대 한 정보를 제공 하 고, 개체가 루 팅 되지 않았지만 가비지 수집기에서 아직 수집 되지 않은 개체에 대 한 정보를 제공 합니다.  
   
- 성능 향상을 위해는 `COR_HEAPOBJECT.address` 필드는는 `CORDB_ADDRESS` 는 ICorDebugValue이 아닌 값 인터페이스 대부분의 디버깅 API에서 사용 되는 값입니다. 지정 된 개체 주소에 대 한 ICorDebugValue 개체를 가져오려면 전달할 수 있습니다는 `CORDB_ADDRESS` 값을 [icordebugprocess5:: Getobject](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-getobject-method.md) 메서드.  
+ 성능 향상을 `COR_HEAPOBJECT.address` 위해 대부분의 디버깅 API `CORDB_ADDRESS` 에서 사용 되는 ICorDebugValue 인터페이스 값이 아닌 값이 필드입니다. 지정 된 개체 주소에 대 한 ICorDebugValue 개체를 가져오려면 `CORDB_ADDRESS` [ICorDebugProcess5:: GetObject](icordebugprocess5-getobject-method.md) 메서드에 값을 전달 하면 됩니다.  
   
- 성능 향상을 위해는 `COR_HEAPOBJECT.type` 필드는는 `COR_TYPEID` 는 ICorDebugType이 아닌 값 인터페이스 대부분의 디버깅 API에서 사용 되는 값입니다. ICorDebugType 개체 ID를 지정 된 형식에 대 한를 가져오려면 전달할 수 있습니다는 `COR_TYPEID` 값을 [icordebugprocess5:: Gettypefortypeid](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-gettypefortypeid-method.md) 메서드.  
+ 성능 향상을 `COR_HEAPOBJECT.type` 위해 대부분의 디버깅 API `COR_TYPEID` 에서 사용 되는 ICorDebugType 인터페이스 값이 아닌 값이 필드입니다. 지정 된 형식 ID에 대 한 ICorDebugType 개체를 가져오려면 `COR_TYPEID` [ICorDebugProcess5:: gettypefortypeid](icordebugprocess5-gettypefortypeid-method.md) 메서드에 값을 전달 하면 됩니다.  
   
- `COR_HEAPOBJECT` 구조에는 참조 횟수가 계산 COM 인터페이스에 포함 됩니다. 검색 하는 경우는 `COR_HEAPOBJECT` 호출 하 여 열거자에서 인스턴스는 [icordebugheapenum:: Next](../../../../docs/framework/unmanaged-api/debugging/icordebugheapenum-next-method.md) 메서드를 이후에 대 한 참조를 해제 해야 합니다.  
+ 구조체 `COR_HEAPOBJECT` 에는 참조 횟수가 계산 되는 COM 인터페이스가 포함 되어 있습니다. `COR_HEAPOBJECT` [ICorDebugHeapEnum:: Next](icordebugheapenum-next-method.md) 메서드를 호출 하 여 열거자에서 인스턴스를 검색 하는 경우 나중에 참조를 해제 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>참고 항목
+
+- [디버깅 구조체](debugging-structures.md)
+- [디버깅](index.md)

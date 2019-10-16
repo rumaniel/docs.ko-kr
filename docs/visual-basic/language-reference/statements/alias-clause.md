@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Alias keyword [Visual Basic]
 ms.assetid: 58c06b11-465d-4d87-906a-73200a3d7f19
-ms.openlocfilehash: 62b34f5860b35104b6a8caa82c359383999dd61b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 84c8f39e632eebbe5382492669820910b38bc360
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33599176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053355"
 ---
 # <a name="alias-clause-visual-basic"></a>Alias 절(Visual Basic)
 외부 프로시저의 DLL에 다른 이름이 있음을 나타냅니다.  
@@ -21,9 +21,10 @@ ms.locfileid: "33599176"
   
  [Declare 문](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
- 다음 예제에서는 `Alias` 키워드 advapi32.dll에서이 함수의 이름을 제공 하는 데 사용 됩니다 `GetUserNameA`, 해당 `getUserName` 대신에이 예에서 사용 됩니다. 함수 `getUserName` sub에서 호출 되 `getUser`, 현재 사용자의 이름을 표시 합니다.  
+ 다음 예제에서는 `Alias` 키워드 advapi32.dll에서 함수의 이름을 제공 하는 데 사용 됩니다 `GetUserNameA`는 `getUserName` 이 예에서 대신 사용 됩니다. 함수 `getUserName` sub 라고 `getUser`, 현재 사용자의 이름을 표시 합니다.  
   
- [!code-vb[VbVbalrStatements#15](../../../visual-basic/language-reference/error-messages/codesnippet/VisualBasic/alias-clause_1.vb)]  
+ [!code-vb[VbVbalrStatements#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#15)]  
   
-## <a name="see-also"></a>참고 항목  
- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>참고자료
+
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)

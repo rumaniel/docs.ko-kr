@@ -17,44 +17,45 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 94ba2b0cf7d88104eaadd434732edf3c1d4060e2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3582ebf2acee02d49aabafb03604c84249c4ce13
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422703"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747380"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags 메서드
-현재 프로세스에 해당 이미지를 로드 하도록 런타임에 위해 미리 컴파일된 이미지에 포함 되어야 하는 플래그를 설정 합니다.  
+미리 컴파일된 이미지를 현재 프로세스에 해당 이미지를 로드 하려면 런타임에 대 한 순서 대로 포함 되어야 하는 플래그를 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetDesiredNGENCompilerFlags (  
     [in] DWORD    pdwFlags  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pdwFlags`  
- [in] 값은 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 컴파일러 플래그를 지정 하는 열거형 올바른 미리 컴파일된 이미지를 선택 하는 데 사용 합니다.  
+ [in] 값을 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 컴파일러 플래그를 지정 하는 열거형 올바른 미리 컴파일된 이미지를 선택 하는 데 사용 합니다.  
   
 ## <a name="remarks"></a>설명  
- `SetDesiredNGENCompilerFlags` 메서드 런타임에서이 프로세스에 해당 이미지가 로드 됩니다 되도록 미리 컴파일된 이미지에 포함 해야 하는 플래그를 지정 합니다. 이 메서드에 의해 설정 된 플래그는 올바른 미리 컴파일된 이미지를 선택 하는 데에 사용 됩니다. 이러한 이미지가 있는 경우 런타임은 대신 로드 됩니다 Microsoft MSIL (intermediate language) 이미지 및 적시에 (JIT) 컴파일러. 디버거가 계속 사용 해야 경우에 [icordebugmodule2:: Setjitcompilerflags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) JIT 컴파일에 대 한 원하는 대로 플래그를 설정 하는 방법은 합니다.  
+ `SetDesiredNGENCompilerFlags` 메서드는 런타임에서이 프로세스에 해당 이미지를 로드 하는 미리 컴파일된 이미지에 포함 되어야 하는 플래그를 지정 합니다. 이 메서드에 의해 설정 된 플래그는 올바른 미리 컴파일된 이미지 선택에 사용 됩니다. 이러한 이미지가 없는 경우 런타임에 로드 됩니다 Microsoft 중간 언어 (MSIL) 이미지 및 (JIT)-just-in-time 컴파일러 대신 합니다. 이 경우 디버거가 계속 사용 해야 합니다는 [ICorDebugModule2::SetJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md) JIT 컴파일에 대해 필요에 따라 플래그를 설정 하는 방법입니다.  
   
- 이미지 로드 되지만 일부 JIT 컴파일을 (되는 경우 이미지 제네릭이 포함 되어 있는 경우) 해당 이미지에 대해 수행 해야 하는 경우 지정 된 컴파일러 플래그는 `SetDesiredNGENCompilerFlags` 메서드 추가 JIT 컴파일에 적용 됩니다.  
+ 이미지를 로드 하지만 약간의 JIT 컴파일을 수행 해야 합니다 (될 경우 이미지는 제네릭을 포함 하는 경우) 해당 이미지에 대 한 경우에 지정 된 컴파일러 플래그는 `SetDesiredNGENCompilerFlags` 메서드 추가 JIT 컴파일으로 적용 됩니다.  
   
- `SetDesiredNGENCompilerFlags` 메서드를 호출 하는 동안 해야는 [icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) 콜백 합니다. 호출 하려고는 `SetDesiredNGENCompilerFlags` 나중에 메서드가 실패 합니다. 또한에 정의 된 잘못 된 플래그를 설정 하려고는 `CorDebugJITCompilerFlags` 열거형 또는 지정된 된 프로세스에 적합 하지 않은 실패 합니다.  
+ 합니다 `SetDesiredNGENCompilerFlags` 메서드를 호출 하는 동안 합니다 [icordebugmanagedcallback:: Createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md) 콜백 합니다. 호출 하려고 합니다 `SetDesiredNGENCompilerFlags` 나중에 메서드가 실패 합니다. 또한에 정의 된 잘못 된 플래그를 설정 하려고 시도 합니다 `CorDebugJITCompilerFlags` 열거형 또는 지정된 된 프로세스에 적합 하지 않은 실패 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)  
- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

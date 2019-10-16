@@ -2,15 +2,15 @@
 title: 여러 표준 쿼리 연산자 연결(C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 07cc6769646f8f3f924b488e30ce2415c587ebe0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 37df654b2bfdcc135460e5ded2ceec1eca33b35a
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520870"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204215"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>여러 표준 쿼리 연산자 연결(C#)
-이 항목은 [자습서: 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md) 자습서의 마지막 항목입니다.  
+이는 [자습서: 여러 쿼리 연결(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md) 자습서의 마지막 항목입니다.  
   
  표준 쿼리 연산자도 연결할 수 있습니다. 예를 들어, <xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> 연산자를 삽입할 수 있으며 이 연산자는 지연 방식으로 작동합니다. 이 연산자는 중간 결과를 유형화하지 않습니다.  
   
@@ -19,7 +19,7 @@ ms.locfileid: "43520870"
   
  한 가지 차이점은 이 경우에 <xref:System.Linq.Enumerable.Where%2A> 메서드는 소스 컬렉션을 반복하고 첫 번째 항목이 조건자를 통과하지 않는 것을 확인한 다음 조건자를 통과하는 다음 항목을 가져옵니다. 그런 다음 두 번째 항목을 반환합니다.  
   
- 그러나 기본 개념은 동일합니다. 중간 컬렉션이 유형화될 필요가 없으면 유형화되지 않습니다.  
+ 그러나 기본 개념은 동일합니다. 중간 컬렉션은 필요하지 않는 한 구체화되지 않습니다.  
   
  쿼리 식이 사용되는 경우 쿼리 식은 표준 쿼리 연산자에 대한 호출로 변환되고 동일한 원칙이 적용됩니다.  
   
@@ -75,7 +75,7 @@ class Program
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 ToUpper: source >abc<  
 ToUpper: source >def<  
 AppendString: source >DEF<  
@@ -85,7 +85,3 @@ ToUpper: source >ghi<
 AppendString: source >GHI<  
 Main: str >GHI!!!<  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [자습서: 여러 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

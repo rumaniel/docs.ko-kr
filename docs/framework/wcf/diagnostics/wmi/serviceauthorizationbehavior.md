@@ -2,12 +2,12 @@
 title: ServiceAuthorizationBehavior
 ms.date: 03/30/2017
 ms.assetid: 77dad8e8-fea4-4d1c-b366-2f01a2a87f78
-ms.openlocfilehash: c916d0820a1eae333384deab7b0619abfbdc8167
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 51555e3357b8c33a53261c4894d97798b0a05656
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196819"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957057"
 ---
 # <a name="serviceauthorizationbehavior"></a>ServiceAuthorizationBehavior
 ServiceAuthorizationBehavior  
@@ -64,5 +64,6 @@ class ServiceAuthorizationBehavior : Behavior
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>

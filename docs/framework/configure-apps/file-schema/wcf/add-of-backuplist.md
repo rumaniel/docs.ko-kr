@@ -1,30 +1,34 @@
 ---
-title: '&lt;backupList&gt;의 &lt;add&gt;'
+title: <backupList>의 <add>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
-ms.openlocfilehash: 7e7361b24c0444b5f3d51a6f5bf079d5eb2dee18
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 80726cc22cb56013c85c7704c28579b1337666c9
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745554"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850548"
 ---
-# <a name="ltaddgt-of-ltbackuplistgt"></a>&lt;backupList&gt;의 &lt;add&gt;
-백업 끝점 요소를 정의하는 구성 요소를 나타냅니다.  
+# <a name="add-of-backuplist"></a>\<\<backupList > > 추가
+백업 엔드포인트 요소를 정의하는 구성 요소를 나타냅니다.  
   
- \<system.serviceModel>  
-\<라우팅 >  
-\<backupLists >  
-\<backupList >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<라우팅 >** ](routing.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<backupLists >** ](backuplists.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<backupList >** ](backuplist.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 추가**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-   <routing>  <backupLists>    <backupList name="String">      <add endpointName="String" />    </backupList>    </backupLists></routing>  
-```  
-  
-```csharp  
+<routing>
+  <backupLists>
+    <backupList name="String">
+      <add endpointName="String" />
+    </backupList>
+  </backupLists>
+</routing>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -32,18 +36,19 @@ ms.locfileid: "32745554"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|name|백업 끝점의 이름을 지정하는 문자열입니다.|  
+|name|백업 엔드포인트의 이름을 지정하는 문자열입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<라우팅 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|라우팅 서비스는 기본 끝점 도달할 수 없는 경우 사용 하도록 선택 하는 끝점의 목록을 포함 합니다.|  
+|[\<routing>](routing.md)|기본 끝점에 연결할 수 없는 경우 라우팅 서비스에서 사용할 끝점 목록을 포함 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType> 
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Routing.Configuration.BackupEndpointElement?displayProperty=nameWithType>

@@ -1,5 +1,6 @@
 ---
-title: '&lt;returns&gt;(C# 프로그래밍 가이드)'
+title: <returns> - C# 프로그래밍 가이드
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - returns
@@ -8,33 +9,33 @@ helpviewer_keywords:
 - <returns> C# XML tag
 - returns C# XML tag
 ms.assetid: bb2d9958-62fc-47c7-9511-6311171f119f
-ms.openlocfilehash: fc3254062e4412c2a0640e27ce4d188b83507eea
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 7d4343cf38f0ea1ae42b77cc1d0c755920c4a421
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259917"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587740"
 ---
-# <a name="ltreturnsgt-c-programming-guide"></a>&lt;returns&gt;(C# 프로그래밍 가이드)
+# <a name="returns-c-programming-guide"></a>\<returns>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
   
 ```xml  
 <returns>description</returns>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `description`  
  반환 값에 대한 설명입니다.  
   
 ## <a name="remarks"></a>설명  
  \<returns> 태그는 메서드 선언의 주석에서 반환 값을 설명하는 데 사용해야 합니다.  
   
- [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
+ [/doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
 ## <a name="example"></a>예  
- [!code-csharp[csProgGuideDocComments#10](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/returns_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#10)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

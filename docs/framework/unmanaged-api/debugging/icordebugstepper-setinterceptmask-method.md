@@ -17,38 +17,38 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7654a91180dd0b4148cfb85b35bf1ce730764f28
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 37b644227a6085352bed682f0ddd7c3455b54895
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33422687"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760696"
 ---
 # <a name="icordebugsteppersetinterceptmask-method"></a>ICorDebugStepper::SetInterceptMask 메서드
-한 단계씩 코드의 형식을 지정 하는 값을 설정 합니다.  
+한 단계씩 코드 형식을 지정 하는 값을 설정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetInterceptMask (  
     [in] CorDebugIntercept    mask  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `mask`  
- [in] 코드의 형식을 지정 하는 CorDebugIntercept 열거형의 값의 조합입니다.  
+ [in] 코드의 형식을 지정 하는 CorDebugIntercept 열거형 값의 조합입니다.  
   
 ## <a name="remarks"></a>설명  
- 인터셉터에 대 한 비트가 설정 된 경우 스텝 퍼 가로채기 코드가의 지정된 된 형식 발생 될 때 완료 됩니다. 비트가 가로채기 코드가 건너뜁니다.  
+ 인터셉터에 대 한 비트가 설정 된 경우 스텝 퍼는 코드를 차단 하는 지정 된 형식이 발견 될 때 완료 됩니다. 비트가 지워지면 가로채 코드를 건너뜁니다.  
   
- `SetInterceptMask` 메서드에 있을 수 있습니다와 상호 작용 예기치 못한 [icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (사용자의 관점에서 볼). 예를 들어 경우만 표시 됨 (즉,-내부) 클래스 초기화 코드의 부분에 매핑 정보가 및 STOP_NO_MAPPING_INFO 설정 되어 있지 않습니다 (참조는 [icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) 메서드 및 CorDebugUnmappedStop 열거형) 스텝 퍼 클래스 초기화 건너뛸 됩니다. 기본적으로의 INTERCEPT_NONE 값만는 `CorDebugIntercept` 열거형이 사용 됩니다.  
+ 합니다 `SetInterceptMask` 메서드에 있을 수 있습니다 사용 하 여 예측할 수 없는 상호 작용 [icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) (사용자의 관점에서). 예를 들어 경우만 표시 됨 (즉, 비-내부) 클래스 초기화 코드의 부분 매핑 정보가 없으며 STOP_NO_MAPPING_INFO 설정 되어 있지 않습니다 (참조를 [icordebugstepper:: Setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md) 메서드 및 CorDebugUnmappedStop 열거형) 스텝 퍼 클래스 초기화 건너뛰기 됩니다. 기본적으로 INTERCEPT_NONE 값만을 `CorDebugIntercept` 열거 됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

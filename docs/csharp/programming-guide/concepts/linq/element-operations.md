@@ -1,13 +1,13 @@
 ---
 title: 요소 작업(C#)
-ms.date: 07/20/2015
+ms.date: 10/03/2018
 ms.assetid: 283206c9-3246-4c48-b01a-d9de409a7231
-ms.openlocfilehash: 14fdfbc38e1c25aa00056a42e116be98a489ce0f
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b32066d13e700d95e4d2eef29e24e8b87690037d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856892"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594580"
 ---
 # <a name="element-operations-c"></a>요소 작업(C#)
 
@@ -25,11 +25,11 @@ ms.locfileid: "43856892"
 |FirstOrDefault|컬렉션의 첫 번째 요소 또는 특정 조건에 맞는 첫 번째 요소를 반환합니다. 이러한 요소가 없으면 기본값을 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.FirstOrDefault%60%601%28System.Linq.IQueryable%7B%60%600%7D%29?displayProperty=nameWithType>|  
 |마지막|컬렉션의 마지막 요소 또는 특정 조건에 맞는 마지막 요소를 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Last%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Last%2A?displayProperty=nameWithType>|  
 |LastOrDefault|컬렉션의 마지막 요소 또는 특정 조건에 맞는 마지막 요소를 반환합니다. 이러한 요소가 없으면 기본값을 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.LastOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.LastOrDefault%2A?displayProperty=nameWithType>|  
-|Single|컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
-|SingleOrDefault|컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다. 이러한 요소가 없거나 컬렉션에 정확히 하나의 요소가 포함되지 않은 경우 기본값을 반환합니다.|해당 사항 없음.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
+|Single|컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다. 반환할 요소가 없거나 두 개 이상 있는 경우 <xref:System.InvalidOperationException>을 throw합니다. |해당 사항 없음.|<xref:System.Linq.Enumerable.Single%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Single%2A?displayProperty=nameWithType>|  
+|SingleOrDefault|컬렉션의 유일한 요소 또는 특정 조건에 맞는 유일한 요소를 반환합니다. 반환할 요소가 없는 경우 기본값을 반환합니다. 반환할 요소가 두 개 이상 있는 경우 <xref:System.InvalidOperationException>을 throw합니다. |해당 사항 없음.|<xref:System.Linq.Enumerable.SingleOrDefault%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.SingleOrDefault%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Linq>  
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)(C#)](./how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md)

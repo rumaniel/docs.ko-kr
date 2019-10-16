@@ -1,22 +1,23 @@
 ---
-title: '&lt;tokenReplayCache&gt;'
+title: <tokenReplayCache>
 ms.date: 03/30/2017
 ms.assetid: 1572ab23-6933-41b5-bfb4-0c4548145500
 author: BrucePerlerMS
-ms.openlocfilehash: d21a819f789b5be4bdf7ebf57b37a072e1d213ff
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 9f3a95fd0a39f199eaf13c7509aff22caa0e3b66
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206222"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251780"
 ---
-# <a name="lttokenreplaycachegt"></a>&lt;tokenReplayCache&gt;
-서비스 또는 보안 토큰 처리기 컬렉션을 사용 하 여 토큰 재생 캐시를 등록합니다.  
+# <a name="tokenreplaycache"></a>\<tokenReplayCache>
+서비스 또는 보안 토큰 처리기 컬렉션을 사용 하 여 토큰 재생 캐시를 등록 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<캐시 >  
-\<tokenReplayCache >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<캐시 >** ](caches.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tokenReplayCache >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +39,7 @@ ms.locfileid: "47206222"
   
 |특성|설명|  
 |---------------|-----------------|  
-|type|형식에서 파생 되는 <xref:System.IdentityModel.Tokens.TokenReplayCache> 클래스입니다. 사용자 지정 하는 방법에 대 한 자세한 내용은 `type`, [사용자 지정 형식 참조]를 참조 하세요.
+|type|<xref:System.IdentityModel.Tokens.TokenReplayCache> 클래스에서 파생 되는 형식입니다. 사용자 지정 `type`을 지정 하는 방법에 대 한 자세한 내용은 [사용자 지정 형식 참조]를 참조 하세요.
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -47,13 +48,13 @@ ms.locfileid: "47206222"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<캐시 >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/caches.md)|서비스 또는 보안 토큰 처리기 컬렉션을 사용 하는 캐시를 등록 합니다.|  
+|[\<caches>](caches.md)|서비스 또는 보안 토큰 처리기 컬렉션에서 사용 하는 캐시를 등록 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 재생 된 토큰을 검색 하는 토큰 재생 캐시가 됩니다. 토큰 재생 검색이 사용 되는 [ \<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md) 도 토큰에 대 한 최대 만료 시간을 지정 하는 요소입니다.  
+ 토큰 재생 캐시는 재생 된 토큰을 검색 하는 데 사용 됩니다. 토큰 재생 검색은 토큰의 최대 만료 시간을 지정 하는 [ \<tokenreplaydetection >](tokenreplaydetection.md) 요소에 의해 사용 하도록 설정 됩니다.  
   
 ## <a name="example"></a>예제  
- 다음 XML 재생 된 토큰을 검색 하는 것에 대 한 사용자 지정 캐시의 구성을 보여 줍니다.  
+ 다음 XML에서는 재생 된 토큰을 검색 하기 위한 사용자 지정 캐시의 구성을 보여 줍니다.  
   
 ```xml  
 <caches>  
@@ -62,6 +63,7 @@ ms.locfileid: "47206222"
 </caches>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.IdentityModel.Tokens.TokenReplayCache>  
- [\<tokenReplayDetection >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/tokenreplaydetection.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.IdentityModel.Tokens.TokenReplayCache>
+- [\<tokenReplayDetection>](tokenreplaydetection.md)

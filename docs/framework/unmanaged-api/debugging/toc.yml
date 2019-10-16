@@ -1,0 +1,1652 @@
+- name: 디버깅
+  href: index.md
+  items:
+    - name: 디버깅 Coclass
+      href: debugging-coclasses.md
+      items:
+        - name: CorpubPublish Coclass
+          href: corpubpublish-coclass.md
+    - name: 디버깅 인터페이스
+      href: debugging-interfaces.md
+      items:
+        - name: ICLRDataEnumMemoryRegions 인터페이스
+          href: iclrdataenummemoryregions-interface.md
+          items:
+            - name: EnumMemoryRegions 메서드
+              href: iclrdataenummemoryregions-enummemoryregions-method.md
+        - name: ICLRDataEnumMemoryRegionsCallback 인터페이스
+          href: iclrdataenummemoryregionscallback-interface.md
+          items:
+            - name: EnumMemoryRegion 메서드
+              href: iclrdataenummemoryregionscallback-enummemoryregion-method.md
+        - name: ICLRDataTarget 인터페이스
+          href: iclrdatatarget-interface.md
+          items:
+            - name: GetCurrentThreadID 메서드
+              href: iclrdatatarget-getcurrentthreadid-method.md
+            - name: GetImageBase 메서드
+              href: iclrdatatarget-getimagebase-method.md
+            - name: GetMachineType 메서드
+              href: iclrdatatarget-getmachinetype-method.md
+            - name: GetPointerSize 메서드
+              href: iclrdatatarget-getpointersize-method.md
+            - name: GetThreadContext 메서드
+              href: iclrdatatarget-getthreadcontext-method.md
+            - name: GetTLSValue 메서드
+              href: iclrdatatarget-gettlsvalue-method.md
+            - name: ReadVirtual 메서드
+              href: iclrdatatarget-readvirtual-method.md
+            - name: Request 메서드
+              href: iclrdatatarget-request-method.md
+            - name: SetThreadContext 메서드
+              href: iclrdatatarget-setthreadcontext-method.md
+            - name: SetTLSValue 메서드
+              href: iclrdatatarget-settlsvalue-method.md
+            - name: WriteVirtual 메서드
+              href: iclrdatatarget-writevirtual-method.md
+        - name: ICLRDataTarget2 인터페이스
+          href: iclrdatatarget2-interface.md
+          items:
+            - name: AllocVirtual 메서드
+              href: iclrdatatarget2-allocvirtual-method.md
+            - name: FreeVirtual 메서드
+              href: iclrdatatarget2-freevirtual-method.md
+        - name: ICLRDataTarget3 인터페이스
+          href: iclrdatatarget3-interface.md
+          items:
+            - name: GetExceptionRecord 메서드
+              href: iclrdatatarget3-getexceptionrecord-method.md
+            - name: GetExceptionContextRecord 메서드
+              href: iclrdatatarget3-getexceptioncontextrecord-method.md
+            - name: GetExceptionThreadID 메서드
+              href: iclrdatatarget3-getexceptionthreadid-method.md
+        - name: ICLRDebugging 인터페이스
+          href: iclrdebugging-interface.md
+          items:
+            - name: OpenVirtualProcess 메서드
+              href: iclrdebugging-openvirtualprocess-method.md
+            - name: CanUnloadNow 메서드
+              href: iclrdebugging-canunloadnow-method.md
+        - name: ICLRDebuggingLibraryProvider 인터페이스
+          href: iclrdebugginglibraryprovider-interface.md
+          items:
+            - name: ProvideLibrary 메서드
+              href: iclrdebugginglibraryprovider-providelibrary-method.md
+        - name: ICLRMetadataLocator 인터페이스
+          href: iclrmetadatalocator-interface.md
+          items:
+            - name: GetMetadata 메서드
+              href: iclrmetadatalocator-getmetadata-method.md
+        - name: ICorDebug 인터페이스
+          href: icordebug-interface.md
+          items:
+            - name: CanLaunchOrAttach 메서드
+              href: icordebug-canlaunchorattach-method.md
+            - name: CreateProcess 메서드
+              href: icordebug-createprocess-method.md
+            - name: DebugActiveProcess 메서드
+              href: icordebug-debugactiveprocess-method.md
+            - name: EnumerateProcesses 메서드
+              href: icordebug-enumerateprocesses-method.md
+            - name: GetProcess 메서드
+              href: icordebug-getprocess-method.md
+            - name: Initialize 메서드
+              href: icordebug-initialize-method.md
+            - name: SetManagedHandler 메서드
+              href: icordebug-setmanagedhandler-method.md
+            - name: SetUnmanagedHandler 메서드
+              href: icordebug-setunmanagedhandler-method.md
+            - name: Terminate 메서드
+              href: icordebug-terminate-method.md
+        - name: ICorDebugAppDomain 인터페이스
+          href: icordebugappdomain-interface.md
+          items:
+            - name: Attach 메서드
+              href: icordebugappdomain-attach-method.md
+            - name: EnumerateAssemblies 메서드
+              href: icordebugappdomain-enumerateassemblies-method.md
+            - name: EnumerateBreakpoints 메서드
+              href: icordebugappdomain-enumeratebreakpoints-method.md
+            - name: EnumerateSteppers 메서드
+              href: icordebugappdomain-enumeratesteppers-method.md
+            - name: GetId 메서드
+              href: icordebugappdomain-getid-method.md
+            - name: GetModuleFromMetaDataInterface 메서드
+              href: icordebugappdomain-getmodulefrommetadatainterface-method.md
+            - name: GetName 메서드
+              href: icordebugappdomain-getname-method.md
+            - name: GetObject 메서드
+              href: icordebugappdomain-getobject-method.md
+            - name: GetProcess 메서드
+              href: icordebugappdomain-getprocess-method.md
+            - name: IsAttached 메서드
+              href: icordebugappdomain-isattached-method.md
+        - name: ICorDebugAppDomain2 인터페이스
+          href: icordebugappdomain2-interface.md
+          items:
+            - name: GetArrayOrPointerType 메서드
+              href: icordebugappdomain2-getarrayorpointertype-method.md
+            - name: GetFunctionPointerType
+              href: icordebugappdomain2-getfunctionpointertype-method.md
+        - name: ICorDebugAppDomain3 인터페이스
+          href: icordebugappdomain3-interface.md
+          items:
+            - name: GetCachedWinRTTypes 메서드
+              href: icordebugappdomain3-getcachedwinrttypes-method.md
+            - name: GetCachedWinRTTypesForIIDs 메서드
+              href: icordebugappdomain3-getcachedwinrttypesforiids-method.md
+        - name: ICorDebugAppDomain4 인터페이스
+          href: icordebugappdomain4-interface.md
+          items:
+            - name: GetObjectForCCW 메서드
+              href: icordebugappdomain4-getobjectforccw-method.md
+        - name: ICorDebugAppDomainEnum 인터페이스
+          href: icordebugappdomainenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugappdomainenum-next-method.md
+        - name: ICorDebugArrayValue 인터페이스
+          href: icordebugarrayvalue-interface.md
+          items:
+            - name: GetBaseIndicies 메서드
+              href: icordebugarrayvalue-getbaseindicies-method.md
+            - name: GetCount 메서드
+              href: icordebugarrayvalue-getcount-method.md
+            - name: GetDimensions 메서드
+              href: icordebugarrayvalue-getdimensions-method.md
+            - name: GetElement 메서드
+              href: icordebugarrayvalue-getelement-method.md
+            - name: GetElementAtPosition 메서드
+              href: icordebugarrayvalue-getelementatposition-method.md
+            - name: GetElementType 메서드
+              href: icordebugarrayvalue-getelementtype-method.md
+            - name: GetRank 메서드
+              href: icordebugarrayvalue-getrank-method.md
+            - name: HasBaseIndicies 메서드
+              href: icordebugarrayvalue-hasbaseindicies-method.md
+        - name: ICorDebugAssembly 인터페이스
+          href: icordebugassembly-interface.md
+          items:
+            - name: EnumerateModules 메서드
+              href: icordebugassembly-enumeratemodules-method.md
+            - name: GetAppDomain 메서드
+              href: icordebugassembly-getappdomain-method.md
+            - name: GetCodeBase 메서드
+              href: icordebugassembly-getcodebase-method.md
+            - name: GetName 메서드
+              href: icordebugassembly-getname-method.md
+            - name: GetProcess 메서드
+              href: icordebugassembly-getprocess-method.md
+        - name: ICorDebugAssembly2 인터페이스
+          href: icordebugassembly2-interface.md
+          items:
+            - name: IsFullyTrusted 메서드
+              href: icordebugassembly2-isfullytrusted-method.md
+        - name: ICorDebugAssembly3 인터페이스
+          href: icordebugassembly3-interface.md
+          items:
+            - name: EnumerateContainedAssemblies 메서드
+              href: icordebugassembly3-enumeratecontainedassemblies-method.md
+            - name: GetContainerAssembly 메서드
+              href: icordebugassembly3-getcontainerassembly-method.md
+        - name: ICorDebugAssemblyEnum 인터페이스
+          href: icordebugassemblyenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugassemblyenum-next-method.md
+        - name: ICorDebugBlockingObjectEnum 인터페이스
+          href: icordebugblockingobjectenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugblockingobjectenum-next-method.md
+        - name: ICorDebugBoxValue 인터페이스
+          href: icordebugboxvalue-interface.md
+          items:
+            - name: GetObject 메서드
+              href: icordebugboxvalue-getobject-method.md
+        - name: ICorDebugBreakpoint 인터페이스
+          href: icordebugbreakpoint-interface.md
+          items:
+            - name: Activate 메서드
+              href: icordebugbreakpoint-activate-method.md
+            - name: IsActive 메서드
+              href: icordebugbreakpoint-isactive-method.md
+        - name: ICorDebugBreakpointEnum 인터페이스
+          href: icordebugbreakpointenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugbreakpointenum-next-method.md
+        - name: ICorDebugChain 인터페이스
+          href: icordebugchain-interface.md
+          items:
+            - name: EnumerateFrames 메서드
+              href: icordebugchain-enumerateframes-method.md
+            - name: GetActiveFrame 메서드
+              href: icordebugchain-getactiveframe-method.md
+            - name: GetCallee 메서드
+              href: icordebugchain-getcallee-method.md
+            - name: GetCaller 메서드
+              href: icordebugchain-getcaller-method.md
+            - name: GetContext 메서드
+              href: icordebugchain-getcontext-method.md
+            - name: GetNext 메서드
+              href: icordebugchain-getnext-method.md
+            - name: GetPrevious 메서드
+              href: icordebugchain-getprevious-method.md
+            - name: GetReason 메서드
+              href: icordebugchain-getreason-method.md
+            - name: GetRegisterSet 메서드
+              href: icordebugchain-getregisterset-method.md
+            - name: GetStackRange 메서드
+              href: icordebugchain-getstackrange-method.md
+            - name: GetThread 메서드
+              href: icordebugchain-getthread-method.md
+            - name: IsManaged 메서드
+              href: icordebugchain-ismanaged-method.md
+        - name: ICorDebugChainEnum 인터페이스
+          href: icordebugchainenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugchainenum-next-method.md
+        - name: ICorDebugClass 인터페이스
+          href: icordebugclass-interface.md
+          items:
+            - name: GetModule 메서드
+              href: icordebugclass-getmodule-method.md
+            - name: GetStaticFieldValue 메서드
+              href: icordebugclass-getstaticfieldvalue-method.md
+            - name: GetToken 메서드
+              href: icordebugclass-gettoken-method.md
+        - name: ICorDebugClass2 인터페이스
+          href: icordebugclass2-interface.md
+          items:
+            - name: GetParameterizedType 메서드
+              href: icordebugclass2-getparameterizedtype-method.md
+            - name: SetJMCStatus 메서드
+              href: icordebugclass2-setjmcstatus-method.md
+        - name: ICorDebugCode 인터페이스
+          href: icordebugcode-interface1.md
+          items:
+            - name: CreateBreakpoint 메서드
+              href: icordebugcode-createbreakpoint-method.md
+            - name: GetAddress 메서드
+              href: icordebugcode-getaddress-method.md
+            - name: GetCode 메서드
+              href: icordebugcode-getcode-method.md
+            - name: GetEnCRemapSequencePoints 메서드
+              href: icordebugcode-getencremapsequencepoints-method.md
+            - name: GetFunction 메서드
+              href: icordebugcode-getfunction-method.md
+            - name: GetILToNativeMapping 메서드
+              href: icordebugcode-getiltonativemapping-method.md
+            - name: GetSize 메서드
+              href: icordebugcode-getsize-method.md
+            - name: GetVersionNumber 메서드
+              href: icordebugcode-getversionnumber-method.md
+            - name: IsIL 메서드
+              href: icordebugcode-isil-method.md
+        - name: ICorDebugCode2 인터페이스
+          href: icordebugcode2-interface.md
+          items:
+            - name: GetCodeChunks 메서드
+              href: icordebugcode2-getcodechunks-method.md
+            - name: GetCompilerFlags 메서드
+              href: icordebugcode2-getcompilerflags-method.md
+        - name: ICorDebugCode3 인터페이스
+          href: icordebugcode3-interface.md
+          items:
+            - name: GetReturnValueLiveOffset 메서드
+              href: icordebugcode3-getreturnvalueliveoffset-method.md
+        - name: ICorDebugCode4 인터페이스
+          href: icordebugcode4-interface.md
+          items:
+            - name: EnumerateVariableHomes 메서드
+              href: icordebugcode4-enumeratevariablehomes-method.md
+        - name: ICorDebugCodeEnum 인터페이스
+          href: icordebugcodeenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugcodeenum-next-method.md
+        - name: ICorDebugComObjectValue 인터페이스
+          href: icordebugcomobjectvalue-interface.md
+          items:
+            - name: GetCachedInterfacePointers 메서드
+              href: icordebugcomobjectvalue-getcachedinterfacepointers-method.md
+            - name: GetCachedInterfaceTypes 메서드
+              href: icordebugcomobjectvalue-getcachedinterfacetypes-method.md
+        - name: ICorDebugContext 인터페이스
+          href: icordebugcontext-interface.md
+        - name: ICorDebugController 인터페이스
+          href: icordebugcontroller-interface.md
+          items:
+            - name: CanCommitChanges 메서드
+              href: icordebugcontroller-cancommitchanges-method.md
+            - name: CommitChanges 메서드
+              href: icordebugcontroller-commitchanges-method.md
+            - name: Continue 메서드
+              href: icordebugcontroller-continue-method.md
+            - name: Detach 메서드
+              href: icordebugcontroller-detach-method.md
+            - name: EnumerateThreads 메서드
+              href: icordebugcontroller-enumeratethreads-method.md
+            - name: HasQueuedCallbacks 메서드
+              href: icordebugcontroller-hasqueuedcallbacks-method.md
+            - name: IsRunning 메서드
+              href: icordebugcontroller-isrunning-method.md
+            - name: SetAllThreadsDebugState 메서드
+              href: icordebugcontroller-setallthreadsdebugstate-method.md
+            - name: Stop 메서드
+              href: icordebugcontroller-stop-method.md
+            - name: Terminate 메서드
+              href: icordebugcontroller-terminate-method.md
+        - name: ICorDebugDataTarget 인터페이스
+          href: icordebugdatatarget-interface.md
+          items:
+            - name: GetPlatform 메서드
+              href: icordebugdatatarget-getplatform-method.md
+            - name: ReadVirtual 메서드
+              href: icordebugdatatarget-readvirtual-method.md
+            - name: GetThreadContext 메서드
+              href: icordebugdatatarget-getthreadcontext-method.md
+        - name: ICorDebugDataTarget2 인터페이스
+          href: icordebugdatatarget2-interface.md
+          items:
+            - name: CreateVirtualUnwinder 메서드
+              href: icordebugdatatarget2-createvirtualunwinder-method.md
+            - name: EnumerateThreadIDs 메서드
+              href: icordebugdatatarget2-enumeratethreadids-method.md
+            - name: GetImageFromPointer 메서드
+              href: icordebugdatatarget2-getimagefrompointer-method.md
+            - name: GetImageLocation 메서드
+              href: icordebugdatatarget2-getimagelocation-method.md
+            - name: GetSymbolProviderForImage 메서드
+              href: icordebugdatatarget2-getsymbolproviderforimage-method.md
+        - name: ICorDebugDataTarget3 인터페이스
+          href: icordebugdatatarget3-interface.md
+          items:
+            - name: GetLoadedModules 메서드
+              href: icordebugdatatarget3-getloadedmodules-method.md
+        - name: ICorDebugDebugEvent 인터페이스
+          href: icordebugdebugevent-interface.md
+          items:
+            - name: GetEventKind 메서드
+              href: icordebugdebugevent-geteventkind-method.md
+            - name: GetThread 메서드
+              href: icordebugdebugevent-getthread-method.md
+        - name: ICorDebugEditAndContinueErrorInfo 인터페이스
+          href: icordebugeditandcontinueerrorinfo-interface.md
+          items:
+            - name: GetErrorCode 메서드
+              href: icordebugeditandcontinueerrorinfo-geterrorcode-method.md
+            - name: GetModule 메서드
+              href: icordebugeditandcontinueerrorinfo-getmodule-method.md
+            - name: GetString 메서드
+              href: icordebugeditandcontinueerrorinfo-getstring-method.md
+            - name: GetToken 메서드
+              href: icordebugeditandcontinueerrorinfo-gettoken-method.md
+        - name: ICorDebugEditAndContinueSnapshot 인터페이스
+          href: icordebugeditandcontinuesnapshot-interface.md
+          items:
+            - name: CopyMetaData 메서드
+              href: icordebugeditandcontinuesnapshot-copymetadata-method.md
+            - name: GetMvid 메서드
+              href: icordebugeditandcontinuesnapshot-getmvid-method.md
+            - name: GetRoDataRVA 메서드
+              href: icordebugeditandcontinuesnapshot-getrodatarva-method.md
+            - name: GetRwDataRVA 메서드
+              href: icordebugeditandcontinuesnapshot-getrwdatarva-method.md
+            - name: SetILMap 메서드
+              href: icordebugeditandcontinuesnapshot-setilmap-method.md
+            - name: SetPEBytes 메서드
+              href: icordebugeditandcontinuesnapshot-setpebytes-method.md
+            - name: SetPESymbolBytes 메서드
+              href: icordebugeditandcontinuesnapshot-setpesymbolbytes-method.md
+        - name: ICorDebugEnum 인터페이스
+          href: icordebugenum-interface1.md
+          items:
+            - name: Clone 메서드
+              href: icordebugenum-clone-method.md
+            - name: GetCount 메서드
+              href: icordebugenum-getcount-method.md
+            - name: Reset 메서드
+              href: icordebugenum-reset-method.md
+            - name: Skip 메서드
+              href: icordebugenum-skip-method.md
+        - name: ICorDebugErrorInfoEnum 인터페이스
+          href: icordebugerrorinfoenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugerrorinfoenum-next-method.md
+        - name: ICorDebugEval 인터페이스
+          href: icordebugeval-interface.md
+          items:
+            - name: Abort 메서드
+              href: icordebugeval-abort-method.md
+            - name: CallFunction 메서드
+              href: icordebugeval-callfunction-method.md
+            - name: CreateValue 메서드
+              href: icordebugeval-createvalue-method.md
+            - name: GetResult 메서드
+              href: icordebugeval-getresult-method.md
+            - name: GetThread 메서드
+              href: icordebugeval-getthread-method.md
+            - name: IsActive 메서드
+              href: icordebugeval-isactive-method.md
+            - name: NewArray 메서드
+              href: icordebugeval-newarray-method.md
+            - name: NewObject 메서드
+              href: icordebugeval-newobject-method.md
+            - name: NewObjectNoConstructor 메서드
+              href: icordebugeval-newobjectnoconstructor-method.md
+            - name: NewString 메서드
+              href: icordebugeval-newstring-method.md
+        - name: ICorDebugEval2 인터페이스
+          href: icordebugeval2-interface.md
+          items:
+            - name: CallParameterizedFunction 메서드
+              href: icordebugeval2-callparameterizedfunction-method.md
+            - name: CreateValueForType 메서드
+              href: icordebugeval2-createvaluefortype-method.md
+            - name: NewParameterizedArray 메서드
+              href: icordebugeval2-newparameterizedarray-method.md
+            - name: NewParameterizedObject 메서드
+              href: icordebugeval2-newparameterizedobject-method.md
+            - name: NewParameterizedObjectNoConstructor 메서드
+              href: icordebugeval2-newparameterizedobjectnoconstructor-method.md
+            - name: NewStringWithLength 메서드
+              href: icordebugeval2-newstringwithlength-method.md
+            - name: RudeAbort 메서드
+              href: icordebugeval2-rudeabort-method.md
+        - name: ICorDebugExceptionDebugEvent 인터페이스
+          href: icordebugexceptiondebugevent-interface.md
+          items:
+            - name: GetFlags 메서드
+              href: icordebugexceptiondebugevent-getflags-method.md
+            - name: GetNativeIP 메서드
+              href: icordebugexceptiondebugevent-getnativeip-method.md
+            - name: GetStackPointer 메서드
+              href: icordebugexceptiondebugevent-getstackpointer-method.md
+        - name: ICorDebugExceptionObjectCallStackEnum 인터페이스
+          href: icordebugexceptionobjectcallstackenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugexceptionobjectcallstackenum-next-method.md
+        - name: ICorDebugExceptionObjectValue 인터페이스
+          href: icordebugexceptionobjectvalue-interface.md
+          items:
+            - name: EnumerateExceptionCallStack 메서드
+              href: icordebugexceptionobjectvalue-enumerateexceptioncallstack-method.md
+        - name: ICorDebugFrame 인터페이스
+          href: icordebugframe-interface.md
+          items:
+            - name: CreateStepper 메서드
+              href: icordebugframe-createstepper-method.md
+            - name: GetCallee 메서드
+              href: icordebugframe-getcallee-method.md
+            - name: GetCaller 메서드
+              href: icordebugframe-getcaller-method.md
+            - name: GetChain 메서드
+              href: icordebugframe-getchain-method.md
+            - name: GetCode 메서드
+              href: icordebugframe-getcode-method.md
+            - name: GetFunction 메서드
+              href: icordebugframe-getfunction-method.md
+            - name: GetFunctionToken 메서드
+              href: icordebugframe-getfunctiontoken-method.md
+            - name: GetStackRange 메서드
+              href: icordebugframe-getstackrange-method.md
+        - name: ICorDebugFrameEnum 인터페이스
+          href: icordebugframeenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugframeenum-next-method.md
+        - name: ICorDebugFunction 인터페이스
+          href: icordebugfunction-interface1.md
+          items:
+            - name: CreateBreakpoint 메서드
+              href: icordebugfunction-createbreakpoint-method.md
+            - name: GetClass 메서드
+              href: icordebugfunction-getclass-method.md
+            - name: GetCurrentVersionNumber 메서드
+              href: icordebugfunction-getcurrentversionnumber-method.md
+            - name: GetILCode 메서드
+              href: icordebugfunction-getilcode-method.md
+            - name: GetLocalVarSigToken 메서드
+              href: icordebugfunction-getlocalvarsigtoken-method.md
+            - name: GetModule 메서드
+              href: icordebugfunction-getmodule-method.md
+            - name: GetNativeCode 메서드
+              href: icordebugfunction-getnativecode-method.md
+            - name: GetToken 메서드
+              href: icordebugfunction-gettoken-method.md
+        - name: ICorDebugFunction2 인터페이스
+          href: icordebugfunction2-interface.md
+          items:
+            - name: EnumerateNativeCode 메서드
+              href: icordebugfunction2-enumeratenativecode-method.md
+            - name: GetJMCStatus 메서드
+              href: icordebugfunction2-getjmcstatus-method.md
+            - name: GetVersionNumber 메서드
+              href: icordebugfunction2-getversionnumber-method.md
+            - name: SetJMCStatus 메서드
+              href: icordebugfunction2-setjmcstatus-method.md
+        - name: ICorDebugFunction3 인터페이스
+          href: icordebugfunction3-interface.md
+          items:
+            - name: GetActiveReJitRequestILCode 메서드
+              href: icordebugfunction3-getactiverejitrequestilcode-method.md
+        - name: ICorDebugFunctionBreakpoint 인터페이스
+          href: icordebugfunctionbreakpoint-interface.md
+          items:
+            - name: GetFunction 메서드
+              href: icordebugfunctionbreakpoint-getfunction-method.md
+            - name: GetOffset 메서드
+              href: icordebugfunctionbreakpoint-getoffset-method.md
+        - name: ICorDebugGCReferenceEnum 인터페이스
+          href: icordebuggcreferenceenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebuggcreferenceenum-next-method.md
+        - name: ICorDebugGenericValue 인터페이스
+          href: icordebuggenericvalue-interface.md
+          items:
+            - name: GetValue 메서드
+              href: icordebuggenericvalue-getvalue-method.md
+            - name: SetValue 메서드
+              href: icordebuggenericvalue-setvalue-method.md
+        - name: ICorDebugGuidToTypeEnum 인터페이스
+          href: icordebugguidtotypeenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugguidtotypeenum-next-method.md
+        - name: ICorDebugHandleValue 인터페이스
+          href: icordebughandlevalue-interface.md
+          items:
+            - name: Dispose 메서드
+              href: icordebughandlevalue-dispose-method.md
+            - name: GetHandleType 메서드
+              href: icordebughandlevalue-gethandletype-method.md
+        - name: ICorDebugHeapEnum 인터페이스
+          href: icordebugheapenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugheapenum-next-method.md
+        - name: ICorDebugHeapSegmentEnum 인터페이스
+          href: icordebugheapsegmentenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugheapsegmentenum-next-method.md
+        - name: ICorDebugHeapValue 인터페이스
+          href: icordebugheapvalue-interface.md
+          items:
+            - name: CreateRelocBreakpoint 메서드
+              href: icordebugheapvalue-createrelocbreakpoint-method.md
+            - name: IsValid 메서드
+              href: icordebugheapvalue-isvalid-method.md
+        - name: ICorDebugHeapValue2 인터페이스
+          href: icordebugheapvalue2-interface1.md
+          items:
+            - name: CreateHandle 메서드
+              href: icordebugheapvalue2-createhandle-method.md
+        - name: ICorDebugHeapValue3 인터페이스
+          href: icordebugheapvalue3-interface.md
+          items:
+            - name: GetThreadOwningMonitorLock 메서드
+              href: icordebugheapvalue3-getthreadowningmonitorlock-method.md
+            - name: GetMonitorEventWaitList 메서드
+              href: icordebugheapvalue3-getmonitoreventwaitlist-method.md
+        - name: ICorDebugILCode 인터페이스
+          href: icordebugilcode-interface.md
+          items:
+            - name: GetEHClauses 메서드
+              href: icordebugilcode-getehclauses-method.md
+        - name: ICorDebugILCode2 인터페이스
+          href: icordebugilcode2-interface.md
+          items:
+            - name: GetInstrumentedILMap 메서드
+              href: icordebugilcode2-getinstrumentedilmap-method.md
+            - name: GetLocalVarSigToken 메서드
+              href: icordebugilcode2-getlocalvarsigtoken-method.md
+        - name: ICorDebugILFrame 인터페이스
+          href: icordebugilframe-interface.md
+          items:
+            - name: CanSetIP 메서드
+              href: icordebugilframe-cansetip-method.md
+            - name: EnumerateArguments 메서드
+              href: icordebugilframe-enumeratearguments-method.md
+            - name: EnumerateLocalVariables 메서드
+              href: icordebugilframe-enumeratelocalvariables-method.md
+            - name: GetArgument 메서드
+              href: icordebugilframe-getargument-method.md
+            - name: GetIP 메서드
+              href: icordebugilframe-getip-method.md
+            - name: GetLocalVariable 메서드
+              href: icordebugilframe-getlocalvariable-method.md
+            - name: GetStackDepth 메서드
+              href: icordebugilframe-getstackdepth-method.md
+            - name: GetStackValue 메서드
+              href: icordebugilframe-getstackvalue-method.md
+            - name: SetIP 메서드
+              href: icordebugilframe-setip-method.md
+        - name: ICorDebugILFrame2 인터페이스
+          href: icordebugilframe2-interface.md
+          items:
+            - name: EnumerateTypeParameters 메서드
+              href: icordebugilframe2-enumeratetypeparameters-method.md
+            - name: RemapFunction 메서드
+              href: icordebugilframe2-remapfunction-method.md
+        - name: ICorDebugILFrame3 인터페이스
+          href: icordebugilframe3-interface.md
+          items:
+            - name: GetReturnValueForILOffset 메서드
+              href: icordebugilframe3-getreturnvalueforiloffset-method.md
+        - name: ICorDebugILFrame4 인터페이스
+          href: icordebugilframe4-interface.md
+          items:
+            - name: EnumerateLocalVariablesEx 메서드
+              href: icordebugilframe4-enumeratelocalvariablesex-method.md
+            - name: GetCodeEx 메서드
+              href: icordebugilframe4-getcodeex-method.md
+            - name: GetLocalVariableEx 메서드
+              href: icordebugilframe4-getlocalvariableex-method.md
+        - name: ICorDebugInstanceFieldSymbol 인터페이스
+          href: icordebuginstancefieldsymbol-interface.md
+          items:
+            - name: GetName 메서드
+              href: icordebuginstancefieldsymbol-getname-method.md
+            - name: GetOffset 메서드
+              href: icordebuginstancefieldsymbol-getoffset-method.md
+            - name: GetSize 메서드
+              href: icordebuginstancefieldsymbol-getsize-method.md
+        - name: ICorDebugInternalFrame 인터페이스
+          href: icordebuginternalframe-interface.md
+          items:
+            - name: GetFrameType 메서드
+              href: icordebuginternalframe-getframetype-method.md
+        - name: ICorDebugInternalFrame2 인터페이스
+          href: icordebuginternalframe2-interface.md
+          items:
+            - name: GetFrameAddress 메서드
+              href: icordebuginternalframe2-getframeaddress-method.md
+            - name: IsCloserToLeaf 메서드
+              href: icordebuginternalframe2-isclosertoleaf-method.md
+        - name: ICorDebugLoadedModule 인터페이스
+          href: icordebugloadedmodule-interface.md
+          items:
+            - name: GetBaseAddress 메서드
+              href: icordebugloadedmodule-getbaseaddress-method.md
+            - name: GetName 메서드
+              href: icordebugloadedmodule-getname-method.md
+            - name: GetSize 메서드
+              href: icordebugloadedmodule-getsize-method.md
+        - name: ICorDebugManagedCallback 인터페이스
+          href: icordebugmanagedcallback-interface.md
+          items:
+            - name: Break 메서드
+              href: icordebugmanagedcallback-break-method.md
+            - name: Breakpoint 메서드
+              href: icordebugmanagedcallback-breakpoint-method.md
+            - name: BreakpointSetError 메서드
+              href: icordebugmanagedcallback-breakpointseterror-method.md
+            - name: ControlCTrap 메서드
+              href: icordebugmanagedcallback-controlctrap-method.md
+            - name: CreateAppDomain 메서드
+              href: icordebugmanagedcallback-createappdomain-method.md
+            - name: CreateProcess 메서드
+              href: icordebugmanagedcallback-createprocess-method.md
+            - name: CreateThread 메서드
+              href: icordebugmanagedcallback-createthread-method.md
+            - name: DebuggerError 메서드
+              href: icordebugmanagedcallback-debuggererror-method.md
+            - name: EditAndContinueRemap 메서드
+              href: icordebugmanagedcallback-editandcontinueremap-method.md
+            - name: EvalComplete 메서드
+              href: icordebugmanagedcallback-evalcomplete-method.md
+            - name: EvalException 메서드
+              href: icordebugmanagedcallback-evalexception-method.md
+            - name: Exception 메서드
+              href: icordebugmanagedcallback-exception-method.md
+            - name: ExitAppDomain 메서드
+              href: icordebugmanagedcallback-exitappdomain-method.md
+            - name: ExitProcess 메서드
+              href: icordebugmanagedcallback-exitprocess-method.md
+            - name: ExitThread 메서드
+              href: icordebugmanagedcallback-exitthread-method.md
+            - name: LoadAssembly 메서드
+              href: icordebugmanagedcallback-loadassembly-method.md
+            - name: LoadClass 메서드
+              href: icordebugmanagedcallback-loadclass-method.md
+            - name: LoadModule 메서드
+              href: icordebugmanagedcallback-loadmodule-method.md
+            - name: LogMessage 메서드
+              href: icordebugmanagedcallback-logmessage-method.md
+            - name: LogSwitch 메서드
+              href: icordebugmanagedcallback-logswitch-method.md
+            - name: NameChange 메서드
+              href: icordebugmanagedcallback-namechange-method.md
+            - name: StepComplete 메서드
+              href: icordebugmanagedcallback-stepcomplete-method.md
+            - name: UnloadAssembly 메서드
+              href: icordebugmanagedcallback-unloadassembly-method.md
+            - name: UnloadClass 메서드
+              href: icordebugmanagedcallback-unloadclass-method.md
+            - name: UnloadModule 메서드
+              href: icordebugmanagedcallback-unloadmodule-method.md
+            - name: UpdateModuleSymbols 메서드
+              href: icordebugmanagedcallback-updatemodulesymbols-method.md
+        - name: ICorDebugManagedCallback2 인터페이스
+          href: icordebugmanagedcallback2-interface.md
+          items:
+            - name: ChangeConnection 메서드
+              href: icordebugmanagedcallback2-changeconnection-method.md
+            - name: CreateConnection 메서드
+              href: icordebugmanagedcallback2-createconnection-method.md
+            - name: DestroyConnection 메서드
+              href: icordebugmanagedcallback2-destroyconnection-method.md
+            - name: Exception 메서드
+              href: icordebugmanagedcallback2-exception-method.md
+            - name: ExceptionUnwind 메서드
+              href: icordebugmanagedcallback2-exceptionunwind-method.md
+            - name: FunctionRemapComplete 메서드
+              href: icordebugmanagedcallback2-functionremapcomplete-method.md
+            - name: FunctionRemapOpportunity 메서드
+              href: icordebugmanagedcallback2-functionremapopportunity-method.md
+            - name: MDANotification 메서드
+              href: icordebugmanagedcallback2-mdanotification-method.md
+        - name: ICorDebugManagedCallback3 인터페이스
+          href: icordebugmanagedcallback3-interface.md
+          items:
+            - name: CustomNotification 메서드
+              href: icordebugmanagedcallback3-customnotification-method.md
+        - name: ICorDebugMDA 인터페이스
+          href: icordebugmda-interface.md
+          items:
+            - name: GetDescription 메서드
+              href: icordebugmda-getdescription-method.md
+            - name: GetFlags 메서드
+              href: icordebugmda-getflags-method.md
+            - name: GetName 메서드
+              href: icordebugmda-getname-method.md
+            - name: GetOSThreadId 메서드
+              href: icordebugmda-getosthreadid-method.md
+            - name: GetXML 메서드
+              href: icordebugmda-getxml-method.md
+        - name: ICorDebugMemoryBuffer 인터페이스
+          href: icordebugmemorybuffer-interface.md
+          items:
+            - name: GetSize 메서드
+              href: icordebugmemorybuffer-getsize-method.md
+            - name: GetStartAddress 메서드
+              href: icordebugmemorybuffer-getstartaddress-method.md
+        - name: ICorDebugMergedAssemblyRecord 인터페이스
+          href: icordebugmergedassemblyrecord-interface.md
+          items:
+            - name: GetCulture 메서드
+              href: icordebugmergedassemblyrecord-getculture-method.md
+            - name: GetIndex 메서드
+              href: icordebugmergedassemblyrecord-getindex-method.md
+            - name: GetPublicKey 메서드
+              href: icordebugmergedassemblyrecord-getpublickey-method.md
+            - name: GetPublicKeyToken 메서드
+              href: icordebugmergedassemblyrecord-getpublickeytoken-method.md
+            - name: GetSimpleName 메서드
+              href: icordebugmergedassemblyrecord-getsimplename-method.md
+            - name: GetVersion 메서드
+              href: icordebugmergedassemblyrecord-getversion-method.md
+        - name: ICorDebugMetaDataLocator 인터페이스
+          href: icordebugmetadatalocator-interface.md
+          items:
+            - name: GetMetaData 메서드
+              href: icordebugmetadatalocator-getmetadata-method.md
+        - name: ICorDebugModule 인터페이스
+          href: icordebugmodule-interface.md
+          items:
+            - name: CreateBreakpoint 메서드
+              href: icordebugmodule-createbreakpoint-method.md
+            - name: EnableClassLoadCallbacks 메서드
+              href: icordebugmodule-enableclassloadcallbacks-method.md
+            - name: EnableJITDebugging 메서드
+              href: icordebugmodule-enablejitdebugging-method.md
+            - name: GetAssembly 메서드
+              href: icordebugmodule-getassembly-method.md
+            - name: GetBaseAddress 메서드
+              href: icordebugmodule-getbaseaddress-method.md
+            - name: GetClassFromToken 메서드
+              href: icordebugmodule-getclassfromtoken-method.md
+            - name: GetEditAndContinueSnapshot 메서드
+              href: icordebugmodule-geteditandcontinuesnapshot-method.md
+            - name: GetFunctionFromRVA 메서드
+              href: icordebugmodule-getfunctionfromrva-method.md
+            - name: GetFunctionFromToken 메서드
+              href: icordebugmodule-getfunctionfromtoken-method.md
+            - name: GetGlobalVariableValue 메서드
+              href: icordebugmodule-getglobalvariablevalue-method.md
+            - name: GetMetaDataInterface 메서드
+              href: icordebugmodule-getmetadatainterface-method.md
+            - name: GetName 메서드
+              href: icordebugmodule-getname-method.md
+            - name: GetProcess 메서드
+              href: icordebugmodule-getprocess-method.md
+            - name: GetSize 메서드
+              href: icordebugmodule-getsize-method.md
+            - name: GetToken 메서드
+              href: icordebugmodule-gettoken-method.md
+            - name: IsDynamic 메서드
+              href: icordebugmodule-isdynamic-method.md
+            - name: IsInMemory 메서드
+              href: icordebugmodule-isinmemory-method.md
+        - name: ICorDebugModule2 인터페이스
+          href: icordebugmodule2-interface.md
+          items:
+            - name: ApplyChanges 메서드
+              href: icordebugmodule2-applychanges-method.md
+            - name: GetJITCompilerFlags 메서드
+              href: icordebugmodule2-getjitcompilerflags-method.md
+            - name: ResolveAssembly 메서드
+              href: icordebugmodule2-resolveassembly-method.md
+            - name: SetJITCompilerFlags 메서드
+              href: icordebugmodule2-setjitcompilerflags-method.md
+            - name: SetJMCStatus 메서드
+              href: icordebugmodule2-setjmcstatus-method.md
+        - name: ICorDebugModule3 인터페이스
+          href: icordebugmodule3-interface.md
+          items:
+            - name: 'ICorDebugModule3::CreateReaderForInMemorySymbols 메서드'
+              href: icordebugmodule3-createreaderforinmemorysymbols-method.md
+        - name: ICorDebugModuleBreakpoint 인터페이스
+          href: icordebugmodulebreakpoint-interface.md
+          items:
+            - name: GetModule 메서드
+              href: icordebugmodulebreakpoint-getmodule-method.md
+        - name: ICorDebugModuleDebugEvent 인터페이스
+          href: icordebugmoduledebugevent-interface.md
+          items:
+            - name: GetModule 메서드
+              href: icordebugmoduledebugevent-getmodule-method.md
+        - name: ICorDebugModuleEnum 인터페이스
+          href: icordebugmoduleenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugmoduleenum-next-method.md
+        - name: ICorDebugMutableDataTarget 인터페이스
+          href: icordebugmutabledatatarget-interface.md
+          items:
+            - name: ContinueStatusChanged 메서드
+              href: icordebugmutabledatatarget-continuestatuschanged-method.md
+            - name: SetThreadContext 메서드
+              href: icordebugmutabledatatarget-setthreadcontext-method.md
+            - name: WriteVirtual 메서드
+              href: icordebugmutabledatatarget-writevirtual-method.md
+        - name: ICorDebugNativeFrame 인터페이스
+          href: icordebugnativeframe-interface.md
+          items:
+            - name: CanSetIP 메서드
+              href: icordebugnativeframe-cansetip-method.md
+            - name: GetIP 메서드
+              href: icordebugnativeframe-getip-method.md
+            - name: GetLocalDoubleRegisterValue 메서드
+              href: icordebugnativeframe-getlocaldoubleregistervalue-method.md
+            - name: GetLocalMemoryRegisterValue 메서드
+              href: icordebugnativeframe-getlocalmemoryregistervalue-method.md
+            - name: GetLocalMemoryValue 메서드
+              href: icordebugnativeframe-getlocalmemoryvalue-method.md
+            - name: GetLocalRegisterMemoryValue 메서드
+              href: icordebugnativeframe-getlocalregistermemoryvalue-method.md
+            - name: GetLocalRegisterValue 메서드
+              href: icordebugnativeframe-getlocalregistervalue-method.md
+            - name: GetRegisterSet 메서드
+              href: icordebugnativeframe-getregisterset-method.md
+            - name: SetIP 메서드
+              href: icordebugnativeframe-setip-method.md
+        - name: ICorDebugNativeFrame2 인터페이스
+          href: icordebugnativeframe2-interface.md
+          items:
+            - name: IsChild 메서드
+              href: icordebugnativeframe2-ischild-method.md
+            - name: IsMatchingParentFrame 메서드
+              href: icordebugnativeframe2-ismatchingparentframe-method.md
+            - name: GetStackParameterSize 메서드
+              href: icordebugnativeframe2-getstackparametersize-method.md
+        - name: ICorDebugObjectEnum 인터페이스
+          href: icordebugobjectenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugobjectenum-next-method.md
+        - name: ICorDebugObjectValue 인터페이스
+          href: icordebugobjectvalue-interface.md
+          items:
+            - name: GetClass 메서드
+              href: icordebugobjectvalue-getclass-method.md
+            - name: GetContext 메서드
+              href: icordebugobjectvalue-getcontext-method.md
+            - name: GetFieldValue 메서드
+              href: icordebugobjectvalue-getfieldvalue-method.md
+            - name: GetManagedCopy 메서드
+              href: icordebugobjectvalue-getmanagedcopy-method.md
+            - name: GetVirtualMethod 메서드
+              href: icordebugobjectvalue-getvirtualmethod-method.md
+            - name: IsValueClass 메서드
+              href: icordebugobjectvalue-isvalueclass-method.md
+            - name: SetFromManagedCopy 메서드
+              href: icordebugobjectvalue-setfrommanagedcopy-method.md
+        - name: ICorDebugObjectValue2 인터페이스
+          href: icordebugobjectvalue2-interface.md
+          items:
+            - name: GetVirtualMethodAndType 메서드
+              href: icordebugobjectvalue2-getvirtualmethodandtype-method.md
+        - name: ICorDebugProcess 인터페이스
+          href: icordebugprocess-interface.md
+          items:
+            - name: ClearCurrentException 메서드
+              href: icordebugprocess-clearcurrentexception-method.md
+            - name: EnableLogMessages 메서드
+              href: icordebugprocess-enablelogmessages-method.md
+            - name: EnumerateAppDomains 메서드
+              href: icordebugprocess-enumerateappdomains-method.md
+            - name: EnumerateObjects 메서드
+              href: icordebugprocess-enumerateobjects-method.md
+            - name: GetHandle 메서드
+              href: icordebugprocess-gethandle-method.md
+            - name: GetHelperThreadID 메서드
+              href: icordebugprocess-gethelperthreadid-method.md
+            - name: GetID 메서드
+              href: icordebugprocess-getid-method.md
+            - name: GetObject 메서드
+              href: icordebugprocess-getobject-method.md
+            - name: GetThread 메서드
+              href: icordebugprocess-getthread-method.md
+            - name: GetThreadContext 메서드
+              href: icordebugprocess-getthreadcontext-method.md
+            - name: IsOSSuspended 메서드
+              href: icordebugprocess-isossuspended-method.md
+            - name: IsTransitionStub 메서드
+              href: icordebugprocess-istransitionstub-method.md
+            - name: ModifyLogSwitch 메서드
+              href: icordebugprocess-modifylogswitch-method.md
+            - name: ReadMemory 메서드
+              href: icordebugprocess-readmemory-method.md
+            - name: SetThreadContext 메서드
+              href: icordebugprocess-setthreadcontext-method.md
+            - name: ThreadForFiberCookie 메서드
+              href: icordebugprocess-threadforfibercookie-method.md
+            - name: WriteMemory 메서드
+              href: icordebugprocess-writememory-method.md
+        - name: ICorDebugProcess2 인터페이스
+          href: icordebugprocess2-interface1.md
+          items:
+            - name: ClearUnmanagedBreakpoint 메서드
+              href: icordebugprocess2-clearunmanagedbreakpoint-method.md
+            - name: GetDesiredNGENCompilerFlags 메서드
+              href: icordebugprocess2-getdesiredngencompilerflags-method.md
+            - name: GetReferenceValueFromGCHandle 메서드
+              href: icordebugprocess2-getreferencevaluefromgchandle-method.md
+            - name: GetThreadForTaskID 메서드
+              href: icordebugprocess2-getthreadfortaskid-method.md
+            - name: GetVersion 메서드
+              href: icordebugprocess2-getversion-method.md
+            - name: SetDesiredNGENCompilerFlags 메서드
+              href: icordebugprocess2-setdesiredngencompilerflags-method.md
+            - name: SetUnmanagedBreakpoint 메서드
+              href: icordebugprocess2-setunmanagedbreakpoint-method.md
+        - name: ICorDebugProcess3 인터페이스
+          href: icordebugprocess3-interface.md
+          items:
+            - name: SetEnableCustomNotification 메서드
+              href: icordebugprocess3-setenablecustomnotification-method.md
+        - name: ICorDebugProcess4 인터페이스
+          href: icordebugprocess4-interface.md
+          items:
+            - name: ProcessStateChanged 메서드
+              href: icordebugprocess4-processstatechanged-method.md
+        - name: ICorDebugProcess5 인터페이스
+          href: icordebugprocess5-interface.md
+          items:
+            - name: EnableNGenPolicy 메서드
+              href: icordebugprocess5-enablengenpolicy-method.md
+            - name: EnumerateGCReferences 메서드
+              href: icordebugprocess5-enumerategcreferences-method.md
+            - name: EnumerateHandles 메서드
+              href: icordebugprocess5-enumeratehandles-method.md
+            - name: EnumerateHeap 메서드
+              href: icordebugprocess5-enumerateheap-method.md
+            - name: EnumerateHeapRegions 메서드
+              href: icordebugprocess5-enumerateheapregions-method.md
+            - name: GetArrayLayout 메서드
+              href: icordebugprocess5-getarraylayout-method.md
+            - name: GetGCHeapInformation 메서드
+              href: icordebugprocess5-getgcheapinformation-method.md
+            - name: GetObject 메서드
+              href: icordebugprocess5-getobject-method.md
+            - name: GetTypeFields 메서드
+              href: icordebugprocess5-gettypefields-method.md
+            - name: GetTypeForTypeID 메서드
+              href: icordebugprocess5-gettypefortypeid-method.md
+            - name: GetTypeID 메서드
+              href: icordebugprocess5-gettypeid-method.md
+            - name: GetTypeLayout 메서드
+              href: icordebugprocess5-gettypelayout-method.md
+        - name: ICorDebugProcess6 인터페이스
+          href: icordebugprocess6-interface.md
+          items:
+            - name: DecodeEvent 메서드
+              href: icordebugprocess6-decodeevent-method.md
+            - name: EnableVirtualModuleSplitting 메서드
+              href: icordebugprocess6-enablevirtualmodulesplitting-method.md
+            - name: GetCode 메서드
+              href: icordebugprocess6-getcode-method.md
+            - name: GetExportStepInfo 메서드
+              href: icordebugprocess6-getexportstepinfo-method.md
+            - name: MarkDebuggerAttached 메서드
+              href: icordebugprocess6-markdebuggerattached-method.md
+            - name: ProcessStateChanged 메서드
+              href: icordebugprocess6-processstatechanged-method.md
+        - name: ICorDebugProcess7 인터페이스
+          href: icordebugprocess7-interface.md
+          items:
+            - name: SetWriteableMetadataUpdateMode 메서드
+              href: icordebugprocess7-setwriteablemetadataupdatemode-method.md
+        - name: ICorDebugProcess8 인터페이스
+          href: icordebugprocess8-interface.md
+          items:
+            - name: EnableExceptionCallbacksOutsideOfMyCode 메서드
+              href: icordebugprocess8-enableexceptioncallbacksoutsideofmycode-method.md
+        - name: ICorDebugProcessEnum 인터페이스
+          href: icordebugprocessenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugprocessenum-next-method.md
+        - name: ICorDebugReferenceValue 인터페이스
+          href: icordebugreferencevalue-interface.md
+          items:
+            - name: Dereference 메서드
+              href: icordebugreferencevalue-dereference-method.md
+            - name: DereferenceStrong 메서드
+              href: icordebugreferencevalue-dereferencestrong-method.md
+            - name: GetValue 메서드
+              href: icordebugreferencevalue-getvalue-method.md
+            - name: IsNull 메서드
+              href: icordebugreferencevalue-isnull-method.md
+            - name: SetValue 메서드
+              href: icordebugreferencevalue-setvalue-method.md
+        - name: ICorDebugRegisterSet 인터페이스
+          href: icordebugregisterset-interface.md
+          items:
+            - name: GetRegisters 메서드
+              href: icordebugregisterset-getregisters-method.md
+            - name: GetRegistersAvailable 메서드
+              href: icordebugregisterset-getregistersavailable-method.md
+            - name: GetThreadContext 메서드
+              href: icordebugregisterset-getthreadcontext-method.md
+            - name: SetRegisters 메서드
+              href: icordebugregisterset-setregisters-method.md
+            - name: SetThreadContext 메서드
+              href: icordebugregisterset-setthreadcontext-method.md
+        - name: ICorDebugRegisterSet2 인터페이스
+          href: icordebugregisterset2-interface.md
+          items:
+            - name: GetRegisters 메서드
+              href: icordebugregisterset2-getregisters-method.md
+            - name: GetRegistersAvailable 메서드
+              href: icordebugregisterset2-getregistersavailable-method.md
+            - name: SetRegisters 메서드
+              href: icordebugregisterset2-setregisters-method.md
+        - name: ICorDebugRemote 인터페이스
+          href: icordebugremote-interface.md
+          items:
+            - name: 'ICorDebugRemote::CreateProcessEx 메서드'
+              href: icordebugremote-createprocessex-method.md
+            - name: 'ICorDebugRemote::DebugActiveProcessEx 메서드'
+              href: icordebugremote-debugactiveprocessex-method.md
+        - name: ICorDebugRemoteTarget 인터페이스
+          href: icordebugremotetarget-interface.md
+          items:
+            - name: 'ICorDebugRemoteTarget::GetHostName 메서드'
+              href: icordebugremotetarget-gethostname-method.md
+        - name: ICorDebugRuntimeUnwindableFrame 인터페이스
+          href: icordebugruntimeunwindableframe-interface.md
+        - name: ICorDebugStackWalk 인터페이스
+          href: icordebugstackwalk-interface.md
+          items:
+            - name: GetContext 메서드
+              href: icordebugstackwalk-getcontext-method.md
+            - name: SetContext 메서드
+              href: icordebugstackwalk-setcontext-method.md
+            - name: Next 메서드
+              href: icordebugstackwalk-next-method.md
+            - name: GetFrame 메서드
+              href: icordebugstackwalk-getframe-method.md
+        - name: ICorDebugStaticFieldSymbol 인터페이스
+          href: icordebugstaticfieldsymbol-interface.md
+          items:
+            - name: GetAddress 메서드
+              href: icordebugstaticfieldsymbol-getaddress-method.md
+            - name: GetName 메서드
+              href: icordebugstaticfieldsymbol-getname-method.md
+            - name: GetSize 메서드
+              href: icordebugstaticfieldsymbol-getsize-method.md
+        - name: ICorDebugStepper 인터페이스
+          href: icordebugstepper-interface.md
+          items:
+            - name: Deactivate 메서드
+              href: icordebugstepper-deactivate-method.md
+            - name: IsActive 메서드
+              href: icordebugstepper-isactive-method.md
+            - name: SetInterceptMask 메서드
+              href: icordebugstepper-setinterceptmask-method.md
+            - name: SetRangeIL 메서드
+              href: icordebugstepper-setrangeil-method.md
+            - name: SetUnmappedStopMask 메서드
+              href: icordebugstepper-setunmappedstopmask-method.md
+            - name: Step 메서드
+              href: icordebugstepper-step-method.md
+            - name: StepOut 메서드
+              href: icordebugstepper-stepout-method.md
+            - name: StepRange 메서드
+              href: icordebugstepper-steprange-method.md
+        - name: ICorDebugStepper2 인터페이스
+          href: icordebugstepper2-interface1.md
+          items:
+            - name: SetJMC 메서드
+              href: icordebugstepper2-setjmc-method.md
+        - name: ICorDebugStepperEnum 인터페이스
+          href: icordebugstepperenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugstepperenum-next-method.md
+        - name: ICorDebugStringValue 인터페이스
+          href: icordebugstringvalue-interface.md
+          items:
+            - name: GetLength 메서드
+              href: icordebugstringvalue-getlength-method.md
+            - name: GetString 메서드
+              href: icordebugstringvalue-getstring-method.md
+        - name: ICorDebugSymbolProvider 인터페이스
+          href: icordebugsymbolprovider-interface.md
+          items:
+            - name: GetAssemblyImageBytes 메서드
+              href: icordebugsymbolprovider-getassemblyimagebytes-method.md
+            - name: GetAssemblyImageMetadata 메서드
+              href: icordebugsymbolprovider-getassemblyimagemetadata-method.md
+            - name: GetCodeRange 메서드
+              href: icordebugsymbolprovider-getcoderange-method.md
+            - name: GetInstanceFieldSymbols 메서드
+              href: icordebugsymbolprovider-getinstancefieldsymbols-method.md
+            - name: GetMergedAssemblyRecords 메서드
+              href: icordebugsymbolprovider-getmergedassemblyrecords-method.md
+            - name: GetMethodLocalSymbols 메서드
+              href: icordebugsymbolprovider-getmethodlocalsymbols-method.md
+            - name: GetMethodParameterSymbols 메서드
+              href: icordebugsymbolprovider-getmethodparametersymbols-method.md
+            - name: GetMethodProps 메서드
+              href: icordebugsymbolprovider-getmethodprops-method.md
+            - name: GetObjectSize 메서드
+              href: icordebugsymbolprovider-getobjectsize-method.md
+            - name: GetStaticFieldSymbols 메서드
+              href: icordebugsymbolprovider-getstaticfieldsymbols-method.md
+            - name: GetTypeProps 메서드
+              href: icordebugsymbolprovider-gettypeprops-method.md
+        - name: ICorDebugSymbolProvider2 인터페이스
+          href: icordebugsymbolprovider2-interface.md
+          items:
+            - name: GetFrameProps 메서드
+              href: icordebugsymbolprovider2-getframeprops-method.md
+            - name: GetGenericDictionaryInfo 메서드
+              href: icordebugsymbolprovider2-getgenericdictionaryinfo-method.md
+        - name: ICorDebugThread 인터페이스
+          href: icordebugthread-interface.md
+          items:
+            - name: ClearCurrentException 메서드
+              href: icordebugthread-clearcurrentexception-method.md
+            - name: CreateEval 메서드
+              href: icordebugthread-createeval-method.md
+            - name: CreateStepper 메서드
+              href: icordebugthread-createstepper-method.md
+            - name: EnumerateChains 메서드
+              href: icordebugthread-enumeratechains-method.md
+            - name: GetActiveChain 메서드
+              href: icordebugthread-getactivechain-method.md
+            - name: GetActiveFrame 메서드
+              href: icordebugthread-getactiveframe-method.md
+            - name: GetAppDomain 메서드
+              href: icordebugthread-getappdomain-method.md
+            - name: GetCurrentException 메서드
+              href: icordebugthread-getcurrentexception-method.md
+            - name: GetDebugState 메서드
+              href: icordebugthread-getdebugstate-method.md
+            - name: GetHandle 메서드
+              href: icordebugthread-gethandle-method.md
+            - name: GetID 메서드
+              href: icordebugthread-getid-method.md
+            - name: GetObject 메서드
+              href: icordebugthread-getobject-method.md
+            - name: GetProcess 메서드
+              href: icordebugthread-getprocess-method.md
+            - name: GetRegisterSet 메서드
+              href: icordebugthread-getregisterset-method.md
+            - name: GetUserState 메서드
+              href: icordebugthread-getuserstate-method.md
+            - name: SetDebugState 메서드
+              href: icordebugthread-setdebugstate-method.md
+        - name: ICorDebugThread2 인터페이스
+          href: icordebugthread2-interface.md
+          items:
+            - name: GetActiveFunctions 메서드
+              href: icordebugthread2-getactivefunctions-method.md
+            - name: GetConnectionID 메서드
+              href: icordebugthread2-getconnectionid-method.md
+            - name: GetTaskID 메서드
+              href: icordebugthread2-gettaskid-method.md
+            - name: GetVolatileOSThreadID 메서드
+              href: icordebugthread2-getvolatileosthreadid-method.md
+            - name: InterceptCurrentException 메서드
+              href: icordebugthread2-interceptcurrentexception-method.md
+        - name: ICorDebugThread3 인터페이스
+          href: icordebugthread3-interface.md
+          items:
+            - name: CreateStackWalk 메서드
+              href: icordebugthread3-createstackwalk-method.md
+            - name: GetActiveInternalFrames 메서드
+              href: icordebugthread3-getactiveinternalframes-method.md
+        - name: ICorDebugThread4 인터페이스
+          href: icordebugthread4-interface.md
+          items:
+            - name: GetBlockingObjects 메서드
+              href: icordebugthread4-getblockingobjects-method.md
+            - name: HadUnhandledException 메서드
+              href: icordebugthread4-hadunhandledexception-method.md
+            - name: GetCurrentCustomDebuggerNotification 메서드
+              href: icordebugthread4-getcurrentcustomdebuggernotification-method.md
+        - name: ICorDebugThreadEnum 인터페이스
+          href: icordebugthreadenum-interface1.md
+          items:
+            - name: Next 메서드
+              href: icordebugthreadenum-next-method.md
+        - name: ICorDebugType 인터페이스
+          href: icordebugtype-interface.md
+          items:
+            - name: EnumerateTypeParameters 메서드
+              href: icordebugtype-enumeratetypeparameters-method.md
+            - name: GetBase 메서드
+              href: icordebugtype-getbase-method.md
+            - name: GetClass 메서드
+              href: icordebugtype-getclass-method.md
+            - name: GetFirstTypeParameter 메서드
+              href: icordebugtype-getfirsttypeparameter-method.md
+            - name: GetRank 메서드
+              href: icordebugtype-getrank-method.md
+            - name: GetStaticFieldValue 메서드
+              href: icordebugtype-getstaticfieldvalue-method.md
+            - name: GetType 메서드
+              href: icordebugtype-gettype-method.md
+        - name: ICorDebugType2 인터페이스
+          href: icordebugtype2-interface.md
+          items:
+            - name: GetTypeID 메서드
+              href: icordebugtype2-gettypeid-method.md
+        - name: ICorDebugTypeEnum 인터페이스
+          href: icordebugtypeenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugtypeenum-next-method.md
+        - name: ICorDebugUnmanagedCallback 인터페이스
+          href: icordebugunmanagedcallback-interface.md
+          items:
+            - name: DebugEvent 메서드
+              href: icordebugunmanagedcallback-debugevent-method.md
+        - name: ICorDebugValue 인터페이스
+          href: icordebugvalue-interface.md
+          items:
+            - name: CreateBreakpoint 메서드
+              href: icordebugvalue-createbreakpoint-method.md
+            - name: GetAddress 메서드
+              href: icordebugvalue-getaddress-method.md
+            - name: GetSize 메서드
+              href: icordebugvalue-getsize-method.md
+            - name: GetType 메서드
+              href: icordebugvalue-gettype-method.md
+        - name: ICorDebugValue2 인터페이스
+          href: icordebugvalue2-interface.md
+          items:
+            - name: GetExactType 메서드
+              href: icordebugvalue2-getexacttype-method.md
+        - name: ICorDebugValue3 인터페이스
+          href: icordebugvalue3-interface.md
+          items:
+            - name: GetSize64 메서드
+              href: icordebugvalue3-getsize64-method.md
+        - name: ICorDebugValueBreakpoint 인터페이스
+          href: icordebugvaluebreakpoint-interface.md
+          items:
+            - name: GetValue 메서드
+              href: icordebugvaluebreakpoint-getvalue-method.md
+        - name: ICorDebugValueEnum 인터페이스
+          href: icordebugvalueenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugvalueenum-next-method.md
+        - name: ICorDebugVariableHome 인터페이스
+          href: icordebugvariablehome-interface.md
+          items:
+            - name: GetArgumentIndex 메서드
+              href: icordebugvariablehome-getargumentindex-method.md
+            - name: GetCode 메서드
+              href: icordebugvariablehome-getcode-method.md
+            - name: GetLiveRange 메서드
+              href: icordebugvariablehome-getliverange-method.md
+            - name: GetLocationType 메서드
+              href: icordebugvariablehome-getlocationtype-method.md
+            - name: GetOffset 메서드
+              href: icordebugvariablehome-getoffset-method.md
+            - name: GetRegister 메서드
+              href: icordebugvariablehome-getregister-method.md
+            - name: GetSlotIndex 메서드
+              href: icordebugvariablehome-getslotindex-method.md
+        - name: ICorDebugVariableHomeEnum 인터페이스
+          href: icordebugvariablehomeenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icordebugvariablehomeenum-next-method.md
+        - name: ICorDebugVariableSymbol 인터페이스
+          href: icordebugvariablesymbol-interface.md
+          items:
+            - name: GetName 메서드
+              href: icordebugvariablesymbol-getname-method.md
+            - name: GetSize 메서드
+              href: icordebugvariablesymbol-getsize-method.md
+            - name: GetSlotIndex 메서드
+              href: icordebugvariablesymbol-getslotindex-method.md
+            - name: GetValue 메서드
+              href: icordebugvariablesymbol-getvalue-method.md
+            - name: SetValue 메서드
+              href: icordebugvariablesymbol-setvalue-method.md
+        - name: ICorDebugVirtualUnwinder 인터페이스
+          href: icordebugvirtualunwinder-interface.md
+          items:
+            - name: GetContext 메서드
+              href: icordebugvirtualunwinder-getcontext-method.md
+            - name: Next 메서드
+              href: icordebugvirtualunwinder-next-method.md
+        - name: ICorPublish 인터페이스
+          href: icorpublish-interface.md
+          items:
+            - name: EnumProcesses 메서드
+              href: icorpublish-enumprocesses-method.md
+            - name: GetProcess 메서드
+              href: icorpublish-getprocess-method.md
+        - name: ICorPublishAppDomain 인터페이스
+          href: icorpublishappdomain-interface.md
+          items:
+            - name: GetID 메서드
+              href: icorpublishappdomain-getid-method.md
+            - name: GetName 메서드
+              href: icorpublishappdomain-getname-method.md
+        - name: ICorPublishAppDomainEnum 인터페이스
+          href: icorpublishappdomainenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icorpublishappdomainenum-next-method.md
+        - name: ICorPublishEnum 인터페이스
+          href: icorpublishenum-interface.md
+          items:
+            - name: Clone 메서드
+              href: icorpublishenum-clone-method.md
+            - name: GetCount 메서드
+              href: icorpublishenum-getcount-method.md
+            - name: Reset 메서드
+              href: icorpublishenum-reset-method.md
+            - name: Skip 메서드
+              href: icorpublishenum-skip-method.md
+        - name: ICorPublishProcess 인터페이스
+          href: icorpublishprocess-interface.md
+          items:
+            - name: EnumAppDomains 메서드
+              href: icorpublishprocess-enumappdomains-method.md
+            - name: GetDisplayName 메서드
+              href: icorpublishprocess-getdisplayname-method.md
+            - name: GetProcessID 메서드
+              href: icorpublishprocess-getprocessid-method.md
+            - name: IsManaged 메서드
+              href: icorpublishprocess-ismanaged-method.md
+        - name: ICorPublishProcessEnum 인터페이스
+          href: icorpublishprocessenum-interface.md
+          items:
+            - name: Next 메서드
+              href: icorpublishprocessenum-next-method.md
+        - name: ISOSDacInterface 인터페이스
+          href: isosdacinterface-interface.md
+          items:
+            - name: GetMethodDescData
+              href: isosdacinterface-getmethoddescdata-method.md
+            - name: GetMethodDescPtrFromIP
+              href: isosdacinterface-getmethoddescptrfromip-method.md
+            - name: GetModuleData
+              href: isosdacinterface-getmoduledata-method.md
+        - name: IXCLRDataMethodDefinition 인터페이스
+          href: ixclrdatamethoddefinition-interface.md
+          items:
+            - name: StartEnumInstances
+              href: ixclrdatamethoddefinition-startenuminstances-method.md
+            - name: EnumInstance
+              href: ixclrdatamethoddefinition-enuminstance-method.md
+            - name: EndEnumInstances
+              href: ixclrdatamethoddefinition-endenuminstances-method.md
+        - name: IXCLRDataMethodInstance 인터페이스
+          href: ixclrdatamethodinstance-interface.md
+          items:
+            - name: GetILAddressMap
+              href: ixclrdatamethodinstance-getiladdressmap-method.md
+            - name: GetRepresentativeEntryAddress
+              href: ixclrdatamethodinstance-getrepresentativeentryaddress-method.md
+        - name: IXCLRDataModule 인터페이스
+          href: ixclrdatamodule-interface.md
+          items:
+            - name: GetMethodDefinitionByToken
+              href: ixclrdatamodule-getmethoddefinitionbytoken-method.md
+            - name: 요청
+              href: ixclrdatamodule-request-method.md
+            - name: GetVersionId
+              href: ixclrdatamodule-getversionid-method.md
+        - name: IXCLRDataProcess 인터페이스
+          href: ixclrdataprocess-interface.md
+          items:
+            - name: GetAppDomainByUniqueId
+              href: ixclrdataprocess-getappdomainbyuniqueid-method.md
+            - name: StartEnumModules
+              href: ixclrdataprocess-startenummodules-method.md
+            - name: EnumModule
+              href: ixclrdataprocess-enummodule-method.md
+            - name: EndEnumModules
+              href: ixclrdataprocess-endenummodules-method.md
+            - name: StartEnumMethodInstancesByAddress
+              href: ixclrdataprocess-startenummethodinstancesbyaddress-method.md
+            - name: EnumMethodInstanceByAddress
+              href: ixclrdataprocess-enummethodinstancebyaddress-method.md
+            - name: EndEnumMethodInstancesByAddress
+              href: ixclrdataprocess-endenummethodinstancesbyaddress-method.md
+    - name: 디버깅 전역 정적 함수
+      href: debugging-global-static-functions.md
+      items:
+        - name: _EFN_GetManagedExcepStack 함수
+          href: efn-getmanagedexcepstack-function.md
+        - name: _EFN_GetManagedObjectFieldInfo 함수
+          href: efn-getmanagedobjectfieldinfo-function.md
+        - name: _EFN_GetManagedObjectName 함수
+          href: efn-getmanagedobjectname-function.md
+        - name: _EFN_StackTrace 함수
+          href: efn-stacktrace-function.md
+        - name: CLRDataCreateInstance 함수
+          href: clrdatacreateinstance-function.md
+        - name: PFN_CLRDataCreateInstance 함수 포인터
+          href: pfn-clrdatacreateinstance-function-pointer.md
+    - name: 디버깅 열거형
+      href: debugging-enumerations.md
+      items:
+        - name: CLR_DEBUGGING_PROCESS_FLAGS 열거형
+          href: clr-debugging-process-flags-enumeration.md
+        - name: CLRDataEnumMemoryFlags 열거형
+          href: clrdataenummemoryflags-enumeration.md
+        - name: ClrDataSourceType 열거형
+          href: clrdatasourcetype-enumeration.md
+        - name: COR_PUB_ENUMPROCESS 열거형
+          href: cor-pub-enumprocess-enumeration.md
+        - name: CorDebugBlockingReason 열거형
+          href: cordebugblockingreason-enumeration.md
+        - name: CorDebugChainReason 열거형
+          href: cordebugchainreason-enumeration.md
+        - name: CorDebugCodeInvokeKind 열거형
+          href: cordebugcodeinvokekind-enumeration.md
+        - name: CorDebugCodeInvokePurpose 열거형
+          href: cordebugcodeinvokepurpose-enumeration.md
+        - name: CorDebugCreateProcessFlags 열거형
+          href: cordebugcreateprocessflags-enumeration.md
+        - name: CorDebugDebugEventKind 열거형
+          href: cordebugdebugeventkind-enumeration.md
+        - name: CorDebugDecodeEventFlagsWindows 열거형
+          href: cordebugdecodeeventflagswindows-enumeration.md
+        - name: CorDebugExceptionCallbackType 열거형
+          href: cordebugexceptioncallbacktype-enumeration.md
+        - name: CorDebugExceptionFlags 열거형
+          href: cordebugexceptionflags-enumeration.md
+        - name: CorDebugExceptionUnwindCallbackType 열거형
+          href: cordebugexceptionunwindcallbacktype-enumeration.md
+        - name: CorDebugGCType 열거형
+          href: cordebuggctype-enumeration.md
+        - name: CorDebugGenerationTypes 열거형
+          href: cordebuggenerationtypes-enumeration.md
+        - name: CorDebugHandleType 열거형
+          href: cordebughandletype-enumeration.md
+        - name: CorDebugIlToNativeMappingTypes 열거형
+          href: cordebugiltonativemappingtypes-enumeration.md
+        - name: CorDebugIntercept 열거형
+          href: cordebugintercept-enumeration.md
+        - name: CorDebugInterfaceVersion 열거형
+          href: cordebuginterfaceversion-enumeration.md
+        - name: CorDebugInternalFrameType 열거형
+          href: cordebuginternalframetype-enumeration.md
+        - name: CorDebugJITCompilerFlags 열거형
+          href: cordebugjitcompilerflags-enumeration.md
+        - name: CorDebugJITCompilerFlagsDeprecated 열거형
+          href: cordebugjitcompilerflagsdeprecated-enumeration.md
+        - name: CorDebugMappingResult 열거형
+          href: cordebugmappingresult-enumeration.md
+        - name: CorDebugMDAFlags 열거형
+          href: cordebugmdaflags-enumeration.md
+        - name: CorDebugNGenPolicy 열거형
+          href: cordebugngenpolicy-enumeration.md
+        - name: CorDebugPlatform 열거형
+          href: cordebugplatform-enumeration.md
+        - name: CorDebugRecordFormat 열거형
+          href: cordebugrecordformat-enumeration.md
+        - name: CorDebugRegister 열거형
+          href: cordebugregister-enumeration.md
+        - name: CorDebugSetContextFlag 열거형
+          href: cordebugsetcontextflag-enumeration.md
+        - name: CorDebugStateChange 열거형
+          href: cordebugstatechange-enumeration.md
+        - name: CorDebugStepReason 열거형
+          href: cordebugstepreason-enumeration.md
+        - name: CorDebugThreadState 열거형
+          href: cordebugthreadstate-enumeration.md
+        - name: CorDebugUnmappedStop 열거형
+          href: cordebugunmappedstop-enumeration.md
+        - name: CorDebugUserState 열거형
+          href: cordebuguserstate-enumeration.md
+        - name: CorGCReferenceType 열거형
+          href: corgcreferencetype-enumeration.md
+        - name: ILCodeKind 열거형
+          href: ilcodekind-enumeration.md
+        - name: LoggingLevelEnum 열거형
+          href: logginglevelenum-enumeration.md
+        - name: LogSwitchCallReason 열거형
+          href: logswitchcallreason-enumeration.md
+        - name: VariableLocationType 열거형
+          href: variablelocationtype-enumeration.md
+        - name: WriteableMetadataUpdateMode 열거형
+          href: writeablemetadataupdatemode-enumeration.md
+    - name: 디버깅 구조체
+      href: debugging-structures.md
+      items:
+        - name: CLRDATA_ADDRESS_RANGE 구조체
+          href: clrdata-address-range-structure.md
+        - name: CLRDATA_IL_ADDRESS_MAP 구조체
+          href: clrdata-il-address-map-structure.md
+        - name: CLR_DEBUGGING_VERSION 구조체
+          href: clr-debugging-version-structure.md
+        - name: CodeChunkInfo 구조체
+          href: codechunkinfo-structure.md
+        - name: COR_ACTIVE_FUNCTION 구조체
+          href: cor-active-function-structure.md
+        - name: COR_ARRAY_LAYOUT 구조체
+          href: cor-array-layout-structure.md
+        - name: COR_DEBUG_IL_TO_NATIVE_MAP 구조체
+          href: cor-debug-il-to-native-map-structure.md
+        - name: COR_DEBUG_STEP_RANGE 구조체
+          href: cor-debug-step-range-structure.md
+        - name: COR_FIELD 구조체
+          href: cor-field-structure.md
+        - name: COR_GC_REFERENCE 구조체
+          href: cor-gc-reference-structure.md
+        - name: COR_HEAPINFO 구조체
+          href: cor-heapinfo-structure.md
+        - name: COR_HEAPOBJECT 구조체
+          href: cor-heapobject-structure.md
+        - name: COR_IL_MAP 구조체
+          href: cor-il-map-structure.md
+        - name: COR_SEGMENT 구조체
+          href: cor-segment-structure.md
+        - name: COR_TYPEID 구조체
+          href: cor-typeid-structure.md
+        - name: COR_TYPE_LAYOUT 구조체
+          href: cor-type-layout-structure.md
+        - name: COR_VERSION 구조체
+          href: cor-version-structure.md
+        - name: CorDebugBlockingObject 구조체
+          href: cordebugblockingobject-structure.md
+        - name: CorDebugEHClause 구조
+          href: cordebugehclause-structure.md
+        - name: CorDebugExceptionObjectStackFrame 구조체
+          href: cordebugexceptionobjectstackframe-structure.md
+        - name: CorDebugGuidToTypeMapping 구조체
+          href: cordebugguidtotypemapping-structure.md
+        - name: DacpMethodDescData 구조체
+          href: dacpmethoddescdata-structure.md
+        - name: DacpModuleData 구조체
+          href: dacpmoduledata-structure.md
+        - name: DacpReJitData 구조체
+          href: dacprejitdata-structure.md
+        - name: StackTrace_SimpleContext 구조체
+          href: stacktrace-simplecontext-structure.md
+    - name: Silverlight 디버깅
+      href: silverlight-debugging.md
+      items:
+        - name: CloseCLREnumeration 함수
+          href: closeclrenumeration-function.md
+        - name: CreateCoreClrDebugTarget 함수
+          href: createcoreclrdebugtarget-function.md
+        - name: CreateCordbObject 함수
+          href: createcordbobject-function.md
+        - name: CreateVersionStringFromModule 함수
+          href: createversionstringfrommodule-function.md
+        - name: CreateDebuggingInterfaceFromVersion 함수
+          href: createdebugginginterfacefromversion-function-for-silverlight.md
+        - name: CoreClrDebugProcInfo 구조체
+          href: coreclrdebugprocinfo-structure.md
+        - name: CoreClrDebugRuntimeInfo 구조체
+          href: coreclrdebugruntimeinfo-structure.md
+        - name: EnumerateCLRs 함수
+          href: enumerateclrs-function.md
+        - name: GetStartupNotificationEvent 함수
+          href: getstartupnotificationevent-function.md
+        - name: ICoreClrDebugTarget 인터페이스
+          href: icoreclrdebugtarget-interface.md
+          items:
+            - name: 'ICoreClrDebugTarget::EnumProcesses 메서드'
+              href: icoreclrdebugtarget-enumprocesses-method.md
+            - name: 'ICoreClrDebugTarget::EnumRuntimes 메서드'
+              href: icoreclrdebugtarget-enumruntimes-method.md
+            - name: 'ICoreClrDebugTarget::FreeMemory 메서드'
+              href: icoreclrdebugtarget-freememory-method.md
+        - name: InitDbgTransportManager 함수
+          href: initdbgtransportmanager-function.md
+        - name: ShutdownDbgTransportManager 함수
+          href: shutdowndbgtransportmanager-function.md

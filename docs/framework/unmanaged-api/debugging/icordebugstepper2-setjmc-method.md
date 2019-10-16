@@ -17,33 +17,33 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ad05d2f6226d570fc854fb48575851dd718e410
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 5c6b53d23410dd310766dab44664c8cd865ee9ba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418199"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771689"
 ---
 # <a name="icordebugstepper2setjmc-method"></a>ICorDebugStepper2::SetJMC 메서드
-응용 프로그램 개발자가 작성 하는 코드를 사용할 때만이 ICorDebugStepper 단계 있는지 여부를 지정 하는 값을 설정 합니다. 이 프로세스와 내 코드만 (JMC) 디버깅 말합니다.  
+응용 프로그램의 개발자가 작성 된 코드를 통해서만이 ICorDebugStepper 단계 여부를 지정 하는 값을 설정 합니다. 이 프로세스는으로 내 코드만 (JMC) 디버깅 라고도 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetJMC (  
     [in] BOOL    fIsJMCStepper  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `fIsJMCStepper`  
- [in] 로 설정 `true` 응용 프로그램 개발자가 작성 합니다; 그렇지 않으면로 설정 되는 코드를 사용할 때만 단계로 `false`합니다.  
+ [in] 로 `true` 코드는 응용 프로그램의 개발자가 작성 한이 고, 그렇지로 단계별로 `false`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

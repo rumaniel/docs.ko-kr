@@ -7,30 +7,30 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], how-to topics
 ms.assetid: 006aa461-fe37-4cd8-860a-d38d76e8b9f7
-ms.openlocfilehash: 2319ea8522a90705cf65006ffb368801921cda57
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: d3d5116a2fa2198661050a1c1adbae9512cd078a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45742812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790886"
 ---
 # <a name="textbox-how-to-topics"></a>TextBox 방법 항목
 이 섹션에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주는 예제를 제공 합니다 <xref:System.Windows.Controls.TextBox> 제어 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [여러 줄 TextBox 컨트롤 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-multiline-textbox-control.md)  
- [TextBox에서 텍스트가 변경되는 시점 감지](../../../../docs/framework/wpf/controls/how-to-detect-when-text-in-a-textbox-has-changed.md)  
- [TextBox 컨트롤에서 탭 문자 사용](../../../../docs/framework/wpf/controls/how-to-enable-tab-characters-in-a-textbox-control.md)  
- [TextBox에서 줄 컬렉션 가져오기](../../../../docs/framework/wpf/controls/how-to-get-a-collection-of-lines-from-a-textbox.md)  
- [TextBox 컨트롤을 읽기 전용으로 설정](../../../../docs/framework/wpf/controls/how-to-make-a-textbox-control-read-only.md)  
- [TextBox 컨트롤의 텍스트 시작 또는 끝 위치에 커서 놓기](../../../../docs/framework/wpf/controls/position-the-cursor-at-the-beginning-or-end-of-text.md)  
- [텍스트 선택 검색](../../../../docs/framework/wpf/controls/how-to-retrieve-a-text-selection.md)  
- [TextBox 컨트롤에서 포커스 설정](../../../../docs/framework/wpf/controls/how-to-set-focus-in-a-textbox-control.md)  
- [TextBox 컨트롤의 텍스트 내용 설정](../../../../docs/framework/wpf/controls/how-to-set-the-text-content-of-a-textbox-control.md)  
- [텍스트 편집 컨트롤에서 맞춤법 검사 사용](../../../../docs/framework/wpf/controls/how-to-enable-spell-checking-in-a-text-editing-control.md)  
- [TextBox에 사용자 지정 컨텍스트 메뉴 사용](../../../../docs/framework/wpf/controls/how-to-use-a-custom-context-menu-with-a-textbox.md)  
- [상황에 맞는 메뉴로 맞춤법 검사 사용](../../../../docs/framework/wpf/controls/how-to-use-spell-checking-with-a-context-menu.md)  
- [TextBox에 워터마크 추가](../../../../docs/framework/wpf/controls/how-to-add-a-watermark-to-a-textbox.md)  
+ [여러 줄 TextBox 컨트롤 만들기](how-to-create-a-multiline-textbox-control.md)  
+ [TextBox에서 텍스트가 변경되는 시점 감지](how-to-detect-when-text-in-a-textbox-has-changed.md)  
+ [TextBox 컨트롤에서 탭 문자 사용](how-to-enable-tab-characters-in-a-textbox-control.md)  
+ [TextBox에서 줄 컬렉션 가져오기](how-to-get-a-collection-of-lines-from-a-textbox.md)  
+ [TextBox 컨트롤을 읽기 전용으로 설정](how-to-make-a-textbox-control-read-only.md)  
+ [TextBox 컨트롤의 텍스트 시작 또는 끝 위치에 커서 놓기](position-the-cursor-at-the-beginning-or-end-of-text.md)  
+ [텍스트 선택 검색](how-to-retrieve-a-text-selection.md)  
+ [TextBox 컨트롤에서 포커스 설정](how-to-set-focus-in-a-textbox-control.md)  
+ [TextBox 컨트롤의 텍스트 내용 설정](how-to-set-the-text-content-of-a-textbox-control.md)  
+ [텍스트 편집 컨트롤에서 맞춤법 검사 사용](how-to-enable-spell-checking-in-a-text-editing-control.md)  
+ [TextBox에 사용자 지정 컨텍스트 메뉴 사용](how-to-use-a-custom-context-menu-with-a-textbox.md)  
+ [상황에 맞는 메뉴로 맞춤법 검사 사용](how-to-use-spell-checking-with-a-context-menu.md)  
+ [TextBox에 워터마크 추가](how-to-add-a-watermark-to-a-textbox.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.TextBox>  
@@ -41,6 +41,7 @@ ms.locfileid: "45742812"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a>참고 항목  
- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)  
- [TextBox 스타일 및 템플릿](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)
+## <a name="see-also"></a>참고자료
+
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)
+- [TextBox 스타일 및 템플릿](textbox-styles-and-templates.md)

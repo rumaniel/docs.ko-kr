@@ -1,18 +1,18 @@
 ---
-title: '&lt;paramref&gt; (Visual Basic)'
+title: <paramref>(Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - paramref XML tag
 - <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
-ms.openlocfilehash: 153f5ddeeb7d09159049af4d466b0695f5cb6f23
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3e2bf7990343a325bbecc56f6d3754a77f1e08e2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43503204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940844"
 ---
-# <a name="ltparamrefgt-visual-basic"></a>&lt;paramref&gt; (Visual Basic)
+# <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
 단어를 형식을 매개 변수로 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -21,7 +21,7 @@ ms.locfileid: "43503204"
 <paramref name="name"/>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `name`  
  참조할 매개 변수의 이름입니다. 이름을 큰따옴표(“ ”)로 묶습니다.  
   
@@ -33,7 +33,8 @@ ms.locfileid: "43503204"
 ## <a name="example"></a>예제  
  이 예제에서는 합니다 `<paramref>` 참조 하는 태그를 `id` 매개 변수입니다.  
   
- [!code-vb[VbVbcnXmlDocComments#6](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/paramref_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#6)]  
   
-## <a name="see-also"></a>참고 항목  
- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>참고자료
+
+- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 769802eae048427325af9807d788b1fbc5a15665
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b4f34340c18fddc46695fe64946c3afd90ed7454
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448434"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772299"
 ---
 # <a name="cortokentype-enumeration"></a>CorTokenType 열거형
 메타 데이터 토큰의 유형을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorTokenType {  
   
     mdtModule                       = 0x00000000,  
@@ -63,7 +63,7 @@ typedef enum CorTokenType {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`mdtModule`|`mdModule` 토큰입니다.|  
 |`mdtTypeRef`|`mdTypeRef` 토큰입니다.|  
@@ -93,14 +93,15 @@ typedef enum CorTokenType {
 |`mdtBaseType`|사용되지 않습니다.|  
   
 ## <a name="remarks"></a>설명  
- 각 값은 해당 메타 데이터 토큰에서 최상위 바이트의 값과 같습니다.  
+ 각 값은 최상위 바이트의 값에 해당 메타 데이터 토큰에서.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorHdr.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

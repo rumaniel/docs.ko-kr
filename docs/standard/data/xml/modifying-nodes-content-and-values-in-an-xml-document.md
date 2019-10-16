@@ -5,25 +5,25 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208584"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647883"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>XML 문서에서 노드, 내용 및 값 수정
 여러 가지 방법으로 문서에서 노드와 내용을 수정할 수 있습니다. 다음과 같은 작업을 수행할 수 있습니다.  
   
--   <xref:System.Xml.XmlNode.Value%2A> 속성을 사용하여 노드 값을 변경할 수 있습니다.  
+- <xref:System.Xml.XmlNode.Value%2A> 속성을 사용하여 노드 값을 변경할 수 있습니다.  
   
--   노드를 새 노드로 바꿔 전체 노드 집합을 수정할 수 있습니다. 이 작업은 <xref:System.Xml.XmlNode.InnerXml%2A> 속성을 사용하여 수행합니다.  
+- 노드를 새 노드로 바꿔 전체 노드 집합을 수정할 수 있습니다. 이 작업은 <xref:System.Xml.XmlNode.InnerXml%2A> 속성을 사용하여 수행합니다.  
   
--   <xref:System.Xml.XmlNode.RemoveChild%2A> 메서드를 사용하여 기존 노드를 새 노드로 바꿀 수 있습니다.  
+- <xref:System.Xml.XmlNode.RemoveChild%2A> 메서드를 사용하여 기존 노드를 새 노드로 바꿀 수 있습니다.  
   
--   <xref:System.Xml.XmlCharacterData>, <xref:System.Xml.XmlCharacterData.AppendData%2A> 또는 <xref:System.Xml.XmlCharacterData.InsertData%2A> 메서드를 사용하여 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 클래스에서 상속된 노드에 문자를 추가할 수 있습니다.  
+- <xref:System.Xml.XmlCharacterData>, <xref:System.Xml.XmlCharacterData.AppendData%2A> 또는 <xref:System.Xml.XmlCharacterData.InsertData%2A> 메서드를 사용하여 <xref:System.Xml.XmlCharacterData.ReplaceData%2A> 클래스에서 상속된 노드에 문자를 추가할 수 있습니다.  
   
--   <xref:System.Xml.XmlCharacterData.DeleteData%2A>에서 상속된 노드 형식에서 <xref:System.Xml.XmlCharacterData> 메서드로 문자 범위를 제거하여 내용을 수정할 수 있습니다.  
+- <xref:System.Xml.XmlCharacterData.DeleteData%2A>에서 상속된 노드 형식에서 <xref:System.Xml.XmlCharacterData> 메서드로 문자 범위를 제거하여 내용을 수정할 수 있습니다.  
   
  `node.Value = "new value";`를 사용하면 쉽게 노드 값을 변경할 수 있습니다. 다음 표에서는 이 한 줄 코드를 사용할 수 있는 노드 형식 및 이 노드 형식에 대해 변경되는 데이터를 보여 줍니다.  
   

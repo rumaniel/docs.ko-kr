@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e065d458-a128-44f2-9f17-66af9d5be954
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0a00edbf2d5833349de14986f2a57a2c943f3ea8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 12b26c8cc01b7af1c3b345d2f274a1d25a19d689
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33388435"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70789849"
 ---
 # <a name="mitigation-serialization-of-control-characters-with-the-datacontractjsonserializer"></a>완화: DataContractJsonSerializer로 제어 문자 serialization
 
@@ -27,8 +27,6 @@ ms.locfileid: "33388435"
 .NET Framework 4.7 이상의 .NET Framework 버전을 대상으로 하는 앱의 경우 이러한 제어 문자의 serialization이 ECMAScript V6 및 V8과 호환됩니다. 다음 API가 영향을 받습니다.
 
 - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 
-- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
-- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A>
 
 ## <a name="mitigation"></a>완화
 
@@ -43,4 +41,5 @@ ms.locfileid: "33388435"
 ```
  
 ## <a name="see-also"></a>참고 항목
-[.NET Framework 4.7.1의 대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+
+- [.NET Framework 4.7.1의 대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-7.md)

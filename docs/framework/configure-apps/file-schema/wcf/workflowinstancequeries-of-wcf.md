@@ -1,30 +1,31 @@
 ---
-title: WCF의 &lt;workflowInstanceQueries&gt;
+title: <workflowInstanceQueries>WCF의
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
-ms.openlocfilehash: 300637031c64f7c9e072f04835fc3590348ddc9e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8a58767745efab67fb7550de8770fec2c6226117
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192696"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70854776"
 ---
-# <a name="ltworkflowinstancequeriesgt-of-wcf"></a>WCF의 &lt;workflowInstanceQueries&gt;
+# <a name="workflowinstancequeries-of-wcf"></a>\<WCF의 Workflowinstancequeries&gt >
 
 시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 구성 요소의 컬렉션을 나타냅니다.  
   
-추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md) 을 참조 하세요.  
   
-\<system.serviceModel>  
-\<tracking>  
-\<프로필 >  
-\<trackingProfile>  
-\<workflow>  
-\<workflowInstanceQueries>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<추적 >** ](tracking-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<프로필 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Tracking&gt >** ](trackingprofile-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<워크플로 >** ](workflow-of-wcf.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<Workflowinstancequeries&gt >**  
   
 ## <a name="syntax"></a>구문  
   
-```xml
+```xml  
 <tracking>
   <profiles>
     <trackingProfile name="Name">
@@ -32,7 +33,7 @@ ms.locfileid: "50192696"
         <workflowInstanceQueries>
           <workflowInstanceQuery>
             <states>
-              <state name="Name"/>
+              <state name="Name" />
             </states>
           </workflowInstanceQuery>
         </workflowInstanceQueries>
@@ -40,7 +41,7 @@ ms.locfileid: "50192696"
     </trackingProfile>
   </profiles>
 </tracking>
-```
+```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소
 
@@ -60,7 +61,7 @@ ms.locfileid: "50192696"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소를 [activityDefinitionId](https://msdn.microsoft.com/library/system.servicemodel.activities.tracking.configuration.profileworkflowelement.activitydefinitionid(VS.100).aspx) 속성입니다.|  
+|[\<workflow>](../windows-workflow-foundation/workflow.md)|[ActivityDefinitionId](xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileWorkflowElement.ActivityDefinitionId) 속성으로 식별 되는 특정 워크플로에 대 한 모든 쿼리를 포함 하는 구성 요소입니다.|  
   
 ## <a name="remarks"></a>설명
 
@@ -82,17 +83,17 @@ ms.locfileid: "50192696"
   
 ```xml  
 <workflowInstanceQueries>
-  <workflowInstanceQuery>  
-    <states>  
-      <state name="Started"/>  
-    </states>  
-  </workflowInstanceQuery>  
+  <workflowInstanceQuery>
+    <states>
+      <state name="Started" />
+    </states>
+  </workflowInstanceQuery>
 </workflowInstanceQueries>
-```
+```  
   
 ## <a name="see-also"></a>참고자료
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
-- [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+- [워크플로 추적](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)

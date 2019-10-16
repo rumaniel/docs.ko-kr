@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ae2ea457-0764-4b06-8977-713c77e85bd2
-ms.openlocfilehash: c80f65ad2a4c7c48e32615c3cfdf754996f91bc1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9f4aade2bdcbccf99c0b7259e8e2dc3a750855ba
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187873"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780675"
 ---
 # <a name="windows-applications-using-callbacks"></a>콜백을 사용하는 Windows 응용 프로그램
 대부분의 비동기 처리 시나리오에서 사용자는 데이터베이스 작업을 시작하면서 해당 데이터베이스 작업이 완료되기 전에 다른 프로세스를 계속해서 실행하고자 합니다. 그러나 많은 시나리오에서는 일단 데이터베이스 작업이 종료된 후 다른 작업을 수행해야 합니다. 예를 들어, Windows 응용 프로그램에서는 장기 실행 작업을 배경 스레드에 위임하면서 사용자 인터페이스 스레드가 응답을 유지하도록 할 수 있습니다. 그러나 데이터베이스 작업이 완료되면 결과를 사용하여 폼을 채웁니다. 이러한 종류의 시나리오는 콜백을 사용할 때 가장 효과적으로 구현됩니다.  
@@ -18,11 +18,11 @@ ms.locfileid: "50187873"
  콜백을 정의하려면 <xref:System.AsyncCallback>, <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 또는 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteReader%2A> 메서드에 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A> 대리자를 지정합니다. 이 대리자는 작업이 완료될 때 호출됩니다. <xref:System.Data.SqlClient.SqlCommand>에 대한 참조를 대리자에게 전달하여 <xref:System.Data.SqlClient.SqlCommand> 개체에 보다 손쉽게 액세스하고 전역 변수를 사용하지 않고도 적절한 `End` 메서드를 호출할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 Windows 응용 프로그램에서는 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 메서드를 사용하여 장기 실행 명령을 에뮬레이션하는 몇 초 간의 지연이 포함된 Transact-SQL 문을 실행하는 방법을 보여 줍니다.  
+ 다음 Windows 애플리케이션에서는 <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A> 메서드를 사용하여 장기 실행 명령을 에뮬레이션하는 몇 초 간의 지연이 포함된 Transact-SQL 문을 실행하는 방법을 보여 줍니다.  
   
  이 예제에서는 개별 스레드의 폼과 상호 작용하는 메서드를 호출하는 것을 비롯하여 여러 가지 중요한 기법을 보여 줍니다. 또한 이 예제에서는 사용자가 하나의 명령을 동시에 여러 번 실행하지 못하도록 해야 하는 이유와 콜백 프로시저를 호출하기 전에 폼을 닫지 않아야 하는 이유를 설명합니다.  
   
- 이 예제를 설정하려면 새 Windows 응용 프로그램을 만듭니다. 해당 폼에 <xref:System.Windows.Forms.Button> 컨트롤과 두 <xref:System.Windows.Forms.Label> 컨트롤의 위치를 지정합니다. 각 컨트롤의 이름은 기본 이름을 사용합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정하여 다음 코드를 폼의 클래스에 추가합니다.  
+ 이 예제를 설정하려면 새 Windows 애플리케이션을 만듭니다. 해당 폼에 <xref:System.Windows.Forms.Button> 컨트롤과 두 <xref:System.Windows.Forms.Label> 컨트롤의 위치를 지정합니다. 각 컨트롤의 이름은 기본 이름을 사용합니다. 사용자 환경의 필요에 따라 연결 문자열을 수정하여 다음 코드를 폼의 클래스에 추가합니다.  
   
 ```vb  
 ' Add these to the top of the class:  
@@ -127,9 +127,7 @@ Imports System.Data.SqlClient
   
             Catch ex As Exception  
                 isExecuting = False  
-                DisplayStatus( _  
-                    String.Format("Ready (last error: {0})", _  
-                    ex.Message))  
+                DisplayStatus($"Ready (last error: {ex.Message})")
                 If connection IsNot Nothing Then  
                     connection.Close()  
                 End If  
@@ -183,7 +181,7 @@ Imports System.Data.SqlClient
             ' invoke it, like this:  
             Me.Invoke(New _  
                 DisplayInfoDelegate(AddressOf DisplayStatus), _  
-                String.Format("Ready(last error: {0}", ex.Message))  
+                $"Ready (last error: {ex.Message}")
         Finally  
             isExecuting = False  
             If connection IsNot Nothing Then  
@@ -301,8 +299,7 @@ private void button1_Click(object sender, System.EventArgs e)
         catch (Exception ex)  
         {  
             isExecuting = false;  
-            DisplayStatus(   
-             string.Format("Ready (last error: {0})", ex.Message));  
+            DisplayStatus($"Ready (last error: {ex.Message})");
             if (connection != null)  
             {  
                 connection.Close();  
@@ -358,7 +355,7 @@ private void HandleCallback(IAsyncResult result)
         // You can create the delegate instance as you   
         // invoke it, like this:  
         this.Invoke(new DisplayInfoDelegate(DisplayStatus),  
-        String.Format("Ready(last error: {0}", ex.Message));  
+            $"Ready (last error: {ex.Message}");
     }  
     finally  
     {  
@@ -378,6 +375,7 @@ private void Form1_Load(object sender, System.EventArgs e)
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [비동기 작업](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [비동기 작업](asynchronous-operations.md)
+- [ADO.NET 개요](../ado-net-overview.md)

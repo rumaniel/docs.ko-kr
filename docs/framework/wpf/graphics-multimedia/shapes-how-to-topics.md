@@ -9,24 +9,25 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: d3b14881cc1366cefb4d11c9d14654c15952624b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973682"
 ---
 # <a name="shapes-how-to-topics"></a>Shape 방법 항목
-이 섹션의 항목을 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Shapes.Shape> 개체를 화면에 기본 도형을 그립니다.  
+이 섹션의에서 항목에서는 사용 하는 방법을 보여 줍니다 <xref:System.Windows.Shapes.Shape> 화면에 기본 도형을 그릴 개체입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Polygon 요소를 사용하여 닫힌 도형 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [타원 또는 원 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [선 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [Polyline 요소를 사용하여 다중선 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [사각형 그리기](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [줄 또는 세그먼트 끝에서 끝 모양 수정](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+ [Polygon 요소를 사용하여 닫힌 도형 그리기](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [타원 또는 원 그리기](how-to-draw-an-ellipse-or-a-circle.md)  
+ [선 그리기](how-to-draw-a-line.md)  
+ [Polyline 요소를 사용하여 다중선 그리기](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [사각형 그리기](how-to-draw-a-rectangle.md)  
+ [줄 또는 세그먼트 끝에서 끝 모양 수정](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Shapes.Shape>  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Shapes.Shape>
+- [그래픽 및 멀티미디어](index.md)

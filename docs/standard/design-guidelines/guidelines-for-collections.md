@@ -1,16 +1,15 @@
 ---
 title: 컬렉션에 대한 지침
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 297b8f1d-b11f-4dc6-960a-8e990817304e
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 3571ebb2fdd2bcdfd8be1f0087d096e01f18790a
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: a8e8672d71500478dbbe28512e413e8ada501f45
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669051"
 ---
 # <a name="guidelines-for-collections"></a>컬렉션에 대한 지침
 몇 가지 일반적인 특징이 포함 된 개체의 그룹을 조작 하도록 특별히 설계 된 모든 형식에 컬렉션을 간주할 수 있습니다. 이러한 형식 구현에 대 한 적절 한 것은 항상 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601>이므로이 섹션에서는 고려 컬렉션 되도록 해당 인터페이스 중 하나 또는 모두를 구현 하는 형식입니다.  
@@ -109,7 +108,7 @@ ms.locfileid: "45964845"
  **X DO NOT** 와 같은 제네릭이 아닌 기본 컬렉션에서 상속할 `CollectionBase`합니다. 사용 하 여 `Collection<T>`하십시오 `ReadOnlyCollection<T>`, 및 `KeyedCollection<TKey,TItem>` 대신 합니다.  
   
 ### <a name="naming-custom-collections"></a>사용자 지정 컬렉션 이름 지정  
- 컬렉션 (구현 하는 형식을 `IEnumerable`) 주로 두 가지 이유로 생성 됩니다: (1) 구조를 만들려면 새 데이터에 자주 구조 별 작업을 사용 하 여 기존 데이터 구조 보다 다양 한 성능 특성 (예를 들어 <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>), 및 (2) 특정 항목 집합을 보관 하기 위한 특수 한 컬렉션을 만듭니다 (예를 들어 <xref:System.Collections.Specialized.StringCollection>). 데이터 구조는 응용 프로그램 및 라이브러리의 내부 구현에서 가장 자주 사용 됩니다. 특수 컬렉션 Api에서 (속성 및 매개 변수 형식)으로 표시 되기 위해 주로 됩니다.  
+ 컬렉션 (구현 하는 형식을 `IEnumerable`) 주로 두 가지 이유로 생성 됩니다. (1) 구조를 만들려면 새 데이터에 자주 구조 별 작업을 사용 하 여 기존 데이터 구조 보다 다양 한 성능 특성 (예를 들어 <xref:System.Collections.Generic.List%601>, <xref:System.Collections.Generic.LinkedList%601>, <xref:System.Collections.Generic.Stack%601>), 및 (2)에 대 한 특수 한 컬렉션 만들기 항목의 특정 집합을 보유 합니다. (예를 들어 <xref:System.Collections.Specialized.StringCollection>). 데이터 구조는 응용 프로그램 및 라이브러리의 내부 구현에서 가장 자주 사용 됩니다. 특수 컬렉션 Api에서 (속성 및 매개 변수 형식)으로 표시 되기 위해 주로 됩니다.  
   
  **✓ DO** 의 추상화를 구현 하는 이름에 "사전" 접미사를 사용 하 여 `IDictionary` 또는 `IDictionary<TKey,TValue>`합니다.  
   
@@ -127,9 +126,9 @@ ms.locfileid: "45964845"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [사용 지침](../../../docs/standard/design-guidelines/usage-guidelines.md)

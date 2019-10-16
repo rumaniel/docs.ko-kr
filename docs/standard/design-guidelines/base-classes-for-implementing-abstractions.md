@@ -1,19 +1,18 @@
 ---
 title: 추상화 구현을 위한 기본 클래스
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - abstractions [.NET Framework]
 - base classes, abstractions
 ms.assetid: 37a2d9a4-9721-482a-a40f-eee2c1d97875
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 9f326ee895251678c7a23ea84a11e83951edf2cc
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+author: KrzysztofCwalina
+ms.openlocfilehash: 6811423258481fcbae24743c9b17f3f20c379c58
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45677073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785543"
 ---
 # <a name="base-classes-for-implementing-abstractions"></a>추상화 구현을 위한 기본 클래스
 엄격히 말해, 클래스는 다른 클래스에서 파생 됩니다 하는 경우 기본 클래스를 수 있습니다. 그러나이 섹션 기본 클래스는 클래스 주로 일반적인 추상화를 제공 하거나 일부를 재사용 하는 다른 클래스에 대 한 기본 구현 하지만 상속 하도록 설계 되었습니다. 기본 클래스는 일반적으로 중간 계층의 루트에 추상화 사이의 맨 아래에 몇 가지 사용자 지정 구현이 상속 계층 구조 배치 합니다.  
@@ -32,9 +31,9 @@ ms.locfileid: "45677073"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [확장성을 위한 디자인](../../../docs/standard/design-guidelines/designing-for-extensibility.md)

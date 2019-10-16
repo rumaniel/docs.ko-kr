@@ -1,0 +1,44 @@
+- name: Visual Basic의 변수
+  href: index.md
+  items:
+    - name: 변수 선언
+      href: variable-declaration.md
+      items:
+        - name: '방법: 새 변수 만들기'
+          href: how-to-create-a-new-variable.md
+        - name: '방법: 값을 변경하지 않는 변수 만들기'
+          href: how-to-create-a-variable-that-does-not-change-in-value.md
+        - name: '방법: 변수 값 저장 및 검색'
+          href: how-to-move-data-into-and-out-of-a-variable.md
+    - name: 개체 변수
+      href: object-variables.md
+      items:
+        - name: '방법: 정규화 경로가 긴 개체에 대한 액세스 속도 개선'
+          href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
+    - name: 개체 변수 선언
+      href: object-variable-declaration.md
+      items:
+        - name: '방법: 개체의 멤버에 액세스'
+          href: how-to-access-members-of-an-object.md
+        - name: 개체 변수 할당
+          href: object-variable-assignment.md
+          items:
+            - name: '방법: 개체 변수 선언 및 개체 변수에 개체 할당'
+              href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
+            - name: '방법: 개체 변수가 인스턴스를 참조하지 않도록 만들기'
+              href: how-to-make-an-object-variable-not-refer-to-any-instance.md
+        - name: 개체 변수 값
+          href: object-variable-values.md
+          items:
+            - name: '방법: 개체의 현재 인스턴스 참조'
+              href: how-to-refer-to-the-current-instance-of-an-object.md
+            - name: '방법: 개체 변수가 참조하는 형식 확인'
+              href: how-to-determine-what-type-an-object-variable-refers-to.md
+            - name: '방법: 두 개체가 관련이 있는지 확인'
+              href: how-to-determine-whether-two-objects-are-related.md
+            - name: '방법: 두 개체가 동일한지 확인'
+              href: how-to-determine-whether-two-objects-are-identical.md
+    - name: 지역 형식 유추
+      href: local-type-inference.md
+    - name: 변수 문제 해결
+      href: troubleshooting-variables.md

@@ -17,37 +17,38 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 660da82f1e6d6d3ea8ba084885331c895bc64542
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b34f985f199542612bcdb9b30ebae28649438e1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424728"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776774"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum 메서드
 체크섬을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetCheckSum(  
     [in]  ULONG32  cData,  
     [out] ULONG32  *pcData,  
     [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cData`  
  [in] 제공 하는 버퍼의 길이 `data` 매개 변수  
   
  `pcData`  
- [out] 크기와 체크섬 바이트 길이입니다.  
+ [out] 크기와 체크섬, 바이트의 길이입니다.  
   
  `data`  
  [out] 체크섬을 수신 하는 버퍼입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 오류 코드가 있습니다.  
+ 메서드가 성공 하면 s_ok이 고 그렇지 않으면 오류 코드입니다.  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedDocument 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

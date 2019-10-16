@@ -16,23 +16,22 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d10384955e07198a4b5ea7202722bea4b831e02
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b4217221cc5199b9d8904be1ca3073878378b4e9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44207618"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268175"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>.NET에서 날짜 및 시간 문자열 구문 분석
 
-문자열을 구문 분석하여 <xref:System.DateTime> 개체로 변환하려면 날짜 및 시간을 텍스트로 나타내는 방법에 대한 정보를 지정해야 합니다. 문화권에 따라 일, 월 및 연도의 순서를 다르게 사용합니다. 시간 표현에서는 24시간제를 사용하는 경우도 있고 “AM”과 “PM”을 지정하기도 합니다. 응용 프로그램에 따라서는 날짜만 필요하거나 시간만 필요한 경우도 있고, 날짜와 시간을 모두 지정해야 하는 경우도 있습니다. 문자열을 <xref:System.DateTime> 개체로 변환하는 방법을 통해 필요한 형식과 응용 프로그램에 필요한 날짜 및 시간의 요소에 대한 자세한 정보를 제공할 수 있습니다. 텍스트를 <xref:System.DateTime>으로 올바로 변환하려면 다음 세 가지 하위 작업을 수행해야 합니다.
+문자열을 구문 분석하여 <xref:System.DateTime> 개체로 변환하려면 날짜 및 시간을 텍스트로 나타내는 방법에 대한 정보를 지정해야 합니다. 문화권에 따라 일, 월 및 연도의 순서를 다르게 사용합니다. 시간 표현에서는 24시간제를 사용하는 경우도 있고 “AM”과 “PM”을 지정하기도 합니다. 애플리케이션에 따라서는 날짜만 필요하거나 시간만 필요한 경우도 있고, 날짜와 시간을 모두 지정해야 하는 경우도 있습니다. 문자열을 <xref:System.DateTime> 개체로 변환하는 방법을 통해 필요한 형식과 애플리케이션에 필요한 날짜 및 시간의 요소에 대한 자세한 정보를 제공할 수 있습니다. 텍스트를 <xref:System.DateTime>으로 올바로 변환하려면 다음 세 가지 하위 작업을 수행해야 합니다.
 
 1. 날짜 및 시간을 나타내는 텍스트에 필요한 형식을 지정해야 합니다.
 1. 날짜 시간 형식의 문화권을 지정할 수 있습니다.
 1. 텍스트 표현에서 누락된 구성 요소를 날짜 및 시간으로 설정하는 방법을 지정할 수 있습니다.
 
 <xref:System.DateTime.Parse%2A> 및 <xref:System.DateTime.TryParse%2A> 메서드는 날짜 및 시간의 여러 공통된 표현을 변환합니다. <xref:System.DateTime.ParseExact%2A> 및 <xref:System.DateTime.TryParseExact%2A> 메서드는 날짜 및 시간 형식 문자열에 지정된 패턴을 따르는 문자열 표현을 변환합니다. 자세한 내용은 [표준 날짜 및 시간 형식 문자열](standard-date-and-time-format-strings.md) 및 [사용자 지정 날짜 및 시간 형식 문자열](custom-date-and-time-format-strings.md)의 문서를 참조하세요.
-
 
 현재 <xref:System.Globalization.DateTimeFormatInfo> 개체를 사용하면 텍스트를 날짜 및 시간으로 해석하는 방법을 더 세밀하게 제어할 수 있습니다. <xref:System.Globalization.DateTimeFormatInfo>의 속성은 날짜 및 시간 구분 기호, 월, 일 및 연대의 이름, “AM” 및 “PM” 지정의 형식을 설명합니다. 현재 스레드 문화권에서는 현재 문화권을 나타내는 <xref:System.Globalization.DateTimeFormatInfo>를 제공합니다. 특정 문화권 또는 사용자 지정 설정이 필요한 경우 구문 분석 메서드의 <xref:System.IFormatProvider> 매개 변수를 지정합니다. <xref:System.IFormatProvider> 매개 변수의 경우 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체나 <xref:System.Globalization.DateTimeFormatInfo> 개체를 지정해야 합니다.
 
@@ -66,14 +65,14 @@ ms.locfileid: "44207618"
 
 문자열을 구문 분석할 때 어느 문화권의 서식 규칙을 사용할지 명시적으로 정의할 수도 있습니다. 즉, <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성에서 반환하는 표준 <xref:System.Globalization.DateTimeFormatInfo> 개체 중 하나를 지정합니다. 다음 예제에서는 형식 공급자를 사용하여 독일어 문자열을 <xref:System.DateTime>으로 구문 분석합니다. 여기서는 `de-DE` 문화권을 나타내는 <xref:System.Globalization.CultureInfo>를 만듭니다. 이 `CultureInfo` 개체는 이 특정 문자열이 성공적으로 구문 분석되도록 합니다. 그러면 <xref:System.Threading.Thread.CurrentThread>의 <xref:System.Threading.Thread.CurrentCulture>에 있는 모든 설정이 불가능합니다.  
   
-[!code-csharp-interactive[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
+[!code-csharp[Parsing.DateAndTime#2](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#2)]
 [!code-vb[Parsing.DateAndTime#2](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#2)]
 
 그러나 <xref:System.DateTime.Parse%2A> 메서드의 오버로드를 사용하여 사용자 지정 형식 공급자를 지정할 수는 있지만, 이 메서드는 비표준 형식의 구문 분석을 지원하지 않습니다. 비표준 서식으로 표현된 날짜 및 시간을 구문 분석하려면 대신 <xref:System.DateTime.ParseExact%2A> 메서드를 사용합니다.  
 
 <a name="styles-example"></a>다음 예제에서는 <xref:System.Globalization.DateTimeStyles> 열거형을 사용하여 지정되지 않은 필드의 <xref:System.DateTime>에 현재 날짜 및 시간 정보를 추가하지 않도록 지정합니다.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
+[!code-csharp[Parsing.DateAndTime#3](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#3)]
 [!code-vb[Parsing.DateAndTime#3](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#3)]
  
 ## <a name="parseexact"></a>ParseExact
@@ -82,15 +81,15 @@ ms.locfileid: "44207618"
 
 다음 예제에서 <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> 메서드는 구문 분석할 문자열 개체 뒤에 형식 지정자와 <xref:System.Globalization.CultureInfo> 개체를 전달합니다. 이 <xref:System.DateTime.ParseExact%2A> 메서드는 `en-US` 문화권의 자세한 날짜 패턴을 따라는 문자열만 구문 분석할 수 있습니다.  
 
-[!code-csharp-interactive[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
+[!code-csharp[Parsing.DateAndTime#4](../../../samples/snippets/csharp/how-to/conversions/StringToDateTime.cs#4)]
 [!code-vb[Parsing.DateAndTime#4](../../../samples/snippets/visualbasic/how-to/conversions/Program.vb#4)]
 
 <xref:System.DateTime.Parse%2A> 및 <xref:System.DateTime.ParseExact%2A> 메서드의 각 오버로드에는 문자열의 서식 지정에 대한 문화권별 정보를 제공하는 <xref:System.IFormatProvider> 매개 변수도 있습니다. 이 <xref:System.IFormatProvider> 개체는 표준 문화권을 나타내는 <xref:System.Globalization.CultureInfo> 개체이거나 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> 속성에서 반환하는 <xref:System.Globalization.DateTimeFormatInfo> 개체입니다.  <xref:System.DateTime.ParseExact%2A>는 하나 이상의 사용자 지정 날짜 및 시간 형식을 정의하는 추가 문자열이나 문자열 배열 인수도 사용합니다.  
 
 ## <a name="see-also"></a>참고 항목
 
-- [문자열 구문 분석](parsing-strings.md)  
-- [형식 서식 지정](formatting-types.md)  
-- [.NET에서 형식 변환](type-conversion.md)  
-- [표준 날짜 및 시간 형식](standard-date-and-time-format-strings.md)  
+- [Parsing Strings](parsing-strings.md)
+- [형식 서식 지정](formatting-types.md)
+- [.NET에서 형식 변환](type-conversion.md)
+- [표준 날짜 및 시간 형식](standard-date-and-time-format-strings.md)
 - [사용자 지정 날짜 및 시간 형식 문자열](custom-date-and-time-format-strings.md)

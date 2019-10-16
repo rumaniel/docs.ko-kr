@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: d077a3e8-bd81-4bdf-b6a3-323857ea30fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a90b4214e244bc1f9c5f8e71782e604bd6c7b619
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
-ms.translationtype: HT
+ms.openlocfilehash: 5fb95ab7ff4fcac7169238d90637d7b83078d6dd
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582595"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046112"
 ---
 # <a name="dynamic-source-code-generation-and-compilation"></a>동적 소스 코드 생성 및 컴파일
 .NET Framework에는 소스 코드를 내보내는 프로그램 개발자가 렌더링할 코드를 나타내는 단일 모델을 기반으로 런타임에 여러 가지 프로그래밍 언어로 소스 코드를 생성할 수 있는 CodeDOM(코드 문서 개체 모델) 메커니즘이 포함됩니다.  
@@ -31,16 +31,16 @@ ms.locfileid: "48582595"
  .NET Framework에는 <xref:Microsoft.CSharp.CSharpCodeProvider>, <xref:Microsoft.JScript.JScriptCodeProvider> 및 <xref:Microsoft.VisualBasic.VBCodeProvider>에 대한 코드 생성기 및 코드 컴파일러가 포함됩니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [CodeDOM 사용](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)  
+ [CodeDOM 사용](using-the-codedom.md)  
  일반적인 용도를 설명하고 CodeDOM을 사용하여 간단한 개체 그래프를 빌드하는 방법을 보여 줍니다.  
   
- [CodeDOM 그래프에서 소스 코드 생성 및 프로그램 컴파일](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)  
+ [CodeDOM 그래프에서 소스 코드 생성 및 프로그램 컴파일](generating-and-compiling-source-code-from-a-codedom-graph.md)  
  소스 코드를 생성하고 `System.CodeDom.Compiler` 네임스페이스에 설명된 클래스를 사용하여 외부 컴파일러를 통해 생성된 코드를 컴파일하는 방법을 설명합니다.  
   
- [방법: CodeDOM을 사용하여 XML 문서 파일 만들기](../../../docs/framework/reflection-and-codedom/how-to-create-an-xml-documentation-file-using-codedom.md)  
+ [방법: CodeDOM을 사용하여 XML 문서 파일 만들기](how-to-create-an-xml-documentation-file-using-codedom.md)  
  CodeDOM을 사용하여 XML 문서 주석이 포함된 코드를 생성하고 XML 문서 출력을 만들도록 생성된 코드를 컴파일하는 방법을 설명합니다.  
   
- [방법: CodeDOM을 사용하여 클래스 만들기](../../../docs/framework/reflection-and-codedom/how-to-create-a-class-using-codedom.md)  
+ [방법: CodeDOM을 사용하여 클래스 만들기](how-to-create-a-class-using-codedom.md)  
  CodeDOM을 사용하여 필드, 속성, 메서드, 생성자, 진입점이 포함된 클래스를 생성하는 방법을 설명합니다.  
   
 ## <a name="reference"></a>참조  
@@ -51,5 +51,5 @@ ms.locfileid: "48582595"
  런타임에 코드를 생성 및 컴파일하기 위한 인터페이스를 정의합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [CodeDOM 빠른 참조](https://msdn.microsoft.com/library/c77b8bfd-0a32-4e36-b59a-4f687f32c524)  
+ [CodeDOM 빠른 참조](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f1dfsbhc(v=vs.100))  
  개발자가 소스 코드 요소를 나타내는 CodeDOM 요소를 빠르게 찾을 수 있는 방법을 제공합니다.

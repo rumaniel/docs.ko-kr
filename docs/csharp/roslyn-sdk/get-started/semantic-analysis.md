@@ -3,12 +3,12 @@ title: 의미 체계 분석 시작
 description: 이 자습서는 .NET Compiler SDK를 사용하여 의미 체계 분석으로 작업하는 방법의 개요를 제공합니다.
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: 4b021ed2a27da754e2ac5af01716868e41e72738
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 80a814054ab95a5b6585289e8580a725b18ca44e
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43484620"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252939"
 ---
 # <a name="get-started-with-semantic-analysis"></a>의미 체계 분석 시작
 
@@ -40,7 +40,7 @@ ms.locfileid: "43484620"
 새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만듭니다.
 
 * Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택하여 새 프로젝트 대화 상자를 표시합니다.
-* **Visual C#** > **확장성** 아래에서 **독립 실행형 코드 분석 도구**를 선택합니다.
+* **Visual C#**  > **확장성** 아래에서 **독립 실행형 코드 분석 도구**를 선택합니다.
 * 프로젝트 이름을 "**SemanticQuickStart**"로 지정하고 확인을 클릭합니다.
 
 앞에 표시된 기본 "Hello World!" 프로그램을 분석하려고 합니다.
@@ -56,7 +56,7 @@ Hello World 프로그램의 텍스트를 `Program` 클래스의 상수로 추가
 
 [!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
-<xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> 메서드는 컴파일에 참조를 추가합니다. <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> 메서드는 어셈블리를 참조로 로드합니다. 
+<xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> 메서드는 컴파일에 참조를 추가합니다. <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> 메서드는 어셈블리를 참조로 로드합니다.
 
 ## <a name="querying-the-semantic-model"></a>의미 체계 모델 쿼리
 
@@ -78,7 +78,7 @@ Hello World 프로그램의 텍스트를 `Program` 클래스의 상수로 추가
 
 프로그램을 실행하고 다음과 같은 출력이 표시됩니다.
 
-```
+```output
 System.Collections
 System.Configuration
 System.Deployment
@@ -117,7 +117,7 @@ Press any key to continue . . .
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 
-원본 시퀀스에는 해당 속성 및 필드를 비롯한 모든 멤버가 포함됩니다. 따라서 <xref:Microsoft.CodeAnalysis.IMethodSymbol?diplayProperty=nameWithType> 개체인 요소를 찾기 위해 <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> 메서드를 사용하여 필터링합니다.
+해당 소스 시퀀스에는 속성 및 필드를 비롯한 모든 멤버가 포함됩니다. 따라서 <xref:Microsoft.CodeAnalysis.IMethodSymbol?displayProperty=nameWithType> 개체인 요소를 찾기 위해 <xref:System.Collections.Immutable.ImmutableArray%601.OfType%2A?displayProperty=nameWithType> 메서드를 사용하여 필터링합니다.
 
 [!code-csharp[Filter the sequence to only methods](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#10 "Find the subset of the collection that is the methods.")]
 
@@ -135,7 +135,7 @@ LINQ 쿼리 구문을 사용하여 전체 쿼리를 빌드한 다음, 콘솔에�
 
 프로그램을 빌드하고 실행합니다. 다음과 같은 내용이 출력됩니다.
 
-```
+```output
 Join
 Substring
 Trim
@@ -159,4 +159,5 @@ Intern
 IsInterned
 Press any key to continue . . .
 ```
+
 이 프로그램의 일부인 기호에 대한 정보를 찾고 표시하기 위해 의미 체계 API를 사용했습니다.

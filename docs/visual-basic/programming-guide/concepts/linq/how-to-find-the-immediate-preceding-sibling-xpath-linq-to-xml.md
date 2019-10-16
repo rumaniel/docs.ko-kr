@@ -1,18 +1,18 @@
 ---
-title: '방법: 직접 선행 형제 (XPath 및 LINQ to XML)를 찾습니다 (Visual Basic)'
+title: '방법: (XPath 및 LINQ to XML) 직접 선행 형제 찾기 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
-ms.openlocfilehash: 47ba557343d0f691c2ee0f2c56102df313ecfb30
-ms.sourcegitcommit: f6343b070f3c66877338a05c8bfb0be9985255e2
+ms.openlocfilehash: ca3602a24b80d9002a639d9a319a731541aeb2df
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/24/2018
-ms.locfileid: "39220924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61854999"
 ---
-# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>방법: 직접 선행 형제 (XPath 및 LINQ to XML)를 찾습니다 (Visual Basic)
+# <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>방법: (XPath 및 LINQ to XML) 직접 선행 형제 찾기 (Visual Basic)
 노드의 바로 이전 형제를 찾으려는 경우가 있습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 반대되는 XPath의 이전 형제 축에 대한 위치 조건자의 의미 차이 때문에 이 부분은 더 흥미로운 비교 중 하나입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리는 <xref:System.Linq.Enumerable.Last%2A> 연산자를 사용하여 <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>에 의해 반환되는 컬렉션에서 마지막 노드를 찾습니다. 이와 반대로 XPath 식은 값이 1인 조건자를 사용하여 바로 이전 요소를 찾습니다.  
   
 ```vb  
@@ -48,5 +48,6 @@ Results are identical
 <Child3 />  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [XPath 사용자 (Visual Basic)를 위한 LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>참고자료
+
+- [XPath 사용자 (Visual Basic)를 위한 LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

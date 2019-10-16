@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98c3e1ed3da209cbded5d76d938d2420fce606be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 09c36dd65c8a4202f13d362668f74cd9a362e35a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33431020"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744363"
 ---
 # <a name="notifyfilter-enumeration"></a>NOTIFY_FILTER 열거형
-디버거 기능에 대 한 콜백을 식별합니다. 자세한 내용은 참조는 [inotifysource2:: Setnotifyfilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드.  
+디버거 함수에 대 한 콜백을 식별합니다. 자세한 내용은 참조는 [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 enum tagNOTIFY_FILTER  
 {  
     NOTIFY_FILTER_ONSYNCCALLOUT    = 0x1,  
@@ -43,18 +43,19 @@ enum tagNOTIFY_FILTER
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`NOTIFY_FILTER_ONSYNCCALLOUT`|나타냅니다는 [inotifysink2:: Onsynccallout](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) 메서드를 호출 해야 합니다.|  
-|`NOTIFY_FILTER_ONSYNCCALLENTER`|나타냅니다는 [inotifysink2:: Onsynccallenter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) 메서드를 호출 해야 합니다.|  
-|`NOTIFY_FILTER_ONSYNCCALLEXIT`|나타냅니다는 [inotifysink2:: Onsynccallexit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) 메서드를 호출 해야 합니다.|  
-|`NOTIFY_FILTER_ONSYNCCALLRETURN`|나타냅니다는 [inotifysink2:: Onsynccallreturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) 메서드를 호출 해야 합니다.|  
-|`NOTIFY_FILTER_ALLSYNC`|나타내는 모든는 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) 메서드를 호출 해야 합니다.|  
-|`NOTIFY_FILTER_ALL`|모든 기존 및 차후의 알림을 활성화합니다.|  
+|`NOTIFY_FILTER_ONSYNCCALLOUT`|나타내는 합니다 [INotifySink2::OnSyncCallOut](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallout-method.md) 메서드를 호출 해야 합니다.|  
+|`NOTIFY_FILTER_ONSYNCCALLENTER`|나타내는 합니다 [INotifySink2::OnSyncCallEnter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallenter-method.md) 메서드를 호출 해야 합니다.|  
+|`NOTIFY_FILTER_ONSYNCCALLEXIT`|나타내는 합니다 [INotifySink2::OnSyncCallExit](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallexit-method.md) 메서드를 호출 해야 합니다.|  
+|`NOTIFY_FILTER_ONSYNCCALLRETURN`|나타내는 합니다 [INotifySink2::OnSyncCallReturn](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-onsynccallreturn-method.md) 메서드를 호출 해야 합니다.|  
+|`NOTIFY_FILTER_ALLSYNC`|나타내는 모든 합니다 [INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md) 메서드를 호출 해야 합니다.|  
+|`NOTIFY_FILTER_ALL`|모든 기존 및 향후 알림을 활성화합니다.|  
 |`NOTIFY_FILTER_NONE`|없는 알림 메서드를 호출 해야 함을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>참고 항목  
- [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

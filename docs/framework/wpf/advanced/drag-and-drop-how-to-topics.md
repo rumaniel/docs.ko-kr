@@ -6,23 +6,24 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: 72dae52c6d6b570831aefb54ca2843a92c5ad35a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 87c1425e6eaf03b900e07cfd9fc489ef01b1607a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010438"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>끌어서 놓기 방법 항목
-다음 예에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주기는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 끌어서 놓기 프레임 워크입니다.  
+다음 예제를 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 줍니다는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 끌어서 놓기 프레임 워크입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [RichTextBox 컨트롤에 끌어 놓은 파일 열기](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [데이터 개체 만들기](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [데이터 개체에 데이터 형식이 있는지 확인](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [데이터 개체의 데이터 형식 나열](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [특정 데이터 형식의 데이터 검색](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [데이터 개체에 여러 데이터 형식 저장](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+ [RichTextBox 컨트롤에 끌어 놓은 파일 열기](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [데이터 개체 만들기](how-to-create-a-data-object.md)  
+ [데이터 개체에 데이터 형식이 있는지 확인](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [데이터 개체의 데이터 형식 나열](how-to-list-the-data-formats-in-a-data-object.md)  
+ [특정 데이터 형식의 데이터 검색](how-to-retrieve-data-in-a-particular-data-format.md)  
+ [데이터 개체에 여러 데이터 형식 저장](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
-## <a name="see-also"></a>참고 항목  
- [끌어서 놓기 개요](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+## <a name="see-also"></a>참고자료
+
+- [끌어서 놓기 개요](drag-and-drop-overview.md)

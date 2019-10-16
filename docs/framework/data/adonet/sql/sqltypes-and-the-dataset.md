@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9172c20a-9876-4b3b-9c97-1963c02b1993
-ms.openlocfilehash: fe00e669449d40320a2038697976423db83ade5b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: dea5a2017479443cb747d31e253c1c83585ddd09
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43511549"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70791492"
 ---
 # <a name="sqltypes-and-the-dataset"></a>SqlType 및 DataSet
 ADO.NET 2.0에서는 `DataSet` 네임스페이스를 통해 <xref:System.Data.SqlTypes>에 대한 형식 지원이 향상되었습니다. <xref:System.Data.SqlTypes>의 형식은 SQL Server 데이터베이스의 데이터 형식과 의미 체계 및 정밀도가 동일한 데이터 형식을 제공하도록 디자인되었습니다. <xref:System.Data.SqlTypes>의 각 데이터 형식은 SQL Server의 데이터 형식과 동일하며 기본 데이터 표현도 같습니다.  
@@ -23,7 +23,8 @@ ADO.NET 2.0에서는 `DataSet` 네임스페이스를 통해 <xref:System.Data.Sq
  [!code-csharp[DataWorks SqlTypes.GetTypeAW#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlTypes.GetTypeAW/CS/source.cs#1)]
  [!code-vb[DataWorks SqlTypes.GetTypeAW#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlTypes.GetTypeAW/VB/source.vb#1)]  
   
-## <a name="see-also"></a>참고 항목  
- [SQL Server 데이터 형식 매핑](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)  
- [매개 변수 및 매개 변수 데이터 형식 구성](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [SQL Server 데이터 형식 매핑](../sql-server-data-type-mappings.md)
+- [매개 변수 및 매개 변수 데이터 형식 구성](../configuring-parameters-and-parameter-data-types.md)
+- [ADO.NET 개요](../ado-net-overview.md)

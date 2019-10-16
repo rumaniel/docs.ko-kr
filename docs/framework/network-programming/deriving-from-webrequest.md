@@ -10,17 +10,17 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: 859593c6c53d9f6dc89047efae1c682a6a9873a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6bee864f8d24076d16f226c29d61801e856739d9
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181266"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048607"
 ---
 # <a name="deriving-from-webrequest"></a>WebRequest에서 파생
-<xref:System.Net.WebRequest> 클래스는 .NET Framework 플러그형 프로토콜 모델에 적합한 프로토콜별 요청 처리기를 만들기 위한 기본 메서드 및 속성을 제공하는 추상 기본 클래스입니다. **WebRequest** 클래스를 사용하는 응용 프로그램은 사용되는 프로토콜을 지정할 필요 없이 지원되는 모든 프로토콜을 사용하여 데이터를 요청할 수 있습니다.  
+<xref:System.Net.WebRequest> 클래스는 .NET Framework 플러그형 프로토콜 모델에 적합한 프로토콜별 요청 처리기를 만들기 위한 기본 메서드 및 속성을 제공하는 추상 기본 클래스입니다. **WebRequest** 클래스를 사용하는 애플리케이션은 사용되는 프로토콜을 지정할 필요 없이 지원되는 모든 프로토콜을 사용하여 데이터를 요청할 수 있습니다.  
   
- 프로토콜별 클래스를 플러그형 프로토콜로 사용하려면 다음 두 가지 조건을 충족해야 합니다. 클래스는 <xref:System.Net.IWebRequestCreate> 인터페이스를 구현하고 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 메서드에 등록되어야 합니다. 클래스는 플러그형 인터페이스를 제공하도록 **WebRequest**의 모든 추상 메서드 및 속성을 재정의해야 합니다.  
+ 프로토콜별 클래스를 플러그형 프로토콜로 사용하려면 두 가지 기준을 충족해야 합니다. 클래스는 <xref:System.Net.IWebRequestCreate> 인터페이스를 구현하고 <xref:System.Net.WebRequest.RegisterPrefix%2A?displayProperty=nameWithType> 메서드로 등록해야 합니다. 클래스는 플러그형 인터페이스를 제공하도록 **WebRequest**의 모든 추상 메서드 및 속성을 재정의해야 합니다.  
   
  **WebRequest** 인스턴스는 일회용입니다. 또 다른 요청을 만들려면 새 **WebRequest**를 만듭니다. **WebRequest**는 개발자가 템플릿 **WebRequest**를 직렬화하고 나서 추가 요청을 위한 템플릿을 다시 구성할 수 있도록 <xref:System.Runtime.Serialization.ISerializable> 인터페이스를 지원합니다.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "50181266"
  일반적으로 **Method** 속성이 업로드가 수행 중임을 나타내는 동사 또는 작업으로 설정될 경우 **ContentLength** 속성을 0보다 큰 값으로 설정해야 합니다.  
   
 ## <a name="preauthenticate-property"></a>PreAuthenticate 속성  
- 응용 프로그램은 <xref:System.Net.WebRequest.PreAuthenticate%2A> 속성을 설정하여 인증 질문을 기다리지 않고 초기 요청을 통해 인증 정보를 보내도록 지정합니다. **PreAuthenticate** 속성은 프로토콜이 초기 요청을 통해 전송된 인증 자격 증명을 지원하는 경우에만 유효합니다.  
+ 애플리케이션은 <xref:System.Net.WebRequest.PreAuthenticate%2A> 속성을 설정하여 인증 질문을 기다리지 않고 초기 요청을 통해 인증 정보를 보내도록 지정합니다. **PreAuthenticate** 속성은 프로토콜이 초기 요청을 통해 전송된 인증 자격 증명을 지원하는 경우에만 유효합니다.  
   
 ## <a name="proxy-property"></a>Proxy 속성  
  <xref:System.Net.WebRequest.Proxy%2A> 속성에는 요청된 리소스에 액세스하는 데 사용되는 <xref:System.Net.IWebProxy> 인터페이스가 포함됩니다. **Proxy** 속성은 프로토콜이 프록시 설정된 요청을 지원할 경우에만 유효합니다. 프로토콜에 필요한 경우 기본 프록시를 설정해야 합니다.  
@@ -88,9 +88,10 @@ ms.locfileid: "50181266"
   
  **GetResponse** 메서드는 들어오는 응답을 포함할 적절한 **WebResponse** 하위 항목을 만들어야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Net.WebRequest>  
- <xref:System.Net.HttpWebRequest>  
- <xref:System.Net.FileWebRequest>  
- [플러그형 프로토콜 프로그래밍](../../../docs/framework/network-programming/programming-pluggable-protocols.md)  
- [WebResponse에서 파생](../../../docs/framework/network-programming/deriving-from-webresponse.md)
+## <a name="see-also"></a>참고 항목
+
+- <xref:System.Net.WebRequest>
+- <xref:System.Net.HttpWebRequest>
+- <xref:System.Net.FileWebRequest>
+- [플러그형 프로토콜 프로그래밍](programming-pluggable-protocols.md)
+- [WebResponse에서 파생](deriving-from-webresponse.md)

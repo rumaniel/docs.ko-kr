@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModule2 Interface1
+title: ICorDebugModule2 인터페이스
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModule2
@@ -16,39 +16,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 537023cf117477b54117799fc9ea62e894bb6591
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d8fe1a25c4bc1f5e19f49f0d660d0aad5a180ea2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419142"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69911898"
 ---
-# <a name="icordebugmodule2-interface1"></a>ICorDebugModule2 Interface1
-ICorDebugModule 인터페이스를 논리적으로 확장으로 사용 됩니다.  
+# <a name="icordebugmodule2-interface"></a>ICorDebugModule2 인터페이스
+
+ICorDebugModule 인터페이스에 대 한 논리적 확장으로 사용 됩니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
-|[ApplyChanges 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|실행 중인 프로세스에 메타 데이터의 변경 내용과 Microsoft MSIL (intermediate language) 코드의 변경 내용을 적용합니다.|  
-|[GetJITCompilerFlags 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|이 컴파일 타임 JIT ()를 제어 하는 플래그를 가져옵니다 `ICorDebugModule2`합니다.|  
-|[ResolveAssembly 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|지정한 메타 데이터 토큰에서 참조 하는 어셈블리를 확인 합니다.|  
-|[SetJITCompilerFlags 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|이 대 한 JIT 컴파일을 제어 하는 플래그를 설정 `ICorDebugModule2`합니다.|  
-|[SetJMCStatus 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|이 모든 클래스의 모든 메서드의 코드 JMC (내) 상태를 설정 `ICorDebugModule2` 에서 제외 하 고 지정된 된 값으로는 `pTokens` 반대 값을 설정 하는 배열입니다.|  
+|[ApplyChanges 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-applychanges-method.md)|메타 데이터의 변경 내용과 MSIL (Microsoft 중간 언어) 코드의 변경 내용을 실행 중인 프로세스에 적용 합니다.|  
+|[GetJITCompilerFlags 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-getjitcompilerflags-method.md)|이 `ICorDebugModule2`에 대 한 JIT (just-in-time) 컴파일을 제어 하는 플래그를 가져옵니다.|  
+|[ResolveAssembly 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-resolveassembly-method.md)|지정 된 메타 데이터 토큰에서 참조 하는 어셈블리를 확인 합니다.|  
+|[SetJITCompilerFlags 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjitcompilerflags-method.md)|이 `ICorDebugModule2`에 대 한 JIT 컴파일을 제어 하는 플래그를 설정 합니다.|  
+|[SetJMCStatus 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodule2-setjmcstatus-method.md)|이 `ICorDebugModule2` 에 있는 모든 클래스의 모든 메서드에 대 한 내 코드만 (JMC) 상태를 지정 된 값으로 설정 합니다. 단 `pTokens` , 배열의 값은 반대 값으로 설정 됩니다.|  
   
 ## <a name="remarks"></a>설명  
   
 > [!NOTE]
->  이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
+> 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -8,28 +8,29 @@ helpviewer_keywords:
 - text [WPF], typography
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
-ms.openlocfilehash: d673ccec58cd9f8ba0b49fafa9871efd208e4a40
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 38f9a9c79bfda9abb46181f433d28268b8a37762
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546125"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72004573"
 ---
 # <a name="typography"></a>입력 체계
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 텍스트 콘텐츠의 풍부한 표시에 대 한 지원이 포함 되어 있습니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]의 텍스트는 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]을 사용하여 렌더링되어 텍스트의 명확성 및 가독성이 향상됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 또한 지원 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 하 여 정의 된 것 이상의 추가 기능을 제공 하는 글꼴의 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 형식.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에는 텍스트 콘텐츠를 다양 하 게 표시할 수 있는 기능이 포함 되어 있습니다. @No__t-0의 텍스트는 텍스트의 명확성 및 가독성을 향상 시키는 Microsoft ClearType을 사용 하 여 렌더링 됩니다. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]은 TrueType® 형식으로 정의 된 것 보다 많은 기능을 제공 하는 OpenType 글꼴도 지원 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [WPF의 입력 체계](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)  
- [ClearType 개요](../../../../docs/framework/wpf/advanced/cleartype-overview.md)  
- [ClearType 레지스트리 설정](../../../../docs/framework/wpf/advanced/cleartype-registry-settings.md)  
- [서식 있는 텍스트 그리기](../../../../docs/framework/wpf/advanced/drawing-formatted-text.md)  
- [고급 텍스트 서식 지정](../../../../docs/framework/wpf/advanced/advanced-text-formatting.md)  
- [글꼴](../../../../docs/framework/wpf/advanced/fonts-wpf.md)  
- [문자 모양](../../../../docs/framework/wpf/advanced/glyphs.md)  
- [방법 항목](../../../../docs/framework/wpf/advanced/typography-how-to-topics.md)  
+ [WPF의 입력 체계](typography-in-wpf.md)  
+ [ClearType 개요](cleartype-overview.md)  
+ [ClearType 레지스트리 설정](cleartype-registry-settings.md)  
+ [서식 있는 텍스트 그리기](drawing-formatted-text.md)  
+ [고급 텍스트 서식 지정](advanced-text-formatting.md)  
+ [글꼴](fonts-wpf.md)  
+ [문자 모양](glyphs.md)  
+ [방법 항목](typography-how-to-topics.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Documents.Typography>  
- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [OpenType 글꼴 기능](../../../../docs/framework/wpf/advanced/opentype-font-features.md)  
- [WPF 응용 프로그램 성능 최적화](../../../../docs/framework/wpf/advanced/optimizing-wpf-application-performance.md)
+## <a name="see-also"></a>참조
+
+- <xref:System.Windows.Documents.Typography>
+- [WPF의 문서](documents-in-wpf.md)
+- [OpenType 글꼴 기능](opentype-font-features.md)
+- [WPF 애플리케이션 성능 최적화](optimizing-wpf-application-performance.md)

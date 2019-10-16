@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c250a577f2ccdbbfefb35225b880c0e4317db36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 69b398fa003abc0dba00ee89a9bb911a8c2dd6df
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448109"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777508"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 메서드
-지정 된 지정된 된 형식에 대 한 속성 정의 만들고 `get` 및 `set` 메서드 접근자를 토큰 정의 속성을 가져옵니다.  
+지정 된 지정된 된 형식에 대 한 속성 정의 만듭니다 `get` 및 `set` 메서드 접근자는 속성 정의에 대 한 토큰을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT DefineProperty (   
     [in]  mdTypeDef          td,   
     [in]  LPCWSTR            szProperty,   
@@ -46,7 +46,7 @@ HRESULT DefineProperty (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `td`  
  [in] 클래스 또는 속성이 정의 되는 인터페이스에 대 한 토큰입니다.  
   
@@ -60,7 +60,7 @@ HRESULT DefineProperty (
  [in] 속성 서명입니다.  
   
  `cbSig`  
- [in] 바이트 수 `pvSig`합니다.  
+ [in] 바이트 수가 `pvSig`합니다.  
   
  `dwCPlusTypeFlag`  
  [in] 형식 속성의 기본값입니다.  
@@ -75,23 +75,24 @@ HRESULT DefineProperty (
  [in] 속성 값을 설정 하는 메서드.  
   
  `mdGetter`  
- [in] 속성 값을 가져오는 하는 메서드.  
+ [in] 속성 값을 가져오는 메서드.  
   
  `rmdOtherMethods[]`  
- [in] 배열 속성에 연결 된 다른 방법입니다. 사용 하 여 배열을 종료는 `mdTokenNil`합니다.  
+ [in] 속성과 연결 된 다른 메서드는 배열입니다. 배열 종료는 `mdTokenNil`합니다.  
   
  `pmdProp`  
  [out] `mdProperty` 할당 된 토큰입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MSCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)  
- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [IMetaDataEmit2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

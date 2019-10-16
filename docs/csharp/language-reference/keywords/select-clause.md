@@ -1,5 +1,6 @@
 ---
-title: select 절(C# 참조)
+title: select 절 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - select_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - select keyword [C#]
 - select clause [C#]
 ms.assetid: df01e266-5781-4aaa-80c4-67cf28ea093f
-ms.openlocfilehash: 3fa60d4e7546fc88ac2a2ffea45ae69b0da7a6a6
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3ba52fccc0521df1a0bb5b6177575dc5d2152248
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183544"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633830"
 ---
 # <a name="select-clause-c-reference"></a>select 절(C# 참조)
 

@@ -1,13 +1,13 @@
 ---
-title: null 허용 연산자(F#)
-description: 'F # 프로그래밍 언어에서 사용할 수 있는 null 허용 연산자에 알아봅니다.'
+title: null 허용 연산자
+description: 사용할 수 있는 null 허용 연산자에 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: 42df74a56831fb0a5d6df34db4321f5b228993c2
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 79165f35258b414624174153d2cd729b301cf389
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086285"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642088"
 ---
 # <a name="nullable-operators"></a>null 허용 연산자
 
@@ -15,7 +15,7 @@ Null 허용 연산자는 nullable 산술 형식의 한쪽 또는 양쪽에서 �
 
 ## <a name="table-of-nullable-operators"></a>Null 허용 연산자의 테이블
 
-다음 표에서 F # 언어에서 지원 되는 null 허용 연산자를 나열 합니다.
+다음 표에 지원 되는 null 허용 연산자는 F# 언어입니다.
 
 |왼쪽에서 null을 허용|오른쪽에서 null을 허용|양쪽 null 허용|
 |---|---|---|
@@ -55,7 +55,7 @@ printfn "%f" (float nullableFloat)
 
 Null 허용 데이터 필드에는 연산자와 같은 쿼리 `sumByNullable`, 쿼리 식에서 사용 하기 위해 존재 합니다. Nullable이 아닌 형식에 대 한 쿼리 연산자는 nullable 형식과 호환 되는 형식 아니므로 null 허용 데이터 값을 사용 하 여 작업 하는 경우 적절 한 쿼리 연산자의 null 허용 버전을 사용 해야 합니다. 자세한 내용은 [쿼리 식](../query-expressions.md)합니다.
 
-다음 예에서는 F # 쿼리 식에서 null 허용 연산자의 사용을 보여 줍니다. 첫 번째 쿼리는 null 허용 연산자; 않고 쿼리를 작성 하는 방법을 보여 줍니다. 두 번째 쿼리는 null 허용 연산자를 사용 하는 해당 쿼리를 보여 줍니다. 이 샘플 코드를 사용 하 여 데이터베이스를 설정 하는 방법을 포함 하 여 전체 컨텍스트를 참조 하세요 [연습: 형식 공급자를 사용 하 여 SQL Database에 액세스](../../tutorials/type-providers/accessing-a-sql-database.md)합니다.
+다음 예제에서는 null 허용 연산자의 사용을 보여 줍니다.는 F# 쿼리 식입니다. 첫 번째 쿼리는 null 허용 연산자; 않고 쿼리를 작성 하는 방법을 보여 줍니다. 두 번째 쿼리는 null 허용 연산자를 사용 하는 해당 쿼리를 보여 줍니다. 이 샘플 코드를 사용 하 여 데이터베이스를 설정 하는 방법을 포함 하 여 전체 컨텍스트를 참조 하세요. [연습: 형식 공급자를 사용 하 여 SQL Database에 액세스](../../tutorials/type-providers/accessing-a-sql-database.md)합니다.
 
 ```fsharp
 open System

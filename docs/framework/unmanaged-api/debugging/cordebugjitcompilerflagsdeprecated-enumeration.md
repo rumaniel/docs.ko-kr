@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca206f0da69eddd3e98b599f2813fa7985daf057
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: fd0def06defa677ddde798106c299ed909cd4ce1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404133"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739781"
 ---
 # <a name="cordebugjitcompilerflagsdeprecated-enumeration"></a>CorDebugJITCompilerFlagsDeprecated 열거형
-이 열거형은 사용 되지 않습니다. 사용 하 여는 `CORDEBUG_JIT_DEFAULT` 의 멤버는 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 열거형 대신 합니다.  
+이 열거형은 사용 되지 않습니다. 사용 합니다 `CORDEBUG_JIT_DEFAULT` 의 멤버는 [CorDebugJITCompilerFlags](../../../../docs/framework/unmanaged-api/debugging/cordebugjitcompilerflags-enumeration.md) 열거형 대신 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugJITCompilerFlagsDeprecated {  
     CORDEBUG_JIT_TRACK_DEBUG_INFO  = 0x1  
 } CorDebugJITCompilerFlagsDeprecated;  
@@ -36,12 +36,12 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`CORDEBUG_JIT_TRACK_DEBUG_INFO`|대신 `CORDEBUG_JIT_DEFAULT`를 사용하세요.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -49,5 +49,6 @@ typedef enum CorDebugJITCompilerFlagsDeprecated {
   
  **.NET framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

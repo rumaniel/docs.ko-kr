@@ -2,12 +2,12 @@
 title: 성능 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 155557f6-5d7e-4784-9d00-f42092a28857
-ms.openlocfilehash: 463075dbf1b84de1af45f7644019e49bbeca6487
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: c58bcecbe196f32c0a6ce885929292490b37e052
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666172"
 ---
 # <a name="performance-linq-to-xml-visual-basic"></a>성능 (LINQ to XML) (Visual Basic)
 이 단원에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]의 성능을 함수 생성 및 쿼리 성능에 중점을 두어 설명합니다.  
@@ -25,5 +25,6 @@ ms.locfileid: "42925224"
  [정적으로 컴파일된 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/statically-compiled-queries-linq-to-xml.md)  
  XPath 식 계산기를 사용하여 구문 분석 및 처리를 수행하는 방법과 비교하여 정적으로 컴파일된 쿼리에 대한 성능 정보를 제공합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)
+## <a name="see-also"></a>참고자료
+
+- [프로그래밍 가이드 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

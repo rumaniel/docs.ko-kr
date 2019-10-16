@@ -7,41 +7,39 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding columns
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
-ms.openlocfilehash: 99fe1b8ffb7ccc2a5bef13ea8fef6ace5d5bdfdc
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 7a3029192ab0da4a954dfd7d3d258a00b154924e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452809"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69957107"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거
-Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤 데이터를 표시 하기 위해 열을 포함 해야 합니다. 수동으로 컨트롤을 채우는 하려는 경우에 직접 열을 추가 해야 합니다. 또는 생성 되 고 열을 자동으로 채워지도록 데이터 원본에 컨트롤을 바인딩할 수 있습니다. 데이터 원본에 표시 하려는 것 보다 많은 열이 있으면 필요 없는 열을 제거할 수 있습니다.  
-  
- 다음 절차는 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.DataGridView> 컨트롤입니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트를 만듭니다](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.  
-  
-> [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
-  
-### <a name="to-add-a-column-using-the-designer"></a>디자이너를 사용 하 여 열을 추가 하려면  
-  
-1.  스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))의 오른쪽 위 모서리에는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 선택한 후 **열 추가**합니다.  
-  
-2.  **열 추가** 대화 상자를 선택 합니다 **데이터 바인딩된 열** 옵션 및 데이터 원본에서 열을 선택 하거나 선택 합니다 **바인딩되지 않은 열** 옵션 및 해당 열을 정의 제공 된 필드를 사용 합니다.  
-  
-3.  클릭 합니다 **추가** 기존 열이 컨트롤의 표시 영역에 아직 채워지지 않은 경우 디자이너에 표시 하는 열을 추가 하려면 단추입니다.  
-  
+Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤은 데이터를 표시 하기 위해 열을 포함 해야 합니다. 컨트롤을 수동으로 채울 계획인 경우 열을 직접 추가 해야 합니다. 또는 데이터 소스에 컨트롤을 바인딩할 수 있습니다. 그러면 열이 자동으로 생성 되 고 채워집니다. 데이터 원본에 표시 하려는 열 보다 많은 열이 포함 된 경우 원하지 않는 열을 제거할 수 있습니다.
+
+ 다음 절차에는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 포함 하는 폼을 포함 하는 **Windows 응용 프로그램** 프로젝트가 필요 합니다. 이러한 프로젝트 [를 설정 하는 방법에 대 한 자세한 내용은 방법: Windows Forms 응용 프로그램 프로젝트](/visualstudio/ide/step-1-create-a-windows-forms-application-project) [를 만들고 방법: Windows Forms](how-to-add-controls-to-windows-forms.md)에 컨트롤을 추가 합니다.
+
+## <a name="to-add-a-column-using-the-designer"></a>디자이너를 사용 하 여 열을 추가 하려면
+
+1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 스마트 태그 문자 모양 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))을 클릭 한 다음 **열 추가**를 선택 합니다.
+
+2. **열 추가** 대화 상자에서 데이터 **바인딩 열** 옵션을 선택 하 고 데이터 원본에서 열을 선택 하거나 **바인딩되지 않은 열** 옵션을 선택 하 고 제공 된 필드를 사용 하 여 열을 정의 합니다.
+
+3. **추가** 단추를 클릭 하 여 열을 추가 하면 기존 열이 컨트롤 표시 영역을 아직 채우지 않은 경우 디자이너에 표시 됩니다.
+
     > [!NOTE]
-    >  열 속성을 수정할 수 있습니다는 **열 편집** 대화 상자에서 컨트롤의 스마트 태그에서 액세스할 수 있습니다.  
-  
-### <a name="to-remove-a-column-using-the-designer"></a>디자이너를 사용 하 여 열을 제거 하려면  
-  
-1.  선택할 **열 편집** 컨트롤의 스마트 태그입니다.  
-  
-2.  열을 선택 합니다 **선택한 열** 목록입니다.  
-  
-3.  클릭 합니다 **제거** 사라집니다 디자이너에서 열을 삭제 하려면 단추입니다.  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.DataGridView>  
- [방법: Windows 응용 프로그램 프로젝트 만들기](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+    > 컨트롤의 스마트 태그를 사용 하 여 액세스할 수 있는 **열 편집** 대화 상자에서 열 속성을 수정할 수 있습니다.
+
+## <a name="to-remove-a-column-using-the-designer"></a>디자이너를 사용 하 여 열을 제거 하려면
+
+1. 컨트롤의 스마트 태그에서 **열 편집** 을 선택 합니다.
+
+2. **선택한 열** 목록에서 열을 선택 합니다.
+
+3. **제거** 단추를 클릭 하 여 열을 삭제 하면 디자이너에서 해당 열이 사라집니다.
+
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.DataGridView>
+- [방법: Windows Forms 애플리케이션 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)

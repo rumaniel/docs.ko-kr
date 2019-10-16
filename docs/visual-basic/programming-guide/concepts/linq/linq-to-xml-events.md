@@ -2,12 +2,12 @@
 title: LINQ to XML 이벤트 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 34923928-b99c-4004-956e-38f6db25e910
-ms.openlocfilehash: 216c2af87d2ae3a767548ccaa1efe118215cc6a0
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: d35f8063fe87ee4be3dd49a3c0221cb9c47cb22e
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245288"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834978"
 ---
 # <a name="linq-to-xml-events-visual-basic"></a>LINQ to XML 이벤트 (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 이벤트를 통해 XML 트리가 변경될 때 알림을 받을 수 있습니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "39245288"
   
  다음 이벤트는 XML 트리를 수정할 때 발생합니다.  
   
-|Event|설명|  
+|이벤트|설명|  
 |-----------|-----------------|  
 |<xref:System.Xml.Linq.XObject.Changing>|이 <xref:System.Xml.Linq.XObject> 또는 해당 하위 항목이 변경되기 직전에 발생합니다.|  
 |<xref:System.Xml.Linq.XObject.Changed>|<xref:System.Xml.Linq.XObject>가 변경되거나 해당 하위 항목이 변경될 때 발생합니다.|  
@@ -92,10 +92,10 @@ Module Module1
 End Module  
 ```  
   
-### <a name="comments"></a>설명  
+### <a name="comments"></a>주석  
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```console  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XElement Add  
 Changed System.Xml.Linq.XText Remove  
@@ -114,5 +114,6 @@ Total:308
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>참조
+
+- [Visual Basic (Advanced LINQ to XML 프로그래밍)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

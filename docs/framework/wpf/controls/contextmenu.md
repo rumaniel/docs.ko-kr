@@ -8,23 +8,23 @@ helpviewer_keywords:
 - menus [WPF], context
 - controls [WPF], ContextMenu
 ms.assetid: 2f40b2bb-b702-4706-9fc4-10bcfd7cc35d
-ms.openlocfilehash: fc2fe332916b4edd89025f8cf77f8a45034a4ce9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 17b2df1e3712dc0755130a9ac979c05fadcf53a3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053238"
 ---
 # <a name="contextmenu"></a>ContextMenu
-<xref:System.Windows.Controls.ContextMenu> 표시 하는 컨트롤을 사용 하면 한 <xref:System.Windows.Controls.Menu> 컨트롤의 컨텍스트에 고유 합니다. 일반적으로 <xref:System.Windows.Controls.ContextMenu> 에 노출 되는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 또는 키보드의 메뉴 단추를 마우스 오른쪽 단추를 통해 합니다.  
+합니다 <xref:System.Windows.Controls.ContextMenu> 표시를 제어할 수 있습니다는 <xref:System.Windows.Controls.Menu> 컨트롤의 컨텍스트에 관련 된 합니다. 일반적으로 <xref:System.Windows.Controls.ContextMenu> 노출 되는 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 또는 키보드의 메뉴 단추를 마우스 오른쪽 단추를 통해.  
   
- 다음 그림은 한 <xref:System.Windows.Controls.ContextMenu> 두 개의 서로 다른 상태에: 기본 상태와 열려 있는 상태입니다. 기본 상태에서 컨트롤 축소 됩니다. 부모 메뉴의 위에 마우스 오른쪽 단추를 누르면 컨트롤을 확장 하 고 메뉴 항목이 표시 됩니다.  
+ 다음 그림에 나와 <xref:System.Windows.Controls.ContextMenu> 의 두 가지 상태: 기본 상태 및 열려 있는 상태입니다. 기본 상태의 컨트롤 축소 됩니다. 부모 메뉴의 위에 마우스 오른쪽 단추를 누르면 컨트롤 확장 하 고 메뉴 항목을 표시 합니다.  
   
- ![ContextMenu 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
+ ![ContextMenu 상태](./media/ss-ctl-contextmenu.png "SS_CTL_contextmenu")  
 다양 한 상태의 ContextMenu  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [ContextMenu 개요](../../../../docs/framework/wpf/controls/contextmenu-overview.md)  
+ [ContextMenu 개요](contextmenu-overview.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.ContextMenu>  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f26a049c68b62ee09a569d741f0c1ab03a3f331a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 18b7310b2d04b81330c68de59adf5f18ba9c8675
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428673"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769744"
 ---
 # <a name="eclrassemblyidentityflags-enumeration"></a>ECLRAssemblyIdentityFlags 열거형
 어셈블리 id의 유형을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum _CLRAssemblyIdentityFlags {  
     CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT = 0  
 } ECLRAssemblyIdentityFlags;  
@@ -36,16 +36,17 @@ typedef enum _CLRAssemblyIdentityFlags {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|Id가 정식화 되었습니다.|  
+|`CLR_ASSEMBLY_IDENTITY_FLAGS_DEFAULT`|Id 정식화 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -1,5 +1,6 @@
 ---
-title: '&lt;param&gt;(C# 프로그래밍 가이드)'
+title: <param> - C# 프로그래밍 가이드
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - param
@@ -8,21 +9,21 @@ helpviewer_keywords:
 - <param> C# XML tag
 - param C# XML tag
 ms.assetid: 46d329b1-5b84-4537-9e17-73ca97313e4e
-ms.openlocfilehash: b4afa84aadc68ca2f0113023319f02a10dc17836
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: e2e9bd4478ceaf2f491aba0aa3db8bae7857f28d
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508217"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69587915"
 ---
-# <a name="ltparamgt-c-programming-guide"></a>&lt;param&gt;(C# 프로그래밍 가이드)
+# <a name="param-c-programming-guide"></a>\<param>(C# 프로그래밍 가이드)
 ## <a name="syntax"></a>구문  
   
 ```xml  
 <param name="name">description</param>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `name`  
  메서드 매개 변수의 이름입니다. 이름을 큰따옴표(“ ”)로 묶습니다.  
   
@@ -34,12 +35,12 @@ ms.locfileid: "43508217"
   
  \<param> 태그에 대한 텍스트는 IntelliSense, 개체 브라우저 및 코드 주석 웹 보고서에 표시됩니다.  
   
- [/doc](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
+ [/doc](../../language-reference/compiler-options/doc-compiler-option.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
 ## <a name="example"></a>예  
- [!code-csharp[csProgGuideDocComments#1](../../../csharp/programming-guide/xmldoc/codesnippet/CSharp/param_1.cs)]  
+ [!code-csharp[csProgGuideDocComments#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideDocComments/CS/DocComments.cs#1)]  
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [문서 주석에 대한 권장 태그](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)
+- [C# 프로그래밍 가이드](../index.md)
+- [문서 주석에 대한 권장 태그](./recommended-tags-for-documentation-comments.md)

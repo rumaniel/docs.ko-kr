@@ -1,20 +1,20 @@
 ---
 title: '방법: 문자열 비교 - C# 가이드'
 description: 문화권별 순서 지정 여부나 대/소문자와 상관없이 문자열 값을 비교하고 정렬하는 방법에 대해 알아봅니다.
-ms.date: 03/20/2018
+ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 3c841a1152613ec877bb6172dc8d053bf060b33b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515282"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58759874"
 ---
 # <a name="how-to-compare-strings-in-c"></a>C\#에서 문자열을 비교하는 방법
 
-문자열을 비교하여 두 가지 질문 중 하나를 해결할 수 있습니다. "두 문자열이 같은가?" 또는 "정렬할 때 이 문자열을 어떤 순서로 정렬해야 하는가?"
+문자열을 비교하여 다음 두 가지 질문 중 하나를 해결할 수 있습니다. "이 두 문자열이 같나요?" 또는 "정렬할 때 이 문자열을 어떤 순서로 정렬해야 하는가?"
 
 이러한 두 가지 질문은 문자열 비교에 영향을 주는 요소에 의해 복잡해 집니다.
 
@@ -29,23 +29,33 @@ ms.locfileid: "43515282"
 
 ## <a name="default-ordinal-comparisons"></a>기본 서수 비교
 
-가장 일반적인 작업인 <xref:System.String.CompareTo%2A?displayProperty=nameWithType>과 <xref:System.String.Equals%2A?displayProperty=nameWithType> 또는 <xref:System.String.op_Equality%2A?displayProperty=nameWithType>은 서수 비교, 대/소문자 구분 비교를 사용하고 현재 문화권을 사용합니다. 이 결과는 다음 예제에서 확인할 수 있습니다.
+가장 일반적인 작업인
+
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType>
+- <xref:System.String.Equals%2A?displayProperty=nameWithType>
+- <xref:System.String.op_Equality%2A?displayProperty=nameWithType> 
+
+은(는) 서수 비교, 대/소문자 구분 비교를 사용하고 현재 문화권을 사용합니다. 결과는 다음 예제에서 확인할 수 있습니다.
 
 [!code-csharp-interactive[Comparing strings using an ordinal comparison](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#1)]
 
-서수 비교는 문자열을 비교할 때 언어 규칙을 고려하지 않습니다. 문자별로 문자열을 비교합니다. 대/소문자 구분 비교에서는 비교 시 대/소문자를 구분합니다. 이러한 기본 비교 방법에 대한 가장 중요한 점은 현재 문화권을 사용하기 때문에 결과가 실행되는 컴퓨터의 로캘 및 언어 설정에 따라 달라진다는 것입니다. 이러한 비교는 컴퓨터 또는 위치에서 순서가 일관적이어야 하는 비교에는 적합하지 않습니다.
+기본 서수 비교는 문자열을 비교할 때 언어 규칙을 고려하지 않습니다. 두 문자열에서 각 <xref:System.Char> 개체의 이진값을 비교합니다. 결과적으로, 기본 서수 비교도 대/소문자를 구분합니다. 
+
+<xref:System.String.Equals%2A?displayProperty=nameWithType> 및 <xref:System.String.op_Equality%2A?displayProperty=nameWithType>의 같음에 대한 테스트는 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 및 <xref:System.String.Compare(System.String,System.String)?displayProperty=nameWithType)> 메서드를 사용한 문자열 비교와 다릅니다. 같음에 대한 테스트가 대/소문자 구분 서수 비교를 수행하는 동안 비교 메서드는 현재 문화권을 사용하여 대/소문자 구분하고 문화권 구분 비교를 수행합니다. 기본 비교 메서드는 종종 다양한 유형의 비교를 수행하기 때문에 수행할 비교 형식을 명시적으로 지정하는 오버로드를 호출하여 코드의 의도를 항상 명확히 하는 것이 좋습니다.
 
 ## <a name="case-insensitive-ordinal-comparisons"></a>대/소문자를 구분하지 않는 서수 비교
 
-<xref:System.String.Equals%2A?displayProperty=nameWithType> 메서드를 사용하면 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>의 <xref:System.StringComparison> 값을 지정하여
-대소문자를 구분하지 않는 비교를 지정할 수 있습니다. 또한 대/소문자를 구분하지 않는 비교를 지정하는 부울 인수를 포함하는 정적 <xref:System.String.Compare%2A> 메서드가 있습니다. 이는 다음 코드에서 확인할 수 있습니다.
+<xref:System.String.Equals(System.String,System.StringComparison)?displayProperty=nameWithType> 메서드를 사용하면 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType>의 <xref:System.StringComparison> 값을 지정하여
+대/소문자를 구분하지 않는 서수 비교. <xref:System.StringComparison> 인수에 대해 <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 값을 지정하는 경우 대/소문자를 구분 하지 않는 서수 비교를 수행하는 정적 <xref:System.String.Compare(System.String,System.String,System.StringComparison)?displayProperty=nameWithType> 메서드도 있습니다. 이는 다음 코드에서 확인할 수 있습니다.
 
 [!code-csharp-interactive[Comparing strings ignoring case](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#2)]
+
+대/소문자를 구분하지 않는 서수 비교를 수행하는 경우 이러한 메서드는 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)의 대/소문자 규칙을 사용합니다.
 
 ## <a name="linguistic-comparisons"></a>언어 비교
 
 또한 현재 문화권에 대한 언어 규칙을 사용하여 문자열을 정렬할 수 있습니다.
-이를 종종 "단어 정렬 순서"라고 합니다. 언어 비교를 수행할 때 일부 영숫자가 아닌 유니코드 문자에 특별한 가중치가 할당될 수 있습니다. 예를 들어, 하이픈 "-"는 매우 작은 가중치가 할당될 수 있으므로 "co-op" 및 "coop"는 정렬 순서에 나란히 표시됩니다. 또한 일부 유니코드 문자는 영숫자 문자의 시컨스와 동일할 수 있습니다. 다음 예에서는 "ss" 및 'ß'를 사용하여 독일어로 "거리에서 춤을 추다"라는 문구를 사용합니다. 언어적으로(Windows의 경우) "ss"는 "en-US" 및 "de-DE" 문화권의 독일어 Essetz: 'ß' 문자와 같습니다.
+이를 종종 "단어 정렬 순서"라고 합니다. 언어 비교를 수행할 때 일부 영숫자가 아닌 유니코드 문자에 특별한 가중치가 할당될 수 있습니다. 예를 들어, 하이픈 "-"는 매우 작은 가중치가 할당될 수 있으므로 "co-op" 및 "coop"는 정렬 순서에 나란히 표시됩니다. 또한 일부 유니코드 문자는 <xref:System.Char> 인스턴스의 시퀀스와 동일할 수 있습니다. 다음 예에서는 "ss" 및 'ß'를 사용하여 독일어로 독일어에서는 "ss"(U+0073 U+0073)가 한 문자열에 있고 'ß'(U+00DF)가 다른 문자열에 있습니다. 언어적으로(Windows의 경우) "ss"는 "en-US" 및 "de-DE" 문화권에서 독일어 Esszet: 'ß' 문자와 같습니다.
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
@@ -64,8 +74,8 @@ Windows에서 언어 비교를 서수 비교로 변경하면 "cop", "coop" 및 "
 
 ## <a name="comparisons-using-specific-cultures"></a>특정 문화권을 사용한 비교
 
-이 샘플은 현재 문화권에 대한 <xref:System.Globalization.CultureInfo>를 저장합니다.
-원래 문화권은 현재 스레드 개체에서 설정하거나 검색할 수 있습니다. 비교는 문화권별 비교를 보장하기 위해 <xref:System.StringComparison.CurrentCulture> 값을 사용하여 수행됩니다.
+이 샘플은 en-US 및 de-DE 문화권에 대한 <xref:System.Globalization.CultureInfo> 개체를 저장합니다.
+비교는 문화권별 비교를 보장하기 위해 <xref:System.Globalization.CultureInfo> 개체를 사용하여 수행됩니다.
 
 사용된 문화권은 언어 비교에 영향을 줍니다. 다음 예에서는 "en-US" 문화권과 "de-DE" 문화권을 사용하여 두 개의 독일어 문장을 비교한 결과를 보여줍니다.
 
@@ -112,17 +122,19 @@ Windows에서 언어 비교를 서수 비교로 변경하면 "cop", "coop" 및 "
 
 ## <a name="reference-equality-and-string-interning"></a>참조 동일성과 문자열 인터닝
 
-샘플 중에 <xref:System.Object.ReferenceEquals%2A>를 사용한 것은 없습니다. 이 메서드는 두 문자열이 동일한 개체인지 확인합니다. 이로 인해 문자열 비교 시 일관성 없는 결과가 발생할 수 있습니다. 다음 예에서는 C#의 *문자열 인터닝* 기능을 보여줍니다. 프로그램이 두 개 이상의 동일 문자열 변수를 선언할 경우 컴파일러는 변수를 모두 같은 위치에 저장합니다. <xref:System.Object.ReferenceEquals%2A> 메서드를 호출하여 두 문자열이 실제로 메모리에서 같은 개체를 참조하는지 확인할 수 있습니다. 인터닝을 방지하려면 <xref:System.String.Copy%2A?displayProperty=nameWithType> 메서드를 사용합니다. 복사본이 생성된 후 두 개의 문자열은 동일한 값을 가지더라도 다른 위치에 저장됩니다. `a`와 `b`가 *인터닝*되었음을, 즉 동일한 저장소를 공유한다는 것을 보여주는 다음 샘플을 실행합니다. 문자열 `a`와 `c`는 그렇지 않습니다.
+샘플 중에 <xref:System.Object.ReferenceEquals%2A>를 사용한 것은 없습니다. 이 메서드는 두 문자열이 동일한 개체인지 확인합니다. 이로 인해 문자열 비교 시 일관성 없는 결과가 발생할 수 있습니다. 다음 예에서는 C#의 *문자열 인터닝* 기능을 보여줍니다. 프로그램이 두 개 이상의 동일 문자열 변수를 선언할 경우 컴파일러는 변수를 모두 같은 위치에 저장합니다. <xref:System.Object.ReferenceEquals%2A> 메서드를 호출하여 두 문자열이 실제로 메모리에서 같은 개체를 참조하는지 확인할 수 있습니다. 인터닝을 방지하려면 <xref:System.String.Copy%2A?displayProperty=nameWithType> 메서드를 사용합니다. 복사본이 생성된 후 두 개의 문자열은 동일한 값을 가지더라도 스토리지 위치가 다릅니다. `a` 및 `b`가 *인터닝*되었음을, 즉 동일한 스토리지를 공유한다는 것을 보여주는 다음 샘플을 실행합니다. 문자열 `a`와 `c`는 그렇지 않습니다.
 
 [!code-csharp-interactive[Demonstrating string interning](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#9)]
 
 > [!NOTE]
 > 문자열의 동일성을 테스트할 때, 어떤 유형의 비교를 수행할지 명시적으로 지정하는 메서드를 사용해야 합니다. 코드를 훨씬 더 쉽게 유지 관리하고 읽을 수 있습니다. <xref:System.StringComparison> 열거형 매개 변수를 사용하는 <xref:System.String?displayProperty=nameWithType> 및 <xref:System.Array?displayProperty=nameWithType> 클래스의 메서드 오버로드를 사용합니다. 수행할 비교 형식을 지정합니다. 동일성을 테스트할 때 `==` 및 `!=` 연산자를 사용하지 않습니다. <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 인스턴스 메서드는 항상 서수 대/소문자 구분 비교를 수행합니다. 주로 알파벳순으로 문자열을 정렬하는 데 적합합니다.
 
+<xref:System.String.Intern%2A?displayProperty=nameWithType> 메서드를 호출하여 문자열을 인터트하거나 기존의 인턴된 문자열에 대한 참조를 검색할 수 있습니다. 문자열이 인턴트되었는지 확인하려면 <xref:System.String.IsInterned%2A?displayProperty=nameWithType> 메서드를 호출합니다.
+
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>  
-- <xref:System.StringComparer?displayProperty=nameWithType>  
-- [문자열](../programming-guide/strings/index.md)  
-- [문자열 비교](../../standard/base-types/comparing.md)  
-- [응용 프로그램 전역화 및 지역화](/visualstudio/ide/globalizing-and-localizing-applications)
+- <xref:System.Globalization.CultureInfo?displayProperty=nameWithType>
+- <xref:System.StringComparer?displayProperty=nameWithType>
+- [문자열](../programming-guide/strings/index.md)
+- [문자열 비교](../../standard/base-types/comparing.md)
+- [애플리케이션 전역화 및 지역화](/visualstudio/ide/globalizing-and-localizing-applications)

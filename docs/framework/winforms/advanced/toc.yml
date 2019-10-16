@@ -1,0 +1,413 @@
+- name: Windows Forms 애플리케이션 강화
+  href: index.md
+  items:
+    - name: Windows Forms의 그래픽 및 그리기
+      href: graphics-and-drawing-in-windows-forms.md
+      items:
+        - name: 그래픽 개요
+          href: graphics-overview-windows-forms.md
+          items:
+            - name: 그래픽 개요
+              href: overview-of-graphics.md
+            - name: 세 가지 범주의 그래픽 서비스
+              href: three-categories-of-graphics-services.md
+            - name: 그래픽 인터페이스의 구조
+              href: structure-of-the-graphics-interface.md
+        - name: GDI+ 관리 코드 정보
+          href: about-gdi-managed-code.md
+          items:
+            - name: '선, 곡선 및 도형'
+              href: lines-curves-and-shapes.md
+              items:
+                - name: 벡터 그래픽 개요
+                  href: vector-graphics-overview.md
+                - name: 'GDI+의 펜, 선 및 사각형'
+                  href: pens-lines-and-rectangles-in-gdi.md
+                - name: GDI+의 타원 및 원호
+                  href: ellipses-and-arcs-in-gdi.md
+                - name: GDI+의 다각형
+                  href: polygons-in-gdi.md
+                - name: GDI+의 카디널 스플라인
+                  href: cardinal-splines-in-gdi.md
+                - name: GDI+의 3차원 곡선 스플라인
+                  href: bezier-splines-in-gdi.md
+                - name: GDI+의 그래픽 경로
+                  href: graphics-paths-in-gdi.md
+                - name: GDI+의 브러시 및 채워진 도형
+                  href: brushes-and-filled-shapes-in-gdi.md
+                - name: GDI+의 개곡선 및 폐곡선
+                  href: open-and-closed-curves-in-gdi.md
+                - name: GDI+의 영역
+                  href: regions-in-gdi.md
+                - name: GDI+에서 그리기 화면 제한
+                  href: restricting-the-drawing-surface-in-gdi.md
+                - name: 선과 곡선의 앤티 앨리어싱
+                  href: antialiasing-with-lines-and-curves.md
+            - name: '이미지, 비트맵 및 메타파일'
+              href: images-bitmaps-and-metafiles.md
+              items:
+                - name: 비트맵의 유형
+                  href: types-of-bitmaps.md
+                - name: GDI+의 메타파일
+                  href: metafiles-in-gdi.md
+                - name: 'GDI+에서 이미지 그리기, 위치 지정 및 복제'
+                  href: drawing-positioning-and-cloning-images-in-gdi.md
+                - name: GDI+에서 이미지 자르기 및 배율 조정
+                  href: cropping-and-scaling-images-in-gdi.md
+            - name: 좌표계 및 변환
+              href: coordinate-systems-and-transformations.md
+              items:
+                - name: 좌표계 형식
+                  href: types-of-coordinate-systems.md
+                - name: 변환에 대한 매트릭스 표현
+                  href: matrix-representation-of-transformations.md
+                - name: 전역 및 지역 변환
+                  href: global-and-local-transformations.md
+        - name: 관리형 그래픽 클래스 사용
+          href: using-managed-graphics-classes.md
+          items:
+            - name: 그래픽 프로그래밍 시작
+              href: getting-started-with-graphics-programming.md
+              items:
+                - name: '방법: 그리는 데 필요한 그래픽 개체 만들기'
+                  href: how-to-create-graphics-objects-for-drawing.md
+                - name: '방법: 펜 만들기'
+                  href: how-to-create-a-pen.md
+                - name: '방법: 펜 색 설정'
+                  href: how-to-set-the-color-of-a-pen.md
+                - name: '방법: 단색 브러시 만들기'
+                  href: how-to-create-a-solid-brush.md
+                - name: '방법: Windows Form에서 선 그리기'
+                  href: how-to-draw-a-line-on-a-windows-form.md
+                - name: '방법: 윤곽선이 있는 도형 그리기'
+                  href: how-to-draw-an-outlined-shape.md
+                - name: '방법: Windows Form에서 채워진 사각형 그리기'
+                  href: how-to-draw-a-filled-rectangle-on-a-windows-form.md
+                - name: '방법: Windows Form에서 채워진 타원 그리기'
+                  href: how-to-draw-a-filled-ellipse-on-a-windows-form.md
+                - name: '방법: Windows Form에서 텍스트 그리기'
+                  href: how-to-draw-text-on-a-windows-form.md
+                - name: '방법: Windows Form에서 세로 텍스트 그리기'
+                  href: how-to-draw-vertical-text-on-a-windows-form.md
+                - name: '방법: GDI+를 사용하여 이미지 렌더링'
+                  href: how-to-render-images-with-gdi.md
+                - name: '방법: 도형이 있는 Windows Form 만들기'
+                  href: how-to-create-a-shaped-windows-form.md
+                - name: '방법: Windows Forms에서 깜빡임을 줄이기 위한 픽셀 복사'
+                  href: how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md
+            - name: 펜을 사용하여 선과 도형 그리기
+              href: using-a-pen-to-draw-lines-and-shapes.md
+              items:
+                - name: '방법: 펜을 사용하여 선 그리기'
+                  href: how-to-use-a-pen-to-draw-lines.md
+                - name: '방법: 펜을 사용하여 사각형 그리기'
+                  href: how-to-use-a-pen-to-draw-rectangles.md
+                - name: '방법: 펜 굵기 및 맞춤 설정'
+                  href: how-to-set-pen-width-and-alignment.md
+                - name: '방법: 선 끝이 있는 선 그리기'
+                  href: how-to-draw-a-line-with-line-caps.md
+                - name: '방법: 선 조인'
+                  href: how-to-join-lines.md
+                - name: '방법: 사용자 지정 파선 그리기'
+                  href: how-to-draw-a-custom-dashed-line.md
+                - name: '방법: 질감으로 채워진 선 그리기'
+                  href: how-to-draw-a-line-filled-with-a-texture.md
+            - name: 브러시를 사용하여 도형 채우기
+              href: using-a-brush-to-fill-shapes.md
+              items:
+                - name: '방법: 단색으로 도형 채우기'
+                  href: how-to-fill-a-shape-with-a-solid-color.md
+                - name: '방법: 빗살 무늬로 도형 채우기'
+                  href: how-to-fill-a-shape-with-a-hatch-pattern.md
+                - name: '방법: 이미지 질감으로 도형 채우기'
+                  href: how-to-fill-a-shape-with-an-image-texture.md
+                - name: '방법: 이미지에 도형을 바둑판식으로 배열'
+                  href: how-to-tile-a-shape-with-an-image.md
+            - name: 그라데이션 브러시를 사용하여 도형 채우기
+              href: using-a-gradient-brush-to-fill-shapes.md
+              items:
+                - name: '방법: 선형 그라데이션 만들기'
+                  href: how-to-create-a-linear-gradient.md
+                - name: '방법: 경로 그라데이션 만들기'
+                  href: how-to-create-a-path-gradient.md
+                - name: '방법: 그라데이션에 감마 보정 적용'
+                  href: how-to-apply-gamma-correction-to-a-gradient.md
+            - name: '이미지, 비트맵, 아이콘 및 메타파일 사용'
+              href: working-with-images-bitmaps-icons-and-metafiles.md
+              items:
+                - name: '방법: 화면에 기존 비트맵 그리기'
+                  href: how-to-draw-an-existing-bitmap-to-the-screen.md
+                - name: '방법: 메타파일 로드 및 표시'
+                  href: how-to-load-and-display-metafiles.md
+                - name: '방법: 이미지 자르기 및 배율 조정'
+                  href: how-to-crop-and-scale-images.md
+                - name: '방법: 이미지 회전, 반사 및 기울이기'
+                  href: how-to-rotate-reflect-and-skew-images.md
+                - name: '방법: 배율 조정 시 보간 모드를 사용하여 이미지 품질 관리'
+                  href: how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md
+                - name: '방법: 썸네일 이미지 만들기'
+                  href: how-to-create-thumbnail-images.md
+                - name: '방법: 자동 배율 조정 없이 성능 향상'
+                  href: how-to-improve-performance-by-avoiding-automatic-scaling.md
+                - name: '방법: 이미지 메타데이터 읽기'
+                  href: how-to-read-image-metadata.md
+                - name: '방법: 런타임에 비트맵 만들기'
+                  href: how-to-create-a-bitmap-at-run-time.md
+                - name: '방법: Windows Forms에서 파일과 연결된 아이콘 추출'
+                  href: how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md
+            - name: 선 및 채우기 알파 혼합
+              href: alpha-blending-lines-and-fills.md
+              items:
+                - name: '방법: 불투명 및 반투명 선 그리기'
+                  href: how-to-draw-opaque-and-semitransparent-lines.md
+                - name: '방법: 불투명 및 반투명 브러시를 사용하여 그리기'
+                  href: how-to-draw-with-opaque-and-semitransparent-brushes.md
+                - name: '방법: 혼합 모드를 사용하여 알파 혼합 조절'
+                  href: how-to-use-compositing-mode-to-control-alpha-blending.md
+                - name: '방법: 색 매트릭스를 사용하여 이미지에 알파 값 설정'
+                  href: how-to-use-a-color-matrix-to-set-alpha-values-in-images.md
+            - name: 글꼴 및 텍스트 사용
+              href: using-fonts-and-text.md
+              items:
+                - name: '방법: 글꼴 패밀리 및 글꼴 만들기'
+                  href: how-to-construct-font-families-and-fonts.md
+                - name: '방법: 지정된 위치에 텍스트 그리기'
+                  href: how-to-draw-text-at-a-specified-location.md
+                - name: '방법: 사각형 안에 줄 바꿈된 텍스트 그리기'
+                  href: how-to-draw-wrapped-text-in-a-rectangle.md
+                - name: '방법: GDI를 사용하여 텍스트 그리기'
+                  href: how-to-draw-text-with-gdi.md
+                - name: '방법: 그린 텍스트 맞추기'
+                  href: how-to-align-drawn-text.md
+                - name: '방법: 세로 텍스트 만들기'
+                  href: how-to-create-vertical-text.md
+                - name: '방법: 그린 텍스트에 탭 정지 설정'
+                  href: how-to-set-tab-stops-in-drawn-text.md
+                - name: '방법: 설치된 글꼴 열거'
+                  href: how-to-enumerate-installed-fonts.md
+                - name: '방법: 개인 글꼴 컬렉션 만들기'
+                  href: how-to-create-a-private-font-collection.md
+                - name: '방법: 글꼴 메트릭 가져오기'
+                  href: how-to-obtain-font-metrics.md
+                - name: '방법: 텍스트에 앤티 앨리어싱 사용'
+                  href: how-to-use-antialiasing-with-text.md
+            - name: 곡선 구성 및 그리기
+              href: constructing-and-drawing-curves.md
+              items:
+                - name: '방법: 카디널 스플라인 그리기'
+                  href: how-to-draw-cardinal-splines.md
+                - name: '방법: 단일 3차원 곡선 스플라인 그리기'
+                  href: how-to-draw-a-single-bezier-spline.md
+                - name: '방법: 일련의 3차원 곡선 스플라인 그리기'
+                  href: how-to-draw-a-sequence-of-bezier-splines.md
+            - name: 경로 구성 및 그리기
+              href: constructing-and-drawing-paths.md
+              items:
+                - name: '방법: 선, 곡선 및 도형으로 그림 만들기'
+                  href: how-to-create-figures-from-lines-curves-and-shapes.md
+                - name: '방법: 열린 그림 채우기'
+                  href: how-to-fill-open-figures.md
+                - name: '방법: 구부러진 경로를 선으로 펴기'
+                  href: how-to-flatten-a-curved-path-into-a-line.md
+            - name: 관리형 GDI+에서 변환 사용
+              href: using-transformations-in-managed-gdi.md
+              items:
+                - name: 전역 변형 사용
+                  href: using-the-world-transformation.md
+                - name: 변형 순서의 중요성
+                  href: why-transformation-order-is-significant.md
+            - name: Graphics 컨테이너 사용
+              href: using-graphics-containers.md
+              items:
+                - name: Graphics 개체의 상태 관리
+                  href: managing-the-state-of-a-graphics-object.md
+                - name: 중첩된 Graphics 컨테이너 사용
+                  href: using-nested-graphics-containers.md
+            - name: 영역 사용
+              href: using-regions.md
+              items:
+                - name: '방법: 영역에 적중 테스트 사용'
+                  href: how-to-use-hit-testing-with-a-region.md
+                - name: '방법: 영역에 클리핑 사용'
+                  href: how-to-use-clipping-with-a-region.md
+            - name: 이미지 다시 칠하기
+              href: recoloring-images.md
+              items:
+                - name: '방법: 색 매트릭스를 사용하여 단색으로 변환'
+                  href: how-to-use-a-color-matrix-to-transform-a-single-color.md
+                - name: '방법: 이미지 색 변환'
+                  href: how-to-translate-image-colors.md
+                - name: 변형을 사용하여 색의 비율 조정
+                  href: using-transformations-to-scale-colors.md
+                - name: '방법: 색 회전'
+                  href: how-to-rotate-colors.md
+                - name: '방법: 색 전단'
+                  href: how-to-shear-colors.md
+                - name: '방법: 색 다시 매핑 변경 테이블 사용'
+                  href: how-to-use-a-color-remap-table.md
+            - name: 관리형 GDI+에서 이미지 인코더 및 디코더 사용
+              href: using-image-encoders-and-decoders-in-managed-gdi.md
+              items:
+                - name: '방법: 설치된 인코더 나열'
+                  href: how-to-list-installed-encoders.md
+                - name: '방법: 설치된 디코더 나열'
+                  href: how-to-list-installed-decoders.md
+                - name: '방법: 인코더에서 지원하는 매개 변수 확인'
+                  href: how-to-determine-the-parameters-supported-by-an-encoder.md
+                - name: '방법: BMP 이미지를 PNG 이미지로 변환'
+                  href: how-to-convert-a-bmp-image-to-a-png-image.md
+                - name: '방법: JPEG 압축 수준 설정'
+                  href: how-to-set-jpeg-compression-level.md
+            - name: 이중 버퍼링 사용
+              href: using-double-buffering.md
+              items:
+                - name: 이중 버퍼링 그래픽
+                  href: double-buffered-graphics.md
+                - name: '방법: 양식과 컨트롤에 이중 버퍼링을 사용하여 그래픽 깜빡임 줄이기'
+                  href: how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md
+                - name: '방법: 버퍼링된 그래픽 수동 관리'
+                  href: how-to-manually-manage-buffered-graphics.md
+                - name: '방법: 버퍼링된 그래픽 수동 렌더링'
+                  href: how-to-manually-render-buffered-graphics.md
+    - name: Windows Forms 애플리케이션 설정
+      href: application-settings-for-windows-forms.md
+      items:
+        - name: 애플리케이션 설정 개요
+          href: application-settings-overview.md
+        - name: 애플리케이션 설정 아키텍처
+          href: application-settings-architecture.md
+        - name: 애플리케이션 설정 특성
+          href: application-settings-attributes.md
+        - name: 사용자 지정 컨트롤에 대한 애플리케이션 설정
+          href: application-settings-for-custom-controls.md
+        - name: 애플리케이션 설정 및 사용자 설정 사용
+          href: using-application-settings-and-user-settings.md
+          items:
+            - name: '방법: 디자인 타임에 새 설정 만들기'
+              href: how-to-create-a-new-setting-at-design-time.md
+            - name: '방법: 디자인 타임에 기존 설정 값 변경'
+              href: how-to-change-the-value-of-an-existing-setting-at-design-time.md
+            - name: '방법: 애플리케이션 세션 간 설정 값 변경'
+              href: how-to-change-the-value-of-a-setting-between-application-sessions.md
+            - name: '방법: C#을 사용하여 런타임에 설정 읽기'
+              href: how-to-read-settings-at-run-time-with-csharp.md
+            - name: '방법: C#을 사용하여 런타임에 사용자 설정 쓰기'
+              href: how-to-write-user-settings-at-run-time-with-csharp.md
+            - name: '방법: C#에서 애플리케이션에 여러 설정 집합 추가'
+              href: how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md
+        - name: '방법: 애플리케이션 설정 만들기'
+          href: how-to-create-application-settings.md
+        - name: '방법: 애플리케이션 설정 업데이트'
+          href: how-to-validate-application-settings.md
+    - name: Windows Forms 인쇄 지원
+      href: windows-forms-print-support.md
+      items:
+        - name: '방법: 표준 Windows Forms 인쇄 작업 만들기'
+          href: how-to-create-standard-windows-forms-print-jobs.md
+        - name: '방법: 런타임에 PrintDialog에서 사용자 입력 캡처'
+          href: how-to-capture-user-input-from-a-printdialog-at-run-time.md
+        - name: '방법: Windows Forms에서 사용자의 컴퓨터에 연결된 프린터 선택'
+          href: how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md
+        - name: '방법: Windows Forms에서 그래픽 인쇄'
+          href: how-to-print-graphics-in-windows-forms.md
+        - name: '방법: Windows Forms에서 다중 페이지 텍스트 파일 인쇄'
+          href: how-to-print-a-multi-page-text-file-in-windows-forms.md
+        - name: '방법: Windows Forms 인쇄 작업 완료'
+          href: how-to-complete-windows-forms-print-jobs.md
+        - name: '방법: Windows Form 인쇄'
+          href: how-to-print-a-windows-form.md
+        - name: '방법: Windows Forms에서 인쇄 미리 보기를 사용하여 인쇄'
+          href: how-to-print-in-windows-forms-using-print-preview.md
+    - name: 끌어서 놓기 작업 및 클립보드 지원
+      href: drag-and-drop-operations-and-clipboard-support.md
+      items:
+        - name: '연습: Windows Forms에서 끌어서 놓기 작업 수행'
+          href: walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md
+        - name: '방법: 애플리케이션 간에 끌어서 놓기 작업 수행'
+          href: how-to-perform-drag-and-drop-operations-between-applications.md
+        - name: '방법: 클립보드에 데이터 추가'
+          href: how-to-add-data-to-the-clipboard.md
+        - name: '방법: 클립보드에서 데이터 검색'
+          href: how-to-retrieve-data-from-the-clipboard.md
+    - name: Windows Forms 애플리케이션의 네트워킹
+      href: networking-in-windows-forms-applications.md
+    - name: Windows Forms 전역화
+      href: globalizing-windows-forms.md
+      items:
+        - name: Windows Forms과 컨트롤에서 국가별 글꼴
+          href: international-fonts-in-windows-forms-and-controls.md
+        - name: Windows Forms 애플리케이션에 대한 양방향 지원
+          href: bi-directional-support-for-windows-forms-applications.md
+        - name: ImeMode 속성을 사용하여 전자 단어 표시
+          href: display-of-asian-characters-with-the-imemode-property.md
+    - name: Windows Forms 및 관리되지 않는 애플리케이션
+      href: windows-forms-and-unmanaged-applications.md
+      items:
+        - name: Windows Forms 및 관리되지 않는 애플리케이션 개요
+          href: windows-forms-and-unmanaged-applications-overview.md
+        - name: '방법: 각 Windows Form을 별개의 스레드에서 표시하여 COM Interop 지원'
+          href: how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md
+        - name: '방법: ShowDialog 메서드를 통해 Windows Form을 표시하여 COM Interop 지원'
+          href: com-interop-by-displaying-a-windows-form-shadow.md
+    - name: 시스템 정보 및 Windows Forms
+      href: system-information-and-windows-forms.md
+    - name: Windows Forms의 전원 관리
+      href: power-management-in-windows-forms.md
+    - name: Windows Forms 애플리케이션의 도움말 시스템
+      href: help-systems-in-windows-forms-applications.md
+    - name: Windows Forms 시각적 상속
+      href: windows-forms-visual-inheritance.md
+      items:
+        - name: '방법: Windows Forms 상속'
+          href: how-to-inherit-windows-forms.md
+        - name: '방법: 상속 선택 대화 상자를 사용하여 양식 상속'
+          href: how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md
+        - name: 기본 폼의 모양 수정 효과
+          href: effects-of-modifying-base-form-appearance.md
+        - name: '연습: 시각적 상속 데모'
+          href: walkthrough-demonstrating-visual-inheritance.md
+        - name: '방법: Modifiers 및 GenerateMember 속성 사용'
+          href: how-to-use-the-modifiers-and-generatemember-properties.md
+    - name: MDI(다중 문서 인터페이스) 애플리케이션
+      href: multiple-document-interface-mdi-applications.md
+      items:
+        - name: '방법: MDI 부모 양식 만들기'
+          href: how-to-create-mdi-parent-forms.md
+        - name: '방법: MDI 자식 양식 만들기'
+          href: how-to-create-mdi-child-forms.md
+        - name: '방법: 활성 MDI 자식 확인'
+          href: how-to-determine-the-active-mdi-child.md
+        - name: '방법: 활성 MDI 자식으로 데이터 보내기'
+          href: how-to-send-data-to-the-active-mdi-child.md
+        - name: '방법: MDI 자식 양식 정렬'
+          href: how-to-arrange-mdi-child-forms.md
+    - name: Windows Forms에 사용자 도움말 통합
+      href: integrating-user-help-in-windows-forms.md
+      items:
+        - name: '방법: Windows 애플리케이션에서 도움말 제공'
+          href: how-to-provide-help-in-a-windows-application.md
+        - name: '방법: 팝업 도움말 표시'
+          href: how-to-display-pop-up-help.md
+        - name: ToolTip을 사용한 컨트롤 도움말
+          href: control-help-using-tooltips.md
+    - name: Windows Forms 내게 필요한 옵션
+      href: windows-forms-accessibility.md
+      items:
+        - name: '연습: 내게 필요한 옵션이 지원되는 Windows 기반 애플리케이션 만들기'
+          href: walkthrough-creating-an-accessible-windows-based-application.md
+          items:
+            - name: 내게 필요한 옵션 지침을 지원하는 Windows Forms 컨트롤의 속성
+              href: properties-on-windows-forms-controls-that-support-accessibility-guidelines.md
+    - name: WPF 컨트롤 사용
+      href: using-wpf-controls.md
+      items:
+        - name: '방법: 디자인 타임에 ElementHost 컨트롤 복사 및 붙여넣기'
+          href: how-to-copy-and-paste-an-elementhost-control-at-design-time.md
+        - name: '연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 정렬'
+          href: walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md
+        - name: '연습: 디자인 타임에 Windows Forms에서 새 WPF 콘텐츠 만들기'
+          href: walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md
+        - name: '연습: 디자인 타임에 Windows Forms에서 WPF 콘텐츠 할당'
+          href: walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md
+        - name: '연습: WPF 콘텐츠 스타일 지정'
+          href: walkthrough-styling-wpf-content.md

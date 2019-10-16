@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdea4c456f04911c37acd69ced65ba841f7959ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a0f4eb244e02e13e418a55351dbc1eb1f5b5d16d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449353"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64617737"
 ---
 # <a name="imetadataimport-interface"></a>IMetaDataImport 인터페이스
 PE(이식 가능) 파일이나 형식 라이브러리 또는 독립 실행형 런타임 메타데이터 이진과 같은 기타 소스에서 기존 메타데이터를 가져오고 조작하는 메서드를 제공합니다.  
@@ -96,23 +96,24 @@ PE(이식 가능) 파일이나 형식 라이브러리 또는 독립 실행형 �
 ## <a name="remarks"></a>설명  
  `IMetaDataImport` 인터페이스의 디자인은 주로 형식 정보를 가져오거나(예: 개발 도구) 배포된 구성 요소를 관리(예: 확인/활성화 서비스)하는 도구 및 서비스에서 사용하기 위한 것입니다. `IMetaDataImport`의 메서드는 다음과 같은 작업 범주로 나뉩니다.  
   
--   메타데이터 범위의 항목 컬렉션 열거  
+- 메타데이터 범위의 항목 컬렉션 열거  
   
--   특정 특성 집합을 가진 항목 찾기  
+- 특정 특성 집합을 가진 항목 찾기  
   
--   지정한 항목의 속성 가져오기  
+- 지정한 항목의 속성 가져오기  
   
--   Get 메서드는 특히 메타데이터 항목의 단일값 속성을 반환하기 위한 것입니다. 속성이 다른 항목에 대한 참조인 경우 해당 항목의 토큰이 반환됩니다. 모든 포인터 입력 유형은 특정 값이 요청되지 않음을 나타내는 NULL일 수 있습니다. 기본적으로 컬렉션 개체(예: 클래스가 구현하는 인터페이스 컬렉션)인 속성을 가져오려면 열거 메서드를 사용합니다.  
+- Get 메서드는 특히 메타데이터 항목의 단일값 속성을 반환하기 위한 것입니다. 속성이 다른 항목에 대한 참조인 경우 해당 항목의 토큰이 반환됩니다. 모든 포인터 입력 유형은 특정 값이 요청되지 않음을 나타내는 NULL일 수 있습니다. 기본적으로 컬렉션 개체(예: 클래스가 구현하는 인터페이스 컬렉션)인 속성을 가져오려면 열거 메서드를 사용합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)  
- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 인터페이스](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
+- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

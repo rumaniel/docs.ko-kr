@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Single data type [Visual Basic], numeric types
 - Decimal data type [Visual Basic], numeric data types
 ms.assetid: a27bd4d0-7e14-43eb-9cc4-b42eaab323c9
-ms.openlocfilehash: 6578a410e389a313b0bad70f043691240e288887
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 75e60cb2a3a934956099ce6fc7d81bf6ecea4d11
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865760"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663377"
 ---
 # <a name="numeric-data-types-visual-basic"></a>숫자 데이터 형식(Visual Basic)
 Visual Basic 제공 여러 *숫자 데이터 형식* 숫자 다양 한 표현으로 처리할 수 있도록 합니다. *정수 계열* 형식을 나타내는 정수만 (양수, 음수 및 0) 및 *비정 수 계열* 형식은 정수와 소수 부분을 사용 하 여 숫자를 나타냅니다.  
@@ -78,9 +78,10 @@ Visual Basic 제공 여러 *숫자 데이터 형식* 숫자 다양 한 표현으
 ### <a name="small-fractional-numbers"></a>작은 소수  
  전체 범위를 필요 하지 않은 경우는 `Double` 데이터 형식을 사용할 수는 `Single` -3.4028235E + 38에서 3.4028235E + 38 까지의 부동 소수점 숫자를 사용할 수 있는 데이터 형식입니다. 사용할 수 있는 가장 작은 크기 `Single` 변수가-1.401298E-45 음수 값 및 1.401298E-45 양수 값입니다. 공용 언어 런타임 저장할 수 있습니다 작은 부동 소수점 숫자를 보유할 변수를 매우 많은 경우에 `Single` 변수 보다 효율적이 고 메모리 소비를 저장 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [문자 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)  
- [기타 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)  
- [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [방법: 부호 없는 형식을 사용하는 Windows 함수 호출](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+## <a name="see-also"></a>참고자료
+
+- [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [문자 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/character-data-types.md)
+- [기타 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md)
+- [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [방법: 부호 없는 형식을 사용하는 Windows 함수 호출](../../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)

@@ -1,21 +1,22 @@
 ---
-title: '&lt;ServiceCertificate&gt;'
+title: <serviceCertificate>
 ms.date: 03/30/2017
 ms.assetid: 42c7f291-2ec3-43c5-8872-35897ff3c660
 author: BrucePerlerMS
-ms.openlocfilehash: 008d2269a72759117658e27ec130cc8cf62cfdfa
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 653dd9cfadbfd33f5371b77172199b946321bc8c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47400415"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251865"
 ---
-# <a name="ltservicecertificategt"></a>&lt;ServiceCertificate&gt;
-암호화 및 토큰 암호 해독에 사용 되는 X.509 인증서를 구성 합니다.  
+# <a name="servicecertificate"></a>\<serviceCertificate>
+토큰을 암호화 하 고 해독 하는 데 사용 되는 x.509 인증서를 구성 합니다.  
   
- \<system.identityModel.services >  
-\<federationConfiguration >  
-\<serviceCertificate >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel-services.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<federationConfiguration >** ](federationconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceCertificate >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,18 +37,18 @@ ms.locfileid: "47400415"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<certificateReference >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatereference.md)|찾기 및 인증서 저장소에서 X.509 인증서의 유효성을 검사 하는 데 사용 되는 설정을 지정 합니다.|  
+|[\<certificateReference>](certificatereference.md)|인증서 저장소에서 x.509 인증서를 찾고 유효성을 검사 하는 데 사용 되는 설정을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<federationConfiguration>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)|구성 설정이 포함 된 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) 및 <xref:System.IdentityModel.Services.SessionAuthenticationModule> (SAM).|  
+|[\<federationConfiguration>](federationconfiguration.md)|<xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (Wsfam) <xref:System.IdentityModel.Services.SessionAuthenticationModule> 및 (SAM)을 구성 하는 설정을 포함 합니다.|  
   
 ## <a name="example"></a>예제  
- 다음 XML의 사용을 보여 줍니다.는 \<serviceCertificate > 요소입니다. XML에서 가져온 것은 `CustomToken` 샘플입니다.  
+ 다음 XML에서는 \<serviceCertificate > 요소를 사용 하는 방법을 보여 줍니다. XML은 `CustomToken` 샘플에서 가져옵니다.  
   
 ```xml  
 <serviceCertificate>  

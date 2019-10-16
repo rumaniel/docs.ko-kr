@@ -3,18 +3,18 @@ title: C#의 LINQ(Language-Integrated Query)
 description: C#의 LINQ(Language-Integrated Query) 소개
 ms.date: 11/30/2016
 ms.assetid: 007cc736-f5cf-4919-b99b-0c00ab2814ce
-ms.openlocfilehash: 18dafaf590697a3c9d669f346c956fd4df3378f0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fe408210b30b5f6118dc66b4c8f7057fb6654881
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197390"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66482985"
 ---
 # <a name="language-integrated-query-linq"></a>LINQ(Language-Integrated Query)
 
-LINQ(Language-Integrated Query)는 C# 언어에 직접 쿼리 기능을 통합하는 방식을 기반으로 하는 기술 집합 이름입니다. 일반적으로 데이터에 대한 쿼리는 컴파일 시간의 형식 검사나 IntelliSense 지원 없이 간단한 문자열로 표현됩니다. 또한 SQL 데이터베이스, XML 문서, 다양한 웹 서비스 등의 각 데이터 소스 형식에 대해 서로 다른 쿼리 언어를 배워야 합니다. LINQ를 사용할 경우 쿼리는 클래스, 메서드, 이벤트와 같은 고급 언어 구문이 됩니다.
+LINQ(Language-Integrated Query)는 C# 언어에 직접 쿼리 기능을 통합하는 방식을 기반으로 하는 기술 집합 이름입니다. 일반적으로 데이터에 대한 쿼리는 컴파일 시간의 형식 검사나 IntelliSense 지원 없이 간단한 문자열로 표현됩니다. 또한 데이터 원본의 각 유형에 대해 다른 쿼리 언어를 배워야 합니다. SQL 데이터베이스, XML 문서, 다양한 웹 서비스 등. LINQ를 사용할 경우 쿼리는 클래스, 메서드, 이벤트와 같은 고급 언어 구문이 됩니다.
 
-쿼리를 작성하는 개발자의 경우 LINQ에서 가장 눈에 잘 띄는 "언어 통합" 부분은 쿼리 식입니다. 쿼리 식은 선언적 *쿼리 구문*으로 작성됩니다. 쿼리 구문을 사용하면 최소한의 코드로 데이터 소스에 대해 필터링, 정렬 및 그룹화 작업을 수행할 수 있습니다. 동일한 기본 쿼리 식 패턴을 사용하여 SQL 데이터베이스, ADO .NET 데이터 집합, XML 문서 및 스트림, .NET 컬렉션에서 데이터를 쿼리하고 변환할 수 있습니다.
+쿼리를 작성하는 개발자의 경우 LINQ에서 가장 눈에 잘 띄는 "언어 통합" 부분은 쿼리 식입니다. 쿼리 식은 선언적 *쿼리 구문*으로 작성됩니다. 쿼리 구문을 사용하면 최소한의 코드로 데이터 소스에 대해 필터링, 정렬 및 그룹화 작업을 수행할 수 있습니다. 동일한 기본 쿼리 식 패턴을 사용하여 SQL 데이터베이스, ADO .NET 데이터 세트, XML 문서 및 스트림, .NET 컬렉션에서 데이터를 쿼리하고 변환할 수 있습니다.
 
 다음 예제에서는 전체 쿼리 작업을 보여 줍니다. 전체 작업에는 데이터 소스 만들기, 쿼리 식 정의 및 `foreach` 문의 쿼리 실행이 포함됩니다.
 
@@ -42,7 +42,7 @@ LINQ(Language-Integrated Query)는 C# 언어에 직접 쿼리 기능을 통합�
 
 LINQ에 대한 자세한 내용을 알아보려면 [쿼리 식 기본 사항](query-expression-basics.md)에서 몇 가지 기본 개념을 익힌 후 관심 있는 LINQ 기술에 대한 설명서를 읽어보세요.
 
-- XML 문서: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml.md)
+- XML 문서: [LINQ to XML](../programming-guide/concepts/linq/linq-to-xml-overview.md)
 
 - ADO.NET Entity Framework: [LINQ to Entities](../../framework/data/adonet/ef/language-reference/linq-to-entities.md)
 

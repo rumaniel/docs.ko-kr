@@ -1,0 +1,133 @@
+- name: 기본 형식
+  href: index.md
+  items:
+    - name: 공용 형식 시스템
+      href: common-type-system.md
+    - name: .NET에서 형식 변환
+      href: type-conversion.md
+      items:
+        - name: 형식 변환표
+          href: conversion-tables.md
+    - name: 형식의 서식 지정
+      href: formatting-types.md
+      items:
+        - name: 표준 숫자 형식 문자열
+          href: standard-numeric-format-strings.md
+        - name: 사용자 지정 숫자 형식 문자열
+          href: custom-numeric-format-strings.md
+        - name: 표준 날짜 및 시간 형식 문자열
+          href: standard-date-and-time-format-strings.md
+        - name: 사용자 지정 날짜 및 시간 형식 문자열
+          href: custom-date-and-time-format-strings.md
+        - name: 표준 TimeSpan 서식 문자열
+          href: standard-timespan-format-strings.md
+        - name: 사용자 지정 TimeSpan 서식 문자열
+          href: custom-timespan-format-strings.md
+        - name: 열거형 형식 문자열
+          href: enumeration-format-strings.md
+        - name: 복합 형식 지정
+          href: composite-formatting.md
+        - name: 서식 지정 작업 수행
+          href: performing-formatting-operations.md
+          items:
+            - name: '방법: 숫자 앞에 0으로 채우기'
+              href: how-to-pad-a-number-with-leading-zeros.md
+            - name: '방법: 특정 날짜의 요일 추출'
+              href: how-to-extract-the-day-of-the-week-from-a-specific-date.md
+            - name: '방법: 사용자 지정 숫자 형식 공급 기업 정의 및 사용'
+              href: how-to-define-and-use-custom-numeric-format-providers.md
+            - name: '방법: 날짜 및 시간 값 라운드트립'
+              href: how-to-round-trip-date-and-time-values.md
+            - name: '방법: 웹 컨트롤의 숫자 사용자 입력을 숫자로 변환'
+              href: how-to-convert-numeric-user-input-in-web-controls-to-numbers.md
+            - name: '방법: 웹 사용자에게 지역화된 날짜 및 시간 정보 표시'
+              href: how-to-display-localized-date-and-time-information-to-web-users.md
+            - name: '방법: 날짜 및 시간 값의 밀리초 표시'
+              href: how-to-display-milliseconds-in-date-and-time-values.md
+            - name: '방법: 그레고리오력이 아닌 달력으로 날짜 표시'
+              href: how-to-display-dates-in-non-gregorian-calendars.md
+    - name: 문자열 조작
+      href: manipulating-strings.md
+      items:
+        - name: 문자열 사용에 대한 모범 사례
+          href: best-practices-strings.md
+        - name: 기본 문자열 작업
+          href: basic-string-operations.md
+          items:
+            - name: 새 문자열 만들기
+              href: creating-new.md
+            - name: 문자 트리밍 및 제거
+              href: trimming.md
+            - name: 문자열 패딩
+              href: padding.md
+            - name: 문자열 비교
+              href: comparing.md
+            - name: 대/소문자 바꾸기
+              href: changing-case.md
+            - name: StringBuilder 클래스 사용
+              href: stringbuilder.md
+            - name: '방법: 기본적인 문자열 조작 수행'
+              href: basic-manipulations.md
+        - name: .NET의 정규식
+          href: regular-expressions.md
+          items:
+            - name: 정규식 언어 - 빠른 참조
+              href: regular-expression-language-quick-reference.md
+              items:
+                - name: 문자 이스케이프
+                  href: character-escapes-in-regular-expressions.md
+                - name: 문자 클래스
+                  href: character-classes-in-regular-expressions.md
+                - name: 앵커
+                  href: anchors-in-regular-expressions.md
+                - name: 그룹화 구문
+                  href: grouping-constructs-in-regular-expressions.md
+                - name: 수량자
+                  href: quantifiers-in-regular-expressions.md
+                - name: 역참조 구문
+                  href: backreference-constructs-in-regular-expressions.md
+                - name: 교체 구문
+                  href: alternation-constructs-in-regular-expressions.md
+                - name: 대체
+                  href: substitutions-in-regular-expressions.md
+                - name: 정규식 옵션
+                  href: regular-expression-options.md
+                - name: 기타 구문
+                  href: miscellaneous-constructs-in-regular-expressions.md
+            - name: 정규식에 대한 모범 사례
+              href: best-practices.md
+            - name: Regular Expression 개체 모델
+              href: the-regular-expression-object-model.md
+            - name: 정규식 동작 정보
+              href: details-of-regular-expression-behavior.md
+              items:
+                - name: 역추적
+                  href: backtracking-in-regular-expressions.md
+                - name: 컴파일 및 다시 사용
+                  href: compilation-and-reuse-in-regular-expressions.md
+                - name: 스레드로부터의 안전성
+                  href: thread-safety-in-regular-expressions.md
+            - name: 정규식 예제
+              href: regular-expression-examples.md
+              items:
+                - name: '예제: HREF 스캐닝'
+                  href: regular-expression-example-scanning-for-hrefs.md
+                - name: '예제: 날짜 형식 변경'
+                  href: regular-expression-example-changing-date-formats.md
+                - name: '방법: URL에서 프로토콜 및 포트 번호 추출'
+                  href: how-to-extract-a-protocol-and-port-number-from-a-url.md
+                - name: '방법: 문자열에서 유효하지 않은 문자 제거'
+                  href: how-to-strip-invalid-characters-from-a-string.md
+                - name: '방법: 문자열이 올바른 이메일 형식인지 확인'
+                  href: how-to-verify-that-strings-are-in-valid-email-format.md
+        - name: .NET의 문자 인코딩
+          href: character-encoding.md
+    - name: 문자열 구문 분석
+      href: parsing-strings.md
+      items:
+        - name: 숫자 문자열 구문 분석
+          href: parsing-numeric.md
+        - name: 날짜 및 시간 문자열 구문 분석
+          href: parsing-datetime.md
+        - name: 기타 문자열 구문 분석
+          href: parsing-other.md

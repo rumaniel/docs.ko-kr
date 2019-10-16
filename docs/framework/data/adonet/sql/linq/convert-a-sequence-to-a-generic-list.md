@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ab76d93-6898-4e75-b76f-290a66ecead8
-ms.openlocfilehash: 0a02e8b9b07121b27639acc64d8898068e3bf4d1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 43960d100cde7f746a56c023d305795e13bc04e7
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361804"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247875"
 ---
 # <a name="convert-a-sequence-to-a-generic-list"></a>제네릭 목록으로 시퀀스 변환
 <xref:System.Linq.Enumerable.ToList%2A>를 사용하여 시퀀스에서 제네릭 목록을 만듭니다.  
@@ -21,5 +21,6 @@ ms.locfileid: "33361804"
  [!code-csharp[DLinqQueryExamples#45](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#45)]
  [!code-vb[DLinqQueryExamples#45](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#45)]  
   
-## <a name="see-also"></a>참고 항목  
- [쿼리 예제](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a>참고자료
+
+- [쿼리 예제](query-examples.md)

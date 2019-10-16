@@ -2,12 +2,12 @@
 title: Pick 활동 사용
 ms.date: 03/30/2017
 ms.assetid: b89be812-a247-4025-b0e3-ffb20db027a6
-ms.openlocfilehash: 59f99d2e0a69d796c1ec64093cf73e07b88887c9
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 03b9ff7f552ad0cdcfbe9c46121a2f46f35de52a
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48848285"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70037877"
 ---
 # <a name="using-the-pick-activity"></a>Pick 활동 사용
 이 샘플에서는 <xref:System.Activities.Statements.Pick> 활동을 사용하는 방법을 보여 줍니다.
@@ -22,33 +22,33 @@ ms.locfileid: "48848285"
 ## <a name="discussion"></a>토론
  이 샘플에는 디자이너 워크플로와 코딩된 워크플로가 포함되어 있습니다.
 
- 디자이너는 워크플로 디자이너 버전의 샘플에는 디자이너에서 워크플로 만드는 방법을 보여 줍니다. 여기에 포함되는 파일은 다음과 같습니다.
+ 디자이너 워크플로 샘플의 디자이너 버전은 디자이너에서 워크플로를 만드는 방법을 보여 줍니다. 여기에 포함되는 파일은 다음과 같습니다.
 
--   Program.cs: 샘플 워크플로를 실행하는 `Main` 함수가 포함됩니다.
+- Program.cs: 에는 샘플 워크플로를 실행 하는 함수가포함되어있습니다.`Main`
 
--   ReadString.cs: 콘솔에서 입력을 읽는 사용자 지정 활동입니다.
+- ReadString.cs: 콘솔에서 일부 입력을 읽는 사용자 지정 활동입니다.
 
--   Sequence1.xaml: Pick을 사용하는 디자이너를 통해 만들어진 워크플로입니다.
+- Sequence1.xaml: 뚝딱를 사용 하는 디자이너를 사용 하 여 만든 워크플로입니다.
 
- 코딩 된 버전의 샘플 코딩 된 워크플로 디자이너에서 워크플로 만드는 방법을 보여 줍니다. 여기에 포함되는 파일은 다음과 같습니다.
+ 코딩 된 워크플로 샘플의 코딩 된 버전은 디자이너에서 워크플로를 만드는 방법을 보여 줍니다. 여기에 포함되는 파일은 다음과 같습니다.
 
--   Program.cs: 샘플 워크플로를 실행하는 `Main` 함수가 포함됩니다.
+- Program.cs: 에는 샘플 워크플로를 실행 하는 함수가포함되어있습니다.`Main`
 
--   ReadString.cs: 콘솔에서 입력을 읽는 사용자 지정 활동입니다.
+- ReadString.cs: 콘솔에서 일부 입력을 읽는 사용자 지정 활동입니다.
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1.  Pick.sln 솔루션 파일을 열고 Visual Studio 2010을 사용 합니다.
+1. Visual Studio 2010을 사용 하 여 선택 .sln 솔루션 파일을 엽니다.
 
-2.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
+2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-3.  F5 키를 눌러 솔루션을 실행합니다.
+3. F5 키를 눌러 솔루션을 실행합니다.
 
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\Pick`

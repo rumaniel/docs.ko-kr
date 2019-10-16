@@ -1,0 +1,17 @@
+- name: 배열
+  href: index.md
+  items:
+    - name: 개체로 사용되는 배열
+      href: arrays-as-objects.md
+    - name: 1차원 배열
+      href: single-dimensional-arrays.md
+    - name: 다차원 배열
+      href: multidimensional-arrays.md
+    - name: 가변 배열
+      href: jagged-arrays.md
+    - name: 배열에 foreach 사용
+      href: using-foreach-with-arrays.md
+    - name: 인수로 배열 전달
+      href: passing-arrays-as-arguments.md
+    - name: 암시적으로 형식화된 배열
+      href: implicitly-typed-arrays.md

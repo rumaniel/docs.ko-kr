@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9d6ec37bbd8750c27a41b5f18180c7726cdcd483
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3532ca0a30d83aa8f61bc4397090f3d589b73257
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442841"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780926"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 열거형
 어셈블리 컴파일에 적용되는 메타데이터를 설명하는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorAssemblyFlags {  
   
     afPublicKey             =   0x0001,  
@@ -59,31 +59,32 @@ typedef enum CorAssemblyFlags {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`afPublicKey`|어셈블리 참조는 전체, 해시 되지 않은 공개 키 함을 나타냅니다.|  
-|`afPA_None`|프로세서 아키텍처 지정 임을 나타냅니다.|  
+|`afPublicKey`|어셈블리 참조를 완전 한 해시 되지 않은 공개 키 보유 함을 나타냅니다.|  
+|`afPA_None`|프로세서 아키텍처를 지정 되지 않음을 나타냅니다.|  
 |`afPA_MSIL`|프로세서 아키텍처 중립 임을 나타냅니다 (PE32).|  
-|`afPA_x86`|프로세서 아키텍처 x86 (PE32) 임을 나타냅니다.|  
-|`afPA_IA64`|프로세서 아키텍처 Itanium (PE32 +) 임을 나타냅니다.|  
-|`afPA_AMD64`|프로세서 아키텍처 AMD X64 (PE32 +) 임을 나타냅니다.|  
-|`afPA_ARM`|프로세서 아키텍처 ARM (PE32) 임을 나타냅니다.|  
-|`afPA_NoPlatform`|어셈블리가 참조 어셈블리; 임을 나타냅니다. 즉, 모든 아키텍처에 적용 되지만 모든 아키텍처에서 실행할 수 없습니다. 따라서 플래그는 동일 `afPA_Mask`합니다.|  
-|`afPA_Specified`|프로세서 아키텍처 플래그에 전파 해야 있는지 나타냅니다는 `AssemblyRef` 레코드입니다.|  
+|`afPA_x86`|프로세서 아키텍처 (PE32) x86 임을 나타냅니다.|  
+|`afPA_IA64`|프로세서 아키텍처 Itanium (PE32 이상) 임을 나타냅니다.|  
+|`afPA_AMD64`|프로세서 아키텍처 AMD X64 (PE32 이상) 임을 나타냅니다.|  
+|`afPA_ARM`|프로세서 아키텍처 (PE32) ARM 임을 나타냅니다.|  
+|`afPA_NoPlatform`|어셈블리는 참조 어셈블리 임을 나타냅니다. 즉, 모든 아키텍처에 적용 되지만 모든 아키텍처에서 실행할 수 없습니다. 따라서 플래그는 동일 `afPA_Mask`합니다.|  
+|`afPA_Specified`|프로세서 아키텍처 플래그 전파 되어야는 나타냅니다는 `AssemblyRef` 레코드입니다.|  
 |`afPA_Mask`|프로세서 아키텍처를 설명 하는 마스크입니다.|  
-|`afPA_FullMask`|프로세서 아키텍처 설명을 포함 되어 있는지를 지정 합니다.|  
-|`afPA_Shift`|프로세서 아키텍처 플래그 인덱스에서 시프트 횟수를 나타냅니다.|  
-|`afEnableJITcompileTracking`|해당 값을 나타냅니다는 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 의 <xref:System.Diagnostics.DebuggableAttribute>합니다.|  
-|`afDisableJITcompileOptimizer`|해당 값을 나타냅니다는 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 의 <xref:System.Diagnostics.DebuggableAttribute>합니다.|  
-|`afRetargetable`|어셈블리가 다른 게시자의 어셈블리에 실행 시 대상이 될 수 있는지를 나타냅니다.|  
+|`afPA_FullMask`|프로세서 아키텍처 설명이 포함 되어 있는지를 지정 합니다.|  
+|`afPA_Shift`|프로세서 아키텍처 플래그를 인덱스에서 시프트 횟수를 나타냅니다.|  
+|`afEnableJITcompileTracking`|해당 값을 나타내는 합니다 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 의 <xref:System.Diagnostics.DebuggableAttribute>합니다.|  
+|`afDisableJITcompileOptimizer`|해당 값을 나타내는 합니다 <xref:System.Diagnostics.DebuggableAttribute.DebuggingModes> 의 <xref:System.Diagnostics.DebuggableAttribute>합니다.|  
+|`afRetargetable`|어셈블리 다른 게시자의 어셈블리를 런타임 시 대상이 될 수 있는지를 나타냅니다.|  
 |`afContentType_Mask`|콘텐츠 형식을 설명 하는 마스크입니다.|  
-|`afContentType_Default`|기본 콘텐츠 형식을 나타냅니다.|  
-|`afContentType_WindowsRuntime`|나타냅니다는 [!INCLUDE[wrt](../../../../includes/wrt-md.md)] 콘텐츠 형식입니다.|  
+|`afContentType_Default`|기본 콘텐츠 유형을 나타냅니다.|  
+|`afContentType_WindowsRuntime`|Windows 런타임 콘텐츠 유형을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorHdr.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

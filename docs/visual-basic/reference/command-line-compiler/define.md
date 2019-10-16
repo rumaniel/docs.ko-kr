@@ -1,5 +1,5 @@
 ---
-title: -정의 (Visual Basic)
+title: -define (Visual Basic)
 ms.date: 03/10/2018
 helpviewer_keywords:
 - -d compiler option [Visual Basic]
@@ -9,21 +9,25 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: 4cab6bc968275bc12af4365fd3da5e3b5ff417f2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 5b2c0173416418f67446c5441a93e5b06e93dc12
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195179"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002377"
 ---
-# <a name="-define-visual-basic"></a>-정의 (Visual Basic)
+# <a name="-define-visual-basic"></a>-define (Visual Basic)
 조건부 컴파일러 상수를 정의합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 -define:["]symbol[=value][,symbol[=value]]["]  
-' -or-  
+```
+
+로 구분하거나 여러
+
+```console  
 -d:["]symbol[=value][,symbol[=value]]["]  
 ```  
   
@@ -31,11 +35,11 @@ ms.locfileid: "50195179"
   
 |용어|정의|  
 |---|---|  
-|`symbol`|필수 요소. 정의할 기호입니다.|  
-|`value`|선택 사항입니다. `symbol`을 할당할 값입니다. 하는 경우 `value` 문자열은 백슬래시/따옴표 시퀀스로 묶어야 (\\") 따옴표 대신 합니다. 값을 지정하지 않으면 True가 지정됩니다.|  
+|`symbol`|필수. 정의할 기호입니다.|  
+|`value`|선택 사항입니다. `symbol`을 할당할 값입니다. @No__t-0이 문자열이 면 따옴표 대신 백슬래시/따옴표 시퀀스 (\\ ")로 묶어야 합니다. 값을 지정하지 않으면 True가 지정됩니다.|  
   
 ## <a name="remarks"></a>설명  
- `-define` 옵션은 사용과 비슷합니다는 `#Const` 사용 하 여 정의 하는 상수를 제외 하 고 원본 파일에서 전처리기 지시문 `-define` 공용 이며 프로젝트의 모든 파일에 적용 합니다.  
+ @No__t-0 옵션은 `-define`로 정의 된 상수가 public이 고 프로젝트의 모든 파일에 적용 된다는 점을 제외 하 고는 소스 파일에서 @no__t 1 전처리기 지시문을 사용 하는 것과 비슷합니다.  
   
  이 옵션으로 만든 기호를 `#If`...`Then`...`#Else` 지시문과 함께 사용하면 소스 파일을 조건부 컴파일할 수 있습니다.  
   
@@ -45,15 +49,16 @@ ms.locfileid: "50195179"
   
 |Visual Studio 통합 개발 환경에서 /define을 설정하려면|  
 |---|  
-|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급**을 클릭합니다.<br />4.  값을 수정 합니다 **사용자 지정 상수** 상자입니다.|  
+|1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다. <br />2.  **컴파일** 탭을 클릭합니다.<br />3.  **고급**을 클릭합니다.<br />4.  **사용자 지정 상수** 상자에서 값을 수정 합니다.|  
   
 ## <a name="example"></a>예제  
  다음 코드는 두 조건부 컴파일러 상수를 정의한 다음 사용합니다.  
   
- [!code-vb[VbVbalrCompiler#45](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/define_1.vb)]  
+ [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)  
- [#If...Then...#Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [#Const 지시문](../../../visual-basic/language-reference/directives/const-directive.md)  
- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>참조
+
+- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
+- [#If...Then...#Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [#Const 지시문](../../../visual-basic/language-reference/directives/const-directive.md)
+- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

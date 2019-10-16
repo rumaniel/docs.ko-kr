@@ -2,12 +2,12 @@
 title: 전송 보안
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: 7fab84b830917c22d684a06dfbfb2dd540703845
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050729"
 ---
 # <a name="transport-security"></a>전송 보안
 선택한 바인딩에 따라 전송 보안에서 Windows Communication Foundation (WCF)에 따라 달라 집니다. 바인딩이 구현하는 전송은 실제 보안 메커니즘을 결정합니다. 이 단원의 항목에서는 구현된 메커니즘 및 해당 옵션에 대해 설명합니다.  
@@ -38,5 +38,6 @@ ms.locfileid: "50192501"
 ## <a name="related-sections"></a>관련 단원  
  [서비스 및 클라이언트에 보안 설정](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
-## <a name="see-also"></a>참고 항목  
- [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)
+## <a name="see-also"></a>참고자료
+
+- [WCF 보안 프로그래밍](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

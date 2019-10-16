@@ -9,47 +9,48 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 072a816f189a772543fbbd63e7202441469c0177
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5c0946b94bfe02d797d1a484088869375703eb6a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653600"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005314"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
-사용 하면 컴파일러 오류 보고를 사용 하기 전에 선언 되지 않은 경우.  
+변수가 사용 되기 전에 선언 되지 않은 경우 컴파일러가 오류를 보고 하도록 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 -optionexplicit[+ | -]  
 ```  
   
 ## <a name="arguments"></a>인수  
  `+` &#124; `-`  
- 선택 사항입니다. 지정 `-optionexplicit+` 명시적 변수 선언이 필요 합니다. `-optionexplicit+` 옵션은 기본값 이므로 동일 `-optionexplicit`합니다. `-optionexplicit-` 옵션을 사용 하면 변수를 암시적으로 선언 합니다.  
+ (선택 사항) 명시적 변수 선언이 필요 하면 `-optionexplicit+`을 지정 합니다. @No__t-0 옵션이 기본값이 며 `-optionexplicit`과 동일 합니다. @No__t-0 옵션은 변수의 암시적 선언을 가능 하 게 합니다.  
   
 ## <a name="remarks"></a>설명  
- 소스 코드 파일을 포함 하는 경우는 [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md), 문이 재정의 `-optionexplicit` 명령줄 컴파일러 설정을 사용 합니다.  
+ 소스 코드 파일에 [Option Explicit 문이](../../../visual-basic/language-reference/statements/option-explicit-statement.md)포함 되어 있으면 문이 `-optionexplicit` 명령줄 컴파일러 설정을 재정의 합니다.  
   
-### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>-Optionexplicit Visual Studio IDE에서 설정 하려면  
+### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>Visual Studio IDE에서-기능을 명시적으로 설정 하려면  
   
-1.  **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
+1. **솔루션 탐색기**에서 프로젝트를 선택합니다. **프로젝트** 메뉴에서 **속성**을 클릭합니다.   
   
-2.  **컴파일** 탭을 클릭합니다.  
+2. **컴파일** 탭을 클릭합니다.  
   
-3.  값을 수정 된 **Option Explicit** 상자입니다.  
+3. **옵션 Explicit** 상자에서 값을 수정 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드를 컴파일한 경우 `-optionexplicit-` 사용 됩니다.  
+ 다음 코드는 `-optionexplicit-`이 사용 될 때 컴파일됩니다.  
   
- [!code-vb[VbVbalrCompiler#5](../../../visual-basic/reference/command-line-compiler/codesnippet/VisualBasic/optionexplicit_1.vb)]  
+ [!code-vb[VbVbalrCompiler#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/OptionExplicitOff.vb#5)]  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)  
- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)  
- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)  
- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)  
- [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)  
- [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
+## <a name="see-also"></a>참조
+
+- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
+- [-optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)
+- [-optioninfer](../../../visual-basic/reference/command-line-compiler/optioninfer.md)
+- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+- [Option Explicit 문](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
+- [옵션 대화 상자, 프로젝트, Visual Basic 기본값](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

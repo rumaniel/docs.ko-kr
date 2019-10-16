@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b92f36488dec113dcffffac3e6cdc0c26a690b5b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6482d5fa046409d15913ea26300d298238750326
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389163"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648548"
 ---
 # <a name="registering-assemblies-with-com"></a>COM에 어셈블리 등록
 [어셈블리 등록 도구(Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md)라는 명령줄 도구를 실행하여 COM과 사용할 어셈블리를 등록하거나 등록 취소할 수 있습니다. COM 클라이언트에서 .NET Framework 클래스를 투명하게 사용할 수 있도록 Regasm.exe에서는 클래스에 대한 정보를 시스템 레지스트리에 추가합니다. <xref:System.Runtime.InteropServices.RegistrationServices> 클래스는 이와 동등한 기능을 제공합니다.  
@@ -30,11 +30,11 @@ ms.locfileid: "33389163"
   
  HKCR\CLSID\\{0000…0000} 키에서 기본값은 클래스의 ProgID로 설정되며 새로 이름이 지정된 두 개의 값(Class 및 Assembly)이 추가됩니다. 런타임 시 레지스트리에서 Assembly 값을 읽어 런타임 어셈블리 확인자에 전달합니다. 어셈블리 확인자는 이름 및 버전 번호와 같은 어셈블리 정보를 기반으로 어셈블리를 찾으려 합니다. 어셈블리 확인자에서 어셈블리를 찾으려면 어셈블리가 다음 위치 중 하나에 있어야 합니다.  
   
--   전역 어셈블리 캐시(강력한 이름의 어셈블리여야 함).  
+- 전역 어셈블리 캐시(강력한 이름의 어셈블리여야 함).  
   
--   응용 프로그램 디렉터리. 응용 프로그램 경로에서 로드된 어셈블리는 해당 응용 프로그램에서만 액세스할 수 있습니다.  
+- 애플리케이션 디렉터리. 애플리케이션 경로에서 로드된 어셈블리는 해당 애플리케이션에서만 액세스할 수 있습니다.  
   
--   **/codebase** 옵션을 사용하여 지정된 Regasm.exe의 파일 경로.  
+- **/codebase** 옵션을 사용하여 지정된 Regasm.exe의 파일 경로.  
   
  Regasm.exe는 HKCR\CLSID\\{0000…0000} 키 아래에 InProcServer32 키도 만듭니다. 키의 기본값은 공용 언어 런타임(Mscoree.dll)을 초기화하는 DLL의 이름으로 설정됩니다.  
   
@@ -43,8 +43,9 @@ ms.locfileid: "33389163"
   
  `InprocServer32` 하위 키의 경우, 기존 COM 형식 라이브러리의 위치에 Mscoree.dll의 참조가 표시되어 공용 언어 런타임을 통해 관리 개체가 생성되었음을 나타냅니다.  
   
-## <a name="see-also"></a>참고 항목  
- [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)  
- [방법: COM에서 .NET 형식 참조](how-to-reference-net-types-from-com.md)  
- [.NET 개체 호출](https://msdn.microsoft.com/library/40c9626c-aea6-4bad-b8f0-c1de462efd33(v=vs.100))  
- [COM 액세스를 위해 응용 프로그램 배포](https://msdn.microsoft.com/library/fb63564c-c1b9-4655-a094-a235625882ce(v=vs.100))
+## <a name="see-also"></a>참고 항목
+
+- [.NET Framework 구성 요소를 COM에 노출](exposing-dotnet-components-to-com.md)
+- [방법: COM에서 .NET 형식 참조](how-to-reference-net-types-from-com.md)
+- [.NET 개체 호출](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
+- [COM 액세스를 위해 애플리케이션 배포](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

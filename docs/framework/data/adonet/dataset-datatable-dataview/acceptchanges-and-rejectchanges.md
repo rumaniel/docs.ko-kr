@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: 30b2c303b1823430c480f0706500f8f7e7053c4c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: c537fa808fc6ba4c740e71bfd70fe9cd1f3bd31a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873140"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785566"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges 및 RejectChanges
-데이터에 대 한 변경 내용의 정확성을 확인 한 후는 <xref:System.Data.DataTable>를 사용 하 여 변경 내용을 적용할 수 있습니다 합니다 <xref:System.Data.DataRow.AcceptChanges%2A> 메서드의 <xref:System.Data.DataRow>, <xref:System.Data.DataTable>, 또는 <xref:System.Data.DataSet>로 설정 됩니다는 **현재** 행 값을 **원래** 값을 설정 합니다 합니다 **RowState** 속성을 **Unchanged**합니다. 수락 하거나 거부 하는 변경 내용을 모두 지웁니다 **RowError** 정보와 집합 합니다 **HasErrors** 속성을 **false**합니다. 또한, 변경 사항을 승인하거나 거부하면 데이터 소스에서 데이터를 업데이트하는 데도 영향을 줄 수 있습니다. 자세한 내용은 [Dataadapter 사용 하 여 데이터 원본 업데이트](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)합니다.  
+<xref:System.Data.DataTable>의 데이터 변경 내용에 대 한 정확성을 확인 한 후에는, <xref:System.Data.DataSet>또는의 <xref:System.Data.DataTable> <xref:System.Data.DataRow.AcceptChanges%2A> <xref:System.Data.DataRow>메서드를 사용 하 여 변경 내용을 적용할 수 있습니다. 그러면 **현재** 행 값 **이로 설정 됩니다. 원래** 값이 고 **RowState** 속성을 **변경 되지 않은 상태로**설정 합니다. 변경 내용 수락 또는 거부는 모든 **RowError** 정보를 지우고 **haserrors** 속성을 **false**로 설정 합니다. 또한, 변경 사항을 승인하거나 거부하면 데이터 소스에서 데이터를 업데이트하는 데도 영향을 줄 수 있습니다. 자세한 내용은 [Dataadapter 사용 하 여 데이터 원본 업데이트](../updating-data-sources-with-dataadapters.md)합니다.  
   
- 외래 키 제약 조건이 있는 경우는 **DataTable**, 변경 내용을 승인 또는 거부를 사용 하 여 **AcceptChanges** 하 고 **RejectChanges** 합니다 의자식행으로전파됩니다 **DataRow** 에 따라 합니다 **ForeignKeyConstraint.AcceptRejectRule**합니다. 자세한 내용은 [DataTable 제약 조건](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)합니다.  
+ **DataTable**에 foreign key 제약 조건이 있는 경우 **AcceptChanges** 및 **RejectChanges** **를 사용 하 여 적용 되거나 거부 된 변경 내용은 ForeignKeyConstraint. AcceptRejectRule**. 자세한 내용은 [DataTable 제약 조건](datatable-constraints.md)합니다.  
   
- 다음 예제에서는 오류가 발생한 행을 검사하여 가능한 경우 오류를 해결하고 오류를 해결할 수 없는 경우에는 해당 행을 거부합니다. 해결 된 경우 오류를 참고 합니다 **RowError** 값이 빈 문자열을 다시 설정 발생 합니다 **HasErrors** 속성을 설정할 **false**. 오류가 발생 한 모든 행 해결 되거나 거부 된 경우 **AcceptChanges** 전체에 대 한 모든 변경 내용을 적용 하기 위해 호출 됩니다 **DataTable**합니다.  
+ 다음 예제에서는 오류가 발생한 행을 검사하여 가능한 경우 오류를 해결하고 오류를 해결할 수 없는 경우에는 해당 행을 거부합니다. 해결 된 오류의 경우 **RowError** 값을 빈 문자열로 다시 설정 하 여 **haserrors** 속성을 **false**로 설정 합니다. 오류가 발생 한 모든 행이 해결 되거나 거부 된 경우에는 **AcceptChanges** 를 호출 하 여 전체 **DataTable**의 모든 변경 내용을 적용 합니다.  
   
 ```vb  
 If workTable.HasErrors Then  
@@ -56,9 +56,10 @@ if (workTable.HasErrors)
 workTable.AcceptChanges();  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Data.DataRow>  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataTable>  
- [DataTable에서 데이터 조작](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Data.DataRow>
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataTable>
+- [DataTable에서 데이터 조작](manipulating-data-in-a-datatable.md)
+- [ADO.NET 개요](../ado-net-overview.md)

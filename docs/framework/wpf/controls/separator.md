@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Separator control [WPF]
 ms.assetid: 1b872bc6-1a26-401c-989b-3fafecc5a4ef
 ms.openlocfilehash: d3d8fb637363a154013115f95bae52904467b46e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938959"
 ---
 # <a name="separator"></a>구분 기호
-A <xref:System.Windows.Controls.Separator> 컨트롤이 그릴 선, 가로 또는 세로 컨트롤에 있는 항목 사이 같은 <xref:System.Windows.Controls.ListBox>, <xref:System.Windows.Controls.Menu>, 및 <xref:System.Windows.Controls.ToolBar>합니다.  
+A <xref:System.Windows.Controls.Separator> 와 같은 컨트롤 그립니다 꺾은선형, 가로 또는 컨트롤에 있는 항목 사이의 세로 <xref:System.Windows.Controls.ListBox>를 <xref:System.Windows.Controls.Menu>, 및 <xref:System.Windows.Controls.ToolBar>합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
   

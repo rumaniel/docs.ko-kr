@@ -3,11 +3,11 @@ title: COM+ 통합
 ms.date: 03/30/2017
 ms.assetid: 6a687c1b-d0be-42fb-8f9b-20fea1317411
 ms.openlocfilehash: 1680a75adbd4cd6e43be5c3aed2f00049447ab35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33469689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998844"
 ---
 # <a name="com-integration"></a>COM+ 통합
 이 항목에서는 COM+ 통합에 의해 생성된 모든 예외를 보여 줍니다.  

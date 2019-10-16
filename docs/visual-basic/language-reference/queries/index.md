@@ -5,12 +5,12 @@ helpviewer_keywords:
 - queries [Visual Basic]
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
-ms.openlocfilehash: abe54fe163919c6ad6b746d70baac2482e80b948
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43861613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052146"
 ---
 # <a name="queries-visual-basic"></a>쿼리(Visual Basic)
 Visual Basic을 사용 하면 만들 수 있습니다 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 코드 식입니다.  
@@ -58,6 +58,7 @@ Visual Basic을 사용 하면 만들 수 있습니다 [!INCLUDE[vbteclinqext](~/
  [Where 절](../../../visual-basic/language-reference/queries/where-clause.md)  
  에 대해 설명 합니다 `Where` 쿼리에 대 한 필터링 조건을 지정 하는 절.  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)  
- [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
+## <a name="see-also"></a>참고자료
+
+- [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
+- [Visual Basic의 LINQ 소개](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

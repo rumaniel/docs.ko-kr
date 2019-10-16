@@ -1,15 +1,15 @@
 ---
-title: Operation 클래스
+title: 작업 클래스
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 16de8b25594896349ea546d3def52dd256fe5c70
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9696a7f026e54afacb5ccbfa8703a2ba617a9f3d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963113"
 ---
-# <a name="operation-class"></a>Operation 클래스
+# <a name="operation-class"></a>작업 클래스
 작업  
   
 ## <a name="syntax"></a>구문  
@@ -53,7 +53,7 @@ class Operation
  작업을 사용 하 여 비동기적으로 구현 됨을 나타냅니다는 `Begin`[꺽쇠괄호 열기/닫기] 및 `End`서비스 계약에 [꺾쇠 괄호 열기/닫기] 메서드 쌍입니다.  
   
 ### <a name="behaviors"></a>동작  
- 데이터 형식: Behavior array  
+ 데이터 형식: 동작 배열  
   
  액세스 형식: 읽기 전용  
   
@@ -128,5 +128,6 @@ class Operation
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Description.OperationDescription>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Description.OperationDescription>

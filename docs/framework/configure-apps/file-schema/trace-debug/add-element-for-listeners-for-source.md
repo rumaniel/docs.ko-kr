@@ -1,5 +1,5 @@
 ---
-title: '&lt;추가&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;원본&gt;'
+title: <source>에 대 한 <listeners>에 대 한 <add> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/add
@@ -8,24 +8,22 @@ helpviewer_keywords:
 - add element for <listeners> for <source>
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: c0ab15f6eca8b20653530583016eb849273c4ce1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0818d7ec248b210f215759069b9f69a3e29637f5
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47216868"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699397"
 ---
-# <a name="ltaddgt-element-for-ltlistenersgt-for-ltsourcegt"></a>&lt;추가&gt; 요소에 대 한 &lt;수신기&gt; 에 대 한 &lt;원본&gt;
+# <a name="add-element-for-listeners-for-source"></a>\< @no__t-> 1listeners에 대 한 > 요소 추가 \<source >
 추적 소스의 `Listeners` 컬렉션에 수신기를 추가합니다.  
   
- \<configuration>  
-\<system.diagnostics >  
-\<원본 >  
-\<원본 >  
-\<수신기 >  
-\<add>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t[ **\< >** ](system-diagnostics-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<sources >** ](sources-element.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5[ **\<source >** ](source-element.md)  
+&nbsp; @ no__t @ no__t @ no__t @ @ no__t-4 @ no__t-5 @ no__t-6 @ no__t-7[ **&nbsp;0 수신기 >** ](listeners-element-for-source.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -42,57 +40,57 @@ ms.locfileid: "47216868"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`type`|필수 특성에서 수신기를 참조 하는 하지 않는 경우는 `sharedListeners` 컬렉션에 있는 경우 이름으로 참조 하는 데만 필요 (참조를 [예제](#example)).<br /><br /> 수신기의 형식을 지정합니다. 에 지정 된 요구 사항을 충족 하는 문자열을 사용 해야 합니다 [정규화 된 형식 이름 지정](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)합니다.|  
-|`initializeData`|선택적 특성입니다.<br /><br /> 지정된 된 클래스에 대 한 생성자에 전달 된 문자열입니다. <xref:System.Configuration.ConfigurationException> 클래스에는 문자열을 사용 하는 생성자가 없는 경우 throw 됩니다.|  
-|`name`|선택적 특성입니다.<br /><br /> 수신기의 이름을 지정합니다.|  
-|`traceOutputOptions`|선택적 특성입니다.<br /><br /> 지정 된 <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> 추적 수신기에 대 한 속성 값입니다.|  
-|[사용자 지정 특성]|선택적 특성입니다.<br /><br /> 으로 식별 된 수신기 별 특성의 값을 지정 합니다 <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> 수신기 메서드. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A> 추가 특성의 예로 고유는 <xref:System.Diagnostics.DelimitedListTraceListener> 클래스입니다.|  
+|`type`|@No__t-0 컬렉션에서 수신기를 참조 하는 경우를 제외 하 고는 필수 특성입니다 ( [예제](#example)참조).<br /><br /> 수신기의 유형을 지정 합니다. 정규화 된 [형식 이름 지정](../../../reflection-and-codedom/specifying-fully-qualified-type-names.md)에 지정 된 요구 사항을 충족 하는 문자열을 사용 해야 합니다.|  
+|`initializeData`|선택적 특성입니다.<br /><br /> 지정 된 클래스의 생성자에 전달 된 문자열입니다. 클래스에 문자열을 사용 하는 생성자가 없으면 <xref:System.Configuration.ConfigurationException>이 throw 됩니다.|  
+|`name`|선택적 특성입니다.<br /><br /> 수신기의 이름을 지정 합니다.|  
+|`traceOutputOptions`|선택적 특성입니다.<br /><br /> 추적 수신기의 <xref:System.Diagnostics.TraceListener.TraceOutputOptions%2A> 속성 값을 지정 합니다.|  
+|[사용자 지정 특성]|선택적 특성입니다.<br /><br /> 수신기에 대 한 <xref:System.Diagnostics.TraceListener.GetSupportedAttributes%2A> 메서드로 식별 되는 수신기 별 특성의 값을 지정 합니다. <xref:System.Diagnostics.DelimitedListTraceListener.Delimiter%2A>은 <xref:System.Diagnostics.DelimitedListTraceListener> 클래스에 고유한 추가 특성의 예입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-listeners-for-source.md)|추적 소스의 `Listeners` 컬렉션에 있는 수신기에 필터를 추가합니다.|  
+|[\<filter>](filter-element-for-add-for-listeners-for-source.md)|추적 소스의 `Listeners` 컬렉션에 있는 수신기에 필터를 추가합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`system.diagnostics`|메시지를 수집하고 저장하고 라우팅하는 추적 수신기를 지정하며, 추적 스위치가 설정되는 수준을 지정합니다.|  
 |`sources`|추적 메시지를 시작하는 추적 소스가 포함되어 있습니다.|  
 |`source`|추적 메시지를 시작하는 추적 소스를 지정합니다.|  
-|`listeners`|수집, 저장 하 고 메시지를 라우팅하는 수신기를 지정 합니다.|  
+|`listeners`|메시지를 수집, 저장 및 라우팅하는 수신기를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- .NET Framework와 함께 제공 되는 수신기 클래스에서 파생 된 <xref:System.Diagnostics.TraceListener> 클래스입니다.  
+ .NET Framework와 함께 제공 되는 수신기 클래스는 <xref:System.Diagnostics.TraceListener> 클래스에서 파생 됩니다.  
   
- 지정 하지 않는 경우는 `name` 추적 수신기의 특성을 <xref:System.Diagnostics.TraceListener.Name%2A> 의 추적 수신기는 속성의 기본값은 빈 문자열 (""). 하나의 수신기만이 응용 프로그램에 이름을 지정 하지 않고 추가할 수 있습니다 하 고 이름에 대 한 빈 문자열을 지정 하 여 제거할 수 있습니다. 그러나 응용 프로그램에 둘 이상의 수신기를 식별 하 고 개별 추적 수신기에 관리할 수 있게 하는 각 추적 수신기에 대 한 고유한 이름을 지정 해야 합니다 <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> 컬렉션입니다.  
-  
-> [!NOTE]
->  하나의 추적 수신기가 해당 형식의 결과 같은 동일한 유형의 추적 수신기를 여러 개 추가 이름과 이름에 추가 되는 `Listeners` 컬렉션입니다. 그러나 동일한 여러 수신기를 프로그래밍 방식으로 추가할 수는 `Listeners` 컬렉션입니다.  
-  
- 에 대 한 값을 `initializeData` 특성 만든 수신기의 형식에 따라 달라 집니다. 모든 추적 수신기에 지정 해야 `initializeData`합니다.  
+ 추적 수신기의 `name` 특성을 지정 하지 않은 경우 추적 수신기의 <xref:System.Diagnostics.TraceListener.Name%2A> 속성은 기본적으로 빈 문자열 ("")로 설정 됩니다. 응용 프로그램에 수신기가 하나만 있는 경우 이름을 지정 하지 않고 수신기를 추가 하 고 이름에 대해 빈 문자열을 지정 하 여 제거할 수 있습니다. 그러나 응용 프로그램에 둘 이상의 수신기가 있는 경우 각 추적 수신기에 고유한 이름을 지정 하 여 <xref:System.Diagnostics.TraceSource.Listeners%2A?displayProperty=nameWithType> 컬렉션에서 개별 추적 수신기를 식별 하 고 관리할 수 있도록 해야 합니다.  
   
 > [!NOTE]
->  사용 하는 경우는 `initializeData` 특성인 컴파일러 "'initializeData' 특성이 선언 되지 않았습니다." 경고를 발생할 수 있습니다 이 경고는 추상 기본 클래스에 대 한 구성 설정이 검증 되었으며 때문에 발생 <xref:System.Diagnostics.TraceListener>를 인식 하지 않습니다는 `initializeData` 특성입니다. 일반적으로 매개 변수를 사용 하는 생성자가 하는 추적 수신기 구현에 대 한이 경고를 무시할 수 있습니다.  
+> 동일한 형식의 추적 수신기를 둘 이상 추가 하 고 이름이 동일한 경우 해당 형식 및 이름에 대 한 추적 수신기는 `Listeners` 컬렉션에 추가 됩니다. 그러나 `Listeners` 컬렉션에 여러 개의 동일한 수신기를 프로그래밍 방식으로 추가할 수 있습니다.  
   
- 다음 표는.NET Framework에 포함 된 추적 수신기를 보여 주고 값을 설명 합니다 해당 `initializeData` 특성입니다.  
+ @No__t-0 특성의 값은 사용자가 만드는 수신기의 형식에 따라 달라 집니다. 모든 추적 수신기에 `initializeData`을 지정 해야 하는 것은 아닙니다.  
+  
+> [!NOTE]
+> @No__t-0 특성을 사용 하는 경우 컴파일러 경고 "' initializeData ' 특성이 선언 되지 않았습니다." 라는 메시지가 표시 될 수 있습니다. 이 경고는 `initializeData` 특성을 인식 하지 않는 추상 기본 클래스 <xref:System.Diagnostics.TraceListener>에 대해 구성 설정의 유효성을 검사 하기 때문에 발생 합니다. 일반적으로 매개 변수를 사용 하는 생성자가 있는 추적 수신기 구현에 대해서는이 경고를 무시할 수 있습니다.  
+  
+ 다음 표에서는 .NET Framework에 포함 된 추적 수신기를 보여 주고 `initializeData` 특성의 값을 설명 합니다.  
   
 |추적 수신기 클래스|initializeData 특성 값|  
 |--------------------------|------------------------------------|  
-|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|합니다 `useErrorStream` 에 대 한 값을 <xref:System.Diagnostics.ConsoleTraceListener.%23ctor%2A> 생성자입니다.  설정 된 `initializeData` 특성을 "`true`"쓸 추적 및 디버그 출력을 표준 오류 스트림에;로 설정"`false`" 표준 출력 스트림에 쓸입니다.|  
+|<xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType>|@No__t-1 생성자의 @no__t 0 값입니다.  @No__t-0 특성을 "`true`"로 설정 하 여 추적 및 디버그 출력을 표준 오류 스트림에 씁니다. 표준 출력 스트림에 쓰려면 "`false`"로 설정 합니다.|  
 |<xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType>|파일의 이름을 합니다 <xref:System.Diagnostics.DelimitedListTraceListener> 를 씁니다.|  
 |<xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType>|기존 이벤트 로그 원본의 이름입니다.|  
-|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|파일의 이름을는 <xref:System.Diagnostics.EventSchemaTraceListener> 를 씁니다.|  
-|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|파일의 이름을는 <xref:System.Diagnostics.TextWriterTraceListener> 를 씁니다.|  
-|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|파일의 이름을는 <xref:System.Diagnostics.XmlWriterTraceListener> 를 씁니다.|  
+|<xref:System.Diagnostics.EventSchemaTraceListener?displayProperty=nameWithType>|@No__t-0에서 쓸 파일의 이름입니다.|  
+|<xref:System.Diagnostics.TextWriterTraceListener?displayProperty=nameWithType>|@No__t-0에서 쓸 파일의 이름입니다.|  
+|<xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType>|@No__t-0에서 쓸 파일의 이름입니다.|  
   
 ## <a name="configuration-file"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일과 컴퓨터 구성 파일 (Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 컴퓨터 구성 파일 (machine.config) 및 응용 프로그램 구성 파일에서 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 `<add>` 요소를 추가 하는 수신기 `console` 및 `textListener` 에 `Listeners` 추적 소스에 대 한 컬렉션 `TraceSourceApp`합니다. `textListener` 수신기 파일 myListener.log에 추적 출력을 씁니다.  
+ 다음 예제에서는 `<add>` 요소를 사용 하 여 `console` 및 `textListener` 수신기를 추적 소스 `TraceSourceApp`의 @no__t 3 컬렉션에 추가 하는 방법을 보여 줍니다. @No__t-0 수신기는 추적 출력을 myListener .log 파일에 기록 합니다.  
   
 ```xml  
 <configuration>  
@@ -120,8 +118,9 @@ ms.locfileid: "47216868"
 </configuration>   
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Diagnostics.TraceSource>  
- <xref:System.Diagnostics.TraceListener>  
- [추적 및 디버그 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)  
- [추적 수신기](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)
+## <a name="see-also"></a>참조
+
+- <xref:System.Diagnostics.TraceSource>
+- <xref:System.Diagnostics.TraceListener>
+- [추적 및 디버그 설정 스키마](index.md)
+- [추적 수신기](../../../debug-trace-profile/trace-listeners.md)

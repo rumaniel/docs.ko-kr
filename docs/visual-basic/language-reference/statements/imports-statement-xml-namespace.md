@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Imports statement [Visual Basic]
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
-ms.openlocfilehash: 1100afd89b27e789c0db713291ed3656092fb0c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 97d08113a37477add9d770b0a680c303fe7e3040
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43802394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638959"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports 문(XML 네임스페이스)
 XML 리터럴과 XML 축 속성에 사용할 XML 네임 스페이스 접두사를 가져옵니다.  
@@ -30,7 +30,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
  선택 사항입니다. XML 특성과 해당 요소를 참조할 수는 문자열 `xmlNamespaceName`합니다. 없으면 `xmlNamespacePrefix` 는 제공 된 가져온된 XML 네임 스페이스는 기본 XML 네임 스페이스입니다. 올바른 XML 식별자 여야 합니다. 자세한 내용은 [XML 요소 선언 된 이름 및 특성](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)합니다.  
   
  `xmlNamespaceName`  
- 필수. 가져온 XML 네임 스페이스를 식별 하는 문자열입니다.  
+ 필수 요소. 가져온 XML 네임 스페이스를 식별 하는 문자열입니다.  
   
 ## <a name="remarks"></a>설명  
  사용할 수는 `Imports` 문에 전달 된 매개 변수 또는 XML 리터럴과 XML 축 속성을 사용 하 여 사용할 수 있는 전역 XML 네임 스페이스를 정의 하는 `GetXmlNamespace` 연산자. (사용에 관한 정보를 `Imports` 을 코드에서 형식 이름이 사용 되는 위치에 사용할 수 있는 별칭을 가져오기 위한 문 참조 [Imports 문 (.NET Namespace 및 형식)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md).) 구문을 사용 하 여 XML 네임 스페이스를 선언 합니다 `Imports` 문을 XML에서 사용 하는 구문과 동일 합니다. XML 파일에서 네임 스페이스 선언을 복사에 사용 하는 따라서는 `Imports` 문입니다.  
@@ -48,7 +48,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>예제  
  다음 예제에서는 기본 XML 네임 스페이스 및 접두사를 사용 하 여 식별 된 XML 네임 스페이스를 가져옵니다 `ns`합니다. 그런 다음 두 네임 스페이스를 사용 하는 XML 리터럴을 만듭니다.  
   
- [!code-vb[VbXMLSamples#45](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_1.vb)]  
+ [!code-vb[VbXMLSamples#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/Module1.vb#45)]  
   
  이 코드의 텍스트는 다음과 같습니다.  
   
@@ -64,7 +64,7 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>예제  
  다음 예제에서는 XML 네임 스페이스 접두사를 가져옵니다 `ns`합니다. 그런 다음 네임 스페이스 접두사를 사용 하 고 요소의 마지막 폼을 표시 하는 XML 리터럴을 만듭니다.  
   
- [!code-vb[VbXMLSamples#22](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_2.vb)]  
+ [!code-vb[VbXMLSamples#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples10.vb#22)]  
   
  이 코드의 텍스트는 다음과 같습니다.  
   
@@ -82,14 +82,15 @@ Imports <xmlns:xmlNamespacePrefix = "xmlNamespaceName">
 ## <a name="example"></a>예제  
  다음 예제에서는 XML 네임 스페이스 접두사를 가져옵니다 `ns`합니다. 네임스페이스의 접두사를 사용하여 XML 리터럴을 만들고 정규화된 이름 `ns:name`을 가진 첫 번째 자식 노드에 액세스합니다.  
   
- [!code-vb[VbXMLSamples#19](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/imports-statement-xml-namespace_3.vb)]  
+ [!code-vb[VbXMLSamples#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples8.vb#19)]  
   
  이 코드의 텍스트는 다음과 같습니다.  
   
  `Patrick Hines`  
   
-## <a name="see-also"></a>참고 항목  
- [XML 요소 리터럴](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)  
- [XML 축 속성](../../../visual-basic/language-reference/xml-axis/index.md)  
- [선언된 XML 요소 및 특성의 이름](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)  
- [GetXmlNamespace 연산자](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)
+## <a name="see-also"></a>참고자료
+
+- [XML 요소 리터럴](../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [XML 축 속성](../../../visual-basic/language-reference/xml-axis/index.md)
+- [선언된 XML 요소 및 특성의 이름](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
+- [GetXmlNamespace 연산자](../../../visual-basic/language-reference/operators/getxmlnamespace-operator.md)

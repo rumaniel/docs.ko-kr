@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9500907c6a1ba5b27008dcad4c9b47aef9092106
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67802565"
+---
 ### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>RibbonGroup 배경은 지역화된 빌드에서 투명하게 설정됩니다.
 
 |   |   |

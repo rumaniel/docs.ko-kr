@@ -8,19 +8,19 @@ helpviewer_keywords:
 - layout [WPF], Panel control
 - Panel control [WPF]
 ms.assetid: 792943c5-335d-49dd-aa5b-ec1582a10088
-ms.openlocfilehash: 0d76883621b07a3049895e4577516e9362720896
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6471aebf4a510c63084f8da733fb3dfe2300c1aa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770671"
 ---
 # <a name="panel"></a>패널
-<xref:System.Windows.Controls.Panel> 지 원하는 응용 프로그램 레이아웃에서 모든 요소에 대 한 기본 클래스 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  
+<xref:System.Windows.Controls.Panel> 응용 프로그램 레이아웃을 지 원하는 모든 요소에 대 한 기본 클래스인 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/controls/panel-how-to-topics.md)  
+ [패널 개요](panels-overview.md)  
+ [방법 항목](panel-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ ms.locfileid: "33554926"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>관련 단원  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)  
+ [레이아웃](../advanced/layout.md)  
   
- [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 개요](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 개요](scrollviewer-overview.md)

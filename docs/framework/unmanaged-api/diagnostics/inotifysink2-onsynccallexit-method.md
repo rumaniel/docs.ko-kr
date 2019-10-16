@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3fe2ebecdacd3b848d5de7eecca4753a89a58f35
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7c4932828669e61f14827934bacfec2ca0153b50
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432481"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744511"
 ---
 # <a name="inotifysink2onsynccallexit-method"></a>INotifySink2::OnSyncCallExit 메서드
 호출을 종료할 때 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT OnSyncCallExit  
 (  
     [in]  CALL_ID   in_CallID,  
@@ -38,7 +38,7 @@ HRESULT OnSyncCallExit
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `in_CallID`  
  [in] 종료 된 호출의 ID입니다. 참조 [CALL_ID 구조체](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)합니다.  
   
@@ -46,7 +46,7 @@ HRESULT OnSyncCallExit
  [out] 버퍼를 호출 합니다.  
   
  `out_pBufferSize`  
- [out] 호출 버퍼의 바이트의 크기입니다.  
+ [out] 호출 버퍼 바이트의 크기입니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK입니다.  
@@ -54,7 +54,8 @@ HRESULT OnSyncCallExit
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>참고 항목  
- [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)  
- [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)  
- [INotifyConnection2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [INotifySink2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
+- [INotifySource2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-interface.md)
+- [INotifyConnection2 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/inotifyconnection2-interface.md)

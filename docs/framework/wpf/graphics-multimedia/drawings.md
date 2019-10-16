@@ -13,23 +13,24 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 8b142cfc65e39e48502cde263fea51378c47f43e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020233"
 ---
 # <a name="drawings"></a>Drawing
-<xref:System.Windows.Media.Drawing> 개체는 효율적으로 도형, 이미지 또는 텍스트를 그리는 데 사용 됩니다. 드로잉으로 그릴 때 사용 되는 <xref:System.Windows.Media.DrawingBrush> 프로그래밍할 <xref:System.Windows.Media.Visual> 개체입니다.  
+<xref:System.Windows.Media.Drawing> 개체는 도형, 이미지 또는 텍스트를 효율적으로 그리는 데 사용 됩니다. 사용 하 여 그릴 때 사용 되는 그리기를 <xref:System.Windows.Media.DrawingBrush> 프로그래밍할 <xref:System.Windows.Media.Visual> 개체입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Drawing 개체 개요](../../../../docs/framework/wpf/graphics-multimedia/drawing-objects-overview.md)  
-  [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/drawings-how-to-topics.md)  
+ [Drawing 개체 개요](drawing-objects-overview.md)  
+  [방법 항목](drawings-how-to-topics.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Media.Drawing>  
- [2차원 그래픽 및 이미징](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)  
- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [WPF에서 Shape 및 기본 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Media.Drawing>
+- [2차원 그래픽 및 이미징](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)
+- [WPF에서 Shape 및 기본 그리기 개요](shapes-and-basic-drawing-in-wpf-overview.md)
+- [그래픽 및 멀티미디어](index.md)

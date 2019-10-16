@@ -3,12 +3,12 @@ title: 구문 변환 시작(Roslyn API)
 description: 구문 트리를 트래버스하고, 탐색하고, 쿼리하는 방법을 소개합니다.
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: acba7ac590154ad8458d0d9a8abac55a12e96265
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bbd56f445a9f06b530a7d094b06f60e6123788da
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47400792"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306924"
 ---
 # <a name="get-started-with-syntax-transformation"></a>구문 변환 시작
 
@@ -30,7 +30,7 @@ ms.locfileid: "47400792"
 
 첫 번째 구문 변환은 팩터리 메서드를 보여 줍니다. `using System.Collections;` 문을 `using System.Collections.Generic;` 문으로 바꾸려고 합니다. 이 예제는 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> 팩터리 메서드를 사용하여 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> 개체를 만드는 방법을 보여 줍니다. 각 종류의 **노드**, **토큰** 또는 **기타 정보**에 대해 해당 형식의 인스턴스를 만드는 팩터리 메서드가 있습니다. 노드를 상향식 계층 구조로 작성하여 구문 트리를 만듭니다. 그런 다음, 기존 노드를 직접 만든 새 트리로 바꿔서 기존 프로그램을 변환합니다.
 
-Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만듭니다. Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택하여 새 프로젝트 대화 상자를 표시합니다. **Visual C#** > **확장성** 아래에서 **독립 실행형 코드 분석 도구**를 선택합니다. 이 빠른 시작에는 두 개의 예제 프로젝트가 있으므로 솔루션 이름을 **SyntaxTransformationQuickStart**로 지정하고 프로젝트 이름을 **ConstructionCS**로 지정합니다. **확인**을 클릭합니다.
+Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만듭니다. Visual Studio에서 **파일** > **새로 만들기** > **프로젝트**를 선택하여 새 프로젝트 대화 상자를 표시합니다. **Visual C#**  > **확장성** 아래에서 **독립 실행형 코드 분석 도구**를 선택합니다. 이 빠른 시작에는 두 개의 예제 프로젝트가 있으므로 솔루션 이름을 **SyntaxTransformationQuickStart**로 지정하고 프로젝트 이름을 **ConstructionCS**로 지정합니다. **확인**을 클릭합니다.
 
 이 프로젝트는 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> 클래스 메서드를 사용하여 `System.Collections.Generic` 네임스페이스를 나타내는 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>를 생성합니다.
 
@@ -63,7 +63,7 @@ Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** �
 
 ### <a name="create-a-modified-tree"></a>수정된 트리 만들기
 
-하나의 문을 포함하는 작은 구문 트리를 빌드했습니다. 단일 문 또는 기타 작은 코드 블록을 만드는 데는 새 노드를 만드는 API를 사용하는 것이 적합합니다. 그러나 더 큰 코드 블록을 빌드하려면 노드를 바꾸거나 노드를 기존 트리에 삽입하는 메서드를 사용해야 합니다. 구문 트리는 변경할 수 없습니다. **구문 API**는 생성 후 기존 구문 트리를 수정하기 위한 메커니즘을 제공하지 않습니다. 대신 기존 트리에 대한 변경 내용을 기반으로 새 트리를 생성하는 메서드를 제공합니다. `With*` 메서드는 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> 클래스에서 선언된 확장 메서드 또는 <xref:Microsoft.CodeAnalysis.SyntaxNode>에서 파생되는 구체적인 클래스에서 정의됩니다. 이러한 메서드는 기존 노드의 자식 속성에 변경 내용을 적용하여 새 노드를 만듭니다. 또한 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 확장 메서드를 사용하여 하위 트리의 하위 노드를 바꿀 수 있습니다. 이 메서드는 새로 만들어진 자식을 가리키도록 부모를 업데이트하고 전체 트리에서 이 프로세스를 반복합니다(트리 ‘재회전’으로 알려진 프로세스).
+하나의 문을 포함하는 작은 구문 트리를 빌드했습니다. 단일 문 또는 기타 작은 코드 블록을 만드는 데는 새 노드를 만드는 API를 사용하는 것이 적합합니다. 그러나 더 큰 코드 블록을 빌드하려면 노드를 바꾸거나 노드를 기존 트리에 삽입하는 메서드를 사용해야 합니다. 구문 트리는 변경할 수 없습니다. **구문 API**는 생성 후 기존 구문 트리를 수정하기 위한 메커니즘을 제공하지 않습니다. 대신 기존 트리에 대한 변경 내용을 기반으로 새 트리를 생성하는 메서드를 제공합니다. `With*` 메서드는 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions> 클래스에서 선언된 확장 메서드 또는 <xref:Microsoft.CodeAnalysis.SyntaxNode>에서 파생되는 구체적인 클래스에서 정의됩니다. 이러한 메서드는 기존 노드의 자식 속성에 변경 내용을 적용하여 새 노드를 만듭니다. 또한 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 확장 메서드를 사용하여 하위 트리의 하위 노드를 바꿀 수 있습니다. 이 메서드는 새로 만들어진 자식을 가리키도록 부모를 업데이트하고, 전체 트리에서 이 프로세스를 반복합니다(트리 ‘재회전’으로 알려진 프로세스). 
 
 다음 단계에서는 전체(작은) 프로그램을 나타내는 트리를 만든 다음, 수정합니다. 다음 코드를 `Program` 클래스의 시작 부분에 추가합니다.
 
@@ -94,7 +94,7 @@ Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** �
 
 `With*` 및 <xref:Microsoft.CodeAnalysis.SyntaxNodeExtensions.ReplaceNode%2A> 메서드는 구문 트리의 개별 분기를 변환하는 편리한 수단을 제공합니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> 클래스는 구문 트리에서 여러 변환을 수행합니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter?displayProperty=nameWithType> 클래스는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxVisitor%601?displayProperty=nameWithType>의 서브클래스입니다. <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter>은 특정 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode>에 변환을 적용합니다. 구문 트리에 나타날 때마다 여러 형식의 <xref:Microsoft.CodeAnalysis.SyntaxNode> 개체에 변환을 적용할 수 있습니다. 이 빠른 시작의 두 번째 프로젝트는 형식 유추를 사용할 수 있는 모든 위치에서 지역 변수 선언의 명시적 형식을 제거하는 명령줄 리팩터링을 만듭니다.
 
-새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만듭니다. Visual Studio에서 `SyntaxTransformationQuickStart` 솔루션 노드를 마우스 오른쪽 단추로 클릭합니다. **추가** > **새 프로젝트**를 선택하여 **새 프로젝트 대화 상자**를 표시합니다. **Visual C#** > **확장성** 아래에서 **독립 실행형 코드 분석 도구**를 선택합니다. 프로젝트 이름을 `TransformationCS`로 지정하고 [확인]을 클릭합니다.
+새 C# **독립 실행형 코드 분석 도구** 프로젝트를 만듭니다. Visual Studio에서 `SyntaxTransformationQuickStart` 솔루션 노드를 마우스 오른쪽 단추로 클릭합니다. **추가** > **새 프로젝트**를 선택하여 **새 프로젝트 대화 상자**를 표시합니다. **Visual C#**  > **확장성** 아래에서 **독립 실행형 코드 분석 도구**를 선택합니다. 프로젝트 이름을 `TransformationCS`로 지정하고 [확인]을 클릭합니다.
 
 첫 번째 단계는 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter>에서 파생되는 클래스를 만들어 변환을 수행하는 것입니다. 프로젝트에 새 클래스 파일을 추가합니다. Visual Studio에서 **프로젝트** > **클래스 추가...** 를 선택합니다. **새 항목 추가** 대화 상자에서 파일 이름으로 `TypeInferenceRewriter.cs`를 입력합니다.
 
@@ -112,7 +112,7 @@ Visual Studio를 시작하고 새 C# **독립 실행형 코드 분석 도구** �
 
 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> 메서드를 재정의합니다.
 
-```C#
+```csharp
 public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatementSyntax node)
 {
 
@@ -120,7 +120,7 @@ public override SyntaxNode VisitLocalDeclarationStatement(LocalDeclarationStatem
 ```
 
 > [!NOTE]
-> 많은 Roslyn API는 반환된 실제 런타임 형식의 기본 클래스인 반환 형식을 선언합니다. n개의 시나리오, 한 종류의 노드는 다른 종류의 노드로 완전히 바뀌거나 제거될 수도 있습니다. 이 예제에서 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> 메서드는 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> 파생 형식 대신 <xref:Microsoft.CodeAnalysis.SyntaxNode>를 반환합니다. 이 재작성기는 기존 노드를 기반으로 새 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> 노드를 반환합니다.
+> 많은 Roslyn API는 반환된 실제 런타임 형식의 기본 클래스인 반환 형식을 선언합니다. 대부분 시나리오에서 한 종류의 노드는 다른 종류의 노드로 완전히 바뀌거나 제거될 수도 있습니다. 이 예제에서 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxRewriter.VisitLocalDeclarationStatement(Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax)> 메서드는 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> 파생 형식 대신 <xref:Microsoft.CodeAnalysis.SyntaxNode>를 반환합니다. 이 재작성기는 기존 노드를 기반으로 새 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> 노드를 반환합니다.
 
 이 빠른 시작은 지역 변수 선언을 처리합니다. 이 선언은 `foreach` 루프, `for` 루프, LINQ식 및 람다 식과 같은 다른 선언으로 확장할 수 있습니다. 또한 이 재작성기는 가장 단순한 형식의 선언만 변환합니다.
 
@@ -152,7 +152,7 @@ Type variable;
 
 마지막으로 다음 `if` 문을 추가하여 이니셜라이저 식의 형식이 지정된 형식과 일치하는 경우 기존 형식 이름을 `var` 키워드로 바꿉니다.
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 선언은 이니셜라이저 식을 기본 클래스 또는 인터페이스로 캐스트할 수 있기 때문에 조건이 필요합니다. 필요한 경우 할당의 왼쪽 및 오른쪽에 있는 형식이 일치하지 않습니다. 이러한 사례에서 명시적 형식을 제거하면 프로그램의 의미 체계가 변경됩니다. `var`은 상황별 키워드이므로 `var`은 키워드가 아니라 식별자로 지정됩니다. 선행 및 후행 기타 정보(공백)는 세로 공백과 들여쓰기를 유지하기 위해 이전 형식 이름에서 `var` 키워드로 전송됩니다. 형식 이름은 실제로 선언문의 손자이므로 `With*` 대신 `ReplaceNode`를 사용하여 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>를 변환하는 것이 더 간단합니다.
 

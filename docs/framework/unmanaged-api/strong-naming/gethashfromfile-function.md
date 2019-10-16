@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f98f888280090bfa613acf6ae37bc60ab63c371e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0e79c1d89d767832022d487681e0515e5e92a7f3
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456516"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799223"
 ---
 # <a name="gethashfromfile-function"></a>GetHashFromFile 함수
-지정된 된 파일의 내용에 대 한 해시를 생성 합니다.  
+지정된 파일 내용에 대해 해시를 생성합니다.  
   
- 이 함수는 더 이상 사용 되지 않습니다. 사용 하 여 [iclrstrongname:: Gethashfromfile](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md) 메서드 대신 합니다.  
+ 이 함수는 더 이상 사용 되지 않습니다. 대신 [ICLRStrongName:: GetHashFromFile](../hosting/iclrstrongname-gethashfromfile-method.md) 메서드를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetHashFromFile (  
     [in]  LPCSTR   szFilePath,  
     [in, out] unsigned int   *piHashAlg,   
@@ -40,35 +40,36 @@ HRESULT GetHashFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `szFilePath`  
- [in] 해시 파일의 이름입니다.  
+ 진행 해시할 파일의 이름입니다.  
   
  `piHashAlg`  
- [out에서] 해시를 생성할 때 사용 하는 알고리즘입니다. 유효한 알고리즘은 Win32 CryptoAPI에 의해 정의 된 것입니다. 경우 `piHashAlg` CALG_SHA-1은 사용 되는 기본 알고리즘 0으로 설정 됩니다.  
+ [in, out] 해시를 생성할 때 사용할 알고리즘입니다. 유효한 알고리즘은 Win32 CryptoAPI에서 정의 되는 알고리즘입니다. 가 `piHashAlg` 0으로 설정 되 면 기본 알고리즘 CALG_SHA-1이 사용 됩니다.  
   
  `pbHash`  
- [out] 생성된 된 해시를 포함 하는 바이트 배열입니다.  
+ 제한이 생성 된 해시를 포함 하는 바이트 배열입니다.  
   
  `cchHash`  
- [in] 버퍼의 최대 크기는 `pbHash` 를 가리킵니다.  
+ 진행 가 `pbHash` 가리키는 버퍼의 최대 크기입니다.  
   
  `pchHash`  
- [out] 반환 된 바이트 단위로 크기 `pbHash`합니다.  
+ 제한이 반환 `pbHash`된의 크기 (바이트)입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 함수는 동일 [GetHashFromFileW](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromfilew-function.md)제외 하 고 파일 이름 지정이 유니코드 대신 ANSI 합니다.  
+ 이 함수는 [GetHashFromFileW](gethashfromfilew-function.md)와 동일 합니다. 단, 파일 이름 사양은 유니코드가 아니라 ANSI입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** StrongName.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [GetHashFromFile 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfile-method.md)  
- [GetHashFromFileW 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)  
- [ICLRStrongName 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [GetHashFromFile 메서드](../hosting/iclrstrongname-gethashfromfile-method.md)
+- [GetHashFromFileW 메서드](../hosting/iclrstrongname-gethashfromfilew-method.md)
+- [ICLRStrongName 인터페이스](../hosting/iclrstrongname-interface.md)

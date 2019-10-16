@@ -3,11 +3,11 @@ title: 보안 예외
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780863"
 ---
 # <a name="security-exceptions"></a>보안 예외
 이 항목에서는 모든 보안 예외를 보여 줍니다.  
@@ -29,8 +29,8 @@ ms.locfileid: "50201376"
 |CachedNegotiationStateQuotaReached|지정된 용량에 도달했기 때문에 서비스가 협상 상태를 캐시할 수 없습니다. 요청을 다시 시도하십시오.|  
 |CacheQuotaReached|항목을 추가할 수 없습니다. 최대 캐시 크기가 지정되었습니다.|  
 |CannotDetermineSPNBasedOnAddress|클라이언트가 SspiNegotiation/Kerberos 용도로 지정된 대상 주소의 ID에 기초하여 서비스 사용자 이름을 확인할 수 없습니다. 대상 주소 id는 UPN id 여야 합니다 (예: acmedomain\\\alice) 또는 SPN id (예 호스트/bobs-machine).|  
-|CannotFindCert|지정된 검색 조건인 StoreName, StoreLocation, FindType, FindValue를 사용하여 X.509 인증서를 찾을 수 없습니다.|  
-|CannotFindCertForTarget|지정된 대상에 대해 지정된 검색 조건인 StoreName, StoreLocation, FindType, FindValue를 사용하여 X.509 인증서를 찾을 수 없습니다.|  
+|CannotFindCert|지정 된 검색 조건을 사용 하 여 X.509 인증서를 찾을 수 없습니다. StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCertForTarget|지정 된 검색 조건을 사용 하 여 X.509 인증서를 찾을 수 없습니다. StoreName, StoreLocation, FindType, FindValue 지정된 된 대상에 대 한 합니다.|  
 |CannotFindCorrelationStateForApplyingSecurity|응답자에서의 회신에 보안을 적용하기 위한 상관 관계 상태를 찾을 수 없습니다.|  
 |CannotFindNegotiationState|지정된 컨텍스트에 대한 협상 상태를 찾을 수 없습니다.|  
 |CannotFindSecuritySession|지정된 ID가 있는 보안 세션을 찾을 수 없습니다.|  
@@ -55,8 +55,8 @@ ms.locfileid: "50201376"
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|보안 정책을 내보내지 못했습니다. 바인딩에 AsymmetricSecurityBindingElement 및 보안 전송 바인딩 요소가 모두 포함되어 있습니다. 이러한 바인딩에 대한 정책 내보내기가 지원되지 않습니다.|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|보안 정책을 내보내지 못했습니다. 바인딩에 SymmetricSecurityBindingElement 및 보안 전송 바인딩 요소가 모두 포함되어 있습니다. 이러한 바인딩에 대한 정책 내보내기가 지원되지 않습니다.|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|보안 정책을 내보내지 못했습니다. 바인딩에 TransportSecurityBindingElement가 포함되어 있지만 ITransportTokenAssertionProvider를 구현하는 전송 바인딩 요소가 없습니다. 이러한 바인딩에 대한 정책 내보내기가 지원되지 않습니다. 바인딩의 전송 바인딩 요소가 ITransportTokenAssertionProvider 인터페이스를 구현하는지 확인하십시오.|  
-|FoundMultipleCerts|지정된 검색 조건을 사용하여 여러 X.509 인증서를 찾았습니다. StoreName, StoreLocation, FindType, FindValue. 더 구체적인 찾기 값을 제공하십시오.|  
-|FoundMultipleCertsForTarget|지정된 검색 조건을 사용하여 여러 X.509 인증서를 찾았습니다. StoreName, StoreLocation, FindType, FindValue(지정된 대상에 대한). 더 구체적인 찾기 값을 제공하십시오.|  
+|FoundMultipleCerts|지정 된 검색 조건을 사용 하 여 여러 X.509 인증서를 찾았습니다. StoreName, StoreLocation, FindType, FindValue. 더 구체적인 찾기 값을 제공하십시오.|  
+|FoundMultipleCertsForTarget|지정 된 검색 조건을 사용 하 여 여러 X.509 인증서를 찾았습니다. StoreName, StoreLocation, FindType, FindValue 지정된 된 대상에 대 한 합니다. 더 구체적인 찾기 값을 제공하십시오.|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004가 헤더 암호 해독을 지원하지 않습니다. SecurityVersion.WsSecurityXXX2005 이상을 사용하거나 전송 보안을 사용하여 전체 메시지를 암호화하십시오.|  
 |IdentityCheckFailedForIncomingMessage|들어오는 메시지의 ID를 검사하지 못했습니다. 대상 엔드포인트에 대해 필요한 ID가 지정되었습니다.|  
 |IdentityCheckFailedForOutgoingMessage|보내는 메시지의 ID를 검사하지 못했습니다. 대상 엔드포인트에 대해 필요한 ID가 지정되었습니다.|  
@@ -111,7 +111,7 @@ ms.locfileid: "50201376"
 |SecureConversationRequiredByReliableSession|보안 대화 없이 신뢰할 수 있는 세션을 설정할 수 없습니다. 보안 대화를 사용하도록 설정하십시오.|  
 |SecurityAuditFailToLoadDll|지정된 동적 연결 라이브러리(dll)를 로드할 수 없습니다.|  
 |SecurityAuditNotSupportedOnChannelFactory|SecurityAuditBehavior가 채널 팩터리에서 지원되지 않습니다.|  
-|SecurityAuditPlatformNotSupported|감사 메시지를 보안 로그에 쓰는 것이 현재 플랫폼에서 지원되지 않습니다. 감사 메시지는 응용 프로그램 로그에 써야 합니다.|  
+|SecurityAuditPlatformNotSupported|감사 메시지를 보안 로그에 쓰는 것이 현재 플랫폼에서 지원되지 않습니다. 감사 메시지는 애플리케이션 로그에 써야 합니다.|  
 |SecurityBindingElementCannotBeExpressedInConfig|엔드포인트에 대한 보안 정책을 가져왔습니다. Windows Communication Foundation 구성에서 나타낼 수 없는 요구 사항이 보안 정책에 포함되어 있습니다. 생성된 구성 파일에서 필요한 SecurityBindingElement 매개 변수에 대한 설명을 확인하십시오. 코드를 사용하여 올바른 바인딩 요소를 만드십시오. 구성 파일에 있는 바인딩 구성은 보안되지 않습니다.|  
 |SecurityBindingSupportsOneWayOnly|지정된 계약의 지정된 바인딩에 대한 SecurityBinding은 OneWay 작업만 지원합니다.|  
 |SecurityContextDoesNotAllowImpersonation|지정된 동작을 가진 요청 메시지의 UltimateReceiver 역할에 대한 SecurityContext가 Windows ID에 매핑되지 않기 때문에 가장을 시작할 수 없습니다.|  
@@ -119,7 +119,7 @@ ms.locfileid: "50201376"
 |SecurityListenerClosingFaultReason|서버를 닫는 중이기 때문에 새 보안 대화를 서버에서 수락하지 않습니다. 나중에 다시 시도하십시오.|  
 |SecurityProtocolFactoryShouldBeSetBeforeThisOperation|이 작업을 수행하기 전에 보안 프로토콜 팩터리를 설정해야 합니다.|  
 |SecuritySessionAbortedFaultReason|보안 세션이 종료되었습니다. 이것은 세션에서 메시지가 너무 오래 수신되지 않았기 때문일 수 있습니다|  
-|SecuritySessionKeyIsStale|세션 키가 응용 프로그램 메시지를 보안할 수 있으려면 먼저 세션 키를 갱신해야 합니다.|  
+|SecuritySessionKeyIsStale|세션 키가 애플리케이션 메시지를 보안할 수 있으려면 먼저 세션 키를 갱신해야 합니다.|  
 |SecuritySessionLimitReached|보안 세션을 만들 수 없습니다 나중에 다시 시도하십시오.|  
 |SecuritySessionNotPending|지정된 ID가 있는 보안 세션 중 보류 중인 세션이 없습니다.|  
 |SecurityTokenParametersHasIncompatibleInclusionMode|지정된 바인딩이 호환되지 않는 지정된 보안 토큰 포함 모드를 가지는 보안 토큰 매개 변수로 구성되었습니다. 대체 보안 토큰 포함 모드를 지정하십시오.|  
@@ -133,8 +133,8 @@ ms.locfileid: "50201376"
 |SignatureNotExpected|이 메시지에 서명이 필요하지 않습니다.|  
 |SigningTokenHasNoKeys|지정된 서명 토큰에 키가 없습니다. 보안 토큰이 암호화 작업을 수행하기 위해 이 토큰을 필요로 하는 컨텍스트에서 사용되지만, 토큰에 암호화 키가 없습니다. 토큰 유형이 암호화 작업을 지원하지 않거나, 특정 토큰 인스턴스에 암호화 키가 없습니다. 구성을 점검하여 암호화 사용이 불가능한 토큰 유형(예: UserNameSecurityToken)이 암호화 작업(예: 지원 토큰 확인)이 필요한 컨텍스트에 지정되어 있지 않은지 확인하십시오.|  
 |SpnegoImpersonationLevelCannotBeSetToNone|보안 지원 공급자 인터페이스가 가장 수준 '없음'을 지원하지 않습니다. 확인, 가장 또는 위임 수준을 지정하십시오.|  
-|SslClientCertMustHavePrivateKey|지정된 인증서에는 개인 키가 있어야 합니다. 프로세스에는 개인 키에 대한 액세스 권한이 있어야 합니다.|  
-|SslServerCertMustDoKeyExchange|지정된 인증서에는 키 교환이 가능한 개인 키가 있어야 합니다. 프로세스에는 개인 키에 대한 액세스 권한이 있어야 합니다.|  
+|SslClientCertMustHavePrivateKey|지정된 인증서에는 프라이빗 키가 있어야 합니다. 프로세스에는 프라이빗 키에 대한 액세스 권한이 있어야 합니다.|  
+|SslServerCertMustDoKeyExchange|지정된 인증서에는 키 교환이 가능한 프라이빗 키가 있어야 합니다. 프로세스에는 프라이빗 키에 대한 액세스 권한이 있어야 합니다.|  
 |StandardsManagerCannotWriteObject|토큰 Serializer가 지정된 개체를 serialize할 수 없습니다.  사용자 지정 유형인 경우에는 사용자 지정 serializer를 제공해야 합니다.|  
 |TimeStampHasCreationAheadOfExpiry|만든 시간이 만료 시간보다 크거나 같으므로 보안 타임스탬프가 잘못되었습니다.|  
 |TimeStampHasCreationTimeInFuture|만든 시간이 미래의 시간이므로 보안 타임스탬프가 잘못되었습니다. 현재 시간과 허용된 클럭 오차가 지정되었습니다.|  

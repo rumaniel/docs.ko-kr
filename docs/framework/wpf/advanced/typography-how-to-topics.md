@@ -6,28 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: af5bd998840e87a4e13f5865c26aea57dcd24426
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774909"
 ---
 # <a name="typography-how-to-topics"></a>입력 체계 방법 항목
-이 섹션의 항목을 사용 하는 방법을 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 풍부한 응용 프로그램에서 텍스트 표시를 지원 합니다.  
+이 섹션의에서 항목에서는 사용 하는 방법에 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 풍부한 기능의 프레젠테이션 응용 프로그램의 텍스트에 대 한 지원.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [텍스트 장식 만들기](../../../../docs/framework/wpf/advanced/how-to-create-a-text-decoration.md)  
- [하이퍼링크에 밑줄이 그어지는지 여부 지정](../../../../docs/framework/wpf/advanced/how-to-specify-whether-a-hyperlink-is-underlined.md)  
- [텍스트에 변환 적용](../../../../docs/framework/wpf/advanced/how-to-apply-transforms-to-text.md)  
- [텍스트에 애니메이션 적용](../../../../docs/framework/wpf/advanced/how-to-apply-animations-to-text.md)  
- [그림자가 적용된 텍스트 만들기](../../../../docs/framework/wpf/advanced/how-to-create-text-with-a-shadow.md)  
- [윤곽선이 있는 텍스트 만들기](../../../../docs/framework/wpf/advanced/how-to-create-outlined-text.md)  
- [컨트롤의 배경에 텍스트 그리기](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-control-background.md)  
- [시각적 요소에 텍스트 그리기](../../../../docs/framework/wpf/advanced/how-to-draw-text-to-a-visual.md)  
- [XAML에서 특수 문자 사용](../../../../docs/framework/wpf/advanced/how-to-use-special-characters-in-xaml.md)  
+ [텍스트 장식 만들기](how-to-create-a-text-decoration.md)  
+ [하이퍼링크에 밑줄이 그어지는지 여부 지정](how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [텍스트에 변환 적용](how-to-apply-transforms-to-text.md)  
+ [텍스트에 애니메이션 적용](how-to-apply-animations-to-text.md)  
+ [그림자가 적용된 텍스트 만들기](how-to-create-text-with-a-shadow.md)  
+ [윤곽선이 있는 텍스트 만들기](how-to-create-outlined-text.md)  
+ [컨트롤의 배경에 텍스트 그리기](how-to-draw-text-to-a-control-background.md)  
+ [시각적 요소에 텍스트 그리기](how-to-draw-text-to-a-visual.md)  
+ [XAML에서 특수 문자 사용](how-to-use-special-characters-in-xaml.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Documents.Typography>  
- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [OpenType 글꼴 기능](../../../../docs/framework/wpf/advanced/opentype-font-features.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Documents.Typography>
+- [WPF의 문서](documents-in-wpf.md)
+- [OpenType 글꼴 기능](opentype-font-features.md)

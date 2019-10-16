@@ -1,6 +1,6 @@
 ---
 title: 형식 멤버의 이름
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - events [.NET Framework], names
@@ -12,14 +12,13 @@ helpviewer_keywords:
 - names [.NET Framework], type members
 - members [.NET Framework], type
 ms.assetid: af5a0903-36af-4c2a-b848-cf959affeaa5
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 0541f100f208543c796de7238e68ea6f90c7b299
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+author: KrzysztofCwalina
+ms.openlocfilehash: b4da14575d29582814d32a3050087b7acc0da802
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964529"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353714"
 ---
 # <a name="names-of-type-members"></a>형식 멤버의 이름
 형식은 메서드, 속성, 이벤트, 생성자 및 필드 등의 멤버로 이루어집니다. 다음 섹션에서는 형식 멤버 이름 지정에 대한 지침을 설명합니다.  
@@ -29,7 +28,7 @@ ms.locfileid: "45964529"
   
  **✓ DO**를 통해 동사 또는 동사구인 메서드 이름을 지정합니다.  
   
-```  
+```csharp  
 public class String {  
     public int CompareTo(...);  
     public string[] Split(...);  
@@ -57,7 +56,7 @@ public class String {
   
  예를 들어, 다음 속성은 현재 올바르게 `Color`라는 열거형 값을 설정하므로 속성 이름은 `Color`입니다.  
   
-```  
+```csharp  
 public enum Color {...}  
 public class Control {  
     public Color Color { get {...} set {...} }  
@@ -100,9 +99,9 @@ public class Control {
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ @no__t-[Framework 디자인 지침에서 피어슨 교육부, Inc.의 권한으로 0Reprinted. 다시 사용할 수 있는 .NET 라이브러리에 대 한 규칙, 관용구 및 패턴, Microsoft Windows 개발 @no__t 시리즈의 일부로 Addison-Wesley Professional에서 2008 no__t, Krzysztof Cwalina 및 Brad Abrams 성  
   
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참조
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [명명 지침](../../../docs/standard/design-guidelines/naming-guidelines.md)

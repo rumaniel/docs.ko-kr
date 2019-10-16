@@ -7,23 +7,23 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
-ms.openlocfilehash: e01a0264b86e052d9def7f3657f96d238a67afb2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770731"
 ---
 # <a name="menu"></a>메뉴
-A <xref:System.Windows.Controls.Menu> 계층적 명령 또는 이벤트 처리기와 관련 된 요소도 구성할 수 있는 컨트롤입니다. 각 <xref:System.Windows.Controls.Menu> 여러 개 포함할 수 <xref:System.Windows.Controls.MenuItem> 컨트롤입니다. 각 <xref:System.Windows.Controls.MenuItem> 명령을 호출 하거나 호출할 수는 `Click` 이벤트 처리기입니다. A <xref:System.Windows.Controls.MenuItem> 여러 개 있을 수도 수 <xref:System.Windows.Controls.MenuItem> 자식, 하위 메뉴를 형성할으로 합니다.  
+<xref:System.Windows.Controls.Menu> 요소와 연결 된 명령 또는 이벤트 처리기의 계층적 구성 허용 하는 컨트롤입니다. 각 <xref:System.Windows.Controls.Menu> 여러 개 포함할 수 있습니다 <xref:System.Windows.Controls.MenuItem> 컨트롤입니다. 각 <xref:System.Windows.Controls.MenuItem> 명령을 호출 하거나 호출할 수는 `Click` 이벤트 처리기입니다. <xref:System.Windows.Controls.MenuItem> 여러 수도 <xref:System.Windows.Controls.MenuItem> 요소의 자식인 하위 메뉴를 형성 합니다.  
   
- 다음 그림은 메뉴 컨트롤의 세 가지 상태를 보여 줍니다. 마우스 포인터가 같은 장치가 없는 위에 있을 때의 기본 상태는는 <xref:System.Windows.Controls.Menu>합니다. 마우스 포인터를 올려 포커스 상태가 발생는 <xref:System.Windows.Controls.Menu> 누른된 상태 위에 마우스 단추를 클릭할 때 발생 하 고는 <xref:System.Windows.Controls.Menu>합니다.  
+ 다음 그림에서는 menu 컨트롤의 세 가지 상태를 보여 줍니다. 마우스 포인터와 같은 장치가 없는 위에 있을 때 기본 상태는 <xref:System.Windows.Controls.Menu>합니다. 포커스 상태 위로 마우스 포인터를 이동 하는 경우에 발생 합니다 <xref:System.Windows.Controls.Menu> 누름된 상태 위로 마우스 단추를 클릭할 때 발생 하 고는 <xref:System.Windows.Controls.Menu>합니다.  
   
- ![메뉴 상태](../../../../docs/framework/wpf/controls/media/ss-ctl-menu.gif "SS_CTL_menu")  
+ ![메뉴 상태](./media/ss-ctl-menu.gif "SS_CTL_menu")  
 다양 한 상태의 메뉴  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [메뉴 개요](../../../../docs/framework/wpf/controls/menu-overview.md)  
+ [메뉴 개요](menu-overview.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Menu>  

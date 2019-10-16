@@ -1,5 +1,5 @@
 ---
-title: '&lt;performanceCounter&gt; 요소 (네트워크 설정)'
+title: <performanceCounter> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/performanceCounters
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - performanceCounter element
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
-ms.openlocfilehash: 445b57747bbcb04df0d6bc6b3e90743b8c9600f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 3fe6b19d0055aafad859b55960800d9786d7fa08
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187078"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697995"
 ---
-# <a name="ltperformancecountergt-element-network-settings"></a>&lt;performanceCounter&gt; 요소 (네트워크 설정)
-네트워킹 성능 카운터를 사용할지 설정 합니다.  
+# <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 요소 (네트워크 설정)
+네트워킹 성능 카운터를 사용 하거나 사용 하지 않도록 설정 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<settings>  
-\<performanceCounters>  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<performanceCounters >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ ms.locfileid: "50187078"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`enabled`|네트워킹 성능 카운터 사용 되는지 여부를 지정 합니다. 기본값은 `false`입니다.|  
+|`enabled`|네트워킹 성능 카운터의 사용 여부를 지정 합니다. 기본값은 `false`입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -47,19 +47,19 @@ ms.locfileid: "50187078"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
- 네트워킹 성능 카운터를 사용하려면 구성 파일에서 사용하도록 설정해야 합니다. 구성 파일의 단일 설정을 통해 모든 네트워킹 성능 카운터를 사용하거나 사용하지 않도록 설정합니다. 개별 네트워킹 성능 카운터를 사용하거나 사용하지 않도록 설정할 수는 없습니다. 특정 네트워킹 성능 카운터에 대 한 자세한 내용은 참조 하세요. [네트워킹 성능 카운터](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)합니다.  
+ 네트워킹 성능 카운터를 사용하려면 구성 파일에서 사용하도록 설정해야 합니다. 구성 파일의 단일 설정을 통해 모든 네트워킹 성능 카운터를 사용하거나 사용하지 않도록 설정합니다. 개별 네트워킹 성능 카운터를 사용하거나 사용하지 않도록 설정할 수는 없습니다. 특정 네트워킹 성능 카운터에 대 한 자세한 내용은 [네트워킹 성능 카운터](../../../debug-trace-profile/performance-counters.md#networking)를 참조 하세요.  
   
- 기본값은 해당 네트워킹 성능 카운터가 비활성화 되었습니다.  
+ 기본값은 네트워킹 성능 카운터를 사용 하지 않도록 설정 하는 것입니다.  
   
- 합니다 <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType> 속성의 현재 값을 가져오는 데 사용할 수는 **사용 하도록 설정** 해당 구성 파일에서 특성입니다.  
+ @No__t-0 속성은 적용 가능한 구성 파일에서 **사용 가능한** 특성의 현재 값을 가져오는 데 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 구성 하는 방법의 <xref:System.Net> 및 관련 네트워킹 성능 카운터를 사용 하도록 설정 하려면 네임 스페이스입니다.  
+ 다음 예제에서는 네트워킹 성능 카운터를 사용 하도록 <xref:System.Net> 및 관련 네임 스페이스를 구성 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>  
@@ -73,8 +73,9 @@ ms.locfileid: "50187078"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>  
-- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>  
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)  
-- [네트워킹 성능 카운터](../../../../../docs/framework/debug-trace-profile/performance-counters.md#networking)
+## <a name="see-also"></a>참조
+
+- <xref:System.Net.Configuration.PerformanceCountersElement?displayProperty=nameWithType>
+- <xref:System.Net.Configuration.PerformanceCountersElement.Enabled%2A?displayProperty=nameWithType>
+- [네트워크 설정 스키마](index.md)
+- [네트워킹 성능 카운터](../../../debug-trace-profile/performance-counters.md#networking)

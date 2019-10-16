@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6784848a5103dc9206267fc25fe7457257624cb7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ab3690cac28ef572b19cadb632662590d1ea04c7
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33392033"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052476"
 ---
 # <a name="marshalcleanuperror-mda"></a>marshalCleanupError MDA
 `marshalCleanupError` MDA(관리 디버깅 도우미)는 네이티브 코드 경계와 관리 코드 경계 간에 데이터 형식을 마샬링하는 데 사용되는 임시 구조 및 메모리를 정리하려고 하는 동안 CLR(공용 언어 런타임)에 오류가 발생하면 활성화됩니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "33392033"
 ## <a name="output"></a>출력  
  정리 중에 실패한 작업을 보고하는 메시지입니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -47,7 +47,8 @@ ms.locfileid: "33392033"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
+- [interop 마샬링](../interop/interop-marshaling.md)

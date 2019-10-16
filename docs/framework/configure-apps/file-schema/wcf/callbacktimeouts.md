@@ -1,27 +1,28 @@
 ---
-title: '&lt;callbackTimeouts&gt;'
+title: <callbackTimeouts>
 ms.date: 03/30/2017
 ms.assetid: d7fcfc5f-6d35-491e-8fa6-2f964c1e792f
-ms.openlocfilehash: 48da0351d162a2143a26cc5b9eaa05b731358639
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: e1b40718638ded54e59743730159ea6e65a51a57
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749568"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398193"
 ---
-# <a name="ltcallbacktimeoutsgt"></a>&lt;callbackTimeouts&gt;
+# <a name="callbacktimeouts"></a>\<callbackTimeouts>
 이중 콜백 계약 시나리오에서 트랜잭션이 서버에서 클라이언트로 이동할 때의 시간 제한 값을 지정합니다.  
   
- \<system.ServiceModel>  
-\<동작 >  
-\<endpointBehaviors>  
-\<동작 >  
-\<callbackTimeOuts >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<endpointBehaviors >** ](endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-endpointbehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<callbackTimeOuts 제한 >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<callbackTimeOuts transactionTimeout="TimeSpan" />  
+<callbackTimeOuts transactionTimeout="TimeSpan" />
 ```  
   
 ## <a name="type"></a>형식  
@@ -32,9 +33,9 @@ ms.locfileid: "32749568"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|`transactionTimeout`|트랜잭션이 완료되어야 하거나, 완료되지 못할 경우 자동으로 종료되어야 하는 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 기본값은 "00: 00:00"입니다.|  
+|`transactionTimeout`|트랜잭션이 완료되어야 하거나, 완료되지 못할 경우 자동으로 종료되어야 하는 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 기본값은 "00:00:00"입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -43,7 +44,8 @@ ms.locfileid: "32749568"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<동작 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|끝점 동작을 지정합니다.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|엔드포인트 동작을 지정합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.CallbackTimeoutsElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.CallbackTimeoutsElement>

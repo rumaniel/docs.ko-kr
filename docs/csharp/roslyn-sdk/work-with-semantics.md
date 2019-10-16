@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK 의미 체계 모델 사용
 description: 이 개요에서는 코드의 의미 체계 모델을 이해하고 조작하는 데 사용하는 형식에 대한 이해를 제공합니다.
 ms.date: 10/15/2017
 ms.custom: mvc
-ms.openlocfilehash: cf34e2ab9688325f58cb54755db4142a883fca77
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c594447bb553f488d60fe83900e2f141608b570f
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33357490"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70105664"
 ---
 # <a name="work-with-semantics"></a>의미 체계 작업
 
@@ -51,8 +51,8 @@ ms.locfileid: "33357490"
 
 의미 체계 모델은 단일 원본 파일에 대한 모든 의미 체계 정보를 나타냅니다. 다음 검색에 사용할 수 있습니다. 
 
-* 원본의 특정 위치에서 참조되는 기호
-* 모든 식의 결과 형식
-* 오류 및 경고인 모든 진단
-* 원본 영역 내부 및 외부의 변수 흐름 방식
-* 더 가상적인 질문에 대한 대답
+- 원본의 특정 위치에서 참조되는 기호
+- 모든 식의 결과 형식
+- 오류 및 경고인 모든 진단
+- 원본 영역 내부 및 외부의 변수 흐름 방식
+- 더 가상적인 질문에 대한 대답

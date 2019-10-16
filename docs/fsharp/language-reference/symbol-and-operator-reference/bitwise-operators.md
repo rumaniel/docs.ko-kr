@@ -1,21 +1,21 @@
 ---
-title: 비트 연산자(F#)
-description: 'F # 프로그래밍 언어에서 사용할 수 있는 비트 연산자에 알아봅니다.'
+title: 비트 연산자
+description: 사용할 수 있는 비트 연산자에 알아봅니다는 F# 프로그래밍 언어입니다.
 ms.date: 07/20/2018
-ms.openlocfilehash: ed76fcf5f9c569a2f288cf260e99dc29fd65ef3b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: e4d61492ba94d26cfe8354c0ba89fbd732ed782e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581510"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645077"
 ---
 # <a name="bitwise-operators"></a>비트 연산자
 
-이 항목에서는 F # 언어에서 사용할 수 있는 비트 연산자를 설명 합니다.
+이 항목에서는에서 사용할 수 있는 비트 연산자를 설명 합니다 F# 언어입니다.
 
 ## <a name="summary-of-bitwise-operators"></a>비트 연산자 요약
 
-다음 표에서 F # 언어에서 unboxed 정수 계열 형식에 대 한 지원 되는 비트 연산자를 설명 합니다.
+다음 표에서 unboxed 정수 계열 형식에 대 한 지원 되는 비트 연산자는 F# 언어입니다.
 
 |연산자|노트|
 |--------|-----|

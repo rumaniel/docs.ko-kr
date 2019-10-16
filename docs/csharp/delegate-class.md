@@ -3,12 +3,12 @@ title: System.Delegate 및 `delegate` 키워드
 description: .NET Framework에서 대리자를 지원하는 클래스와 해당 클래스가 ‘delegate’ 키워드에 매핑되는 방법을 설명합니다.
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827302"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465778"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 및 `delegate` 키워드
 
@@ -92,14 +92,14 @@ phrases.Sort(CompareLength);
 
 메서드 이름은 괄호 없이 사용됩니다. 메서드를 인수로 사용하면 메서드 참조를 대리자 호출 대상으로 사용될 수 있는 참조로 변환하고 해당 메서드를 호출 대상으로 연결하도록 컴파일러에 알립니다.
 
-'Comparison<string>` 형식의 변수를 선언하고 할당을 수행하여 명시적 상태일 수도 있습니다.
+`Comparison<string>` 형식의 변수를 선언하고 할당을 수행하여 명시적 상태일 수도 있습니다.
 
 ```csharp
 Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-대리자 대상으로 사용되는 메서드가 작은 메서드인 경우에는 일반적으로 [람다 식](lambda-expressions.md) 구문을 사용하여 할당을 수행합니다.
+대리자 대상으로 사용되는 메서드가 작은 메서드인 경우에는 일반적으로 [람다 식](./programming-guide/statements-expressions-operators/lambda-expressions.md) 구문을 사용하여 할당을 수행합니다.
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);

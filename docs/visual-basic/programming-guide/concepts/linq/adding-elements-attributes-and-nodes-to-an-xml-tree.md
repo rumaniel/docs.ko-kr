@@ -1,14 +1,15 @@
 ---
-title: 요소, 특성 및 노드 (Visual Basic)를 XML 트리에 추가
+title: XML 트리 (Visual Basic)에서 요소, 특성 및 노드 추가
 ms.date: 07/20/2015
 ms.assetid: e243e694-c987-43aa-8b22-1e33dace582c
-ms.openlocfilehash: 86d28f5974e30a9b7f1a1e830cd40c3cd916e8ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 35d3bdb27342dd7a871778ad4749db4d6849bd60
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021858"
 ---
-# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>요소, 특성 및 노드 (Visual Basic)를 XML 트리에 추가
+# <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-visual-basic"></a>XML 트리 (Visual Basic)에서 요소, 특성 및 노드 추가
 내용(요소, 특성, 주석, 처리 명령, 텍스트 및 CDATA)을 기존 XML 트리에 추가할 수 있습니다.  
   
 ## <a name="methods-for-adding-content"></a>내용을 추가하는 메서드  
@@ -79,5 +80,6 @@ Console.WriteLine(xmlTree)
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>참고자료
+
+- [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

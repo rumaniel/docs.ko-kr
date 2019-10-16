@@ -1,0 +1,73 @@
+### YamlMime:Tutorial
+title: C# 6 살펴보기 - C# 대화형 C# 자습서
+metadata:
+  title: C# 6 살펴보기 - 브라우저를 사용하여 C# 6의 새 기능을 대화형으로 사용해 보기
+  description: 이 자습서에서는 브라우저를 사용하여 C# 6를 대화형으로 살펴볼 수 있습니다. 보다 간결하고 가독성이 높은 코드를 구현하는 C# 6에서 사용할 수 있는 새로운 관용구를 살펴볼 수 있습니다.
+  audience: Developer
+  level: intermediate
+  ms.date: 12/11/2018
+  displayType: two-column
+  interactive: csharp
+  ms.openlocfilehash: e1414c17cefd0fb31bb782a311e11dbd4cc056bb
+  ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/06/2019
+  ms.locfileid: "70394096"
+items:
+- durationInMinutes: 1
+  content: >
+    이 자습서에서는 브라우저를 사용하여 C#을 작성하고 코드를 컴파일하고 실행한 결과를 확인하면서 C# 6를 대화형으로 살펴볼 수 있습니다. 여기에는 더 간결한 최신 C# 6 기능을 사용하도록 이전 버전의 C# 방식을 수정하는 일련의 단원이 포함되어 있습니다. 이 문서의 나머지 부분에서는 이러한 각 기능을 간략히 설명하고 이러한 기능을 살펴볼 수 있는 링크를 제공합니다.
+- title: 읽기 전용 auto 속성으로 실제 읽기 전용 형식 구현
+  durationInMinutes: 2
+  content: "auto 속성 구문에서 읽기 전용 auto 속성 및 auto 속성 이니셜라이저가 개선되면서 auto 속성을 더 많은 곳에서 쉽게 사용할 수 있게 되었습니다. 다음과 같은 소규모 프로그램을 살펴보세요.\n\n[!code-csharp[Starter](../../../../samples/csharp/tutorials/exploration/csharp6-starter/Program.cs)]  \n\n    \n 포커스 모드로 들어가서 이전 코드를 C# 대화형 창에 복사합니다. 그런 다음, *실행*을 클릭하여 코드가 어떻게 실행되는지 확인합니다. `AllCaps`는 대문자 문자열을 반환하면서 속성 값을 수정하는, 원치 않는 부작용을 초래합니다. `Person` 클래스 작성자는 `FirstName` 및 `LastName`의 문자열을 읽기 전용으로 만들려고 의도했습니다. C# 6에서는 이러한 의도를 분명히 알 수 있습니다. 읽기 전용 auto 속성을 만들려면 두 속성 모두에서 `private set`를 삭제하세요. *실행*을 클릭하면 `FirstName` 및 `LastName` 속성이 변경되지 않아야 하는데 변경된 두 위치를 컴파일러에서 찾아내는 것을 볼 수 있습니다. `AllCaps` 메서드를 다음 코드로 변경하여 컴파일러 오류를 해결할 수 있습니다.\n\n```csharp\npublic string AllCaps()\n{\n  return ToString().ToUpper();\n}\n```\n\n이 새로운 구문을 사용하면 컴파일러가 속성을 변경할 수 없게 만듭니다.\n"
+- title: auto 속성의 지원 필드 초기화
+  durationInMinutes: 1
+  content: "C# 6의 새로운 구문을 사용하면 auto 속성에 이니셜라이저를 사용할 수 있습니다. 클래스의 새 기능이 점점 늘어남에 따라 이 기능은 더욱 중요해지고 있습니다. 중간 이름 속성과 세 문자열을 사용하는 새 생성자를 `Person` 클래스에 추가합니다.\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#MiddleName)]  \n\n`MiddleName` 속성에 할당된 것이 이니셜라이저입니다. 이는 컴파일러가 생성한 중간 이름의 지원 필드를 초기화합니다.\n"
+- title: 식 본문 멤버
+  durationInMinutes: 2
+  content: >
+    식 본문 멤버는 간단한 메서드에 대한 간단한 구문을 제공합니다. `Person` 클래스에는 두 가지 훌륭한 후보가 있습니다. `ToString`의 선언을 살펴봅니다.
+
+
+    ```csharp
+
+    public override string ToString()
+
+    {
+        return FirstName + " " + LastName;
+    }
+
+    ```
+
+
+    `ToString` 선언을 다음 코드로 바꾸세요.
+
+
+    ```csharp
+
+    public override string ToString() => FirstName + " " + LastName;
+
+    ```
+
+
+    `AllCaps` 메서드에도 동일한 작업을 시도해 보세요. 사소한 개선 사항이지만 잘 사용한다면 특히 데이터 전송 개체(DTO) 및 최소한의 동작을 지원하는 다른 형식을 위한 더 가독성이 높은 코드를 만들 수 있습니다.
+- title: 단일 클래스 가져오기
+  durationInMinutes: 2
+  content: "코드 전체에서 한 클래스의 정적 메서드를 반복적으로 사용하는 경우 매번 클래스 이름을 포함하면 코드의 의미가 불분명해집니다. `Person` 클래스는 현재 <xref:System.Console?displayProperty=nameWithType>만 사용된 경우에도 `System` 네임스페이스를 가져옵니다. `using` 문을 다음과 같이 수정하세요.\n\n[!code-csharp[MiddleName](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#UsingStatic)]  \n\n`static using` 문은 [`string`](xref:System.String) 클래스 또는 <xref:System.Math?displayProperty=nameWithType> 클래스처럼 여러 정적 메서드가 있는 단일 클래스를 광범위하게 사용하는 대규모 프로그램에서 더욱 유용합니다.\n"
+- title: 더 나은 문자열 형식
+  durationInMinutes: 2
+  content: "C# 6에는 문자열 및 다른 문자열 값을 생성하기 위해 계산되는 포함된 식에서 문자열을 작성하기 위한 새 구문이 포함됩니다. 이러한 구문을 사용하도록 `ToString` 및 `AllCaps` 메서드를 변경할 수 있습니다.\n\n[!code-csharp[StringInterpolation](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#StringInterpolation)]  \n\n`{` 및 `}` 사이에 위치 인수를 사용하는 대신 C# 식을 바로 작성하세요. `Main` 메서드에서도 같은 작업을 수행할 수 있습니다. 기존 코드를 다음으로 바꿉니다.\n\n[!code-csharp[InterpolationMain](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#InterpolationMain)]  \n\n이러한 식의 단일 변수로 제한되지 않습니다. 새 예제를 시작하고 수정하여 문자열 보간과 함께 사용할 수 있는 다른 식을 보여드리도록 하겠습니다. `Main` 메서드에서 대화형 창에 다음 코드를 붙여넣습니다.\n\n[!code-csharp[Phrases](../../../../samples/csharp/tutorials/exploration/csharp6-finished/Program.cs#Phrases)]  \nLINQ를 사용하므로 대화형 창의 맨 위에 다음과 같은 using 문을 추가해야 합니다.\n\n```csharp\nusing System.Linq;\n```\n\n지역 변수 `average`를 제거하고 보간된 문자열 식의 일부로 계산을 수행할 수 있습니다. 마지막 두 줄을 다음으로 바꿉니다.\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average()}\");\n```\n\n이전 예제를 실행하면 `Average`에 대한 출력에 원하는 것보다 더 많은 소수 자릿수가 포함됨을 알 수 있습니다. 문자열 보간 구문은 이전 서식 메서드를 통해 제공되는 모든 서식 문자열을 지원합니다. 중괄호 안에 형식 문자열을 지정합니다. 서식 지정할 식 다음에 `:`을 추가합니다.\n\n```csharp\nWriteLine($\"The average word length is: {wordLength.Average():F2}\");\n```\n"
+- title: 쉽고 빠른 null 확인
+  durationInMinutes: 2
+  content: "`?.`(null 조건부) 연산자는 추가 `if` 확인 없이 `null` 값을 간편하게 고려하는 논리를 더 쉽게 작성할 수 있게 해줍니다. 이 기능을 살펴보려면 먼저 대화형 창에 다음 코드를 복사하여 사용해 보세요.\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n      string s = null;\n      Console.WriteLine(s.Length);\n    }\n}\n```\n\n샘플을 실행하면 <xref:System.NullReferenceException>이 throw됩니다. `.` 멤버 액세스 연산자를 **null 조건부 연산자**로 변경합니다.\n\n```csharp\nConsole.WriteLine(s?.Length);\n``` \n\n이러한 변경 후에는 출력이 표시되지 않습니다. `s.Length`의 결과가 `int`일 경우 `s?.Length`의 결과가 `int?`이기 때문입니다. 이 예에서는 `s?.Length`가 `null`입니다. `?.`는 왼쪽 피연산자가 `null`일 경우 `null`을 반환합니다. 오른쪽 피연산자 형식이 값 형식일 경우 `?.` 연산자는 해당 형식에 nullable 형식을 반환합니다. `?.` 외에 배열 또는 인덱서 액세스를 위해 `?[]`를 사용할 수 있습니다. 대화형 창에서 다음 코드를 실행합니다.\n\n ```csharp\n char? c = s?[0];\n Console.WriteLine(c.HasValue);\n ```\n\n 여러 조건부 연산자를 단일 식으로 결합할 수 있습니다. `null` 왼쪽 피연산자는 `null` 결과를 생성하여 간편하게 중첩된 if 절이 멤버의 멤버에 액세스하지 않도록 방지합니다. 예를 들어 대화형 창에서 다음 코드를 실행해 보세요.\n\n ```csharp\n string s = null;\n bool? hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext();\n Console.WriteLine(hasMore.HasValue);\n ```\n\n **null 결합 연산자**를 사용하여 기본값을 제공하면 이전 예제를 단순화할 수 있습니다.\n\n ```csharp\n bool hasMore = s?.ToCharArray()?.GetEnumerator()?.MoveNext() ?? false;\n Console.WriteLine(hasMore);\n ```\n\n **null 조건부 연산자**를 사용하면 코어 논리를 간결하게 만들면서 `null` 값을 간편하게 테스트하는 코드를 작성할 수 있습니다.\n"
+- title: 예외 필터
+  durationInMinutes: 2
+  content: "예외 필터를 사용하면 일부 조건에 따라 예외를 catch할 수 있습니다. 일반적인 사용 예로는 예외를 기록하지만 처리하지는 않는 필터 메서드를 만드는 경우가 있습니다. 예외 필터는 `catch` 절을 실행해야 하는 경우 `true`이고, `catch` 절로 예외를 catch하지 않아야 하는 경우에는 `false`인 부울 식입니다. 대화형 창에서 다음 코드를 실행합니다. 예외 형식 및 메시지가 콘솔에 기록됩니다. 예외를 처리할 수 없음을 나타내는 `false`가 반환됩니다. 대화형 창에서 프로그램을 사용해 보세요.\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        try \n        {\n            string s = null;\n            Console.WriteLine(s.Length);\n\n        } catch (Exception e) when (LogException(e))\n        {\n        }\n        Console.WriteLine(\"Exception must have been handled\");\n    }\n\n    private static bool LogException(Exception e)\n    {\n        Console.WriteLine($\"\\tIn the log routine. Caught {e.GetType()}\");\n        Console.WriteLine($\"\\tMessage: {e.Message}\");\n        return false;\n    }\n}\n```\n\n`LogException` 메서드의 메시지가 표시된 후 기본 예외 메시지가 표시되어야 합니다. 실험을 위해 `return false` 문을 `return true`로 변경하고 다시 실행하세요. 이제 예외가 catch되고 프로그램의 실행이 완료됩니다.\n\n예외 필터는 로깅 시나리오 외에 예외 속성으로 수행할 작업이 결정되는 경우에 가장 유용합니다. 예를 들어 <xref:System.AggregateException>을 살펴보면 포함된 예외가 무엇인지 확인하여 특정 예외에 따라 적절한 조치를 취할 수 있습니다.\n"
+- title: nameof 사용
+  durationInMinutes: 2
+  content: "`nameof` 연산자는 변수, 형식 또는 형식 멤버의 이름을 반환합니다. 대화형 창에서 다음 코드를 실행하고 어떻게 작동하는지 확인하세요.\n\n```csharp\nusing System;\nusing System.Collections.Generic;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Console.WriteLine(nameof(System.String));\n        int j = 5;\n        Console.WriteLine(nameof(j));\n        List<string> names = new List<string>();\n        Console.WriteLine(nameof(names));\n    }\n}\n```\n\n출력은 변수 또는 형식의 이름과 일치합니다. 정규화된 형식 이름(예: `System.String`)을 제공한 경우에도 `nameof` 연산자는 정규화되지 않은 이름을 반환합니다. 이 기능은 매개 변수 또는 속성 이름을 문자열로 변환해야 할 때 가장 유용합니다. 예를 들어 <xref:System.ComponentModel.INotifyPropertyChanged>를 구현할 때 <xref:System.ArgumentNullException> 또는 <xref:System.ArgumentException>을 throw하거나 변경된 속성의 이름을 capture하는 경우가 있습니다. \n"
+- title: 새 개체 초기화 구문
+  durationInMinutes: 2
+  content: "개체 이니셜라이저 구문은 이제 속성 및 필드뿐 아니라 *인덱서* 초기화를 지원합니다. 이 추가를 통해 사전 및 기타 형식을 더 쉽게 초기화할 수 있습니다. 사전으로 시작하세요. 대화형 창에서 다음 코드를 실행합니다.\n\n```csharp\nvar messages = new Dictionary<int, string>\n{\n    [404] = \"Page not Found\",\n    [302] = \"Page moved, but left a forwarding address.\",\n    [500] = \"The web server can't come out to play today.\"\n};\n\nConsole.WriteLine(messages[302]);\n```\n\n인덱서에 값을 설정하는 이 구문은 인덱서에 액세스 가능한 집합 접근자가 있는 모든 유형에 사용할 수 있습니다.\n\n두 번째 변경을 통해 시퀀스를 나타내는 유형에 대한 이니셜라이저 구문을 쉽게 사용할 수 있습니다. 컬렉션 이니셜라이저는 <xref:System.Collections.IEnumerable>을 구현하며 공개적으로 액세스할 수 있는 `Add` 메서드가 있는 모든 클래스에서 사용할 수 있습니다. 해당 `Add` 메서드는 이제 확장 메서드가 될 수 있습니다. \n\n다음 예제에서는 이 구문에 대한 한 가지 시나리오를 보여줍니다. `IEnumerable<Point3D>`를 구현하고, 세 개의 인수를 허용하는 포인트를 추가하는 메서드가 있는 `Path` 클래스가 생성됩니다. `Extensions` 클래스는 세 가지 구성 요소에서 새 점을 추가하는 추가 `Add` 메서드를 만듭니다. 이 샘플은 현재 환경의 제한으로 인해 대화형으로 실행되지 않습니다.\n\n```csharp\npublic class Path : IEnumerable<Point3D>\n{\n    private List<Point3D> points = new List<Point3D>();\n    public IEnumerator<Point3D> GetEnumerator() => points.GetEnumerator();\n    IEnumerator IEnumerable.GetEnumerator() => points.GetEnumerator();\n\n    public void Add(Point3D pt) => points.Add(pt);\n}\n\npublic static class Extensions\n{\n    public static void Add(this Path path, double x, double y, double z) => path.Add(new Point3D(x, y, z));\n}\n```\n"
+- content: C# 6의 새 기능 살펴보기를 완료했습니다. 이제 애플리케이션에서 직접 사용해 보세요.

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 732bc9d38ca0d6c2dc3f30603a722b7370034b80
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cc0b67621f77c0741e0b63b84ab1794530d6280b
+ms.sourcegitcommit: 3caa92cb97e9f6c31f21769c7a3f7c4304024b39
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408192"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71274231"
 ---
-# <a name="corgcreference-structure"></a>COR_GC_REFERENCE 구조체
+# <a name="cor_gc_reference-structure"></a>COR_GC_REFERENCE 구조체
 가비지 수집할 개체에 대한 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct _COR_GC_REFERENCE {  
     ICorDebugAppDomain *domain;   
     ICorDebugValue *location;  
@@ -41,37 +41,38 @@ typedef struct _COR_GC_REFERENCE {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`domain`|핸들 또는 개체가 속해 있는 응용 프로그램 도메인에 대 한 포인터입니다. 해당 값이 경우도 `null`합니다.|  
-|`location`|ICorDebugValue 또는 가비지 수집 될 개체에 해당 하는 ICorDebugReferenceValue 인터페이스입니다.|  
-|`type`|A [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) 루트에서 제공 하는 위치를 나타내는 열거형 값입니다. 자세한 내용은 설명 섹션을 참조하세요.|  
-|`extraData`|가비지 수집 될 개체에 대 한 추가 데이터입니다. 에 표시 된 대로이 정보는 개체의 원본에 종속 된 `type` 필드입니다. 자세한 내용은 설명 섹션을 참조하세요.|  
+|`domain`|핸들이 나 개체가 속한 응용 프로그램 도메인에 대 한 포인터입니다. 값은 일 `null`수 있습니다.|  
+|`location`|가비지 수집 될 개체에 해당 하는 ICorDebugValue 또는 ICorDebugReferenceValue 인터페이스입니다.|  
+|`type`|루트의 출처를 나타내는 [CorGCReferenceType](corgcreferencetype-enumeration.md) 열거형 값입니다. 자세한 내용은 설명 섹션을 참조하세요.|  
+|`extraData`|가비지 수집 될 개체에 대 한 추가 데이터입니다. 이 정보는 `type` 필드에 표시 되는 개체의 원본에 따라 달라 집니다. 자세한 내용은 설명 섹션을 참조하세요.|  
   
 ## <a name="remarks"></a>설명  
- `type` 필드는 한 [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md) 참조에서 제공 하는 위치를 나타내는 열거형 값입니다. 특정 `COR_GC_REFERENCE` 값에는 다음과 같은 종류의 관리 되는 개체를 반영할 수 있습니다.  
+ `type` 필드는 참조의 출처를 나타내는 [CorGCReferenceType](corgcreferencetype-enumeration.md) 열거형 값입니다. 특정 `COR_GC_REFERENCE` 값은 다음과 같은 종류의 관리 되는 개체를 반영할 수 있습니다.  
   
--   모든 관리 되는 스택 개체 (`CorGCReferenceType.CorReferenceStack`). 여기 공용 언어 런타임에서 생성 된 개체를 비롯 하 여 관리 코드에 대 한 라이브 참조가 포함 됩니다.  
+- 모든 관리 되는 스택 (`CorGCReferenceType.CorReferenceStack`)의 개체입니다. 여기에는 공용 언어 런타임에서 만든 개체 뿐만 아니라 관리 코드의 라이브 참조도 포함 됩니다.  
   
--   개체 핸들 테이블의 (`CorGCReferenceType.CorHandle*`). 이 강력한 참조를 포함 (`HNDTYPE_STRONG` 및 `HNDTYPE_REFCOUNT`) 및 모듈의 정적 변수.  
+- 핸들 테이블 (`CorGCReferenceType.CorHandle*`)의 개체입니다. 여기에는 모듈의`HNDTYPE_STRONG` 강력한 `HNDTYPE_REFCOUNT`참조 (및) 및 정적 변수가 포함 됩니다.  
   
--   종료자 큐에서 개체 (`CorGCReferenceType.CorReferenceFinalizer`). 종료자 큐는 종료 자가 실행 될 때까지 개체 루트입니다.  
+- 종료자 큐 (`CorGCReferenceType.CorReferenceFinalizer`)의 개체입니다. 종료자는 종료 자가 실행 될 때까지 개체를 큐에 대기 합니다.  
   
- `extraData` 필드 참조의 소스 (또는 유형)에 따라 추가 데이터를 포함 합니다. 가능한 값은 다음과 같습니다.  
+ 필드 `extraData` 에는 참조의 원본 (또는 형식)에 따라 추가 데이터가 포함 됩니다. 가능한 값은 다음과 같습니다.  
   
--   `DependentSource`. 경우는 `type` 은 `CorGCREferenceType.CorHandleStrongDependent`,이 필드는 연결을 유지 하는 경우 루트 개체에서 가비지 수집 되도록 하는 개체 `COR_GC_REFERENCE.Location`합니다.  
+- `DependentSource`. 가 이면이 필드는 활성 상태인 경우에서 `COR_GC_REFERENCE.Location`가비지 수집 될 개체의 루트를 나타내는 개체입니다. `CorGCREferenceType.CorHandleStrongDependent` `type`  
   
--   `RefCount`. 경우는 `type` 은 `CorGCREferenceType.CorHandleStrongRefCount`,이 필드는 핸들의 참조 횟수입니다.  
+- `RefCount`. `type` 가`CorGCREferenceType.CorHandleStrongRefCount`이면이 필드는 핸들의 참조 수입니다.  
   
--   `Size`. 경우는 `type` 은 `CorGCREferenceType.CorHandleStrongSizedByref`,이 필드는 가비지 수집기가 개체 루트의 경우 계산 되는 개체 트리의 마지막 크기입니다. 이 계산은 반드시 최신 인지 확인 합니다.  
+- `Size`. `type` 이 인 `CorGCREferenceType.CorHandleStrongSizedByref`경우이 필드는 가비지 수집기가 개체 루트를 계산 하는 개체 트리의 마지막 크기입니다. 이 계산은 반드시 최신 상태를 유지 해야 하는 것은 아닙니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 구조체](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)  
- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>참고 항목
+
+- [디버깅 구조체](debugging-structures.md)
+- [디버깅](index.md)

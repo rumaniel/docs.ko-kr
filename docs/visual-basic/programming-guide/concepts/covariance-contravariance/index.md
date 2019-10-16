@@ -3,11 +3,11 @@ title: 공변성(Covariance) 및 반공변성(Contravariance)(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 59224c46-9931-466b-8c6e-3648c3e609c6
 ms.openlocfilehash: 241b8f5864b6e9b3e1caddde25d032a24e4d0bb7
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022015"
 ---
 # <a name="covariance-and-contravariance-visual-basic"></a>공변성(Covariance) 및 반공변성(Contravariance)(Visual Basic)
 Visual Basic에서 공변성(Covariance)과 반공변성(Contravariance)은 배열 형식, 대리자 형식 및 제네릭 형식 인수에 대한 암시적 참조 변환을 가능하게 합니다. 공변성(Covariance)은 할당 호환성을 유지하고 반공변성(Contravariance)은 할당 호환성을 유지하지 않습니다.  

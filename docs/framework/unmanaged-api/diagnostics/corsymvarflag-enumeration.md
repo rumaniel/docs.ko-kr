@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6a9c5ff91989fc1ad7da4e23df0e80d9d74ec7c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e5b387ee7fd4cc0088c90d2b8278fbf18bb36f51
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424978"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755688"
 ---
 # <a name="corsymvarflag-enumeration"></a>CorSymVarFlag 열거형
 컴파일러에서 생성 된 변수 인지를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorSymVarFlag   
 {  
     VAR_IS_COMP_GEN = 1  
@@ -37,12 +37,13 @@ typedef enum CorSymVarFlag
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`VAR_IS_COMP_GEN`|지정한 변수로 컴파일러에서 생성 된 임을 나타냅니다.|  
+|`VAR_IS_COMP_GEN`|컴파일러에서 생성 되는 지정 된 변수를 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [진단 기호 저장소 열거형](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

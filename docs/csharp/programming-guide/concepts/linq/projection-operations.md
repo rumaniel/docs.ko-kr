@@ -2,12 +2,12 @@
 title: 프로젝션 작업(C#)
 ms.date: 07/20/2015
 ms.assetid: 98df573a-aad9-4b8c-9a71-844be2c4fb41
-ms.openlocfilehash: 80939e3ece9fdf82b7ca3300fe6f927caa34e9f0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 4b34f3e578e746d75bdad7baaf731d743830713c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509738"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591567"
 ---
 # <a name="projection-operations-c"></a>프로젝션 작업(C#)
 프로젝션은 주로 이후에 사용할 속성으로만 구성된 새 양식으로 개체를 변환하는 작업을 가리킵니다. 프로젝션을 사용하면 각 개체를 기반으로 만들어지는 새 형식을 생성할 수 있습니다. 속성을 프로젝션하고 속성에서 수학 함수를 수행할 수 있습니다. 원래 개체를 변경하지 않고 프로젝션할 수도 있습니다.  
@@ -77,11 +77,11 @@ foreach (string s in query)
   
  이 그림은 `Select()`에서 소스 컬렉션과 동일한 개수의 요소가 들어 있는 컬렉션을 반환하는 방법을 보여 줍니다.  
   
- ![Select&#40;&#41;의 동작에 대한 개념적 설명](../../../../csharp/programming-guide/concepts/linq/media/selectaction.png "SelectAction")  
+ ![Select() 작업을 보여주는 그래픽](./media/projection-operations/select-action-graphic.png)  
   
  이 그림은 `SelectMany()`에서 배열의 중간 시퀀스를 각 중간 배열의 각 값이 포함된 하나의 최종 결과 값으로 연결하는 방법을 보여 줍니다.  
   
- ![SelectMany&#40;&#41;의 동작을 보여주는 그래픽](../../../../csharp/programming-guide/concepts/linq/media/selectmany.png "SelectMany")  
+ ![SelectMany() 작업을 보여주는 그래픽](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>코드 예제  
  다음 예제에서는 `Select()` 및 `SelectMany()`의 동작을 비교합니다. 코드는 소스 컬렉션의 각 꽃 이름 목록에서 처음 두 항목을 사용하여 꽃 "부케"를 만듭니다. 이 예제에서 변환 함수 <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29>가 사용하는 “단일 값”은 값 컬렉션입니다. 이 경우 각 하위 시퀀스의 각 문자열을 열거하기 위해 `foreach` 루프가 추가로 필요합니다.  
@@ -161,8 +161,8 @@ static void SelectVsSelectMany()
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Linq>  
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [select 절](../../../../csharp/language-reference/keywords/select-clause.md)  
-- [방법: 여러 소스로 개체 컬렉션 채우기(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)  
-- [방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-split-a-file-into-many-files-by-using-groups-linq.md)
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [select 절](../../../language-reference/keywords/select-clause.md)
+- [방법: 여러 소스로 개체 컬렉션 채우기(LINQ)(C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)
+- [방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)](./how-to-split-a-file-into-many-files-by-using-groups-linq.md)

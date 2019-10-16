@@ -1,8 +1,7 @@
 ---
 title: DataMemberListEditor 클래스
 ms.date: 03/30/2017
-ms.technology:
-- dotnet-winforms
+ms.technology: dotnet-winforms
 api_name:
 - System.Windows.Forms.Design.DataMemberListEditor
 api_location:
@@ -14,12 +13,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8b934e5ee69c2e6ebd5cf4da7de2790669c68986
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7b79da7832a797cce0163de42363f0d3812a2376
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50191812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675392"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor 클래스
 
@@ -32,7 +31,7 @@ internal class DataMemberListEditor : UITypeEditor
 ```
 
 > [!WARNING]
-> `DataMemberListEditor` 클래스는 내부 전용 이며 코드에서 직접 사용할 업그레이드용은 아닙니다.
+> `DataMemberListEditor` 클래스는 내부용 이며 사용자 코드에서 직접 사용할 하려고 하지 않습니다.
 > 
 > Microsoft는 어떤 상황에서 프로덕션 응용 프로그램에서이 클래스의 사용을 지원 하지 않습니다.
   

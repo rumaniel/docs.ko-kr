@@ -1,5 +1,6 @@
 ---
-title: override 한정자(C# 참조)
+title: override 한정자 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - override
@@ -7,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - override keyword [C#]
 ms.assetid: dd1907a8-acf8-46d3-80b9-c2ca4febada8
-ms.openlocfilehash: cbd5e21e7ca71a4986099a0386c684a6db37c3e8
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: bbdbcaf466e0b4dca4b78902ca9e7a49b02ac718
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45591175"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70394230"
 ---
 # <a name="override-c-reference"></a>override(C# 참조)
 
@@ -20,7 +21,7 @@ ms.locfileid: "45591175"
 
 ## <a name="example"></a>예
 
-이 예제에서 `Square` 클래스는 `Area`가 추상 `ShapesClass`에서 상속되기 때문에 `Area`의 재정의된 구현을 제공해야 합니다.
+이 예에서 `Square` 클래스는 `GetArea`가 추상 `Shape` 클래스에서 상속되기 때문에 `GetArea`의 재정의된 구현을 제공해야 합니다.
 
 [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
 
@@ -55,5 +56,5 @@ ms.locfileid: "45591175"
 - [한정자](modifiers.md)
 - [abstract](abstract.md)
 - [virtual](virtual.md)
-- [new](new.md)
+- [new(한정자)](new-modifier.md)
 - [다형성](../../programming-guide/classes-and-structs/polymorphism.md)

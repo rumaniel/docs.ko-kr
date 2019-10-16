@@ -1,19 +1,17 @@
 ---
 title: .NET Core SDK 및 CI(연속 통합)의 도구 사용
 description: .NET Core SDK 및 빌드 서버의 도구를 사용하는 방법에 대한 정보입니다.
-author: guardrex
-ms.author: mairaw
+author: mairaw
 ms.date: 05/18/2017
-ms.openlocfilehash: 207a6740f2a483d532c194b2bf8112898e9c3463
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.custom: seodec18
+ms.openlocfilehash: 629b7a9e1f2b59981adb77ab4d3125be7036ff02
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48033469"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299965"
 ---
 # <a name="using-net-core-sdk-and-tools-in-continuous-integration-ci"></a>.NET Core SDK 및 CI(연속 통합)의 도구 사용
-
-## <a name="overview"></a>개요
 
 이 문서는 .NET Core SDK 및 빌드 서버의 도구를 사용하는 방법의 개요를 제공합니다. .NET Core 도구 집합은 개발자가 명령 프롬프트에 명령을 입력할 경우 대화형으로 작동하고 CI(연속 통합) 서버에서 빌드 스크립트가 실행될 경우 자동으로 작동합니다. 명령, 옵션, 입력 및 출력은 동일하고 도구를 취득하는 방법과 앱을 빌드하기 위한 시스템만 제공하면 됩니다. 이 문서에서는 빌드 스크립트를 디자인 및 구성하는 방법에 대한 권장 사항과 함께 CI용 도구 취득에 대한 시나리오에 초점을 맞춥니다.
 
@@ -25,22 +23,22 @@ ms.locfileid: "48033469"
 
 macOS 사용자는 PKG 설치 관리자를 사용해야 합니다. Linux에서는 피드 기반 패키지 관리자를 사용하거나(Ubuntu의 경우 apt-get, CentOS의 경우 yum), 패키지 자체를 사용할 수 있습니다(DEB 또는 RPM). Windows에서는 MSI 설치 관리자를 사용합니다.
 
-최신 안정적인 이진 파일은 [Get Started with .NET Core](https://aka.ms/dotnetcoregs)(.NET Core 시작)에서 찾을 수 있습니다. 최신(및 안정적이지 않을 수 있는) 시험판 도구를 사용하려면 [dotnet/cli GitHub 리포지토리](https://github.com/dotnet/cli#installers-and-binaries)에 제공된 링크를 사용하세요. Linux 배포의 경우 `tar.gz` 보관(`tarballs`라고도 함)을 사용할 수 있습니다. 보관 내의 설치 스크립트를 사용하여 .NET Core를 설치합니다.
+안정적인 최신 이진 파일은 [.NET 다운로드](https://dotnet.microsoft.com/download)에 있습니다. 안정적이지 않을 수 있는 최신 시험판 도구를 사용하려면 [dotnet/core-sdk GitHub 리포지토리](https://github.com/dotnet/core-sdk#installers-and-binaries)에 제공된 링크를 사용하세요. Linux 배포의 경우 `tar.gz` 보관(`tarballs`라고도 함)을 사용할 수 있습니다. 보관 내의 설치 스크립트를 사용하여 .NET Core를 설치합니다.
 
 ### <a name="using-the-installer-script"></a>설치 관리자 스크립트 사용
 
 설치 관리자 스크립트를 사용하면 관리자가 아닌 사용자도 빌드 서버에 설치하고 도구 취득을 쉽게 자동화할 수 있습니다. 이 스크립트는 도구를 다운로드하고 사용을 위해 기본 또는 지정된 위치로 추출하는 과정을 처리합니다. 또한 설치할 도구 버전을 지정하고 전체 SDK를 설치할지, 아니면 공유 런타임만 설치할지 지정할 수 있습니다.
 
-원하는 SDK 버전을 가져와서 설치할 수 있도록 빌드 시작 시 설치 관리자 스크립트를 실행하도록 자동화됩니다. *원하는 버전*이란 프로젝트에서 빌드에 필요한 SDK 버전입니다. 스크립트를 사용하여 서버의 로컬 디렉터리에 SDK를 설치하고, 설치된 위치에서 도구를 실행하고 나서, 빌드한 후 정리하거나 CI 서비스에서 정리하도록 할 수 있습니다. 이렇게 하면 전체 빌드 프로세스에 캡슐화 및 격리가 제공됩니다. 설치 스크립트 참조는 [dotnet-install](dotnet-install-script.md) 항목에서 찾을 수 있습니다.
+원하는 SDK 버전을 가져와서 설치할 수 있도록 빌드 시작 시 설치 관리자 스크립트를 실행하도록 자동화됩니다. *원하는 버전*이란 프로젝트에서 빌드에 필요한 SDK 버전입니다. 스크립트를 사용하여 서버의 로컬 디렉터리에 SDK를 설치하고, 설치된 위치에서 도구를 실행하고 나서, 빌드한 후 정리하거나 CI 서비스에서 정리하도록 할 수 있습니다. 이렇게 하면 전체 빌드 프로세스에 캡슐화 및 격리가 제공됩니다. 설치 스크립트 참조는 [dotnet-install](dotnet-install-script.md) 문서에 나와 있습니다.
 
 > [!NOTE]
 > **Azure DevOps Services**
 >
-> 설치 관리자 스크립트를 사용할 경우 기본 종속성은 자동으로 설치되지 않습니다. 운영 체제에 기본 종속성이 없는 경우 기본 종속성을 설치해야 합니다. [.NET Core native prerequisites](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)(.NET Core 기본 필수 구성 요소) 항목에서 필수 구성 요소 목록을 참조하세요.
+> 설치 관리자 스크립트를 사용할 경우 기본 종속성은 자동으로 설치되지 않습니다. 운영 체제에 기본 종속성이 없는 경우 기본 종속성을 설치해야 합니다. 자세한 내용은 [Linux에서 .NET Core의 필수 조건](../linux-prerequisites.md)을 참조하세요.
 
 ## <a name="ci-setup-examples"></a>CI 설치 예제
 
-이 섹션에서는 PowerShell 또는 bash 스크립트를 사용한 수동 설치에 대해 설명하고 여러 가지 SaaS(Software as a Service) CI 솔루션을 설명합니다. 설명되는 SaaS CI 솔루션은 [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) 및 [Build](https://docs.microsoft.com/azure/devops/build-release/index)입니다.
+이 섹션에서는 PowerShell 또는 bash 스크립트를 사용한 수동 설치에 대해 설명하고 여러 가지 SaaS(Software as a Service) CI 솔루션을 설명합니다. 설명되는 SaaS CI 솔루션은 [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) 및 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index)입니다.
 
 ### <a name="manual-setup"></a>수동 설치
 
@@ -126,11 +124,11 @@ LOCALDOTNET="$INSTALLDIR/dotnet"
 
 `csharp` 언어와 `dotnet` 키를 사용하여 .NET Core SDK를 설치하도록 [Travis CI](https://travis-ci.org/)를 구성할 수 있습니다. 자세한 내용은 [Building a C#, F#, or Visual Basic Project](https://docs.travis-ci.com/user/languages/csharp/)(C#, F# 또는 Visual Basic 프로젝트 빌드)에서 공식 Travis CI 문서를 참조하세요. Travis CI 정보에 액세스할 때 커뮤니티에서 유지 관리되는 `language: csharp` 언어 식별자가 F# 및 Mono를 포함한 모든 .NET 언어에 적용된다는 것에 유의하세요.
 
-Travis CI는 앱에 대한 빌드 조합을 설명하기 위해 런타임, 환경 및 제외/포함의 조합을 지정하는 *빌드 행렬*에서 macOS(OS X 10.11, OS X 10.12) 및 Linux(Ubuntu 14.04) 작업을 실행합니다. 자세한 내용은 [.travis.yml example](https://github.com/dotnet/docs/blob/master/.travis.yml) 파일 및 Travis CI 문서의 [Customizing the Build](https://docs.travis-ci.com/user/customizing-the-build)(빌드 사용자 지정)를 참조하세요. MSBuild 기반 도구의 경우 LTS(1.0.x) 및 Current(1.1.x) 런타임이 패키지에 포함되므로 SDK를 설치하면 빌드에 필요한 모든 것이 제공됩니다.
+Travis CI는 앱에 대한 빌드 조합을 설명하기 위해 런타임, 환경 및 제외/포함의 조합을 지정하는 *빌드 행렬*에서 macOS 및 Linux 작업을 둘 다 실행합니다. 자세한 내용은 Travis CI 설명서의 [빌드 사용자 지정](https://docs.travis-ci.com/user/customizing-the-build) 문서를 참조하세요. MSBuild 기반 도구의 경우 LTS(1.0.x) 및 Current(1.1.x) 런타임이 패키지에 포함되므로 SDK를 설치하면 빌드에 필요한 모든 것이 제공됩니다.
 
 ### <a name="appveyor"></a>AppVeyor
 
-[AppVeyor](https://www.appveyor.com/)는 `Visual Studio 2017` 빌드 작업자 이미지를 사용하여 .NET Core 1.0.1 SDK를 설치합니다. .NET Core SDK의 여러 가지 버전이 포함된 다른 빌드 이미지를 사용할 수 있습니다. 자세한 내용은 [appveyor.yml example](https://github.com/dotnet/docs/blob/master/appveyor.yml)(appveyor.yml 예제) 및 AppVeyor 문서의 [Build worker images](https://www.appveyor.com/docs/build-environment/#build-worker-images)(빌드 작업자 이미지) 항목을 참조하세요.
+[AppVeyor](https://www.appveyor.com/)는 `Visual Studio 2017` 빌드 작업자 이미지를 사용하여 .NET Core 1.0.1 SDK를 설치합니다. 각기 다른 버전의 .NET Core SDK가 포함된 여러 빌드 이미지를 사용할 수 있습니다. 자세한 내용은 [appveyor.yml 예제](https://github.com/dotnet/docs/blob/master/appveyor.yml) 및 AppVeyor 문서의 [빌드 작업자 이미지](https://www.appveyor.com/docs/build-environment/#build-worker-images) 문서를 참조하세요.
 
 .NET Core SDK 이진 파일은 설치 스크립트를 통해 하위 디렉터리로 다운로드되어 압축이 풀리고 `PATH` 환경 변수에 추가됩니다. 빌드 행렬을 추가하여 .NET Core SDK의 여러 버전으로 통합 테스트를 실행합니다.
 
@@ -151,32 +149,32 @@ install:
 1. 명령을 사용하여 [수동 설치 단계](#manual-setup)에서 스크립트를 실행합니다.
 1. .NET Core 도구를 사용하도록 구성된 여러 가지 Azure DevOps Services 기본 제공 빌드 작업으로 구성된 빌드를 만듭니다.
 
-두 가지 솔루션 모두 유효합니다. 수동 설치 스크립트를 사용하면 도구를 빌드의 일부로 다운로드한 후 취득하는 도구 버전을 제어할 수 있습니다. 빌드는 만들어야 하는 스크립트에서 실행됩니다. 이 항목에서는 수동 옵션만 설명합니다. Azure DevOps Services 빌드 작업으로 빌드를 구성하는 방법에 대한 자세한 내용은 Azure DevOps Services [Continuous integration and deployment](https://docs.microsoft.com/azure/devops/build-release/index)(연속 통합 및 배포) 항목을 참조하세요.
+두 가지 솔루션 모두 유효합니다. 수동 설치 스크립트를 사용하면 도구를 빌드의 일부로 다운로드한 후 취득하는 도구 버전을 제어할 수 있습니다. 빌드는 만들어야 하는 스크립트에서 실행됩니다. 이 문서에서는 수동 옵션만 설명합니다. Azure DevOps Services 빌드 작업을 사용하여 빌드를 작성하는 방법에 대한 자세한 내용은 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index) 문서를 참조하세요.
 
 Azure DevOps Services에서 수동 설치 스크립트를 사용하려면 새 빌드 정의를 만들고 빌드 단계에서 실행할 스크립트를 지정합니다. 이 작업에는 Azure DevOps Services 사용자 인터페이스를 사용합니다.
 
 1. 먼저 새 빌드 정의를 만듭니다. 만들려는 빌드 종류를 정의하는 옵션을 제공하는 화면이 표시되면 **비어 있음** 옵션을 선택합니다.
 
-   ![빈 빌드 정의 선택](./media/using-ci-with-cli/screen1.png)
+   ![빈 빌드 정의 선택](./media/using-ci-with-cli/select-empty-build-definition.png)
 
 1. 빌드할 리포지토리를 구성한 후 빌드 정의로 이동합니다. **빌드 단계 추가**를 선택합니다.
 
-   ![빌드 단계 추가](./media/using-ci-with-cli/screen2.png)
+   ![빌드 단계 추가](./media/using-ci-with-cli/add-build-step.png)
 
-1. **작업 카탈로그**가 표시됩니다. 카탈로그에는 빌드에서 사용할 작업이 포함됩니다. 스크립트가 준비되면 **PowerShell: PowerShell 스크립트 실행**에 대해 **추가** 단추를 선택합니다.
+1. **작업 카탈로그**가 표시됩니다. 카탈로그에는 빌드에서 사용할 작업이 포함됩니다. 스크립트가 준비되면 **PowerShell: PowerShell 스크립트 실행**에 대해 추가 단추를 선택합니다.
 
-   ![PowerShell 스크립트 단계 추가](./media/using-ci-with-cli/screen3.png)
+   ![PowerShell 스크립트 단계 추가](./media/using-ci-with-cli/add-powershell-script.png)
 
 1. 빌드 단계를 구성합니다. 빌드 중인 리포지토리에서 스크립트를 추가합니다.
 
-   ![실행할 PowerShell 스크립트 지정](./media/using-ci-with-cli/screen4.png)
+   ![실행할 PowerShell 스크립트 지정](./media/using-ci-with-cli/powershell-script-path.png)
 
 ## <a name="orchestrating-the-build"></a>빌드 오케스트레이션
 
-이 문서의 대부분은 .NET Core를 사용하여 코드를 오케스트레이션하거나 *실제로 빌드*하는 방법에 대한 설명 없이 .NET Core 도구를 취득하고 다양한 CI 서비스를 구성하는 방법을 설명합니다. 빌드 프로세스를 구성하는 방법은 여기에서 일반적으로 설명할 수 없는 다양한 요소에 따라 선택할 수 있습니다. 각 기술을 사용하여 빌드를 오케스트레이션하는 방법에 대한 자세한 내용은 [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) 및 [Azure DevOps Services](https://docs.microsoft.com/azure/devops/build-release/index)의 설명서 집합에 제공된 리소스 및 샘플을 참조하세요.
+이 문서의 대부분은 .NET Core를 사용하여 코드를 오케스트레이션하거나 *실제로 빌드*하는 방법에 대한 설명 없이 .NET Core 도구를 취득하고 다양한 CI 서비스를 구성하는 방법을 설명합니다. 빌드 프로세스를 구성하는 방법 선택은 여기에서 일반적으로 설명할 수 없는 다양한 요소에 따라 달라집니다. 각 기술을 사용하여 빌드를 오케스트레이션하는 방법에 대한 자세한 내용은 [Travis CI](https://travis-ci.org/), [AppVeyor](https://www.appveyor.com/) 및 [Azure Pipelines](https://docs.microsoft.com/azure/devops/pipelines/index)의 문서 세트에 제공된 리소스 및 샘플을 참조하세요.
 
 .NET Core 도구를 사용하여 .NET Core 코드에 대한 빌드 프로세스를 구성할 때 적용할 두 가지 일반적인 방법에서는 MSBuild를 직접 사용하거나 .NET Core 명령줄 명령을 사용합니다. 어떤 방법을 적용해야 하는지는 방법에 대한 숙련도 및 복잡성의 절충 조건에 따라 결정됩니다. MSBuild는 빌드 프로세스를 작업 및 대상으로 표시하는 기능을 제공하지만 MSBuild 프로젝트 파일 구문 학습의 복잡성이 추가됩니다. .NET Core 명령줄 도구를 사용하는 것이 더 간편하지만 `bash` 또는 PowerShell 같은 스크립팅 언어로 오케스트레이션 논리를 작성해야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-* [Ubuntu acquisition steps](https://www.microsoft.com/net/core#linuxubuntu)(Ubuntu 취득 단계)
+- [.NET 다운로드 - Linux](https://dotnet.microsoft.com/download?initial-os=linux)

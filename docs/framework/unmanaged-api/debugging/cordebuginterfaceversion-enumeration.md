@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac90699cf217aff926003aa545b9cceb11bf58d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ad31df899fe98e66e39a1af785618b3679e644bd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33410009"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739880"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 열거형
 인터페이스, 특정 .NET Framework 버전 또는 인터페이스가 적용된 .NET Framework 버전을 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugInterfaceVersion {  
   
     CorDebugInvalidVersion            = 0,  
@@ -222,29 +222,30 @@ typedef enum CorDebugInterfaceVersion {
 |`CorDebugLatestVersion`|모든 서비스 팩을 포함한 .NET Framework 버전이 최신 버전입니다.|-|  
   
 ## <a name="remarks"></a>설명  
- 디버거에서 사용할 수는 `CorDebugInterfaceVersion` 열거형에는 [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) 디버거가 지 원하는.NET Framework의 가장 높은 버전을 지정 하는 함수입니다.  
+ 디버거를 사용할 수는 `CorDebugInterfaceVersion` 열거형에는 [CreateDebuggingInterfaceFromVersion](../../../../docs/framework/unmanaged-api/hosting/createdebugginginterfacefromversion-function.md) 디버거에서 지 원하는.NET Framework의 가장 높은 버전을 지정 하는 함수입니다.  
   
 ## <a name="interface-names"></a>인터페이스 이름  
  디버깅 API에서 인터페이스 이름 끝에 표시되는 숫자(예: `ICorDebugThread3`의 경우 "3")는 .NET Framework의 버전이 아닌 인터페이스의 버전을 지정합니다. .NET Framework 버전 1에 처음 도입된 인터페이스를 제외하면 디버깅 API의 모든 인터페이스 이름에는 버전 번호가 포함됩니다. 인터페이스 버전 번호와 .NET Framework 버전 번호가 일치하는 경우 단순히 우연적인 일입니다.  
   
--   .NET Framework 버전 1.0에 도입된 인터페이스의 경우 모두 암시적으로 버전 1이므로 번호를 포함하지 않습니다.  
+- .NET Framework 버전 1.0에 도입된 인터페이스의 경우 모두 암시적으로 버전 1이므로 번호를 포함하지 않습니다.  
   
--   .NET Framework 버전 1.1은 버전 1.0 인터페이스를 사용하며 새로운 디버깅 인터페이스는 제공하지 않습니다.  
+- .NET Framework 버전 1.1은 버전 1.0 인터페이스를 사용하며 새로운 디버깅 인터페이스는 제공하지 않습니다.  
   
--   .NET Framework 버전 2.0에 도입된 14개 디버깅 인터페이스는 버전 1의 해당 인터페이스가 논리적으로 확장된 것이며 이름에 숫자 "2"가 포함됩니다.  
+- .NET Framework 버전 2.0에 도입된 14개 디버깅 인터페이스는 버전 1의 해당 인터페이스가 논리적으로 확장된 것이며 이름에 숫자 "2"가 포함됩니다.  
   
--   .NET Framework 버전 3.0 및 3.5는 기존 .NET Framework 2.0 인터페이스를 사용하며 새로운 인터페이스는 제공하지 않습니다.  
+- .NET Framework 버전 3.0 및 3.5는 기존 .NET Framework 2.0 인터페이스를 사용하며 새로운 인터페이스는 제공하지 않습니다.  
   
--   [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 다양 한 인터페이스 버전이 도입 되었습니다. 예를 들어 `ICorDebugThread3` 및 `ICorDebugThread4`는 모두 `ICorDebugThread` 인터페이스의 3번째/4번째 버전으로 표시됩니다. [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 의 첫 번째 버전도 소개는 `ICorDebugStackWalk` 인터페이스와 두 번째 버전의는 `ICorDebugNativeFrame` 인터페이스 (`ICorDebugNativeFrame2`).  
+- .NET Framework 4는 다양을 한 인터페이스 버전이 도입 되었습니다. 예를 들어 `ICorDebugThread3` 및 `ICorDebugThread4`는 모두 `ICorDebugThread` 인터페이스의 3번째/4번째 버전으로 표시됩니다. .NET Framework 4에서는 첫 번째 버전도 소개 합니다 `ICorDebugStackWalk` 인터페이스 및 두 번째 버전의 합니다 `ICorDebugNativeFrame` 인터페이스 (`ICorDebugNativeFrame2`).  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

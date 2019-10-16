@@ -2,15 +2,15 @@
 title: 워크플로 실행 속성
 ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
-ms.openlocfilehash: 2b72782b4b9fef127e61bb22b7800740af1d8d2b
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 87775ba6efb9ec26ed2445e1f9d0944c379ba04f
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582072"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988592"
 ---
 # <a name="workflow-execution-properties"></a>워크플로 실행 속성
-CLR은 TLS(스레드 로컬 저장소)를 통해 각 스레드의 실행 컨텍스트를 유지 관리합니다. 이 실행 컨텍스트는 스레드 ID, 앰비언트 트랜잭션 및 현재 권한 집합과 같은 잘 알려진 스레드 속성은 물론 명명된 슬롯과 같은 사용자 정의 스레드 속성을 제어합니다.  
+CLR은 TLS(스레드 로컬 스토리지)를 통해 각 스레드의 실행 컨텍스트를 유지 관리합니다. 이 실행 컨텍스트는 스레드 ID, 앰비언트 트랜잭션 및 현재 권한 집합과 같은 잘 알려진 스레드 속성은 물론 명명된 슬롯과 같은 사용자 정의 스레드 속성을 제어합니다.  
   
  CLR을 직접 대상으로 하는 프로그램과 달리 워크플로 프로그램은 스레드를 알 수 없는 환경에서 실행되는 계층적 범위의 활동 트리입니다. 이는 표준 TLS 메커니즘을 직접 사용하여 제공된 작업 항목 범위에 있는 컨텍스트를 확인할 수 없음을 의미합니다. 예를 들어 두 개의 병렬 실행 분기는 서로 다른 트랜잭션을 사용할 수 있지만 스케줄러는 동일한 CLR 스레드에서 해당 실행을 인터리브할 수 있습니다.  
   
@@ -147,7 +147,7 @@ WorkflowInvoker.Invoke(wf);
   
  워크플로가 호출되면 다음 출력이 콘솔 창에 기록됩니다.  
   
-```  
+```console  
 Start blue text.  
 Start red text.  
 Start default text.  
@@ -157,11 +157,12 @@ End default text.
 ```  
   
 > [!NOTE]
->  이전 출력에는 표시되지 않았지만 콘솔 창의 각 텍스트 행은 지정된 색상으로 표시됩니다.  
+> 이전 출력에는 표시되지 않았지만 콘솔 창의 각 텍스트 행은 지정된 색상으로 표시됩니다.  
   
  워크플로 실행 속성은 사용자 지정 활동 작성자가 사용할 수 있으며, <xref:System.ServiceModel.Activities.CorrelationScope> 및 <xref:System.Activities.Statements.TransactionScope> 활동과 같은 활동의 처리 관리 메커니즘도 제공합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Activities.IExecutionProperty>  
- <xref:System.Activities.IPropertyRegistrationCallback>  
- <xref:System.Activities.RegistrationContext>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Activities.IExecutionProperty>
+- <xref:System.Activities.IPropertyRegistrationCallback>
+- <xref:System.Activities.RegistrationContext>

@@ -1,0 +1,40 @@
+- name: 응용 프로그램 호환성
+  items:
+    - name: 호환성이 손상되는 변경 평가
+      href: index.md
+    - name: 호환성이 손상되는 변경 범주
+      href: categories.md
+    - name: 호환성이 손상되는 변경 선택기
+      href: breaking-changes.md
+    - name: 버전별
+      items:
+        - name: .NET Framework - .NET Core
+          href: framework-core.md
+        - name: 2.2 - 3.0
+          href: 2.2-3.0.md
+        - name: 3.0 미리보기 6 - 3.0 미리 보기 7
+          href: 3.0.6-3.0.7.md
+        - name: 3.0 미리보기 7 - 3.0 미리 보기 8
+          href: 3.0.7-3.0.8.md
+        - name: 3.0 미리보기 8 - 3.0 미리 보기 9
+          href: 3.0.8-3.0.9.md
+        - name: 3.0 미리보기 9 - 3.0 RC1
+          href: 3.0.9-3.0rc1.md
+    - name: 범주별
+      items:
+        - name: CoreFx
+          href: corefx.md
+        - name: 암호화
+          href: cryptography.md
+        - name: 전역화
+          href: globalization.md
+        - name: 네트워킹
+          href: networking.md
+        - name: Visual Basic
+          href: visualbasic.md
+        - name: GitHub의 ASP.NET Core
+          href: 'https://github.com/aspnet/Announcements/issues?q=is%3Aissue+is%3Aopen+label%3A%22Breaking+change%22+label%3A3.0.0'
+        - name: Entity Framework Core
+          href: /ef/core/what-is-new/ef-core-3.0/breaking-changes
+        - name: Windows Forms
+          href: winforms.md

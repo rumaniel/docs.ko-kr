@@ -16,12 +16,12 @@ helpviewer_keywords:
 - UShort data type
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
-ms.openlocfilehash: 25ac46217a09d658ceaf92a8ea586259668314c1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d85219fad631b09c19eac054b87d4843b0c73a45
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199450"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64646933"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort 데이터 형식 (Visual Basic)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50199450"
   
  `UShort`의 기본값은 0입니다.  
 
-# <a name="literal-assignments"></a>리터럴 할당
+## <a name="literal-assignments"></a>리터럴 할당
 
 선언 하 고 초기화할 수 있습니다는 `UShort` 변수 (Visual Basic 2017부터) 이진 리터럴을 또는 10 진수 리터럴, 16 진수 리터럴, 8 진수 리터럴을 할당 합니다. 정수 리터럴이 `UShort` 범위를 벗어나는 경우(즉 <xref:System.UInt16.MinValue?displayProperty=nameWithType>보다 작거나 <xref:System.UInt16.MaxValue?displayProperty=nameWithType>보다 큰 경우) 컴파일 오류가 발생합니다.
 
@@ -56,7 +56,7 @@ Dim number As UShort = &H_FF8C
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-숫자 리터럴을 포함할 수도 있습니다는 `US` 또는 `us` [문자를 입력](../../programming-guide\language-features\data-types/type-characters.md) 나타내기 위해는 `UShort` 다음 예제와 같이 데이터 형식입니다.
+숫자 리터럴을 포함할 수도 있습니다는 `US` 또는 `us` [문자를 입력](../../programming-guide/language-features/data-types/type-characters.md) 나타내기 위해는 `UShort` 다음 예제와 같이 데이터 형식입니다.
 
 ```vb
 Dim number = &H_5826us
@@ -64,20 +64,21 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>프로그래밍 팁
   
--   **음수를 사용할 수 있습니다.** 때문에 `UShort` 부호 없는 형식에는 음수를 나타낼 수 없습니다. 단항 빼기를 사용 하는 경우 (`-`) 형식으로 계산 되는 식에 연산자 `UShort`, Visual Basic 변환 식이 `Integer` 첫 번째입니다.  
+- **음수를 사용할 수 있습니다.** 때문에 `UShort` 부호 없는 형식에는 음수를 나타낼 수 없습니다. 단항 빼기를 사용 하는 경우 (`-`) 형식으로 계산 되는 식에 연산자 `UShort`, Visual Basic 변환 식이 `Integer` 첫 번째입니다.  
   
--   **CLS 규격입니다.** 합니다 `UShort` 데이터 형식이 아닙니다 부분 합니다 [공용 언어 사양](http://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), CLS 규격 코드를 사용 하는 구성 요소를 사용할 수 없습니다 있도록 합니다.
+- **CLS 규격입니다.** 합니다 `UShort` 데이터 형식이 아닙니다 부분 합니다 [공용 언어 사양](https://www.ecma-international.org/publications/standards/Ecma-335.htm) (CLS), CLS 규격 코드를 사용 하는 구성 요소를 사용할 수 없습니다 있도록 합니다.
   
--   **확대 합니다.** `UShort` 데이터 형식으로 확장 되는지를 `Integer`, `UInteger`, `Long`, `ULong`를 `Decimal`, `Single`, 및 `Double`합니다. 즉, 변환할 수 있습니다 `UShort` 발생 없이 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.  
+- **확대 합니다.** `UShort` 데이터 형식으로 확장 되는지를 `Integer`, `UInteger`, `Long`, `ULong`를 `Decimal`, `Single`, 및 `Double`합니다. 즉, 변환할 수 있습니다 `UShort` 발생 없이 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.  
   
--   **형식 문자입니다.** 리터럴 형식 문자를 추가 `US` 리터럴에 리터럴에 `UShort` 데이터 형식입니다. `UShort` 에 식별자 형식 문자가 없습니다.  
+- **형식 문자입니다.** 리터럴 형식 문자를 추가 `US` 리터럴에 리터럴에 `UShort` 데이터 형식입니다. `UShort` 에 식별자 형식 문자가 없습니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.UInt16?displayProperty=nameWithType> 구조체입니다.  
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.UInt16?displayProperty=nameWithType> 구조체입니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.UInt16>  
- [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)  
- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [방법: 부호 없는 형식을 사용하는 Windows 함수 호출](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)  
- [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.UInt16>
+- [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
+- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [방법: 부호 없는 형식을 사용하는 Windows 함수 호출](../../../visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md)
+- [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

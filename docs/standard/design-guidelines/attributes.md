@@ -1,19 +1,18 @@
 ---
-title: 특성 1
-ms.date: 03/30/2017
+title: 특성
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - attributes [.NET Framework], about
 - class library design guidelines [.NET Framework], attributes
 ms.assetid: ee0038ef-b247-4747-a650-3c5c5cd58d8b
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 51aa91b1acbae9f1a15ac12441090dd4c1c2dcb1
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+author: KrzysztofCwalina
+ms.openlocfilehash: 6d4cc6615b7f7346e9c8fc2a7264025f318c8a3d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259508"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785569"
 ---
 # <a name="attributes"></a>특성
 <xref:System.Attribute?displayProperty=nameWithType> 사용자 지정 특성을 정의 하는 기본 클래스를 사용 됩니다.  
@@ -48,9 +47,9 @@ ms.locfileid: "44259508"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [사용 지침](../../../docs/standard/design-guidelines/usage-guidelines.md)

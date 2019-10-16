@@ -7,27 +7,27 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4cece1227b5210cf839aff0658267ae480b23b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: f99b2fd4716b069d4ec7a21e369c5178990ce16d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196469"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044202"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe(서명 도구)
 서명 도구는 파일에 디지털 서명을 하고, 파일의 서명을 확인하고, 파일에 타임스탬프를 기록하는 명령줄 도구입니다.  
   
- 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)를 참조하세요.  
+ 이 도구는 자동으로 Visual Studio와 함께 설치됩니다. 이 도구를 실행하려면 Visual Studio용 개발자 명령 프롬프트(또는 Windows 7의 Visual Studio 명령 프롬프트)를 사용합니다. 자세한 내용은 [명령 프롬프트](developer-command-prompt-for-vs.md)를 참조하세요.  
   
  명령 프롬프트에 다음을 입력합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 signtool [command] [options] [file_name | ...]  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
   
 |인수|설명|  
 |--------------|-----------------|  
@@ -39,10 +39,10 @@ signtool [command] [options] [file_name | ...]
   
 |명령|설명|  
 |-------------|-----------------|  
-|`catdb`|카탈로그 데이터베이스에서 카탈로그 파일을 추가하거나 제거합니다. 카탈로그 데이터베이스는 카탈로그 파일의 자동 조회에 사용되며 GUID를 통해 식별됩니다. `catdb` 명령에서 지원하는 옵션 목록은 [catdb 명령 옵션](../../../docs/framework/tools/signtool-exe.md#catdb)을 참조하세요.|  
-|`sign`|파일에 디지털 서명을 수행합니다. 디지털 서명은 파일 조작으로부터 보호하고 사용자가 서명 인증서를 기반으로 서명자를 확인할 수 있습니다. `sign` 명령에서 지원하는 옵션 목록은 [sign 명령 옵션](../../../docs/framework/tools/signtool-exe.md#sign)을 참조하세요.|  
-|`Timestamp`|파일에 타임스탬프를 기록합니다. `TimeStamp` 명령에서 지원하는 옵션 목록은 [TimeStamp 명령 옵션](../../../docs/framework/tools/signtool-exe.md#TimeStamp)을 참조하세요.|  
-|`Verify`|파일의 디지털 서명을 검사하여 신뢰할 수 있는 기관에서 발행한 서명 인증서인지, 해당 서명 인증서가 취소되었는지, 아니면 서명 인증서가 특정 정책에 대해 유효한지를 선택적으로 확인합니다. `Verify` 명령에서 지원하는 옵션 목록은 [Verify 명령 옵션](../../../docs/framework/tools/signtool-exe.md#Verify)을 참조하세요.|  
+|`catdb`|카탈로그 데이터베이스에서 카탈로그 파일을 추가하거나 제거합니다. 카탈로그 데이터베이스는 카탈로그 파일의 자동 조회에 사용되며 GUID를 통해 식별됩니다. `catdb` 명령에서 지원하는 옵션 목록은 [catdb 명령 옵션](signtool-exe.md#catdb)을 참조하세요.|  
+|`sign`|파일에 디지털 서명을 수행합니다. 디지털 서명은 파일 조작으로부터 보호하고 사용자가 서명 인증서를 기반으로 서명자를 확인할 수 있습니다. `sign` 명령에서 지원하는 옵션 목록은 [sign 명령 옵션](signtool-exe.md#sign)을 참조하세요.|  
+|`Timestamp`|파일에 타임스탬프를 기록합니다. `TimeStamp` 명령에서 지원하는 옵션 목록은 [TimeStamp 명령 옵션](signtool-exe.md#TimeStamp)을 참조하세요.|  
+|`Verify`|파일의 디지털 서명을 검사하여 신뢰할 수 있는 기관에서 발행한 서명 인증서인지, 해당 서명 인증서가 취소되었는지, 아니면 서명 인증서가 특정 정책에 대해 유효한지를 선택적으로 확인합니다. `Verify` 명령에서 지원하는 옵션 목록은 [Verify 명령 옵션](signtool-exe.md#Verify)을 참조하세요.|  
   
  다음 옵션은 모든 서명 도구 명령에 적용됩니다.  
   
@@ -73,13 +73,13 @@ signtool [command] [options] [file_name | ...]
 |`/ac`  *file*|*file*의 추가 인증서를 시그니처 블록에 추가합니다.|  
 |`/as`|이 서명을 추가합니다. 주 서명이 없으면, 이 서명이 기본 서명을 대체합니다.|  
 |`/c`  *CertTemplateName*|서명 인증서의 인증서 템플릿 이름(Microsoft 확장명)을 지정합니다.|  
-|`/csp`  *CSPName*|개인 키 컨테이너를 포함하는 CSP(암호화 서비스 공급자)를 지정합니다.|  
+|`/csp`  *CSPName*|프라이빗 키 컨테이너를 포함하는 CSP(암호화 서비스 공급자)를 지정합니다.|  
 |`/d`  *Desc*|서명된 콘텐츠에 대한 설명을 지정합니다.|  
 |`/du`  *URL*|서명한 콘텐츠의 부연 설명에 대한 URL(Uniform Resource Locator)을 지정합니다.|  
-|`/f`  *SignCertFile*|파일에 있는 서명 인증서를 지정합니다. 파일이 PFX(개인 정보 교환) 형식이면서 암호로 보호되는 경우, `/p` 옵션을 사용하여 암호를 지정합니다. 파일에 개인 키가 없으면 `/csp` 및 `/kc` 옵션을 사용하여 CSP 및 개인 키 컨테이너 이름을 지정합니다.|  
+|`/f`  *SignCertFile*|파일에 있는 서명 인증서를 지정합니다. 파일이 PFX(개인 정보 교환) 형식이면서 암호로 보호되는 경우, `/p` 옵션을 사용하여 암호를 지정합니다. 파일에 프라이빗 키가 없으면 `/csp` 및 `/kc` 옵션을 사용하여 CSP 및 프라이빗 키 컨테이너 이름을 지정합니다.|  
 |`/fd`|파일 서명을 만드는 데 사용할 파일 다이제스트 알고리즘을 지정합니다. 기본값은 SHA1입니다.|  
 |`/i`  *IssuerName*|서명 인증서의 발급자 이름을 지정합니다. 이 값은 발급자의 전체 이름에서 부분 문자열이 될 수 있습니다.|  
-|`/kc`  *PrivKeyContainerName*|개인 키 컨테이너 이름을 지정합니다.|  
+|`/kc`  *PrivKeyContainerName*|프라이빗 키 컨테이너 이름을 지정합니다.|  
 |`/n`  *SubjectName*|서명 인증서의 주체 이름을 지정합니다. 이 값은 주체의 전체 이름에서 부분 문자열이 될 수 있습니다.|  
 |`/nph`|지원되는 경우 실행 파일에 대한 페이지 해시를 억제합니다. 기본값은 SIGNTOOL_PAGE_HASHES 환경 변수 및 wintrust.dll 버전에 의해 결정됩니다. PE 파일이 아닌 경우 이 옵션이 무시됩니다.|  
 |`/p`  *Password*|PFX 파일을 열 때 사용할 암호를 지정합니다. (`/f` 옵션을 사용하여 PFX 파일을 지정합니다.)|  
@@ -129,7 +129,7 @@ signtool [command] [options] [file_name | ...]
 |`/hash` (`SHA1`&#124;`SHA256`)|카탈로그에서 파일을 검색할 때 사용할 선택적 해시 알고리즘을 지정합니다.|  
 |`/kp`|커널 모드 드라이버 서명 정책을 이용하여 검증을 수행하도록 지정합니다.|  
 |`/ms`|여러 확인 의미 체계를 사용합니다. 이는 [!INCLUDE[win8](../../../includes/win8-md.md)] 이상에 대한 [WinVerifyTrust](/windows/desktop/api/wintrust/nf-wintrust-winverifytrust) 호출의 기본 동작입니다.|  
-|`/o` *Version*|운영 체제 버전별로 파일을 확인합니다. *Version*의 형식은 *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*입니다. *PlatformID*는 <xref:System.PlatformID> 열거형 멤버의 내부 값을 나타냅니다. **중요:** `/o` 스위치를 사용하는 것이 좋습니다. `/o`가 지정되지 않으면 SignTool.exe가 예기치 않은 결과를 반환할 수 있습니다. 예를 들어 `/o` 스위치가 포함되지 않는 경우 이전 운영 체계에서 유효성이 제대로 입증된 시스템 카탈로그가 새로운 운영 체계에서는 유효성이 제대로 입증되지 않을지 모릅니다.|  
+|`/o` *Version*|운영 체제 버전별로 파일을 확인합니다. *Version*의 형식은 다음과 같습니다. *PlatformID*:*VerMajor*.*VerMinor*.*BuildNumber*. *PlatformID*는 <xref:System.PlatformID> 열거형 멤버의 내부 값을 나타냅니다. **중요:**  `/o` 스위치를 사용하는 것이 좋습니다. `/o`가 지정되지 않으면 SignTool.exe가 예기치 않은 결과를 반환할 수 있습니다. 예를 들어 `/o` 스위치가 포함되지 않는 경우 이전 운영 체계에서 유효성이 제대로 입증된 시스템 카탈로그가 새로운 운영 체계에서는 유효성이 제대로 입증되지 않을지 모릅니다.|  
 |`/p7`|PKCS #7 파일을 확인합니다. PKCS #7 유효성 검사에 기존 정책이 사용되지 않습니다. 서명이 확인되고 서명 인증서에 대한 체인이 빌드됩니다.|  
 |`/pa`|기본 Authenticode 확인 정책이 사용되도록 지정합니다. `/pa` 옵션을 지정하지 않으면 서명 도구는 Windows 드라이버 확인 정책을 사용합니다. 이 옵션은 `catdb` 옵션과 함께 사용할 수 없습니다.|  
 |`/pg` *PolicyGUID*|GUID를 기준으로 확인 정책을 지정합니다. *PolicyGUID*는 확인 정책의 ActionID에 해당합니다. 이 옵션은 `catdb` 옵션과 함께 사용할 수 없습니다.|  
@@ -139,7 +139,7 @@ signtool [command] [options] [file_name | ...]
   
  사용 예제는 [SignTool을 사용하여 파일 시그니처 확인](/windows/desktop/SecCrypto/using-signtool-to-verify-a-file-signature)을 참조하세요.  
   
-## <a name="return-value"></a>반환 값  
+## <a name="return-value"></a>Return Value  
  서명 도구는 종료할 때 다음 종료 코드 중 하나를 반환합니다.  
   
 |종료 코드|설명|  
@@ -148,67 +148,68 @@ signtool [command] [options] [file_name | ...]
 |1|실행하지 못했습니다.|  
 |2|실행이 경고와 함께 완료되었습니다.|  
   
-## <a name="examples"></a>예제  
+## <a name="examples"></a>예  
  다음 명령은 카탈로그 파일 MyCatalogFileName.cat를 시스템 구성 요소와 드라이버 데이터베이스에 추가합니다. `/u` 옵션은 `MyCatalogFileName.cat`라는 기존 카탈로그 파일이 바뀌지 않도록 해야 하는 경우 고유 이름을 생성합니다.  
   
-```  
+```console  
 signtool catdb /v /u MyCatalogFileName.cat  
 ```  
   
  다음 명령은 가장 적합한 인증서를 사용하여 파일에 자동으로 서명합니다.  
   
-```  
+```console  
 signtool sign /a MyFile.exe  
 ```  
   
  다음 명령은 암호로 보호된 PFX 파일에 저장된 인증서를 사용하여 파일에 디지털 서명을 합니다.  
   
-```  
+```console  
 signtool sign /f MyCert.pfx /p MyPassword MyFile.exe  
 ```  
   
  다음 명령은 파일에 디지털 서명을 하고 타임스탬프를 기록합니다. 파일에 서명하는 데 사용할 인증서는 PFX 파일로 저장됩니다.  
   
-```  
-signtool sign /f MyCert.pfx /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+```console  
+signtool sign /f MyCert.pfx /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  다음 명령은 `My`의 주체 이름이 있는 `My Company Certificate` 저장소에 위치한 인증서를 사용하여 파일에 서명합니다.  
   
-```  
+```console  
 signtool sign /n "My Company Certificate" MyFile.exe  
 ```  
   
  다음 명령은 ActiveX 컨트롤에 서명하고 컨트롤을 설치하도록 사용자에게 메시지가 표시될 때 Internet Explorer에 표시되는 정보를 제공합니다.  
   
-```  
+```console  
 Signtool sign /f MyCert.pfx /d: "MyControl" /du http://www.example.com/MyControl/info.html MyControl.exe  
 ```  
   
  다음 명령은 이미 디지털 서명된 파일에 타임스탬프를 기록합니다.  
   
-```  
-signtool timestamp /t http://timestamp.verisign.com/scripts/timstamp.dll MyFile.exe  
+```console  
+signtool timestamp /t http://timestamp.digicert.com MyFile.exe  
 ```  
   
  다음 명령은 파일이 서명되었는지를 확인합니다.  
   
-```  
+```console  
 signtool verify MyFile.exe  
 ```  
   
  다음 명령은 카탈로그에서 서명될 수 있는 시스템 파일을 확인합니다.  
   
-```  
+```console  
 signtool verify /a SystemFile.dll  
 ```  
   
  다음 명령은 `MyCatalog.cat`라는 카탈로그에서 서명된 시스템 파일을 확인합니다.  
   
-```  
+```console  
 signtool verify /c MyCatalog.cat SystemFile.dll  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [도구](../../../docs/framework/tools/index.md)  
- [명령 프롬프트](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
+## <a name="see-also"></a>참고 항목
+
+- [도구](index.md)
+- [명령 프롬프트](developer-command-prompt-for-vs.md)

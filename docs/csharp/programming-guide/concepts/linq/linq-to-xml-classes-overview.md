@@ -2,12 +2,12 @@
 title: LINQ to XML 클래스 개요(C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: d1454909591ff060f9d2a1d2484302e7112be149
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 55be666fc0db0becb12ec8b525e7fc443536e1df
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502393"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591889"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML 클래스 개요(C#)
 이 항목에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 네임스페이스의 <xref:System.Xml.Linq> 클래스 목록을 제공하며 각 클래스에 대한 간략한 설명을 제공합니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "43502393"
 ## <a name="linq-to-xml-classes"></a>LINQ to XML 클래스  
   
 ### <a name="xattribute-class"></a>XAttribute 클래스  
- <xref:System.Xml.Linq.XAttribute>는 XML 특성을 나타냅니다. 자세한 내용과 예제는 [XAttribute 클래스 개요(C#)](../../../../csharp/programming-guide/concepts/linq/xattribute-class-overview.md)를 참조하세요.  
+ <xref:System.Xml.Linq.XAttribute>는 XML 특성을 나타냅니다. 자세한 내용과 예제는 [XAttribute 클래스 개요(C#)](./xattribute-class-overview.md)를 참조하세요.  
   
 ### <a name="xcdata-class"></a>XCData 클래스  
  <xref:System.Xml.Linq.XCData>는 CDATA 텍스트 노드를 나타냅니다.  
@@ -26,24 +26,24 @@ ms.locfileid: "43502393"
 ### <a name="xcontainer-class"></a>XContainer 클래스  
  <xref:System.Xml.Linq.XContainer>는 자식 노드를 가질 수 있는 모든 노드의 추상 기본 클래스입니다. 다음 클래스는 <xref:System.Xml.Linq.XContainer> 클래스에서 파생됩니다.  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>XDeclaration 클래스  
  <xref:System.Xml.Linq.XDeclaration>은 XML 선언을 나타냅니다. XML 선언은 XML 버전과 문서의 인코딩을 선언하는 데 사용됩니다. 또한 XML 선언은 XML 문서가 독립 실행형인지 여부를 지정합니다. XML 문서가 독립 실행형인 경우 외부 DTD나 내부 하위 집합에서 참조된 외부 매개 변수 엔터티에 외부 태그 선언이 없습니다.  
   
 ### <a name="xdocument-class"></a>XDocument 클래스  
- <xref:System.Xml.Linq.XDocument>는 XML 문서를 나타냅니다. 자세한 내용과 예제는 [XDocument 클래스 개요(C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)를 참조하세요.  
+ <xref:System.Xml.Linq.XDocument>는 XML 문서를 나타냅니다. 자세한 내용과 예제는 [XDocument 클래스 개요(C#)](./xdocument-class-overview.md)를 참조하세요.  
   
 ### <a name="xdocumenttype-class"></a>XDocumentType 클래스  
  <xref:System.Xml.Linq.XDocumentType>은 XML DTD(문서 종류 정의)를 나타냅니다.  
   
 ### <a name="xelement-class"></a>XElement 클래스  
- <xref:System.Xml.Linq.XElement>는 XML 요소를 나타냅니다. 자세한 내용과 예제는 [XElement 클래스 개요(C#)](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md)를 참조하세요.  
+ <xref:System.Xml.Linq.XElement>는 XML 요소를 나타냅니다. 자세한 내용과 예제는 [XElement 클래스 개요(C#)](./xelement-class-overview.md)를 참조하세요.  
   
 ### <a name="xname-class"></a>XName 클래스  
- <xref:System.Xml.Linq.XName>은 요소(<xref:System.Xml.Linq.XElement>)와 특성(<xref:System.Xml.Linq.XAttribute>)의 이름을 나타냅니다. 자세한 내용과 예제는 [XDocument 클래스 개요(C#)](../../../../csharp/programming-guide/concepts/linq/xdocument-class-overview.md)를 참조하세요.  
+ <xref:System.Xml.Linq.XName>은 요소(<xref:System.Xml.Linq.XElement>)와 특성(<xref:System.Xml.Linq.XAttribute>)의 이름을 나타냅니다. 자세한 내용과 예제는 [XDocument 클래스 개요(C#)](./xdocument-class-overview.md)를 참조하세요.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]은 XML 이름을 가능한 한 간단하게 만들도록 디자인되었습니다. 복잡성 때문에 XML 이름은 흔히 XML의 고급 항목으로 간주됩니다. 거의 틀림없이 이 복잡성은 개발자가 프로그래밍에서 정기적으로 사용하는 네임스페이스 때문이 아니라 네임스페이스 접두사 때문입니다. 네임스페이스 접두사는 XML을 입력하거나 XML을 읽기 쉽게 만드는 데 필요한 키 입력을 줄이는 데 유용할 수 있습니다. 그러나 접두사는 전체 XML 네임스페이스를 사용하기 위한 바로 가기일 뿐인 경우가 많으며 대부분의 경우 필요하지 않습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 모든 접두사를 해당 XML 네임스페이스로 확인하여 XML 이름을 단순화합니다. 접두사가 필요한 경우 <xref:System.Xml.Linq.XElement.GetPrefixOfNamespace%2A> 메서드를 통해 접두사를 사용할 수 있습니다.  
   
@@ -55,15 +55,15 @@ ms.locfileid: "43502393"
 ### <a name="xnode-class"></a>XNode 클래스  
  <xref:System.Xml.Linq.XNode>는 XML 트리의 노드를 나타내는 추상 클래스입니다. 다음 클래스는 <xref:System.Xml.Linq.XNode> 클래스에서 파생됩니다.  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer 클래스  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer>는 노드의 문서 순서를 비교하는 기능을 제공합니다.  
@@ -81,11 +81,11 @@ ms.locfileid: "43502393"
  <xref:System.Xml.Linq.XObjectChangeEventArgs>는 <xref:System.Xml.Linq.XObject.Changing> 및 <xref:System.Xml.Linq.XObject.Changed> 이벤트에 대한 데이터를 제공합니다.  
   
 ### <a name="xprocessinginstruction-class"></a>XProcessingInstruction 클래스  
- <xref:System.Xml.Linq.XProcessingInstruction>은 XML 처리 명령을 나타냅니다. 처리 명령은 XML을 처리하는 정보를 응용 프로그램에 전달합니다.  
+ <xref:System.Xml.Linq.XProcessingInstruction>은 XML 처리 명령을 나타냅니다. 처리 명령은 XML을 처리하는 정보를 애플리케이션에 전달합니다.  
   
 ### <a name="xtext-class"></a>XText 클래스  
  <xref:System.Xml.Linq.XText>는 텍스트 노드를 나타냅니다. 대부분의 경우 이 클래스를 사용할 필요가 없습니다. 이 클래스는 혼합 내용에 주로 사용됩니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML 프로그래밍 개요(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 프로그래밍 개요(C#)](./linq-to-xml-overview.md)

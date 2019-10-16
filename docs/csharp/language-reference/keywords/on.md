@@ -1,5 +1,6 @@
 ---
-title: on 키워드(C# 참조)
+title: on 키워드 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - on_CSharpKeyword
@@ -7,18 +8,18 @@ f1_keywords:
 helpviewer_keywords:
 - on keyword [C#]
 ms.assetid: 06abc536-e07c-4e34-88c1-425208bdcb21
-ms.openlocfilehash: 3d1f09bffa197090df7dfce09ab40b164fceb774
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: d3c65f8301f7fa72c376183154d9498664196b4b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45591110"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633547"
 ---
 # <a name="on-c-reference"></a>on(C# 참조)
 
 `on` 상황별 키워드는 쿼리 식의 [join 절](join-clause.md)에 사용되어 조인 조건을 지정합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 `join` 절에 `on`을 사용하는 방법을 보여 줍니다.
 

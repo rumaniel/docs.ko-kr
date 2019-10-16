@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d475d356-6abb-4701-8fd1-2906fb93dfba
-ms.openlocfilehash: e27ef72f0341524524a8f267eeeb13a6f46deb52
-ms.sourcegitcommit: 700b9003ea6bdd83a53458bbc436c9b5778344f1
+ms.openlocfilehash: d208b0796a072cda2873678ba184bc9793a1688a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48261169"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786578"
 ---
 # <a name="childviews-and-relations"></a>ChildView 및 관계
-<xref:System.Data.DataSet>의 테이블 사이에 관계가 존재하는 경우 부모 테이블의 행에 대한 <xref:System.Data.DataView>의 <xref:System.Data.DataRowView.CreateChildView%2A> 메서드를 사용하여 관련 자식 테이블의 행이 포함된 <xref:System.Data.DataRowView>를 만들 수 있습니다. 예를 들어, 다음 코드에서는 **범주** 및 해당 관련 **제품** 사전순으로 정렬 **CategoryName** 고 **ProductName** .  
+<xref:System.Data.DataSet>의 테이블 사이에 관계가 존재하는 경우 부모 테이블의 행에 대한 <xref:System.Data.DataView>의 <xref:System.Data.DataRowView.CreateChildView%2A> 메서드를 사용하여 관련 자식 테이블의 행이 포함된 <xref:System.Data.DataRowView>를 만들 수 있습니다. 예를 들어 다음 코드는 **범주** 와 관련 된 **제품** 을 범주 및 **ProductName**을 기준으로 사전순으로 정렬 **하 여 표시** 합니다.  
   
 ```vb  
 Dim catTable As DataTable = catDS.Tables("Categories")  
@@ -73,9 +73,10 @@ foreach (DataRowView catDRV in catView)
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Data.DataSet>  
- <xref:System.Data.DataView>  
- <xref:System.Data.DataRowView>  
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Data.DataSet>
+- <xref:System.Data.DataView>
+- <xref:System.Data.DataRowView>
+- [DataView](dataviews.md)
+- [ADO.NET 개요](../ado-net-overview.md)

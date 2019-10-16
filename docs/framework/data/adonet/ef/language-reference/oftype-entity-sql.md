@@ -2,12 +2,12 @@
 title: OFTYPE(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 6d259ca7-bbf0-40f8-a154-181d25c0d67e
-ms.openlocfilehash: c90950e11cbfca7a49b505c1654d08be504990e1
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 36701a5e75e804ea541d242aaff243de0b24cec3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198141"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70249791"
 ---
 # <a name="oftype-entity-sql"></a>OFTYPE(Entity SQL)
 쿼리 식에서 특정 형식을 가진 개체 컬렉션을 반환합니다.  
@@ -53,16 +53,17 @@ OfType(executives, NamespaceName.Manager)
   
  다음 표에서는 일부 패턴에 대한 `OFTYPE` 연산자의 동작을 보여 줍니다. 공급자가 호출되기 전에 클라이언트 쪽에서 모든 예외가 throw됩니다.  
   
-|패턴|동작|  
+|무늬|동작|  
 |-------------|--------------|  
 |OFTYPE(Collection(EntityType), EntityType)|Collection(EntityType)|  
-|OFTYPE(Collection(ComplexType), ComplexType)|@FSHO2@throw|  
-|OFTYPE(Collection(RowType), RowType)|@FSHO2@throw|  
+|OFTYPE(Collection(ComplexType), ComplexType)|되거나|  
+|OFTYPE(Collection(RowType), RowType)|되거나|  
   
 ## <a name="example"></a>예제  
- 다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 OFTYPE 연산자를 사용하여 Course 개체 컬렉션에서 OnsiteCourse 개체 컬렉션을 반환합니다. 쿼리의 기준이 되는 [School 모델](https://msdn.microsoft.com/library/859a9587-81ea-4a45-9bc0-f8d330e1adac)합니다.  
+ 다음 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 쿼리에서는 OFTYPE 연산자를 사용하여 Course 개체 컬렉션에서 OnsiteCourse 개체 컬렉션을 반환합니다. 쿼리는 [School 모델](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896300(v=vs.100))을 기반으로 합니다.  
   
  [!code-csharp[DP EntityServices Concepts 2#OFTYPE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#oftype)]  
   
-## <a name="see-also"></a>참고 항목  
- [엔터티 SQL 참조](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+## <a name="see-also"></a>참고자료
+
+- [엔터티 SQL 참조](entity-sql-reference.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -publicsign compiler option [C#]
 - publicsign compiler option [C#]
 - /publicsign compiler option [C#]
-ms.openlocfilehash: 01ce30b9ac5997f56f29dcbbfa43a27738fa5556
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: de7d9c98b0f279b52bc93711c5b986a2b2e57215
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45678961"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54738068"
 ---
 # <a name="-publicsign-c-compiler-options"></a>-publicsign(C# 컴파일러 옵션)
 
@@ -28,7 +28,7 @@ ms.locfileid: "45678961"
 
 없음
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 **-publicsign** 옵션에는 [-keyfile](keyfile-compiler-option.md) 또는 [-keycontainer](keycontainer-compiler-option.md)를 사용해야 합니다. **keyfile** 또는 **keycontainer** 옵션은 공개 키를 지정합니다.
 
@@ -43,8 +43,8 @@ ms.locfileid: "45678961"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 -delaysign 옵션](delaysign-compiler-option.md)  
-- [C# 컴파일러 -keyfile 옵션](keyfile-compiler-option.md)  
-- [C# 컴파일러 -keycontainer 옵션](keycontainer-compiler-option.md)  
-- [C# 컴파일러 옵션](index.md)  
+- [C# 컴파일러 -delaysign 옵션](delaysign-compiler-option.md)
+- [C# 컴파일러 -keyfile 옵션](keyfile-compiler-option.md)
+- [C# 컴파일러 -keycontainer 옵션](keycontainer-compiler-option.md)
+- [C# 컴파일러 옵션](index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

@@ -1,26 +1,26 @@
 ---
-title: .NET Core로 이식 - 타사 종속성 분석
-description: .NET Framework에서 .NET Core로 프로젝트를 이식하기 위해 타사 종속성을 분석하는 방법을 알아봅니다.
+title: .NET Core로 코드를 포팅하기 위해 종속성 분석
+description: .NET Framework에서 .NET Core로 프로젝트를 포팅하기 위해 외부 종속성을 분석하는 방법을 알아봅니다.
 author: cartermp
-ms.author: mairaw
-ms.date: 02/15/2018
-ms.openlocfilehash: 06d8d36d8369680c54af4d16513b2b871b57079c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.date: 12/07/2018
+ms.custom: seodec18
+ms.openlocfilehash: 6c0f55150a4a1c4d0fb8b3125565c9ab8ade3117
+ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46001003"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55904329"
 ---
-# <a name="analyze-your-third-party-dependencies"></a>타사 종속성 분석
+# <a name="analyze-your-dependencies-to-port-code-to-net-core"></a>.NET Core로 코드를 포팅하기 위해 종속성 분석
 
-.NET Core 또는 .NET Standard에 코드를 이식하려는 경우 이식 프로세스의 첫 번째 단계는 타사 종속성을 이해하는 것입니다. 타사 종속성은 [NuGet 패키지](#analyze-referenced-nuget-packages-on-your-project) 또는 프로젝트에서 참조 중인 [DLL](#analyze-dependencies-that-arent-nuget-packages)입니다. 각 종속성을 평가하고 .NET Core와 호환되지 않는 종속성에 대한 대체 계획을 개발합니다. 이 문서에서는 종속성이 .NET Core와 호환되는지 확인하는 방법을 보여 줍니다.
+코드를 .NET Core 또는 .NET Standard로 포팅하려면 종속성을 파악해야 합니다. 외부 종속성은 프로젝트에서 참조하지만 빌드하지 않는 [NuGet 패키지](#analyze-referenced-nuget-packages-in-your-projects) 또는 [DLL](#analyze-dependencies-that-arent-nuget-packages)입니다. 각 종속성을 평가하고 .NET Core와 호환되지 않는 종속성에 대한 대체 계획을 개발합니다. 종속성이 .NET Core와 호환되는지 확인하는 방법은 다음과 같습니다.
 
-## <a name="analyze-referenced-nuget-packages-in-your-project"></a>프로젝트에서 참조된 NuGet 패키지 분석
+## <a name="analyze-referenced-nuget-packages-in-your-projects"></a>프로젝트에서 참조된 NuGet 패키지 분석
 
 프로젝트에서 NuGet 패키지를 참조하는 경우 .NET Core와 호환되는지 확인해야 합니다.
 여기에는 두 가지 방법이 있습니다.
 
-* [NuGet 패키지 탐색기 앱 사용](#analyze-nuget-packages-using-nuget-package-explorer)(가장 안정적인 방법)
+* [NuGet 패키지 탐색기 앱 사용](#analyze-nuget-packages-using-nuget-package-explorer)
 * [nuget.org 사이트 사용](#analyze-nuget-packages-using-nugetorg)
 
 패키지를 분석한 후 .NET Core 및 대상 .NET Framework와 호환되지 않는 경우 [.NET Framework 호환 모드](#net-framework-compatibility-mode)가 이식 프로세스에 도움이 될 수 있는지 확인할 수 있습니다.
@@ -52,6 +52,7 @@ netcoreapp1.0
 netcoreapp1.1
 netcoreapp2.0
 netcoreapp2.1
+netcoreapp2.2
 portable-net45-win8
 portable-win8-wpa8
 portable-net451-win81
@@ -63,24 +64,6 @@ portable-net45-win8-wpa8-wpa81
 > [!IMPORTANT]
 > 패키지에서 지원하는 TFM을 살펴볼 때 호환되는 동안 `netcoreapp*`은 .NET Standard 프로젝트용이 아닌 .NET Core 프로젝트용입니다.
 > `netstandard*`가 아닌 `netcoreapp*`만을 대상으로 하는 라이브러리는 다른 .NET Core 앱에서만 사용할 수 있습니다.
-
-호환 가능한 .NET Core의 시험판에서 사용되는 일부 레거시 TFM도 있습니다.
-
-```
-dnxcore50
-dotnet5.0
-dotnet5.1
-dotnet5.2
-dotnet5.3
-dotnet5.4
-dotnet5.5
-```
-
-이러한 TFM은 코드와 호환될 수는 있지만 호환성이 보장되지는 않습니다. 이러한 TFM이 포함된 패키지는 시험판 .NET Core 패키지로 빌드된 것입니다. 이러한 TFM을 사용하여 패키지가 .NET Standard 기반으로 업데이트되는 경우를 기록해 둡니다.
-
-> [!NOTE]
-> 기존 PCL 또는 시험판 .NET Core를 대상으로 하는 패키지를 사용하려면 프로젝트 파일에서 `PackageTargetFallback` MSBuild 요소를 사용해야 합니다.
-> 이 MSBuild 요소에 대한 자세한 내용은 [`PackageTargetFallback`](../tools/csproj.md#packagetargetfallback)을 참조하세요.
 
 ### <a name="analyze-nuget-packages-using-nugetorg"></a>nuget.org를 사용하여 NuGet 패키지 분석
 
@@ -94,7 +77,7 @@ NuGet 패키지를 분석한 후 대부분의 NuGet 패키지와 마찬가지로
 
 .NET Standard 2.0부터 .NET Framework 호환성 모드가 도입되었습니다. 이 호환 모드에서는 .NET Standard 및 .NET Core 프로젝트에서 .NET Framework 라이브러리를 참조할 수 있습니다. .NET Framework 라이브러리 참조는 라이브러리가 WPF(Windows Presentation Foundation) API를 사용하는 것처럼 모든 프로젝트에 대해 작동하지 않지만 많은 이식 시나리오를 차단 해제합니다.
 
-프로젝트에서 .NET Framework를 대상으로 하는 NuGet 패키지를 참조하는 경우(예:[Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections)) 다음 예제와 유사한 패키지 대체 경고([NU1701](/nuget/reference/errors-and-warnings#nu1701))를 받습니다.
+프로젝트에서 .NET Framework를 대상으로 하는 NuGet 패키지를 참조하는 경우(예:[Huitian.PowerCollections](https://www.nuget.org/packages/Huitian.PowerCollections)) 다음 예제와 유사한 패키지 대체 경고([NU1701](/nuget/reference/errors-and-warnings/nu1701))를 받습니다.
 
 `NU1701: Package ‘Huitian.PowerCollections 1.0.0’ was restored using ‘.NETFramework,Version=v4.6.1’ instead of the project target framework ‘.NETStandard,Version=v2.0’. This package may not be fully compatible with your project.`
 
@@ -108,9 +91,15 @@ NuGet 패키지를 분석한 후 대부분의 NuGet 패키지와 마찬가지로
 </ItemGroup>
 ```
 
-Visual Studio에서 컴파일러 경고를 제거하는 방법에 대한 자세한 내용은 [NuGet 패키지에 대한 경고 표시 안 함](/visualstudio/ide/how-to-suppress-compiler-warnings#suppressing-warnings-for-nuget-packages)을 참조하세요.
+Visual Studio에서 컴파일러 경고를 제거하는 방법에 대한 자세한 내용은 [NuGet 패키지에 대한 경고 표시 안 함](/visualstudio/ide/how-to-suppress-compiler-warnings#suppress-warnings-for-nuget-packages)을 참조하세요.
 
-### <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 패키지 종속성이 .NET Core에서 실행되지 않는 경우 수행할 작업
+## <a name="port-your-packages-to-packagereference"></a>`PackageReference`로 패키지 포팅
+
+.NET Core는 [PackageReference](/nuget/consume-packages/package-references-in-project-files)를 사용하여 패키지 종속성을 지정합니다. [packages.config](/nuget/reference/packages-config)를 사용하여 패키지를 지정하는 경우 `PackageReference`로 변환해야 합니다.
+
+[packages.config에서 PackageReference로 마이그레이션](/nuget/reference/migrate-packages-config-to-package-reference)에서 자세히 알아볼 수 있습니다.
+
+## <a name="what-to-do-when-your-nuget-package-dependency-doesnt-run-on-net-core"></a>NuGet 패키지 종속성이 .NET Core에서 실행되지 않는 경우 수행할 작업
 
 종속된 NuGet 패키지가 .NET Core에서 실행되지 않을 경우 수행할 수 있는 몇 가지가 있습니다.
 
@@ -128,8 +117,7 @@ Visual Studio에서 컴파일러 경고를 제거하는 방법에 대한 자세�
 
 ## <a name="analyze-dependencies-that-arent-nuget-packages"></a>NuGet 패키지가 아닌 종속성 분석
 
-파일 시스템의 DLL처럼, NuGet 패키지가 아닌 종속성이 있을 수 있습니다. 해당 종속성의 이식 가능성을 확인하는 유일한 방법은 [.NET 이식성 분석기](https://github.com/Microsoft/dotnet-apiport)를 실행하는 것입니다. 도구는 .NET Framework를 대상으로 하는 어셈블리를 분석하고 .NET Core와 같은 다른 .NET 플랫폼으로 이식할 수 없는 API를 식별할 수 있습니다. 콘솔 응용 프로그램 또는 [Visual Studio 확장](../../standard/analyzers/portability-analyzer.md)으로 도구를 실행할 수 있습니다.
+파일 시스템의 DLL처럼, NuGet 패키지가 아닌 종속성이 있을 수 있습니다. 해당 종속성의 이식 가능성을 확인하는 유일한 방법은 [.NET 이식성 분석기](https://github.com/Microsoft/dotnet-apiport)를 실행하는 것입니다. 도구는 .NET Framework를 대상으로 하는 어셈블리를 분석하고 .NET Core와 같은 다른 .NET 플랫폼으로 이식할 수 없는 API를 식별할 수 있습니다. 콘솔 애플리케이션 또는 [Visual Studio 확장](../../standard/analyzers/portability-analyzer.md)으로 도구를 실행할 수 있습니다.
 
-## <a name="next-steps"></a>다음 단계
-
-라이브러리를 이식하려는 경우 [라이브러리 이식](libraries.md)을 확인합니다.
+>[!div class="step-by-step"]
+>[다음](libraries.md)

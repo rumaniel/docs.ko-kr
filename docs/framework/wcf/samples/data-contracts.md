@@ -3,14 +3,14 @@ title: 데이터 계약
 ms.date: 03/30/2017
 ms.assetid: 941049b6-8e98-497f-ab3f-19848241699f
 ms.openlocfilehash: fa70a725a5e3e9acdd177dbf1816b0bdfada62ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33499838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990433"
 ---
 # <a name="data-contracts"></a>데이터 계약
-이 섹션에는 Windows Communication Foundation (WCF)에서 데이터 계약을 보여 주는 샘플이 포함 되어 있습니다.  
+이 섹션에는 Windows Communication Foundation (WCF)에서 데이터 계약을 보여 주는 샘플이 들어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [기본 데이터 계약](../../../../docs/framework/wcf/samples/basic-data-contract.md)  

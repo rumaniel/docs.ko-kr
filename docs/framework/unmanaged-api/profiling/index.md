@@ -9,11 +9,11 @@ ms.assetid: 14c68e84-657e-49c2-aa8b-4978dbaf4454
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 75df075cd39375084a7d5a4489694ec937e15d99
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43521592"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757887"
 ---
 # <a name="profiling-unmanaged-api-reference"></a>프로파일링(관리되지 않는 API 참조)
 
@@ -25,7 +25,7 @@ ms.locfileid: "43521592"
 
  [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md) 프로파일링 API에서 사용하는 관리되지 않는 인터페이스를 설명합니다.
 
- [프로파일링 환경 설정](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md) .NET Framework 응용 프로그램을 프로파일링하기 위해 수행해야 하는 단계를 설명합니다.
+ [프로파일링 환경 설정](../../../../docs/framework/unmanaged-api/profiling/setting-up-a-profiling-environment.md) .NET Framework 애플리케이션을 프로파일링하기 위해 수행해야 하는 단계를 설명합니다.
 
  [CLR 프로파일러 및 Windows 스토어 앱](../../../../docs/framework/unmanaged-api/profiling/clr-profilers-and-windows-store-apps.md) CLR 프로파일링 API를 사용하는 진단 도구를 Windows 스토어 앱에서 성공적으로 작동하는 방법에 대해 설명합니다.
 

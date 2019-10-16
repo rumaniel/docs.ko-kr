@@ -2,12 +2,12 @@
 title: '방법: XmlReader에서 XML 조각 스트리밍(C#)'
 ms.date: 07/20/2015
 ms.assetid: 4a8f0e45-768a-42e2-bc5f-68bdf0e0a726
-ms.openlocfilehash: cb3e9fbc9567593cdc77ae116273f4c0fede4af3
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: e5aeb5111931ff6a35a3b7806abc24e0fbbf9621
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44195805"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253287"
 ---
 # <a name="how-to-stream-xml-fragments-from-an-xmlreader-c"></a>방법: XmlReader에서 XML 조각 스트리밍(C#)
 큰 XML 파일을 처리해야 하는 경우 전체 XML 트리를 메모리에 로드하는 것이 가능하지 않을 수 있습니다. 이 항목에서는 <xref:System.Xml.XmlReader>를 사용하여 조각을 스트림하는 방법을 보여 줍니다.  
@@ -18,9 +18,9 @@ ms.locfileid: "44195805"
   
  부분 트리를 만들려는 경우 <xref:System.Xml.XmlReader>를 인스턴스화하고 <xref:System.Xml.Linq.XElement> 트리로 변환할 노드에 판독기를 배치한 다음 <xref:System.Xml.Linq.XElement> 개체를 만들 수 있습니다.  
   
- [방법: 헤더 정보에 액세스하여 XML 조각 스트리밍(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md) 항목에는 더 복잡한 문서를 스트림하는 방법에 대한 정보와 예제가 포함되어 있습니다.  
+ 항목 [방법: 헤더 정보에 액세스하여 XML 조각 스트리밍(C#)](./how-to-stream-xml-fragments-with-access-to-header-information.md)에는 더 복잡한 문서를 스트림하는 방법에 대한 정보와 예제가 포함되어 있습니다.  
   
- [방법: 큰 XML 문서의 변환 스트리밍 수행(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-perform-streaming-transform-of-large-xml-documents.md) 항목에는 LINQ to XML을 사용하여 작은 메모리 사용 공간을 유지하면서 매우 큰 XML 문서를 변환하는 예제가 포함되어 있습니다.  
+ 항목 [방법: 큰 XML 문서의 변환 스트리밍 수행(C#)](./how-to-perform-streaming-transform-of-large-xml-documents.md)에는 LINQ to XML을 사용하여 작은 메모리 사용 공간을 유지하면서 매우 큰 XML 문서를 변환하는 예제가 포함되어 있습니다.  
   
 ## <a name="example"></a>예  
  이 예제에서는 사용자 지정 축 메서드를 만듭니다. [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 쿼리를 사용하여 이 메서드를 쿼리할 수 있습니다. 사용자 지정 축 메서드 `StreamRootChildDoc`는 반복되는 `Child` 요소가 있는 문서를 읽도록 특정하게 디자인된 메서드입니다.  
@@ -75,13 +75,10 @@ static void Main(string[] args)
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 bbb  
 ccc  
 ```  
   
  이 예제의 소스 문서는 매우 작습니다. `Child` 요소가 수백만 있더라도 이 예제에서는 여전히 작은 메모리 공간만 사용할 것입니다.  
   
-## <a name="see-also"></a>참고 항목
-
-- [XML 구문 분석(C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

@@ -1,1 +1,0 @@
-OPC(Open Packaging Conventions)

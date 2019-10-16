@@ -11,22 +11,22 @@ helpviewer_keywords:
 ms.assetid: 2be05b06-a42e-4c9d-a739-96c21d673927
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f7721ffaebfefadee332c923d867e68204b5205f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f921f40bbc5a7b72341c3fb778dd69fcc7b918c9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003687"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54665268"
 ---
 # <a name="the-managed-thread-pool"></a>관리되는 스레드 풀
 
-<xref:System.Threading.ThreadPool?displayProperty=nameWithType> 클래스는 시스템에서 관리하는 작업자 스레드 풀을 응용 프로그램에 제공하여 스레드 관리 대신 응용 프로그램 작업에 집중할 수 있게 해줍니다. 후순위 처리가 필요한 간단한 작업이 있는 경우 관리되는 스레드 풀을 통해 쉽게 여러 스레드를 활용할 수 있습니다. 스레드 풀 스레드에서 비동기 작업을 수행하는 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체를 만들 수 있으므로 Framework 4 이상에서는 스레드 풀의 사용이 훨씬 쉬워집니다.  
+<xref:System.Threading.ThreadPool?displayProperty=nameWithType> 클래스는 시스템에서 관리하는 작업자 스레드 풀을 애플리케이션에 제공하여 스레드 관리 대신 애플리케이션 작업에 집중할 수 있게 해줍니다. 후순위 처리가 필요한 간단한 작업이 있는 경우 관리되는 스레드 풀을 통해 쉽게 여러 스레드를 활용할 수 있습니다. 스레드 풀 스레드에서 비동기 작업을 수행하는 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체를 만들 수 있으므로 Framework 4 이상에서는 스레드 풀의 사용이 훨씬 쉬워집니다.  
   
 .NET에서는 [TPL(작업 병렬 라이브러리)](../parallel-programming/task-parallel-library-tpl.md) 작업, 비동기 I/O 완료, [타이머](timers.md) 콜백, 등록된 대기 작업, 대리자를 사용한 비동기 메서드 호출 및 <xref:System.Net?displayProperty=nameWithType> 소켓 연결을 비롯한 다양한 용도로 스레드 풀 스레드를 사용합니다.  
 
 ## <a name="thread-pool-characteristics"></a>스레드 풀 특징
 
-스레드 풀 스레드는 [백그라운드](foreground-and-background-threads.md) 스레드입니다. 각 스레드는 기본 스택 크기를 사용하고, 기본 우선 순위로 실행되며, 다중 스레드 아파트에 있습니다. 스레드 풀의 스레드가 해당 작업을 완료하면 대기 중인 스레드 큐로 반환됩니다. 이 시점에서 다시 사용할 수 있습니다. 이렇게 다시 사용하면 응용 프로그램에서 각 작업에 대한 새 스레드를 만드는 비용을 방지할 수 있습니다.
+스레드 풀 스레드는 [백그라운드](foreground-and-background-threads.md) 스레드입니다. 각 스레드는 기본 스택 크기를 사용하고, 기본 우선 순위로 실행되며, 다중 스레드 아파트에 있습니다. 스레드 풀의 스레드가 해당 작업을 완료하면 대기 중인 스레드 큐로 반환됩니다. 이 시점에서 다시 사용할 수 있습니다. 이렇게 다시 사용하면 애플리케이션에서 각 작업에 대한 새 스레드를 만드는 비용을 방지할 수 있습니다.
   
 프로세스당 하나의 스레드 풀만 있습니다.  
   
@@ -35,7 +35,7 @@ ms.locfileid: "46003687"
 스레드 풀 스레드에 처리되지 않은 예외가 있으면 프로세스가 종료됩니다. 이 규칙에는 다음 세 가지 예외 사항이 있습니다.  
   
 - <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>가 호출되었으므로 스레드 풀 스레드에서 <xref:System.Threading.ThreadAbortException?displayProperty=nameWithType>이 throw됩니다.  
-- 응용 프로그램 도메인이 언로드되고 있으므로 스레드 풀 스레드에서 <xref:System.AppDomainUnloadedException?displayProperty=nameWithType>이 throw됩니다.  
+- 애플리케이션 도메인이 언로드되고 있으므로 스레드 풀 스레드에서 <xref:System.AppDomainUnloadedException?displayProperty=nameWithType>이 throw됩니다.  
 - 공용 언어 런타임 또는 호스트 프로세스에서 스레드를 종료합니다.  
   
 자세한 내용은 [관리되는 스레드의 예외](exceptions-in-managed-threads.md)를 참조하세요.  
@@ -87,12 +87,12 @@ ms.locfileid: "46003687"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>  
-- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>  
-- [TPL(작업 병렬 라이브러리)](../parallel-programming/task-parallel-library-tpl.md)  
-- [방법: 작업에서 값 반환](../parallel-programming/how-to-return-a-value-from-a-task.md)  
-- [스레딩 개체 및 기능](threading-objects-and-features.md)  
-- [스레드 및 스레딩](threads-and-threading.md)  
-- [비동기 파일 I/O](../io/asynchronous-file-i-o.md)  
-- [타이머](timers.md)  
+- <xref:System.Threading.ThreadPool?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task?displayProperty=nameWithType>
+- <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType>
+- [TPL(작업 병렬 라이브러리)](../parallel-programming/task-parallel-library-tpl.md)
+- [방법: 작업에서 값 반환](../parallel-programming/how-to-return-a-value-from-a-task.md)
+- [스레딩 개체 및 기능](threading-objects-and-features.md)
+- [스레드 및 스레딩](threads-and-threading.md)
+- [Asynchronous File I/O](../io/asynchronous-file-i-o.md)
+- [타이머](timers.md)

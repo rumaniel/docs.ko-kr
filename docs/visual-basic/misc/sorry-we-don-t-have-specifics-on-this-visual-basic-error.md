@@ -1,5 +1,5 @@
 ---
-title: 죄송 하지만, 우리가 하지&#39;t이 Visual Basic 오류에 대 한 세부 정보
+title: 죄송 합니다. 이 Visual Basic 오류에 대한 구체적인 정보가 없습니다.
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30234
@@ -3044,26 +3044,26 @@ f1_keywords:
 - bc30233
 - bc30829
 ms.assetid: 0938efc2-e205-450b-9314-99951fcbd702
-ms.openlocfilehash: e3d3ac14c51ef5665aba0879a85e03e662174e68
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 87d7ce07523af87ae4d2746201ed7af576b3e3a8
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192787"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053322"
 ---
-# <a name="sorry-we-don39t-have-specifics-on-this-visual-basic-error"></a>죄송 하지만, 우리가 하지&#39;t이 Visual Basic 오류에 대 한 세부 정보
+# <a name="sorry-we-dont-have-specifics-on-this-visual-basic-error"></a>죄송 합니다. 이 Visual Basic 오류에 대한 구체적인 정보가 없습니다.
 죄송합니다. 이 오류에 대한 구체적인 정보가 없습니다. 오류 번호와 메시지 텍스트를 검색하여 웹에서 정보를 찾을 수 있습니다. 또는 다음 포럼 중 하나에서 다른 개발자에게 질문을 할 수 있습니다.  
   
- [Visual Basic 언어](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vblanguage)  
+ [Visual Basic 언어](https://social.msdn.microsoft.com/Forums/home?forum=vblanguage)  
  Visual Basic 언어 구문 및 컴파일러에 대 한 일반적인 토론 질문에 대 한 포럼을 제공 합니다.  
   
- [Visual Basic Interop 및 업그레이드](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbinterop)  
+ [Visual Basic Interop 및 업그레이드](https://social.msdn.microsoft.com/Forums/home?forum=vbinterop)  
  에 대 한 질문을 위한 포럼을 제공 하 고 Visual basic 업그레이드 및 상호 운용성 기능을 사용 하 여 발급 합니다.  
   
- [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=vbide)  
+ [Visual Basic IDE](https://social.msdn.microsoft.com/Forums/home?forum=vbide)  
  Visual Studio 환경에서 작업 하는 방법에 대 한 질문에 대 한 포럼을 제공 합니다.  
   
- [Visual Basic 일반](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vbgeneral)  
+ [Visual Basic 일반](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vbgeneral)  
  에 대 한 질문을 위한 포럼을 제공 하 고 다른 포럼에서 다루지 않는 Visual Basic을 사용 하 여 발급 합니다.  
   
  [StackOverflow](https://stackoverflow.com/questions/tagged/vb.net)  
@@ -3072,6 +3072,7 @@ ms.locfileid: "50192787"
  다음 항목도 참조하세요.  
  [Visual Basic 프로그래머를 위한 추가 리소스](../../visual-basic/getting-started/additional-resources.md)  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 프로그래밍 가이드](../../visual-basic/programming-guide/index.md)  
- [Visual Basic 참조](../../visual-basic/reference/index.md)
+## <a name="see-also"></a>참고자료
+
+- [Visual Basic 프로그래밍 가이드](../../visual-basic/programming-guide/index.md)
+- [Visual Basic 참조](../../visual-basic/reference/index.md)

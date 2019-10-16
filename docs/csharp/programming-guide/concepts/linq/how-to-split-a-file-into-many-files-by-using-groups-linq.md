@@ -2,21 +2,21 @@
 title: '방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: d0dd742f599a6acee4928239aab79cc7b1b66d4b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5f2ae7657162ba5a2c88e5378119eaad4cb1e288
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512255"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253274"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>방법: 그룹을 사용하여 파일을 여러 파일로 분할(LINQ)(C#)
 이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.  
   
 ### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
   
-1.  이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.  
+1. 이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -29,9 +29,9 @@ ms.locfileid: "43512255"
     Garcia, Debra  
     ```  
   
-2.  이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일에서 일부 이름은 공통됩니다.  
+2. 이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일의 일부 이름에는 공통점이 있습니다.  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  
@@ -126,9 +126,9 @@ class SplitWithGroups
   
 ## <a name="compiling-the-code"></a>코드 컴파일
 
- System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
+System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [LINQ 및 파일 디렉터리(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 및 문자열(C#)](./linq-and-strings.md)
+- [LINQ 및 파일 디렉터리(C#)](./linq-and-file-directories.md)

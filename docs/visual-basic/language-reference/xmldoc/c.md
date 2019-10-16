@@ -1,18 +1,18 @@
 ---
-title: '&lt;c&gt; (Visual Basic)'
+title: <c>(Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - c XML tag
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
-ms.openlocfilehash: 06c6899895f278fdf652725a05ecc7229805f4d4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 9be9f9e96fc1b79ea97d54c54352da63b93ef264
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938595"
 ---
-# <a name="ltcgt-visual-basic"></a>&lt;c&gt; (Visual Basic)
+# <a name="c-visual-basic"></a>\<c > (Visual Basic)
 설명 내의 텍스트가 코드 임을 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
@@ -21,7 +21,7 @@ ms.locfileid: "44041124"
 <c>text</c>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
   
 |매개 변수|설명|  
 |---|---|  
@@ -35,7 +35,8 @@ ms.locfileid: "44041124"
 ## <a name="example"></a>예제  
  이 예제에서는 합니다 `<c>` 나타내는 요약 섹션에서 태그 `Counter` 코드입니다.  
   
- [!code-vb[VbVbcnXmlDocComments#1](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/c_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#1)]  
   
-## <a name="see-also"></a>참고 항목  
- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>참고자료
+
+- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

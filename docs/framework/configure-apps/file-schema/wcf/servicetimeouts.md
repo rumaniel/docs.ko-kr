@@ -1,27 +1,28 @@
 ---
-title: '&lt;serviceTimeouts&gt;'
+title: <serviceTimeouts>
 ms.date: 03/30/2017
 ms.assetid: ada536cf-97dc-4cd7-89ec-ed1466c1c557
-ms.openlocfilehash: a0f0725bffe0c3c83e412348dea97b16736ef3a8
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 801a7aaf1f0d0fa267fa8cca3d2e7fd02919c475
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32743474"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399558"
 ---
-# <a name="ltservicetimeoutsgt"></a>&lt;serviceTimeouts&gt;
+# <a name="servicetimeouts"></a>\<serviceTimeouts>
 서비스에 대한 제한 시간을 지정합니다.  
   
- \<system.ServiceModel>  
-\<동작 >  
-\<serviceBehaviors>  
-\<동작 >  
-\<serviceTimeouts >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<serviceTimeouts 제한 >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<serviceTimeouts transactionTimeout="TimeSpan" />  
+<serviceTimeouts transactionTimeout="TimeSpan" />
 ```  
   
 ## <a name="type"></a>형식  
@@ -32,9 +33,9 @@ ms.locfileid: "32743474"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|`transactionTimeout`|클라이언트에서 서버로 트랜잭션을 전달해야 하는 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 기본값은 "00: 00:00"입니다.|  
+|`transactionTimeout`|클라이언트에서 서버로 트랜잭션을 전달해야 하는 시간 간격을 지정하는 <xref:System.TimeSpan> 값입니다. 기본값은 "00:00:00"입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -43,7 +44,8 @@ ms.locfileid: "32743474"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<동작 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.ServiceTimeoutsElement>

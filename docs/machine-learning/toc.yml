@@ -1,0 +1,123 @@
+- name: ML.NET
+  href: index.yml
+- name: 개요
+  expanded: true
+  items:
+    - name: API
+      items:
+        - name: ML.NET API
+          href: how-does-mldotnet-work.md
+    - name: 도구
+      items:
+        - name: ML.NET 모델 작성기 도구
+          href: automate-training-with-model-builder.md
+        - name: ML.NET 명령줄 인터페이스
+          href: automate-training-with-cli.md
+- name: 자습서
+  items:
+    - name: API
+      items:
+        - name: 개요
+          href: tutorials/index.md
+        - name: 감정 분석(이진 분류)
+          href: tutorials/sentiment-analysis.md
+        - name: 지원 문제 분류(다중 클래스 분류)
+          href: tutorials/github-issue-classification.md
+        - name: 가격 예측(회귀)
+          href: tutorials/predict-prices.md
+        - name: 아이리스 꽃 분류(k-means 클러스터링)
+          href: tutorials/iris-clustering.md
+        - name: 영화 추천(행렬 인수 분해)
+          href: tutorials/movie-recommendation.md
+        - name: 이미지 분류(전이 학습)
+          href: tutorials/image-classification.md
+        - name: 제품 판매 분석(변칙 검색)
+          href: tutorials/sales-anomaly-detection.md
+        - name: 이미지에서 개체 검색(개체 검색)
+          href: tutorials/object-detection-onnx.md
+        - name: TensorFlow를 사용하여 감정 분류(텍스트 분류)
+          href: tutorials/text-classification-tf.md
+    - name: 도구
+      items:
+        - name: 모델 작성기를 사용하여 가격 예측
+          href: tutorials/predict-prices-with-model-builder.md
+        - name: ML.NET CLI를 사용하여 감정 분석
+          href: tutorials/mlnet-cli.md
+        - name: 모델 작성기 및 Razor Pages를 사용하여 감정 분석
+          href: tutorials/sentiment-analysis-model-builder.md
+    - name: Infer.NET
+      items:
+        - name: Infer.NET을 사용한 확률 프로그래밍
+          href: how-to-guides/matchup-app-infer-net.md
+- name: 개념
+  items:
+    - name: ML.NET 작업(모델 형식)
+      href: resources/tasks.md
+    - name: 알고리즘
+      href: how-to-choose-an-ml-net-algorithm.md
+    - name: 데이터 변환
+      href: resources/transforms.md
+    - name: 메트릭
+      href: resources/metrics.md
+    - name: 모델 정확도 향상
+      href: resources/improve-machine-learning-model-ml-net.md
+- name: 방법 가이드
+  items:
+    - name: API
+      items:
+        - name: 데이터 로드
+          href: how-to-guides/load-data-ml-net.md
+        - name: 데이터 준비
+          href: how-to-guides/prepare-data-ml-net.md
+        - name: '학습, 평가 및 모델 설명'
+          items:
+            - name: 모델 학습 및 평가
+              href: how-to-guides/train-machine-learning-model-ml-net.md
+            - name: 교차 유효성 검사를 사용하여 모델 학습
+              href: how-to-guides/train-machine-learning-model-cross-validation-ml-net.md
+            - name: 중간 파이프라인 데이터 값 검사
+              href: how-to-guides/inspect-intermediate-data-ml-net.md
+            - name: PFI를 사용하여 모델 기능 중요도 파악
+              href: how-to-guides/explain-machine-learning-model-permutation-feature-importance-ml-net.md
+        - name: 학습된 모델 사용
+          items:
+            - name: 모델 저장 및 로드
+              href: how-to-guides/save-load-machine-learning-models-ml-net.md
+            - name: 모델을 사용하여 예측하기
+              href: how-to-guides/machine-learning-model-predictions-ml-net.md
+            - name: 모델 다시 학습
+              href: how-to-guides/retrain-model-ml-net.md
+            - name: Azure Functions에 모델 배포
+              href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
+            - name: 웹 API에 모델 배포
+              href: how-to-guides/serve-model-web-api-ml-net.md
+    - name: 도구
+      items:
+        - name: 모델 작성기 설치
+          href: how-to-guides/install-model-builder.md
+        - name: CLI 설치
+          href: how-to-guides/install-ml-net-cli.md
+        - name: 자동화된 ML API 사용
+          href: how-to-guides/how-to-use-the-automl-api.md
+- name: 참조
+  items:
+    - name: API
+      items:
+        - name: ML.NET API 참조
+          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+        - name: ML.NET API 미리 보기 API 참조
+          href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet-preview'
+    - name: 도구
+      items:
+        - name: CLI 참조
+          href: reference/ml-net-cli-reference.md
+        - name: ML.NET AutoML API 참조
+          href: 'https://docs.microsoft.com/dotnet/api/index?view=automl-dotnet'
+- name: 리소스
+  items:
+    - name: 개요
+      href: resources/index.md
+    - name: 용어
+      href: resources/glossary.md
+    - name: CLI 원격 분석
+      href: resources/ml-net-cli-telemetry.md

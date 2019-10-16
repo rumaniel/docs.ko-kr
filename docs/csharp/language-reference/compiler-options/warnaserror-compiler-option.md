@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: a29b0a6095453e3d2747cad9d9f71b463d8f6b1f
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 66c78ee56c9d5153b5b878b2e695ad4ee6bffe0b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081503"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606268"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror(C# 컴파일러 옵션)
 **-warnaserror+** 옵션은 모든 경고를 오류로 처리합니다.  
@@ -31,15 +31,15 @@ ms.locfileid: "44081503"
   
  필요에 따라 몇 개의 특정 경고만 오류로 처리하려는 경우 오류로 처리할 경고 번호의 쉼표로 구분된 목록을 지정할 수 있습니다.  
   
- 컴파일러에서 표시할 경고 수준을 지정하려면 [-warn](../../../csharp/language-reference/compiler-options/warn-compiler-option.md)을 사용합니다. 특정 경고를 사용하지 않으려면 [-nowarn](../../../csharp/language-reference/compiler-options/nowarn-compiler-option.md)을 사용합니다.  
+ 컴파일러에서 표시할 경고 수준을 지정하려면 [-warn](./warn-compiler-option.md)을 사용합니다. 특정 경고를 사용하지 않으려면 [-nowarn](./nowarn-compiler-option.md)을 사용합니다.  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 개발 환경에서 이 컴파일러 옵션을 설정하려면  
   
-1.  프로젝트 **속성** 페이지를 엽니다.  
+1. 프로젝트 **속성** 페이지를 엽니다.  
   
-2.  **빌드** 속성 페이지를 클릭합니다.  
+2. **빌드** 속성 페이지를 클릭합니다.  
   
-3.  **경고를 오류로 처리** 속성을 수정합니다.  
+3. **경고를 오류로 처리** 속성을 수정합니다.  
   
  프로그래밍 방식으로 이 컴파일러 옵션을 설정하려면 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>를 참조하세요.  
   
@@ -51,7 +51,7 @@ csc -warnaserror in.cs
 csc -warnaserror:642,649,652 in.cs  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2c4d08b8-fc29-4614-97fa-29c8ff7ca5b3
-ms.openlocfilehash: 0003e6c5e9499c066f47202a6dd03fc86268d679
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 8e57bfe23a80bf3913cd7fb8b96527870259e77a
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45591149"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70780878"
 ---
 # <a name="specifying-xml-values-as-parameters"></a>XML 값을 매개 변수로 지정
-쿼리 매개 변수 값으로 가지는 XML 문자열에 필요한 경우 개발자의 인스턴스를 사용 하 여 해당 값을 제공할 수는 **SqlXml** 데이터 형식입니다. 실제로 가지 기법이; 다른 데이터 형식으로 동일한 방식으로 매개 변수 값을 허용 하는 SQL Server의 XML 열입니다.  
+쿼리에 값이 XML 문자열인 매개 변수가 필요한 경우에는 개발자가 **SqlXml** 데이터 형식의 인스턴스를 사용 하 여 해당 값을 제공할 수 있습니다. 정말 트릭은 없습니다. SQL Server의 XML 열은 다른 데이터 형식과 똑같은 방법으로 매개 변수 값을 허용 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 콘솔 응용 프로그램에서 새 테이블을 만듭니다는 **AdventureWorks** 데이터베이스입니다. 새 테이블 열이 포함 **SalesID** 및 명명 된 XML 열 **SalesInfo**합니다.  
+ 다음 콘솔 응용 프로그램은 **AdventureWorks** 데이터베이스에 새 테이블을 만듭니다. 새 테이블에는 **Salesid** 라는 열과 **SALESID**라는 XML 열이 포함 됩니다.  
   
 > [!NOTE]
->  합니다 **AdventureWorks** SQL Server를 설치할 때 기본적으로 예제 데이터베이스 설치 되지 됩니다. SQL Server 설치 프로그램을 실행하여 설치할 수 있습니다.  
+> **AdventureWorks** 샘플 데이터베이스는 SQL Server을 설치할 때 기본적으로 설치 되지 않습니다. SQL Server 설치 프로그램을 실행하여 설치할 수 있습니다.  
   
- 이 예제에서는 <xref:System.Data.SqlClient.SqlCommand> 개체를 통해 새 테이블에 행을 삽입하도록 준비합니다. 저장된 된 파일에 대 한 필요한 XML 데이터를 제공 합니다 **SalesInfo** 열입니다.  
+ 이 예제에서는 <xref:System.Data.SqlClient.SqlCommand> 개체를 통해 새 테이블에 행을 삽입하도록 준비합니다. 저장 된 파일은 **Salesinfo** 열에 필요한 XML 데이터를 제공 합니다.  
   
  예제를 실행시키는 데 필요한 파일을 만들려면 프로젝트와 동일한 폴더에 새 텍스트 파일을 만듭니다. 파일의 이름을 MyTestStoreData.xml로 지정하고 파일을 메모장에서 연 후 다음 텍스트를 복사하여 붙여 넣습니다.  
   
@@ -159,7 +159,8 @@ class Class1
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Data.SqlTypes.SqlXml>  
- [SQL Server의 XML 데이터](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Data.SqlTypes.SqlXml>
+- [SQL Server의 XML 데이터](xml-data-in-sql-server.md)
+- [ADO.NET 개요](../ado-net-overview.md)

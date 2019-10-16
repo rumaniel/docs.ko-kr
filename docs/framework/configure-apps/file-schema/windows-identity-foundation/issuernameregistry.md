@@ -1,23 +1,24 @@
 ---
-title: '&lt;issuerNameRegistry&gt;'
+title: <issuerNameRegistry>
 ms.date: 03/30/2017
 ms.assetid: 58b39d12-c953-40c4-88af-d7eb3343ca28
 author: BrucePerlerMS
-ms.openlocfilehash: de3ceb5d84d17307c69e9155834a0a584e6920a1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 209e702da80f2569f2b6c068f50f1af4489157f6
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185916"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251961"
 ---
-# <a name="ltissuernameregistrygt"></a>&lt;issuerNameRegistry&gt;
-토큰 처리기 컬렉션의 처리기에서 사용 되는 발급자 이름 레지스트리를 구성 합니다.  
+# <a name="issuernameregistry"></a>\<issuerNameRegistry>
+토큰 처리기 컬렉션의 처리기에서 사용 하는 발급자 이름 레지스트리를 구성 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<securityTokenHandlerConfiguration >  
-\<issuerNameRegistry >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlerConfiguration >** ](securitytokenhandlerconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<issuerNameRegistry >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -40,34 +41,34 @@ ms.locfileid: "50185916"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|type|형식에서 파생 되는 <xref:System.IdentityModel.Tokens.IssuerNameRegistry> 클래스입니다. 사용자 지정 하는 방법에 대 한 자세한 내용은 `type`, [사용자 지정 형식 참조]를 참조 하세요.|  
+|type|<xref:System.IdentityModel.Tokens.IssuerNameRegistry> 클래스에서 파생 되는 형식입니다. 사용자 지정 `type`을 지정 하는 방법에 대 한 자세한 내용은 [사용자 지정 형식 참조]를 참조 하세요.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md)|경우는 `type` 구성 기반 발급자 이름 레지스트리를 지정 하는 특성 (합니다 <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> 클래스)의 [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) 요소를 지정 해야 합니다. 합니다 [ \<trustedIssuers >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/trustedissuers.md) 요소 들 `<add>`를 `<clear>`, 또는 `<remove>` 자식 요소로 요소입니다.|  
+|[\<trustedIssuers>](trustedissuers.md)|특성이 구성 기반 발급자 이름 레지스트리 <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> (클래스)를 [ \<](trustedissuers.md) 지정 하는 경우 s > 요소를 지정 해야 합니다. `type` [ \<S >](trustedissuers.md) 요소는, 또는 `<add>`요소를 `<clear>`자식 요소로사용할수있습니다`<remove>` .|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|구성 컬렉션의 보안 토큰 처리기를 제공합니다.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|보안 토큰 처리기의 컬렉션에 대 한 구성을 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 모든 발급자 토큰 발급자 이름 레지스트리를 사용 하 여 유효성이 검사 됩니다. 이것은에서 파생 되는 개체는 <xref:System.IdentityModel.Tokens.IssuerNameRegistry> 클래스입니다. 발급자 이름 레지스트리는 해당 발급자가 생성 한 토큰의 서명을 확인 하는 데 필요한 암호화 자료에 니모닉 이름을 연결 하 여 사용 됩니다. 발급자 이름 레지스트리 신뢰 당사자 (RP) 응용 프로그램에서 신뢰할 수 있는 발급자 목록을 유지 관리 합니다. 발급자 이름 레지스트리 형식을 사용 하 여 지정 된 `type` 특성입니다. `<issuerNameRegistry>` 요소는 지정된 된 형식에 대 한 구성을 제공 하는 하나 이상의 자식 요소를 포함할 수 있습니다. 재정의 하 여 이러한 하위 요소를 처리 하는 논리를 제공 합니다 <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> 메서드.  
+ 발급자 이름 레지스트리를 사용 하 여 모든 발급자 토큰의 유효성을 검사 합니다. <xref:System.IdentityModel.Tokens.IssuerNameRegistry> 클래스에서 파생 되는 개체입니다. 발급자 이름 레지스트리는 니모닉 이름을 해당 발급자가 생성 한 토큰의 서명을 확인 하는 데 필요한 암호화 자료에 연결 하는 데 사용 됩니다. 발급자 이름 레지스트리는 RP (신뢰 당사자) 응용 프로그램에서 신뢰할 수 있는 발급자 목록을 유지 관리 합니다. 발급자 이름 레지스트리의 형식은 특성을 `type` 사용 하 여 지정 합니다. 요소 `<issuerNameRegistry>` 는 지정 된 형식에 대 한 구성을 제공 하는 하나 이상의 자식 요소를 포함할 수 있습니다. 메서드를 <xref:System.IdentityModel.Tokens.IssuerNameRegistry.LoadCustomConfiguration%2A> 재정의 하 여 이러한 자식 요소를 처리 하는 논리를 제공 합니다.  
   
- WIF는 제공 단일 발급자 이름 레지스트리 형식 기본적으로 <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> 클래스입니다. 이 클래스는 구성에 지정 된 신뢰할 수 있는 발급자 인증서 집합을 사용 합니다. 자식 구성 요소에 필요한 `<trustedIssuers>`, 아래에 있는 신뢰할 수 있는 발급자 인증서의 컬렉션 구성 됩니다. ASN.1을 사용 하 여 인코딩된 인증서 지문 및 추가 또는 제거 컬렉션에서 사용 하 여 지정 된 인증서를 신뢰할 수 있는 `<add>`하십시오 `<clear>`, 또는 `<remove>` 요소.  
+ WIF은 기본적으로 <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry> 클래스의 단일 발급자 이름 레지스트리 유형을 제공 합니다. 이 클래스는 구성에 지정 된 신뢰할 수 있는 발급자 인증서 집합을 사용 합니다. 여기에는 신뢰할 수 있는 발급자 `<trustedIssuers>`인증서의 컬렉션을 구성 하는 자식 구성 요소가 필요 합니다. 신뢰할 수 있는 인증서는 ASN으로 인코딩된 인증서 지문 형태를 사용 하 여 지정 되며, 또는 `<add>` `<remove>` 요소를 `<clear>`사용 하 여 컬렉션에서 추가 되거나 제거 됩니다.  
   
  합니다 `<issuerNameRegistry>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Configuration.IssuerNameRegistryElement> 클래스입니다.  
   
 > [!NOTE]
->  지정 된 `<issuerNameRegistry>` 의 자식 요소로 요소를 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소에 사용 되지 않지만 이전 버전과 호환성을 위해 계속 지원 됩니다. 설정 합니다 `<securityTokenHandlerConfiguration>` 요소에 있는 구성을 재정의 `<identityConfiguration>` 요소입니다.  
+> IdentityConfiguration > 요소의 자식 요소로 `<issuerNameRegistry>` [요소를 지정 하는 것은 더 이상 사용 되지 않지만 이전 버전과의 호환성을 위해 \<](identityconfiguration.md) 계속 지원 됩니다. 요소의 설정은 `<identityConfiguration>` 요소의 설정을 재정의 합니다. `<securityTokenHandlerConfiguration>`  
   
 ## <a name="example"></a>예제  
- 다음 XML 기반 구성을 발급자를 지정 하는 방법을 이름 레지스트리를 보여 줍니다.  
+ 다음 XML에서는 구성 기반 발급자 이름 레지스트리를 지정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <issuerNameRegistry type="System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry, System.IdentityModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">  
@@ -77,6 +78,7 @@ ms.locfileid: "50185916"
 </issuerNameRegistry>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>  
- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.IdentityModel.Tokens.IssuerNameRegistry>
+- <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>

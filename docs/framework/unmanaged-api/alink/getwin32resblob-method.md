@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f40b99c0a81bf0f2b622c7d23157dbb5736df1ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b26f08548ac964fae2f4d64db50167add327eb2d
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403294"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777362"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 메서드
-Win32 리소스 blob를 검색합니다. 어셈블리 옵션을 설정한 후이 메서드를 호출 합니다.  
+Win32 리소스 blob을 검색 합니다. 어셈블리 옵션을 설정한 후이 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetWin32ResBlob(  
     mdAssembly    AssemblyID,  
     mdToken       FileToken,  
@@ -39,32 +39,33 @@ HRESULT GetWin32ResBlob(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
  어셈블리의 ID입니다.  
   
  `FileToken`  
- Win32 버전 리소스를 생성할 때 사용할 파일 이름을 검색 하는 데 사용 되는 파일 토큰  
+ Win32 버전 리소스를 생성할 때 사용할 파일 이름을 검색 하는 데 사용 되는 파일 토큰입니다.  
   
  `fDll`  
- 파일은 DLL, false EXE에 대 한 경우 TRUE입니다.  
+ 파일이 DLL 이면 TRUE이 고, EXE의 경우 false입니다.  
   
  `pszIconFile`  
- Blob 리소스에 삽입할 선택적 아이콘입니다.  
+ 리소스 blob에 삽입할 선택적 아이콘입니다.  
   
  `ppResBlob`  
- 리소스 blob를 받습니다.  
+ 리소스 blob을 받습니다.  
   
  `pcbResBlob`  
- Blob의 크기를 받습니다.  
+ Blob의 크기를 수신 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h 필요  
+ Alink 필요  
   
-## <a name="see-also"></a>참고 항목  
- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>참고자료
+
+- [IALink 인터페이스](ialink-interface.md)
+- [IALink2 인터페이스](ialink2-interface.md)
+- [ALink API](index.md)

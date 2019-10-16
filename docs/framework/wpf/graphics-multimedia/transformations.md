@@ -16,22 +16,23 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0a1be35a37a9f3d0fa94d13f5bc50df213bd1775
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33561916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926001"
 ---
 # <a name="transformations"></a>변형
-변환 하는 데 회전, 크기 조정, 변환, 하거나 <xref:System.Windows.FrameworkElement> 개체입니다.  
+변환 하는 데 회전, 크기 조정, 변환 또는 기울이기 <xref:System.Windows.FrameworkElement> 개체입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Transform 개요](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [Transform 개요](transforms-overview.md)  
+ [방법 항목](transformations-how-to-topics.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Media.Transform>  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Media.Transform>
+- [그래픽 및 멀티미디어](index.md)
+- [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)
+- [레이아웃](../advanced/layout.md)

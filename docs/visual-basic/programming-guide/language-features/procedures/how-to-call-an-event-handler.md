@@ -1,5 +1,5 @@
 ---
-title: '방법: Visual Basic에서 이벤트 처리기 호출'
+title: '방법: Visual Basic에서 이벤트 처리기를 호출 합니다.'
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic code, procedures
@@ -8,54 +8,56 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: 4e6aeaee8027e462dcdf80cae34b4b246fd58cf7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9e090e83b180686ccb832aa6efb314c7e0fcc9a
+ms.sourcegitcommit: 56f1d1203d0075a461a10a301459d3aa452f4f47
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33652684"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71216622"
 ---
-# <a name="how-to-call-an-event-handler-in-visual-basic"></a>방법: Visual Basic에서 이벤트 처리기 호출
-*이벤트* 작업이 나 항목은-들면 마우스 클릭 또는 신용 한도 초과-응답 하도록 코드를 작성할 수에 대 한 일부 프로그램 구성 요소가 인식 되어 있습니다. *이벤트 처리기* 이벤트에 응답 하기 위해 작성 하는 코드입니다.  
-  
- Visual Basic의 이벤트 처리기는는 `Sub` 프로시저입니다. 그러나 호출 하지 않으면 일반적으로 동일한 다른 방식으로 `Sub` 프로시저입니다. 대신, 이벤트에 대 한 처리기로 프로시저를 식별합니다. 이렇게 하려면 사용 하 여는 [처리](../../../../visual-basic/language-reference/statements/handles-clause.md) 절 및 [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) 변수 또는 [AddHandler 문](../../../../visual-basic/language-reference/statements/addhandler-statement.md)합니다. 사용 하는 `Handles` 절은 Visual Basic의 이벤트 처리기를 선언 하는 기본 방법입니다. 이 방법은 보고서 통합된 개발 환경 (IDE)에서 프로그래밍할 때 디자이너에서 이벤트 처리기를 작성 합니다. `AddHandler` 문에 런타임 시 동적으로 이벤트를 발생 시키기에 적합 합니다.  
-  
- 이벤트가 발생할 때 Visual Basic에서는 이벤트 처리기 프로시저를 자동으로 호출 합니다. 이벤트에 대 한 액세스 권한이 있는 모든 코드를 실행 하 여 발생 하 게 할 수는 [RaiseEvent 문](../../../../visual-basic/language-reference/statements/raiseevent-statement.md)합니다.  
-  
- 둘 이상의 이벤트 처리기를 동일한 이벤트와 연결할 수 있습니다. 경우에 따라 이벤트에서 처리기를 분리할 수 있습니다. 자세한 내용은 [이벤트](../../../../visual-basic/programming-guide/language-features/events/index.md)를 참조하세요.  
-  
-### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>WithEvents와 핸들을 사용 하 여 이벤트 처리기를 호출 하려면  
-  
-1.  이벤트와 선언 되어 있는지 확인 한 [Event 문](../../../../visual-basic/language-reference/statements/event-statement.md)합니다.  
-  
-2.  모듈 또는 클래스 개체 변수를 사용 하 여 수준 선언 된 [WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md) 키워드입니다. `As` 절이이 변수에 대 한 이벤트를 발생 시키는 클래스를 지정 해야 합니다.  
-  
-3.  이벤트 처리의 선언에 `Sub` 프로시저 추가 [처리](../../../../visual-basic/language-reference/statements/handles-clause.md) 절을 지정 하는 `WithEvents` 변수 및 이벤트 이름입니다.  
-  
-4.  Visual Basic 자동으로 호출 이벤트가 발생할 때의 `Sub` 프로시저입니다. 코드에서 사용할 수는 `RaiseEvent` 문을 이벤트를 발생 합니다.  
-  
-     다음 예제에서는 이벤트를 정의 및 `WithEvents` 이벤트를 발생 시키는 클래스를 참조 하는 변수입니다. 이벤트 처리 `Sub` 프로시저는 한 `Handles` 절 클래스와를 처리 하는 이벤트를 지정 합니다.  
-  
-     [!code-vb[VbVbcnProcedures#4](./codesnippet/VisualBasic/how-to-call-an-event-handler_1.vb)]  
-  
-### <a name="to-call-an-event-handler-using-addhandler"></a>AddHandler를 사용 하 여 이벤트 처리기를 호출 하려면  
-  
-1.  이벤트와 선언 되어 있는지 확인 한 `Event` 문.  
-  
-2.  실행 프로그램 [AddHandler 문](../../../../visual-basic/language-reference/statements/addhandler-statement.md) 이벤트 처리를 동적으로 연결할 `Sub` 이벤트와 프로시저입니다.  
-  
-3.  Visual Basic 자동으로 호출 이벤트가 발생할 때의 `Sub` 프로시저입니다. 코드에서 사용할 수는 `RaiseEvent` 문을 이벤트를 발생 합니다.  
-  
-     다음 예제에서는 정의 `Sub` 처리 하는 프로시저는 <xref:System.Windows.Forms.Form.Closing> 폼의 이벤트입니다. 다음 사용 하 여는 [AddHandler 문](../../../../visual-basic/language-reference/statements/addhandler-statement.md) 연결 하는 `catchClose` 에 대 한 이벤트 처리기로 프로시저 <xref:System.Windows.Forms.Form.Closing>합니다.  
-  
-     [!code-vb[VbVbcnProcedures#5](./codesnippet/VisualBasic/how-to-call-an-event-handler_2.vb)]  
-  
-     실행 하 여 이벤트에서 이벤트 처리기를 분리할 수 있습니다는 [RemoveHandler 문](../../../../visual-basic/language-reference/statements/removehandler-statement.md)합니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [절차](./index.md)  
- [Sub 프로시저](./sub-procedures.md)  
- [Sub 문](../../../../visual-basic/language-reference/statements/sub-statement.md)  
- [AddressOf 연산자](../../../../visual-basic/language-reference/operators/addressof-operator.md)  
- [방법: 프로시저 만들기](./how-to-create-a-procedure.md)  
- [방법: 값을 반환하지 않는 프로시저 호출](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+# <a name="how-to-call-an-event-handler-in-visual-basic"></a>방법: Visual Basic에서 이벤트 처리기를 호출 합니다.
+
+*이벤트* 는 일부 프로그램 구성 요소에서 인식 하 고 응답 하는 코드를 작성할 수 있는 마우스 클릭 또는 신용 한도 초과와 같은 작업 또는 발생입니다. 이벤트 *처리기* 는 이벤트에 응답 하기 위해 작성 하는 코드입니다.
+
+ Visual Basic 이벤트 처리기는 `Sub` 프로시저입니다. 그러나 일반적으로 다른 `Sub` 프로시저와 동일한 방식으로 호출 하지는 않습니다. 대신 프로시저를 이벤트 처리기로 식별 합니다. [Handles](../../../language-reference/statements/handles-clause.md) 절과 [WithEvents](../../../language-reference/modifiers/withevents.md) 변수를 사용 하거나 [AddHandler 문을](../../../language-reference/statements/addhandler-statement.md)사용 하 여이 작업을 수행할 수 있습니다. Visual Basic에서 `Handles` 이벤트 처리기를 선언 하는 기본 방법은 절을 사용 하는 것입니다. IDE (통합 개발 환경)에서 프로그래밍할 때 디자이너에서 이벤트 처리기를 작성 하는 방법입니다. `AddHandler` 문은 런타임에 이벤트를 동적으로 발생 시키는 데 적합 합니다.
+
+ 이벤트가 발생할 때 Visual Basic는 이벤트 처리기 프로시저를 자동으로 호출 합니다. 이벤트에 액세스할 수 있는 모든 코드는 [RaiseEvent 문을](../../../language-reference/statements/raiseevent-statement.md)실행 하 여 발생 시킬 수 있습니다.
+
+ 둘 이상의 이벤트 처리기를 동일한 이벤트와 연결할 수 있습니다. 경우에 따라 이벤트에서 처리기를 분리할 수 있습니다. 자세한 내용은 [이벤트](../events/index.md)를 참조하세요.
+
+### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>핸들 및 WithEvents를 사용 하 여 이벤트 처리기를 호출 하려면
+
+1. 이벤트가 [이벤트 문으로](../../../language-reference/statements/event-statement.md)선언 되었는지 확인 합니다.
+
+2. [WithEvents](../../../language-reference/modifiers/withevents.md) 키워드를 사용 하 여 모듈 또는 클래스 수준에서 개체 변수를 선언 합니다. 이 `As` 변수에 대 한 절은 이벤트를 발생 시키는 클래스를 지정 해야 합니다.
+
+3. 이벤트 처리 `Sub` 프로시저 선언에서 `WithEvents` 변수와 이벤트 이름을 지정 하는 [Handles](../../../language-reference/statements/handles-clause.md) 절을 추가 합니다.
+
+4. 이벤트가 발생할 때 Visual Basic는 프로시저를 `Sub` 자동으로 호출 합니다. 코드에서 `RaiseEvent` 문을 사용 하 여 이벤트를 발생 시킬 수 있습니다.
+
+     다음 예제에서는 이벤트를 정의 하 고 `WithEvents` 이벤트를 발생 시키는 클래스를 참조 하는 변수를 정의 합니다. 이벤트 처리 `Sub` 프로시저는 절을 `Handles` 사용 하 여 처리 하는 클래스 및 이벤트를 지정 합니다.
+
+     [!code-vb[VbVbcnProcedures#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#4)]
+
+### <a name="to-call-an-event-handler-using-addhandler"></a>AddHandler를 사용 하 여 이벤트 처리기를 호출 하려면
+
+1. 이벤트가 `Event` 문으로 선언 되었는지 확인 합니다.
+
+2. 이벤트 처리 `Sub` 프로시저를 이벤트와 동적으로 연결 하려면 [AddHandler 문을](../../../language-reference/statements/addhandler-statement.md) 실행 합니다.
+
+3. 이벤트가 발생할 때 Visual Basic는 프로시저를 `Sub` 자동으로 호출 합니다. 코드에서 `RaiseEvent` 문을 사용 하 여 이벤트를 발생 시킬 수 있습니다.
+
+     다음 예에서는 폼의 `Sub` <xref:System.Windows.Forms.Form.Closing> 이벤트를 처리 하는 프로시저를 정의 합니다. 그런 다음 [AddHandler 문을](../../../language-reference/statements/addhandler-statement.md) 사용 하 여 프로시저를 `catchClose` 에 대 한 <xref:System.Windows.Forms.Form.Closing>이벤트 처리기와 연결 합니다.
+
+     [!code-vb[VbVbcnProcedures#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#5)]
+
+     [RemoveHandler 문을](../../../language-reference/statements/removehandler-statement.md)실행 하 여 이벤트에서 이벤트 처리기를 분리할 수 있습니다.
+
+## <a name="see-also"></a>참고 항목
+
+- [절차](index.md)
+- [Sub 프로시저](sub-procedures.md)
+- [Sub 문](../../../language-reference/statements/sub-statement.md)
+- [AddressOf 연산자](../../../language-reference/operators/addressof-operator.md)
+- [방법: 프로시저 만들기](how-to-create-a-procedure.md)
+- [방법: 값을 반환 하지 않는 프로시저 호출](how-to-call-a-procedure-that-does-not-return-a-value.md)

@@ -1,21 +1,22 @@
 ---
-title: dotnet test 및 xUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
+title: dotnet 테스트 및 xUnit을 사용하여 .NET Core에서 F# 단위 테스트
 description: dotnet test 및 xUnit을 사용하여 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 .NET Core의 F#에 대한 단위 테스트 개념을 알아봅니다.
 author: billwagner
 ms.author: wiwagn
 ms.date: 08/30/2017
-dev_langs:
-- fsharp
-ms.openlocfilehash: 1989c82680cd0824780fa3c127318dc3b656476e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.custom: seodec18
+ms.openlocfilehash: 7fd4a3e9629a497ba3650bd24f535e864bd68820
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33214505"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71116624"
 ---
 # <a name="unit-testing-f-libraries-in-net-core-using-dotnet-test-and-xunit"></a>dotnet test 및 xUnit을 사용하여 .NET Core에서 F# 라이브러리 유닛 테스트
 
 이 자습서에서는 샘플 솔루션을 단계별로 빌드하는 대화형 환경을 통해 단위 테스트 개념을 알아볼 수 있습니다. 미리 빌드된 솔루션을 사용하여 이 자습서를 진행하려는 경우 시작하기 전에 [샘플 코드를 보거나 다운로드](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-with-fsharp/). 다운로드 지침은 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)를 참조하세요.
+
+[!INCLUDE [testing an ASP.NET Core project from .NET Core](../../../includes/core-testing-note-aspnet.md)]
 
 ## <a name="creating-the-source-project"></a>소스 프로젝트 만들기
 
@@ -29,7 +30,7 @@ ms.locfileid: "33214505"
     /MathService
 ```
 
-*MathService*를 현재 디렉터리로 만들고 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md)을 실행하여 소스 프로젝트를 만듭니다.  TDD(테스트 기반 개발)를 사용하기 위해 수학 서비스의 실패 구현을 만듭니다.
+*MathService*를 현재 디렉터리로 만들고 [`dotnet new classlib -lang F#`](../tools/dotnet-new.md)을 실행하여 소스 프로젝트를 만듭니다.  다음과 같이 수학 서비스의 실패 구현을 만듭니다.
 
 ```fsharp
 module MyMath =
@@ -63,7 +64,7 @@ module MyMath =
 
 테스트 프로제트는 다른 패키지에 단위 테스트를 만들고 실행하도록 요구합니다. 이전 단계의 `dotnet new`는 xUnit 및 xUnit runner를 추가했습니다. 이제 `MathService` 클래스 라이브러리를 프로젝트에 다른 종속성으로 추가합니다. [`dotnet add reference`](../tools/dotnet-add-reference.md) 명령을 사용합니다.
 
-```
+```dotnetcli
 dotnet add reference ../MathService/MathService.fsproj
 ```
 
@@ -86,7 +87,7 @@ GitHub의 [샘플 리포지토리](https://github.com/dotnet/samples/blob/master
 
 ## <a name="creating-the-first-test"></a>첫 번째 테스트 만들기
 
-TDD 접근 방식에서는 하나의 실패 테스트를 작성하고, 통과시키고, 이 프로세스를 반복해야 합니다. *Tests.fs*를 열고 다음 코드를 추가합니다.
+하나의 실패 테스트를 작성하고, 테스트가 성공하도록 만듭니다. 이 작업을 반복합니다. *Tests.fs*를 열고 다음 코드를 추가합니다.
 
 ```fsharp
 [<Fact>]
@@ -111,9 +112,9 @@ let ``Sequence of Evens returns empty collection`` () =
     Assert.Equal<Collections.Generic.IEnumerable<int>>(expected, actual)
 ```
 
-테스트가 실패합니다. 구현은 아직 만들지 않았습니다. `MathService` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 만듭니다.
+테스트가 실패합니다. 구현은 아직 만들지 않았습니다. `MathService` 클래스에서 작동하는 가장 간단한 코드를 작성하여 이 테스트를 통과시킵니다.
 
-```csharp
+```fsharp
 let squaresOfOdds xs =
     Seq.empty<int>
 ```
@@ -164,4 +165,4 @@ let squaresOfOdds xs =
     |> Seq.map square
 ```
 
-작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트 추가가 정상 워크플로에 포함되도록 솔루션을 구조화했습니다. 응용 프로그램의 목표를 해결하는 데 대부분의 시간과 노력을 들였습니다.
+작은 라이브러리 및 이 라이브러리에 대한 단위 테스트 집합을 작성했습니다. 새 패키지 및 테스트 추가가 정상 워크플로에 포함되도록 솔루션을 구조화했습니다. 애플리케이션의 목표를 해결하는 데 대부분의 시간과 노력을 들였습니다.

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 66f9f95b0cf19acb677daf7f7401d21cc81864a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c1e7bbac17d9a9ae191a5ad6d69b52a806383562
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447609"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781610"
 ---
 # <a name="corsavesize-enumeration"></a>CorSaveSize 열거형
 저장 작업의 크기를 쿼리할 때 필요한 전체 자릿수 수준을 나타내는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorSaveSize {  
     cssAccurate                = 0x0000,   
     cssQuick                   = 0x0001,   
@@ -40,18 +40,19 @@ typedef enum CorSaveSize {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`cssAccurate`|반환 값은 정확 하 게 해야 함을 지정 합니다.|  
-|`cssQuick`|반환 값을 예상할 수 있는지를 지정 합니다.|  
-|`cssDiscardTransientCAs`|삭제 가능한 형식을 제거 하도록 지정 합니다.|  
+|`cssAccurate`|반환 값을 정확 하 게 되도록 지정 합니다.|  
+|`cssQuick`|반환 값을 예상 해야를 지정 합니다.|  
+|`cssDiscardTransientCAs`|삭제 가능한 형식 제거 해야 한다는 것을 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorHdr.h  
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

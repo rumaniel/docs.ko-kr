@@ -7,34 +7,34 @@ helpviewer_keywords:
 - 3-D graphics [WPF]
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
-ms.openlocfilehash: d542ecd7f162e56a8a6e8ae04c0ea60eb6a69f3e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9689e3c42010b7de641bee47af34e6888c415ed9
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554854"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663952"
 ---
 # <a name="3-d-graphics-how-to-topics"></a>3차원 그래픽 방법 항목
-이 섹션의 항목을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 의 그래픽 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다.  
+이 섹션의에서 항목에서는의 3 차원 그래픽을 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [3차원 장면 만들기](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-3-d-scene.md)  
- [3차원 모델에 그리기 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-a-drawing-to-a-3-d-model.md)  
- [3차원 개체의 앞과 뒤에 Material 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
- [3차원 개체에 EmissiveMaterial 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-emissive-material-to-a-3-d-object.md)  
- [3차원 모델의 배율 변환](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-the-scale-of-a-3-d-model.md)  
- [3차원 모델에 다중 변환 적용](../../../../docs/framework/wpf/graphics-multimedia/how-to-apply-multiple-transformations-to-a-3-d-model.md)  
- [3차원 변환에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-3-d-translations.md)  
- [Storyboard를 사용하여 3차원 회전에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-storyboards.md)  
- [Rotation3DAnimation을 사용하여 3차원 회전에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
- [4원수를 사용하여 3차원 회전에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-quaternions.md)  
- [키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기(Rotation3DAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-a-3-d-rotation-using-key-frames.md)  
- [키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기(QuaternionAnimationUsingKeyFrames)](../../../../docs/framework/wpf/graphics-multimedia/animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
- [3차원 장면에서 카메라 위치 및 방향에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
- [키 프레임을 사용하여 카메라 위치 및 방향에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-camera-position-and-direction-using-key-frames.md)  
- [3차원 장면의 Material 속성에 애니메이션 효과 주기](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-material-properties-in-a-3-d-scene.md)  
- [Viewport3D의 적중 테스트](../../../../docs/framework/wpf/graphics-multimedia/how-to-hit-test-in-a-viewport3d.md)  
- [Point4D 구조체가 서로 같은지 및 다른지 여부 테스트](../../../../docs/framework/wpf/graphics-multimedia/how-to-test-point4d-structures-for-equality-and-inequality.md)  
+ [3차원 장면 만들기](how-to-create-a-3-d-scene.md)  
+ [3차원 모델에 그리기 적용](how-to-apply-a-drawing-to-a-3-d-model.md)  
+ [3차원 개체의 앞과 뒤에 Material 적용](how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md)  
+ [3차원 개체에 EmissiveMaterial 적용](how-to-apply-emissive-material-to-a-3-d-object.md)  
+ [3차원 모델의 배율 변환](how-to-transform-the-scale-of-a-3-d-model.md)  
+ [3차원 모델에 다중 변환 적용](how-to-apply-multiple-transformations-to-a-3-d-model.md)  
+ [3차원 변환에 애니메이션 효과 주기](how-to-animate-3-d-translations.md)  
+ [Storyboard를 사용하여 3차원 회전에 애니메이션 효과 주기](how-to-animate-a-3-d-rotation-using-storyboards.md)  
+ [Rotation3DAnimation을 사용하여 3차원 회전에 애니메이션 효과 주기](how-to-animate-a-3-d-rotation-using-rotation3danimation.md)  
+ [4원수를 사용하여 3차원 회전에 애니메이션 효과 주기](how-to-animate-a-3-d-rotation-using-quaternions.md)  
+ [키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기(Rotation3DAnimationUsingKeyFrames)](how-to-animate-a-3-d-rotation-using-key-frames.md)  
+ [키 프레임을 사용하여 3차원 회전에 애니메이션 효과 주기(QuaternionAnimationUsingKeyFrames)](animate-a-3-d-rotation-quaternionanimationusingkeyframes.md)  
+ [3차원 장면에서 카메라 위치 및 방향에 애니메이션 효과 주기](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)  
+ [키 프레임을 사용하여 카메라 위치 및 방향에 애니메이션 효과 주기](how-to-animate-camera-position-and-direction-using-key-frames.md)  
+ [3차원 장면의 Material 속성에 애니메이션 효과 주기](how-to-animate-material-properties-in-a-3-d-scene.md)  
+ [Viewport3D의 적중 테스트](how-to-hit-test-in-a-viewport3d.md)  
+ [Point4D 구조체가 서로 같은지 및 다른지 여부 테스트](how-to-test-point4d-structures-for-equality-and-inequality.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Viewport3D>  
@@ -46,4 +46,4 @@ ms.locfileid: "33554854"
  <xref:System.Windows.Media.Media3D.Material>  
   
 ## <a name="related-sections"></a>관련 단원  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+ [그래픽 및 멀티미디어](index.md)

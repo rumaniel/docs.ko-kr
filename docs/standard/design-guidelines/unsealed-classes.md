@@ -1,20 +1,19 @@
 ---
 title: 봉인되지 않은 클래스
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - classes [.NET Framework], unsealed
 - unsealed classes
 - inheritance, classes
 ms.assetid: 9a3bd505-90f5-4053-9f0d-3cf5fa3d3ebf
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: ef0f1c4c9b2d1928d6f96d62ab12df9786756498
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+author: KrzysztofCwalina
+ms.openlocfilehash: d7174de7ddf062b829672e04952c1010fcb74058
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43891379"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778796"
 ---
 # <a name="unsealed-classes"></a>봉인되지 않은 클래스
 봉인 된 클래스에서 상속 될 수 없습니다 및 확장성을 방해 하는 것입니다. 반면, 클래스에서 상속 되는 봉인 되지 않은 클래스 라고 합니다.  
@@ -27,10 +26,10 @@ ms.locfileid: "43891379"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
-- [확장성을 위한 디자인](../../../docs/standard/design-guidelines/designing-for-extensibility.md)  
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
+- [확장성을 위한 디자인](../../../docs/standard/design-guidelines/designing-for-extensibility.md)
 - [봉인](../../../docs/standard/design-guidelines/sealing.md)

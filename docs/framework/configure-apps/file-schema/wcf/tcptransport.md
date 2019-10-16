@@ -1,47 +1,46 @@
 ---
-title: '&lt;tcpTransport&gt;'
+title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 92590f556d93859e8681eea8f8f05da4f560e150
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 409d2e47b411c0bfaa2b0fe46fc242bd8453a042
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43738182"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399484"
 ---
-# <a name="lttcptransportgt"></a>&lt;tcpTransport&gt;
+# <a name="tcptransport"></a>\<tcpTransport>
 사용자 지정 바인딩에 대한 메시지를 전송하기 위해 채널이 사용할 수 있는 TCP 전송을 정의합니다.  
   
- \<system.serviceModel>  
-\<바인딩 >  
-\<customBinding>  
-\<바인딩 >  
-\<tcpTransport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<tcpTransport >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<tcpTransport   
-      channelInitializationTimeout="TimeSpan"   
-      connectionBufferSize="Integer"   
-      hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"  
-      listenBacklog="Integer"  
-      manualAddressing="Boolean"   
-      maxBufferPoolSize="Integer"  
-      maxBufferSize="Integer"  
-      maxOutputDelay="TimeSpan"  
-      maxPendingAccepts="Integer"   
-      maxPendingConnections="Integer"  
-      maxReceivedMessageSize="Integer"   
-      portSharingEnabled="Boolean"  
-      teredoEnabled="Boolean"  
-      transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse" >  
-      <connectionPoolSettings  
-            groupName="String"  
-            idleTimeout"TimeSpan"  
-            leaseTimeout="TimeSpan"  
-            maxOutboundConnectionsPerEndpopint="Integer" />  
-</tcpTransport>  
+<tcpTransport channelInitializationTimeout="TimeSpan"
+              connectionBufferSize="Integer"
+              hostNameComparisonMode="StrongWildcard/Exact/WeakWildcard"
+              listenBacklog="Integer"
+              manualAddressing="Boolean"
+              maxBufferPoolSize="Integer"
+              maxBufferSize="Integer"
+              maxOutputDelay="TimeSpan"
+              maxPendingAccepts="Integer"
+              maxPendingConnections="Integer"
+              maxReceivedMessageSize="Integer"
+              portSharingEnabled="Boolean"
+              teredoEnabled="Boolean"
+              transferMode="Buffered/Streamed/StreamedRequest/StreamedResponse" >
+  <connectionPoolSettings groupName="String"
+                          idleTimeout="TimeSpan"
+                          leaseTimeout="TimeSpan"
+                          maxOutboundConnectionsPerEndpoint="Integer" />
+</tcpTransport>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -51,10 +50,10 @@ ms.locfileid: "43738182"
   
 |특성|설명|  
 |---------------|-----------------|  
-|channelInitializationTimeout|수락할 채널을 초기화하기 위한 시간 제한을 가져오거나 설정합니다.  연결이 끊어지기 전에 채널이 초기화 상태를 유지할 수 있는 최대 시간(초)입니다. 이 할당량에는 TCP 연결이 .Net 메시지 프레이밍 프로토콜을 사용하여 자체 인증하는 데 걸릴 수 있는 시간이 포함됩니다. 서버가 인증을 수행하는 데 충분한 정보를 가지려면 클라이언트가 몇 가지 초기 데이터를 보내야 합니다. 기본값은 30초입니다.|  
+|channelInitializationTimeout|수락할 채널을 초기화하기 위한 시간 제한을 가져오거나 설정합니다.  연결이 끊어지기 전에 채널이 초기화 상태를 유지할 수 있는 최대 시간(초)입니다. 이 할당량에는 TCP 연결이 .NET 메시지 프레이밍 프로토콜을 사용 하 여 자신을 인증 하는 데 사용할 수 있는 시간이 포함 됩니다. 서버가 인증을 수행하는 데 충분한 정보를 가지려면 클라이언트가 몇 가지 초기 데이터를 보내야 합니다. 기본값은 30초입니다.|  
 |connectionBufferSize|통신 중에 클라이언트나 서비스로부터 serialize된 메시지 청크를 전송할 때 사용되는 버퍼의 크기를 가져오거나 설정합니다.|  
 |hostNameComparisonMode|URI 비교 시 서비스에 액세스하는 데 호스트 이름이 사용되는지 여부를 나타내는 값을 가져오거나 설정합니다.|  
-|listenBacklog|웹 서비스에 대해 보류할 수 있는 최대 대기 중인 연결 요청 수입니다. `connectionLeaseTimeout` 특성은 연결 예외가 throw되기 전에 클라이언트가 연결을 대기하는 시간을 제한합니다. 웹 서비스에 대해 보류할 수 있는 최대 대기 중인 연결 요청 수를 제어하는 소켓 수준 속성입니다. ListenBacklog 값이 너무 낮으면 WCF는 요청 수락을 중지하므로 서버가 기존의 대기 중인 연결 일부를 인식할 때까지 새 연결을 삭제합니다. 기본값은 16 * 프로세서 수입니다.|  
+|listenBacklog|웹 서비스에 대해 보류할 수 있는 최대 대기 중인 연결 요청 수입니다. `connectionLeaseTimeout` 특성은 연결 예외가 throw되기 전에 클라이언트가 연결을 대기하는 시간을 제한합니다. 웹 서비스에 대해 보류할 수 있는 최대 대기 중인 연결 요청 수를 제어하는 소켓 수준 속성입니다. ListenBacklog이 너무 낮으면 WCF는 요청 수락을 중지 하므로 서버에서 대기 중인 기존 연결 중 일부를 승인할 때까지 새 연결을 삭제 합니다. 기본값은 16 * 프로세서 수입니다.|  
 |manualAddressing|메시지의 주소를 수동으로 지정해야 하는지 여부를 나타내는 값을 가져오거나 설정합니다.|  
 |maxBufferPoolSize|전송에 사용되는 최대 버퍼 풀 크기를 가져오거나 설정합니다.|  
 |maxBufferSize|사용할 버퍼의 최대 크기를 가져오거나 설정합니다. 스트리밍된 메시지의 경우 이 값은 버퍼링된 모드에서 읽어오는 메시지 헤더의 최대 예상 크기 이상이어야 합니다.|  
@@ -74,21 +73,22 @@ ms.locfileid: "43738182"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
+|[\<binding>](../../../misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 전송은 "net.tcp://hostname:port/path" 형식의 URI를 사용합니다. 다른 URI 구성 요소는 선택적입니다.  
   
  `tcpTransport` 요소는 TCP 전송 프로토콜을 구현하는 사용자 지정 바인딩을 만들기 위한 시작점입니다. 이 전송은 WCF와 WCF 사이의 통신을 위해 최적화됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.TcpTransportElement>  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
- <xref:System.ServiceModel.Channels.TransportBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [전송](../../../../../docs/framework/wcf/feature-details/transports.md)  
- [전송 선택](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
- [바인딩](../../../../../docs/framework/wcf/bindings.md)  
- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.TcpTransportElement>
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+- <xref:System.ServiceModel.Channels.TransportBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [전송](../../../wcf/feature-details/transports.md)
+- [전송 선택](../../../wcf/feature-details/choosing-a-transport.md)
+- [바인딩](../../../wcf/bindings.md)
+- [바인딩 확장](../../../wcf/extending/extending-bindings.md)
+- [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

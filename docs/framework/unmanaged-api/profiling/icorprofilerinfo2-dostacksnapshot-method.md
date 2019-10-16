@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c65e48595f2b49abe06e649898649d76a0668a0
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 102349461456f971a2fdeaf2783630c1b88dbd6b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45969787"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778632"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot 메서드
 스택에 지정된 된 스레드에 대 한 관리 되는 프레임에 설명 하 고는 콜백을 통해 프로파일러에 정보를 보냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT DoStackSnapshot(  
     [in] ThreadID thread,  
     [in] StackSnapshotCallback *callback,  
@@ -39,7 +39,7 @@ HRESULT DoStackSnapshot(
     [in] ULONG32 contextSize);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `thread`  
  [in] 대상 스레드 ID입니다.  
   
@@ -73,7 +73,7 @@ HRESULT DoStackSnapshot(
   
  스택 워크는 순서는 반대 프레임 스택에 푸시된 방법입니다. (마지막 푸시) 첫 번째, 기본 (첫 번째 푸시) 프레임별 마지막 리프입니다.  
   
- 관리 되는 스택 워크에 프로파일러를 프로그래밍 하는 방법에 대 한 자세한 내용은 참조 하세요. [.NET Framework 2.0에서 Profiler Stack Walking: Basics and Beyond](https://go.microsoft.com/fwlink/?LinkId=73638)합니다.  
+ 관리 되는 스택 워크에 프로파일러를 프로그래밍 하는 방법에 대 한 자세한 내용은 참조 하세요. [Profiler Stack Walking.NET Framework 2.0 in에서: Basics and Beyond](https://go.microsoft.com/fwlink/?LinkId=73638)합니다.  
   
  다음 섹션에 설명 된 대로 스택 워크가 동기적 이거나 비동기적일 수 있습니다.  
   
@@ -91,16 +91,16 @@ HRESULT DoStackSnapshot(
   
  비동기 스택 워크 쉽게 교착 상태가 발생 하거나 이러한 지침을 따르지 않으면 액세스 위반을 수 있습니다.  
   
--   스레드를 직접 일시 중단 하면 관리 코드에 실행 된 적이 없는 스레드에서만 다른 스레드는 일시 중단 해야 합니다.  
+- 스레드를 직접 일시 중단 하면 관리 코드에 실행 된 적이 없는 스레드에서만 다른 스레드는 일시 중단 해야 합니다.  
   
--   항상 블록에 [icorprofilercallback:: Threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) 스레드의 스택 워크가 완료 될 때까지 콜백 합니다.  
+- 항상 블록에 [icorprofilercallback:: Threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md) 스레드의 스택 워크가 완료 될 때까지 콜백 합니다.  
   
--   프로파일러 가비지 컬렉션을 트리거할 수 있는 CLR 함수를 호출 하는 동안 잠금을 유지 하지 않습니다. 즉, 소유 하는 스레드에 가비지 수집을 트리거하는 호출을 해야 하는 경우에 잠금을 포함 되지 않은 합니다.  
+- 프로파일러 가비지 컬렉션을 트리거할 수 있는 CLR 함수를 호출 하는 동안 잠금을 유지 하지 않습니다. 즉, 소유 하는 스레드에 가비지 수집을 트리거하는 호출을 해야 하는 경우에 잠금을 포함 되지 않은 합니다.  
   
  이기도 교착 상태의 위험이 호출 하는 경우 `DoStackSnapshot` 별도 대상 스레드의 스택을 탐색할 수 있도록 프로파일러 만든 스레드에서 합니다. 특정 처음 만든 스레드가 들어가기 `ICorProfilerInfo*` 메서드 (포함 하 여 `DoStackSnapshot`), CLR 스레드별, CLR과 관련 된 해당 스레드에서 초기화를 수행 합니다. 프로파일러 대상 스레드가 해당 스택 워크를 시도 하는 일시 중단 및 해당 대상 스레드가이 스레드별 초기화를 수행 하는 데 필요한 잠금을 소유한에 발생 하는 경우 교착 상태가 발생 합니다. 이 교착 상태를 방지 하려면 초기에 호출 확인 `DoStackSnapshot` 프로파일러에서 만든 스레드를 탐색 하에서 별도 스레드를 대상으로 하지만 대상 스레드를 먼저 일시 중단 합니다. 이 초기 호출 스레드를 초기화 하는 교착 상태 없이 완료할 수 있는지 확인 합니다. 하는 경우 `DoStackSnapshot` 성공 하 고 하나 이상의 프레임을 보고 해당 지점을 지나서 모든 대상 스레드 및 호출을 일시 중지 하려면 해당 프로파일러 만든 스레드에 대 한 안전 하 게 됩니다 `DoStackSnapshot` 대상 스레드의 스택 워크를 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -108,6 +108,7 @@ HRESULT DoStackSnapshot(
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

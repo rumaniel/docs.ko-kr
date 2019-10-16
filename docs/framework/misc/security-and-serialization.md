@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b921bc94-bd3a-4c91-9ede-2c8d4f78ea9a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a30e80b1b4a412405787c0c14ad58995a2d7fffc
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e0b1f8979929dbb6872bbd53e1840b2d0520a31d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33394250"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69910668"
 ---
 # <a name="security-and-serialization"></a>보안 및 Serialization
 다른 방법으로는 액세스할 수 없는 개체 인스턴스 데이터를 직렬화를 통해 다른 코드에서 보거나 수정할 수 있으므로 <xref:System.Security.Permissions.SecurityPermission> 플래그가 지정된 <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> 의 직렬화를 수행하려면 코드에 특수 권한이 필요합니다. 기본 정책에 따라 이 권한은 인터넷에서 다운로드한 코드나 인트라넷 코드에는 부여되지 않고 로컬 컴퓨터에 있는 코드에만 부여됩니다.  
@@ -28,7 +28,7 @@ ms.locfileid: "33394250"
   
  <xref:System.Runtime.Serialization.ISerializable> 인터페이스는 직렬화 인프라에서만 사용됩니다. 하지만 보호되지 않는 경우에는 중요 중보가 노출될 수 있습니다. **ISerializable**을 구현하여 사용자 지정 직렬화를 제공할 때는 다음 예방 조치를 취해야 합니다.  
   
--   <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> SerializationFormatter **권한을 지정하여** SecurityPermission **을 요청하거나 메서드 출력에 중요 정보가 노출되지 않도록 하여** 메서드의 보안을 명시적으로 유지해야 합니다. 예를 들어:  
+- <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> SerializationFormatter **권한을 지정하여** SecurityPermission **을 요청하거나 메서드 출력에 중요 정보가 노출되지 않도록 하여** 메서드의 보안을 명시적으로 유지해야 합니다. 예를 들어:  
   
     ```vb  
     Public Overrides<SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter := True)>  _  
@@ -45,7 +45,8 @@ ms.locfileid: "33394250"
     }  
     ```  
   
--   직렬화에 사용되는 특수 생성자는 엄격한 입력 유효성 검사를 수행해야 하며 악성 코드가 악용할 수 없도록 보호하거나 비공개로 설정해야 합니다. 클래스를 명시적으로 만들거나 일종의 팩터리를 통해 간접적으로 만드는 경우와 같이 기타 모든 방법으로 이러한 클래스의 인스턴스를 가져오려면 이와 같은 보안 검사 및 권한을 적용해야 합니다.  
+- 직렬화에 사용되는 특수 생성자는 엄격한 입력 유효성 검사를 수행해야 하며 악성 코드가 악용할 수 없도록 보호하거나 비공개로 설정해야 합니다. 클래스를 명시적으로 만들거나 일종의 팩터리를 통해 간접적으로 만드는 경우와 같이 기타 모든 방법으로 이러한 클래스의 인스턴스를 가져오려면 이와 같은 보안 검사 및 권한을 적용해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [보안 코딩 지침](../../../docs/standard/security/secure-coding-guidelines.md)
+## <a name="see-also"></a>참고자료
+
+- [보안 코딩 지침](../../standard/security/secure-coding-guidelines.md)

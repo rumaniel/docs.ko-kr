@@ -1,31 +1,32 @@
 ---
-title: '&lt;policyImporter&gt;'
+title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: 7483a95accef0a4bc956d919087379363b4762ca
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4ef5890d52c3f2af42322f023b9a2a23cb583035
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32753029"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855055"
 ---
-# <a name="ltpolicyimportergt"></a>&lt;policyImporter&gt;
+# <a name="policyimporter"></a>\<policyImporter>
 바인딩에 대한 사용자 지정 정책 어설션의 가져오기를 제어하는 정책 가져오기를 지정합니다.  
   
- \<system.ServiceModel>  
-\<client>  
-\<메타 데이터 >  
-\<policyImporters >  
-\<policyImporter >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<클라이언트 >** ](client.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<메타 데이터 >** ](metadata.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<policyImporters >** ](policyimporters.md)  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<policyImporter >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<metadata>  
-   <policyImporters>  
-      <policyImporter type="string" />  
-   </policyImporters>  
-</metadata>  
+<metadata>
+  <policyImporters>
+    <policyImporter type="String" />
+  </policyImporters>
+</metadata>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -44,15 +45,16 @@ ms.locfileid: "32753029"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<policyImporters >](../../../../../docs/framework/configure-apps/file-schema/wcf/policyimporters.md)|바인딩에 대한 사용자 지정 정책 어설션의 가져오기를 제어하는 모든 정책 가져오기를 지정합니다.|  
+|[\<policyImporters>](policyimporters.md)|바인딩에 대한 사용자 지정 정책 어설션의 가져오기를 제어하는 모든 정책 가져오기를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  정책 가져오기는, 바인딩 기능에 대한 사용자 지정 정책 어설션을 검색하거나 어설션에서 요구하는 기능을 구현하는 사용자 지정 바인딩 요소를 연결하는 데 사용됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>  
- <xref:System.ServiceModel.Configuration.PolicyImporterElement>  
- <xref:System.ServiceModel.Configuration.MetadataElement>  
- <xref:System.ServiceModel.Description.MetadataImporter>  
- [WCF 클라이언트 구성](../../../../../docs/framework/wcf/feature-details/client-configuration.md)  
- [클라이언트](../../../../../docs/framework/wcf/feature-details/clients.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>
+- <xref:System.ServiceModel.Configuration.PolicyImporterElement>
+- <xref:System.ServiceModel.Configuration.MetadataElement>
+- <xref:System.ServiceModel.Description.MetadataImporter>
+- [WCF 클라이언트 구성](../../../wcf/feature-details/client-configuration.md)
+- [클라이언트](../../../wcf/feature-details/clients.md)

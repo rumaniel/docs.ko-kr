@@ -7,30 +7,31 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 05568de863407b5d746c23ea0aff3139449a8f5d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973695"
 ---
 # <a name="path-animation-how-to-topics"></a>경로 애니메이션 방법 항목
 이 섹션의 항목 경로 따라 개체에 애니메이션을 적용 하는 방법을 보여 줍니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-double-animation.md)  
- [경로를 따라 개체에 애니메이션 효과 주기(포인트 애니메이션)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-point-animation.md)  
- [경로를 따라 개체에 애니메이션 효과 주기(Matrix 애니메이션)](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-an-object-along-a-path-matrix-animation.md)  
- [경로를 따라 개체에 애니메이션 효과 주기(오프셋이 누적된 매트릭스 애니메이션)](../../../../docs/framework/wpf/graphics-multimedia/animate-an-object-along-a-path-matrix-animation-with-offset.md)  
- [기하학적 경로를 사용하여 개체 회전(매트릭스 애니메이션)](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
- [기하학적 경로를 사용하여 개체 회전](../../../../docs/framework/wpf/graphics-multimedia/how-to-rotate-an-object-by-using-a-geometric-path.md)  
+ [경로를 따라 개체에 애니메이션 효과 주기(Double 애니메이션)](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [경로를 따라 개체에 애니메이션 효과 주기(포인트 애니메이션)](how-to-animate-an-object-along-a-path-point-animation.md)  
+ [경로를 따라 개체에 애니메이션 효과 주기(Matrix 애니메이션)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
+ [경로를 따라 개체에 애니메이션 효과 주기(오프셋이 누적된 매트릭스 애니메이션)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
+ [기하학적 경로를 사용하여 개체 회전(매트릭스 애니메이션)](how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md)  
+ [기하학적 경로를 사용하여 개체 회전](how-to-rotate-an-object-by-using-a-geometric-path.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Media.Animation.PathAnimationSource>  
   
  <xref:System.Windows.Media.Animation.Storyboard>  
   
-## <a name="see-also"></a>참고 항목  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
- [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)  
- [키 프레임 애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
+## <a name="see-also"></a>참고자료
+
+- [그래픽 및 멀티미디어](index.md)
+- [애니메이션 개요](animation-overview.md)
+- [키 프레임 애니메이션 개요](key-frame-animations-overview.md)

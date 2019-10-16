@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms DataGrid 컨트롤에서 클릭에 대한 응답'
+title: '방법: Windows Forms DataGrid 컨트롤에서 클릭에 응답'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,22 +12,22 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 3b89bab9370039e4089ad834c6ea1f528d7b6575
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54e41c6960c24f68cb27a6f6fb859b4b9223ed27
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33535166"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69914990"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에서 클릭에 대한 응답
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>방법: Windows Forms DataGrid 컨트롤에서 클릭에 응답
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
+> <xref:System.Windows.Forms.DataGridView> 컨트롤은 <xref:System.Windows.Forms.DataGrid> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.DataGrid> 컨트롤을 계속 유지하도록 선택할 수 있습니다. 자세한 내용은 [Windows Forms DataGridView 및 DataGrid 컨트롤의 차이점](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)을 참조하십시오.  
   
- Windows Forms 후 <xref:System.Windows.Forms.DataGrid> 연결 된 데이터베이스를 모니터링할 수 있습니다 즉 셀 사용자가 클릭 합니다.  
+ Windows Forms <xref:System.Windows.Forms.DataGrid> 데이터베이스에 연결 된 후에는 사용자가 클릭 한 셀을 모니터링할 수 있습니다.  
   
-### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>DataGrid의 다른 셀을 선택 하면 검색 하려면  
+### <a name="to-detect-when-the-user-of-the-datagrid-selects-a-different-cell"></a>DataGrid 사용자가 다른 셀을 선택 하는 경우를 감지 하려면  
   
--   에 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 이벤트 처리기를 적절 하 게 응답 하는 코드를 작성 합니다.  
+- 이벤트 처리기 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 에서 적절 하 게 응답 하는 코드를 작성 합니다.  
   
     ```vb  
     Private Sub myDataGrid_CurrentCellChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles myDataGrid.CurrentCellChanged  
@@ -47,18 +47,18 @@ ms.locfileid: "33535166"
     }  
     ```  
   
-     (Visual C#) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (시각적 C#개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.  
   
     ```csharp  
     this.myDataGrid.CurrentCellChanged += new  
        System.EventHandler(this.myDataGrid_CurrentCellChanged);  
     ```  
   
-### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>사용자가 클릭 한 DataGrid의 어느 부분을 확인 하려면  
+### <a name="to-determine-which-part-of-the-datagrid-the-user-clicked"></a>사용자가 클릭 한 DataGrid 부분을 확인 하려면  
   
--   호출 된 <xref:System.Windows.Forms.DataGrid.HitTest%2A> 에 대 한 적절 한 이벤트 처리기에서 메서드는 <xref:System.Windows.Forms.Control.MouseDown> 또는 <xref:System.Windows.Forms.Control.Click> 이벤트입니다.  
+- <xref:System.Windows.Forms.Control.MouseDown> <xref:System.Windows.Forms.DataGrid.HitTest%2A> 또는<xref:System.Windows.Forms.Control.Click> 이벤트와 같은 적절 한 이벤트 처리기에서 메서드를 호출 합니다.  
   
-     <xref:System.Windows.Forms.DataGrid.HitTest%2A> 메서드가 반환 되는 <xref:System.Windows.Forms.DataGrid.HitTestInfo> 클릭 한 영역의 열과 행을 포함 하는 개체입니다.  
+     메서드 <xref:System.Windows.Forms.DataGrid.HitTest%2A> 는 클릭 한 <xref:System.Windows.Forms.DataGrid.HitTestInfo> 영역의 행과 열을 포함 하는 개체를 반환 합니다.  
   
     ```vb  
     Private Sub myDataGrid_MouseDown(ByVal sender As Object, _  
@@ -132,7 +132,7 @@ ms.locfileid: "33535166"
     }  
     ```  
   
-     (Visual C#) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (시각적 C#개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.  
   
     ```csharp  
     this.myDataGrid.MouseDown += new  
@@ -140,6 +140,7 @@ ms.locfileid: "33535166"
        (this.myDataGrid_MouseDown);  
     ```  
   
-## <a name="see-also"></a>참고 항목  
- [DataGrid 컨트롤](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)  
- [방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시되는 데이터 변경](../../../../docs/framework/winforms/controls/change-displayed-data-at-run-time-wf-datagrid-control.md)
+## <a name="see-also"></a>참고자료
+
+- [DataGrid 컨트롤](datagrid-control-windows-forms.md)
+- [방법: 런타임에 Windows Forms DataGrid 컨트롤에 표시 된 데이터 변경](change-displayed-data-at-run-time-wf-datagrid-control.md)

@@ -1,0 +1,610 @@
+- name: 프로파일링
+  href: index.md
+  items:
+    - name: 프로파일링 개요
+      href: profiling-overview.md
+    - name: 프로파일링 환경 설정
+      href: setting-up-a-profiling-environment.md
+    - name: CLR 프로파일러 및 Windows 스토어 앱
+      href: clr-profilers-and-windows-store-apps.md
+    - name: CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
+      href: corprof-e-unsupported-call-sequence-hresult.md
+    - name: 프로파일링 인터페이스
+      href: profiling-interfaces.md
+      items:
+        - name: ICLRProfiling 인터페이스
+          href: iclrprofiling-interface.md
+          items:
+            - name: AttachProfiler 메서드
+              href: iclrprofiling-attachprofiler-method.md
+        - name: ICorProfilerAssemblyReferenceProvider 인터페이스
+          href: icorprofilerassemblyreferenceprovider-interface.md
+          items:
+            - name: AddAssemblyReference 메서드
+              href: icorprofilerassemblyreferenceprovider-addassemblyreference-method.md
+        - name: ICorProfilerCallback 인터페이스
+          href: icorprofilercallback-interface.md
+          items:
+            - name: AppDomainCreationFinished 메서드
+              href: icorprofilercallback-appdomaincreationfinished-method.md
+            - name: AppDomainCreationStarted 메서드
+              href: icorprofilercallback-appdomaincreationstarted-method.md
+            - name: AppDomainShutdownFinished 메서드
+              href: icorprofilercallback-appdomainshutdownfinished-method.md
+            - name: AppDomainShutdownStarted 메서드
+              href: icorprofilercallback-appdomainshutdownstarted-method.md
+            - name: AssemblyLoadFinished 메서드
+              href: icorprofilercallback-assemblyloadfinished-method.md
+            - name: AssemblyLoadStarted 메서드
+              href: icorprofilercallback-assemblyloadstarted-method.md
+            - name: AssemblyUnloadFinished 메서드
+              href: icorprofilercallback-assemblyunloadfinished-method.md
+            - name: AssemblyUnloadStarted 메서드
+              href: icorprofilercallback-assemblyunloadstarted-method.md
+            - name: ClassLoadFinished 메서드
+              href: icorprofilercallback-classloadfinished-method.md
+            - name: ClassLoadStarted 메서드
+              href: icorprofilercallback-classloadstarted-method.md
+            - name: ClassUnloadFinished 메서드
+              href: icorprofilercallback-classunloadfinished-method.md
+            - name: ClassUnloadStarted 메서드
+              href: icorprofilercallback-classunloadstarted-method.md
+            - name: COMClassicVTableCreated 메서드
+              href: icorprofilercallback-comclassicvtablecreated-method.md
+            - name: COMClassicVTableDestroyed 메서드
+              href: icorprofilercallback-comclassicvtabledestroyed-method.md
+            - name: ExceptionCatcherEnter 메서드
+              href: icorprofilercallback-exceptioncatcherenter-method.md
+            - name: ExceptionCatcherLeave 메서드
+              href: icorprofilercallback-exceptioncatcherleave-method.md
+            - name: ExceptionCLRCatcherExecute 메서드
+              href: icorprofilercallback-exceptionclrcatcherexecute-method.md
+            - name: ExceptionCLRCatcherFound 메서드
+              href: icorprofilercallback-exceptionclrcatcherfound-method.md
+            - name: ExceptionOSHandlerEnter 메서드
+              href: icorprofilercallback-exceptionoshandlerenter-method.md
+            - name: ExceptionOSHandlerLeave 메서드
+              href: icorprofilercallback-exceptionoshandlerleave-method.md
+            - name: ExceptionSearchCatcherFound 메서드
+              href: icorprofilercallback-exceptionsearchcatcherfound-method.md
+            - name: ExceptionSearchFilterEnter 메서드
+              href: icorprofilercallback-exceptionsearchfilterenter-method.md
+            - name: ExceptionSearchFilterLeave 메서드
+              href: icorprofilercallback-exceptionsearchfilterleave-method.md
+            - name: ExceptionSearchFunctionEnter 메서드
+              href: icorprofilercallback-exceptionsearchfunctionenter-method.md
+            - name: ExceptionSearchFunctionLeave 메서드
+              href: icorprofilercallback-exceptionsearchfunctionleave-method.md
+            - name: ExceptionThrown 메서드
+              href: icorprofilercallback-exceptionthrown-method.md
+            - name: ExceptionUnwindFinallyEnter 메서드
+              href: icorprofilercallback-exceptionunwindfinallyenter-method.md
+            - name: ExceptionUnwindFinallyLeave 메서드
+              href: icorprofilercallback-exceptionunwindfinallyleave-method.md
+            - name: ExceptionUnwindFunctionEnter 메서드
+              href: icorprofilercallback-exceptionunwindfunctionenter-method.md
+            - name: ExceptionUnwindFunctionLeave 메서드
+              href: icorprofilercallback-exceptionunwindfunctionleave-method.md
+            - name: FunctionUnloadStarted 메서드
+              href: icorprofilercallback-functionunloadstarted-method.md
+            - name: Initialize 메서드
+              href: icorprofilercallback-initialize-method.md
+            - name: JITCachedFunctionSearchFinished 메서드
+              href: icorprofilercallback-jitcachedfunctionsearchfinished-method.md
+            - name: JITCachedFunctionSearchStarted 메서드
+              href: icorprofilercallback-jitcachedfunctionsearchstarted-method.md
+            - name: JITCompilationFinished 메서드
+              href: icorprofilercallback-jitcompilationfinished-method.md
+            - name: JITCompilationStarted 메서드
+              href: icorprofilercallback-jitcompilationstarted-method.md
+            - name: JITFunctionPitched 메서드
+              href: icorprofilercallback-jitfunctionpitched-method.md
+            - name: JITInlining 메서드
+              href: icorprofilercallback-jitinlining-method.md
+            - name: ManagedToUnmanagedTransition 메서드
+              href: icorprofilercallback-managedtounmanagedtransition-method.md
+            - name: ModuleAttachedToAssembly 메서드
+              href: icorprofilercallback-moduleattachedtoassembly-method.md
+            - name: ModuleLoadFinished 메서드
+              href: icorprofilercallback-moduleloadfinished-method.md
+            - name: ModuleLoadStarted 메서드
+              href: icorprofilercallback-moduleloadstarted-method.md
+            - name: ModuleUnloadFinished 메서드
+              href: icorprofilercallback-moduleunloadfinished-method.md
+            - name: ModuleUnloadStarted 메서드
+              href: icorprofilercallback-moduleunloadstarted-method.md
+            - name: MovedReferences 메서드
+              href: icorprofilercallback-movedreferences-method.md
+            - name: ObjectAllocated 메서드
+              href: icorprofilercallback-objectallocated-method.md
+            - name: ObjectReferences 메서드
+              href: icorprofilercallback-objectreferences-method.md
+            - name: ObjectsAllocatedByClass 메서드
+              href: icorprofilercallback-objectsallocatedbyclass-method.md
+            - name: RemotingClientInvocationFinished 메서드
+              href: icorprofilercallback-remotingclientinvocationfinished-method.md
+            - name: RemotingClientInvocationStarted 메서드
+              href: icorprofilercallback-remotingclientinvocationstarted-method.md
+            - name: RemotingClientReceivingReply 메서드
+              href: icorprofilercallback-remotingclientreceivingreply-method.md
+            - name: RemotingClientSendingMessage 메서드
+              href: icorprofilercallback-remotingclientsendingmessage-method.md
+            - name: RemotingServerInvocationReturned 메서드
+              href: icorprofilercallback-remotingserverinvocationreturned-method.md
+            - name: RemotingServerInvocationStarted 메서드
+              href: icorprofilercallback-remotingserverinvocationstarted-method.md
+            - name: RemotingServerReceivingMessage 메서드
+              href: icorprofilercallback-remotingserverreceivingmessage-method.md
+            - name: RemotingServerSendingReply 메서드
+              href: icorprofilercallback-remotingserversendingreply-method.md
+            - name: RootReferences 메서드
+              href: icorprofilercallback-rootreferences-method.md
+            - name: RuntimeResumeFinished 메서드
+              href: icorprofilercallback-runtimeresumefinished-method.md
+            - name: RuntimeResumeStarted 메서드
+              href: icorprofilercallback-runtimeresumestarted-method.md
+            - name: RuntimeSuspendAborted 메서드
+              href: icorprofilercallback-runtimesuspendaborted-method.md
+            - name: RuntimeSuspendFinished 메서드
+              href: icorprofilercallback-runtimesuspendfinished-method.md
+            - name: RuntimeSuspendStarted 메서드
+              href: icorprofilercallback-runtimesuspendstarted-method.md
+            - name: RuntimeThreadResumed 메서드
+              href: icorprofilercallback-runtimethreadresumed-method.md
+            - name: RuntimeThreadSuspended 메서드
+              href: icorprofilercallback-runtimethreadsuspended-method.md
+            - name: Shutdown 메서드
+              href: icorprofilercallback-shutdown-method.md
+            - name: ThreadAssignedToOSThread 메서드
+              href: icorprofilercallback-threadassignedtoosthread-method.md
+            - name: ThreadCreated 메서드
+              href: icorprofilercallback-threadcreated-method.md
+            - name: ThreadDestroyed 메서드
+              href: icorprofilercallback-threaddestroyed-method.md
+            - name: UnmanagedToManagedTransition 메서드
+              href: icorprofilercallback-unmanagedtomanagedtransition-method.md
+        - name: ICorProfilerCallback2 인터페이스
+          href: icorprofilercallback2-interface.md
+          items:
+            - name: FinalizeableObjectQueued 메서드
+              href: icorprofilercallback2-finalizeableobjectqueued-method.md
+            - name: GarbageCollectionFinished 메서드
+              href: icorprofilercallback2-garbagecollectionfinished-method.md
+            - name: GarbageCollectionStarted 메서드
+              href: icorprofilercallback2-garbagecollectionstarted-method.md
+            - name: HandleCreated 메서드
+              href: icorprofilercallback2-handlecreated-method.md
+            - name: HandleDestroyed 메서드
+              href: icorprofilercallback2-handledestroyed-method.md
+            - name: RootReferences2 메서드
+              href: icorprofilercallback2-rootreferences2-method.md
+            - name: SurvivingReferences 메서드
+              href: icorprofilercallback2-survivingreferences-method.md
+            - name: ThreadNameChanged 메서드
+              href: icorprofilercallback2-threadnamechanged-method.md
+        - name: ICorProfilerCallback3 인터페이스
+          href: icorprofilercallback3-interface.md
+          items:
+            - name: InitializeForAttach 메서드
+              href: icorprofilercallback3-initializeforattach-method.md
+            - name: ProfilerAttachComplete 메서드
+              href: icorprofilercallback3-profilerattachcomplete-method.md
+            - name: ProfilerDetachSucceeded 메서드
+              href: icorprofilercallback3-profilerdetachsucceeded-method.md
+        - name: ICorProfilerCallback4 인터페이스
+          href: icorprofilercallback4-interface.md
+          items:
+            - name: GetReJITParameters 메서드
+              href: icorprofilercallback4-getrejitparameters-method.md
+            - name: MovedReferences2 메서드
+              href: icorprofilercallback4-movedreferences2-method.md
+            - name: ReJITCompilationFinished 메서드
+              href: icorprofilercallback4-rejitcompilationfinished-method.md
+            - name: ReJITCompilationStarted 메서드
+              href: icorprofilercallback4-rejitcompilationstarted-method.md
+            - name: ReJITError 메서드
+              href: icorprofilercallback4-rejiterror-method.md
+            - name: SurvivingReferences2 메서드
+              href: icorprofilercallback4-survivingreferences2-method.md
+        - name: ICorProfilerCallback5 인터페이스
+          href: icorprofilercallback5-interface.md
+          items:
+            - name: ConditionalWeakTableElementReferences 메서드
+              href: icorprofilercallback5-conditionalweaktableelementreferences-method.md
+        - name: ICorProfilerCallback6 인터페이스
+          href: icorprofilercallback6-interface.md
+          items:
+            - name: GetAssemblyReferences 메서드
+              href: icorprofilercallback6-getassemblyreferences-method.md
+        - name: ICorProfilerCallback7 인터페이스
+          href: icorprofilercallback7-interface.md
+          items:
+            - name: ModuleInMemorySymbolsUpdated 메서드
+              href: icorprofilercallback7-moduleinmemorysymbolsupdated-method.md
+        - name: ICorProfilerFunctionControl 인터페이스
+          href: icorprofilerfunctioncontrol-interface.md
+          items:
+            - name: SetCodegenFlags 메서드
+              href: icorprofilerfunctioncontrol-setcodegenflags-method.md
+            - name: SetILFunctionBody 메서드
+              href: icorprofilerfunctioncontrol-setilfunctionbody-method.md
+            - name: SetILInstrumentedCodeMap 메서드
+              href: icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md
+        - name: ICorProfilerCallback8 인터페이스
+          href: icorprofilercallback8-interface.md
+          items:
+            - name: DynamicMethodJITCompilationStarted 메서드
+              href: icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md
+            - name: DynamicMethodJITCompilationFinished 메서드
+              href: icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md
+        - name: ICorProfilerCallback9 인터페이스
+          href: icorprofilercallback9-interface.md
+          items:
+            - name: DynamicMethodUnloaded 메서드
+              href: icorprofilercallback9-dynamicmethodunloaded-method.md
+        - name: ICorProfilerFunctionEnum 인터페이스
+          href: icorprofilerfunctionenum-interface.md
+          items:
+            - name: Clone 메서드
+              href: icorprofilerfunctionenum-clone-method.md
+            - name: GetCount 메서드
+              href: icorprofilerfunctionenum-getcount-method.md
+            - name: Next 메서드
+              href: icorprofilerfunctionenum-next-method.md
+            - name: Reset 메서드
+              href: icorprofilerfunctionenum-reset-method.md
+            - name: Skip 메서드
+              href: icorprofilerfunctionenum-skip-method.md
+        - name: ICorProfilerInfo 인터페이스
+          href: icorprofilerinfo-interface.md
+          items:
+            - name: BeginInprocDebugging 메서드
+              href: icorprofilerinfo-begininprocdebugging-method.md
+            - name: EndInprocDebugging 메서드
+              href: icorprofilerinfo-endinprocdebugging-method.md
+            - name: ForceGC 메서드
+              href: icorprofilerinfo-forcegc-method.md
+            - name: GetAppDomainInfo 메서드
+              href: icorprofilerinfo-getappdomaininfo-method.md
+            - name: GetAssemblyInfo 메서드
+              href: icorprofilerinfo-getassemblyinfo-method.md
+            - name: GetClassFromObject 메서드
+              href: icorprofilerinfo-getclassfromobject-method.md
+            - name: GetClassFromToken 메서드
+              href: icorprofilerinfo-getclassfromtoken-method.md
+            - name: GetClassIDInfo 메서드
+              href: icorprofilerinfo-getclassidinfo-method.md
+            - name: GetCodeInfo 메서드
+              href: icorprofilerinfo-getcodeinfo-method.md
+            - name: GetCurrentThreadID 메서드
+              href: icorprofilerinfo-getcurrentthreadid-method.md
+            - name: GetEventMask 메서드
+              href: icorprofilerinfo-geteventmask-method.md
+            - name: GetFunctionFromIP 메서드
+              href: icorprofilerinfo-getfunctionfromip-method.md
+            - name: GetFunctionFromToken 메서드
+              href: icorprofilerinfo-getfunctionfromtoken-method.md
+            - name: GetFunctionInfo 메서드
+              href: icorprofilerinfo-getfunctioninfo-method.md
+            - name: GetHandleFromThread 메서드
+              href: icorprofilerinfo-gethandlefromthread-method.md
+            - name: GetILFunctionBody 메서드
+              href: icorprofilerinfo-getilfunctionbody-method.md
+            - name: GetILFunctionBodyAllocator 메서드
+              href: icorprofilerinfo-getilfunctionbodyallocator-method.md
+            - name: GetILToNativeMapping 메서드
+              href: icorprofilerinfo-getiltonativemapping-method.md
+            - name: GetInprocInspectionInterface 메서드
+              href: icorprofilerinfo-getinprocinspectioninterface-method.md
+            - name: GetInprocInspectionIThisThread 메서드
+              href: icorprofilerinfo-getinprocinspectionithisthread-method.md
+            - name: GetModuleInfo 메서드
+              href: icorprofilerinfo-getmoduleinfo-method.md
+            - name: GetModuleMetaData 메서드
+              href: icorprofilerinfo-getmodulemetadata-method.md
+            - name: GetObjectSize 메서드
+              href: icorprofilerinfo-getobjectsize-method.md
+            - name: GetThreadContext 메서드
+              href: icorprofilerinfo-getthreadcontext-method.md
+            - name: GetThreadInfo 메서드
+              href: icorprofilerinfo-getthreadinfo-method.md
+            - name: GetTokenAndMetadataFromFunction 메서드
+              href: icorprofilerinfo-gettokenandmetadatafromfunction-method.md
+            - name: IsArrayClass 메서드
+              href: icorprofilerinfo-isarrayclass-method.md
+            - name: SetEnterLeaveFunctionHooks 메서드
+              href: icorprofilerinfo-setenterleavefunctionhooks-method.md
+            - name: SetEventMask 메서드
+              href: icorprofilerinfo-seteventmask-method.md
+            - name: SetFunctionIDMapper 메서드
+              href: icorprofilerinfo-setfunctionidmapper-method.md
+            - name: SetFunctionReJIT 메서드
+              href: icorprofilerinfo-setfunctionrejit-method.md
+            - name: SetILFunctionBody 메서드
+              href: icorprofilerinfo-setilfunctionbody-method.md
+            - name: SetILInstrumentedCodeMap 메서드
+              href: icorprofilerinfo-setilinstrumentedcodemap-method.md
+        - name: ICorProfilerInfo2 인터페이스
+          href: icorprofilerinfo2-interface.md
+          items:
+            - name: DoStackSnapshot 메서드
+              href: icorprofilerinfo2-dostacksnapshot-method.md
+            - name: EnumModuleFrozenObjects 메서드
+              href: icorprofilerinfo2-enummodulefrozenobjects-method.md
+            - name: GetAppDomainStaticAddress 메서드
+              href: icorprofilerinfo2-getappdomainstaticaddress-method.md
+            - name: GetArrayObjectInfo 메서드
+              href: icorprofilerinfo2-getarrayobjectinfo-method.md
+            - name: GetBoxClassLayout 메서드
+              href: icorprofilerinfo2-getboxclasslayout-method.md
+            - name: GetClassFromTokenAndTypeArgs 메서드
+              href: icorprofilerinfo2-getclassfromtokenandtypeargs-method.md
+            - name: GetClassIDInfo2 메서드
+              href: icorprofilerinfo2-getclassidinfo2-method.md
+            - name: GetClassLayout 메서드
+              href: icorprofilerinfo2-getclasslayout-method.md
+            - name: GetCodeInfo2 메서드
+              href: icorprofilerinfo2-getcodeinfo2-method.md
+            - name: GetContextStaticAddress 메서드
+              href: icorprofilerinfo2-getcontextstaticaddress-method.md
+            - name: GetFunctionFromTokenAndTypeArgs 메서드
+              href: icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md
+            - name: GetFunctionInfo2 메서드
+              href: icorprofilerinfo2-getfunctioninfo2-method.md
+            - name: GetGenerationBounds 메서드
+              href: icorprofilerinfo2-getgenerationbounds-method.md
+            - name: GetNotifiedExceptionClauseInfo 메서드
+              href: icorprofilerinfo2-getnotifiedexceptionclauseinfo-method.md
+            - name: GetObjectGeneration 메서드
+              href: icorprofilerinfo2-getobjectgeneration-method.md
+            - name: GetRVAStaticAddress 메서드
+              href: icorprofilerinfo2-getrvastaticaddress-method.md
+            - name: GetStaticFieldInfo 메서드
+              href: icorprofilerinfo2-getstaticfieldinfo-method.md
+            - name: GetStringLayout 메서드
+              href: icorprofilerinfo2-getstringlayout-method.md
+            - name: GetThreadAppDomain 메서드
+              href: icorprofilerinfo2-getthreadappdomain-method.md
+            - name: GetThreadStaticAddress 메서드
+              href: icorprofilerinfo2-getthreadstaticaddress-method.md
+            - name: SetEnterLeaveFunctionHooks2 메서드
+              href: icorprofilerinfo2-setenterleavefunctionhooks2-method.md
+        - name: ICorProfilerInfo3 인터페이스
+          href: icorprofilerinfo3-interface.md
+          items:
+            - name: EnumJITedFunctions 메서드
+              href: icorprofilerinfo3-enumjitedfunctions-method.md
+            - name: EnumModules 메서드
+              href: icorprofilerinfo3-enummodules-method.md
+            - name: GetAppDomainsContainingModule 메서드
+              href: icorprofilerinfo3-getappdomainscontainingmodule-method.md
+            - name: GetFunctionEnter3Info 메서드
+              href: icorprofilerinfo3-getfunctionenter3info-method.md
+            - name: GetFunctionLeave3Info 메서드
+              href: icorprofilerinfo3-getfunctionleave3info-method.md
+            - name: GetFunctionTailcall3Info 메서드
+              href: icorprofilerinfo3-getfunctiontailcall3info-method.md
+            - name: GetModuleInfo2 메서드
+              href: icorprofilerinfo3-getmoduleinfo2-method.md
+            - name: GetRuntimeInformation 메서드
+              href: icorprofilerinfo3-getruntimeinformation-method.md
+            - name: GetStringLayout2 메서드
+              href: icorprofilerinfo3-getstringlayout2-method.md
+            - name: GetThreadStaticAddress2 메서드
+              href: icorprofilerinfo3-getthreadstaticaddress2-method.md
+            - name: RequestProfilerDetach 메서드
+              href: icorprofilerinfo3-requestprofilerdetach-method.md
+            - name: SetEnterLeaveFunctionHooks3 메서드
+              href: icorprofilerinfo3-setenterleavefunctionhooks3-method.md
+            - name: SetEnterLeaveFunctionHooks3WithInfo 메서드
+              href: icorprofilerinfo3-setenterleavefunctionhooks3withinfo-method.md
+            - name: SetFunctionIDMapper2 메서드
+              href: icorprofilerinfo3-setfunctionidmapper2-method.md
+        - name: ICorProfilerInfo4 인터페이스
+          href: icorprofilerinfo4-interface.md
+          items:
+            - name: EnumJITedFunctions2 메서드
+              href: icorprofilerinfo4-enumjitedfunctions2-method.md
+            - name: EnumThreads 메서드
+              href: icorprofilerinfo4-enumthreads-method.md
+            - name: GetCodeInfo3 메서드
+              href: icorprofilerinfo4-getcodeinfo3-method.md
+            - name: GetFunctionFromIP2 메서드
+              href: icorprofilerinfo4-getfunctionfromip2-method.md
+            - name: GetILToNativeMapping2 메서드
+              href: icorprofilerinfo4-getiltonativemapping2-method.md
+            - name: GetObjectSize2 메서드
+              href: icorprofilerinfo4-getobjectsize2-method.md
+            - name: GetReJITIDs 메서드
+              href: icorprofilerinfo4-getrejitids-method.md
+            - name: InitializeCurrentThread 메서드
+              href: icorprofilerinfo4-initializecurrentthread-method.md
+            - name: RequestReJIT 메서드
+              href: icorprofilerinfo4-requestrejit-method.md
+            - name: RequestRevert 메서드
+              href: icorprofilerinfo4-requestrevert-method.md
+        - name: ICorProfilerInfo5 인터페이스
+          href: icorprofilerinfo5-interface.md
+          items:
+            - name: GetEventMask2 메서드
+              href: icorprofilerinfo5-geteventmask2-method.md
+            - name: SetEventMask2 메서드
+              href: icorprofilerinfo5-seteventmask2-method.md
+        - name: ICorProfilerInfo6 인터페이스
+          href: icorprofilerinfo6-interface.md
+          items:
+            - name: 'ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod 메서드'
+              href: icorprofilerinfo6-enumngenmodulemethodsinliningthismethod-method.md
+        - name: ICorProfilerInfo7 인터페이스
+          href: icorprofilerinfo7-interface.md
+          items:
+            - name: ApplyMetaData 메서드
+              href: icorprofilerinfo7-applymetadata-method.md
+            - name: GetInMemorySymbolsLength 메서드
+              href: icorprofilerinfo7-getinmemorysymbolslength-method.md
+            - name: ReadInMemorySymbols
+              href: icorprofilerinfo7-readinmemorysymbols.md
+        - name: ICorProfilerInfo8 인터페이스
+          href: icorprofilerinfo8-interface.md
+          items:
+            - name: GetDynamicFunctionInfo 메서드
+              href: icorprofilerinfo8-getdynamicfunctioninfo-method.md
+            - name: GetFunctionFromIP3 메서드
+              href: icorprofilerinfo8-getfunctionfromip3-method.md
+            - name: IsFunctionDynamic 메서드
+              href: icorprofilerinfo8-isfunctiondynamic-method.md
+        - name: ICorProfilerInfo9 인터페이스
+          href: icorprofilerinfo9-interface.md
+          items:
+            - name: GetCodeInfo4 메서드
+              href: icorprofilerinfo9-getcodeinfo4-method.md
+            - name: GetILToNativeMapping3 메서드
+              href: icorprofilerinfo9-getiltonativemapping3-method.md
+            - name: GetNativeCodeStartAddresses 메서드
+              href: icorprofilerinfo9-getnativecodestartaddresses-method.md
+        - name: ICorProfilerInfo10 인터페이스
+          href: icorprofilerinfo10-interface.md
+          items:
+            - name: EnumerateObjectReferences 메서드
+              href: icorprofilerinfo10-enumerateobjectreferences-method.md
+            - name: IsFrozenObject 메서드
+            - name: GetLOHObjectSizeThreshold 메서드
+              href: icorprofilerinfo10-isfrozenobject-method.md
+            - name: RequestReJITWithInliners 메서드
+              href: icorprofilerinfo10-suspendruntime-method.md
+            - name: ResumeRuntime 메서드
+            - name: SuspendRuntime 메서드
+              href: icorprofilerinfo10-resumeruntime-method.md
+        - name: ICorProfilerModuleEnum 인터페이스
+          href: icorprofilermoduleenum-interface.md
+          items:
+            - name: Clone 메서드
+              href: icorprofilermoduleenum-clone-method.md
+            - name: GetCount 메서드
+              href: icorprofilermoduleenum-getcount-method.md
+            - name: Next 메서드
+              href: icorprofilermoduleenum-next-method.md
+            - name: Reset 메서드
+              href: icorprofilermoduleenum-reset-method.md
+            - name: Skip 메서드
+              href: icorprofilermoduleenum-skip-method.md
+        - name: ICorProfilerObjectEnum 인터페이스
+          href: icorprofilerobjectenum-interface.md
+          items:
+            - name: Clone 메서드
+              href: icorprofilerobjectenum-clone-method.md
+            - name: GetCount 메서드
+              href: icorprofilerobjectenum-getcount-method.md
+            - name: Next 메서드
+              href: icorprofilerobjectenum-next-method.md
+            - name: Reset 메서드
+              href: icorprofilerobjectenum-reset-method.md
+            - name: Skip 메서드
+              href: icorprofilerobjectenum-skip-method.md
+        - name: ICorProfilerThreadEnum 인터페이스
+          href: icorprofilerthreadenum-interface.md
+          items:
+            - name: Clone 메서드
+              href: icorprofilerthreadenum-clone-method.md
+            - name: GetCount 메서드
+              href: icorprofilerthreadenum-getcount-method.md
+            - name: Next 메서드
+              href: icorprofilerthreadenum-next-method.md
+            - name: Reset 메서드
+              href: icorprofilerthreadenum-reset-method.md
+            - name: Skip 메서드
+              href: icorprofilerthreadenum-skip-method.md
+        - name: IMethodMalloc 인터페이스
+          href: imethodmalloc-interface.md
+          items:
+            - name: Alloc 메서드
+              href: imethodmalloc-alloc-method.md
+    - name: 프로파일링 전역 정적 함수
+      href: profiling-global-static-functions.md
+      items:
+        - name: FunctionEnter 함수
+          href: functionenter-function.md
+        - name: FunctionEnter2 함수
+          href: functionenter2-function.md
+        - name: FunctionEnter3 함수
+          href: functionenter3-function.md
+        - name: FunctionEnter3WithInfo 함수
+          href: functionenter3withinfo-function.md
+        - name: FunctionIDMapper 함수
+          href: functionidmapper-function.md
+        - name: FunctionIDMapper2 함수
+          href: functionidmapper2-function.md
+        - name: FunctionLeave 함수
+          href: functionleave-function.md
+        - name: FunctionLeave2 함수
+          href: functionleave2-function.md
+        - name: FunctionLeave3 함수
+          href: functionleave3-function.md
+        - name: FunctionLeave3WithInfo 함수
+          href: functionleave3withinfo-function.md
+        - name: FunctionTailcall 함수
+          href: functiontailcall-function.md
+        - name: FunctionTailcall2 함수
+          href: functiontailcall2-function.md
+        - name: FunctionTailcall3 함수
+          href: functiontailcall3-function.md
+        - name: FunctionTailcall3WithInfo 함수
+          href: functiontailcall3withinfo-function.md
+        - name: StackSnapshotCallback 함수
+          href: stacksnapshotcallback-function.md
+    - name: 프로파일링 열거형
+      href: profiling-enumerations.md
+      items:
+        - name: COR_PRF_CLAUSE_TYPE 열거형
+          href: cor-prf-clause-type-enumeration.md
+        - name: COR_PRF_CODEGEN_FLAGS 열거형
+          href: cor-prf-codegen-flags-enumeration.md
+        - name: COR_PRF_FINALIZER_FLAGS 열거형
+          href: cor-prf-finalizer-flags-enumeration.md
+        - name: COR_PRF_GC_GENERATION 열거형
+          href: cor-prf-gc-generation-enumeration.md
+        - name: COR_PRF_GC_REASON 열거형
+          href: cor-prf-gc-reason-enumeration.md
+        - name: COR_PRF_GC_ROOT_FLAGS 열거형
+          href: cor-prf-gc-root-flags-enumeration.md
+        - name: COR_PRF_GC_ROOT_KIND 열거형
+          href: cor-prf-gc-root-kind-enumeration.md
+        - name: COR_PRF_HIGH_MONITOR 열거형
+          href: cor-prf-high-monitor-enumeration.md
+        - name: COR_PRF_JIT_CACHE 열거형
+          href: cor-prf-jit-cache-enumeration.md
+        - name: COR_PRF_MISC 열거형
+          href: cor-prf-misc-enumeration.md
+        - name: COR_PRF_MODULE_FLAGS 열거형
+          href: cor-prf-module-flags-enumeration.md
+        - name: COR_PRF_MONITOR 열거형
+          href: cor-prf-monitor-enumeration.md
+        - name: COR_PRF_REJIT_FLAGS 열거형
+          href: cor-prf-rejit-flags-enumeration.md
+        - name: COR_PRF_RUNTIME_TYPE 열거형
+          href: cor-prf-runtime-type-enumeration.md
+        - name: COR_PRF_SNAPSHOT_INFO 열거형
+          href: cor-prf-snapshot-info-enumeration.md
+        - name: COR_PRF_STATIC_TYPE 열거형
+          href: cor-prf-static-type-enumeration.md
+        - name: COR_PRF_SUSPEND_REASON 열거형
+          href: cor-prf-suspend-reason-enumeration.md
+        - name: COR_PRF_TRANSITION_REASON 열거형
+          href: cor-prf-transition-reason-enumeration.md
+    - name: 프로파일링 구조체
+      href: profiling-structures.md
+      items:
+        - name: COR_PRF_ASSEMBLY_REFERENCE_INFO 구조
+          href: cor-prf-assembly-reference-info-structure.md
+        - name: COR_PRF_CODE_INFO 구조체
+          href: cor-prf-code-info-structure.md
+        - name: COR_PRF_EX_CLAUSE_INFO 구조체
+          href: cor-prf-ex-clause-info-structure.md
+        - name: COR_PRF_FUNCTION 구조체
+          href: cor-prf-function-structure.md
+        - name: COR_PRF_FUNCTION_ARGUMENT_INFO 구조체
+          href: cor-prf-function-argument-info-structure.md
+        - name: COR_PRF_FUNCTION_ARGUMENT_RANGE 구조체
+          href: cor-prf-function-argument-range-structure.md
+        - name: COR_PRF_GC_GENERATION_RANGE 구조체
+          href: cor-prf-gc-generation-range-structure.md

@@ -2,12 +2,12 @@
 title: '방법: 요소 값 검색(LINQ to XML)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 4228c007-07c9-4cf2-a45b-e7074c109581
-ms.openlocfilehash: 7537c111e7d869f8a3e2458706864960820f9764
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: a7b36ea7bb602c241593da356b87d35baee8163f
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46703333"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253361"
 ---
 # <a name="how-to-retrieve-the-value-of-an-element-linq-to-xml-c"></a>방법: 요소 값 검색(LINQ to XML)(C#)
 이 항목에서는 요소의 값을 가져오는 방법을 보여 줍니다. 두 가지 주요 방법으로 요소의 값을 가져올 수 있습니다. 한 가지 방법은 <xref:System.Xml.Linq.XElement> 또는 <xref:System.Xml.Linq.XAttribute>를 원하는 형식으로 캐스팅하는 것입니다. 명시적 변환 연산자는 요소나 특성의 내용을 지정된 형식으로 변환하고 변수에 할당합니다. 또는 <xref:System.Xml.Linq.XElement.Value%2A?displayProperty=nameWithType> 속성이나 <xref:System.Xml.Linq.XAttribute.Value%2A?displayProperty=nameWithType> 속성을 사용할 수 있습니다.  
@@ -25,7 +25,7 @@ Console.WriteLine("Value of e:" + (string)e);
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
@@ -41,7 +41,7 @@ Console.WriteLine("Value of e:" + (int)e);
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 <Age>44</Age>  
 Value of e:44  
 ```  
@@ -61,13 +61,13 @@ Console.WriteLine("Value of e:" + e.Value);
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 <StringElement>abcde</StringElement>  
 Value of e:abcde  
 ```  
   
 ## <a name="example"></a>예  
- 요소가 있는지 확실하지 않은 경우에도 요소의 값을 검색하려는 경우가 있습니다. 이 경우 캐스팅된 요소를 nullable 형식(`string` 또는 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]의 nullable 형식 중 하나)에 할당할 때 요소가 없으면 할당된 변수가 `null`로 설정됩니다. 다음 코드에서는 요소가 존재하지 않을 수도 있을 때 <xref:System.Xml.Linq.XElement.Value%2A> 속성을 사용하는 것보다 캐스팅을 사용하는 것이 더 쉽다는 사실을 보여 줍니다.  
+ 요소가 있는지 확실하지 않은 경우에도 요소의 값을 검색하려는 경우가 있습니다. 이 경우 캐스팅된 요소를 nullable 형식(`string` 또는 .NET Framework의 nullable 형식 중 하나)에 할당할 때 요소가 없으면 할당된 변수가 `null`로 설정됩니다. 다음 코드에서는 요소가 존재하지 않을 수도 있을 때 <xref:System.Xml.Linq.XElement.Value%2A> 속성을 사용하는 것보다 캐스팅을 사용하는 것이 더 쉽다는 사실을 보여 줍니다.  
   
 ```csharp  
 XElement root = new XElement("Root",  
@@ -131,7 +131,7 @@ Console.WriteLine("v4:{0}", v4 == null ? "element does not exist" : v4.ToString(
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```output  
 c1:child 1 content  
 c2:2  
 c3:element does not exist  
@@ -147,4 +147,4 @@ v4:element does not exist
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 축(C#)](./linq-to-xml-axes-overview.md)

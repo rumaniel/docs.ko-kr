@@ -1,17 +1,18 @@
 ---
-title: in(C# 참조)
+title: in - C# 참조
+ms.custom: seodec18
 ms.date: 02/06/2018
 f1_keywords:
 - in
 - in_CSharpKeyword
 helpviewer_keywords:
 - in keyword [C#]
-ms.openlocfilehash: 04449d99fd3e1b573333bc11a9766e9809b44785
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 812390554b460579305815147cf0aec14c07ecd9
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44259716"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54646739"
 ---
 # <a name="in-c-reference"></a>in(C# 참조)
 
@@ -25,5 +26,5 @@ ms.locfileid: "44259716"
   
 ## <a name="see-also"></a>참고 항목
 
-- [C# 키워드](index.md)  
+- [C# 키워드](index.md)
 - [C# 참조](../index.md)

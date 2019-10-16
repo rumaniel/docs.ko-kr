@@ -10,31 +10,31 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702948"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64653922"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL 및 일반적인 .NET Framework 비동기 프로그래밍
 .NET Framework에서는 I/O에 바인딩된 비동기 작업과 계산에 바인딩된 비동기 작업을 수행하도록 다음 표준 패턴 두 개를 제공합니다.  
   
--   APM(비동기 프로그래밍 모델) - <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 및 <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>와 같은 Begin/End 메서드 쌍으로 비동기 작업을 표현합니다.  
+- APM(비동기 프로그래밍 모델) - <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 및 <xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType>와 같은 Begin/End 메서드 쌍으로 비동기 작업을 표현합니다.  
   
--   EAP(이벤트 기반 비동기 패턴) - <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> 및 <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>와 같이 *OperationName*Async 및 *OperationName*Completed라는 메서드/이벤트 쌍으로 비동기 작업을 표현합니다. EAP는 .NET Framework 버전 2.0에 도입되었습니다.  
+- EAP(이벤트 기반 비동기 패턴) - <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> 및 <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType>와 같이 *OperationName*Async 및 *OperationName*Completed라는 메서드/이벤트 쌍으로 비동기 작업을 표현합니다. EAP는 .NET Framework 버전 2.0에 도입되었습니다.  
   
  TPL(작업 병렬 라이브러리)을 비동기 패턴의 하나와 함께 다양한 방법으로 사용할 수 있습니다. APM 및 EAP 작업을 둘 다 라이브러리 소비자에 대한 작업으로 노출하거나, APM 패턴을 노출하지만 작업 개체를 사용하여 내부적으로 구현할 수 있습니다. 두 시나리오에서 모두 작업 개체를 사용하여 코드를 간소화하고 다음 유용한 기능을 활용할 수 있습니다.  
   
--   작업이 시작되고 나서 언제든지 작업 연속 형태로 콜백을 등록합니다.  
+- 작업이 시작되고 나서 언제든지 작업 연속 형태로 콜백을 등록합니다.  
   
--   <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A>와 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> 메서드를 사용하거나 <xref:System.Threading.Tasks.Task.WaitAll%2A> 메서드 또는 <xref:System.Threading.Tasks.Task.WaitAny%2A> 메서드를 사용하여 `Begin_` 메서드에 대한 응답으로 실행되는 여러 작업을 조정합니다.  
+- <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A>와 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> 메서드를 사용하거나 <xref:System.Threading.Tasks.Task.WaitAll%2A> 메서드 또는 <xref:System.Threading.Tasks.Task.WaitAny%2A> 메서드를 사용하여 `Begin_` 메서드에 대한 응답으로 실행되는 여러 작업을 조정합니다.  
   
--   I/O에 바인딩된 비동기 작업과 계산에 바인딩된 비동기 작업을 같은 작업 개체로 캡슐화합니다.  
+- I/O에 바인딩된 비동기 작업과 계산에 바인딩된 비동기 작업을 같은 작업 개체로 캡슐화합니다.  
   
--   작업 개체 상태를 모니터링합니다.  
+- 작업 개체 상태를 모니터링합니다.  
   
--   <xref:System.Threading.Tasks.TaskCompletionSource%601>을 사용하여 작업 상태를 작업 개체에 마샬링합니다.  
+- <xref:System.Threading.Tasks.TaskCompletionSource%601>을 사용하여 작업 상태를 작업 개체에 마샬링합니다.  
   
 ## <a name="wrapping-apm-operations-in-a-task"></a>작업으로 APM 작업 래핑  
  <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> 클래스는 둘 다 APM Begin/End 메서드 쌍을 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 인스턴스 하나로 캡슐화하도록 하는 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> 메서드의 여러 가지 오버로드를 제공합니다. 다양한 오버로드가 입력 매개 변수 수가 0~3개인 Begin/End 메서드 쌍을 수용합니다.  
@@ -50,13 +50,13 @@ ms.locfileid: "46702948"
   
  첫 번째 매개 변수는 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 메서드의 서명과 일치하는 <xref:System.Func%606> 대리자입니다. 두 번째 매개 변수는 <xref:System.IAsyncResult>를 사용하고 `TResult`를 반환하는 <xref:System.Func%602> 대리자입니다. <xref:System.IO.FileStream.EndRead%2A>는 정수를 반환하므로 컴파일러에서는 `TResult` 형식을 <xref:System.Int32>로 유추하고 작업 형식을 <xref:System.Threading.Tasks.Task>로 유추합니다. 마지막 매개 변수 4개는 <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 메서드의 매개 변수와 동일합니다.  
   
--   파일 데이터를 저장할 버퍼입니다.  
+- 파일 데이터를 저장할 버퍼입니다.  
   
--   데이터 쓰기를 시작할 버퍼의 오프셋입니다.  
+- 데이터 쓰기를 시작할 버퍼의 오프셋입니다.  
   
--   파일에서 읽을 최대 데이터 양입니다.  
+- 파일에서 읽을 최대 데이터 양입니다.  
   
--   콜백에 전달할 사용자 정의 상태 데이터를 저장하는 선택적 개체입니다.  
+- 콜백에 전달할 사용자 정의 상태 데이터를 저장하는 선택적 개체입니다.  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>콜백 기능에 ContinueWith 사용  
  단순한 바이트 수와는 달리 파일의 데이터에 대한 액세스 권한이 필요할 경우에는 <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> 메서드로는 충분하지 않습니다. 대신에 파일 데이터가 들어 있는 `Result` 속성이 포함된 <xref:System.Threading.Tasks.Task>를 사용하세요. 이 작업을 하려면 원래 작업에 연속을 추가합니다. 연속은 일반적으로 <xref:System.AsyncCallback> 대리자에서 수행하는 작업을 수행합니다. 연속은 선행이 완료되고 데이터 버퍼가 채워졌을 때 호출됩니다. 돌아가기 전에 <xref:System.IO.FileStream> 개체를 닫아야 합니다.  
@@ -104,7 +104,7 @@ ms.locfileid: "46702948"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- 추가적인 예외 처리가 포함되고 클라이언트 코드에서 메서드를 호출하는 방법을 보여주는 더 자세한 예제는 [방법: EAP 패턴을 작업으로 래핑](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)을 참조하세요.  
+ 추가적인 예외 처리가 포함되고 클라이언트 코드에서 메서드를 호출하는 방법을 보여주는 더 자세한 예제는 [방법: 작업에서 EAP 패턴 래핑](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)을 참조하세요.  
   
  <xref:System.Threading.Tasks.TaskCompletionSource%601>에서 만들어진 작업은 TaskCompletionSource에 의해 시작되므로 사용자 코드는 해당 작업에서 Start 메서드를 호출하지 않아야 합니다.  
   

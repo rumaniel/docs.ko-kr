@@ -2,12 +2,12 @@
 title: IdentityModel 예외
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33474872"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486661"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 예외
 이 항목에서는 IdentityModel에 의해 생성된 모든 예외를 보여 줍니다.  
@@ -23,16 +23,16 @@ ms.locfileid: "33474872"
 |SAMLAttributeMissingNameAttributeOnRead|읽는 중인 SamlAttribute의 'Name'이 없거나 길이가 0입니다.|  
 |UnknownICryptoType|ICrypto 구현이 지원되지 않습니다.|  
 |TraceCodeSecurityTokenProviderClosed|보안 토큰 공급자가 닫혔습니다.|  
-|SAMLUnableToLoadAdvice|로드 하지 못했습니다 된 \<saml:advice > 요소입니다.|  
+|SAMLUnableToLoadAdvice|로드 하지 못했습니다는 \<saml: advice > 요소입니다.|  
 |SAMLAuthenticationStatementMissingAuthenticationMethodOnRead|읽는 중인 SamlAuthenticationStatement에 대한 'AuthenticationMethod' 특성이 없거나 길이가 0입니다.|  
-|UnsupportedTransformAlgorithm|지원되지 않는 변환 또는 정형화 알고리즘입니다.|  
+|UnsupportedTransformAlgorithm|지원되지 않는 변형 또는 정형화 알고리즘입니다.|  
 |SAMLAudienceRestrictionShouldHaveOneAudience|SamlAudienceRestrictionCondition은 최소한 하나 이상의 Audience(URI)를 포함해야 합니다.|  
 |SAMLEvidenceShouldHaveOneAssertion|SamlEvidence는 ID 또는 참조로 최소한 하나 이상의 SamlAssertion을 참조해야 합니다.|  
 |SAMLAudienceRestrictionInvalidAudienceValueOnRead|읽는 중인 SamlAudienceRestrictionCondition의 'Audience' 요소에 값이 없습니다.|  
 |X509ChainBuildFail|특정 X.509 인증서 체인 작성에 실패했습니다. 사용한 인증서에 확인할 수 없는 신뢰 체인이 포함되어 있습니다. 인증서를 바꾸거나 certificateValidationMode를 변경하십시오.|  
 |XDCannotFindValueInDictionaryString|특정 값 ID를 사전 문자열에서 찾을 수 없습니다.|  
 |TraceCodeImportSecurityChannelBindingEntry|보안 ImportChannelBinding을 시작합니다.|  
-|PrivateKeyExchangeNotSupported|개인 키가 교환 KeySpec을 지원하지 않습니다.|  
+|PrivateKeyExchangeNotSupported|프라이빗 키가 교환 KeySpec을 지원하지 않습니다.|  
 |TokenProviderUnableToGetToken|특정 토큰 공급자가 보안 토큰을 제공할 수 없습니다.|  
 |SAMLEntityCannotBeNullOrEmpty|특정 SamlAssertion 엔터티가 null이거나 비어 있을 수 없습니다.|  
 |SAMLAssertionRequireOneStatement|SamlAssertion에는 최소한 하나 이상의 문이 필요합니다. 만들려는 SamlAssertion에 최소한 하나 이상의 SamlStatement를 추가했는지 확인하십시오.|  
@@ -50,7 +50,7 @@ ms.locfileid: "33474872"
 |SamlTokenMissingSignature|SamlAssertion이 서명되지 않았습니다. SigningCredentials를 설정하여 SamlAssertions에 서명할 수 있습니다.|  
 |ExpectedElementMissing|특정 네임스페이스를 가진 필요한 요소가 없습니다.|  
 |NoKeyIdentifierClauseFound|특정 형식의 절을 SecurityKeyIdentifier에서 찾을 수 없습니다.|  
-|MissingPrivateKey|개인 키가 X.509 인증서에 없습니다.|  
+|MissingPrivateKey|프라이빗 키가 X.509 인증서에 없습니다.|  
 |UnexpectedEOFFromReader|XML 판독기에서의 예기치 않은 파일의 끝입니다.|  
 |UnsupportedKeyDerivationAlgorithm|특정 키 파생 알고리즘이 지원되지 않습니다.|  
 |TokenDoesNotSupportKeyIdentifierClauseCreation|특정 토큰이 특정 키 식별자 절 생성을 지원하지 않습니다.|  
@@ -67,7 +67,7 @@ ms.locfileid: "33474872"
 |TraceCodeSecurityTokenProviderOpened|보안 토큰 공급자가 열렸습니다.|  
 |PublicKeyNotRSA|공개 키가 RSA 키가 아닙니다.|  
 |InvalidReaderState|특정 상태가 제공된 입력 판독기에 올바르지 않습니다.|  
-|UnableToResolveReferenceUriForSignature|다이제스트를 계산하기 위해 서명의 특정 URI를 확인할 수 없습니다.|  
+|UnableToResolveReferenceUriForSignature|다이제스트를 컴퓨팅하기 위해 서명의 특정 URI를 확인할 수 없습니다.|  
 |EmptyBase64Attribute|필수 base64 특성 이름 및 네임스페이스에 대한 빈 값을 찾았습니다.|  
 |SAMLSubjectRequiresConfirmationMethodWhenConfirmationDataOrKeyInfoIsSpecified|확인 데이터 또는 KeyInfo를 지정할 경우 SAML SubjectConfirmation에 Confirmation 메서드가 필요합니다.|  
 |SAMLAudienceRestrictionShouldHaveOneAudienceOnRead|읽는 중인 SamlAudienceRestrictionCondition은 최소한 하나 이상의 'Audience' 값을 포함해야 하지만 이 값을 찾을 수 없습니다.|  
@@ -78,17 +78,17 @@ ms.locfileid: "33474872"
 |TokenRenewalNotSupported|특정 토큰 공급자가 토큰 갱신을 지원하지 않습니다.|  
 |AtLeastOneReferenceRequired|최소한 하나 이상의 참조가 서명에 필요합니다.|  
 |SAMLSignatureAlreadyRead|서명을 이미 SAML 어설션에서 읽었습니다.|  
-|AlgorithmAndPrivateKeyMisMatch|지정된 알고리즘과 개인 키가 일치하지 않습니다.|  
-|EmptyTransformChainNotSupported|비어 있는 변환 체인이 지원되지 않습니다.|  
+|AlgorithmAndPrivateKeyMisMatch|지정된 알고리즘과 프라이빗 키가 일치하지 않습니다.|  
+|EmptyTransformChainNotSupported|비어 있는 변형 체인이 지원되지 않습니다.|  
 |SspiWrapperEncryptDecryptAssert1|SSPIWrapper::EncryptDecryptHelper&#124;'offset' 범위를 벗어났습니다.|  
 |SspiWrapperEncryptDecryptAssert2|SSPIWrapper::EncryptDecryptHelper&#124;'크기'가 범위를 벗어났습니다. SecurityTokenManagerCannotCreateAuthenticatorForRequirement=보안 토큰 관리자가 특정 요구 사항에 대한 토큰 인증자를 만들 수 없습니다.|  
 |UnableToCreateKeyedHashAlgorithm|특정 서명 알고리즘에 대한 특정 값에서 KeyedHashAlgorithm을 만들 수 없습니다.|  
-|SAMLUnableToLoadAssertion|\<saml:assertion > 요소를 로드 하지 못했습니다.|  
+|SAMLUnableToLoadAssertion|\<saml: assertion > 요소를 로드 하지 못했습니다.|  
 |X509FindValueMismatchMulti|특정 X509FindType에서는 인수 findValue의 형식이 두 가지 값 중 하나이어야 합니다. 인수 findValue는 다른 형식입니다.|  
 |TraceCodeSecurityIdentityDeterminationSuccess|EndpointAddress에 대해 ID를 확인했습니다.|  
 |UndefinedUseOfPrefixAtElement|요소에서 사용되는 특정 접두사에 네임스페이스가 정의되지 않았습니다.|  
 |TraceCodeSecuritySessionResponderOperationFailure|보안 세션 작업을 서버에서 실행하지 못했습니다.|  
-|CannotFindCert|특정 검색 조건을 사용하여 X.509 인증서를 찾을 수 없습니다. StoreName , StoreLocation, FindType, FindValue.|  
+|CannotFindCert|특정 검색 조건을 사용 하 여 X.509 인증서를 찾을 수 없습니다. StoreName , StoreLocation, FindType, FindValue.|  
 |X509InvalidUsageTime|특정 X.509 인증서 사용 시간이 잘못되었습니다. 사용 시간이 필요한 NotBefore 시간 및 NotAfter 시간 사이에 속하지 않습니다.|  
 |TraceCodeSecurityIdentityDeterminationFailure|EndpointAddress에 대해 ID를 확인할 수 없습니다.|  
 |AsyncObjectAlreadyEnded|End 메서드가 이 비동기 결과 개체에서 이미 호출되었습니다.|  
@@ -100,11 +100,11 @@ ms.locfileid: "33474872"
 |SAMLAssertionMissingMajorVersionAttributeOnRead|읽는 중인 SamlAssertion의 MajorVersion이 없거나 길이가 0입니다.|  
 |SamlAttributeClaimRightShouldBePossessProperty|이 SamlAttribute 생성자에서는 클레임 권한이 System.IdentityModel.Claims.Rights.PossessProperty 값을 가질 것을 요구합니다.|  
 |AuthorizationPolicyEvaluated|특정 ID가 있는 정책을 확인합니다.|  
-|SAMLUnableToLoadCondtions|\<saml:conditions > 요소를 로드 하지 못했습니다.|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<saml: conditions > 요소를 로드 하지 못했습니다.|  
 |AESKeyLengthNotSupported|특정 비트 키가 지원되지 않습니다. 128, 192 및 256 비트 키만 지원됩니다.|  
 |UserNameCannotBeEmpty|사용자 이름은 비어 있을 수 없습니다.|  
 |AlgorithmAndPublicKeyMisMatch|지정된 알고리즘과 공개 키가 일치하지 않습니다.|  
-|SAMLUnableToLoadCondtion|\<saml:conditions > 요소를 로드 하지 못했습니다.|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<saml: conditions > 요소를 로드 하지 못했습니다.|  
 |SamlAssertionMissingSigningCredentials|SigningCredentials가 SamlAssertion에서 설정되지 않았습니다. SamlAssertions는 서명되어야 합니다. 계속하려면 SamlAssertion에서 올바른 SigningCredentials를 설정하십시오.|  
 |SspiPayloadNotEncrypted|이진 데이터가 SSPI 보안 컨텍스트로 암호화되지 않았습니다.|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|읽는 중인 SamlAuthorizationDecisionStatement에 SamlAction이 없습니다.|  
@@ -113,7 +113,7 @@ ms.locfileid: "33474872"
 |NoInputIsSetForCanonicalization|정형화된 출력을 쓰기 위한 입력이 설정되지 않았습니다.|  
 |TraceCodeSecurityPendingServerSessionAdded|보류 중인 보안 세션을 서버에 추가합니다.|  
 |AsyncCallbackException|AsyncCallback에 예외가 발생했습니다.|  
-|PrivateKeyNotRSA|개인 키가 RSA 키가 아닙니다.|  
+|PrivateKeyNotRSA|프라이빗 키가 RSA 키가 아닙니다.|  
 |TraceCodeSecurityClientSessionKeyRenewed|클라이언트 보안 세션에서 세션 키를 갱신했습니다.|  
 |SAMLAuthorizationDecisionStatementMissingDecisionAttributeOnRead|읽는 중인 SamlAuthorizationDecisionStatement에 대한 'Decision'이 없거나 길이가 0입니다.|  
 |SAMLAttributeNameAttributeRequired|SamlAttribute에 지정된 'Name'은 null이거나 길이가 0일 수 없습니다.|  
@@ -164,9 +164,9 @@ ms.locfileid: "33474872"
 |LengthOfArrayToConvertMustGreaterThanZero|정수로 변환할 배열의 길이는 0보다 커야 합니다.|  
 |InvalidAsyncResult|잘못된 AsyncResult입니다.|  
 |TraceCodeIssuanceTokenProviderRemovedCachedToken|IssuanceTokenProvider에서 만료된 서비스 토큰을 제거했습니다.|  
-|IncorrectUserNameFormat|사용자 이름의 형식이 잘못되었습니다. 형식의 사용자 이름 형식 이어야 "사용자 이름 ' 또는 ' 도메인\\\username'.|  
+|IncorrectUserNameFormat|사용자 이름의 형식이 잘못되었습니다. 형식의 사용자 이름 형식 이어야 합니다 "username' 또는 ' 도메인\\\username'.|  
 |TraceCodeExportSecurityChannelBindingEntry|보안 ExportChannelBinding을 시작하는 중입니다.|  
-|UnsupportedInputTypeForTransform|지정된 입력 형식이 변환에 지원되지 않습니다.|  
+|UnsupportedInputTypeForTransform|지정된 입력 형식이 변형에 지원되지 않습니다.|  
 |CannotFindDocumentRoot|문서의 루트를 찾을 수 없습니다.|  
 |XmlBufferQuotaExceeded|XML 콘텐츠를 버퍼링하는 데 필요한 크기가 버퍼 할당량을 초과했습니다.|  
 |TraceCodeSecuritySessionClosedResponseSendFailure|보안 세션 Close 응답을 클라이언트에게 보내는 동안 오류가 발생했습니다.|  
@@ -188,7 +188,7 @@ ms.locfileid: "33474872"
 |SAMLAuthorizationDecisionShouldHaveOneAction|SamlAuthorizationDecisionStatement에 최소한 하나 이상의 SamlAction이 있어야 합니다.|  
 |TraceCodeSecurityTokenAuthenticatorClosed|보안 토큰 인증자가 닫혔습니다.|  
 |TraceCodeSecurityAuditWrittenSuccess|보안 감사 로그가 기록되었습니다.|  
-|PrivateKeyNotDSA|개인 키가 DSA 키가 아닙니다.|  
+|PrivateKeyNotDSA|프라이빗 키가 DSA 키가 아닙니다.|  
 |MessageNumberRollover|이 시퀀스에 대한 최대 시퀀스 번호를 초과했습니다.|  
 |AESPaddingModeNotSupported|지정된 패딩 모드가 지원되지 않습니다. PKCS7 및 ISO10126만 지원됩니다.|  
 |SAMLSubjectRequiresNameIdentifierOrConfirmationMethodOnRead|읽는 중인 SamlSubject에 대한 필수 'NameIdentifier' 및 'ConfrimationMethod' 요소를 찾을 수 없습니다.|  
@@ -227,8 +227,8 @@ ms.locfileid: "33474872"
 |UnableToCreateSignatureDeformatterFromAsymmetricCrypto|지정된 비대칭 암호화에서 지정된 알고리즘에 대한 서명 디포맷터를 만들 수 없습니다.|  
 |TraceCodeIdentityModelAsyncCallbackThrewException|비동기 콜백에 예외가 발생했습니다.|  
 |LengthMustBeGreaterThanZero|이 인수의 길이는 0보다 커야 합니다.|  
-|FoundMultipleCerts|지정된 검색 조건을 사용하여 여러 X.509 인증서를 찾았습니다. StoreName, StoreLocation, FindType, FindValue. 더 구체적인 찾기 값을 제공하십시오.|  
-|AtLeastOneTransformRequired|변환 요소는 최소한 하나 이상의 변환을 포함해야 합니다.|  
+|FoundMultipleCerts|지정 된 검색 조건을 사용 하 여 여러 X.509 인증서를 찾았습니다. StoreName, StoreLocation, FindType, FindValue. 더 구체적인 찾기 값을 제공하십시오.|  
+|AtLeastOneTransformRequired|변형 요소는 최소한 하나 이상의 변형을 포함해야 합니다.|  
 |SAMLTokenNotSerialized|SamlAssertion을 XML로 serialize할 수 없습니다. 자세한 내용은 내부 예외를 참조하십시오.|  
 |TraceCodeSecurityBindingOutgoingMessageSecured|보안 프로토콜에서 보내는 메시지를 보안 처리했습니다.|  
 |KeyIdentifierClauseDoesNotSupportKeyCreation|이 SecurityKeyIdentifierClause는 키 작성을 지원하지 않습니다.|  
@@ -238,7 +238,7 @@ ms.locfileid: "33474872"
 |SAMLAttributeShouldHaveOneValue|특성 값을 찾을 수 없습니다. SamlAttribute 특성에는 최소한 하나 이상의 특성 값이 있어야 합니다.|  
 |TraceCodeSecurityBindingVerifyIncomingMessageFailure|보안 프로토콜에서 들어오는 메시지를 확인할 수 없습니다.|  
 |SamlSigningTokenMissing|SamlSecurityTokenAuthenticator에 전달된 SamlAssertion에 서명 토큰이 없습니다.|  
-|NoPrivateKeyAvailable|개인 키를 사용할 수 없습니다.|  
+|NoPrivateKeyAvailable|프라이빗 키를 사용할 수 없습니다.|  
 |ValueMustBeOne|이 인수의 값은 1이어야 합니다.|  
 |TraceCodeSecurityPendingServerSessionRemoved|서버가 보류 중인 보안 세션을 활성화했습니다.|  
 |TraceCodeImportSecurityChannelBindingExit|보안 ImportChannelBinding을 완료했습니다.|  
@@ -262,7 +262,7 @@ ms.locfileid: "33474872"
 |ChildNodeTypeMissing|지정된 XML 요소에 지정된 형식의 자식 항목이 없습니다.|  
 |TraceCodeSecurityPendingServerSessionClosed|서버가 보류 중인 보안 세션을 닫았습니다.|  
 |TraceCodeSecuritySessionCloseResponseSent|서버 보안 세션이 Close 응답을 클라이언트에게 보냈습니다.|  
-|TraceCodeSecurityIdentityHostNameNormalizationFailure|끝점 주소의 HostName 부분을 정규화할 수 없습니다.|  
+|TraceCodeSecurityIdentityHostNameNormalizationFailure|엔드포인트 주소의 HostName 부분을 정규화할 수 없습니다.|  
 |FailAcceptSecurityContext|AcceptSecurityContext가 실패했습니다.|  
 |EmptyXmlElementError|지정된 요소가 비어 있을 수 없습니다.|  
 |PrefixNotDefinedForNamespace|지정된 네임스페이스에 대한 접두사가 이 컨텍스트에 정의되지 않았으므로 선언할 수 없습니다.|  

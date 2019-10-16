@@ -13,27 +13,27 @@ helpviewer_keywords:
 - PanelClick event [Windows Forms], determining panel clicked
 - Panel control [Windows Forms], determining click
 ms.assetid: d14c6092-04b2-4a07-8ddf-0dd11277ff5f
-ms.openlocfilehash: b83dc7273c612e914840307bc749abef780284ba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6229d8965949641105cd0e9708474c3249d52d1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527976"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965718"
 ---
 # <a name="how-to-determine-which-panel-in-the-windows-forms-statusbar-control-was-clicked"></a>방법: Windows Forms StatusBar 컨트롤에서 클릭한 패널 확인
 > [!IMPORTANT]
->  <xref:System.Windows.Forms.StatusStrip> 및 <xref:System.Windows.Forms.ToolStripStatusLabel> 컨트롤 교체 및 기능을 추가 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 제어; 그러나는 <xref:System.Windows.Forms.StatusBar> 및 <xref:System.Windows.Forms.StatusBarPanel> 버전과 호환성 및 이후 사용에 대 한 컨트롤이 유지 되는 경우 있습니다 이 옵션을 선택 합니다.  
+> 및 <xref:System.Windows.Forms.StatusStrip> <xref:System.Windows.Forms.StatusBar> <xref:System.Windows.Forms.StatusBarPanel> <xref:System.Windows.Forms.StatusBar> 컨트롤은를 대체 하 고 및 <xref:System.Windows.Forms.StatusBarPanel> 컨트롤에 기능을 추가 합니다. 그러나 및 컨트롤은 이전 버전과의 호환성 및 향후 사용을 위해 유지 됩니다. <xref:System.Windows.Forms.ToolStripStatusLabel> 선택.  
   
- 프로그램에는 [StatusBar 컨트롤](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md) 컨트롤 내에서 case 문을 사용 하 여, 사용자가 클릭에 응답을 <xref:System.Windows.Forms.StatusBar.PanelClick> 이벤트입니다. 이벤트는 클릭에 대 한 참조를 포함 하는 인수 (패널 인수)을 포함 <xref:System.Windows.Forms.StatusBarPanel>합니다. 이 참조를 사용 하 여 클릭 한 패널의 인덱스를 확인할 수 있으며 그에 따라 프로그래밍할 수도 있습니다.  
+ 사용자 클릭에 응답 하도록 [StatusBar 컨트롤](statusbar-control-windows-forms.md) 컨트롤을 프로그래밍 하려면 <xref:System.Windows.Forms.StatusBar.PanelClick> 이벤트 내에서 case 문을 사용 합니다. 이벤트는 클릭 <xref:System.Windows.Forms.StatusBarPanel>한에 대 한 참조를 포함 하는 인수 (패널 인수)를 포함 합니다. 이 참조를 사용 하 여 클릭 한 패널의 인덱스를 확인 하 고 적절 하 게 프로그래밍할 수 있습니다.  
   
 > [!NOTE]
->  확인 된 <xref:System.Windows.Forms.StatusBar> 컨트롤의 <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> 속성이로 설정 되어 `true`합니다.  
+> 컨트롤의 <xref:System.Windows.Forms.StatusBar.ShowPanels%2A> 속성이 로`true`설정 되어 있는지 확인 합니다. <xref:System.Windows.Forms.StatusBar>  
   
 ### <a name="to-determine-which-panel-was-clicked"></a>클릭 한 패널을 확인 하려면  
   
-1.  에 <xref:System.Windows.Forms.StatusBar.PanelClick> 이벤트 처리기를 사용 하 여 한 `Select Case` (Visual Basic)에서는 또는 `switch case` (Visual C# 또는 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 문에를 이벤트 인수에 클릭 한 패널의 인덱스를 검사 하 여 클릭 한 패널을 확인 합니다.  
+1. `Select Case` `switch case` C# C++이벤트 처리기에서 (Visual Basic) 또는 (visual 또는 visual) 문을 사용 하 여 이벤트 인수에서 클릭 된 패널의 인덱스를 검사 하 여 클릭 한 패널을 확인 합니다. <xref:System.Windows.Forms.StatusBar.PanelClick>  
   
-     다음 코드 예제에서는의 현재 상태, 폼에 필요는 <xref:System.Windows.Forms.StatusBar> 컨트롤 `StatusBar1`와 두 개의 <xref:System.Windows.Forms.StatusBarPanel> 개체 `StatusBarPanel1` 및 `StatusBarPanel2`합니다.  
+     다음 코드 예제 <xref:System.Windows.Forms.StatusBar> 에서는 폼에 컨트롤, `StatusBar1`및 두 개의 <xref:System.Windows.Forms.StatusBarPanel> 개체, `StatusBarPanel1` 및 `StatusBarPanel2`가 있어야 합니다.  
   
     ```vb  
     Private Sub StatusBar1_PanelClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.StatusBarPanelClickEventArgs) Handles StatusBar1.PanelClick  
@@ -79,7 +79,7 @@ ms.locfileid: "33527976"
        }  
     ```  
   
-     (Visual C# [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
+     (시각적 C#개체, C++시각적 개체) 폼의 생성자에 다음 코드를 추가 하 여 이벤트 처리기를 등록 합니다.  
   
     ```csharp  
     this.statusBar1.PanelClick += new   
@@ -93,9 +93,10 @@ ms.locfileid: "33527976"
        (this, &Form1::statusBar1_PanelClick);  
     ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.StatusBar>  
- <xref:System.Windows.Forms.ToolStripStatusLabel>  
- [방법: 상태 표시줄 패널의 크기 설정](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
- [연습: 런타임에 상태 표시줄 정보 업데이트](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
- [StatusBar 컨트롤 개요](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.StatusBar>
+- <xref:System.Windows.Forms.ToolStripStatusLabel>
+- [방법: 상태 표시줄 패널의 크기 설정](how-to-set-the-size-of-status-bar-panels.md)
+- [연습: 런타임에 상태 표시줄 정보 업데이트](walkthrough-updating-status-bar-information-at-run-time.md)
+- [StatusBar 컨트롤 개요](statusbar-control-overview-windows-forms.md)

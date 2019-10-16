@@ -1,1 +1,0 @@
-Windows Server AppFabric 호스팅 기능

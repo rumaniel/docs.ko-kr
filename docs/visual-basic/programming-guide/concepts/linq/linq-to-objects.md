@@ -2,12 +2,12 @@
 title: LINQ to Objects(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: dd4c30bc-1c9b-4781-a482-b5eada38deb2
-ms.openlocfilehash: 87c804a831272b2a0c08ac85a552fec86d665e7f
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: c1e2e8fbaaf984fec69322a459fc7c55890965ad
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44185469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791991"
 ---
 # <a name="linq-to-objects-visual-basic"></a>LINQ to Objects(Visual Basic)
 “LINQ to Objects”라는 용어는 중간 LINQ 공급자 또는 [LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md), [LINQ to XML](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) 등의 API를 사용하지 않고 모든 <xref:System.Collections.IEnumerable> 또는 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션에 대해 LINQ 쿼리를 직접 사용하는 것입니다. LINQ를 사용하면 <xref:System.Collections.Generic.List%601>, <xref:System.Array>, <xref:System.Collections.Generic.Dictionary%602> 등의 모든 열거 가능 컬렉션을 쿼리할 수 있습니다. 컬렉션은 사용자가 정의할 수도 있고 .NET Framework API에서 반환할 수도 있습니다.  
@@ -16,11 +16,11 @@ ms.locfileid: "44185469"
   
  또한 LINQ 쿼리는 기존의 `For Each` 루프에 비해 세 가지 주요 이점을 제공합니다.  
   
-1.  보다 간결하며 쉽게 읽을 수 있습니다(특히 여러 조건을 필터링하는 경우).  
+1. 보다 간결하며 쉽게 읽을 수 있습니다(특히 여러 조건을 필터링하는 경우).  
   
-2.  최소한의 응용 프로그램 코드로도 강력한 필터링, 순서 지정 및 그룹화 기능을 제공합니다.  
+2. 최소한의 애플리케이션 코드로도 강력한 필터링, 순서 지정 및 그룹화 기능을 제공합니다.  
   
-3.  거의 또는 전혀 수정하지 않고도 다른 데이터 소스에 이식할 수 있습니다.  
+3. 거의 또는 전혀 수정하지 않고도 다른 데이터 소스에 이식할 수 있습니다.  
   
  일반적으로는 데이터에 대해 수행하려는 작업이 복잡할수록 기존의 반복 기술 대신 LINQ를 사용하면 더 큰 이점을 얻을 수 있습니다.  
   

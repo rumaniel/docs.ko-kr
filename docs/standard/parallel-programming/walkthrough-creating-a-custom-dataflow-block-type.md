@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: a6147146-0a6a-4d9b-ab0f-237b3c1ac691
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f07f1a2a7c393d70befc42a2c5b090c2c27320c
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 62e2a25e48ead730112a37af451d64c6ccc2e141
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43868619"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593439"
 ---
 # <a name="walkthrough-creating-a-custom-dataflow-block-type"></a>연습: 사용자 지정 데이터 흐름 블록 형식 만들기
 TPL 데이터 흐름 라이브러리는 다양한 기능을 구현하는 여러 데이터 흐름 블록 형식을 제공하지만 사용자 지정 블록 형식을 만들 수도 있습니다. 이 문서에서는 사용자 지정 동작을 구현하는 데이터 흐름 블록 형식을 만드는 방법을 설명합니다.  
@@ -28,7 +28,7 @@ TPL 데이터 흐름 라이브러리는 다양한 기능을 구현하는 여러 
 [!INCLUDE [tpl-install-instructions](../../../includes/tpl-install-instructions.md)]
   
 ## <a name="defining-the-sliding-window-dataflow-block"></a>슬라이딩 윈도우 데이터 흐름 블록 정의  
- 입력 값을 버퍼링한 다음, 슬라이딩 윈도우 방식으로 출력해야 하는 데이터 흐름 응용 프로그램을 고려합니다. 예를 들어 입력 값 {0, 1, 2, 3, 4, 5} 및 윈도우 크기가 3인 경우 슬라이딩 윈도우 데이터 흐름 블록은 출력 배열 {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {3, 4, 5}를 생성합니다. 다음 섹션에서는 이 사용자 지정 동작을 구현하는 데이터 흐름 블록 형식을 만드는 두 가지 방법을 보여줍니다. 첫 번째 방법은 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> 메서드를 사용하여 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 개체와 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 개체의 기능을 하나의 전파자 블록으로 결합합니다. 두 번째 방법은 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>에서 파생되는 클래스를 정의하고 기존 기능을 결합하여 사용자 지정 동작을 수행합니다.  
+ 입력 값을 버퍼링한 다음, 슬라이딩 윈도우 방식으로 출력해야 하는 데이터 흐름 애플리케이션을 고려합니다. 예를 들어 입력 값 {0, 1, 2, 3, 4, 5} 및 윈도우 크기가 3인 경우 슬라이딩 윈도우 데이터 흐름 블록은 출력 배열 {0, 1, 2}, {1, 2, 3}, {2, 3, 4}, {3, 4, 5}를 생성합니다. 다음 섹션에서는 이 사용자 지정 동작을 구현하는 데이터 흐름 블록 형식을 만드는 두 가지 방법을 보여줍니다. 첫 번째 방법은 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> 메서드를 사용하여 <xref:System.Threading.Tasks.Dataflow.ISourceBlock%601> 개체와 <xref:System.Threading.Tasks.Dataflow.ITargetBlock%601> 개체의 기능을 하나의 전파자 블록으로 결합합니다. 두 번째 방법은 <xref:System.Threading.Tasks.Dataflow.IPropagatorBlock%602>에서 파생되는 클래스를 정의하고 기존 기능을 결합하여 사용자 지정 동작을 수행합니다.  
   
 ## <a name="using-the-encapsulate-method-to-define-the-sliding-window-dataflow-block"></a>Encapsulate 메서드를 사용하여 슬라이딩 윈도우 데이터 흐름 블록 정의  
  다음 예제에서는 <xref:System.Threading.Tasks.Dataflow.DataflowBlock.Encapsulate%2A> 메서드를 사용하여 대상과 소스에서 전파자 블록을 만듭니다. 전파자 블록을 사용하면 소스 블록과 대상 블록이 데이터 수신자 및 송신자 역할을 할 수 있습니다.  
@@ -52,17 +52,6 @@ TPL 데이터 흐름 라이브러리는 다양한 기능을 구현하는 여러 
  [!code-csharp[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/csharp/VS_Snippets_Misc/tpldataflow_slidingwindowblock/cs/slidingwindowblock.cs#100)]
  [!code-vb[TPLDataflow_SlidingWindowBlock#100](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpldataflow_slidingwindowblock/vb/slidingwindowblock.vb#100)]  
   
-## <a name="compiling-the-code"></a>코드 컴파일  
- 예제 코드를 복사하여 Visual Studio 프로젝트에 붙여넣거나, `SlidingWindowBlock.cs`(Visual Basic의 경우 `SlidingWindowBlock.vb`) 파일에 붙여넣은 후 Visual Studio 명령 프롬프트 창에서 다음 명령을 실행합니다.  
-  
- Visual C#  
-  
- **csc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.cs**  
-  
- Visual Basic  
-  
- **vbc.exe /r:System.Threading.Tasks.Dataflow.dll SlidingWindowBlock.vb**  
-
 ## <a name="see-also"></a>참고 항목
 
 - [데이터 흐름](../../../docs/standard/parallel-programming/dataflow-task-parallel-library.md)

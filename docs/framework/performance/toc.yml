@@ -1,0 +1,64 @@
+- name: 성능
+  href: index.md
+  items:
+    - name: 대형 응답성 .NET Framework 응용 프로그램 작성
+      href: writing-large-responsive-apps.md
+    - name: .NET Framework 애플리케이션에서 캐시
+      href: caching-in-net-framework-applications.md
+    - name: 초기화 지연
+      href: lazy-initialization.md
+      items:
+        - name: '방법: 개체의 초기화 지연 수행'
+          href: how-to-perform-lazy-initialization-of-objects.md
+    - name: ETW Events in the .NET Framework
+      href: etw-events.md
+      items:
+        - name: 작업 병렬 라이브러리 및 PLINQ의 ETW 이벤트
+          href: etw-events-in-task-parallel-library-and-plinq.md
+        - name: 공용 언어 런타임의 ETW 이벤트
+          href: etw-events-in-the-common-language-runtime.md
+          items:
+            - name: .NET Framework 로깅 제어
+              href: controlling-logging.md
+            - name: CLR ETW 공급자
+              href: clr-etw-providers.md
+            - name: CLR ETW 키워드 및 수준
+              href: clr-etw-keywords-and-levels.md
+            - name: CLR ETW 이벤트
+              href: clr-etw-events.md
+              items:
+                - name: 런타임 정보 이벤트
+                  href: runtime-information-etw-events.md
+                - name: 예외가 throw된 V1 이벤트
+                  href: exception-thrown-v1-etw-event.md
+                - name: 경합 이벤트
+                  href: contention-etw-events.md
+                - name: 스레드 풀 이벤트
+                  href: thread-pool-etw-events.md
+                - name: 로더 이벤트
+                  href: loader-etw-events.md
+                - name: 메서드 이벤트
+                  href: method-etw-events.md
+                - name: 가비지 수집 이벤트
+                  href: garbage-collection-etw-events.md
+                - name: JIT 추적 이벤트
+                  href: jit-tracing-etw-events.md
+                - name: Interop 이벤트
+                  href: interop-etw-events.md
+                - name: ARM 이벤트
+                  href: application-domain-resource-monitoring-arm-etw-events.md
+                - name: 보안 이벤트
+                  href: security-etw-events.md
+                - name: 스택 이벤트
+                  href: stack-etw-event.md
+    - name: 안정성
+      href: reliability.md
+      items:
+        - name: SQL Server 프로그래밍 및 호스트 보호 특성
+          href: sql-server-programming-and-host-protection-attributes.md
+        - name: 안전성 모범 사례
+          href: reliability-best-practices.md
+        - name: 제약이 있는 실행 지역
+          href: constrained-execution-regions.md
+    - name: 성능 팁
+      href: performance-tips.md

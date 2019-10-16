@@ -1,0 +1,23 @@
+- name: 오픈 소스 라이브러리 지침
+  href: index.md
+  items:
+    - name: 시작
+      href: get-started.md
+    - name: 플랫폼 간 대상 지정
+      href: cross-platform-targeting.md
+    - name: 강력한 이름 지정
+      href: strong-naming.md
+    - name: NuGet
+      href: nuget.md
+      items:
+        - name: 종속성
+          href: dependencies.md
+        - name: 소스 링크
+          href: sourcelink.md
+        - name: 게시
+          href: publish-nuget-package.md
+    - name: 버전 관리
+      href: versioning.md
+      items:
+        - name: 호환성이 손상되는 변경
+          href: breaking-changes.md

@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - adorners [WPF], how-to topics
 ms.assetid: e29d7516-d5e6-4500-bd4f-775e6f830984
-ms.openlocfilehash: ba81f8e2d603ee2e734e5afd14182e95804fe69e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 930d0834570529bd958006818cddb8f5692066d7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981684"
 ---
 # <a name="adorners-how-to-topics"></a>표시기 방법 항목
-다음 예에서는 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 주기는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크입니다.  
+다음 예제를 사용 하 여 일반적인 작업을 수행 하는 방법을 보여 줍니다는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 표시기 프레임 워크입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [표시기 구현](../../../../docs/framework/wpf/controls/how-to-implement-an-adorner.md)  
- [요소에 표시기 바인딩](../../../../docs/framework/wpf/controls/how-to-bind-an-adorner-to-an-element.md)  
- [패널의 자식 표시](../../../../docs/framework/wpf/controls/how-to-adorn-the-children-of-a-panel.md)  
- [요소에서 표시기 제거](../../../../docs/framework/wpf/controls/how-to-remove-an-adorner-from-an-element.md)  
- [요소에서 모든 표시기 제거](../../../../docs/framework/wpf/controls/how-to-remove-all-adorners-from-an-element.md)  
+ [표시기 구현](how-to-implement-an-adorner.md)  
+ [요소에 표시기 바인딩](how-to-bind-an-adorner-to-an-element.md)  
+ [패널의 자식 표시](how-to-adorn-the-children-of-a-panel.md)  
+ [요소에서 표시기 제거](how-to-remove-an-adorner-from-an-element.md)  
+ [요소에서 모든 표시기 제거](how-to-remove-all-adorners-from-an-element.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.AdornedElementPlaceholder>  

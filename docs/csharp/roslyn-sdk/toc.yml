@@ -1,0 +1,27 @@
+- name: .NET Compiler Platform SDK(Roslyn API)
+  href: index.md
+  items:
+    - name: 개요
+      href: index.md
+    - name: 컴파일러 API 모델 이해
+      href: compiler-api-model.md
+    - name: 구문 작업
+      href: work-with-syntax.md
+    - name: 의미 체계 작업
+      href: work-with-semantics.md
+    - name: 작업 영역 작업
+      href: work-with-workspace.md
+    - name: 구문 시각화 도우미를 사용하여 코드 살펴보기
+      href: syntax-visualizer.md
+    - name: 빠른 시작
+      items:
+        - name: 구문 분석
+          href: get-started/syntax-analysis.md
+        - name: 의미 체계 분석
+          href: get-started/semantic-analysis.md
+        - name: 구문 변환
+          href: get-started/syntax-transformation.md
+    - name: 자습서
+      items:
+        - name: 첫 번째 분석기 및 코드 수정 빌드
+          href: tutorials/how-to-write-csharp-analyzer-code-fix.md

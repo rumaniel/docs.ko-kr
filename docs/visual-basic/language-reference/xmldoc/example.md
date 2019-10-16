@@ -1,18 +1,18 @@
 ---
-title: '&lt;예제&gt; (Visual Basic)'
+title: <example> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - example XML tag
 - <example> XML tag
 ms.assetid: 90eeda1c-3fc4-427c-879c-5046d265a97c
-ms.openlocfilehash: 2de91d828fd9706b66f4c810486e54e2d3062de0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 510b00d2220b9c65b0e2b8fa3ead70925a9f54ba
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43524519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772506"
 ---
-# <a name="ltexamplegt-visual-basic"></a>&lt;예제&gt; (Visual Basic)
+# <a name="example-visual-basic"></a>\<예제 > (Visual Basic)
 멤버에 대 한 예제를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -21,7 +21,7 @@ ms.locfileid: "43524519"
 <example>description</example>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `description`  
  코드 샘플에 대한 설명입니다.  
   
@@ -33,7 +33,8 @@ ms.locfileid: "43524519"
 ## <a name="example"></a>예제  
  이 예제에서는 합니다 `<example>` 태그 사용에 대 한 예제를 포함 하는 `ID` 필드입니다.  
   
- [!code-vb[VbVbcnXmlDocComments#2](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/example_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#2)]  
   
-## <a name="see-also"></a>참고 항목  
- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>참고자료
+
+- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: be267e832180b49686079f426dfa5c30ffdd81b0
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 14942157429b029147d47e2f88428c56e66523d1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43518065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770749"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>방법: Thumb을 사용하여 캔버스 크기 조정
 사용 하는 방법을 보여 주는이 예제는 <xref:System.Windows.Controls.Primitives.Thumb> 컨트롤의 크기를 조정 하는 <xref:System.Windows.Controls.Canvas> 컨트롤입니다.  
@@ -28,26 +28,27 @@ ms.locfileid: "43518065"
   
  에서는 다음 예제는 <xref:System.Windows.Controls.Primitives.Thumb> 컨트롤의 자식 요소인은 <xref:System.Windows.Controls.Canvas> 제어 합니다. 이벤트 처리기를 해당 <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> 이동할 논리를 제공 하는 이벤트를 <xref:System.Windows.Controls.Primitives.Thumb> 크기를 조정 하 고는 <xref:System.Windows.Controls.Canvas>합니다. 에 대 한 이벤트 처리기를 <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> 하 고 <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> 의 색을 변경 하는 이벤트를 <xref:System.Windows.Controls.Primitives.Thumb> 끌기 작업 중입니다. 다음 예제에서는 정의 된 <xref:System.Windows.Controls.Primitives.Thumb>합니다.  
   
- [!code-xaml[Thumb#thumb](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
+ [!code-xaml[Thumb#thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml#thumb)]  
   
  다음 예제와 <xref:System.Windows.Controls.Primitives.Thumb.DragDelta> 이동 하는 이벤트 처리기는 <xref:System.Windows.Controls.Primitives.Thumb> 크기를 조정 하 고는 <xref:System.Windows.Controls.Canvas> 마우스 이동에 대 한 응답에서 합니다.  
   
- [!code-csharp[Thumb#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#2)]  
+ [!code-csharp[Thumb#2](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#2)]  
   
  다음 예제는 <xref:System.Windows.Controls.Primitives.Thumb.DragStarted> 이벤트 처리기입니다.  
   
- [!code-csharp[Thumb#DragStartedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragstartedhandler)]
- [!code-vb[Thumb#DragStartedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragstartedhandler)]  
+ [!code-csharp[Thumb#DragStartedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragstartedhandler)]
+ [!code-vb[Thumb#DragStartedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragstartedhandler)]  
   
  다음 예제는 <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted> 이벤트 처리기입니다.  
   
- [!code-csharp[Thumb#DragCompletedHandler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
- [!code-vb[Thumb#DragCompletedHandler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
+ [!code-csharp[Thumb#DragCompletedHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/Thumb/CSharp/Pane1.xaml.cs#dragcompletedhandler)]
+ [!code-vb[Thumb#DragCompletedHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Thumb/VisualBasic/Pane1.xaml.vb#dragcompletedhandler)]  
   
  전체 샘플을 참조 하세요 [Thumb 끌기 기능 샘플](https://go.microsoft.com/fwlink/?LinkID=160042)합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Controls.Primitives.Thumb>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>  
- <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Controls.Primitives.Thumb>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>
+- <xref:System.Windows.Controls.Primitives.Thumb.DragCompleted>

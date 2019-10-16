@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa69eda974187748d7046c792fa16b7729e3deff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 77f72fb7eb7b0542dc9a3179811a78b189d6b3b0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446884"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778831"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps 메서드
-에 대 한 메타 데이터 정보를 반환 된 <xref:System.Type> 지정한 TypeDef 토큰이 나타내는입니다.  
+메타 데이터 정보를 반환 합니다 <xref:System.Type> 지정한 TypeDef 토큰이 나타내는입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetTypeDefProps (  
    [in]  mdTypeDef   td,  
    [out] LPWSTR      szTypeDef,  
@@ -40,7 +40,7 @@ HRESULT GetTypeDefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `td`  
  [in] 에 대 한 메타 데이터를 반환할 형식을 나타내는 TypeDef 토큰입니다.  
   
@@ -51,23 +51,24 @@ HRESULT GetTypeDefProps (
  [in] 와이드 문자에서 크기 `szTypeDef`합니다.  
   
  `pchTypeDef`  
- [out] 반환 된 와이드 문자의 수가 `szTypeDef`합니다.  
+ [out] 반환 하는 와이드 문자 수가 `szTypeDef`합니다.  
   
  `pdwTypeDefFlags`  
- [out] 형식 정의 수정 하는 플래그에 대 한 포인터입니다. 이 값은의 비트 마스크는 [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) 열거 합니다.  
+ [out] 형식 정의 수정 된 플래그에 대 한 포인터입니다. 이 값은의 비트 마스크를 [CorTypeAttr](../../../../docs/framework/unmanaged-api/metadata/cortypeattr-enumeration.md) 열거형입니다.  
   
  `ptkExtends`  
- [out] TypeDef 또는 TypeRef 메타 데이터 토큰 요청 된 형식의 기본 형식을 나타내는입니다.  
+ [out] 형식 정의 또는 TypeRef 메타 데이터 토큰 요청 된 형식의 기본 형식을 나타내는입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

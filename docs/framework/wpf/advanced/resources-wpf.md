@@ -8,29 +8,29 @@ helpviewer_keywords:
 - resources [WPF]
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
-ms.openlocfilehash: c6e81ee119e82c7b07c5c3b92d35f0e0c184685d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981892"
 ---
 # <a name="resources-wpf"></a>리소스(WPF)
-리소스는 응용 프로그램의 여러 위치에서 다시 사용할 수 있는 개체입니다. WPF는 다양 한 유형의 리소스를 지원합니다. 이러한 리소스는 주로 두 가지 유형의 리소스: XAML 리소스 및 리소스 데이터 파일. XAML 리소스의 예로 브러시 및 스타일을 들 수 있습니다. 리소스 데이터 파일은 응용 프로그램에 필요한 실행 파일이 아닌 데이터 파일.  
+리소스는 애플리케이션의 여러 위치에서 다시 사용할 수 있는 개체입니다. WPF는 다양 한 유형의 리소스를 지원합니다. 이러한 리소스는 주로 두 가지 유형의 리소스: XAML 리소스 및 리소스 데이터 파일입니다. XAML 리소스의 예로 브러시와 스타일이 있습니다. 리소스 데이터 파일은 응용 프로그램 해야 하는 실행 불가능 데이터 파일.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [XAML 리소스](../../../../docs/framework/wpf/advanced/xaml-resources.md)  
- [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)  
- [WPF의 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)  
+ [XAML 리소스](xaml-resources.md)  
+ [WPF 응용 프로그램 리소스, 콘텐츠 및 데이터 파일](../app-development/wpf-application-resource-content-and-data-files.md)  
+ [WPF의 Pack URI](../app-development/pack-uris-in-wpf.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.ResourceDictionary>  
   
- [StaticResource 태그 확장](../../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)  
+ [StaticResource 태그 확장](staticresource-markup-extension.md)  
   
- [DynamicResource 태그 확장](../../../../docs/framework/wpf/advanced/dynamicresource-markup-extension.md)  
+ [DynamicResource 태그 확장](dynamicresource-markup-extension.md)  
   
- [x:Key 지시문](../../../../docs/framework/xaml-services/x-key-directive.md)  
+ [x:Key 지시문](../../xaml-services/x-key-directive.md)  
   
 ## <a name="related-sections"></a>관련 단원  
- [WPF의 XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)
+ [WPF의 XAML](xaml-in-wpf.md)

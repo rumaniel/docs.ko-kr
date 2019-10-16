@@ -7,20 +7,20 @@ helpviewer_keywords:
 - StackPanel control [WPF], how-to topics
 - controls [WPF], StackPanel
 ms.assetid: c9849df3-d000-4cdf-8345-5edcd053919d
-ms.openlocfilehash: c70fba3cd07d6ec88160783c3e922e2f1bafe934
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b7456eeb4fc248998730a21f757699497c83f4e9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791068"
 ---
 # <a name="stackpanel-how-to-topics"></a>StackPanel 방법 항목
-이 섹션의 항목 사용 하는 방법에 설명 된 <xref:System.Windows.Controls.StackPanel> 요소 콘텐츠를 가로 또는 세로로 합니다.  
+이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.StackPanel> 가로나 세로 방향으로 콘텐츠를 스택 하는 요소입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [StackPanel과 DockPanel 중 선택](../../../../docs/framework/wpf/controls/how-to-choose-between-stackpanel-and-dockpanel.md)  
- [StackPanel 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-stackpanel.md)  
- [StackPanel에서 콘텐츠 가로 또는 세로 맞춤](../../../../docs/framework/wpf/controls/how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
+ [StackPanel과 DockPanel 중 선택](how-to-choose-between-stackpanel-and-dockpanel.md)  
+ [StackPanel 만들기](how-to-create-a-stackpanel.md)  
+ [StackPanel에서 콘텐츠 가로 또는 세로 맞춤](how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Panel>  
@@ -38,8 +38,8 @@ ms.locfileid: "33555122"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>관련 단원  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)  
+ [레이아웃](../advanced/layout.md)  
   
- [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 개요](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 개요](scrollviewer-overview.md)

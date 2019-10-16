@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 139cf540617e278eeaae8a2a5acf10dd797d5d10
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 76fc5f578e6da731ffd6406344d00cda8b57f493
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429888"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772402"
 ---
 # <a name="ememoryavailable-enumeration"></a>EMemoryAvailable 열거형
-컴퓨터에서 사용 가능한 실제 메모리의 양을 나타내는 값을 포함 합니다. 이러한 값은 이벤트에 메모리에서 반환 되 고가 및 저가 대 한 논리적으로 매핑하는 `CreateMemoryResourceNotification` Win32 api에서 함수입니다.  
+컴퓨터의 사용 가능한 실제 메모리의 크기를 나타내는 값을 포함 합니다. 이러한 값을 이벤트에 메모리에서 반환 하는 상위 및 하위 논리적으로 매핑할는 `CreateMemoryResourceNotification` Windows api에서 함수입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum {  
     eMemoryAvailableLow     = 1,  
     eMemoryAvailableNeutral = 2,  
@@ -38,23 +38,24 @@ typedef enum {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`eMemoryAvailableHigh`|충분 한 실제 메모리를 사용할 수 있습니다.|  
-|`eMemoryAvailableLow`|매우 적은 양의 실제 메모리를 사용할 수 있습니다.|  
-|`eMemoryAvailableNeutral`|사용 가능한 실제 메모리가 보통 수준입니다.|  
+|`eMemoryAvailableHigh`|다양 한 실제 메모리를 사용할 수 있습니다.|  
+|`eMemoryAvailableLow`|매우 작은 실제 메모리를 사용할 수 있습니다.|  
+|`eMemoryAvailableNeutral`|사용 가능한 실제 메모리를 보통 수준입니다.|  
   
 ## <a name="remarks"></a>설명  
- 에 대 한 호출을 사용 하 여 공용 언어 런타임 (CLR)를 호스트에 의해이 값은 전달 된 [iclrmemorynotificationcallback:: Onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) 메서드.  
+ 에 대 한 호출을 사용 하는 CLR (공용 언어 런타임)에서 호스트에서이 값은 전달 된 [iclrmemorynotificationcallback:: Onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md) 메서드.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
  **라이브러리:** MSCorEE.dll  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [호스팅 열거형](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

@@ -7,52 +7,52 @@ helpviewer_keywords:
 - data binding [WPF], how-to topics
 - binding data [WPF], how-to topics
 ms.assetid: a3b2563e-d879-41a7-9dfd-ac56b27fdcad
-ms.openlocfilehash: ae69481a884610d6253ee9a45bc3139cabac7e0f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 49929dc5afaa9bc1e97589d244c2bdbbd14cdb00
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023756"
 ---
 # <a name="data-binding-how-to-topics"></a>데이터 바인딩 방법 항목
-이 섹션의 항목에는 데이터에 바인딩할 요소 다양 한 형식의 공용 언어 런타임 (CLR) 개체 및 XML 데이터 원본에서에서 데이터 바인딩을 사용 하는 방법을 설명 합니다.  
+이 섹션의에서 항목에서는 다양 한 공용 언어 런타임 (CLR) 개체 및 XML 형식의 데이터 원본에서에서 데이터 요소를 바인딩할 데이터 바인딩을 사용 하는 방법에 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [단순 바인딩 만들기](../../../../docs/framework/wpf/data/how-to-create-a-simple-binding.md)  
- [바인딩 소스 지정](../../../../docs/framework/wpf/data/how-to-specify-the-binding-source.md)  
- [XAML의 바인딩에 사용할 수 있는 데이터 만들기](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)  
- [TextBox 텍스트의 소스를 업데이트하는 시점 제어](../../../../docs/framework/wpf/data/how-to-control-when-the-textbox-text-updates-the-source.md)  
- [바인딩 방향 지정](../../../../docs/framework/wpf/data/how-to-specify-the-direction-of-the-binding.md)  
- [선택에 따라 수집 및 표시 정보에 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
- [열거형 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-an-enumeration.md)  
- [두 컨트롤의 속성 바인딩](../../../../docs/framework/wpf/data/how-to-bind-the-properties-of-two-controls.md)  
- [바인딩 유효성 검사 구현](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)  
- [사용자 지정 개체의 유효성 검사 논리 구현](../../../../docs/framework/wpf/data/how-to-implement-validation-logic-on-custom-objects.md)  
- [바인딩된 대상 속성에서 바인딩 개체 가져오기](../../../../docs/framework/wpf/data/how-to-get-the-binding-object-from-a-bound-target-property.md)  
- [CompositeCollection 구현](../../../../docs/framework/wpf/data/how-to-implement-a-compositecollection.md)  
- [바인딩된 데이터 변환](../../../../docs/framework/wpf/data/how-to-convert-bound-data.md)  
- [코드에서 바인딩 만들기](../../../../docs/framework/wpf/data/how-to-create-a-binding-in-code.md)  
- [데이터 수집의 기본 뷰 가져오기](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)  
- [데이터 수집 뷰의 개체 탐색](../../../../docs/framework/wpf/data/how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
- [뷰에서 데이터 필터링](../../../../docs/framework/wpf/data/how-to-filter-data-in-a-view.md)  
- [뷰의 데이터 정렬](../../../../docs/framework/wpf/data/how-to-sort-data-in-a-view.md)  
- [XAML 데이터 정렬 및 그룹화](../../../../docs/framework/wpf/data/how-to-sort-and-group-data-using-a-view-in-xaml.md)  
- [계층적 데이터에 마스터-세부 패턴 사용](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
- [계층적 XML 데이터에 마스터-세부 패턴 사용](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
- [바인딩된 항목 목록을 기반으로 값 산출](../../../../docs/framework/wpf/data/how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
- [속성 변경 알림 구현](../../../../docs/framework/wpf/data/how-to-implement-property-change-notification.md)  
- [ObservableCollection 만들기 및 바인딩](../../../../docs/framework/wpf/data/how-to-create-and-bind-to-an-observablecollection.md)  
- [PriorityBinding 구현](../../../../docs/framework/wpf/data/how-to-implement-prioritybinding.md)  
- [XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
- [XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
- [XML 네임스페이스를 데이터 바인딩에 사용](../../../../docs/framework/wpf/data/how-to-use-xml-namespaces-in-data-binding.md)  
- [ADO.NET 데이터 소스 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-an-ado-net-data-source.md)  
- [메서드 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-a-method.md)  
- [바인딩 업데이트 알림 설정](../../../../docs/framework/wpf/data/how-to-set-up-notification-of-binding-updates.md)  
- [바인딩 지우기](../../../../docs/framework/wpf/data/how-to-clear-bindings.md)  
- [DataTemplate에서 생성된 요소 찾기](../../../../docs/framework/wpf/data/how-to-find-datatemplate-generated-elements.md)  
- [웹 서비스 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-a-web-service.md)  
- [LINQ 쿼리 결과에 바인딩](../../../../docs/framework/wpf/data/how-to-bind-to-the-results-of-a-linq-query.md)  
+ [단순 바인딩 만들기](how-to-create-a-simple-binding.md)  
+ [바인딩 소스 지정](how-to-specify-the-binding-source.md)  
+ [XAML의 바인딩에 사용할 수 있는 데이터 만들기](how-to-make-data-available-for-binding-in-xaml.md)  
+ [TextBox 텍스트의 소스를 업데이트하는 시점 제어](how-to-control-when-the-textbox-text-updates-the-source.md)  
+ [바인딩 방향 지정](how-to-specify-the-direction-of-the-binding.md)  
+ [선택에 따라 수집 및 표시 정보에 바인딩](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)  
+ [열거형 바인딩](how-to-bind-to-an-enumeration.md)  
+ [두 컨트롤의 속성 바인딩](how-to-bind-the-properties-of-two-controls.md)  
+ [바인딩 유효성 검사 구현](how-to-implement-binding-validation.md)  
+ [사용자 지정 개체의 유효성 검사 논리 구현](how-to-implement-validation-logic-on-custom-objects.md)  
+ [바인딩된 대상 속성에서 바인딩 개체 가져오기](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+ [CompositeCollection 구현](how-to-implement-a-compositecollection.md)  
+ [바인딩된 데이터 변환](how-to-convert-bound-data.md)  
+ [코드에서 바인딩 만들기](how-to-create-a-binding-in-code.md)  
+ [데이터 수집의 기본 뷰 가져오기](how-to-get-the-default-view-of-a-data-collection.md)  
+ [데이터 수집 뷰의 개체 탐색](how-to-navigate-through-the-objects-in-a-data-collectionview.md)  
+ [뷰에서 데이터 필터링](how-to-filter-data-in-a-view.md)  
+ [뷰의 데이터 정렬](how-to-sort-data-in-a-view.md)  
+ [XAML 데이터 정렬 및 그룹화](how-to-sort-and-group-data-using-a-view-in-xaml.md)  
+ [계층적 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-data.md)  
+ [계층적 XML 데이터에 마스터-세부 패턴 사용](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)  
+ [바인딩된 항목 목록을 기반으로 값 산출](how-to-produce-a-value-based-on-a-list-of-bound-items.md)  
+ [속성 변경 알림 구현](how-to-implement-property-change-notification.md)  
+ [ObservableCollection 만들기 및 바인딩](how-to-create-and-bind-to-an-observablecollection.md)  
+ [PriorityBinding 구현](how-to-implement-prioritybinding.md)  
+ [XMLDataProvider 및 XPath 쿼리를 사용하여 XML 데이터에 바인딩](how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)  
+ [XDocument, XElement 또는 LINQ for XML 쿼리 결과에 바인딩](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)  
+ [XML 네임스페이스를 데이터 바인딩에 사용](how-to-use-xml-namespaces-in-data-binding.md)  
+ [ADO.NET 데이터 소스 바인딩](how-to-bind-to-an-ado-net-data-source.md)  
+ [메서드 바인딩](how-to-bind-to-a-method.md)  
+ [바인딩 업데이트 알림 설정](how-to-set-up-notification-of-binding-updates.md)  
+ [바인딩 지우기](how-to-clear-bindings.md)  
+ [DataTemplate에서 생성된 요소 찾기](how-to-find-datatemplate-generated-elements.md)  
+ [웹 서비스 바인딩](how-to-bind-to-a-web-service.md)  
+ [LINQ 쿼리 결과에 바인딩](how-to-bind-to-the-results-of-a-linq-query.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Data>  
@@ -64,6 +64,6 @@ ms.locfileid: "33557695"
  <xref:System.Windows.Controls.DataTemplateSelector>  
   
 ## <a name="related-sections"></a>관련 단원  
- [데이터 바인딩](../../../../docs/framework/wpf/data/data-binding-wpf.md)  
+ [데이터 바인딩](data-binding-wpf.md)  
   
- [데이터 바인딩](../../../../docs/framework/wpf/advanced/optimizing-performance-data-binding.md)
+ [데이터 바인딩](../advanced/optimizing-performance-data-binding.md)

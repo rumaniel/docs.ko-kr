@@ -1,15 +1,14 @@
 ---
 title: .NET Core 도구에서 종속성 관리
 description: .NET Core 도구로 종속성을 관리하는 방법을 설명합니다.
-author: blackdwarf
-ms.author: mairaw
 ms.date: 03/06/2017
-ms.openlocfilehash: cbeb9ad17932f6abaf14333a71fab2b4b8fd099c
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.custom: seodec18
+ms.openlocfilehash: ef2de666ee3e6a06ab62f45afe3c624bbbb44ac4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47086076"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611928"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>.NET Core SDK 1.0으로 종속성 관리
 
@@ -35,18 +34,19 @@ MSBuild에 익숙한 경우 이미 존재하는 다른 참조 형식에 익숙�
 <PackageReference Include="PACKAGE_ID" Version="PACKAGE_VERSION" Condition="'$(TargetFramework)' == 'netcoreapp2.1'" />
 ```
 
-위의 예는 지정된 대상에 대해 빌드가 발생한 경우에만 종속성이 유효하다는 것을 의미합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정 되는 MSBuild 속성입니다. 가장 일반적인.NET Core 응용 프로그램의 경우 이 작업을 수행하지 않아도 됩니다. 
+위의 예는 지정된 대상에 대해 빌드가 발생한 경우에만 종속성이 유효하다는 것을 의미합니다. 조건에서 `$(TargetFramework)`는 프로젝트에 설정 되는 MSBuild 속성입니다. 가장 일반적인.NET Core 애플리케이션의 경우 이 작업을 수행하지 않아도 됩니다. 
 
 ## <a name="adding-a-dependency-to-your-project"></a>프로젝트에 종속성 추가
 프로젝트에 종속성을 추가하는 작업은 간단합니다. 다음은 Json.NET 버전 `9.0.1`을 프로젝트에 추가하는 방법을 보여 주는 예입니다. 물론, 다른 NuGet 종속성에 적용됩니다. 
 
 프로젝트 파일을 열면 `<ItemGroup>` 노드가 두 개 이상 나타납니다. 노드 중 하나에 이미 `<PackageReference>` 요소가 있다고 표시됩니다. 이 노드에 새 종속성을 추가하거나 새로 만들 수 있습니다. 둘 중 어떤 방법을 사용해도 결과는 동일합니다. 
 
-이 예제에서는 `dotnet new console`에서 삭제된 기본 템플릿을 사용해보겠습니다. 이는 간단한 콘솔 응용 프로그램입니다. 프로젝트를 열면 먼저 이미 기존 `<PackageReference>`에 `<ItemGroup>`이 있음을 확인할 수 있습니다. 그리고 다음을 추가합니다.
+이 예제에서는 `dotnet new console`에서 삭제된 기본 템플릿을 사용해보겠습니다. 이는 간단한 콘솔 애플리케이션입니다. 프로젝트를 열면 먼저 이미 기존 `<PackageReference>`에 `<ItemGroup>`이 있음을 확인할 수 있습니다. 그리고 다음을 추가합니다.
 
 ```xml
 <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
 ```
+
 이렇게 되면 프로젝트를 저장하고 `dotnet restore` 명령을 실행하여 종속성을 설치합니다. 
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

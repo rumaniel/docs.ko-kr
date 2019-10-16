@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - navigation [WPF]
 ms.assetid: f804648e-558c-4f60-8e48-d11f4a23c436
-ms.openlocfilehash: d6b767e68f8d3217ffacd787137a2d4b91c3761d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4d1cfd1388e68ff6a5f8c6a6b209dc38dd2f80d3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981697"
 ---
 # <a name="navigation-how-to-topics"></a>탐색 방법 항목
-다음 항목에서는 사용 하는 방법을 보여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 탐색 합니다.  
+다음 항목에서는 사용 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 탐색 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [페이지 함수 호출](../../../../docs/framework/wpf/app-development/how-to-call-a-page-function.md)  
-  [Page 함수의 반환 값 가져오기](../../../../docs/framework/wpf/app-development/how-to-get-the-return-value-of-a-page-function.md)  
-  [탐색 기록을 앞으로 또는 뒤로 탐색](../../../../docs/framework/wpf/app-development/how-to-navigate-forward-or-back-through-navigation-history.md)  
-  [Page 함수에서 반환](../../../../docs/framework/wpf/app-development/how-to-return-from-a-page-function.md)  
+ [페이지 함수 호출](how-to-call-a-page-function.md)  
+  [Page 함수의 반환 값 가져오기](how-to-get-the-return-value-of-a-page-function.md)  
+  [탐색 기록을 앞으로 또는 뒤로 탐색](how-to-navigate-forward-or-back-through-navigation-history.md)  
+  [Page 함수에서 반환](how-to-return-from-a-page-function.md)  
   
 ## <a name="related-sections"></a>관련 단원  
- [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [탐색 개요](navigation-overview.md)  
   
- [구조적 탐색 개요](../../../../docs/framework/wpf/app-development/structured-navigation-overview.md)
+ [구조적 탐색 개요](structured-navigation-overview.md)

@@ -2,12 +2,12 @@
 title: UseManagedPresentationBindingElement
 ms.date: 03/30/2017
 ms.assetid: 013f3628-a08f-4db9-b07f-77f889e41db7
-ms.openlocfilehash: 802afc20979c89577231f3ae015aa750a98fe5c2
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 642ca36aa7457978dd5cc589ff10ab08291a3425
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641699"
 ---
 # <a name="usemanagedpresentationbindingelement"></a>UseManagedPresentationBindingElement
 UseManagedPresentationBindingElement  
@@ -29,5 +29,6 @@ class UseManagedPresentationBindingElement : BindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.UseManagedPresentationBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.UseManagedPresentationBindingElement>

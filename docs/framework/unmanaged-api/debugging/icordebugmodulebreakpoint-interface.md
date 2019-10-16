@@ -1,5 +1,5 @@
 ---
-title: ICorDebugModuleBreakpoint Interface1
+title: ICorDebugModuleBreakpoint 인터페이스
 ms.date: 03/30/2017
 api_name:
 - ICorDebugModuleBreakpoint
@@ -16,35 +16,37 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c04d5f779306a67e389f768cefdf633f3d72f0ee
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 03616f2756830e180155102492b15e18fee1085c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416139"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965123"
 ---
-# <a name="icordebugmodulebreakpoint-interface1"></a>ICorDebugModuleBreakpoint Interface1
-특정 모듈에 대 한 액세스를 제공합니다. 이 인터페이스는 ICorDebugBreakpoint 인터페이스의 서브 클래스입니다.  
+# <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint 인터페이스
+
+특정 모듈에 대 한 액세스를 제공 합니다. 이 인터페이스는 ICorDebugBreakpoint 인터페이스의 하위 클래스입니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
 |[GetModule 메서드](../../../../docs/framework/unmanaged-api/debugging/icordebugmodulebreakpoint-getmodule-method.md)|이 중단점이 설정 된 모듈을 참조 하는 ICorDebugModule에 대 한 인터페이스 포인터를 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
   
 > [!NOTE]
->  이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
+> 이 인터페이스는 크로스 시스템 또는 크로스 프로세스 원격 호출을 지원하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
- **라이브러리:** CorGuids.lib  
+ **라이브러리** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a>참고자료
+
+- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

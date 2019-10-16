@@ -1,28 +1,34 @@
 ---
-title: '방법: Windows Communication Foundation 서비스 계약 구현'
-ms.date: 09/14/2018
+title: '자습서: Windows Communication Foundation 서비스 계약 구현'
+ms.date: 03/19/2019
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
 - service contracts [WCF], implementing
 ms.assetid: d5ab51ba-61ae-403e-b3c8-e2669e326806
-ms.openlocfilehash: 569de6f49b56b46ccfeb22e9f0bd25bcf339b7e0
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 05923dc0a2223da5e5fcda483abc1ee1dd2d643f
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48037367"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70928707"
 ---
-# <a name="how-to-implement-a-windows-communication-foundation-service-contract"></a>방법: Windows Communication Foundation 서비스 계약 구현
+# <a name="tutorial-implement-a-windows-communication-foundation-service-contract"></a>자습서: Windows Communication Foundation 서비스 계약 구현
 
-이것이 기본 Windows Communication Foundation (WCF) 서비스와 서비스를 호출할 수 있는 클라이언트를 만드는 데 필요한 6 가지 작업 중 두 번째 숫자입니다. 전체 7 개 작업의 개요를 참조 하세요. 합니다 [초보자를 위한 자습서](../../../docs/framework/wcf/getting-started-tutorial.md) 항목입니다.
+이 자습서에서는 WCF (기본 Windows Communication Foundation) 응용 프로그램을 만드는 데 필요한 5 가지 작업 중 두 번째 작업에 대해 설명 합니다. 자습서에 대 한 개요를 보려면 [자습서: Windows Communication Foundation 응용 프로그램](getting-started-tutorial.md)을 시작 하세요.
 
-WCF 응용 프로그램 만들기의 다음 단계는 서비스 인터페이스를 구현하는 것입니다. 여기에는 사용자 정의 `CalculatorService` 인터페이스를 구현하는 `ICalculator` 클래스의 생성이 포함됩니다.
+WCF 응용 프로그램을 만들기 위한 다음 단계는 이전 단계에서 만든 WCF 서비스 인터페이스를 구현 하는 코드를 추가 하는 것입니다. 이 단계에서는 사용자 정의 `CalculatorService` `ICalculator` 인터페이스를 구현 하는 라는 클래스를 만듭니다. 다음 코드의 각 메서드는 계산기 작업을 호출 하 고 콘솔에 텍스트를 기록 하 여 테스트 합니다. 
 
-## <a name="to-implement-a-wcf-service-contract"></a>WCF 서비스 계약을 구현하려면
+이 자습서에서는 다음 작업을 수행하는 방법을 알아봅니다.
+> [!div class="checklist"]
+>
+> - WCF 서비스 계약을 구현 하는 코드를 추가 합니다.
+> - 솔루션을 빌드합니다.
 
-Service1.cs 또는 Service1.vb 파일을 열고 다음 코드를 추가합니다.
+## <a name="add-code-to-implement-the-wcf-service-contract"></a>WCF 서비스 계약을 구현 하는 코드 추가
+
+**GettingStartedLib**에서 **Service1.cs** 또는 **Service1 .vb** 파일을 열고 해당 코드를 다음 코드로 바꿉니다.
 
 ```csharp
 using System;
@@ -111,154 +117,33 @@ Namespace GettingStartedLib
 End Namespace
 ```
 
-각 메서드는 계산기 연산을 구현하고 더 쉬운 테스트를 위해 일부 텍스트를 콘솔에 씁니다.
+## <a name="edit-appconfig"></a>App.config 편집
 
-## <a name="example"></a>예제
+코드에 대 한 변경 내용을 반영 하도록 **GettingStartedLib** 에서 **app.config** 를 편집 합니다.
 
-다음 코드에서는 계약을 정의하는 인터페이스와 인터페이스 구현을 모두 보여 줍니다.
+- 시각적 C# 프로젝트의 경우:
+  - 줄 14를 다음으로 변경`<service name="GettingStartedLib.CalculatorService">`
+  - 줄 17을 다음으로 변경`<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+  - 줄 22를 다음으로 변경`<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.ICalculator">`
 
-```csharp
-using System;
-using System.ServiceModel;
-
-namespace GettingStartedLib
-{
-    [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]
-    public interface ICalculator
-    {
-        [OperationContract]
-        double Add(double n1, double n2);
-        [OperationContract]
-        double Subtract(double n1, double n2);
-        [OperationContract]
-        double Multiply(double n1, double n2);
-        [OperationContract]
-        double Divide(double n1, double n2);
-    }
-}
-```
-
-```csharp
-using System;
-using System.ServiceModel;
-
-namespace GettingStartedLib
-{
-    public class CalculatorService : ICalculator
-    {
-        public double Add(double n1, double n2)
-        {
-            double result = n1 + n2;
-            Console.WriteLine("Received Add({0},{1})", n1, n2);
-            // Code added to write output to the console window.
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Subtract(double n1, double n2)
-        {
-            double result = n1 - n2;
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Multiply(double n1, double n2)
-        {
-            double result = n1 * n2;
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-
-        public double Divide(double n1, double n2)
-        {
-            double result = n1 / n2;
-            Console.WriteLine("Received Divide({0},{1})", n1, n2);
-            Console.WriteLine("Return: {0}", result);
-            return result;
-        }
-    }
-}
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    <ServiceContract(Namespace:="http://Microsoft.ServiceModel.Samples")> _
-    Public Interface ICalculator
-
-        <OperationContract()> _
-        Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double
-        <OperationContract()> _
-        Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double
-    End Interface
-End Namespace
-```
-
-```vb
-Imports System.ServiceModel
-
-Namespace GettingStartedLib
-
-    Public Class CalculatorService
-        Implements ICalculator
-
-        Public Function Add(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Add
-            Dim result As Double = n1 + n2
-            ' Code added to write output to the console window.
-            Console.WriteLine("Received Add({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-        End Function
-
-        Public Function Subtract(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Subtract
-            Dim result As Double = n1 - n2
-            Console.WriteLine("Received Subtract({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Multiply(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Multiply
-            Dim result As Double = n1 * n2
-            Console.WriteLine("Received Multiply({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-
-        Public Function Divide(ByVal n1 As Double, ByVal n2 As Double) As Double Implements ICalculator.Divide
-            Dim result As Double = n1 / n2
-            Console.WriteLine("Received Divide({0},{1})", n1, n2)
-            Console.WriteLine("Return: {0}", result)
-            Return result
-
-        End Function
-    End Class
-End Namespace
-```
+- Visual Basic 프로젝트의 경우
+  - 줄 14를 다음으로 변경`<service name="GettingStartedLib.GettingStartedLib.CalculatorService">`
+  - 줄 17을 다음으로 변경`<add baseAddress = "http://localhost:8000/GettingStarted/CalculatorService" />`
+  - 줄 22를 다음으로 변경`<endpoint address="" binding="wsHttpBinding" contract="GettingStartedLib.GettingStartedLib.ICalculator">`
 
 ## <a name="compile-the-code"></a>코드 컴파일
 
-컴파일 오류가 없는지 확인 하려면 솔루션을 빌드하십시오. Visual Studio를 사용 하는 경우는 **빌드합니다** 메뉴 선택 **솔루션 빌드** (누르거나 **Ctrl**+**Shift** + **B**).
+솔루션을 빌드하여 컴파일 오류가 없는지 확인 합니다. Visual Studio를 사용 하는 경우 **빌드** 메뉴에서 **솔루션 빌드** 를 선택 하거나 **ctrl**+**Shift**+**B**를 누릅니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-이제 서비스 계약이 만들어지고 구현되었습니다. 다음 단계를 실행합니다.
+이 자습서에서는 다음 작업을 수행하는 방법을 알아보았습니다.
+> [!div class="checklist"]
+>
+> - WCF 서비스 계약을 구현 하는 코드를 추가 합니다.
+> - 솔루션을 빌드합니다.
+
+다음 자습서로 이동 하 여 WCF 서비스를 실행 하는 방법을 알아보세요.
 
 > [!div class="nextstepaction"]
-> [방법: 기본 서비스 호스트 및 실행](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
-
-문제 해결 정보는 [초보자를 위한 자습서 문제 해결](../../../docs/framework/wcf/troubleshooting-the-getting-started-tutorial.md)을 참조하세요.
-
-## <a name="see-also"></a>참고자료
-
-- [시작](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [자체 호스팅](../../../docs/framework/wcf/samples/self-host.md)
+> [자습서: 기본 WCF 서비스를 호스트 하 고 실행 합니다.](how-to-host-and-run-a-basic-wcf-service.md)

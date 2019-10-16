@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4fccbb35-eaa5-44e9-a252-a5c3d4bc7604
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e7ef42bab2d7567741a433cbcacf10a5e689f6a
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 60693a6570eff6f9d4980d8f29f1385bc7462f08
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43867935"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71353159"
 ---
 # <a name="plinq-data-sample"></a>PLINQ 데이터 샘플
 이 샘플에는 고객, 제품, 주문 및 주문 세부 정보의 메모리 내 컬렉션으로 변환되는 메서드와 함께 .csv 형식의 예제 데이터가 포함되어 있습니다. PLINQ를 사용하여 더 실험해 보기 위해 다른 특정 항목의 코드 예제를 이 항목의 코드에 붙여넣고 `Main` 메서드에서 호출할 수 있습니다. 또한 사용자만의 PLINQ 쿼리에 이 데이터를 사용할 수도 있습니다.  
@@ -23,19 +23,19 @@ ms.locfileid: "43867935"
  데이터는 Northwind 데이터베이스의 하위 집합을 나타냅니다. 50개의 고객 레코드가 포함되지만 모든 필드가 포함되는 것은 아닙니다. 모든 고객에 대한 주문 행의 하위 집합 및 해당하는 Order_Detail 데이터가 포함됩니다. 모든 제품이 포함됩니다.  
   
 > [!NOTE]
->  데이터 집합이 기본 `where` 및 `select` 절만 포함하는 쿼리에 대해 PLINQ가 LINQ to Objects보다 더 빠르다는 것을 증명할 정도로 충분히 크지는 않습니다. 이같이 작은 데이터 집합의 속도 증가를 관찰하려면 데이터 집합의 모든 요소에 대해 계산 비용이 많이 드는 작업을 포함하는 쿼리를 사용하세요.  
+> 데이터 집합이 기본 `where` 및 `select` 절만 포함하는 쿼리에 대해 PLINQ가 LINQ to Objects보다 더 빠르다는 것을 증명할 정도로 충분히 크지는 않습니다. 이같이 작은 데이터 집합의 속도 증가를 관찰하려면 데이터 집합의 모든 요소에 대해 계산 비용이 많이 드는 작업을 포함하는 쿼리를 사용하세요.  
   
 ### <a name="to-set-up-this-sample"></a>이 샘플을 설치하려면  
   
-1.  Visual Basic 또는 Visual C# 콘솔 응용 프로그램 프로젝트를 만듭니다.  
+1. Visual Basic 또는 Visual C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
-2.  다음 단계를 따르는 코드를 사용하여 Module1.vb 또는 Program.cs의 내용을 바꿉니다.  
+2. 다음 단계를 따르는 코드를 사용하여 Module1.vb 또는 Program.cs의 내용을 바꿉니다.  
   
-3.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. **텍스트 파일**을 선택한 다음, **확인**을 클릭합니다. 이 항목의 데이터를 복사한 다음, 새 텍스트 파일에 붙여넣습니다. **파일** 메뉴에서 **저장**을 클릭하고 Plinqdata.csv 파일 이름을 지정한 다음, 소스 코드 파일이 포함된 폴더에 저장합니다.  
+3. **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다. **텍스트 파일**을 선택한 다음, **확인**을 클릭합니다. 이 항목의 데이터를 복사한 다음, 새 텍스트 파일에 붙여넣습니다. **파일** 메뉴에서 **저장**을 클릭하고 Plinqdata.csv 파일 이름을 지정한 다음, 소스 코드 파일이 포함된 폴더에 저장합니다.  
   
-4.  F5 키를 눌러 프로젝트가 제대로 빌드되어 실행되는지 확인합니다. 콘솔 창에 다음 출력이 표시됩니다.  
+4. F5 키를 눌러 프로젝트가 제대로 빌드되어 실행되는지 확인합니다. 콘솔 창에 다음 출력이 표시됩니다.  
   
-    ```  
+    ```console  
     Customer count: 50  
     Product count: 77  
     Order count: 190  
@@ -48,7 +48,7 @@ ms.locfileid: "43867935"
   
 ## <a name="data"></a>데이터  
   
-```  
+```console  
 CUSTOMERS  
 ALFKI,Alfreds Futterkiste,Obere Str. 57,Berlin,12209  
 ANATR,Ana Trujillo Emparedados y helados,Avda. de la Constitución 2222,México D.F.,05021  

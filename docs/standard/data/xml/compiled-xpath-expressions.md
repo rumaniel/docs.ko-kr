@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: e25dd95f-b64c-4d8b-a3a4-379e1aa0ad55
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7bb158331c1e03b18601dc553ed8ac0e8fa7930
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: fb6e3677d79f3131432c3daebeee4d166b5450b2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041397"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916668"
 ---
 # <a name="compiled-xpath-expressions"></a>컴파일된 XPath 식
 <xref:System.Xml.XPath.XPathExpression> 개체는 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 클래스의 정적 <xref:System.Xml.XPath.XPathExpression> 메서드 또는 <xref:System.Xml.XPath.XPathNavigator.Compile%2A> 클래스의 <xref:System.Xml.XPath.XPathNavigator> 메서드 중 하나에서 반환된 컴파일된 XPath 쿼리를 나타냅니다.  
@@ -25,15 +25,15 @@ ms.locfileid: "44041397"
   
  컴파일한 후에는 XPath 쿼리에서 반환되는 형식에 따라 <xref:System.Xml.XPath.XPathExpression> 개체를 다음 <xref:System.Xml.XPath.XPathNavigator> 클래스 메서드에 대한 입력으로 사용할 수 있습니다.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Matches%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
  다음 표에서는 각 W3C XPath 반환 형식, 해당 Microsoft .NET Framework 형식 및 반환 형식을 기준으로 <xref:System.Xml.XPath.XPathExpression> 개체와 함께 사용할 수 있는 메서드에 대해 설명합니다.  
   
@@ -45,26 +45,26 @@ ms.locfileid: "44041397"
 |`String`|<xref:System.String>|UCS 문자 시퀀스입니다.|<xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>|  
   
 > [!NOTE]
->  <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 메서드에는 XPath 식을 매개 변수로 사용할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 메서드는 W3C XPath 반환 형식이 아닌 <xref:System.Xml.XPath.XPathNavigator> 개체를 반환합니다.  
+> <xref:System.Xml.XPath.XPathNavigator.Matches%2A> 메서드에는 XPath 식을 매개 변수로 사용할 수 있습니다. <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A> 메서드는 W3C XPath 반환 형식이 아닌 <xref:System.Xml.XPath.XPathNavigator> 개체를 반환합니다.  
   
 ### <a name="the-returntype-property"></a>ReturnType 속성  
  XPath 쿼리를 <xref:System.Xml.XPath.XPathExpression> 개체로 컴파일한 후 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 개체의 <xref:System.Xml.XPath.XPathExpression> 속성을 사용하여 XPath 쿼리가 반환하는 대상을 결정합니다.  
   
  <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 속성은 W3C XPath 반환 형식을 나타내는 다음 <xref:System.Xml.XPath.XPathResultType> 열거형 값 중 하나를 반환합니다.  
   
--   <xref:System.Xml.XPath.XPathResultType.Any>  
+- <xref:System.Xml.XPath.XPathResultType.Any>  
   
--   <xref:System.Xml.XPath.XPathResultType.Boolean>  
+- <xref:System.Xml.XPath.XPathResultType.Boolean>  
   
--   <xref:System.Xml.XPath.XPathResultType.Error>  
+- <xref:System.Xml.XPath.XPathResultType.Error>  
   
--   <xref:System.Xml.XPath.XPathResultType.Navigator>  
+- <xref:System.Xml.XPath.XPathResultType.Navigator>  
   
--   <xref:System.Xml.XPath.XPathResultType.NodeSet>  
+- <xref:System.Xml.XPath.XPathResultType.NodeSet>  
   
--   <xref:System.Xml.XPath.XPathResultType.Number>  
+- <xref:System.Xml.XPath.XPathResultType.Number>  
   
--   <xref:System.Xml.XPath.XPathResultType.String>  
+- <xref:System.Xml.XPath.XPathResultType.String>  
   
  다음 예제에서는 <xref:System.Xml.XPath.XPathExpression> 개체를 사용하여 `books.xml` 파일에서 숫자 및 노드 집합을 반환합니다. 각 <xref:System.Xml.XPath.XPathExpression.ReturnType%2A> 개체의 <xref:System.Xml.XPath.XPathExpression> 속성과 <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A> 및 <xref:System.Xml.XPath.XPathNavigator.Select%2A> 메서드의 결과가 콘솔에 나타납니다.  
   
@@ -121,12 +121,12 @@ Console.WriteLine(nodes.Current.Value);
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [XPathNavigator를 사용하여 XML 데이터 선택](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
-- [XPathNavigator를 사용하여 XPath 식 계산](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
-- [XPathNavigator를 사용하여 노드 일치시키기](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
-- [XPath 쿼리에서 인식하는 노드 형식](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [XPathNavigator를 사용하여 XML 데이터 선택](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
+- [XPathNavigator를 사용하여 XPath 식 계산](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
+- [XPathNavigator를 사용하여 노드 일치시키기](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
+- [XPath 쿼리에서 인식하는 노드 형식](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
 - [XPath 쿼리 및 네임스페이스](../../../../docs/standard/data/xml/xpath-queries-and-namespaces.md)

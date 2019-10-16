@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a7a36d14b67efb3934089dc16de41a3b80ea0c0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b89409a08ed2dff0111b3b6e552960ac78a5882e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447992"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781526"
 ---
 # <a name="imetadatatablesgetcodedtokeninfo-method"></a>IMetaDataTables::GetCodedTokenInfo 메서드
 지정된 된 행 인덱스와 연결 된 토큰의 배열에 대 한 포인터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetCodedTokenInfo (   
     [in]  ULONG       ixCdTkn,  
     [out] ULONG       *pcTokens,  
@@ -38,7 +38,7 @@ HRESULT GetCodedTokenInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ixCdTkn`  
  [in] 반환할 코딩 된 토큰의 종류입니다.  
   
@@ -46,20 +46,21 @@ HRESULT GetCodedTokenInfo (
  [out] 길이에 대 한 포인터 `ppTokens`합니다.  
   
  `ppTokens`  
- [out] 반환 된 토큰의 목록이 포함 된 배열에 대 한 포인터에 대 한 포인터입니다.  
+ [out] 반환 된 토큰의 목록을 포함 하는 배열에 대 한 포인터에 대 한 포인터입니다.  
   
  `ppName`  
  [out] 토큰의 이름에 대 한 포인터에 대 한 포인터 `ixCdTkn`합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

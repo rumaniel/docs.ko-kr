@@ -1,15 +1,15 @@
 ---
-title: Office Open XML 문서 요소 (Visual Basic)를 출력 하는 예제
+title: Office Open XML 문서 부분 (Visual Basic)를 출력 하는 예제
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 2e4b03d89a5b1eabb5751d807ef78442a960389d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 98ef8390c75b7efbf57040e9723c117a6ae18a66
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33640269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931571"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Office Open XML 문서 요소 (Visual Basic)를 출력 하는 예제
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a>Office Open XML 문서 부분 (Visual Basic)를 출력 하는 예제
 이 항목에서는 Office Open XML 문서를 열고 문서 안의 부분에 액세스하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
@@ -64,5 +64,6 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [세부 정보를 Office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a>참고자료
+
+- [자세한 내용은 office Open XML WordprocessingML 문서 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)

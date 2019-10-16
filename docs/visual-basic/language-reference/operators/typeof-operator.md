@@ -12,23 +12,23 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: fe287794423048e993d953c83fc8590a06b7a5e3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c6028f524a16b836310f0c8d564205244515cdc9
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33604057"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71701291"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 연산자(Visual Basic)
-개체 참조 변수를 데이터 형식과 비교합니다.  
+식의 결과에 대 한 런타임 형식이 지정 된 형식과 호환 되는지 여부를 확인 합니다.
   
 ## <a name="syntax"></a>구문  
   
-```  
+```vb  
 result = TypeOf objectexpression Is typename  
 ```  
   
-```  
+```vb  
 result = TypeOf objectexpression IsNot typename  
 ```  
   
@@ -58,14 +58,15 @@ result = TypeOf objectexpression IsNot typename
 ## <a name="example"></a>예제  
  다음 예제에서는 `TypeOf`...`Is` 식을 사용하여 데이터 형식이 다양한 두 개체 참조 변수의 형식 호환성을 테스트합니다.  
   
- [!code-vb[VbVbalrOperators#39](../../../visual-basic/language-reference/operators/codesnippet/VisualBasic/typeof-operator_1.vb)]  
+ [!code-vb[VbVbalrOperators#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#39)]  
   
  `refInteger` 변수에 `Integer`의 런타임 형식이 있습니다. 이 변수는 `Integer`와 호환되지만 `Double`과는 호환되지 않습니다. `refForm` 변수에 <xref:System.Windows.Forms.Form>의 런타임 형식이 있습니다. 이 변수는 해당 형식이기 때문에 <xref:System.Windows.Forms.Form>과 호환되고, <xref:System.Windows.Forms.Form>이 <xref:System.Windows.Forms.Control>에서 상속되기 때문에 <xref:System.Windows.Forms.Control>과 호환되며, <xref:System.Windows.Forms.Form>이 <xref:System.ComponentModel.IComponent>를 구현하는 <xref:System.ComponentModel.Component>에서 상속되기 때문에 <xref:System.ComponentModel.IComponent>와 호환됩니다. 그러나 `refForm`은 <xref:System.Windows.Forms.Label>과 호환되지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Is 연산자](../../../visual-basic/language-reference/operators/is-operator.md)  
- [IsNot 연산자](../../../visual-basic/language-reference/operators/isnot-operator.md)  
- [Visual Basic의 비교 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)  
- [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)  
- [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>참조
+
+- [Is 연산자](../../../visual-basic/language-reference/operators/is-operator.md)
+- [IsNot 연산자](../../../visual-basic/language-reference/operators/isnot-operator.md)
+- [Visual Basic의 비교 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [기능별 연산자 목록](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

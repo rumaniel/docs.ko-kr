@@ -2,19 +2,19 @@
 title: 데이터 정렬 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: f52000d37df45c97754463de1e81cd523806e9c4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ad39aca6a53221f077a6b8313262d508744ff5ea
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908113"
 ---
 # <a name="sorting-data-visual-basic"></a>데이터 정렬 (Visual Basic)
 정렬 작업은 하나 이상의 특성을 기준으로 시퀀스의 요소를 정렬합니다. 첫 번째 정렬 기준은 요소에 대해 기본 정렬을 수행합니다. 두 번째 정렬 기준을 지정하면 각 기본 정렬 그룹 내의 요소를 정렬할 수 있습니다.  
   
  다음 그림은 문자 시퀀스에 대한 사전순 정렬 작업의 결과를 보여 줍니다.  
   
- ![LINQ 정렬 작업](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![사전순 정렬 작업을 보여 주는 그래픽입니다.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  다음 섹션에는 데이터를 정렬하는 표준 쿼리 연산자 메서드가 나와 있습니다.  
   
@@ -142,9 +142,10 @@ MsgBox(sb.ToString())
 ' brown  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Linq>  
- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
- [Order By 절](../../../../visual-basic/language-reference/queries/order-by-clause.md)  
- [방법: 쿼리 결과 정렬](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)  
- [방법: 정렬 또는 필터 텍스트 데이터에서 단어 또는 필드 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [Order By 절](../../../../visual-basic/language-reference/queries/order-by-clause.md)
+- [방법: 쿼리 결과 정렬](../../../../visual-basic/programming-guide/language-features/linq/how-to-sort-query-results-by-using-linq.md)
+- [방법: 데이터 정렬 또는 필터링 텍스트에서 단어 또는 필드 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

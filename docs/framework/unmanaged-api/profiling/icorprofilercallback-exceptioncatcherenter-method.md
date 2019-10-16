@@ -17,47 +17,48 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8a87fb05a49c2813cf4d299c3663419be1640b4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6a90ae67a7d264273bd0e07a42aa6195122a06ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450832"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776150"
 ---
 # <a name="icorprofilercallbackexceptioncatcherenter-method"></a>ICorProfilerCallback::ExceptionCatcherEnter 메서드
 컨트롤을 적절 한 전달 되는 프로파일러에 알립니다 `catch` 블록입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT ExceptionCatcherEnter(  
     [in] FunctionID functionId,  
     [in] ObjectID   objectId);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionId`  
- [in] 포함 하는 함수 식별자는 `catch` 블록입니다.  
+ [in] 식별자를 포함 하는 함수는 `catch` 블록입니다.  
   
  `objectId`  
- [in] 처리 되 고 예외의 식별자입니다.  
+ [in] 처리 중인 예외의 식별자입니다.  
   
 ## <a name="remarks"></a>설명  
- `ExceptionCatcherEnter` 타임 (JIT) 컴파일러를 사용 하 여 컴파일된 코드에서 catch 포인터가 있는 경우에 메서드가 호출 됩니다. 런타임에서의 내부 코드에 또는 비관리 코드에서 발견 된 예외는이 알림을 호출 하지 않습니다. `objectId` 가비지 수집 이후 개체 이동 되었으면 있으므로 값이 다시 전달 된 `ExceptionThrown` 알림입니다.  
+ `ExceptionCatcherEnter` catch 점은 시간 (JIT) 컴파일러를 사용 하 여 컴파일된 코드의 경우에 메서드가 호출 됩니다. 런타임의 내부 코드 또는 비관리 코드에서 발견 되는 예외는이 알림을 호출 하지 않습니다. `objectId` 가비지 수집 이후 개체 이동 수 있으므로 값이 다시 전달 된 `ExceptionThrown` 알림.  
   
- 스택 가비지 수집을 허용 하는 상태가 아닐 수 있습니다 때문에이 메서드의 구현에서 프로파일러 차단 하지 않아야 하 고 따라서 선점형 가비지 수집을 사용할 수 없습니다. 이때 프로파일러가 차단 하는 경우 가비지 수집을 시도 하 고, 런타임이이 콜백이 반환 될 때까지 차단 됩니다.  
+ 가비지 수집을 허용 하는 상태가 스택의 되었을 수 있으므로이 메서드의 구현에서 프로파일러 차단 되지 않아야 하 고 따라서 preemptive 가비지 수집을 사용할 수 없습니다. 프로파일러 여기 차단 하는 경우 가비지 수집을 시도 하 고, 런타임이이 콜백에서 반환 될 때까지 차단 됩니다.  
   
- 이 메서드는 프로파일러 구현에는 관리 코드에 또는 관리 되는 메모리 할당에서 호출 하지 않습니다.  
+ 이 메서드 구현은 프로파일러의 관리 되는 메모리 할당에서 또는 관리 코드를 호출 하지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)  
- [ExceptionCatcherLeave 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [ExceptionCatcherLeave 메서드](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-exceptioncatcherleave-method.md)

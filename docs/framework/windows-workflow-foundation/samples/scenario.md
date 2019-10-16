@@ -3,11 +3,11 @@ title: Windows 워크플로 시나리오
 ms.date: 03/30/2017
 ms.assetid: cb678fda-79aa-4495-833b-ef570539d4c3
 ms.openlocfilehash: 9e4d4023ee18305b843c62785fa454bb1cbe2787
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49337638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785933"
 ---
 # <a name="scenario"></a>시나리오
 

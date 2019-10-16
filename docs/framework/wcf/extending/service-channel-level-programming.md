@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857761"
 ---
 # <a name="service-channel-level-programming"></a>서비스 채널 수준 프로그래밍
 이 항목에서는 사용 하지 않고 Windows Communication Foundation (WCF) 서비스 응용 프로그램을 작성 하는 방법을 설명 합니다 <xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType> 및 관련된 개체 모델입니다.  
@@ -18,15 +18,15 @@ ms.locfileid: "50197199"
 ## <a name="receiving-messages"></a>메시지 받기  
  메시지를 받은 다음 처리할 준비를 하려면 다음 단계가 필요합니다.  
   
-1.  바인딩을 만듭니다.  
+1. 바인딩을 만듭니다.  
   
-2.  채널 수신기를 빌드합니다.  
+2. 채널 수신기를 빌드합니다.  
   
-3.  채널 수신기를 엽니다.  
+3. 채널 수신기를 엽니다.  
   
-4.  요청을 읽고 회신을 보냅니다.  
+4. 요청을 읽고 회신을 보냅니다.  
   
-5.  모든 채널 개체를 닫습니다.  
+5. 모든 채널 개체를 닫습니다.  
   
 #### <a name="creating-a-binding"></a>바인딩 만들기  
  메시지를 수신 대기하고 받는 첫 번째 단계는 바인딩을 만드는 것입니다. WCF 인스턴스화 중 하나에서 직접 사용할 수 있는 여러 기본 제공 또는 시스템 제공 바인딩이 포함 되어 있습니다. 또한 목록 1의 코드가 수행하는 작업인 CustomBinding 클래스를 인스턴스화하여 사용자 지정 바인딩을 만들 수도 있습니다.  

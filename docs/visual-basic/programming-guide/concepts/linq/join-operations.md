@@ -2,12 +2,12 @@
 title: 조인 작업 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
-ms.openlocfilehash: 660b6d04e0a807a3072cff51d885999545052018
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48025336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61834376"
 ---
 # <a name="join-operations-visual-basic"></a>조인 작업 (Visual Basic)
 두 데이터 소스를 *조인*하는 것은 한 데이터 소스의 개체를 공통 특성을 공유하는 다른 데이터 소스의 개체와 연결하는 것입니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "48025336"
   
  다음 그림에서는 내부 조인 또는 왼쪽 우선 외부 조인에 포함된 두 집합 및 해당 집합 내의 요소를 개념적으로 보여줍니다.  
   
- ![내부&#47;외부를 보여 주는 두 개의 겹치는 원](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![내부/외부를 보여주는 두 개의 겹치는 원](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>메서드  
   
@@ -29,10 +29,10 @@ ms.locfileid: "48025336"
   
 ## <a name="see-also"></a>참고자료
 
-- <xref:System.Linq>  
-- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)  
-- [조인 및 교차곱 쿼리 작성](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
-- [Join 절](../../../../visual-basic/language-reference/queries/join-clause.md)  
-- [방법: 서로 다른 파일 (LINQ) (Visual Basic)의 콘텐츠 조인](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
-- [방법: 여러 소스로 (LINQ) (Visual Basic) 개체 컬렉션 채우기](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [익명 형식](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
+- [조인 및 교차곱 쿼리 작성](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
+- [Join 절](../../../../visual-basic/language-reference/queries/join-clause.md)
+- [방법: 서로 다른 파일 (LINQ) (Visual Basic)의 콘텐츠 조인](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)
+- [방법: 여러 원본 (LINQ) (Visual Basic)에서 개체 컬렉션 채우기](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)

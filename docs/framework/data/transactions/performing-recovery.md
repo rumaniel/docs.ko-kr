@@ -2,20 +2,20 @@
 title: 복구 수행
 ms.date: 03/30/2017
 ms.assetid: 6dd17bf6-ba42-460a-a44b-8046f52b10d0
-ms.openlocfilehash: 149ac6b6162893de830f59b3d18008d8298eab56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fe0e096c31b2ef62a1bc50d40c87f2e12c87343f
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363932"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205891"
 ---
 # <a name="performing-recovery"></a>복구 수행
 리소스 관리자는 리소스 오류가 발생한 후에 트랜잭션 참가 요소를 다시 참여시켜 트랜잭션에서 영속적 참여 항목을 쉽게 확인할 수 있도록 합니다.  
   
 ## <a name="the-recovery-process"></a>복구 프로세스  
- <xref:System.Transactions.IEnlistmentNotification> 인터페이스 구현에서 설명한 대로 나중에 복구할 수 있는 리소스를 지속적으로 참여시키려면 <xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드를 호출해야 합니다. 또한 리소스 오류가 발생할 경우 트랜잭션 참가자에 일관성 있게 레이블을 지정하는 데 사용되는 리소스 관리자 식별자(<xref:System.Transactions.Transaction.EnlistDurable%2A>)를 <xref:System.Guid> 메서드에 제공해야 합니다. 이러한 이유로 <xref:System.Guid> 초기 Enlist에 호출 동일 해야 하는 제공 되는 *resourceManagerIdentifier* 에서 매개 변수는 <xref:System.Transactions.TransactionManager.Reenlist%2A> 복구 하는 동안 호출 합니다. 그렇지 않으면 <xref:System.Transactions.TransactionException>이 throw됩니다. 지속적인 인리스트먼트에 대 한 자세한 내용은 참조 하십시오. [트랜잭션에서 참가자 인 리스트 먼 트 리소스](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md) 합니다.  
+ <xref:System.Transactions.IEnlistmentNotification> 인터페이스 구현에서 설명한 대로 나중에 복구할 수 있는 리소스를 지속적으로 참여시키려면 <xref:System.Transactions.Transaction.EnlistDurable%2A> 메서드를 호출해야 합니다. 또한 리소스 오류가 발생할 경우 트랜잭션 참가자에 일관성 있게 레이블을 지정하는 데 사용되는 리소스 관리자 식별자(<xref:System.Transactions.Transaction.EnlistDurable%2A>)를 <xref:System.Guid> 메서드에 제공해야 합니다. 이러한 이유로 초기 참여 호출 <xref:System.Guid> 에 제공 되는는 복구 하는 동안 <xref:System.Transactions.TransactionManager.Reenlist%2A> 호출의 *resourceManagerIdentifier* 매개 변수와 동일 해야 합니다. 그렇지 않으면 <xref:System.Transactions.TransactionException>이 throw됩니다. 지 속성 인 리스트 먼 트에 대 한 자세한 내용은 [리소스를 트랜잭션에 참가자로 참여](enlisting-resources-as-participants-in-a-transaction.md) 를 참조 하세요.  
   
- 2PC 프로토콜의 준비 단계(1단계)에서 지속적인 리소스 관리자의 구현이 <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> 알림을 받는 경우 이 단계 중에 준비 레코드를 기록해야 합니다. 이 레코드에는 커밋 시 트랜잭션을 완료하는 데 필요한 모든 정보가 들어 있어야 합니다. 준비 레코드 나중에 복구 하는 동안 검색 하 여 액세스할 수는 <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> 의 속성은 *preparingEnlistment* 콜백 합니다. <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> 메서드 내에서 레코드 로깅을 수행하지 않아도 됩니다. RM이 작업자 스레드에서 이 작업을 수행할 수 있습니다.  
+ 2PC 프로토콜의 준비 단계(1단계)에서 지속적인 리소스 관리자의 구현이 <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> 알림을 받는 경우 이 단계 중에 준비 레코드를 기록해야 합니다. 이 레코드에는 커밋 시 트랜잭션을 완료하는 데 필요한 모든 정보가 들어 있어야 합니다. 나중에 <xref:System.Transactions.PreparingEnlistment.RecoveryInformation%2A> *preparingEnlistment* 콜백의 속성을 검색 하 여 복구 하는 동안 준비 레코드에 액세스할 수 있습니다. <xref:System.Transactions.IEnlistmentNotification.Prepare%2A> 메서드 내에서 레코드 로깅을 수행하지 않아도 됩니다. RM이 작업자 스레드에서 이 작업을 수행할 수 있습니다.  
   
  복구 프로세스는 다음 두 단계로 이루어집니다.  
   
@@ -31,4 +31,4 @@ ms.locfileid: "33363932"
 ### <a name="step-2---completing-the-recovery"></a>2단계 - 복구 완료  
  인리스트먼트 재시도가 모두 완료되면 리소스 관리자가 <xref:System.Transactions.TransactionManager.RecoveryComplete%2A> 메서드를 호출합니다. 이 메서드는 복구를 완료하고 리소스 관리자에 더 이상 불확실한 트랜잭션이 없음을 트랜잭션 관리자에게 알립니다. 이렇게 함으로써 리소스 관리자는 <xref:System.Transactions.TransactionManager.Reenlist%2A> 메서드를 다시 호출하지 않도록 합니다.  
   
- 리소스 관리자가 새 트랜잭션에 참여하기 전에 불확실한 트랜잭션을 모두 해결할 필요는 없습니다. 첫 번째 단계는 트랜잭션 관리자 뒤와 관계를 설정 하는 리소스 관리자 후 언제 든 지 수행할 수 있습니다 <xref:System.Transactions.TransactionManager.RecoveryComplete%2A> 되었습니다 (2 단계)를 호출; 1 단계를 다시 수행할 수 없습니다. 2단계는 트랜잭션의 결과에 영향을 주지 않고 여러 번 반복할 수 있습니다.
+ 리소스 관리자가 새 트랜잭션에 참여하기 전에 불확실한 트랜잭션을 모두 해결할 필요는 없습니다. 첫 번째 단계는 리소스 관리자가 트랜잭션 관리자와 관계를 설정한 후 언제 든 지 수행할 수 있지만가 호출 된 <xref:System.Transactions.TransactionManager.RecoveryComplete%2A> 후 (2 단계)에는 1 단계를 다시 수행할 수 없습니다. 2단계는 트랜잭션의 결과에 영향을 주지 않고 여러 번 반복할 수 있습니다.

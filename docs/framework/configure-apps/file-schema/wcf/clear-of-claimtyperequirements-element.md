@@ -1,31 +1,33 @@
 ---
-title: '&lt;claimTypeRequirements&gt; 요소의 &lt;clear&gt;'
+title: <clear>of <claimTypeRequirements> 요소
 ms.date: 03/30/2017
 ms.assetid: ef42fde7-f292-4610-9111-9fea382c3b5f
-ms.openlocfilehash: ca8ea91f5806a6cedc98729de1c45ab6b5de6afb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 01f101f7d0dd5da6a834a4ffb2c7e09df0e23cd8
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747127"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400522"
 ---
-# <a name="ltcleargt-of-ltclaimtyperequirementsgt-element"></a>&lt;claimTypeRequirements&gt; 요소의 &lt;clear&gt;
+# <a name="clear-of-claimtyperequirements-element"></a>\<\<claimTypeRequirements > 요소의 > 지우기
 페더레이션 자격 증명에서 제거할 모든 클레임의 형식을 지정합니다. 이를 통해 컬렉션이 빈 상태로 시작됩니다.  
   
- \<system.ServiceModel>  
-\<바인딩 >  
-\<wsFederatedBinding>  
-\<바인딩 >  
-\<security>  
-\<message>  
-\<claimTypeRequirements >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<wsFederationHttpBinding >** ](wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<메시지 >** ](message-element-of-wsfederationhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<claimTypeRequirements >** ](claimtyperequirements-for-message.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<> 지우기**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<claimTypeRequirements>  
-      <clear />  
-</claimTypeRequirements>  
+<claimTypeRequirements>
+  <clear />
+</claimTypeRequirements>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -39,13 +41,14 @@ ms.locfileid: "32747127"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<claimTypeRequirements>](../../../../../docs/framework/configure-apps/file-schema/wcf/claimtyperequirements-for-message.md)|필요한 클레임 형식의 컬렉션을 지정합니다. 각 요소는 <xref:System.ServiceModel.Configuration.ClaimTypeElement> 형식입니다.<br /><br /> 페더레이션 시나리오에서 서비스는 들어오는 자격 증명에 대한 요구 사항을 기술합니다. 예를 들어, 들어오는 자격 증명은 특정 집합의 클레임 형식이어야 합니다. 이 컬렉션의 각 요소는 페더레이션 자격 증명에 표시되어야 하는 필수 클레임 및 선택적 클레임의 형식을 지정합니다.|  
+|[\<claimTypeRequirements>](claimtyperequirements-for-message.md)|필요한 클레임 형식의 컬렉션을 지정합니다. 각 요소는 <xref:System.ServiceModel.Configuration.ClaimTypeElement> 형식입니다.<br /><br /> 페더레이션 시나리오에서 서비스는 들어오는 자격 증명에 대한 요구 사항을 기술합니다. 예를 들어, 들어오는 자격 증명은 특정 집합의 클레임 형식이어야 합니다. 이 컬렉션의 각 요소는 페더레이션 자격 증명에 표시되어야 하는 필수 클레임 및 선택적 클레임의 형식을 지정합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>  
- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>  
- <xref:System.ServiceModel.Configuration.ClaimTypeElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.FederatedMessageSecurityOverHttp.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Security.Tokens.ClaimTypeRequirement>
+- <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement.ClaimTypeRequirements%2A>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElementCollection>
+- <xref:System.ServiceModel.Configuration.ClaimTypeElement>

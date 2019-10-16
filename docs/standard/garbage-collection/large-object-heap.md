@@ -8,12 +8,12 @@ helpviewer_keywords:
 - GC [.NET ], large object heap
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8dfe3fdbf71918a7ed2b6dccca24f58688bc14f2
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 4663c42b784334f66318c61d531ab4cee2f8b02e
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003089"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71354048"
 ---
 # <a name="the-large-object-heap-on-windows-systems"></a>Windows 시스템의 큰 개체 힙
 
@@ -34,7 +34,7 @@ ms.locfileid: "46003089"
 
 큰 개체는 2세대 수집 동안에만 수집되므로 2세대에 속합니다. 특정 세대가 수집되면 그 이전 세대도 모두 수집됩니다. 예를 들어 1세대 GC가 수행되면 0세대와 1세대가 모두 수집되고, 2세대 GC가 수행되면 전체 힙이 수집됩니다. 이러한 이유로 2세대 GC는 *전체 GC*라고도 합니다. 이 문서에서는 전체 GC 대신 2세대 GC를 언급하지만 용어는 서로 바꿔 사용할 수 있습니다.
 
-세대는 GC 힙의 논리적 뷰를 제공합니다. 실제로 개체는 관리되는 힙 세그먼트에 있습니다. *관리되는 힙 세그먼트*는 GC에서 관리 코드 대신 [VirtualAlloc 함수](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)를 호출하여 OS로부터 예약하는 메모리 청크입니다. CLR이 로드되면 GC에서 작은 개체(SOH 또는 작은 개체 힙)와 큰 개체(큰 개체 힙)에 대해 하나씩 두 개의 초기 힙 세그먼트를 할당합니다.
+세대는 GC 힙의 논리적 뷰를 제공합니다. 실제로 개체는 관리되는 힙 세그먼트에 있습니다. *관리되는 힙 세그먼트*는 GC에서 관리 코드 대신 [VirtualAlloc 함수](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)를 호출하여 OS로부터 예약하는 메모리 청크입니다. CLR이 로드되면 GC에서 작은 개체(SOH 또는 작은 개체 힙)와 큰 개체(큰 개체 힙)에 대해 하나씩 두 개의 초기 힙 세그먼트를 할당합니다.
 
 그런 다음, 이러한 관리되는 힙 세그먼트에 관리되는 개체를 배치하여 할당 요청이 충족됩니다. 개체가 85,000바이트보다 작으면 SOH용 세그먼트에 배치되며, 그렇지 않으면 LOH 세그먼트에 배치됩니다. 세그먼트에 더 많은 개체가 할당됨에 따라 세그먼트가 더 작은 청크로 커밋됩니다.
 SOH의 경우 GC에 남아 있는 개체는 다음 세대로 승격됩니다. 0세대 수집에서 남아 있는 개체는 이제 1세대 개체로 간주되는 방식 등으로 승격됩니다. 그러나 가장 오래된 세대에 남아 있는 개체는 여전히 가장 오래된 세대로 간주됩니다. 즉 2세대에 남아 있는 개체는 2세대 개체가 되고, LOH에 남아 있는 개체는 LOH 개체가 됩니다(2세대와 함께 수집됨).
@@ -47,21 +47,21 @@ SOH의 경우 GC에 남아 있는 개체는 다음 세대로 승격됩니다. 0�
 
 그림 1에서는 GC에서 `Obj1`과 `Obj3`이 소멸된 첫 번째 0세대 GC 이후에 1세대를 형성하고, `Obj2`와 `Obj5`가 소멸된 첫 번째 1세대 이후에 2세대를 형성하는 시나리오를 보여 줍니다. 이 그림과 다음 그림은 설명을 위한 것입니다. 여기에는 힙에서 발생하는 작업을 더 잘 보여 주기 위해 매우 적은 수의 개체가 포함되어 있습니다. 실제로 더 많은 개체가 일반적으로 GC에 포함됩니다.
 
-![그림 1: 0세대 GC 및 1세대 GC](media/loh/loh-figure-1.jpg)  
+![그림 1: 0세대 GC 및 1세대 GC](media/loh/loh-figure-1.jpg)\
 그림 1: 0세대 및 1세대 GC
 
 그림 2에서는 `Obj1`과 `Obj2`가 소멸되었음을 확인한 2세대 GC 이후에 GC가 `Obj1`과 `Obj2`에서 점유하는 데 사용한 메모리에서 연속적인 사용 가능한 공간을 형성하여 `Obj4`에 대한 할당 요청을 충족하는 데 사용했음을 보여 줍니다. 마지막 개체인 `Obj3` 뒤에서 세그먼트 끝까지의 공간도 할당 요청을 충족하는 데 사용할 수 있습니다.
 
-![그림 2: 2세대 GC 이후](media/loh/loh-figure-2.jpg)  
+![그림 2: 2세대 GC 이후](media/loh/loh-figure-2.jpg)\
 그림 2: 2세대 GC 이후
 
 큰 개체 할당 요청을 수용할 사용 가능한 공간이 부족한 경우 GC는 먼저 OS에서 더 많은 세그먼트를 획득하려고 시도합니다. 이 작업이 실패하면 일부 공간을 확보하기 위해 2세대 GC가 트리거됩니다.
 
-1세대 또는 2세대 GC 동안 가비지 수집기는 [VirtualFree 함수](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx)를 호출하여 남아 있는 개체가 없는 세그먼트를 OS에 다시 릴리스합니다. 마지막 남아 있는 개체 뒤에서 세그먼트 끝까지의 공간은 커밋 해제됩니다(응용 프로그램이 즉시 할당되기 때문에 가비지 수집기에서 커밋된 일부 개체를 유지하는 0세대/1세대가 남아 있는 임시 세그먼트는 제외). 그리고 사용 가능한 공간은 다시 설정되어도 커밋된 상태로 유지되므로 OS에서 데이터를 디스크에 다시 쓸 필요가 없습니다.
+1세대 또는 2세대 GC 동안 가비지 수집기는 [VirtualFree 함수](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree)를 호출하여 남아 있는 개체가 없는 세그먼트를 OS에 다시 릴리스합니다. 마지막 남아 있는 개체 뒤에서 세그먼트 끝까지의 공간은 커밋 해제됩니다(애플리케이션이 즉시 할당되기 때문에 가비지 수집기에서 커밋된 일부 개체를 유지하는 0세대/1세대가 남아 있는 임시 세그먼트는 제외). 그리고 사용 가능한 공간은 다시 설정되어도 커밋된 상태로 유지되므로 OS에서 데이터를 디스크에 다시 쓸 필요가 없습니다.
 
-LOH는 2세대 GC 동안에만 수집되므로 LOH 세그먼트는 이러한 GC 동안에만 해제될 수 있습니다. 그림 3에서는 가비지 수집기에서 한 세그먼트(세그먼트 2)를 OS로 다시 릴리스하고, 나머지 세그먼트에 대해 더 많은 공간을 커밋 해제하는 시나리오를 보여 줍니다. 큰 개체 할당 요청을 충족하기 위해 세그먼트 끝에 있는 커밋 해제된 공간을 사용해야 하는 경우 메모리를 다시 커밋합니다. 커밋/커밋 해제에 대한 설명은 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)에 대한 설명서를 참조하세요.
+LOH는 2세대 GC 동안에만 수집되므로 LOH 세그먼트는 이러한 GC 동안에만 해제될 수 있습니다. 그림 3에서는 가비지 수집기에서 한 세그먼트(세그먼트 2)를 OS로 다시 릴리스하고, 나머지 세그먼트에 대해 더 많은 공간을 커밋 해제하는 시나리오를 보여 줍니다. 큰 개체 할당 요청을 충족하기 위해 세그먼트 끝에 있는 커밋 해제된 공간을 사용해야 하는 경우 메모리를 다시 커밋합니다. 커밋/커밋 해제에 대한 설명은 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)에 대한 설명서를 참조하세요.
 
-![그림 3: 2세대 GC 이후의 LOH](media/loh/loh-figure-3.jpg)  
+![그림 3: 2세대 GC 이후의 LOH](media/loh/loh-figure-3.jpg)\
 그림 3: 2세대 GC 이후의 LOH
 
 ## <a name="when-is-a-large-object-collected"></a>큰 개체가 수집되는 경우
@@ -132,7 +132,7 @@ LOH는 2세대 GC 동안에만 수집되므로 LOH 세그먼트는 이러한 GC 
 
 2. 확인한 성능 문제를 설명할 수 있는 항목을 찾지 못한 채 알고 있는 다른 영역을 모두 소진했습니다.
 
-메모리 및 CPU의 기본 사항에 대한 자세한 내용은 [문제를 파악한 후 해결 방법 찾기](https://blogs.msdn.microsoft.com/maoni/2006/09/01/understand-the-problem-before-you-try-to-find-a-solution/) 블로그를 참조하세요.
+메모리 및 CPU의 기본 사항에 대한 자세한 내용은 [문제를 파악한 후 해결 방법 찾기](https://devblogs.microsoft.com/dotnet/understand-the-problem-before-you-try-to-find-a-solution/) 블로그를 참조하세요.
 
 LOH 성능에 대한 데이터를 수집하는 데 사용할 수 있는 도구는 다음과 같습니다.
 
@@ -144,7 +144,7 @@ LOH 성능에 대한 데이터를 수집하는 데 사용할 수 있는 도구�
 
 ### <a name="net-clr-memory-performance-counters"></a>.NET CLR 메모리 성능 카운터
 
-이러한 성능 카운터는 일반적으로 성능 문제를 조사하는 데 유용한 첫 번째 단계입니다(하지만 [ETW 이벤트](#etw) 사용이 권장됨). 그림 4와 같이 원하는 카운터를 추가하여 성능 모니터를 구성합니다. LOH와 관련된 카운터는 다음과 같습니다.
+이러한 성능 카운터는 일반적으로 성능 문제를 조사하는 데 유용한 첫 번째 단계입니다(하지만 [ETW 이벤트](#etw-events) 사용이 권장됨). 그림 4와 같이 원하는 카운터를 추가하여 성능 모니터를 구성합니다. LOH와 관련된 카운터는 다음과 같습니다.
 
 - **2세대 수집**
 
@@ -156,7 +156,7 @@ LOH 성능에 대한 데이터를 수집하는 데 사용할 수 있는 도구�
 
 성능 카운터를 확인하는 일반적인 방법은 성능 모니터(perfmon.exe)를 사용하는 것입니다. "카운터 추가" 명령을 사용하여 관심 있는 프로세스에 대해 원하는 카운터를 추가합니다. 그림 4와 같이 성능 카운터 데이터를 로그 파일에 저장할 수 있습니다.
 
-![그림 4: 성능 카운터 추가](media/loh/perfcounter.png)  
+![성능 카운터 추가를 보여주는 스크린샷.](media/large-object-heap/add-performance-counter.png)
 그림 4: 2세대 GC 이후의 LOH
 
 또한 성능 카운터는 프로그래밍 방식으로 쿼리할 수도 있습니다. 많은 사람들이 일상적인 테스트 프로세스의 일환으로 이러한 방식으로 성능 데이터를 수집합니다. 정상적이지 않은 값이 있는 카운터가 검색되면 다른 방법을 사용하여 조사하는 데 유용한 더 자세한 정보를 얻을 수 있습니다.
@@ -164,17 +164,17 @@ LOH 성능에 대한 데이터를 수집하는 데 사용할 수 있는 도구�
 > [!NOTE]
 > ETW에서 훨씬 더 많은 정보를 제공하므로 성능 카운터 대신 ETW 이벤트를 사용하는 것이 좋습니다.
 
-### <a name="etw"></a>ETW
+### <a name="etw-events"></a>ETW 이벤트
 
 가비지 수집기는 힙에서 수행하는 작업과 그 이유를 파악하는 데 도움이 되는 다양한 ETW 이벤트 집합을 제공합니다. 다음 블로그 게시물에서는 ETW를 통해 GC 이벤트를 수집하고 파악하는 방법을 보여 줍니다.
 
-- [GC ETW 이벤트 - 1](https://blogs.msdn.microsoft.com/maoni/2014/12/22/gc-etw-events-1/)
+- [GC ETW 이벤트 - 1](https://devblogs.microsoft.com/dotnet/gc-etw-events-1/)
 
-- [GC ETW 이벤트 - 2](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-2/)
+- [GC ETW 이벤트 - 2](https://devblogs.microsoft.com/dotnet/gc-etw-events-2/)
 
-- [GC ETW 이벤트 - 3](https://blogs.msdn.microsoft.com/maoni/2014/12/25/gc-etw-events-3/)
+- [GC ETW 이벤트 - 3](https://devblogs.microsoft.com/dotnet/gc-etw-events-3/)
 
-- [GC ETW 이벤트 - 4](https://blogs.msdn.microsoft.com/maoni/2014/12/30/gc-etw-events-4/)
+- [GC ETW 이벤트 - 4](https://devblogs.microsoft.com/dotnet/gc-etw-events-4/)
 
 임시 LOH 할당으로 인해 발생된 과도한 2세대 GC를 확인하려면 GC에 대한 트리거 이유 열을 살펴봅니다. 임시 큰 개체만 할당하는 간단한 테스트의 경우 다음 [PerfView](https://www.microsoft.com/download/details.aspx?id=28567) 명령줄을 사용하여 ETW 이벤트에 대한 정보를 수집할 수 있습니다.
 
@@ -184,7 +184,7 @@ perfview /GCCollectOnly /AcceptEULA /nogui collect
 
 결과는 다음과 같습니다.
 
-![그림 5: PerfView를 사용하여 ETW 이벤트 검사](media/loh/perfview.png)  
+![PerfView에서 ETW 이벤트를 보여주는 스크린샷.](media/large-object-heap/event-tracing-windows-perfview.png)
 그림 5: PerfView를 사용하여 표시된 ETW 이벤트
 
 여기서 알 수 있듯이, 모든 GC는 2세대 GC이며 AllocLarge를 통해 모두 트리거됩니다. 즉, 큰 개체를 할당하면 이 GC가 트리거됩니다. **LOH 잔존율 %** 열이 1%라고 표시되므로 이러한 할당은 일시적입니다.
@@ -197,21 +197,21 @@ perfview /GCOnly /AcceptEULA /nogui collect
 
 이 명령은 대략 100,000개의 할당마다 실행되는 AllocationTick 이벤트를 수집합니다. 즉, 큰 개체가 할당될 때마다 이벤트가 실행됩니다. 큰 개체를 할당한 호출 스택을 보여 주는 GC 힙 할당 보기 중 하나를 살펴볼 수 있습니다.
 
-![그림 6: GC 힙 할당 보기](media/loh/perfview2.png)  
+![가비지 수집기 힙 보기를 보여주는 스크린샷.](media/large-object-heap/garbage-collector-heap.png)
 그림 6: GC 힙 할당 보기
 
 여기서 알 수 있듯이, 이는 `Main` 메서드에서 큰 개체를 할당하는 매우 간단한 테스트입니다.
 
 ### <a name="a-debugger"></a>디버거
 
-메모리 덤프만 있고 실제로 LOH에 있는 개체를 확인해야 하는 경우 .NET에서 제공하는 [SoS 디버거 확장](http://msdn2.microsoft.com/ms404370.aspx)을 사용할 수 있습니다.
+메모리 덤프만 있고 실제로 LOH에 있는 개체를 확인해야 하는 경우 .NET에서 제공하는 [SoS 디버거 확장](../../../docs/framework/tools/sos-dll-sos-debugging-extension.md)을 사용할 수 있습니다.
 
 > [!NOTE]
 > 이 섹션에서 설명하는 디버깅 명령은 [Windows 디버거](https://www.microsoft.com/whdc/devtools/debugging/default.mspx)에 적용할 수 있습니다.
 
 다음은 LOH 분석에서 나오는 출력 샘플입니다.
 
-```
+```console
 0:003> .loadby sos mscorwks
 0:003> !eeheap -gc
 Number of GC Heaps: 1
@@ -252,7 +252,7 @@ LOH는 압축되지 않으므로 LOH가 조각화의 원인으로 간주되는 �
 
    다음 예제에서는 VM 공간의 조각화를 보여 줍니다.
 
-   ```
+   ```console
    0:000> !address
    00000000 : 00000000 - 00010000
    Type     00000000
@@ -302,16 +302,16 @@ LOH는 압축되지 않으므로 LOH가 조각화의 원인으로 간주되는 �
 
 가비지 수집기에서 자주 OS로부터 새 관리되는 힙 세그먼트를 얻고 빈 세그먼트를 OS로 릴리스하는 데 필요한 임시 큰 개체로 인해 가상 메모리 조각화가 발생하는 경우가 더 일반적입니다.
 
-LOH로 인해 VM 조각화가 발생하는지 확인하려면 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx) 및 [VirtualFree](https://msdn.microsoft.com/library/windows/desktop/aa366892(v=vs.85).aspx)에 중단점을 설정하고 이를 호출하는 사람을 확인하면 됩니다. 예를 들어 OS에서 8MB보다 큰 가상 메모리 청크를 할당하려고 한 사람을 확인하려면 다음과 같이 중단점을 설정할 수 있습니다.
+LOH로 인해 VM 조각화가 발생하는지 확인하려면 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc) 및 [VirtualFree](/windows/desktop/api/memoryapi/nf-memoryapi-virtualfree)에 중단점을 설정하고 이를 호출하는 사람을 확인하면 됩니다. 예를 들어 OS에서 8MB보다 큰 가상 메모리 청크를 할당하려고 한 사람을 확인하려면 다음과 같이 중단점을 설정할 수 있습니다.
 
 ```console
 bp kernel32!virtualalloc "j (dwo(@esp+8)>800000) 'kb';'g'"
 ```
 
-이 명령은 디버거를 시작하고 8MB(0x800000)보다 큰 할당 크기로 인해 [VirtualAlloc](https://msdn.microsoft.com/library/windows/desktop/aa366887(v=vs.85).aspx)가 호출되는 경우에만 호출 스택을 표시합니다.
+이 명령은 디버거를 시작하고 8MB(0x800000)보다 큰 할당 크기로 인해 [VirtualAlloc](/windows/desktop/api/memoryapi/nf-memoryapi-virtualalloc)가 호출되는 경우에만 호출 스택을 표시합니다.
 
 CLR 2.0에는 크고 작은 개체 힙에 포함되는 세그먼트를 자주 획득하고 릴리스하는 시나리오에 유용할 수 있는 *VM Hoarding*(VM 비축)이라는 기능이 추가되었습니다. VM Hoarding을 지정하려면 호스팅 API를 통해 `STARTUP_HOARD_GC_VM`이라는 시작 플래그를 지정합니다. CLR은 빈 세그먼트를 OS로 다시 릴리스하는 대신, 이러한 세그먼트의 메모리를 커밋 해제하고 대기 목록에 배치합니다. (CLR은 너무 큰 세그먼트에 대해 이 작업을 수행하지 않습니다.) CLR은 나중에 새 세그먼트 요청을 충족하는 데 이러한 세그먼트를 사용합니다. 다음에 응용 프로그램에 새 세그먼트가 필요할 때 CLR에서 충분히 큰 세크먼트를 찾을 수 있으면 이 대기 목록에 있는 세그먼트를 사용합니다.
 
-또한 VM Hoarding은 메모리 부족 예외를 방지하기 위해 이미 획득한 세그먼트를 유지하려는 응용 프로그램(예 시스템에서 실행되는 주요 응용 프로그램인 일부 서버 응용 프로그램)에 유용합니다.
+또한 VM Hoarding은 메모리 부족 예외를 방지하기 위해 이미 획득한 세그먼트를 유지하려는 애플리케이션(예 시스템에서 실행되는 주요 애플리케이션인 일부 서버 애플리케이션)에 유용합니다.
 
-이 기능을 사용할 때 응용 프로그램을 주의 깊게 테스트하여 응용 프로그램에서 메모리 사용을 매우 안정적으로 유지하도록 하는 것이 좋습니다.
+이 기능을 사용할 때 애플리케이션을 주의 깊게 테스트하여 애플리케이션에서 메모리 사용을 매우 안정적으로 유지하도록 하는 것이 좋습니다.

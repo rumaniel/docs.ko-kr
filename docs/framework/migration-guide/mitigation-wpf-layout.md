@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 805ffd7f-8d1e-427e-a648-601ca8ec37a5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a9bc9e14621b22cad6491f6f5132ef302e7ef06
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d266ad33110d2bda8f7911d89981c372624c3f36
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387340"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779072"
 ---
 # <a name="mitigation-wpf-layout"></a>완화: WPF 레이아웃
 WPF 컨트롤의 레이아웃은 약간 변경될 수 있습니다.  
@@ -17,11 +17,11 @@ WPF 컨트롤의 레이아웃은 약간 변경될 수 있습니다.
 ## <a name="impact"></a>영향  
  레이아웃을 변경한 결과는 다음과 같습니다.  
   
--   요소의 너비나 높이가 최대 1픽셀씩 늘어나거나 줄어들 수 있습니다.  
+- 요소의 너비나 높이가 최대 1픽셀씩 늘어나거나 줄어들 수 있습니다.  
   
--   개체의 배치가 최대 1픽셀씩 이동할 수 있습니다.  
+- 개체의 배치가 최대 1픽셀씩 이동할 수 있습니다.  
   
--   가운데 맞춤 요소가 가로 또는 세로로 최대 1픽셀씩 가운데에서 벗어날 수 있습니다.  
+- 가운데 맞춤 요소가 가로 또는 세로로 최대 1픽셀씩 가운데에서 벗어날 수 있습니다.  
   
  기본적으로 이 새 레이아웃은 .NET Framework 4.6을 대상으로 하는 앱에 대해서만 사용할 수 있습니다.  
   
@@ -38,5 +38,6 @@ WPF 컨트롤의 레이아웃은 약간 변경될 수 있습니다.
 <AppContextSwitchOverrides value="Switch.MS.Internal.DoNotApplyLayoutRoundingToMarginsAndBorderThickness=true" />  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-6.md)
+## <a name="see-also"></a>참고 항목
+
+- [대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-6.md)

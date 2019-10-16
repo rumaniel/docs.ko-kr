@@ -1,5 +1,5 @@
 ---
-title: '방법: Windows Forms TreeView 컨트롤의 노드 전체 반복'
+title: '방법: Windows Forms TreeView 컨트롤의 모든 노드 반복'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,25 +10,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 89a2c1411ab64b4a20ad291165cfa6d83511c4c6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 00a0f19803967f02795e3eade767786eecc1f4dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532758"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69966556"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>방법: Windows Forms TreeView 컨트롤의 노드 전체 반복
-Windows Forms의 모든 노드를 검사 하는 경우에 따라 <xref:System.Windows.Forms.TreeView> 노드 값에 몇 가지 계산을 수행 하기 위해 컨트롤입니다. 트리의 각 컬렉션의 각 노드를 반복하는 재귀 프로시저(C# 및 C++의 재귀 메서드)를 사용하여 이 작업을 수행할 수 있습니다.  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>방법: Windows Forms TreeView 컨트롤의 모든 노드 반복
+경우에 따라 노드 값에 대해 계산을 수행 하기 <xref:System.Windows.Forms.TreeView> 위해 Windows Forms 컨트롤의 모든 노드를 검사 하는 것이 유용 합니다. 트리의 각 컬렉션의 각 노드를 반복하는 재귀 프로시저(C# 및 C++의 재귀 메서드)를 사용하여 이 작업을 수행할 수 있습니다.  
   
- 각 <xref:System.Windows.Forms.TreeNode> 트리 보기에서 개체의 트리 뷰를 탐색 하는 데 사용할 수 있는 속성: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, 및 <xref:System.Windows.Forms.TreeNode.Parent%2A>합니다. 값은 <xref:System.Windows.Forms.TreeNode.Parent%2A> 속성은 현재 노드의 부모 노드입니다. 에 나열 되어 있는 경우, 현재 노드의 자식 노드는 <xref:System.Windows.Forms.TreeNode.Nodes%2A> 속성입니다. <xref:System.Windows.Forms.TreeView> 컨트롤 자체에 <xref:System.Windows.Forms.TreeView.TopNode%2A> 속성이 속한 전체 형식 트리 뷰의 루트 노드에 설정 되어 만들어져야 합니다.  
+ 트리 <xref:System.Windows.Forms.TreeNode> 뷰의 각 개체에는 <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A> <xref:System.Windows.Forms.TreeNode.NextNode%2A>,, 및<xref:System.Windows.Forms.TreeNode.Parent%2A>트리 뷰를 탐색 하는 데 사용할 수 있는 속성이 있습니다. <xref:System.Windows.Forms.TreeNode.PrevNode%2A> <xref:System.Windows.Forms.TreeNode.Parent%2A> 속성의 값은 현재 노드의 부모 노드입니다. 현재 노드의 자식 노드 (있는 경우)가 해당 <xref:System.Windows.Forms.TreeNode.Nodes%2A> 속성에 나열 됩니다. 컨트롤 자체에는 전체 <xref:System.Windows.Forms.TreeView.TopNode%2A> 트리 뷰의 루트 노드인 속성이 있습니다. <xref:System.Windows.Forms.TreeView>  
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>TreeView 컨트롤의 노드 전체를 반복하려면  
   
-1.  각 노드를 테스트하는 재귀 프로시저(C# 및 C++의 재귀 메서드)를 만듭니다.  
+1. 각 노드를 테스트하는 재귀 프로시저(C# 및 C++의 재귀 메서드)를 만듭니다.  
   
-2.  프로시저를 호출합니다.  
+2. 프로시저를 호출합니다.  
   
-     다음 예제에서는 각 인쇄 하는 방법을 보여 줍니다 <xref:System.Windows.Forms.TreeNode> 개체의 <xref:System.Windows.Forms.TreeNode.Text%2A> 속성:  
+     다음 예제에서는 각 <xref:System.Windows.Forms.TreeNode> 개체의 <xref:System.Windows.Forms.TreeNode.Text%2A> 속성을 인쇄 하는 방법을 보여 줍니다.  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -123,6 +123,7 @@ Windows Forms의 모든 노드를 검사 하는 경우에 따라 <xref:System.Wi
        }  
     ```  
   
-## <a name="see-also"></a>참고 항목  
- [TreeView 컨트롤](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)  
- [재귀 프로시저](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+## <a name="see-also"></a>참고자료
+
+- [TreeView 컨트롤](treeview-control-windows-forms.md)
+- [재귀 프로시저](../../../visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)

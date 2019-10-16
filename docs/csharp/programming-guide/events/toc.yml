@@ -1,0 +1,13 @@
+- name: 이벤트
+  href: index.md
+  items:
+    - name: '방법: 이벤트 구독 및 구독 취소'
+      href: how-to-subscribe-to-and-unsubscribe-from-events.md
+    - name: '방법: .NET Framework 지침을 준수하는 이벤트 게시'
+      href: how-to-publish-events-that-conform-to-net-framework-guidelines.md
+    - name: '방법: 파생 클래스에서 기본 클래스 이벤트 발생'
+      href: how-to-raise-base-class-events-in-derived-classes.md
+    - name: '방법: 인터페이스 이벤트 구현'
+      href: how-to-implement-interface-events.md
+    - name: '방법: 사용자 지정 이벤트 접근자 구현'
+      href: how-to-implement-custom-event-accessors.md

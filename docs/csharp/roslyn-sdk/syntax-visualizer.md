@@ -3,16 +3,16 @@ title: Visual Studio에서 Roslyn 구문 시각화 도우미를 사용하여 코
 description: 구문 시각화 도우미는 .NET Compiler Platform SDK에서 코드용으로 생성하는 모델을 탐색할 수 있는 시각적 도구를 제공합니다.
 ms.date: 03/07/2018
 ms.custom: mvc, vs-dotnet
-ms.openlocfilehash: 97a058eed8c0babebd3a41ec91875bef83ac3527
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: fa3b4fdbb8d573805119e13e8aa93f156c4111f9
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45750208"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972010"
 ---
 # <a name="explore-code-with-the-roslyn-syntax-visualizer-in-visual-studio"></a>Visual Studio에서 Roslyn 구문 시각화 도우미를 사용하여 코드 탐색
 
-이 아티클에서는 .NET Compiler Platform("Roslyn") SDK의 일부로 제공되는 구문 시각화 도우미 도구에 대한 개요를 제공합니다. 구문 시각화 도우미는 구문 트리를 검사하고 탐색하는 데 도움이 되는 도구 창입니다. 분석하려는 코드의 모델을 이해하는 데 필수적인 도구입니다. 또한 .NET Compiler Platform("Roslyn") SDK를 사용하여 자체 응용 프로그램을 개발할 때 도움이 되는 디버깅 도구이기도 합니다.  첫 번째 분석기를 만들 때 이 도구를 엽니다. 시각화 도우미는 API에서 사용되는 모델을 이해하는 데 도움이 됩니다. [SharpLab](https://sharplab.io) 또는 [LINQPad](https://www.linqpad.net/)와 같은 도구를 사용하여 코드를 검사하고 구문 트리를 이해할 수도 있습니다.
+이 아티클에서는 .NET Compiler Platform("Roslyn") SDK의 일부로 제공되는 구문 시각화 도우미 도구에 대한 개요를 제공합니다. 구문 시각화 도우미는 구문 트리를 검사하고 탐색하는 데 도움이 되는 도구 창입니다. 분석하려는 코드의 모델을 이해하는 데 필수적인 도구입니다. 또한 .NET Compiler Platform("Roslyn") SDK를 사용하여 자체 애플리케이션을 개발할 때 도움이 되는 디버깅 도구이기도 합니다. 첫 번째 분석기를 만들 때 이 도구를 엽니다. 시각화 도우미는 API에서 사용되는 모델을 이해하는 데 도움이 됩니다. [SharpLab](https://sharplab.io) 또는 [LINQPad](https://www.linqpad.net/)와 같은 도구를 사용하여 코드를 검사하고 구문 트리를 이해할 수도 있습니다.
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
@@ -30,9 +30,11 @@ ms.locfileid: "45750208"
 
 **파일** > **새 프로젝트** 명령을 사용하여 새 프로젝트를 만듭니다. VB 또는 C# 프로젝트를 만들 수 있습니다. Visual Studio에서 이 프로젝트의 주 코드 파일을 열면 시각화 도우미는 구문 트리를 표시합니다. Visual Studio 인스턴스에서 기존 C#/VB 파일을 열 수 있으며 시각화 도우미는 해당 파일의 구문 트리를 표시합니다. Visual Studio 내에서 여러 코드 파일을 열면 시각화 도우미는 현재 활성 코드 파일(키보드 포커스가 있는 코드 파일)에 대한 구문 트리를 표시합니다.
 
+<!-- markdownlint-disable MD025 -->
+
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![C# 구문 트리 시각화](media/syntax-visualizer/visualize-csharp.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 ![VB 구문 트리 시각화](media/syntax-visualizer/visualize-visual-basic.png)
 
 ---
@@ -44,6 +46,7 @@ ms.locfileid: "45750208"
 트리의 각 항목에는 자체 **범위**도 표시됩니다. **범위**는 텍스트 파일에서 해당 노드의 인덱스(시작 및 끝 위치)입니다.  앞의 C# 예에서 선택한 “UsingKeyword [0..5)” 토큰에는 5자 너비 [0..5)인 **범위**가 있습니다. "[..)" 표기법은 시작 인덱스는 범위의 일부이지만 끝 인덱스는 아님을 의미합니다.
 
 트리를 탐색하는 방법은 두 가지가 있습니다.
+
 * 트리에서 항목을 확장하거나 클릭합니다. 시각화 도우미는 코드 편집기에서 이 항목의 범위에 해당하는 텍스트를 자동으로 선택합니다.
 * 코드 편집기에서 텍스트를 클릭하거나 선택합니다. 앞의 VB 예제에서 코드 편집기에 "모듈 Module1"이 포함된 줄을 선택하면 시각화 도우미가 트리의 해당 ModuleStatement 노드로 자동 이동합니다. 
 
@@ -62,7 +65,7 @@ ms.locfileid: "45750208"
 시각화 도우미는 선택한 항목을 루트로 하는 하위 트리의 그래픽 표현을 표시합니다. C# 예제에서 `Main()`메서드에 해당하는 **MethodDeclaration** 노드에 대해 이 단계를 시도합니다. 시각화 도우미는 다음과 같이 보이는 구문 그래프를 표시합니다.
 
 ![C# 구문 그래프 보기](media/syntax-visualizer/csharp-syntax-graph.png)
-# <a name="visual-basictabvisual-basic"></a>[Visual Basic](#tab/visual-basic)
+# <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb)
 
 위의 VB 예제에서 `Main()` 메서드에 해당하는 **SubBlock** 노드에 대해 동일하게 시도합니다. 시각화 도우미는 다음과 같이 보이는 구문 그래프를 표시합니다.
 
@@ -80,11 +83,11 @@ ms.locfileid: "45750208"
 
 또 다른 옵션은 듀얼 모니터 환경에서 두 번째 모니터에 구문 그래프 창을 배치하는 것입니다.
 
-# <a name="inspecting-semantics"></a>의미 체계 검사
+## <a name="inspecting-semantics"></a>의미 체계 검사
 
 구문 시각화 도우미는 기호 및 의미 체계 정보에 대한 기본 검사를 수행합니다. C# 예제에서는 Main() 안에 `double x = 1 + 1;`을 입력합니다. 그런 다음, 코드 편집기 창에서 식 `1 + 1`을 선택합니다. 시각화 도우미는 시각화 도우미에서 **AddExpression** 노드를 강조 표시합니다. 이 **AddExpression**을 마우스 오른쪽 단추로 클릭하고 **기호 보기(있는 경우)** 를 클릭합니다. 대부분의 메뉴 항목에는 "해당되는 경우" 한정자가 있습니다. 구문 시각화 도우미는 모든 노드에 대해 나타나지 않을 수 있는 속성을 포함한 노드의 속성을 검사합니다. 
 
-시각화 도우미의 속성 그리드가 다음 그림과 같이 업데이트됩니다. 식의 기호는 **SynthesizedIntrinsicOperatorSymbol**이고 **Kind = Method**입니다.
+시각화 도우미의 속성 그리드는 다음 그림과 같이 업데이트됩니다. 식의 기호는 **Kind = Method**인 **SynthesizedIntrinsicOperatorSymbol**입니다.
 
 ![기호 속성](media/syntax-visualizer/symbol-properties.png)
 
@@ -128,7 +131,7 @@ End Module
 
 위의 VB 예제는 C#에서 쉽게 복제할 수 있습니다. 별칭에 대해 `Imports C = System.Console` 대신 `using C = System.Console;`을 입력합니다. C#의 앞 단계는 시각화 도우미 창에서 동일한 결과를 생성합니다.
 
-의미 체계 검사 작업은 노드에서만 사용할 수 있습니다. 토큰 또는 퀴즈에는 사용할 수 없습니다. 모든 노드에 검사할 흥미있는 의미 체계 정보가 있는 것은 아닙니다. 노드에 흥미있는 의미 체계 정보가 없으면 *** 기호 보기(있는 경우)** 를 클릭하면 빈 속성 그리드가 표시됩니다.
+의미 체계 검사 작업은 노드에서만 사용할 수 있습니다. 토큰 또는 퀴즈에는 사용할 수 없습니다. 모든 노드에 검사할 흥미있는 의미 체계 정보가 있는 것은 아닙니다. 노드에 흥미로운 의미 체계 정보가 없을 경우 **\* 기호 보기(있는 경우)** 를 클릭하면 빈 속성 그리드가 표시됩니다.
 
 [의미 체계와 함께 작업](work-with-semantics.md) 개요 문서에서 의미 체계 분석을 수행하기 위한 API에 대해 자세히 읽을 수 있습니다.
 

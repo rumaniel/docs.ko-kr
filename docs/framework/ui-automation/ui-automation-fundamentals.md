@@ -6,30 +6,28 @@ f1_keywords:
 helpviewer_keywords:
 - UI automation fundamentals
 ms.assetid: d270ab45-542b-45c0-a240-e80aa4a61b95
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 481e2eeaa24c4e8bc2b6199d2bb4ab2c3c51e221
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 371d52a09445f735efb41b02780c65579207724f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47231010"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71042123"
 ---
 # <a name="ui-automation-fundamentals"></a>UI 자동화 기본 사항
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
- 이 섹션의 높은 수준의 개요를 포함 합니다 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] [!INCLUDE[TLA#tla_api](../../../includes/tlasharptla-api-md.md)]합니다.  
+ 이 섹션에는 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] API에 대 한 개략적인 개요가 포함 되어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [UI 자동화 개요](../../../docs/framework/ui-automation/ui-automation-overview.md)  
- [UI 자동화 및 Microsoft Active Accessibility](../../../docs/framework/ui-automation/ui-automation-and-microsoft-active-accessibility.md)  
- [UI 자동화 트리 개요](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)  
- [UI 자동화 컨트롤 패턴 개요](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)  
- [UI 자동화 속성 개요](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)  
- [UI 자동화 이벤트 개요](../../../docs/framework/ui-automation/ui-automation-events-overview.md)  
- [UI 자동화 보안 개요](../../../docs/framework/ui-automation/ui-automation-security-overview.md)  
- [자동화된 테스트를 위해 UI 자동화 사용](../../../docs/framework/ui-automation/using-ui-automation-for-automated-testing.md)  
+ [UI 자동화 개요](ui-automation-overview.md)  
+ [UI 자동화 및 Microsoft Active Accessibility](ui-automation-and-microsoft-active-accessibility.md)  
+ [UI 자동화 트리 개요](ui-automation-tree-overview.md)  
+ [UI 자동화 컨트롤 패턴 개요](ui-automation-control-patterns-overview.md)  
+ [UI 자동화 속성 개요](ui-automation-properties-overview.md)  
+ [UI 자동화 이벤트 개요](ui-automation-events-overview.md)  
+ [UI 자동화 보안 개요](ui-automation-security-overview.md)  
+ [자동화된 테스트를 위해 UI 자동화 사용](using-ui-automation-for-automated-testing.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Automation>  

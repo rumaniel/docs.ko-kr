@@ -3,14 +3,14 @@ title: AppDomainInfo
 ms.date: 03/30/2017
 ms.assetid: 6610b7d8-81eb-4bec-a543-9b72ad7b6f73
 ms.openlocfilehash: 0b7f8aadbd9a9dfcdd33fc65be3a5a41ea95f5be
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50170226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964257"
 ---
 # <a name="appdomaininfo"></a>AppDomainInfo
-응용 프로그램 도메인 정보  
+애플리케이션 도메인 정보  
   
 ## <a name="syntax"></a>구문  
   
@@ -64,7 +64,7 @@ class AppDomainInfo
   
  액세스 형식: 읽기/쓰기  
   
- 암호화 및 전송 관련 변환 전에 메시지를 서비스 수준에서 추적할지 여부를 지정하는 값입니다.  
+ 암호화 및 전송 관련 변형 전에 메시지를 서비스 수준에서 추적할지 여부를 지정하는 값입니다.  
   
 ### <a name="logmessagesattransportlevel"></a>LogMessagesAtTransportLevel  
  데이터 형식: boolean  

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db2f30001e050c1f312613c794388ffaa99d3b17
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0ab8d56a457db0a70b47293684f0de73ce9ff5f4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414508"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763366"
 ---
 # <a name="icordebugmodulegetfunctionfromrva-method"></a>ICorDebugModule::GetFunctionFromRVA 메서드
-이 메서드는 현재 버전의.NET Framework에서 구현 되지 합니다.  
+이 메서드는 현재 버전의.NET Framework에서 구현 되지에.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetFunctionFromRVA(  
     [in]  CORDB_ADDRESS      rva,  
     [out] ICorDebugFunction  **ppFunction  
@@ -39,6 +39,4 @@ HRESULT GetFunctionFromRVA(
 ## <a name="requirements"></a>요구 사항  
  **헤더:** CorDebug.idl, CorDebug.h  
   
-## <a name="see-also"></a>참고 항목  
-    
- 
+## <a name="see-also"></a>참고자료

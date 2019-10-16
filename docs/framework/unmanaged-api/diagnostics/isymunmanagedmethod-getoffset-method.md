@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d88e9279f70c36fd8a9c626972e33305cded5fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 62fa0969044504905d5c835f74873dc6f46cafa8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424393"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769432"
 ---
 # <a name="isymunmanagedmethodgetoffset-method"></a>ISymUnmanagedMethod::GetOffset 메서드
-문서 내에서 지정된 된 위치에 해당 하는이 메서드 내에서 오프셋을 반환 합니다.  
+문서 내의 지정된 된 위치에 해당 하는이 메서드 내에서 오프셋을 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetOffset(  
     [in]  ISymUnmanagedDocument*  document,  
     [in]  ULONG32                 line,  
@@ -37,7 +37,7 @@ HRESULT GetOffset(
     [out, retval] ULONG32*        pRetVal);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `document`  
  [in] 오프셋이 요청 된 문서에 대 한 포인터입니다.  
   
@@ -48,13 +48,14 @@ HRESULT GetOffset(
  [in] 오프셋이 요청 된 문서 열입니다.  
   
  `pRetVal`  
- [out] 에 대 한 포인터는 `ULONG32` 받는 오프셋입니다.  
+ [out] 에 대 한 포인터를 `ULONG32` 오프셋을 받는입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.  
+ 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)

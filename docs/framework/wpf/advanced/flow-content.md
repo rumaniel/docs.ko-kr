@@ -7,21 +7,21 @@ helpviewer_keywords:
 - documents [WPF], flow content reference
 - flow content reference [WPF]
 ms.assetid: d32501af-0bac-4b80-8a20-61a6996753fe
-ms.openlocfilehash: c41270bc09dfefb282a3c0e0ee0308e22e1af446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47bdc48eb6f2fcb0ffd73f06a58bd01d716e56fc
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789300"
 ---
 # <a name="flow-content"></a>유동 콘텐츠
-호스팅에 대 한 적합 한 유동 콘텐츠를 만들기 위한 구성 요소를 제공 하는 유동 콘텐츠 요소는 <xref:System.Windows.Documents.FlowDocument>합니다.  
+호스트 하기 위해 적합 한 유동 콘텐츠를 만들기 위한 구성 요소를 제공 하는 유동 콘텐츠 요소는 <xref:System.Windows.Documents.FlowDocument>합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)  
- [TextElement 콘텐츠 모델 개요](../../../../docs/framework/wpf/advanced/textelement-content-model-overview.md)  
- [테이블 개요](../../../../docs/framework/wpf/advanced/table-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/advanced/flow-content-elements-how-to-topics.md)  
+ [유동 문서 개요](flow-document-overview.md)  
+ [TextElement 콘텐츠 모델 개요](textelement-content-model-overview.md)  
+ [테이블 개요](table-overview.md)  
+ [방법 항목](flow-content-elements-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Documents.FlowDocument>  
@@ -39,4 +39,4 @@ ms.locfileid: "33542339"
   <xref:System.Windows.Documents.ListItem>  
   
 ## <a name="related-sections"></a>관련 단원  
- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+ [WPF의 문서](documents-in-wpf.md)

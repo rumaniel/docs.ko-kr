@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: c5c9b665b78c7c63c55292e38cc96ee8b2962a61
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583892"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619539"
 ---
 # <a name="declaration-expected"></a>선언이 필요합니다.
 할당 또는 루프 문과 같은 선언문이 아닌 문을 프로시저 외부에서 발생 합니다. 선언에만 외부 프로시저 허용 됩니다.  
@@ -23,12 +23,13 @@ ms.locfileid: "33583892"
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   프로시저의 본문 선언문이 아닌 문을 이동 합니다.  
+- 프로시저의 본문 선언문이 아닌 문을 이동 합니다.  
   
--   적절 한 선언 키워드로 선언을 시작 합니다.  
+- 적절 한 선언 키워드로 선언을 시작 합니다.  
   
--   선언 키워드 철자를 확인 합니다.  
+- 선언 키워드의 철자를 확인 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)  
- [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)
+## <a name="see-also"></a>참고자료
+
+- [절차](../../../visual-basic/programming-guide/language-features/procedures/index.md)
+- [Dim 문](../../../visual-basic/language-reference/statements/dim-statement.md)

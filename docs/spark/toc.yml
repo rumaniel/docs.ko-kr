@@ -1,0 +1,33 @@
+- name: Apache Spark 가이드용 .NET
+  href: index.yml
+- name: 개요
+  expanded: true
+  items:
+    - name: Apache Spark용 .NET이란?
+      href: what-is-apache-spark-dotnet.md
+- name: 자습서
+  items:
+    - name: 시작
+      href: tutorials/get-started.md
+    - name: Azure HDInsight에 배포
+      href: tutorials/hdinsight-deployment.md
+    - name: AWS EMR Spark에 배포
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: Databricks에 배포
+      href: tutorials/databricks-deployment.md
+- name: 방법 가이드
+  items:
+    - name: 애플리케이션 디버그
+      href: how-to-guides/debug.md
+- name: 참조
+  items:
+    - name: API 참조
+      href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
+- name: 자료
+  items:
+    - name: 리소스 개요
+      href: resources/index.md
+    - name: GitHub
+      href: 'https://github.com/dotnet/spark'
+    - name: 스택 오버플로
+      href: 'https://stackoverflow.com/questions/tagged/.net-spark'

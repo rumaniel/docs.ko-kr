@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: f3d97d53-614d-4a04-a174-87965b7405f6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a27696b6511103e98d37fb72b33f801d23ad391
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 0b4727ead8abb9b3618f8b9dda8f7a9eb4b2321f
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44042181"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54742476"
 ---
 # <a name="inferring-schemas-from-xml-documents"></a>XML 문서에서 스키마 유추
 이 항목에서는 <xref:System.Xml.Schema.XmlSchemaInference> 클래스를 사용하여 XML 문서 구조에서 XSD(XML 스키마 정의 언어) 스키마를 유추하는 방법을 설명합니다.  
@@ -84,8 +84,8 @@ ms.locfileid: "44042181"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.Schema.XmlSchemaInference>  
-- [XML SOM(스키마 개체 모델)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)  
-- [XML 스키마 유추](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)  
-- [스키마 노드 형식 및 구조 유추 규칙](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)  
+- <xref:System.Xml.Schema.XmlSchemaInference>
+- [XML SOM(스키마 개체 모델)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
+- [XML 스키마 유추](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
+- [스키마 노드 형식 및 구조 유추 규칙](../../../../docs/standard/data/xml/rules-for-inferring-schema-node-types-and-structure.md)
 - [단순 형식 유추 규칙](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

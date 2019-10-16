@@ -1,0 +1,155 @@
+- name: 'DataSets, DataTables 및 DataViews'
+  href: index.md
+  items:
+    - name: 데이터 세트 만들기
+      href: creating-a-dataset.md
+    - name: 데이터 세트에 DataTable 추가
+      href: adding-a-datatable-to-a-dataset.md
+    - name: DataRelation 추가
+      href: adding-datarelations.md
+    - name: DataRelation 탐색
+      href: navigating-datarelations.md
+    - name: DataSet 콘텐츠 병합
+      href: merging-dataset-contents.md
+    - name: 데이터 세트 콘텐츠 복사
+      href: copying-dataset-contents.md
+    - name: 데이터 세트 이벤트 처리
+      href: handling-dataset-events.md
+    - name: 형식화된 데이터 세트
+      href: typed-datasets.md
+      items:
+        - name: 강력한 형식의 DataSets 생성
+          href: generating-strongly-typed-datasets.md
+        - name: 형식화된 데이터 세트에 주석 지정
+          href: annotating-typed-datasets.md
+    - name: DataTables
+      href: datatables.md
+      items:
+        - name: DataTable 만들기
+          href: creating-a-datatable.md
+        - name: DataTable 스키마 정의
+          href: datatable-schema-definition.md
+          items:
+            - name: DataTable에 열 추가
+              href: adding-columns-to-a-datatable.md
+            - name: 식 열 만들기
+              href: creating-expression-columns.md
+            - name: AutoIncrement 열 만들기
+              href: creating-autoincrement-columns.md
+            - name: 기본 키 정의
+              href: defining-primary-keys.md
+            - name: DataTable 제약 조건
+              href: datatable-constraints.md
+        - name: DataTable에서 데이터 조작
+          href: manipulating-data-in-a-datatable.md
+          items:
+            - name: DataTable에 데이터 추가
+              href: adding-data-to-a-datatable.md
+            - name: DataTable에서 데이터 보기
+              href: viewing-data-in-a-datatable.md
+            - name: 로드 메서드
+              href: the-load-method.md
+            - name: DataTable 편집
+              href: datatable-edits.md
+            - name: 행 상태 및 행 버전
+              href: row-states-and-row-versions.md
+            - name: DataRow 삭제
+              href: datarow-deletion.md
+            - name: 행 오류 정보
+              href: row-error-information.md
+            - name: AcceptChanges 및 RejectChanges
+              href: acceptchanges-and-rejectchanges.md
+        - name: DataTable 이벤트 처리
+          href: handling-datatable-events.md
+    - name: DataTableReader
+      href: datatablereaders.md
+      items:
+        - name: DataReader 만들기
+          href: creating-a-datareader.md
+        - name: DataTable 탐색
+          href: navigating-datatables.md
+    - name: 데이터 보기
+      href: dataviews.md
+      items:
+        - name: DataView 만들기
+          href: creating-a-dataview.md
+        - name: 데이터 정렬 및 필터링
+          href: sorting-and-filtering-data.md
+        - name: DataRow 및 DataRowView
+          href: datarows-and-datarowviews.md
+        - name: 행 찾기
+          href: finding-rows.md
+        - name: ChildView 및 관계
+          href: childviews-and-relations.md
+        - name: 데이터 보기 수정
+          href: modifying-dataviews.md
+        - name: DataView 이벤트 처리
+          href: handling-dataview-events.md
+        - name: 데이터 보기 관리
+          href: managing-dataviews.md
+        - name: DataView에서 DataTable 만들기
+          href: creating-a-datatable-from-a-dataview.md
+    - name: 데이터 세트에서 XML 사용
+      href: using-xml-in-a-dataset.md
+      items:
+        - name: DiffGram
+          href: diffgrams.md
+        - name: XML에서 데이터 세트 로드
+          href: loading-a-dataset-from-xml.md
+        - name: 데이터 세트 콘텐츠를 XML 데이터로 작성
+          href: writing-dataset-contents-as-xml-data.md
+        - name: XML에서 데이터 세트 스키마 정보 로드
+          href: loading-dataset-schema-information-from-xml.md
+        - name: 데이터 세트 스키마 정보를 XSD로 작성
+          href: writing-dataset-schema-information-as-xsd.md
+        - name: 데이터 세트 및 XmlDataDocument 동기화
+          href: dataset-and-xmldatadocument-synchronization.md
+          items:
+            - name: XmlDataDocument로 데이터 세트 동기화
+              href: synchronizing-a-dataset-with-an-xmldatadocument.md
+            - name: 데이터 세트에서 XPath 쿼리 수행
+              href: performing-an-xpath-query-on-a-dataset.md
+            - name: XSLT 변형을 DataSet에 적용
+              href: applying-an-xslt-transform-to-a-dataset.md
+        - name: DataRelation 중첩
+          href: nesting-datarelations.md
+        - name: XML 스키마에서 데이터 세트 관계형 구조 파생(XSD)
+          href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
+          items:
+            - name: 데이터 세트 제약 조건에 XSD(XML 스키마) 제약 조건 매핑
+              href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
+              items:
+                - name: 데이터 세트 제약 조건에 고유 XSD(XML 스키마) 제약 조건 매핑
+                  href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
+                - name: 데이터 세트 제약 조건에 키 XSD(XML 스키마) 제약 조건 매핑
+                  href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
+                - name: 데이터 세트 제약 조건에 keyref XSD(XML 스키마) 제약 조건 매핑
+                  href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
+            - name: XSD(XML 스키마)에서 데이터 세트 관계 생성
+              href: generating-dataset-relations-from-xml-schema-xsd.md
+              items:
+                - name: 중첩된 스키마 요소 사이에 암시적 관계 매핑
+                  href: map-implicit-relations-between-nested-schema-elements.md
+                - name: 중첩된 요소에 지정된 관계 매핑
+                  href: map-relations-specified-for-nested-elements.md
+                - name: 중첩 없이 요소 사이에 관계 지정
+                  href: specify-relations-between-elements-with-no-nesting.md
+            - name: XML 스키마 제약 조건 및 관계
+              href: xml-schema-constraints-and-relationships.md
+        - name: XML에서 데이터 세트 관계형 구조 유추
+          href: inferring-dataset-relational-structure-from-xml.md
+          items:
+            - name: 데이터 세트 스키마 유추 프로세스 요약
+              href: summary-of-the-dataset-schema-inference-process.md
+            - name: 테이블 유추
+              href: inferring-tables.md
+            - name: 열 유추
+              href: inferring-columns.md
+            - name: 관계 유추
+              href: inferring-relationships.md
+            - name: 요소 텍스트 유추
+              href: inferring-element-text.md
+            - name: 유추 제한
+              href: inference-limitations.md
+    - name: XML Web Service에서 데이터 세트 사용
+      href: consuming-a-dataset-from-an-xml-web-service.md

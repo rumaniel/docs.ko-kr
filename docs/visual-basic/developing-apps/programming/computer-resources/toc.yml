@@ -1,0 +1,51 @@
+- name: 컴퓨터 리소스에 액세스
+  href: index.md
+  items:
+    - name: 소리 재생
+      href: playing-sounds.md
+    - name: 클립보드에 데이터 저장 및 클립보드에서 읽기
+      href: storing-data-to-and-reading-from-the-clipboard.md
+    - name: 컴퓨터에 대한 정보 가져오기
+      href: getting-information-about-the-computer.md
+    - name: 키보드에 액세스
+      href: accessing-the-keyboard.md
+      items:
+        - name: '방법: 애플리케이션 시작 및 키 입력 보내기'
+          href: how-to-start-an-application-and-send-it-keystrokes.md
+    - name: 마우스에 액세스
+      href: accessing-the-mouse.md
+    - name: 네트워크 작업 수행
+      href: performing-network-operations.md
+      items:
+        - name: '방법: 파일 업로드'
+          href: how-to-upload-a-file.md
+        - name: '방법: 파일 다운로드'
+          href: how-to-download-a-file.md
+        - name: '방법: 연결 상태 확인'
+          href: how-to-check-connection-status.md
+    - name: 컴퓨터 포트에 액세스
+      href: accessing-the-computer-s-ports.md
+      items:
+        - name: '방법: 사용 가능한 직렬 포트 표시'
+          href: how-to-show-available-serial-ports.md
+        - name: '방법: 직렬 포트에 연결된 모뎀 전화 접속'
+          href: how-to-dial-modems-attached-to-serial-ports.md
+        - name: '방법: 직렬 포트로 문자열 보내기'
+          href: how-to-send-strings-to-serial-ports.md
+        - name: '방법: 직렬 포트에서 문자열 받기'
+          href: how-to-receive-strings-from-serial-ports.md
+        - name: .NET Framework의 포트 작업
+          href: port-operations-in-the-net-framework.md
+    - name: 레지스트리 읽기 및 쓰기
+      href: reading-from-and-writing-to-the-registry.md
+      items:
+        - name: '방법: 레지스트리 키 만들기 및 값 설정'
+          href: how-to-create-a-registry-key-and-set-its-value.md
+        - name: '방법: 레지스트리 키에서 값 읽기'
+          href: how-to-read-a-value-from-a-registry-key.md
+        - name: '방법: 레지스트리 키 삭제'
+          href: how-to-delete-a-registry-key.md
+        - name: Microsoft.Win32 네임스페이스를 사용하여 레지스트리 읽기 및 쓰기
+          href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
+        - name: 보안 및 레지스트리
+          href: security-and-the-registry.md

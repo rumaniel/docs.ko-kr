@@ -1,16 +1,16 @@
 ---
 title: C#의 상속
-description: C# 라이브러리 및 응용 프로그램에서 상속 사용 방법 알아보기
+description: C# 라이브러리 및 애플리케이션에서 상속 사용 방법 알아보기
 author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 15e2ddd7e103857054973d6c4ed7401d6f91af0d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 41377cb47836624160a5b402e0a85270b68eba4f
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502166"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70850992"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 및 .NET의 상속
 
@@ -18,7 +18,7 @@ ms.locfileid: "43502166"
 
 ## <a name="prerequisites"></a>전제 조건
 
-이 자습서에서는 .NET Core를 설치했다고 가정합니다. 설치 지침은 [.NET Core 설치 가이드](https://www.microsoft.com/net/core)를 참조하세요. 코드 편집기도 필요합니다. 원하는 어떤 코드 편집기도 사용 가능하지만 이 자습서에서는 [Visual Studio Code](https://code.visualstudio.com)를 사용합니다.
+이 자습서에서는 .NET Core SDK를 설치했다고 가정합니다. 다운로드하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download) 페이지를 방문하세요. 코드 편집기도 필요합니다. 원하는 어떤 코드 편집기도 사용 가능하지만 이 자습서에서는 [Visual Studio Code](https://code.visualstudio.com)를 사용합니다.
 
 ## <a name="running-the-examples"></a>예제 실행
 
@@ -33,7 +33,7 @@ ms.locfileid: "43502166"
 
 1. [dotnet run](../../core/tools/dotnet-run.md) 명령을 입력하여 예제를 컴파일하고 실행합니다.
 
-## <a name="background-what-is-inheritance"></a>배경 지식: 상속이란?
+## <a name="background-what-is-inheritance"></a>배경: 상속이란?
 
 *상속*은 개체 지향 프로그래밍의 기본적인 특성 중 하나입니다. 부모 클래스의 동작을 다시 사용(상속), 확장 또는 수정하는 자식 클래스를 정의할 수 있습니다. 멤버가 상속되는 클래스를 *기본 클래스*라고 합니다. 기본 클래스의 멤버를 상속하는 클래스를 *파생 클래스*라고 합니다.
 
@@ -61,7 +61,7 @@ C# 및 .NET은 *단일 상속*만 지원합니다. 즉, 하나의 클래스가 �
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-파생 클래스는 대체 구현을 제공하여 상속된 멤버를 *재정의*할 수도 있습니다. 멤버를 재정의하기 위해서는 기본 클래스의 멤버가 [virtual](../language-reference/keywords/virtual.md) 키워드로 표시되어야 합니다. 기본적으로 기본 클래스 멤버는 `virtual`로 표시되지 않으며 재정의할 수 없습니다. 다음 예제와 같이 비가상 멤버를 재정의하려고 하면 컴파일러 오류 CS0506: "<member>: 상속된 ‘<member>’ 멤버는 virtual, abstract 또는 override로 표시되지 않았으므로 재정의할 수 없습니다.”가 표시됩니다.
+파생 클래스는 대체 구현을 제공하여 상속된 멤버를 *재정의*할 수도 있습니다. 멤버를 재정의하기 위해서는 기본 클래스의 멤버가 [virtual](../language-reference/keywords/virtual.md) 키워드로 표시되어야 합니다. 기본적으로 기본 클래스 멤버는 `virtual`로 표시되지 않으며 재정의할 수 없습니다. 다음 예제와 같이 비가상 멤버를 재정의하려고 하면 컴파일러 오류 CS0506: "\<member>는 virtual, abstract 또는 override로 표시되지 않으므로 상속된 멤버 \<member>를 재정의할 수 없습니다.”가 표시됩니다.
 
 ```csharp
 public class A
@@ -81,7 +81,7 @@ public class B : A
 }
 ```
 
-일부 경우에 파생 클래스는 기본 클래스 구현을 *반드시* 재정의해야 합니다. [abstract](../language-reference/keywords/abstract.md) 키워드로 표시된 기본 클래스 멤버의 경우 파생 클래스에서 재정의해야 합니다. 다음 예제를 컴파일하려고 하면 클래스 `B`가 `A.Method1`에 대한 구현을 제공하지 않으므로 컴파일러 오류 CS0534, "<class>은(는) 상속된 추상 멤버 '<member>'을(를) 구현하지 않습니다.”가 표시됩니다.
+일부 경우에 파생 클래스는 기본 클래스 구현을 *반드시* 재정의해야 합니다. [abstract](../language-reference/keywords/abstract.md) 키워드로 표시된 기본 클래스 멤버의 경우 파생 클래스에서 재정의해야 합니다. 다음 예제를 컴파일하려고 하면 클래스 `B`가 `A.Method1`에 대한 구현을 제공하지 않으므로 컴파일러 오류 CS0534, “&lt;class&gt;는 상속된 추상 멤버 &lt;member&gt;를 구현하지 않습니다.”가 표시됩니다.
 
 ```csharp
 public abstract class A
@@ -98,7 +98,7 @@ public class B : A // Generates CS0534.
 }
 ```
 
-상속은 클래스 및 인터페이스에만 적용됩니다. 다른 형식 범주(구조체, 대리자 및 열거형)은 상속을 지원하지 않습니다. 이러한 규칙 때문에 다음 예제와 같은 코드를 컴파일하려고 하면 컴파일러 오류 CS0527: "인터페이스 목록에 있는 'ValueType' 형식이 인터페이스가 아닙니다."가 표시됩니다. 이 오류 메시지는 구조체가 구현하는 인터페이스를 정의할 수 있지만 상속은 지원되지 않음을 나타냅니다.
+상속은 클래스 및 인터페이스에만 적용됩니다. 다른 형식 범주(구조체, 대리자 및 열거형)은 상속을 지원하지 않습니다. 이러한 규칙 때문에 다음 예제와 같은 코드를 컴파일하려고 하면 컴파일러 오류 CS0527이 발생합니다. "인터페이스 목록에 있는 'ValueType' 형식이 인터페이스가 아닙니다." 이 오류 메시지는 구조체가 구현하는 인터페이스를 정의할 수 있지만 상속은 지원되지 않음을 나타냅니다.
 
 ```csharp
 using System;
@@ -194,7 +194,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
  `Publication` 클래스에는 `abstract` 메서드가 없지만 클래스 자체는 `abstract`입니다.
 
-- 파생 클래스가 상속 계층 구조의 최종 클래스를 나타내고 자체적으로 추가 파생 클래스에 대한 기본 클래스로 사용될 수 없는지 여부. 기본적으로 모든 클래스는 기본 클래스로 사용될 수 있습니다. [sealed](../language-reference/keywords/sealed.md) 키워드를 적용하여 클래스가 추가 클래스에 대한 기본 클래스로 사용될 수 없음을 나타낼 수 있습니다. sealed 클래스에서 파생하려고 하면 컴파일러 오류 CS0509 "sealed 형식 '<typeName>'에서 파생될 수 없습니다."를 생성합니다.
+- 파생 클래스가 상속 계층 구조의 최종 클래스를 나타내고 자체적으로 추가 파생 클래스에 대한 기본 클래스로 사용될 수 없는지 여부. 기본적으로 모든 클래스는 기본 클래스로 사용될 수 있습니다. [sealed](../language-reference/keywords/sealed.md) 키워드를 적용하여 클래스가 추가 클래스에 대한 기본 클래스로 사용될 수 없음을 나타낼 수 있습니다. 봉인된 클래스로부터 파생하려고 하면 컴파일러 오류 CS0509 "봉인된 형식 \<typeName>에서 파생될 수 없습니다."를 생성했습니다.
 
   예를 들어 파생 클래스를 `sealed`로 표시합니다.
 
@@ -249,7 +249,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 2개의 생성자
 
-  두 `Book` 생성자는 3가지 공용 매개 변수를 공유합니다. 두 *title* 및 *publisher*는 `Publication` 생성자의 매개 변수에 해당합니다. 세 번째는 private `authorName` 필드에 저장되는 *author*입니다. 한 생성자에는 `ISBN` auto 속성에 저장되는 *isbn* 매개 변수가 포함됩니다.
+  두 `Book` 생성자는 3가지 공용 매개 변수를 공유합니다. 두 *title* 및 *publisher*는 `Publication` 생성자의 매개 변수에 해당합니다. 세 번째는 변경할 수 없는 공용 `Author` 속성에 저장되는 *author*입니다. 한 생성자에는 `ISBN` auto 속성에 저장되는 *isbn* 매개 변수가 포함됩니다.
 
   첫 번째 생성자는 [this](../language-reference/keywords/this.md) 키워드를 사용하여 다른 생성자를 호출합니다. 생성자 연결(chaining)은 생성자를 정의하는 일반적인 패턴입니다. 가장 많은 수의 매개 변수를 사용하여 생성자를 호출하면 더 적은 수의 매개 변수를 사용하는 생성자가 기본값을 제공합니다.
 
@@ -257,11 +257,11 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 - 읽기 전용 `ISBN` 속성: 고유한 10 또는 13자리 숫자인 `Book` 개체의 국제 표준 도서 번호를 반환합니다. ISBN은 `Book` 생성자 중 하나에 인수로 제공됩니다. ISBN은 컴파일러에서 자동 생성되는 private 지원 필드에 저장됩니다.
 
-- 읽기 전용 `Author` 속성. 저자 이름은 두 `Book` 생성자에 인수로 제공되고 private `authorName` 필드에 저장됩니다.
+- 읽기 전용 `Author` 속성. 저자 이름은 두 `Book` 생성자의 인수로 제공되고 속성에 저장됩니다.
 
-- 두 개의 읽기 전용 가격 관련 속성 `Price` 및 `Currency`. 해당 값은 `SetPrice` 메서드 호출에 인수로 제공됩니다. 가격은 private 필드 `bookPrice`에 저장됩니다. `Currency` 속성은 3자리 ISO 통화 기호(예: 미국 달러의 경우 USD)이며 private `ISOCurrencySymbol` 필드에 저장됩니다. ISO 통화 기호는 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 속성에서 검색할 수 있습니다.
+- 두 개의 읽기 전용 가격 관련 속성 `Price` 및 `Currency`. 해당 값은 `SetPrice` 메서드 호출에 인수로 제공됩니다. `Currency` 속성은 세 자리 ISO 통화 기호입니다(예: 미국 달러의 경우 USD). ISO 통화 기호는 <xref:System.Globalization.RegionInfo.ISOCurrencySymbol%2A> 속성에서 검색할 수 있습니다. 이러한 두 속성은 모두 외부적으로 읽기 전용이지만 둘 다 `Book` 클래스의 코드로 설정할 수 있습니다.
 
-- `SetPrice` 메서드: `bookPrice` 및 `ISOCurrencySymbol` 필드의 값을 설정합니다. 이러한 값은 `Price` 및 `Currency` 속성에서 반환됩니다.
+- `SetPrice` 메서드는 `Price` 및 `Currency` 속성의 값을 설정합니다. 이러한 값은 동일한 해당 속성으로 반환됩니다.
 
 - `ToString` 메서드(`Publication`에서 상속), <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 및 <xref:System.Object.GetHashCode%2A> 메서드(<xref:System.Object>에서 상속)에 대해 재정의합니다.
 
@@ -288,7 +288,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#1)]
 
-그러면 `Shape`에서 특정 도형을 나타내는 일부 클래스를 파생시킬 수 있습니다. 다음 예제에서는 3개의 클래스인 `Triangle`, `Rectangle` 및 `Circle`을 정의합니다. 각각은 해당 특정 도형에 고유한 수식을 사용하여 면적 및 둘레를 계산합니다. 일부 파생 클래스는 나타내는 도형마다 고유한 `Rectangle.Diagonal` 및 `Circle.Diameter`와 같은 속성도 정의합니다.
+그러면 `Shape`에서 특정 도형을 나타내는 일부 클래스를 파생시킬 수 있습니다. 다음 예제에서는 3개의 클래스인 `Triangle`, `Rectangle` 및 `Circle`을 정의합니다. 각각은 해당 특정 도형에 고유한 수식을 사용하여 면적 및 둘레를 컴퓨팅합니다. 일부 파생 클래스는 나타내는 도형마다 고유한 `Rectangle.Diagonal` 및 `Circle.Diameter`와 같은 속성도 정의합니다.
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/shape.cs#2)]
 
@@ -298,5 +298,5 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
 ## <a name="see-also"></a>참고 항목
 
-- [클래스 및 개체](../tour-of-csharp/classes-and-objects.md)   
+- [클래스 및 개체](../tour-of-csharp/classes-and-objects.md)
 - [상속(C# 프로그래밍 가이드)](../programming-guide/classes-and-structs/inheritance.md)

@@ -17,40 +17,41 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2df33e3edebbf558bf78986e737c4f7bb9b2f0f3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cbb0b6191c74c2b7ebdc8267701f246c17b016f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33437159"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779521"
 ---
 # <a name="igchostcontrolrequestvirtualmemlimit-method"></a>IGCHostControl::RequestVirtualMemLimit 메서드
-호스트에 가상 메모리의 한계를 변경 하도록 요청 합니다.  
+가상 메모리의 한계를 변경 하려면 호스트를 요청 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT RequestVirtualMemLimit (  
     [in] SIZE_T       sztMaxVirtualMemMB,  
     [in, out] SIZE_T* psztNewMaxVirtualMemMB  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `sztMaxVirtualMemMB`  
- [in] 메모리 할당의 요청 된 크기입니다.  
+ [in] 할당할 메모리의 요청 된 크기입니다.  
   
  `psztNewMaxVirtualMemMB`  
  [out에서] 할당 된 메모리의 실제 크기에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
  **라이브러리:** MSCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IGCHostControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IGCHostControl 인터페이스](../../../../docs/framework/unmanaged-api/hosting/igchostcontrol-interface.md)

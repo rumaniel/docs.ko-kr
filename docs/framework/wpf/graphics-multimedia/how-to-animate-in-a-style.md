@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], within styles
 - styles [WPF], animating properties within
 ms.assetid: 6a791f3d-6b1f-4972-a2f9-35880bcfd954
-ms.openlocfilehash: a455bbfb9defbcf83f7e490f60031917a3b41779
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 5fb18a2d927746c3437ec01d2a19327be373cae3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789287"
 ---
 # <a name="how-to-animate-in-a-style"></a>스타일에서 애니메이션을 적용 하는 방법
 
@@ -20,8 +20,8 @@ ms.locfileid: "47079401"
 
 ## <a name="example"></a>예제
 
-[!code-xaml[timingbehaviors_snip#21](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
+[!code-xaml[timingbehaviors_snip#21](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/StyleStoryboardsExample.xaml#21)]
 
 스타일 내에서 애니메이션을 적용할 때는 수 있다는 것 존재 하지 않는 대상 개체에 note 합니다. 예를 들어, 다음을 사용 하 여 스타일을 <xref:System.Windows.Media.SolidColorBrush> 단추의 배경 속성을 설정 하지만 특정 시점에 스타일을 재정의 되 고 단추의 배경을 사용 하 여 설정 됩니다는 <xref:System.Windows.Media.LinearGradientBrush>합니다.  애니메이션을 적용 하는 동안는 <xref:System.Windows.Media.SolidColorBrush> ; 예외를 throw 하지 않습니다만 애니메이션 자동으로 실패 합니다.
 
-스토리 보드 대상 지정 구문에 대 한 자세한 내용은 참조는 [스토리 보드 개요](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)합니다. 애니메이션에 대 한 자세한 내용은 참조는 [애니메이션 개요](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)합니다. 스타일에 대 한 자세한 내용은 참조는 [스타일 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)합니다.
+스토리 보드 대상 지정 구문에 대 한 자세한 내용은 참조는 [스토리 보드 개요](storyboards-overview.md)합니다. 애니메이션에 대 한 자세한 내용은 참조는 [애니메이션 개요](animation-overview.md)합니다. 스타일에 대 한 자세한 내용은 참조는 [스타일 및 템플릿](../controls/styling-and-templating.md)합니다.

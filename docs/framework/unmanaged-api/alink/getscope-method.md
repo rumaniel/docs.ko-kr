@@ -1,5 +1,5 @@
 ---
-title: GetScope Method1
+title: GetScope 메서드
 ms.date: 03/30/2017
 api_name:
 - IALink.GetScope
@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2746073fbc6adfd7090aa9b3cc38e46c4411744
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3a0e42e9ffb99896bdd09dbbab65eafb40cafff
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400187"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777214"
 ---
-# <a name="getscope-method1"></a>GetScope Method1
+# <a name="getscope-method"></a>GetScope 메서드
 가져오기 범위를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetScope(  
     mdAssembly AssemblyID,  
     mdToken FileToken,  
@@ -37,7 +37,7 @@ HRESULT GetScope(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
  가져올 어셈블리의 고유 ID입니다.  
   
@@ -45,18 +45,19 @@ HRESULT GetScope(
  가져올 파일의 고유 ID입니다.  
   
  `dwScope`  
- 가져올 범위 0부터 시작 합니다.  
+ 가져올 범위 (0부터 시작)입니다.  
   
  `ppImportScope`  
- 수신 [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) 범위에 대 한 인터페이스입니다.  
+ 범위에 대 한 [IMetaDataImport 인터페이스](../metadata/imetadataimport-interface.md) 인터페이스를 수신 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h 필요  
+ Alink 필요  
   
-## <a name="see-also"></a>참고 항목  
- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>참고자료
+
+- [IALink 인터페이스](ialink-interface.md)
+- [IALink2 인터페이스](ialink2-interface.md)
+- [ALink API](index.md)

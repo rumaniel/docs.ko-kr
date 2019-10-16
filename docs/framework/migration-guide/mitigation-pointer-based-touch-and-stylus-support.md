@@ -9,16 +9,16 @@ helpviewer_keywords:
 ms.assetid: f99126b5-c396-48f9-8233-8f36b4c9e717
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da7d55b34bc21f0c11f13565d017587b4276bad3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 67e41450ed69d73a4b27b0aa37974ae01be69687
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387782"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70779233"
 ---
 # <a name="mitigation-pointer-based-touch-and-stylus-support"></a>완화: 포인터 기반 터치 및 스타일러스 지원
 
-.NET Framework 4.7을 대상으로 하고 Windows 10 작성자 업데이트 버전 이상의 Windows 시스템에서 실행되는 WPF 응용 프로그램은 선택적 `WM_POINTER` 기반 WPF 터치/스타일러스 스택을 사용하도록 설정할 수 있습니다.
+.NET Framework 4.7을 대상으로 하고 Windows 10 작성자 업데이트 버전 이상의 Windows 시스템에서 실행되는 WPF 애플리케이션은 선택적 `WM_POINTER` 기반 WPF 터치/스타일러스 스택을 사용하도록 설정할 수 있습니다.
 
 ## <a name="impact"></a>영향
 
@@ -38,11 +38,11 @@ ms.locfileid: "33387782"
 
   - 끌어서 놓기가 더 이상 터치/스타일러스 이벤트에서 시작될 수 없습니다.
 
-      이로 인해 마우스 입력이 감지될 때까지 응용 프로그램이 중단될 수 있습니다. 대신, 개발자는 마우스 이벤트에서 끌어서 놓기를 시작하는 것이 좋습니다.
+      이로 인해 마우스 입력이 감지될 때까지 애플리케이션이 응답하지 않을 수 있습니다. 대신, 개발자는 마우스 이벤트에서 끌어서 놓기를 시작하는 것이 좋습니다.
 
-## <a name="opting-in-to-wmpointer-based-touchstylus-support"></a>WM_POINTER 기반 터치/스타일러스 지원 옵트인(opt in)
+## <a name="opting-in-to-wm_pointer-based-touchstylus-support"></a>WM_POINTER 기반 터치/스타일러스 지원 옵트인(opt in)
 
-이 스택을 사용하도록 설정하려는 개발자는 응용 프로그램의 app.config 파일에 다음을 추가할 수 있습니다.
+이 스택을 사용하도록 설정하려는 개발자는 애플리케이션의 app.config 파일에 다음을 추가할 수 있습니다.
 
 ```xml
 <configuration>
@@ -56,4 +56,4 @@ ms.locfileid: "33387782"
 
 ## <a name="see-also"></a>참고 항목
 
-[.NET Framework 4.7.1의 대상 다시 지정 변경 내용](../../../docs/framework/migration-guide/retargeting-changes-in-the-net-framework-4-7.md)
+- [.NET Framework 4.7.1의 대상 다시 지정 변경 내용](retargeting-changes-in-the-net-framework-4-7.md)

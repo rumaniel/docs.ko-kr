@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c888c32a0b40d2458a919613e35ca9d1d830c4f7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8943df861b1bff2b28c68d0233fc336d1b5d4579
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459237"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70798942"
 ---
 # <a name="strongnamesignatureverification-function"></a>StrongNameSignatureVerification 함수
-어셈블리 매니페스트에 제공 된 경로의 강한 이름 서명을 확인 하도록 지정된 된 플래그에 따라 포함 되는지 여부를 나타내는 값을 가져옵니다.  
+제공된 경로의 어셈블리 매니페스트에 지정된 플래그에 따라 확인되는 강력한 이름 서명이 포함되는지 여부를 나타내는 값을 가져옵니다.  
   
- 이 함수는 더 이상 사용 되지 않습니다. 사용 하 여 [iclrstrongname:: Strongnamesignatureverification](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md) 메서드 대신 합니다.  
+ 이 함수는 더 이상 사용 되지 않습니다. 대신 [ICLRStrongName:: StrongNameSignatureVerification](../hosting/iclrstrongname-strongnamesignatureverification-method.md) 메서드를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureVerification (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  DWORD     dwInFlags,  
@@ -38,43 +38,44 @@ BOOLEAN StrongNameSignatureVerification (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wszFilePath`  
- [in] 이식 가능한 실행 (.dll 또는.exe) 파일에 어셈블리 확인에 대 한 경로입니다.  
+ 진행 어셈블리에서 확인할 이식 가능한 실행 파일 (.dll 또는 .exe)의 경로입니다.  
   
  `dwInFlags`  
- [in] 확인 동작을 수정 하는 플래그입니다. 다음 값이 지원 됩니다.  
+ 진행 확인 동작을 수정 하는 플래그입니다. 다음 값이 지원 됩니다.  
   
--   `SN_INFLAG_FORCE_VER` (0x00000001)-강제로 레지스트리 설정을 재정의 해야 하는 경우에 확인 합니다.  
+- `SN_INFLAG_FORCE_VER`(0x00000001)-레지스트리 설정을 재정의 해야 하는 경우에도 강제로 확인 합니다.  
   
--   `SN_INFLAG_INSTALL` (0x00000002)-매니페스트를 확인 하는 처음으로 임을 지정 합니다.  
+- `SN_INFLAG_INSTALL`(0x00000002)-매니페스트를 처음 확인 하는 것을 지정 합니다.  
   
--   `SN_INFLAG_ADMIN_ACCESS` (0x00000004)-캐시 관리 권한이 있는 사용자 에게만 액세스를 사용할 수 있음을 지정 합니다.  
+- `SN_INFLAG_ADMIN_ACCESS`(0x00000004)-캐시가 관리 권한이 있는 사용자 에게만 액세스를 허용 하도록 지정 합니다.  
   
--   `SN_INFLAG_USER_ACCESS` (0x00000008)-어셈블리 현재 사용자에만 액세스할 수 있는지를 지정 합니다.  
+- `SN_INFLAG_USER_ACCESS`(0x00000008)-현재 사용자만 어셈블리에 액세스할 수 있도록 지정 합니다.  
   
--   `SN_INFLAG_ALL_ACCESS` (0x00000010)-캐시의 액세스 제한이 않음을 지정 합니다.  
+- `SN_INFLAG_ALL_ACCESS`(0x00000010)-캐시가 액세스 제한에 대 한 보장을 제공 하지 않도록 지정 합니다.  
   
--   `SN_INFLAG_RUNTIME` (0x80000000)-내부 디버깅 하기 위해 예약 되어 있습니다.  
+- `SN_INFLAG_RUNTIME`(0x80000000)-내부 디버깅용으로 예약 되어 있습니다.  
   
  `pdwOutFlags`  
- [out] 강력한 이름 서명을 확인 하는지 여부를 나타내는 플래그입니다. 다음 값이 지원 됩니다.  
+ 제한이 강력한 이름 서명을 확인 했는지 여부를 나타내는 플래그입니다. 지원 되는 값은 다음과 같습니다.  
   
--   `SN_OUTFLAG_WAS_VERIFIED` 이 값은로 설정 (0x00000001)- `false` 확인 레지스트리 설정으로 인해 성공 했는지를 지정 하려면.  
+- `SN_OUTFLAG_WAS_VERIFIED`(0x00000001)-이 값은 레지스트리 설정 `false` 으로 인해 확인이 성공 하도록 지정 하기 위해로 설정 됩니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 확인에 성공 하면 그렇지 않으면 `false`합니다.  
+ `true`확인에 성공 했으면이 고, 그렇지 않으면입니다. 그렇지 않으면 `false`입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** StrongName.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [StrongNameSignatureVerification 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverification-method.md)  
- [StrongNameSignatureVerificationEx 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)  
- [ICLRStrongName 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [StrongNameSignatureVerification 메서드](../hosting/iclrstrongname-strongnamesignatureverification-method.md)
+- [StrongNameSignatureVerificationEx 메서드](../hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [ICLRStrongName 인터페이스](../hosting/iclrstrongname-interface.md)

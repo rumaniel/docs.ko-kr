@@ -1,5 +1,5 @@
 ---
-title: 마샬링 MDA
+title: marshaling MDA
 ms.date: 03/30/2017
 helpviewer_keywords:
 - marshaling, run-time errors
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 5433b1f8-b0e5-40c9-a49a-0e5bd213363d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 164c7a6e4411d7ff3e66643c6f012fdba790ef49
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6a6399828f934ad97cde9f36d75cfe3bfc410885
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386680"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052497"
 ---
-# <a name="marshaling-mda"></a>마샬링 MDA
+# <a name="marshaling-mda"></a>marshaling MDA
 `marshaling` MDA(관리 디버깅 도우미)는 CLR이 메서드 매개 변수 또는 구조체 필드에 대한 마샬링 정보를 설정할 때 활성화됩니다. 이 MDA는 JIT 컴파일된 어셈블리에 대해 작동하지 않습니다.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
@@ -25,13 +25,13 @@ ms.locfileid: "33386680"
 ## <a name="output"></a>출력  
  MDA에서 관리되는 컨텍스트 및 관리되지 않는 컨텍스트의 매개 변수 또는 필드 형식과 해당 형식을 포함하는 구조체 또는 메서드를 표시합니다.  다음은 필드에 대한 출력 예입니다.  
   
-```  
+```output
 Marshaling from 'Char' to 'ANSI char'  
 name="assembly!Namespace.Class::myChar  
 ```  
   
-## <a name="configuration"></a>구성  
- MDA 구성을 통해 관련된 필드 또는 메서드 이름에 따라 보고된 마샬링 정보를 필터링할 수 있습니다.  다음 예제에서는 `methodFilter`, `fieldFilter` 및 `match` 요소를 사용하여 필터를 지정하는 방법을 보여 줍니다.  `name` 특성을 별표(*)로 설정하면 모든 항목과 일치합니다.  
+## <a name="configuration"></a>Configuration  
+ MDA 구성을 통해 관련된 필드 또는 메서드 이름에 따라 보고된 마샬링 정보를 필터링할 수 있습니다.  다음 예제에서는 `methodFilter`, `fieldFilter` 및 `match` 요소를 사용하여 필터를 지정하는 방법을 보여 줍니다.  특성을 별표 (\*)로 설정 하면 모든 항목과 일치 합니다. `name`  
   
 ```xml  
 <mdaConfig>  
@@ -50,7 +50,8 @@ name="assembly!Namespace.Class::myChar
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
+- [interop 마샬링](../interop/interop-marshaling.md)

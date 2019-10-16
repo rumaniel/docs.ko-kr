@@ -2,12 +2,12 @@
 title: 원자화된 XName 및 XNamespace 개체(LINQ to XML)(C#)
 ms.date: 07/20/2015
 ms.assetid: a5b21433-b49d-415c-b00e-bcbfb0d267d7
-ms.openlocfilehash: 3ffeaac6d893b70c2c0d49d8d52d0372879cdf37
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: bc5066440d87f5485ae9099d7a7f4f5e9e66b4ec
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43526399"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70204267"
 ---
 # <a name="atomized-xname-and-xnamespace-objects-linq-to-xml-c"></a>원자화된 XName 및 XNamespace 개체(LINQ to XML)(C#)
 <xref:System.Xml.Linq.XName> 및 <xref:System.Xml.Linq.XNamespace> 개체는 *원자화*됩니다. 즉, 이들 개체의 정규화된 이름이 같으면 같은 개체를 참조합니다. 이를 통해 쿼리 성능이 향상될 수 있습니다. 두 개의 원자화된 이름이 같은지 비교하는 경우 기본 중간 언어에서 이 두 개의 참조가 같은 개체를 가리키는지 여부만 확인하면 됩니다. 기본 코드는 시간이 많이 걸리는 문자열 비교를 수행할 필요가 없습니다.  
@@ -41,7 +41,7 @@ else
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 r1 and r2 have names that refer to the same instance.  
 The name of r1 and the name in 'n' refer to the same instance.  
 ```  
@@ -73,7 +73,3 @@ foreach (var z in query)
 <C1>1</C1>  
 <C1>1</C1>  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [성능(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)

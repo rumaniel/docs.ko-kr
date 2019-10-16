@@ -1,16 +1,16 @@
 ---
 title: C#에서 LINQ 쿼리 작성하기
 description: C#에서 LINQ 쿼리를 작성하는 방법을 알아봅니다.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 30703f79-cf3a-4d02-b892-c95d58a1d9ed
-ms.openlocfilehash: 2ebba0d2d601932c976a88726fbe3ed37daffdcb
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ed32543b0422e0664a8577f2c27f7c7c00a719a1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44214981"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632891"
 ---
-# <a name="write-linq-queries-in-c"></a>C#에서 LINQ 쿼리 작성하기 #
+# <a name="write-linq-queries-in-c"></a>C\#에서 LINQ 쿼리 작성하기
 
 이 문서에서는 C#에서 LINQ 쿼리를 작성할 수 있는 세 가지 방법을 보여 줍니다.
 

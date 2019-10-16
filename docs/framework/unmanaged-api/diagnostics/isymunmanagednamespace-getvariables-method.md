@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b63dbcaa54e03e5603e06545f8b4fec393d8268
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 813f57377c1885b09190ada3c73f4391a3f2d931
+ms.sourcegitcommit: 5ae5a1a9520b8b8b6164ad728d396717f30edafc
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33424611"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70895055"
 ---
 # <a name="isymunmanagednamespacegetvariables-method"></a>ISymUnmanagedNamespace::GetVariables 메서드
-이 네임 스페이스 내에서 전역 범위에서 정의 된 모든 변수를 반환 합니다.  
+이 네임 스페이스의 전역 범위에 정의 된 모든 변수를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp
 HRESULT GetVariables(  
     [in]  ULONG32  cVars,  
     [out] ULONG32  *pcVars,  
@@ -37,21 +37,22 @@ HRESULT GetVariables(
         ISymUnmanagedVariable *pVars[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cVars`  
- [in] A `ULONG32` 크기를 표시 하는 `pVars` 배열입니다.  
+ 진행 배열의크기`pVars` 를 나타내는입니다. `ULONG32`  
   
  `pcVars`  
- [out] 에 대 한 포인터는 `ULONG32` 네임 스페이스를 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ 제한이 네임 스페이스를 포함 `ULONG32` 하는 데 필요한 버퍼의 크기를 수신 하는에 대 한 포인터입니다.  
   
  `pVars`  
- [out] 네임 스페이스를 포함 하는 버퍼에 대 한 포인터입니다.  
+ 제한이 네임 스페이스를 포함 하는 버퍼에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.  
+ 메서드가 성공 하면 S_OK이 고, 그렇지 않으면입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedNamespace 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedNamespace 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

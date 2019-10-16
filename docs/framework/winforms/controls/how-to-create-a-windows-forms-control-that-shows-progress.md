@@ -10,27 +10,27 @@ helpviewer_keywords:
 - progress [Windows Forms], reporting [Windows Forms]
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
-ms.openlocfilehash: bff9bef08cdf7317d4dc8903412e03bfdacb7237
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 84f0caace70f9877e84fdd01dc69216dc10fe485
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502350"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69950570"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>방법: 진행률을 보여 주는 Windows Forms 컨트롤 만들기
-다음 코드 예제에서는 사용자에게 수준 또는 응용 프로그램의 진행률을 표시하는 데 사용할 수 있는 `FlashTrackBar`이라는 사용자 지정 컨트롤을 보여 줍니다. 그라데이션을 사용하여 진행률을 시각적으로 나타냅니다.  
+다음 코드 예제에서는 사용자에게 수준 또는 애플리케이션의 진행률을 표시하는 데 사용할 수 있는 `FlashTrackBar`이라는 사용자 지정 컨트롤을 보여 줍니다. 그라데이션을 사용하여 진행률을 시각적으로 나타냅니다.  
   
  `FlashTrackBar` 컨트롤에서는 다음과 같은 개념을 보여 줍니다.  
   
--   사용자 지정 속성 정의  
+- 사용자 지정 속성 정의  
   
--   사용자 지정 이벤트 정의 `FlashTrackBar`은 `ValueChanged` 이벤트를 정의합니다.  
+- 사용자 지정 이벤트 정의 `FlashTrackBar`은 `ValueChanged` 이벤트를 정의합니다.  
   
--   재정의 <xref:System.Windows.Forms.Control.OnPaint%2A> 컨트롤을 그리는 논리를 제공 하는 방법입니다.  
+- <xref:System.Windows.Forms.Control.OnPaint%2A> 메서드를 재정의 하 여 컨트롤을 그리는 논리를 제공 합니다.  
   
--   영역 컨트롤을 그리는 데 사용 하 여 사용할 수 있는 컴퓨팅 해당 <xref:System.Windows.Forms.Control.ClientRectangle%2A> 속성입니다. `FlashTrackBar`은 해당 `OptimizedInvalidate` 메서드에서 이를 수행합니다.  
+- <xref:System.Windows.Forms.Control.ClientRectangle%2A> 속성을 사용 하 여 컨트롤을 그리는 데 사용할 수 있는 영역을 계산 합니다. `FlashTrackBar`은 해당 `OptimizedInvalidate` 메서드에서 이를 수행합니다.  
   
--   Windows Forms 디자이너에서 변경되는 경우 속성의 serialization 또는 지속성을 구현합니다. `FlashTrackBar`은 `StartColor` 및 `EndColor` 속성을 직렬화하는 `ShouldSerializeStartColor` 및 `ShouldSerializeEndColor` 메서드를 정의합니다.  
+- Windows Forms 디자이너에서 변경되는 경우 속성의 serialization 또는 지속성을 구현합니다. `FlashTrackBar`은 `StartColor` 및 `EndColor` 속성을 직렬화하는 `ShouldSerializeStartColor` 및 `ShouldSerializeEndColor` 메서드를 정의합니다.  
   
  다음 테이블에서는 `FlashTrackBar`에서 정의된 사용자 지정 속성을 보여 줍니다.  
   
@@ -55,43 +55,44 @@ ms.locfileid: "43502350"
 |`OnValueChanged`|메서드는 `ValueChanged` 이벤트를 발생시킵니다.|  
   
 > [!NOTE]
->  `FlashTrackBar` 사용 하 여 <xref:System.EventArgs> 이벤트 데이터에 대 한 클래스 및 <xref:System.EventHandler> 이벤트 대리자에 대 한 합니다.  
+> `FlashTrackBar`이벤트 데이터 <xref:System.EventArgs> 및 <xref:System.EventHandler> 이벤트 대리자에 대해 클래스를 사용 합니다.  
   
- 해당 처리할 *EventName* 이벤트 `FlashTrackBar` 에서 상속 하는 다음 메서드를 재정의 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ 해당 *EventName* 이벤트 `FlashTrackBar` 를 처리 하기 위해은에서 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>상속 되는 다음 메서드를 재정의 합니다.  
   
--   <xref:System.Windows.Forms.Control.OnPaint%2A>  
+- <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
   
--   <xref:System.Windows.Forms.Control.OnResize%2A>  
+- <xref:System.Windows.Forms.Control.OnResize%2A>  
   
- 해당 속성 변경 이벤트를 처리할 `FlashTrackBar` 에서 상속 하는 다음 메서드를 재정의 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
+ 해당 속성 변경 이벤트 `FlashTrackBar` 를 처리 하기 위해은에서 <xref:System.Windows.Forms.Control?displayProperty=nameWithType>상속 되는 다음 메서드를 재정의 합니다.  
   
--   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
 ## <a name="example"></a>예제  
  `FlashTrackBar` 컨트롤은 `FlashTrackBarValueEditor` 및 `FlashTrackBarDarkenByEditor`이라는 두 개의 UI 형식 편집기를 정의하며 이는 다음 코드 목록에 표시됩니다. `HostApp` 클래스는 Windows Form에소 `FlashTrackBar` 컨트롤을 사용합니다.  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#1)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#1)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#1)]  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBarDarkenByEditor.cs#10)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBarDarkenByEditor.vb#10)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBarDarkenByEditor.cs#10)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBarDarkenByEditor.vb#10)]  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#20](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBarValueEditor.cs#20)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#20](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBarValueEditor.vb#20)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBarValueEditor.cs#20)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBarValueEditor.vb#20)]  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#30](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/HostApp.cs#30)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/HostApp.vb#30)]  
   
-## <a name="see-also"></a>참고 항목  
- [디자인 타임 지원 확장](https://msdn.microsoft.com/library/d6ac8a6a-42fd-4bc8-bf33-b212811297e2)  
- [Windows Forms 컨트롤 개발 기본 사항](../../../../docs/framework/winforms/controls/windows-forms-control-development-basics.md)
+## <a name="see-also"></a>참고자료
+
+- [디자인 타임 지원 확장](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
+- [Windows Forms 컨트롤 개발 기본 사항](windows-forms-control-development-basics.md)

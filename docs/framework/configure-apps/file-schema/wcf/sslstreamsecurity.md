@@ -1,27 +1,29 @@
 ---
-title: '&lt;sslStreamSecurity&gt;'
+title: <sslStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 430a378b-a742-4858-8a12-9f9b235fd627
-ms.openlocfilehash: ecc67c2b3972ccb5bc8a1fe9ae9b400292642d53
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 9b7092878c604142c29dcd8d27e3c458d203f9fa
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50184493"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399526"
 ---
-# <a name="ltsslstreamsecuritygt"></a>&lt;sslStreamSecurity&gt;
+# <a name="sslstreamsecurity"></a>\<sslStreamSecurity>
 SSL 스트림을 사용한 채널 보안을 지원하는 사용자 지정 바인딩 요소를 나타냅니다.  
   
- \<system.serviceModel>  
-\<바인딩 >  
-\<customBinding>  
-\<바인딩 >  
-\<sslStreamSecurity >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sslStreamSecurity >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<sslStreamSecurity requireClientCertificate="Boolean"      sslProtocols="Ssl3|Tls|Tls11|Tls12" />  
+<sslStreamSecurity requireClientCertificate="Boolean"
+                   sslProtocols="Ssl3|Tls|Tls11|Tls12" />
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -29,10 +31,10 @@ SSL 스트림을 사용한 채널 보안을 지원하는 사용자 지정 바인
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |requireClientCertificate|이 바인딩에 클라이언트 인증서가 필요한지 여부를 지정하는 부울 값입니다. 기본값은 `false`입니다.|  
-|sslProtocols|지원되는 SslProtocols를 지정하는 SslProtocols 열거형 플래그 값입니다. 기본값은 Ssl3&#124;Tls&#124;Tls11&#124;Tls12 합니다.|  
+|sslProtocols|지원되는 SslProtocols를 지정하는 SslProtocols 열거형 플래그 값입니다. 기본값은 Ssl3&#124;Tls&#124;Tls11&#124;Tls12입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -41,13 +43,14 @@ SSL 스트림을 사용한 채널 보안을 지원하는 사용자 지정 바인
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
+|[\<binding>](../../../misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
- [바인딩](../../../../../docs/framework/wcf/bindings.md)  
- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.SslStreamSecurityElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>
+- [바인딩](../../../wcf/bindings.md)
+- [바인딩 확장](../../../wcf/extending/extending-bindings.md)
+- [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)

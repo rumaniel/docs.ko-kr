@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [XAML Services], namespaces
 ms.assetid: e1f47225-9996-4fbf-ab86-62d2e955f3fc
 ms.openlocfilehash: 30f7a2a720f3a2188ea69cbc6c7f4751a823610d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33562221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051535"
 ---
 # <a name="xaml-namespace-x-language-features"></a>XAML 네임스페이스(x:) 언어 기능
 ## <a name="in-this-section"></a>섹션 내용  

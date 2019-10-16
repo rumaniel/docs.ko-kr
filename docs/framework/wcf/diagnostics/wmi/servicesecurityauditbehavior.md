@@ -2,12 +2,12 @@
 title: ServiceSecurityAuditBehavior
 ms.date: 03/30/2017
 ms.assetid: 2c5809e7-5364-44ce-bc71-848be4672e2a
-ms.openlocfilehash: e8b24877c2d76a3f2f90c27ae83374c7bca1328b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 30679e1f67c6943bf674a6bbd8bf12be090765a8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956899"
 ---
 # <a name="servicesecurityauditbehavior"></a>ServiceSecurityAuditBehavior
 ServiceSecurityAuditBehavior  
@@ -64,5 +64,6 @@ class ServiceSecurityAuditBehavior : Behavior
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>

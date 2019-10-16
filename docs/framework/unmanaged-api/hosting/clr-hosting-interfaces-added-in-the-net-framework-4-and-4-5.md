@@ -8,23 +8,23 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9086502968fb9046237e77b76b4038a9f32f4ef
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44253093"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170433"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스
-이 섹션에서는 관리 되지 않는 인터페이스를 설명 합니다. 호스트에는 CLR (공용 언어 런타임) 통합을 사용할 수는 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)], [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)], 응용 프로그램에 이상 버전. 이러한 인터페이스는 구성 프로세스에 런타임을 로드 하는 호스트에 대 한 메서드를 제공 합니다.  
+관리 되지 않는 인터페이스를 설명 하는이 섹션에서는 호스트 응용 프로그램에.NET Framework 4,.NET Framework 4.5 및 이후 버전에는 CLR (공용 언어 런타임) 통합을 사용할 수 있습니다. 이러한 인터페이스는 구성 프로세스에 런타임을 로드 하는 호스트에 대 한 메서드를 제공 합니다.  
   
- 부터 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]모든 호스팅, 인터페이스는 다음과 같은 특징이 있습니다.  
+ .NET Framework 4 부터는 모든 호스팅 인터페이스는 다음과 같은 특징이 있습니다.  
   
--   수명 관리 사용 (`AddRef` 하 고 `Release`)를 캡슐화 (암시적 컨텍스트) 및 `QueryInterface` com  
+- 수명 관리 사용 (`AddRef` 하 고 `Release`)를 캡슐화 (암시적 컨텍스트) 및 `QueryInterface` com  
   
--   사용 하지 않습니다 COM 형식을 같은 `BSTR`, `SAFEARRAY`, 또는 `VARIANT`합니다.  
+- COM 형식이 현재 형식과 같은 사용 하지 `BSTR`하십시오 `SAFEARRAY`, 또는 `VARIANT`합니다.  
   
--   아파트 모델, 집계 또는 없습니다 레지스트리 정품 인증을 사용 하는 합니다 [CoCreateInstance 함수](https://go.microsoft.com/fwlink/?LinkId=142894)합니다.  
+- 아파트 모델, 집계 또는 없습니다 레지스트리 정품 인증을 사용 하는 합니다 [CoCreateInstance 함수](https://go.microsoft.com/fwlink/?LinkId=142894)합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [ICLRAppDomainResourceMonitor 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrappdomainresourcemonitor-interface.md)  

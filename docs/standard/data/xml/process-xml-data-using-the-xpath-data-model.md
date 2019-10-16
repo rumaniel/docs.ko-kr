@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 536c6fce-1453-4654-9c72-bca54d47e081
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da8b623d3a73ca8791a0619c67b0ed3bd42447d3
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 67fbacd24b888b9c45072bcb34031f38adc118e3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202750"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54728400"
 ---
 # <a name="process-xml-data-using-the-xpath-data-model"></a>XPath 데이터 모델을 사용하여 XML 데이터 처리
 <xref:System.Xml?displayProperty=nameWithType> 네임스페이스는 <xref:System.Xml.XmlDocument> 또는 <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 문서, 조각, 노드 또는 메모리 내 노드 집합의 프로그래밍 방식 표현을 제공합니다.  
@@ -37,7 +37,7 @@ ms.locfileid: "50202750"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
 - [DOM 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-dom-model.md)

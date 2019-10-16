@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 81fa0e41-d9c9-46f0-b22b-50da839c77f5
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d2b04006c46edb29fd4fe05e63224220ed1876af
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 0199efb172466305af22c4ade7c47115a5cefd8f
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44085279"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939615"
 ---
 # <a name="schema-validation-using-xpathnavigator"></a>XPathNavigator를 사용하여 스키마 유효성 검사
 <xref:System.Xml.XmlDocument> 클래스를 사용하면 두 가지 방법으로 <xref:System.Xml.XmlDocument> 개체에 포함된 XML 내용의 유효성을 검사할 수 있습니다. 첫 번째 방법은 유효성 검사 <xref:System.Xml.XmlReader> 개체를 사용하여 XML 내용의 유효성을 검사하는 것이고 두 번째 방법은 <xref:System.Xml.XmlDocument.Validate%2A> 클래스의 <xref:System.Xml.XmlDocument> 메서드를 사용하는 것입니다. <xref:System.Xml.XPath.XPathDocument> 클래스를 사용하여 XML 내용의 읽기 전용 유효성 검사를 수행할 수도 있습니다.  
@@ -129,7 +129,7 @@ class ValidatingReaderExample
  <xref:System.Xml.Schema.XmlSchemaInfo.Validity%2A>로 특성 또는 요소에 액세스할 때 <xref:System.Xml.XPath.XPathNavigator> 속성을 사용하여 개별 특성 또는 요소가 유효한지 여부를 확인할 수 있습니다.  
   
 > [!NOTE]
->  기본값을 정의하는 스키마가 연결되어 있는 XML 문서를 <xref:System.Xml.XmlDocument> 개체에 로드하면 <xref:System.Xml.XmlDocument> 개체는 이 기본값이 XML 문서에 나타난 것처럼 처리합니다. 그러므로 빈 요소로 쓰여진 XML 문서에서도 <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> 속성은 스키마에서 기본값으로 설정된 요소에 대해 항상 `false`를 반환합니다.  
+> 기본값을 정의하는 스키마가 연결되어 있는 XML 문서를 <xref:System.Xml.XmlDocument> 개체에 로드하면 <xref:System.Xml.XmlDocument> 개체는 이 기본값이 XML 문서에 나타난 것처럼 처리합니다. 그러므로 빈 요소로 쓰여진 XML 문서에서도 <xref:System.Xml.XPath.XPathNavigator.IsEmptyElement%2A> 속성은 스키마에서 기본값으로 설정된 요소에 대해 항상 `false`를 반환합니다.  
   
 ### <a name="validating-a-document-using-the-validate-method"></a>Validate 메서드를 사용하여 문서의 유효성 검사  
  <xref:System.Xml.XmlDocument.Validate%2A> 클래스의 <xref:System.Xml.XmlDocument> 메서드는 <xref:System.Xml.XmlDocument> 개체의 <xref:System.Xml.XmlDocument> 속성에 지정된 스키마에 대해 <xref:System.Xml.XmlDocument.Schemas%2A> 개체에 포함된 XML 문서의 유효성을 검사하고 Infoset 확대를 수행합니다. 그 결과 <xref:System.Xml.XmlDocument> 개체에서 이전에 형식화하지 않은 XML 문서가 형식화된 문서로 바뀝니다.  
@@ -361,11 +361,11 @@ class ValidatingReaderExample
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)  
-- [XPathNavigator를 사용하여 XML 데이터 선택, 평가 및 일치시키기](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)  
-- [XPathNavigator를 사용하여 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기](../../../../docs/standard/data/xml/reading-xml-data-using-xpathdocument-and-xmldocument.md)
+- [XPathNavigator를 사용하여 XML 데이터 선택, 평가 및 일치시키기](../../../../docs/standard/data/xml/selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md)
+- [XPathNavigator를 사용하여 XML 데이터 액세스](../../../../docs/standard/data/xml/accessing-xml-data-using-xpathnavigator.md)
 - [XPathNavigator를 사용하여 XML 데이터 편집](../../../../docs/standard/data/xml/editing-xml-data-using-xpathnavigator.md)

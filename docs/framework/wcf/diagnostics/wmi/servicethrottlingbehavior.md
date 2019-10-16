@@ -2,12 +2,12 @@
 title: ServiceThrottlingBehavior
 ms.date: 03/30/2017
 ms.assetid: 37b9e517-1f1f-4ec4-9fcb-2b8016794f5b
-ms.openlocfilehash: edc154fcce0058455f1376a2a45807c92f7f2457
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 572e458f08c4717207667db9940296c4a957199a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956873"
 ---
 # <a name="servicethrottlingbehavior"></a>ServiceThrottlingBehavior
 ServiceThrottlingBehavior  
@@ -56,5 +56,6 @@ class ServiceThrottlingBehavior : Behavior
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>

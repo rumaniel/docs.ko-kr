@@ -1,0 +1,245 @@
+- name: 액세스 가능성
+  href: index.md
+  items:
+    - name: 액세스 가능성에 대한 유용한 정보
+      href: accessibility-best-practices.md
+    - name: UI 자동화 기본 사항
+      href: ui-automation-fundamentals.md
+      items:
+        - name: UI 자동화 개요
+          href: ui-automation-overview.md
+        - name: UI 자동화 및 Microsoft Active Accessibility
+          href: ui-automation-and-microsoft-active-accessibility.md
+        - name: UI 자동화 트리 개요
+          href: ui-automation-tree-overview.md
+        - name: UI 자동화 컨트롤 패턴 개요
+          href: ui-automation-control-patterns-overview.md
+        - name: UI 자동화 속성 개요
+          href: ui-automation-properties-overview.md
+        - name: UI 자동화 이벤트 개요
+          href: ui-automation-events-overview.md
+        - name: UI 자동화 보안 개요
+          href: ui-automation-security-overview.md
+        - name: 자동화된 테스트를 위해 UI 자동화 사용
+          href: using-ui-automation-for-automated-testing.md
+    - name: 관리 코드에 대한 UI 자동화 공급자
+      href: ui-automation-providers-for-managed-code.md
+      items:
+        - name: 서버 쪽 UI 자동화 공급자 구현
+          href: server-side-ui-automation-provider-implementation.md
+        - name: UI 자동화 공급자 개요
+          href: ui-automation-providers-overview.md
+        - name: 클라이언트 쪽 UI 자동화 공급자 구현
+          href: client-side-ui-automation-provider-implementation.md
+        - name: 방법 항목
+          href: ui-automation-providers-for-managed-code-how-to-topics.md
+          items:
+            - name: 서버 쪽 UI 자동화 공급자 노출
+              href: expose-a-server-side-ui-automation-provider.md
+            - name: UI 자동화 공급자에서 속성 반환
+              href: return-properties-from-a-ui-automation-provider.md
+            - name: UI 자동화 공급자에서 이벤트 발생
+              href: raise-events-from-a-ui-automation-provider.md
+            - name: UI 자동화 조각 공급자에서 탐색 사용
+              href: enable-navigation-in-a-ui-automation-fragment-provider.md
+            - name: UI 자동화 공급자의 컨트롤 패턴 지원
+              href: support-control-patterns-in-a-ui-automation-provider.md
+            - name: 클라이언트 쪽 UI 자동화 공급자 만들기
+              href: create-a-client-side-ui-automation-provider.md
+            - name: 클라이언트 애플리케이션에서 UI 자동화 공급자 구현
+              href: implement-ui-automation-providers-in-a-client-application.md
+    - name: 관리 코드에 대한 UI 자동화 클라이언트
+      href: ui-automation-clients-for-managed-code.md
+      items:
+        - name: UI 자동화 및 화면 크기 조정
+          href: ui-automation-and-screen-scaling.md
+        - name: 표준 컨트롤에 대한 UI 자동화 지원
+          href: ui-automation-support-for-standard-controls.md
+        - name: 클라이언트에 대한 UI 자동화 이벤트
+          href: ui-automation-events-for-clients.md
+        - name: UI 자동화 클라이언트에서 캐싱
+          href: caching-in-ui-automation-clients.md
+        - name: 클라이언트에 대한 UI 자동화 속성
+          href: ui-automation-properties-for-clients.md
+        - name: UI 자동화 클라이언트에 대한 컨트롤 패턴 매핑
+          href: control-pattern-mapping-for-ui-automation-clients.md
+        - name: 클라이언트용 UI 자동화 컨트롤 패턴
+          href: ui-automation-control-patterns-for-clients.md
+        - name: UI 자동화 요소 가져오기
+          href: obtaining-ui-automation-elements.md
+        - name: UI 자동화 스레딩 문제
+          href: ui-automation-threading-issues.md
+        - name: 방법 항목
+          href: ui-automation-clients-for-managed-code-how-to-topics.md
+          items:
+            - name: 속성 조건에 따라 UI 자동화 요소 찾기
+              href: find-a-ui-automation-element-based-on-a-property-condition.md
+            - name: TreeWalker를 사용하여 UI 자동화 요소 간 탐색
+              href: navigate-among-ui-automation-elements-with-treewalker.md
+            - name: 목록 항목의 UI 자동화 요소 찾기
+              href: find-a-ui-automation-element-for-a-list-item.md
+            - name: UI 자동화 요소 속성 가져오기
+              href: get-ui-automation-element-properties.md
+            - name: UI 자동화에서 캐싱 사용
+              href: use-caching-in-ui-automation.md
+            - name: UI 자동화 이벤트 구독
+              href: subscribe-to-ui-automation-events.md
+            - name: 클라이언트 쪽 공급자 어셈블리 등록
+              href: register-a-client-side-provider-assembly.md
+            - name: AutomationID 속성 사용
+              href: use-the-automationid-property.md
+    - name: UI 자동화 컨트롤 패턴
+      href: ui-automation-control-patterns.md
+      items:
+        - name: UI 자동화 Dock 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-dock-control-pattern.md
+        - name: UI 자동화 ExpandCollapse 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-expandcollapse-control-pattern.md
+        - name: UI 자동화 Grid 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-grid-control-pattern.md
+        - name: UI 자동화 GridItem 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-griditem-control-pattern.md
+        - name: UI 자동화 Invoke 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-invoke-control-pattern.md
+        - name: UI 자동화 MultipleView 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-multipleview-control-pattern.md
+        - name: UI 자동화 RangeValue 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-rangevalue-control-pattern.md
+        - name: UI 자동화 Scroll 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-scroll-control-pattern.md
+        - name: UI 자동화 ScrollItem 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-scrollitem-control-pattern.md
+        - name: UI 자동화 Selection 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-selection-control-pattern.md
+        - name: UI 자동화 SelectionItem 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-selectionitem-control-pattern.md
+        - name: UI 자동화 Table 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-table-control-pattern.md
+        - name: UI 자동화 TableItem 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-tableitem-control-pattern.md
+        - name: UI 자동화 Toggle 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-toggle-control-pattern.md
+        - name: UI 자동화 Transform 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-transform-control-pattern.md
+        - name: UI 자동화 Value 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-value-control-pattern.md
+        - name: UI 자동화 Window 컨트롤 패턴 구현
+          href: implementing-the-ui-automation-window-control-pattern.md
+        - name: 방법 항목
+          href: ui-automation-control-patterns-how-to-topics.md
+          items:
+            - name: UI 자동화를 사용하여 표의 콘텐츠 노출
+              href: expose-the-content-of-a-table-using-ui-automation.md
+            - name: 지원되는 UI 자동화 컨트롤 패턴 가져오기
+              href: get-supported-ui-automation-control-patterns.md
+            - name: UI 자동화를 사용하여 확인란의 전환 상태 가져오기
+              href: get-the-toggle-state-of-a-check-box-using-ui-automation.md
+            - name: UI 자동화를 사용하여 컨트롤 호출
+              href: invoke-a-control-using-ui-automation.md
+            - name: UI 자동화 요소 이동
+              href: move-a-ui-automation-element.md
+    - name: UI 자동화 텍스트 패턴
+      href: ui-automation-text-pattern.md
+      items:
+        - name: UI 자동화 TextPattern 개요
+          href: ui-automation-textpattern-overview.md
+        - name: TextPattern 및 포함 개체 개요
+          href: textpattern-and-embedded-objects-overview.md
+        - name: 방법 항목
+          href: ui-automation-text-pattern-how-to-topics.md
+          items:
+            - name: UI 자동화를 사용하여 텍스트 상자에 콘텐츠 추가
+              href: add-content-to-a-text-box-using-ui-automation.md
+            - name: UI 자동화를 사용하여 텍스트 찾기 및 강조
+              href: find-and-highlight-text-using-ui-automation.md
+            - name: UI 자동화를 사용하여 텍스트 특성 가져오기
+              href: obtain-text-attributes-using-ui-automation.md
+            - name: UI 자동화를 사용하여 혼합 텍스트 특성 정보 가져오기
+              href: obtain-mixed-text-attribute-details-using-ui-automation.md
+            - name: UI 자동화를 사용하여 텍스트 이동
+              href: traverse-text-using-ui-automation.md
+            - name: UI 자동화를 사용하여 포함 개체에 액세스
+              href: access-embedded-objects-using-ui-automation.md
+    - name: UI 자동화 컨트롤 형식
+      href: ui-automation-control-types.md
+      items:
+        - name: UI 자동화 컨트롤 형식 개요
+          href: ui-automation-control-types-overview.md
+        - name: Button 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-button-control-type.md
+        - name: Calendar 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-calendar-control-type.md
+        - name: CheckBox 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-checkbox-control-type.md
+        - name: ComboBox 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-combobox-control-type.md
+        - name: DataGrid 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-datagrid-control-type.md
+        - name: DataItem 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-dataitem-control-type.md
+        - name: Document 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-document-control-type.md
+        - name: Edit 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-edit-control-type.md
+        - name: Group 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-group-control-type.md
+        - name: Header 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-header-control-type.md
+        - name: HeaderItem 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-headeritem-control-type.md
+        - name: Hyperlink 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-hyperlink-control-type.md
+        - name: Image 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-image-control-type.md
+        - name: List 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-list-control-type.md
+        - name: ListItem 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-listitem-control-type.md
+        - name: Menu 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-menu-control-type.md
+        - name: MenuBar 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-menubar-control-type.md
+        - name: MenuItem 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-menuitem-control-type.md
+        - name: Pane 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-pane-control-type.md
+        - name: ProgressBar 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-progressbar-control-type.md
+        - name: RadioButton 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-radiobutton-control-type.md
+        - name: ScrollBar 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-scrollbar-control-type.md
+        - name: Separator 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-separator-control-type.md
+        - name: Slider 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-slider-control-type.md
+        - name: Spinner 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-spinner-control-type.md
+        - name: SplitButton 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-splitbutton-control-type.md
+        - name: StatusBar 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-statusbar-control-type.md
+        - name: Tab 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-tab-control-type.md
+        - name: TabItem 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-tabitem-control-type.md
+        - name: Table 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-table-control-type.md
+        - name: Text 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-text-control-type.md
+        - name: Thumb 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-thumb-control-type.md
+        - name: TitleBar 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-titlebar-control-type.md
+        - name: ToolBar 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-toolbar-control-type.md
+        - name: ToolTip 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-tooltip-control-type.md
+        - name: Tree 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-tree-control-type.md
+        - name: TreeItem 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-treeitem-control-type.md
+        - name: Window 컨트롤 형식에 대한 UI 자동화 지원
+          href: ui-automation-support-for-the-window-control-type.md
+    - name: UI 자동화 사양 및 커뮤니티 약속
+      href: ui-automation-specification-and-community-promise.md

@@ -6,17 +6,16 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: 07dd5f015624e934ceb4fd38f23f7e780d185dfc
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43744987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053377"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>컨트롤의 포커스 스타일 지정 및 FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 컨트롤이 키보드 포커스를 받을 때 컨트롤의 시각적 모양을 변경하는 두 가지 병렬 메커니즘을 제공합니다. 와 같은 속성에 대 한 속성 setter를 사용 하는 첫 번째 메커니즘은 <xref:System.Windows.UIElement.IsKeyboardFocused%2A> 스타일 또는 컨트롤에 적용 되는 템플릿 내에서. 두 번째 메커니즘에서는 별도 스타일을 값으로 지정 하는 것은 <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A> 속성 또는 다른 UI 컨트롤의 시각적 트리를 변경 하는 것이 아니라는 컨트롤 위에 그려지는 표시기에 대 한 별도 시각적 트리를 만들고 "포커스 비주얼 스타일" 교체 하 여 요소입니다. 이 항목에서는 이러한 각 메커니즘이 적절하게 적용되는 시나리오를 설명합니다.  
-   
-  
+
 <a name="Purpose"></a>   
 ## <a name="the-purpose-of-focus-visual-style"></a>포커스 비주얼 스타일의 목적  
  포커스 비주얼 스타일 기능은 UI 요소에 대한 키보드 탐색에 따라 시각적 사용자 피드백을 추가하기 위한 공통 “개체 모델”을 제공합니다. 이 작업은 컨트롤에 새 템플릿을 적용하거나 특정 템플릿 컴퍼지션을 인식하지 않아도 가능합니다.  
@@ -25,9 +24,9 @@ ms.locfileid: "43744987"
   
 <a name="Default"></a>   
 ## <a name="default-focus-visual-style-behavior"></a>기본 포커스 비주얼 스타일 동작  
- 포커스 비주얼 스타일은 포커스 작업이 키보드에서 시작된 경우에만 적용됩니다. 마우스 작업이나 프로그래밍 방식 포커스 변경인 경우에는 포커스 비주얼 스타일 모드가 적용되지 않습니다. 포커스 모드 간의 차이점에 대한 자세한 내용은 [포커스 개요](../../../../docs/framework/wpf/advanced/focus-overview.md)를 참조하세요.  
+ 포커스 비주얼 스타일은 포커스 작업이 키보드에서 시작된 경우에만 적용됩니다. 마우스 작업이나 프로그래밍 방식 포커스 변경인 경우에는 포커스 비주얼 스타일 모드가 적용되지 않습니다. 포커스 모드 간의 차이점에 대한 자세한 내용은 [포커스 개요](focus-overview.md)를 참조하세요.  
   
- 컨트롤에 대한 테마에는 테마의 모든 컨트롤에 대한 포커스 비주얼 스타일이 되는 기본 포커스 비주얼 스타일 동작이 포함됩니다. 이 테마 스타일은 정적 키의 값으로 식별 되 <xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>합니다. 응용 프로그램 수준에서 자체 포커스 비주얼 스타일을 선언하면 테마에서 이 기본 스타일 동작이 대체됩니다. 또는 전체 테마를 정의할 경우 이 동일한 키를 사용하여 전체 테마의 기본 동작에 대한 스타일을 정의해야 합니다.  
+ 컨트롤에 대한 테마에는 테마의 모든 컨트롤에 대한 포커스 비주얼 스타일이 되는 기본 포커스 비주얼 스타일 동작이 포함됩니다. 이 테마 스타일은 정적 키의 값으로 식별 되 <xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>합니다. 애플리케이션 수준에서 자체 포커스 비주얼 스타일을 선언하면 테마에서 이 기본 스타일 동작이 대체됩니다. 또는 전체 테마를 정의할 경우 이 동일한 키를 사용하여 전체 테마의 기본 동작에 대한 스타일을 정의해야 합니다.  
   
  일반적으로 테마에서 기본 포커스 비주얼 스타일은 매우 간단합니다. 대략적인 설명은 다음과 같습니다.  
   
@@ -64,7 +63,7 @@ ms.locfileid: "43744987"
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>포커스 비주얼 스타일 사용의 대체 방법  
  포커스 비주얼 스타일이 적절하지 않은 상황에서는 단일 컨트롤에만 스타일을 지정하거나 컨트롤 템플릿보다 더 큰 컨트롤이 필요하기 때문에 포커스 변경에 대한 응답으로 시각적 동작을 만들 수 있는 많은 다른 액세스 가능한 속성 및 기술이 있습니다.  
   
- 트리거, setter 및 이벤트 setter는 모두 [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)에서 자세히 설명합니다. 라우트된 이벤트 처리는 [라우트된 이벤트 개요](../../../../docs/framework/wpf/advanced/routed-events-overview.md)에서 설명합니다.  
+ 트리거, setter 및 이벤트 setter는 모두 [스타일 지정 및 템플릿](../controls/styling-and-templating.md)에서 자세히 설명합니다. 라우트된 이벤트 처리는 [라우트된 이벤트 개요](routed-events-overview.md)에서 설명합니다.  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
  키보드 포커스에 특별히 관심이 있는 경우는 <xref:System.Windows.UIElement.IsKeyboardFocused%2A> 속성에 대 한 종속성 속성을 사용할 수 있습니다 <xref:System.Windows.Trigger>합니다. 단일 컨트롤에만 관련되고 다른 컨트롤의 키보드 포커스 동작과 시각적으로 일치하지 않는 키보드 포커스 동작을 정의할 경우 스타일 또는 템플릿의 속성 트리거가 더 적절한 기술입니다.  
@@ -76,8 +75,9 @@ ms.locfileid: "43744987"
 ### <a name="other-focus-properties"></a>기타 포커스 속성  
  기본 setter 또는 트리거를 해야 모든 원인은 포커스를 변경 하는 시각적 동작을 생성 하기를 원한다 면 합니다 <xref:System.Windows.UIElement.IsFocused%2A> 종속성 속성 또는에 <xref:System.Windows.UIElement.GotFocus> 또는 <xref:System.Windows.UIElement.LostFocus> 이벤트에 대 한는 <xref:System.Windows.EventSetter>합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>  
- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
- [포커스 개요](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [입력 개요](../../../../docs/framework/wpf/advanced/input-overview.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
+- [스타일 지정 및 템플릿](../controls/styling-and-templating.md)
+- [포커스 개요](focus-overview.md)
+- [입력 개요](input-overview.md)

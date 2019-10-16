@@ -36,12 +36,12 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 - literal types [Visual Basic], default
 ms.assetid: 6353cb9b-6ee4-4af6-a5a8-88ce39f90cc5
-ms.openlocfilehash: 1922282ece4dd90c8f55c8dea20ef2866d8b357c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a469a08ebadd77d5abbfa95b270784c9ef534691
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906752"
 ---
 # <a name="type-characters-visual-basic"></a>입력 문자 (Visual Basic)
 
@@ -140,12 +140,12 @@ Dim number As Integer = &H_C305_F860
 
 [!INCLUDE [supporting-underscores](../../../../../includes/vb-separator-langversion.md)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)  
- [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)  
- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)  
- [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)  
- [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)  
- [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)  
- [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)
+- [데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
+- [기본 데이터 형식](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
+- [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
+- [Visual Basic의 형식 변환](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [데이터 형식 문제 해결](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [변수 선언](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
+- [데이터 형식](../../../../visual-basic/language-reference/data-types/index.md)

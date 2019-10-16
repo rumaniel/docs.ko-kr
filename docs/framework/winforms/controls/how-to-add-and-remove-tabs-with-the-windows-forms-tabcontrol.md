@@ -12,19 +12,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 938dbb4ae695f22d6daff417fbf7176800420aae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 938f1210eaa3479822e752327123737a3286fe9a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33525606"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624055"
 ---
 # <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a>방법: Windows Forms TabControl을 사용하여 탭 추가 및 제거
-기본적으로는 <xref:System.Windows.Forms.TabControl> 컨트롤에는 두 개의 <xref:System.Windows.Forms.TabPage> 컨트롤입니다. 이러한 탭을 통해 액세스할 수 있습니다는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성입니다.  
+기본적으로 <xref:System.Windows.Forms.TabControl> 컨트롤에는 두 개의 <xref:System.Windows.Forms.TabPage> 컨트롤입니다. 이러한 탭을 통해 액세스할 수 있습니다는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성입니다.  
   
 ### <a name="to-add-a-tab-programmatically"></a>프로그래밍 방식으로 탭을 추가 하려면  
   
--   사용 하 여는 <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> 의 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성입니다.  
+- 사용 된 <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> 메서드를 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -47,11 +47,11 @@ ms.locfileid: "33525606"
   
 ### <a name="to-remove-a-tab-programmatically"></a>프로그래밍 방식으로 탭을 제거 하려면  
   
--   선택한 탭을 제거 하려면는 <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> 의 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성입니다.  
+- 선택한 탭을 제거 하려면 사용 합니다 <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.  
   
-     -또는-  
+     또는  
   
--   모든 탭을 제거 하려면는 <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> 의 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성입니다.  
+- 모든 탭을 제거 하려면 사용 합니다 <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> 메서드는 <xref:System.Windows.Forms.TabControl.TabPages%2A> 속성.  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,8 +74,9 @@ ms.locfileid: "33525606"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a>참고 항목  
- [TabControl 컨트롤 개요](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)  
- [방법: 탭 페이지에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)  
- [방법: 탭 페이지 사용 안 함](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)  
- [방법: Windows Forms TabControl의 모양 변경](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a>참고자료
+
+- [TabControl 컨트롤 개요](tabcontrol-control-overview-windows-forms.md)
+- [방법: 탭 페이지에 컨트롤 추가](how-to-add-a-control-to-a-tab-page.md)
+- [방법: 탭 페이지를 사용 하지 않도록 설정](how-to-disable-tab-pages.md)
+- [방법: Windows Forms TabControl의 모양 변경](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

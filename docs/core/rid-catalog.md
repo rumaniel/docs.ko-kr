@@ -1,19 +1,17 @@
 ---
 title: .NET Core RID(런타임 식별자) 카탈로그
 description: RID(런타임 식별자) 및 .NET Core에서 RID의 사용 방법에 관해 알아봅니다.
-author: mairaw
-ms.author: mairaw
-ms.date: 07/19/2018
-ms.openlocfilehash: ff0449f7c6f878131f0ec4b16d685d2c02d26719
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 02/22/2019
+ms.openlocfilehash: 0d03e39c755b43e145edf5efe48422cbae7abcab
+ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517381"
+ms.lasthandoff: 02/23/2019
+ms.locfileid: "56745744"
 ---
 # <a name="net-core-rid-catalog"></a>.NET Core RID 카탈로그
 
-RID는 *Runtime IDentifier(런타임 식별자)* 의 약어입니다. RID 값은 응용 프로그램을 실행하는 대상 플랫폼을 식별하는 데 사용됩니다.
+RID는 *Runtime IDentifier(런타임 식별자)* 의 약어입니다. RID 값은 애플리케이션을 실행하는 대상 플랫폼을 식별하는 데 사용됩니다.
 NuGet 패키지에서 .NET 패키지의 플랫폼 관련 자산을 나타내는 데 사용됩니다. RID 값의 예로 `linux-x64`, `ubuntu.14.04-x64`, `win7-x64`, `osx.10.12-x64` 등을 들 수 있습니다.
 기본 종속성이 있는 패키지의 경우 RID는 패키지를 복원할 수 있는 플랫폼을 지정합니다.
 
@@ -29,15 +27,15 @@ NuGet 패키지에서 .NET 패키지의 플랫폼 관련 자산을 나타내는 
 
 구체적인 운영 체제를 나타내는 RID는 일반적으로 `[os].[version]-[architecture]-[additional qualifiers]`의 패턴을 따릅니다. 각각은 다음과 같습니다.
 
-- `[os]` - 운영 체제/플랫폼 모니커입니다. 예를 들어, `ubuntu`을 입력합니다.
+- `[os]` - 운영 체제/플랫폼 모니커입니다. 예를 들어 `ubuntu`과 같은 형식입니다.
 
-- `[version]` - 점으로 구분된(`.`) 버전 번호 형식의 운영 체제 버전입니다. 예를 들어, `15.10`을 입력합니다.
+- `[version]` - 점으로 구분된(`.`) 버전 번호 형식의 운영 체제 버전입니다. 예를 들어 `15.10`과 같은 형식입니다.
 
   - 버전은 마케팅 버전이어서는 **안 됩니다**. 마케팅 버전은 종종 다양한 플랫폼 API 노출 영역이 있는 운영 체제의 여러 개별 버전을 나타내기 때문입니다.
 
 - `[architecture]` - 프로세서 아키텍처입니다. 예를 들면 `x86`, `x64`, `arm`, `arm64` 등입니다.
 
-- `[additional qualifiers]` - 다른 플랫폼을 추가로 구분합니다. 예를 들면 `aot` 또는 `corert` 등입니다.
+- `[additional qualifiers]` - 다른 플랫폼을 추가로 구분합니다. 예: `aot`
 
 ## <a name="rid-graph"></a>RID 그래프
 
@@ -84,22 +82,22 @@ RID를 사용할 때는 RID에 대한 다음과 같은 몇 가지 고려 사항�
 RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. 새 값이 플랫폼에 정기적으로 추가됩니다.
 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요.
 
-.NET Core 2.0 SDK에서는 이식 가능 RID라는 개념을 도입합니다. 이식 가능 RID란 RID 그래프에 추가된 새 값인데 아직 특정 버전 또는 OS 배포에 연결되지 않은 값입니다. 이 값은 여러 Linux 배포를 다룰 때 매우 유용합니다.
+.NET Core 2.0 SDK에서는 이식 가능 RID라는 개념을 도입합니다. 이식 가능 RID란 RID 그래프에 새로 추가된 값으로서, 아직 특정 버전 또는 OS 배포에 연결되지 않았으며 .NET Core 2.0 이상을 사용할 때 권장됩니다. 대부분의 배포 RID는 이식 가능 RID에 매핑되므로 이 값은 여러 Linux 배포판을 다룰 때 매우 유용합니다.
 
-다음 목록에서는 각 OS에 사용되는 일반적인 RID를 보여 줍니다. `arm` 또는 `corert` 값은 다루지 않습니다.
+다음 목록에서는 각 OS에 사용되는 일반적인 RID의 몇 가지 예를 보여줍니다.
 
 ## <a name="windows-rids"></a>Windows RID
 
-- 이식 가능
-  - `win-x86`
+자주 사용되는 값만 나열되어 있습니다. 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요.
+
+- 이식 가능(.NET Core 2.0 이상 버전)
   - `win-x64`
+  - `win-x86`
+  - `win-arm`
+  - `win-arm64`
 - Windows 7 / Windows Server 2008 R2
   - `win7-x64`
   - `win7-x86`
-- Windows 8 / Windows Server 2012
-  - `win8-x64`
-  - `win8-x86`
-  - `win8-arm`
 - Windows 8.1 / Windows Server 2012 R2
   - `win81-x64`
   - `win81-x86`
@@ -114,88 +112,41 @@ RID를 사용할 수 있으려면 어떤 RID가 있는지 알아야 합니다. �
 
 ## <a name="linux-rids"></a>Linux RID
 
-- 이식 가능
-  - `linux-x64`
-- CentOS
-  - `centos-x64`
-  - `centos.7-x64`
-- Debian
-  - `debian-x64`
-  - `debian.8-x64`
-  - `debian.9-x64`(.NET Core 1.1 이상 버전)
-- Fedora
-  - `fedora-x64`
-  - `fedora.27-x64`
-  - `fedora.28-x64`(.NET Core 1.1 이상 버전)
-- Gentoo(.NET Core 2.0 이상 버전)
-  - `gentoo-x64`
-- openSUSE
-  - `opensuse-x64`
-  - `opensuse.42.3-x64`
-- Oracle Linux
-  - `ol-x64`
-  - `ol.7-x64`
-  - `ol.7.0-x64`
-  - `ol.7.1-x64`
-  - `ol.7.2-x64`
-  - `ol.7.3-x64`
-  - `ol.7.4-x64`
+자주 사용되는 값만 나열되어 있습니다. 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요. 아래에 나열되지 않은 배포를 실행하는 디바이스의 경우, 이식 가능 RID 중 하나와 작동할 수 있습니다. 예를 들어, 여기에 나열되지 않은 Linux 배포를 실행하는 Raspberry Pi 디바이스는 `linux-arm`을 사용하여 대상으로 지정할 수 있습니다.
+
+- 이식 가능(.NET Core 2.0 이상 버전)
+  - `linux-x64` (CentOS, Debian, Fedora, Ubuntu 및 파생 버전을 비롯한 대부분의 데스크톱 배포)
+  - `linux-musl-x64` (Alpine Linux와 같이 [musl](https://wiki.musl-libc.org/projects-using-musl.html)을 사용하는 간단한 배포)
+  - `linux-arm` (Raspberry Pi와 같이 ARM에서 실행되는 Linux 배포)
 - Red Hat Enterprise Linux
-  - `rhel-x64`
+  - `rhel-x64` (버전 6보다 상위 RHEL의 경우 `linux-x64`로 대체됨)
   - `rhel.6-x64`(.NET Core 2.0 이상 버전)
-  - `rhel.7-x64`
-  - `rhel.7.1-x64`
-  - `rhel.7.2-x64`
-  - `rhel.7.3-x64`(.NET Core 2.0 이상 버전)
-  - `rhel.7.4-x64`(.NET Core 2.0 이상 버전)
 - Tizen(.NET Core 2.0 이상 버전)
   - `tizen`
   - `tizen.4.0.0`
   - `tizen.5.0.0`
-- Ubuntu
-  - `ubuntu-x64`
-  - `ubuntu.14.04-x64`
-  - `ubuntu.16.04-x64`
-  - `ubuntu.17.10-x64`
-  - `ubuntu.18.04-x64`
-- Ubuntu 파생 제품
-  - `linuxmint.17-x64`
-  - `linuxmint.17.1-x64`
-  - `linuxmint.17.2-x64`
-  - `linuxmint.17.3-x64`
-  - `linuxmint.18-x64`(.NET Core 2.0 이상 버전)
-  - `linuxmint.18.1-x64`(.NET Core 2.0 이상 버전)
-  - `linuxmint.18.2-x64`(.NET Core 2.0 이상 버전)
-  - `linuxmint.18.3-x64`(.NET Core 2.0 이상 버전)
-- SLES(SUSE Enterprise Linux)(.NET Core 2.0 이상 버전)
-  - `sles-x64`
-  - `sles.12-x64`
-  - `sles.12.1-x64`
-  - `sles.12.2-x64`
-  - `sles.12.3-x64`
-- Alpine Linux(.NET Core 2.1 이상 버전)
-  - `alpine-x64`
-  - `alpine.3.7-x64`
 
 자세한 내용은 [Linux에서 .NET Core의 필수 구성 요소](linux-prerequisites.md)를 참조하세요.
 
 ## <a name="macos-rids"></a>macOS RID
 
-macOS RID는 이전 "OSX" 브랜딩을 사용합니다.
+macOS RID는 이전 "OSX" 브랜딩을 사용합니다. 자주 사용되는 값만 나열되어 있습니다. 최신의 완전한 버전을 보려면 CoreFX 리포지토리에서 [runtime.json](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/runtime.json) 파일을 참조하세요.
 
-- `osx-x64`(.NET Core 2.0 이상 버전, 최소 버전은 `osx.10.12-x64`)
-- `osx.10.10-x64`
-- `osx.10.11-x64`
-- `osx.10.12-x64`(.NET Core 1.1 이상 버전)
-- `osx.10.13-x64`
+- 이식 가능(.NET Core 2.0 이상 버전)
+  - `osx-x64` (최소 OS 버전: macOS 10.12 Sierra)
+- macOS 10.10 Yosemite
+  - `osx.10.10-x64`
+- macOS 10.11 El Capitan
+  - `osx.10.11-x64`
+- macOS 10.12 Sierra(.NET Core 1.1 이상 버전)
+  - `osx.10.12-x64`
+- macOS 10.13 High Sierra(.NET Core 1.1 이상 버전)
+  - `osx.10.13-x64`
+- macOS 10.14 Mojave(.NET Core 1.1 이상 버전)
+  - `osx.10.14-x64`
 
 자세한 내용은 [macOS에서 .NET Core의 필수 구성 요소](macos-prerequisites.md)를 참조하세요.
 
-## <a name="android-rids-net-core-20-or-later-versions"></a>Android RID(.NET Core 2.0 이상 버전)
-
-- `android`
-- `android.21`
-
 ## <a name="see-also"></a>참고 항목
 
-* [런타임 ID](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)
+- [런타임 ID](https://github.com/dotnet/corefx/blob/master/pkg/Microsoft.NETCore.Platforms/readme.md)

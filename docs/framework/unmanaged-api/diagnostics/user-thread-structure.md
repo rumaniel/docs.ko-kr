@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93e96d6f8570e6aef7bfc18ef2859dc1e86ec8fb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 0191f1fa17d436944fcb590d88dd4004adfa1aba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33429033"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744293"
 ---
 # <a name="userthread-structure"></a>USER_THREAD 구조체
-디버거가 스레드에 대 한 정보를 제공합니다. 자세한 내용은 참조는 [inotifysource2:: Setnotifyfilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드.  
+디버거에 스레드에 대 한 정보를 제공합니다. 자세한 내용은 참조는 [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md) 메서드.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct tagUSER_THREAD  
 {  
     BYTE    *pSidBuffer;  
@@ -39,15 +39,16 @@ typedef struct tagUSER_THREAD
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`pSidBuffer`|스레드 버퍼의 주소입니다.|  
-|`dwSidLen`|스레드 버퍼의 바이트의 길이입니다.|  
+|`dwSidLen`|스레드 버퍼 바이트의 길이입니다.|  
 |`dwTid`|스레드 id입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
  **헤더:** ProtocolNotify2.idl  
   
-## <a name="see-also"></a>참고 항목  
- [SetNotifyFilter 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)  
- [진단 기호 저장소 구조체](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)
+## <a name="see-also"></a>참고자료
+
+- [SetNotifyFilter 메서드](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)
+- [진단 기호 저장소 구조체](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

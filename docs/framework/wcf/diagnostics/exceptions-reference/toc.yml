@@ -1,0 +1,51 @@
+- name: 예외 참조
+  href: index.md
+  items:
+    - name: COM+ 통합
+      href: com-integration.md
+    - name: 구성
+      href: configuration.md
+    - name: '핵심 통신: 채널 프레임워크'
+      href: core-communications-channel-framework.md
+    - name: '핵심 통신: 연결 프레임워크'
+      href: core-communications-connection-framework.md
+    - name: '핵심 통신: HTTP/HTTPS 전송 채널'
+      href: core-communications-http-https-transport-channels.md
+    - name: '핵심 통신: 내부 이중 전송 채널'
+      href: core-communications-internal-duplex-transport-channels.md
+    - name: '핵심 통신: 명명된 파이프 전송 채널'
+      href: core-communications-named-pipe-transport-channels.md
+    - name: '핵심 통신: TCP 전송 채널'
+      href: core-communications-tcp-transport-channels.md
+    - name: '핵심 통신: 전송 프레임워크'
+      href: core-communications-transport-framework.md
+    - name: '핵심 통신: 유틸리티'
+      href: core-communications-utilities.md
+    - name: '핵심 통신: 웹 호스트 지원'
+      href: core-communications-webhost-support.md
+    - name: 호스팅
+      href: hosting-exceptions.md
+    - name: IdentityModel
+      href: identitymodel-exceptions.md
+    - name: MSMQ 통합 전송
+      href: msmq-integration-transport.md
+    - name: MSMQ 전송
+      href: msmq-transport.md
+    - name: 피어 채널
+      href: peer-channel.md
+    - name: 신뢰할 수 있는 메시징
+      href: reliable-messaging.md
+    - name: 보안 예외
+      href: security-exceptions.md
+    - name: 서비스 프레임워크
+      href: service-framework.md
+    - name: 서비스 프레임워크 데이터
+      href: service-framework-data.md
+    - name: 서비스 프레임워크 메타데이터
+      href: service-framework-metadata.md
+    - name: 트랜잭션
+      href: transaction-exceptions.md
+    - name: 트랜잭션 포맷터
+      href: transaction-formatter.md
+    - name: 도구
+      href: tools.md

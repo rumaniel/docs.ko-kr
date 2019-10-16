@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfda61706af3e1043d271c0aa74264bd99a4076c
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 5d6220270634dd8e2d15787d717020b8f6f86bb9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508638"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738335"
 ---
 # <a name="icordebugcreateprocess-method"></a>ICorDebug::CreateProcess 메서드
 디버거의 제어 기본 스레드 및 프로세스를 시작합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CreateProcess (  
     [in]  LPCWSTR                     lpApplicationName,  
     [in]  LPWSTR                      lpCommandLine,  
@@ -46,7 +46,7 @@ HRESULT CreateProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `lpApplicationName`  
  [in] 시작된 프로세스에서 실행 될 모듈을 지정 하는 null로 끝나는 문자열에 대 한 포인터입니다. 모듈 호출 프로세스의 보안 컨텍스트에서 실행 됩니다.  
   
@@ -93,7 +93,7 @@ HRESULT CreateProcess (
  Interop 디버깅 IA-64 기반 및 AMD64 기반 플랫폼 등 Win9x 및 x86이 아닌 플랫폼에서 지원 되지 않습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
@@ -101,5 +101,6 @@ HRESULT CreateProcess (
   
  **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

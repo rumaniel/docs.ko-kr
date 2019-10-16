@@ -8,25 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 50656f0d8ca1eafa62d65a2fe275398c9694cc69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33556980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790712"
 ---
 # <a name="tooltip"></a>도구 설명
-도구 설명 같은 요소를 위로 마우스 포인터를 놓을 때 표시 되는 작은 팝업 창인은는 <xref:System.Windows.Controls.Button>합니다.  
+도구 설명이 같은 요소를 위로 마우스 포인터를 놓을 때 표시 되는 작은 팝업 창에 <xref:System.Windows.Controls.Button>입니다.  
   
- 다음 그림과 가리키는 마우스 포인터는 **닫기**<xref:System.Windows.Controls.Button>, 그러면 해당 식별 표시 <xref:System.Windows.Controls.ToolTip>합니다.  
+ 다음 그림에서는 마우스 포인터로 가리키는 합니다 **닫기**<xref:System.Windows.Controls.Button>, 그러면 해당 식별 표시 <xref:System.Windows.Controls.ToolTip>합니다.  
   
- 도구 설명이 표시 된 닫기 단추  
+ 도구 설명이 표시를 사용 하 여 닫기 단추  
   
- ![도구 설명 스크린 샷](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
+ ![ToolTip 스크린 샷](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [도구 설명 개요](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
-  [방법 항목](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [도구 설명 개요](tooltip-overview.md)  
+  [방법 항목](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.ToolTip>  
@@ -34,5 +34,5 @@ ms.locfileid: "33556980"
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>관련 단원  
- [팝업 개요](../../../../docs/framework/wpf/controls/popup-overview.md)  
-  [방법 항목](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [팝업 개요](popup-overview.md)  
+  [방법 항목](popup-how-to-topics.md)

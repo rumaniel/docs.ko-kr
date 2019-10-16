@@ -1,13 +1,13 @@
 ---
-title: 제네릭(F#)
-description: 'F # 제네릭 함수 및 코드를 반복 하지 않고 다양 한 형식 사용 하는 코드를 쓸 수 있는 형식을 사용 하는 방법에 알아봅니다.'
+title: 제네릭
+description: 코드를 반복 하지 F# 않고 다양 한 형식에서 작동 하는 코드를 작성할 수 있는 제네릭 함수 및 형식을 사용 하는 방법에 대해 알아봅니다.
 ms.date: 05/16/2016
-ms.openlocfilehash: fc061f19c6c7fa737f7ca05aae83fd42c0010b37
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 5d6e57762095e44836425f90d21a6c1dc71edaaa
+ms.sourcegitcommit: cdf67135a98a5a51913dacddb58e004a3c867802
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44084964"
+ms.lasthandoff: 08/21/2019
+ms.locfileid: "69666703"
 ---
 # <a name="generics"></a>제네릭
 
@@ -49,19 +49,19 @@ F# 컴파일러가 코드에서 형식을 유추할 경우 제네릭일 수 있�
 
 다음 코드 예제에서 `makeList`는 해당 함수와 그 매개 변수가 명시적으로 제네릭으로 선언되지 않더라도 제네릭입니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1700.fs)]
 
 함수의 시그니처는 `'a -> 'a -> 'a list`로 유추됩니다. 이 예제의 `a` 및 `b`는 동일한 형식을 가지는 것으로 유추됩니다. 모두 이 목록에 함께 포함되며, 목록의 모든 요소가 동일한 형식이어야 하기 때문입니다.
 
 형식 주석에 작은따옴표 구문을 사용하여 매개 변수 형식이 제네릭 형식 매개 변수임을 나타냄으로써 함수를 제네릭으로 지정할 수도 있습니다. 다음 코드에서 `function1`은 해당 매개 변수가 이 방식으로 형식 매개 변수로 선언되므로 제네릭입니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1701.fs)]
 
 ## <a name="explicitly-generic-constructs"></a>명시적인 제네릭 구문
 
 또한 꺾쇠 괄호에 형식 매개 변수를 명시적으로 선언하여(`<type-parameter>`) 함수를 제네릭으로 설정할 수도 있습니다. 다음 코드에서는 이를 보여 줍니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1703.fs)]
 
 ## <a name="using-generic-constructs"></a>제네릭 구문 사용
 
@@ -69,16 +69,16 @@ F# 컴파일러가 코드에서 형식을 유추할 경우 제네릭일 수 있�
 
 다음 코드는 이전 섹션에 정의된 함수의 사용을 보여 줍니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1702.fs)]
 
->[!NOTE]
-제네릭 형식을 이름으로 참조하는 방법에는 두 가지가 있습니다. 예를 들어 `list<int>` 및 `int list`는 단일 형식 인수 `int`를 포함하는 제네릭 형식 `list`를 참조하는 두 가지 방법입니다. 두 번째 형식은 일반적으로 기본 제공된 F# 형식(예: `list` 및 `option`)에서만 사용됩니다. 형식 인수가 여러 개 있으면 일반적으로 `Dictionary<int, string>` 구문을 사용할 수 있지만 `(int, string) Dictionary` 구문을 사용할 수도 있습니다.
+> [!NOTE]
+> 제네릭 형식을 이름으로 참조하는 방법에는 두 가지가 있습니다. 예를 들어 `list<int>` 및 `int list`는 단일 형식 인수 `int`를 포함하는 제네릭 형식 `list`를 참조하는 두 가지 방법입니다. 두 번째 형식은 일반적으로 기본 제공된 F# 형식(예: `list` 및 `option`)에서만 사용됩니다. 형식 인수가 여러 개 있으면 일반적으로 `Dictionary<int, string>` 구문을 사용할 수 있지만 `(int, string) Dictionary` 구문을 사용할 수도 있습니다.
 
 ## <a name="wildcards-as-type-arguments"></a>형식 인수로 와일드카드 사용
 
 컴파일러에서 형식 인수를 유추하도록 지정하기 위해 명명된 형식 인수 대신 밑줄 또는 와일드카드 기호(`_`)를 사용할 수 있습니다. 다음 코드에서 이를 확인할 수 있습니다.
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1704.fs)]
 
 ## <a name="constraints-in-generic-types-and-functions"></a>제네릭 형식 및 함수의 제약 조건
 
@@ -88,15 +88,15 @@ F# 컴파일러가 코드에서 형식을 유추할 경우 제네릭일 수 있�
 
 F# 프로그램에서 사용할 수 있는 두 가지 종류의 형식 매개 변수가 있습니다. 첫 번째는 이전 섹션에 설명된 종류의 제네릭 형식 매개 변수입니다. 형식 매개 변수의 첫 번째 종류는 Visual Basic 및 C# 같은 언어에 사용되는 제네릭 형식 매개 변수와 동일합니다. 형식 매개 변수의 다른 종류는 F#에만 관련되며 *정적으로 확인된 형식 매개 변수*라고 합니다. 이러한 구문에 대한 내용은 [정적으로 확인된 형식 매개 변수](statically-resolved-type-parameters.md)를 참조하세요.
 
-## <a name="examples"></a>예제
+## <a name="examples"></a>예
 
-[!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
+[!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-1/snippet1705.fs)]
 
 ## <a name="see-also"></a>참고자료
 
 - [언어 참조](../index.md)
 - [유형](../fsharp-types.md)
 - [정적으로 확인된 형식 매개 변수](statically-resolved-type-parameters.md)
-- [.NET Framework의 제네릭](~/docs/standard/generics/index.md)
+- [제네릭](../../../standard/generics/index.md)
 - [자동 일반화](automatic-generalization.md)
 - [제약 조건](constraints.md)

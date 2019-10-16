@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ecd1c714f41c76833ef6a0a4b7be87e338ca1a4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 39e3e71185051435afcf03d51ec62742c080b02a
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448832"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855705"
 ---
 # <a name="imetadataimport2enumgenericparams-method"></a>IMetaDataImport2::EnumGenericParams 메서드
-지정한 TypeDef 또는 MethodDef와 연결 된 제네릭 매개 변수 토큰의 배열을 토큰 열거자를 가져옵니다.  
+지정 된 TypeDef 또는 MethodDef 토큰과 연결 된 제네릭 매개 변수 토큰의 배열에 대 한 열거자를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp
 HRESULT EnumGenericParams (  
    [in, out] HCORENUM     *phEnum,   
    [in]  mdToken          tk,  
@@ -39,38 +39,39 @@ HRESULT EnumGenericParams (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `phEnum`  
- [out에서] 열거자에 대 한 포인터입니다.  
+ [in, out] 열거자에 대 한 포인터입니다.  
   
  `tk`  
- [in] 제네릭 매개 변수를 가진을 열거할 수는 TypeDef 또는 MethodDef 토큰입니다.  
+ 진행 제네릭 매개 변수를 열거할 TypeDef 또는 MethodDef 토큰입니다.  
   
  `rGenericParams`  
- [out] 열거 하는 제네릭 매개 변수의 배열입니다.  
+ 제한이 열거할 제네릭 매개 변수의 배열입니다.  
   
  `cMax`  
- [in] 요청 된 최대 수에 배치 하는 토큰의 `rGenericParams`합니다.  
+ 진행 에 `rGenericParams`저장할 요청 된 최대 토큰 수입니다.  
   
  `pcGenericParams`  
- [out] 반환 된 토큰 수에 배치 `rGenericParams`합니다.  
+ 제한이 에 `rGenericParams`배치 된 반환 된 토큰 수입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|`S_OK`|`EnumGenericParams` 성공적으로 반환 합니다.|  
-|`S_FALSE`|`phEnum` 에 멤버가 요소가 없습니다. 이 경우 `pcGenericParams` 0 (영)으로 설정 됩니다.|  
+|`S_OK`|`EnumGenericParams`성공적으로 반환 되었습니다.|  
+|`S_FALSE`|`phEnum`에는 멤버 요소가 없습니다. 이 경우 `pcGenericParams` 은 0 (영)으로 설정 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Cor.h  
+ **헤더:** Cor  
   
- **라이브러리:** MsCorEE.dll에서 리소스로 사용  
+ **라이브러리** Mscoree.dll에서 리소스로 사용 됩니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

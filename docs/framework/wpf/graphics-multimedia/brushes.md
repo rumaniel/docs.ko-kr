@@ -8,24 +8,24 @@ helpviewer_keywords:
 - painting [WPF]
 - brushes [WPF]
 ms.assetid: 26710879-12ad-4c63-9bc6-a1834bb4243b
-ms.openlocfilehash: 2ebb4553ed55e89cb0b7acf6336f21b422d4753f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f52834a652f3f88a526f359a558e192c5f34839c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020259"
 ---
 # <a name="brushes"></a>브러시
-다음 항목을 사용 하는 방법을 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 브러시를 화면에 콘텐츠를 "색"  
+다음 항목을 사용 하는 방법에 설명 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 브러시 콘텐츠 화면에 "그리기"를  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [WPF 브러시 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-brushes-overview.md)  
- [브러시 변환 개요](../../../../docs/framework/wpf/graphics-multimedia/brush-transformation-overview.md)  
- [불투명 마스크 개요](../../../../docs/framework/wpf/graphics-multimedia/opacity-masks-overview.md)  
- [단색 및 그라데이션을 사용한 그리기 개요](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)  
- [이미지, 그림 및 시각적 표시로 그리기](../../../../docs/framework/wpf/graphics-multimedia/painting-with-images-drawings-and-visuals.md)  
- [TileBrush 개요](../../../../docs/framework/wpf/graphics-multimedia/tilebrush-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/brushes-how-to-topics.md)  
+ [WPF 브러시 개요](wpf-brushes-overview.md)  
+ [브러시 변환 개요](brush-transformation-overview.md)  
+ [불투명 마스크 개요](opacity-masks-overview.md)  
+ [단색 및 그라데이션을 사용한 그리기 개요](painting-with-solid-colors-and-gradients-overview.md)  
+ [이미지, 그림 및 시각적 표시로 그리기](painting-with-images-drawings-and-visuals.md)  
+ [TileBrush 개요](tilebrush-overview.md)  
+ [방법 항목](brushes-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Media.Brush>  
@@ -41,6 +41,6 @@ ms.locfileid: "33557266"
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>관련 단원  
- [그래픽 및 멀티미디어](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [그래픽 및 멀티미디어](index.md)  
   
- [WPF 그래픽 렌더링 개요](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [WPF 그래픽 렌더링 개요](wpf-graphics-rendering-overview.md)

@@ -2,12 +2,12 @@
 title: 표준 쿼리 연산자 개요 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 302bd39e-2ec1-495b-94bf-37d370d6f05f
-ms.openlocfilehash: 27b144ae75054dbdc535b6ad894e4a5a0b8529e8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9bfdf2163be52d9016a800d65006bbc4fbf560a3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33653574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908143"
 ---
 # <a name="standard-query-operators-overview-visual-basic"></a>표준 쿼리 연산자 개요 (Visual Basic)
 *표준 쿼리 연산자*는 LINQ 패턴을 형성하는 메서드입니다. 이 메서드 중 대부분은 시퀀스에서 작동합니다. 여기서 시퀀스란 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스 또는 <xref:System.Linq.IQueryable%601> 인터페이스를 구현하는 형식의 개체입니다. 표준 쿼리 연산자는 필터링, 프로젝션, 집계, 정렬 등을 포함하여 쿼리 기능을 제공합니다.  
@@ -64,7 +64,7 @@ MsgBox(output.ToString())
 ```  
   
 ## <a name="query-expression-syntax"></a>쿼리 식 구문  
- 자주 사용되는 표준 쿼리 연산자 중 일부에는 *쿼리* *식*의 일부로 호출할 수 있는 전용 C# 및 Visual Basic 언어 키워드 구문이 있습니다. 키워드와 해당 구문에는 전용 표준 쿼리 연산자에 대 한 자세한 내용은 참조 [표준 쿼리 연산자 (Visual Basic)에 대 한 쿼리 식 구문](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)합니다.  
+ 자주 사용되는 표준 쿼리 연산자 중 일부에는 *쿼리* *식*의 일부로 호출할 수 있는 전용 C# 및 Visual Basic 언어 키워드 구문이 있습니다. 표준 쿼리 연산자가 전용 키워드와 해당 구문에 대 한 자세한 내용은 참조 하세요. [표준 쿼리 연산자 (Visual Basic)에 대 한 쿼리 식 구문](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)합니다.  
   
 ## <a name="extending-the-standard-query-operators"></a>표준 쿼리 연산자 확장  
  대상 도메인 또는 기술에 적합한 도메인 특정 메서드를 만들어 표준 쿼리 연산자 집합을 강화할 수 있습니다. 또한 원격 평가, 쿼리 변환, 최적화 등의 추가 서비스를 제공하는 고유한 구현으로 표준 쿼리 연산자를 바꿀 수도 있습니다. 예제는 <xref:System.Linq.Enumerable.AsEnumerable%2A>을 참조하세요.  
@@ -94,16 +94,17 @@ MsgBox(output.ToString())
   
  [요소 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/element-operations.md)  
   
- [데이터 형식 (Visual Basic)으로 변환](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
+ [데이터 형식 변환 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/converting-data-types.md)  
   
  [연결 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/concatenation-operations.md)  
   
  [집계 작업 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/aggregation-operations.md)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Linq.Enumerable>  
- <xref:System.Linq.Queryable>  
- [LINQ 소개(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
- [표준 쿼리 연산자 (Visual Basic)에 대 한 쿼리 식 구문](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)  
- [실행 (Visual Basic) 방식에 따라 표준 쿼리 연산자의 분류](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)  
- [확장명 메서드](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Linq.Enumerable>
+- <xref:System.Linq.Queryable>
+- [LINQ 소개(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [표준 쿼리 연산자 (Visual Basic)에 대 한 쿼리 식 구문](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
+- [실행 (Visual Basic) 방식에 따라 표준 쿼리 연산자 분류](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
+- [확장명 메서드](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)

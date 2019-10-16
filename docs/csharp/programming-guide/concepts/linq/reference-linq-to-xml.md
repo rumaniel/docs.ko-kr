@@ -2,12 +2,12 @@
 title: 참조(LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 815b45e2-3527-4dee-9986-b1277a693cde
-ms.openlocfilehash: 42bef2a810f47f3358cde562e5531124f9ecad18
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b33e1ddbecb6be46f2ee9b6ce043c12c345fcf21
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529259"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591280"
 ---
 # <a name="reference-linq-to-xml"></a>참조(LINQ to XML)
 이 항목에는 LINQ to XML 참조 항목에 대한 링크가 포함되어 있습니다.  
@@ -21,4 +21,4 @@ ms.locfileid: "43529259"
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)
+- [LINQ to XML(C#)](./linq-to-xml-overview.md)

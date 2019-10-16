@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: d139bc00-3c4e-4d78-ac9a-5c951b258d28
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85bb6dcdaa198b6b038cc80e1e38fa7d11123678
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: cf8a7b090b7a54328101478aed7edbbc5efd79ef
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44086383"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54603627"
 ---
 # <a name="parsing-other-strings-in-net"></a>.NET에서 기타 문자열 구문 분석
 숫자 및 <xref:System.DateTime> 문자열 외에도 <xref:System.Char>, <xref:System.Boolean> 및 <xref:System.Enum> 형식을 나타내는 문자열을 데이터 형식으로 구문 분석할 수 있습니다.  
@@ -52,6 +52,6 @@ ms.locfileid: "44086383"
   
 ## <a name="see-also"></a>참고 항목
 
-- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
-- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)  
+- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)
+- [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)
 - [.NET에서 형식 변환](../../../docs/standard/base-types/type-conversion.md)

@@ -2,12 +2,12 @@
 title: 호출자 정보(C#)
 ms.date: 07/20/2015
 ms.assetid: ffad3d24-2fb7-4641-9124-53b5bc91d339
-ms.openlocfilehash: 27f2e7624369061ff3089357c455ae51237e6dfa
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4b2c34945b47db01b0e655f68f92e4dae7445c2c
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46586461"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595345"
 ---
 # <a name="caller-information-c"></a>호출자 정보(C#)
 
@@ -76,12 +76,12 @@ public void TraceMessage(string message,
 |정적 생성자|".cctor" 문자열|
 |소멸자|"Finalize" 문자열|
 |사용자 정의 연산자 또는 변환|멤버에 대해 생성되는 이름입니다(예: "op_Addition").|
-|특성 생성자|특성이 적용되는 멤버의 이름입니다. 특성이 멤버 내에 있는 어떤 요소인 경우(예: 매개 변수, 반환 값 또는 제네릭 형식 매개 변수) 이 결과는 그 요소와 관련된 멤버의 이름입니다.|
+|특성 생성자|특성이 적용되는 메서드 또는 속성의 이름입니다. 특성이 멤버 내에 있는 어떤 요소인 경우(예: 매개 변수, 반환 값 또는 제네릭 형식 매개 변수) 이 결과는 그 요소와 관련된 멤버의 이름입니다.|
 |포함하는 멤버가 없음(예: 어셈블리 수준 또는 형식에 적용되는 특성)|선택적 매개 변수의 기본값입니다.|
 
 ## <a name="see-also"></a>참고 항목
 
-- [특성(C#)](../../../csharp/programming-guide/concepts/attributes/index.md)
-- [공통 특성(C#)](../../../csharp/programming-guide/concepts/attributes/common-attributes.md)
-- [명명된 인수 및 선택적 인수](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)
-- [프로그래밍 개념(C#)](../../../csharp/programming-guide/concepts/index.md)
+- [특성(C#)](./attributes/index.md)
+- [공통 특성(C#)](./attributes/common-attributes.md)
+- [명명된 인수 및 선택적 인수](../classes-and-structs/named-and-optional-arguments.md)
+- [프로그래밍 개념(C#)](./index.md)

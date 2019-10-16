@@ -1,19 +1,19 @@
 ---
 title: 선택적 단위 테스트 실행
-description: 필터 식을 사용하여 dotnet 명령으로 선택적 단위 테스트를 실행하는 방법을 보여 줍니다.
+description: 필터 식을 사용하여 .NET Core의 dotnet 테스트 명령을 통해 선택적 단위 테스트를 실행하는 방법입니다.
 author: smadala
-ms.author: mairaw
 ms.date: 03/22/2017
-ms.openlocfilehash: 428e31014f5d8d487deb7c4b4317ebcef13c294d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.custom: seodec18
+ms.openlocfilehash: 6160a8b9184d031fcc06356b5b489ee24b765e84
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517222"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57201419"
 ---
 # <a name="running-selective-unit-tests"></a>선택적 단위 테스트 실행
 
-다음 예제에서는 `dotnet test`를 사용합니다. `vstest.console.exe`를 사용하는 경우 `--filter `를 `--testcasefilter:`로 바꾸세요.
+.NET Core에서 `dotnet test` 명령과 함께 필터 식을 사용하여 선택적 테스트를 실행할 수 있습니다. 이 문서에서는 실행되는 테스트를 필터링하는 방법을 보여 줍니다. 다음 예제에서는 `dotnet test`를 사용합니다. `vstest.console.exe`를 사용하는 경우 `--filter`를 `--testcasefilter:`로 바꾸세요.
 
 ## <a name="mstest"></a>MSTest
 

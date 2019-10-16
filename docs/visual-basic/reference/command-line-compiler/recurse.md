@@ -6,49 +6,50 @@ helpviewer_keywords:
 - -recurse compiler option [Visual Basic]
 - recurse compiler option [Visual Basic]
 ms.assetid: 84a0b670-33ae-44c4-a46a-b90388809317
-ms.openlocfilehash: 1edb648ec574c0052b7b8314f4ada710c8b0fe01
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 71613af0f1c319801296180d49dbacfedf0ceca4
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183336"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005256"
 ---
 # <a name="-recurse"></a>-recurse
-지정된 된 디렉터리 또는 프로젝트 디렉터리의 모든 자식 디렉터리에 있는 소스 코드 파일을 컴파일합니다.  
+지정 된 디렉터리 또는 프로젝트 디렉터리의 모든 자식 디렉터리에 있는 소스 코드 파일을 컴파일합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```console  
 -recurse:[dir\]file  
 ```  
   
 ## <a name="arguments"></a>인수  
  `dir`  
- 선택 사항입니다. 검색을 시작하려는 디렉터리입니다. 지정 하지 않으면 프로젝트 디렉터리에서 검색을 시작 합니다.  
+ (선택 사항) 검색을 시작하려는 디렉터리입니다. 지정 하지 않으면 프로젝트 디렉터리에서 검색이 시작 됩니다.  
   
  `file`  
  필수. 검색할 파일입니다. 와일드카드 문자가 허용됩니다.  
   
 ## <a name="remarks"></a>설명  
- 사용 하지 않고 프로젝트 디렉터리에서 일치 하는 모든 파일을 컴파일할 파일 이름에 와일드 카드를 사용할 수 있습니다 `-recurse`합니다. 출력 파일 이름은 없으므로 지정 하는 경우 컴파일러 처리 하는 첫 번째 입력된 파일에서 출력 파일 이름으로 계산 됩니다. 이 일반적으로 사전순으로 볼 때 컴파일된 파일 목록에서 첫 번째 파일입니다. 이러한 이유로 사용 하 여 출력 파일을 지정 하는 가장 좋은 것은 `-out` 옵션입니다.  
+ @No__t-0을 사용 하지 않고 파일 이름에 와일드 카드를 사용 하 여 프로젝트 디렉터리에서 일치 하는 모든 파일을 컴파일할 수 있습니다. 출력 파일 이름이 지정 되지 않은 경우 컴파일러는 처리 된 첫 번째 입력 파일의 출력 파일 이름을 기반으로 합니다. 이 파일은 일반적으로 사전순으로 볼 때 컴파일되는 파일 목록의 첫 번째 파일입니다. 따라서 `-out` 옵션을 사용 하 여 출력 파일을 지정 하는 것이 좋습니다.  
   
 > [!NOTE]
->  `-recurse` 옵션은 Visual Studio 개발 환경 내에서 사용할 수 있는 명령줄에서 컴파일할 경우에 사용할 수 있는 것입니다.  
+> @No__t-0 옵션은 Visual Studio 개발 환경에서 사용할 수 없습니다. 명령줄에서 컴파일하는 경우에만 사용할 수 있습니다.  
   
 ## <a name="example"></a>예제  
- 다음 명령은 현재 디렉터리에 모든 Visual Basic 파일을 컴파일합니다.  
+ 다음 명령은 현재 디렉터리에 있는 모든 Visual Basic 파일을 컴파일합니다.  
   
 ```console
 vbc *.vb  
 ```  
   
- 다음 명령에서 모든 Visual Basic 파일을 컴파일하고 합니다 `Test\ABC` 디렉터리와 모든 디렉터리 아래 생성 `Test.ABC.dll`.  
+ 다음 명령은 `Test\ABC` 디렉터리와 그 아래에 있는 모든 디렉터리의 Visual Basic 파일을 모두 컴파일한 다음 `Test.ABC.dll`을 생성 합니다.  
   
 ```console
 vbc -target:library -out:Test.ABC.dll -recurse:Test\ABC\*.vb  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)  
- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)  
- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a>참조
+
+- [Visual Basic 명령줄 컴파일러](../../../visual-basic/reference/command-line-compiler/index.md)
+- [-out (Visual Basic)](../../../visual-basic/reference/command-line-compiler/out.md)
+- [샘플 컴파일 명령줄](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

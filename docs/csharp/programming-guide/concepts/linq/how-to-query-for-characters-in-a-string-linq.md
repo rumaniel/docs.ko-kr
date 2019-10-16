@@ -2,12 +2,12 @@
 title: '방법: 문자열의 문자 쿼리(LINQ)(C#)'
 ms.date: 07/20/2015
 ms.assetid: 727a1be7-dbec-4ab8-b414-bc2d56feb6ff
-ms.openlocfilehash: c6e5fb14e0be277f53511aaddd362f2f203531e8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 1212ebcf264aab756eca1acb81ae617c2218a065
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43741187"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592882"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-c"></a>방법: 문자열의 문자 쿼리(LINQ)(C#)
 <xref:System.String> 클래스는 제네릭 <xref:System.Collections.Generic.IEnumerable%601> 인터페이스를 구현하기 때문에 모든 문자열을 문자 시퀀스로 쿼리할 수 있습니다. 그러나 LINQ는 일반적으로 이 용도로 사용되지 않습니다. 복잡한 패턴 일치 작업의 경우 <xref:System.Text.RegularExpressions.Regex> 클래스를 사용합니다.  
@@ -55,9 +55,9 @@ class QueryAString
 ```  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- System.Core.dll에 대한 참조와 System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
+ System.Linq 및 System.IO 네임스페이스에 대한 `using` 지시문을 통해 C# 콘솔 애플리케이션 프로젝트를 만듭니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ 및 문자열(C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)  
-- [방법: LINQ 쿼리와 정규식 결합(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)
+- [LINQ 및 문자열(C#)](./linq-and-strings.md)
+- [방법: LINQ 쿼리와 정규식 결합(C#)](./how-to-combine-linq-queries-with-regular-expressions.md)

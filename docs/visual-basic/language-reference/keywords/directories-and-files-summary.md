@@ -6,17 +6,17 @@ helpviewer_keywords:
 - directories [Visual Basic], Visual Basic
 - files [Visual Basic], summary
 ms.assetid: 588b75fd-a09b-4381-822d-19868990c170
-ms.openlocfilehash: 233da06a2bfb422a1184e8fe44004615b4bc6fde
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f7d21c3e29cb59f2d2690ab9797c6c50e7d3009b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33596504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802961"
 ---
 # <a name="directories-and-files-summary-visual-basic"></a>디렉터리 및 파일 요약(Visual Basic)
-Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 하 고 사용 합니다.  
+Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라 구성 됩니다 사용 합니다.  
   
- 사용 하 여 `My` 기능을 사용 하면 생산성과 성능 향상 보다 이러한 멤버를 사용 하 여 파일 I/O 작업의 합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>을 참조하세요.  
+ 사용 하 여 `My` 기능을 사용 하면 생산성 및 성능이 이러한 멤버를 사용 하 여 보다 파일 I/O 작업의 합니다. 자세한 내용은 <xref:Microsoft.VisualBasic.FileIO.FileSystem>을 참조하세요.  
   
 |**작업**|**언어 요소**|  
 |----------------|--------------------------|  
@@ -33,10 +33,11 @@ Visual Basic 언어 키워드 및 런타임 라이브러리 멤버 용도 따라
 |파일의 이름 또는 볼륨 레이블을 반환 합니다.|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>|  
 |파일 특성 정보를 설정 합니다.|<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
   
-## <a name="see-also"></a>참고 항목  
- [키워드](../../../visual-basic/language-reference/keywords/index.md)  
- [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)  
- [파일 읽기](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)  
- [파일에 쓰기](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)  
- [파일/디렉터리 만들기, 삭제 및 이동](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)  
- [TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)
+## <a name="see-also"></a>참고자료
+
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)
+- [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
+- [파일 읽기](../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
+- [파일에 쓰기](../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)
+- [파일/디렉터리 만들기, 삭제 및 이동](../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)
+- [TextFieldParser 개체를 사용하여 텍스트 파일 구문 분석](../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

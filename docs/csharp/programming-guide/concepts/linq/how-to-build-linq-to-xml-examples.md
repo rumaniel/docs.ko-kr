@@ -2,12 +2,12 @@
 title: '방법: LINQ to XML 예제 빌드(C#)'
 ms.date: 07/20/2015
 ms.assetid: e5d18fa1-2704-48fe-a44b-1564f97c9e9c
-ms.openlocfilehash: da0d85db22de6bcb2038cbe0608983d39bd66383
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 9bbd04731854d67b9276f339a15f2c7f2193f9b4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649681"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594122"
 ---
 # <a name="how-to-build-linq-to-xml-examples-c"></a>방법: LINQ to XML 예제 빌드(C#)
 이 설명서의 다양한 코드 조각과 예제에서는 여러 가지 네임스페이스의 클래스와 형식을 사용합니다. C# 코드를 컴파일하는 경우 적절한 `using` 지시문을 제공해야 하고,  
@@ -36,4 +36,4 @@ using System.IO.Packaging;
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML 프로그래밍 개요(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 프로그래밍 개요(C#)](./linq-to-xml-overview.md)

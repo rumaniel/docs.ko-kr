@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: df54e648-c5d1-47c9-bd29-8e4438c1db6d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9a243c95aff77a5de2b3af15542c0bcc44870333
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 986b4dee17c41928327e7b2672d641bbb8b16f1d
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46525694"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69960084"
 ---
 # <a name="destroying-threads"></a>스레드 제거
 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType> 메서드는 관리되는 스레드를 영구적으로 중지하는 데 사용됩니다. <xref:System.Threading.Thread.Abort%2A>를 호출할 때 공용 언어 런타임이 대상 스레드에서 <xref:System.Threading.ThreadAbortException>을 throw하며, 대상 스레드가 이를 catch할 수 있습니다. 자세한 내용은 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>을 참조하세요.  
   
 > [!NOTE]
->  <xref:System.Threading.Thread.Abort%2A> 메서드가 호출될 때 스레드가 비관리 코드를 실행하는 경우 런타임은 이를 <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>로 표시합니다. 스레드가 관리 코드로 돌아오면 예외가 throw됩니다.  
+> <xref:System.Threading.Thread.Abort%2A> 메서드가 호출될 때 스레드가 비관리 코드를 실행하는 경우 런타임은 이를 <xref:System.Threading.ThreadState.AbortRequested?displayProperty=nameWithType>로 표시합니다. 스레드가 관리 코드로 돌아오면 예외가 throw됩니다.  
   
  스레드가 중단되면 다시 시작할 수 없습니다.  
   
@@ -31,7 +31,7 @@ ms.locfileid: "46525694"
  <xref:System.Threading.Thread.Join%2A?displayProperty=nameWithType> 메서드 호출을 대기 중인 스레드는 <xref:System.Threading.Thread.Interrupt%2A?displayProperty=nameWithType>을 호출하는 다른 스레드에 의해 중단될 수 있습니다.  
   
 ## <a name="handling-threadabortexception"></a>ThreadAbortException 처리  
- 자체 코드에서 <xref:System.Threading.Thread.Abort%2A>를 호출한 결과로 또는 스레드가 실행 중인 응용 프로그램 도메인을 언로드한(<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>에서 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>를 사용하여 스레드 종료) 결과로 스레드가 중단될 것으로 예상되는 경우 스레드에서 <xref:System.Threading.ThreadAbortException>을 처리하고 다음 코드와 같이 `finally` 절에서 최종 처리를 수행해야 합니다.  
+ 자체 코드에서 <xref:System.Threading.Thread.Abort%2A>를 호출한 결과로 또는 스레드가 실행 중인 애플리케이션 도메인을 언로드한(<xref:System.AppDomain.Unload%2A?displayProperty=nameWithType>에서 <xref:System.Threading.Thread.Abort%2A?displayProperty=nameWithType>를 사용하여 스레드 종료) 결과로 스레드가 중단될 것으로 예상되는 경우 스레드에서 <xref:System.Threading.ThreadAbortException>을 처리하고 다음 코드와 같이 `finally` 절에서 최종 처리를 수행해야 합니다.  
   
 ```vb  
 Try  
@@ -68,6 +68,6 @@ catch (ThreadAbortException ex)
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Threading.ThreadAbortException>  
-- <xref:System.Threading.Thread>  
+- <xref:System.Threading.ThreadAbortException>
+- <xref:System.Threading.Thread>
 - [스레드 및 스레딩 사용](../../../docs/standard/threading/using-threads-and-threading.md)

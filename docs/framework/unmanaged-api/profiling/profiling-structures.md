@@ -9,11 +9,11 @@ ms.assetid: 750385f2-f365-41b1-939f-ca2f2ff9b466
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 229218cb15963846da91f688b0d2faacb20031c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33456500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000443"
 ---
 # <a name="profiling-structures"></a>프로파일링 구조체
 이 섹션에서는 프로파일링 API에서 사용하는 관리되지 않는 구조체에 대해 설명합니다.  
@@ -38,7 +38,7 @@ ms.locfileid: "33456500"
  왼쪽에서 오른쪽 순서로 연속적으로 메모리에 저장한 함수 인수 블록을 나타냅니다.  
   
  [COR_PRF_GC_GENERATION_RANGE 구조체](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-range-structure.md)  
- 가비지 컬렉션이 진행 중인 메모리 범위(블록)를 설명합니다.  
+ 가비지 수집이 진행 중인 메모리 범위(블록)를 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
  COR_DEBUG_IL_TO_NATIVE_MAP  

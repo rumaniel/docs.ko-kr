@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 25819a5a-f915-4fc8-b924-a76915674e04
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dca313fad896ac1c8eac37c853657bea44a8b777
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 42860f549877436f43bfdc20fb3abde91d36101d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192238"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67783186"
 ---
 # <a name="how-to-create-user-defined-exceptions"></a>사용자 정의 예외를 만드는 방법
 

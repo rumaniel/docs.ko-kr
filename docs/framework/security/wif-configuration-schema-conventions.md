@@ -3,15 +3,15 @@ title: WIF 구성 스키마 규칙
 ms.date: 03/30/2017
 ms.assetid: f7864356-f72f-4cae-995c-18e0431f8a58
 author: BrucePerlerMS
-ms.openlocfilehash: dc2e8f7070af3ef907e4987964bb5aa83f889186
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: c02d467260a5197cdd01a3819f8a323655a8a08f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206448"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71045093"
 ---
 # <a name="wif-configuration-schema-conventions"></a>WIF 구성 스키마 규칙
-이 항목에서는 WIF(Windows Identity Foundation) 구성 항목 전체에서 사용되는 규칙을 설명하고 [\<system.identityModel>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 및 [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 섹션에서 사용되는 몇 가지 일반적인 기능과 특성을 설명합니다.  
+이 항목에서는 WIF(Windows Identity Foundation) 구성 항목 전체에서 사용되는 규칙을 설명하고 [\<system.identityModel>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md) 및 [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md) 섹션에서 사용되는 몇 가지 일반적인 기능과 특성을 설명합니다.  
   
 <a name="BKMK_Modes"></a>   
 ## <a name="modes"></a>모드  
@@ -21,9 +21,7 @@ ms.locfileid: "47206448"
 ## <a name="timespan-values"></a>Timespan 값  
  여기서 <xref:System.TimeSpan>은 특성의 형식으로 사용됩니다. 허용되는 형식을 확인하려면 <xref:System.TimeSpan.Parse%28System.String%29> 메서드를 참조하세요. 이 형식은 다음 사양을 따릅니다.  
   
-```  
-[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]  
-```  
+`[ws][-]{ d | [d.]hh:mm[:ss[.ff]] }[ws]`  
   
  예를 들어 “30”, “30.00:00”, “30.00:00:00”은 모두 30일을 의미하고 “00:05”, “00:05:00”, “0.00:05:00.00”은 모두 5분을 의미합니다.  
   
@@ -44,6 +42,7 @@ ms.locfileid: "47206448"
   
  사용자 지정 형식은 지정된 형식에서 파생되어야 하며 `public` 기본(0 인수) 생성자를 제공해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [\<system.identityModel >](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)  
- [\<system.identityModel.services>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)
+## <a name="see-also"></a>참고자료
+
+- [\<system.identityModel>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel.md)
+- [\<system.identityModel.services>](../configure-apps/file-schema/windows-identity-foundation/system-identitymodel-services.md)

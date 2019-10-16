@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4987b025450f2207a01a472a0c39fc6da2de0782
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: adc05ae9bd357c142ff09de069aff446b5ea60e8
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33386495"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052852"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse MDA
 DLL_PROCESS_ATTACH로 인해 호출된 사용자 어셈블리의 관리되는 `DllMain` 함수가 FALSE를 반환하면 `dllMainReturnsFalse` MDA(관리 디버깅 도우미)가 활성화됩니다.  
@@ -25,7 +25,7 @@ DLL_PROCESS_ATTACH로 인해 호출된 사용자 어셈블리의 관리되는 `D
 ## <a name="cause"></a>원인  
  로드 시 DLL 초기화에 대한 DLL_PROCESS_ATTACH로 인해 `DllMain` 함수가 호출됩니다. 함수가 FALSE를 반환하면 DLL 초기화가 실패했음을 의미합니다.  
   
-## <a name="resolution"></a>해결  
+## <a name="resolution"></a>해결 방법  
  실패한 DLL의 `DllMain` 함수 코드를 분석하고 초기화 실패의 원인을 식별합니다.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
@@ -34,7 +34,7 @@ DLL_PROCESS_ATTACH로 인해 호출된 사용자 어셈블리의 관리되는 `D
 ## <a name="output"></a>출력  
  DLL_PROCESS_ATTACH로 인해 호출되는 `DllMain` 함수가 FALSE를 반환했음을 나타내는 메시지입니다. 이 MDA는 `DllMain`이 관리 코드에서 구현된 경우에만 활성화됩니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -44,5 +44,6 @@ DLL_PROCESS_ATTACH로 인해 호출된 사용자 어셈블리의 관리되는 `D
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>참고자료
+
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

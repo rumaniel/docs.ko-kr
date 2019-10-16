@@ -1,5 +1,6 @@
 ---
-title: base 키워드(C# 참조)
+title: base 키워드 - C# 참조
+ms.custom: seodec18
 description: C#의 파생 클래스 내에서 기본 클래스의 멤버에 액세스하는 데 사용되는 base 키워드에 대해 알아봅니다.
 ms.date: 07/20/2015
 f1_keywords:
@@ -9,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - base keyword [C#]
 ms.assetid: 8b645dbe-1a33-49b8-8716-1c401f9a5ea5
-ms.openlocfilehash: 8719ab79273701173530760ad1bec837c4f4302d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: b882a8d1e5979ac184d184be379dd76f7bf3600f
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837869"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602264"
 ---
 # <a name="base-c-reference"></a>base(C# 참조)
 
@@ -36,7 +37,7 @@ ms.locfileid: "48837869"
 
 [!code-csharp[csrefKeywordsAccess#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsAccess/CS/csrefKeywordsAccess.cs#1)]
 
-추가 예제는 [new](../../../csharp/language-reference/keywords/new.md), [virtual](../../../csharp/language-reference/keywords/virtual.md) 및 [override](../../../csharp/language-reference/keywords/override.md)를 참조하세요.
+추가 예제는 [new](new-modifier.md), [virtual](virtual.md) 및 [override](override.md)를 참조하세요.
 
 ## <a name="example"></a>예
 
@@ -50,7 +51,7 @@ ms.locfileid: "48837869"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)  
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)  
-- [this](../../../csharp/language-reference/keywords/this.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 키워드](./index.md)
+- [this](./this.md)

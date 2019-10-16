@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ContextMenu
 - ContextMenu controls [WPF], about ContextMenu controls
 ms.assetid: 16909c42-799a-4561-91e0-7d69dcfeea91
-ms.openlocfilehash: 54fd823594fba4500f35ed1d69720a3309e54a36
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 1818718d3ca9e8f56da99d6e504b41b217bfd980
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45666774"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053264"
 ---
 # <a name="contextmenu-overview"></a>ContextMenu 개요
 합니다 <xref:System.Windows.Controls.ContextMenu> 클래스는 컨텍스트별을 사용 하 여 기능을 노출 하는 요소를 나타냅니다. <xref:System.Windows.Controls.Menu>합니다. 일반적으로 사용자를 노출 합니다 <xref:System.Windows.Controls.ContextMenu> 에서 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 마우스 단추를 마우스 오른쪽 단추로 클릭 합니다. 이 항목에서는 소개 합니다 <xref:System.Windows.Controls.ContextMenu> 요소에서 사용 하는 방법의 예제를 제공 하 고 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 및 코드입니다.  
-  
-  
-  
+
 <a name="contextmenu_control"></a>   
 ## <a name="contextmenu-control"></a>ContextMenu 컨트롤  
  <xref:System.Windows.Controls.ContextMenu> 특정 컨트롤에 연결 됩니다. 합니다 <xref:System.Windows.Controls.ContextMenu> 요소를 사용 하면 예를 들어, 특정 컨트롤과 관련 된 옵션 또는 명령을 지정 하는 항목의 목록을 사용 하 여 사용자를 표시 하는 <xref:System.Windows.Controls.Button>합니다. 사용자가 컨트롤을 마우스 오른쪽 단추로 클릭하면 메뉴가 표시됩니다. 일반적으로 클릭 하는 <xref:System.Windows.Controls.MenuItem> 명령을 실행 하는 응용 프로그램 또는 하위 메뉴를 엽니다.  
@@ -28,10 +26,10 @@ ms.locfileid: "45666774"
 ## <a name="creating-contextmenus"></a>ContextMenu 만들기  
  다음 예제를 만드는 방법을 보여는 <xref:System.Windows.Controls.ContextMenu> 하위 메뉴가 있는 합니다. <xref:System.Windows.Controls.ContextMenu> 컨트롤 단추 컨트롤에 연결 됩니다.  
   
- [!code-xaml[ContextMenu#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#1)]  
+ [!code-xaml[ContextMenu#1](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml#1)]  
   
- [!code-csharp[ContextMenu#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#2)]
- [!code-vb[ContextMenu#2](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#2)]  
+ [!code-csharp[ContextMenu#2](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenu/CSharp/Pane1.xaml.cs#2)]
+ [!code-vb[ContextMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ContextMenu/VisualBasic/Pane1.xaml.vb#2)]  
   
 <a name="applying_styles_to_contextmenu"></a>   
 ## <a name="applying-styles-to-a-contextmenu"></a>ContextMenu에 스타일 적용  
@@ -62,11 +60,12 @@ ms.locfileid: "45666774"
 </Style>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Controls.ContextMenu>  
- <xref:System.Windows.Style>  
- <xref:System.Windows.Controls.Menu>  
- <xref:System.Windows.Controls.MenuItem>  
- [ContextMenu](../../../../docs/framework/wpf/controls/contextmenu.md)  
- [ContextMenu 스타일 및 템플릿](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Style>
+- <xref:System.Windows.Controls.Menu>
+- <xref:System.Windows.Controls.MenuItem>
+- [ContextMenu](contextmenu.md)
+- [ContextMenu 스타일 및 템플릿](contextmenu-styles-and-templates.md)
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)(WPF 컨트롤 갤러리 샘플)

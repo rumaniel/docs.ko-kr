@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1decb05e-37ad-4ed6-ab2f-071eb4c4f628
-ms.openlocfilehash: 2be4096f03fe73f417b4b1871ebfc3b4f0f67206
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec5010a42980e2d7a1a03c31d396cac6b6934a58
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359893"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002930"
 ---
 # <a name="how-to-display-linq-to-sql-commands"></a>방법: LINQ to SQL 명령 표시
 <xref:System.Data.Linq.DataContext.GetCommand%2A>를 사용하여 SQL 명령 및 기타 정보를 표시합니다.  
@@ -23,7 +23,7 @@ ms.locfileid: "33359893"
   
  다음과 같이 출력됩니다.  
   
-```  
+```console  
 Customers from London:  
     Thomas Hardy  
     Victoria Ashworth  
@@ -35,7 +35,7 @@ Customers from London:
     Dominique Perrier  
 ```  
   
-```  
+```console  
 Command Text:  
 SELECT [t0].[CustomerID], [t0].[CompanyName], [t0].[ContactName], [t0].[ContactT  
 itle], [t0].[Address], [t0].[City], [t0].[Region], [t0].[PostalCode], [t0].[Coun  
@@ -48,5 +48,6 @@ Command Type: Text
 Connection: System.Data.SqlClient.SqlConnection  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 지원](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
+## <a name="see-also"></a>참조
+
+- [디버깅 지원](debugging-support.md)

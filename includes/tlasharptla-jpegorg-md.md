@@ -1,1 +1,0 @@
-JPEG(Joint Photographics Experts Group)

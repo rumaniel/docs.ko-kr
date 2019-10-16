@@ -1,23 +1,24 @@
 ---
-title: '&lt;sessionTokenRequirement&gt;'
+title: <sessionTokenRequirement>
 ms.date: 03/30/2017
 ms.assetid: 496a1735-cbb7-49d5-a6aa-dd5550462073
 author: BrucePerlerMS
-ms.openlocfilehash: 4d5d2348f04ace7596a3a513c5106ea612dc17b7
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 968c48df9e92a1dfbfb6e248b06cf4f97cece8b4
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48840890"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251824"
 ---
-# <a name="ltsessiontokenrequirementgt"></a>&lt;sessionTokenRequirement&gt;
-에 대 한 구성을 제공 합니다 <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 클래스나 파생된 클래스입니다.  
+# <a name="sessiontokenrequirement"></a>\<sessionTokenRequirement>
+<xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler> 클래스 또는 파생 클래스에 대 한 구성을 제공 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
-\<add>  
-\<sessionTokenRequirement >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<securityTokenHandlers >** ](securitytokenhandlers.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<> 추가**](add.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<sessionTokenRequirement >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -39,9 +40,9 @@ ms.locfileid: "48840890"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|수명(lifetime)|세션 토큰의 수명을 지정합니다.|  
+|lifetime|세션 토큰의 수명을 지정 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -50,7 +51,7 @@ ms.locfileid: "48840890"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|토큰 처리기 컬렉션에 지정 된 보안 토큰 처리기를 추가합니다.|  
+|[\<add>](add.md)|지정 된 보안 토큰 처리기를 토큰 처리기 컬렉션에 추가 합니다.|  
   
 ## <a name="example"></a>예제  
   

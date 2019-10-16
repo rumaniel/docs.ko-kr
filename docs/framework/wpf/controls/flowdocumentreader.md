@@ -7,19 +7,20 @@ helpviewer_keywords:
 - controls [WPF], FlowDocumentReader
 - FlowDocumentReader control [WPF]
 ms.assetid: ba7aaa70-f77b-4555-a79d-68a12c8e134b
-ms.openlocfilehash: b390c345beee74d505d23196133ed7f82cfd8ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d8201eeceeb39ffea888849eba32e77ee7c25ece
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054915"
 ---
 # <a name="flowdocumentreader"></a>FlowDocumentReader
-<xref:System.Windows.Controls.FlowDocumentReader> 컨트롤 보는 데 사용 됩니다 <xref:System.Windows.Documents.FlowDocument> 콘텐츠입니다. 여러 표시 모드를 지원합니다.  
+합니다 <xref:System.Windows.Controls.FlowDocumentReader> 컨트롤은 보기 데 <xref:System.Windows.Documents.FlowDocument> 콘텐츠입니다. 여러 표시 모드를 지원합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Controls.FlowDocumentReader>  
- <xref:System.Windows.Controls.FlowDocumentPageViewer>  
- <xref:System.Windows.Controls.FlowDocumentScrollViewer>  
- [WPF의 문서](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)  
- [유동 문서 개요](../../../../docs/framework/wpf/advanced/flow-document-overview.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Controls.FlowDocumentReader>
+- <xref:System.Windows.Controls.FlowDocumentPageViewer>
+- <xref:System.Windows.Controls.FlowDocumentScrollViewer>
+- [WPF의 문서](../advanced/documents-in-wpf.md)
+- [유동 문서 개요](../advanced/flow-document-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - concatenating strings [C#]
 - strings [C#], concatenation
 ms.assetid: 8e16736f-4096-4f3f-be0f-9d4c3ff63520
-ms.openlocfilehash: 355e56acf36b6212ee4563f34722b10b56a0fb47
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: da83a79f58c236692e284a7920c7b98c3520e5d6
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855389"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54710419"
 ---
 # <a name="how-to-concatenate-multiple-strings-c-guide"></a>방법: 여러 문자열 연결(C# 가이드)
 
@@ -55,7 +55,7 @@ ms.locfileid: "43855389"
 
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.String>  
-- <xref:System.Text.StringBuilder>  
-- [C# 프로그래밍 가이드](../programming-guide/index.md)  
+- <xref:System.String>
+- <xref:System.Text.StringBuilder>
+- [C# 프로그래밍 가이드](../programming-guide/index.md)
 - [문자열](../programming-guide/strings/index.md)

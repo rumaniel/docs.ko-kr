@@ -2,18 +2,18 @@
 title: 사용자 지정 추적
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: 5f603d991748439890a31a0a25fc65ad270a5083
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 32abf1dc4c9607b4a86f836fa2c759af1dbf1b69
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48266691"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70989408"
 ---
 # <a name="custom-tracking"></a>사용자 지정 추적
 이 샘플에서는 사용자 지정 추적 참가자를 만들고 추적 데이터의 내용을 콘솔에 쓰는 방법을 보여 줍니다. 또한 사용자 정의 데이터로 채워진 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법도 보여 줍니다. 콘솔 기반 추적 참가자는 코드로 만든 추적 프로필 개체를 사용하여 워크플로에서 내보낸 <xref:System.Activities.Tracking.TrackingRecord> 개체를 필터링합니다.
 
 ## <a name="sample-details"></a>샘플 세부 정보
- Windows WF (Workflow Foundation) 워크플로 인스턴스의 실행을 추적 하기 위한 추적 인프라를 제공 합니다. 추적 런타임은 워크플로 인스턴스를 구현하여 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동의 이벤트 및 사용자 지정 추적 이벤트를 내보냅니다. 다음 표에서는 추적 인프라의 기본 구성 요소에 대해 자세히 설명합니다
+ WF (Windows Workflow Foundation)는 워크플로 인스턴스 실행을 추적 하기 위한 추적 인프라를 제공 합니다. 추적 런타임은 워크플로 인스턴스를 구현하여 워크플로 수명 주기와 관련된 이벤트, 워크플로 활동의 이벤트 및 사용자 지정 추적 이벤트를 내보냅니다. 다음 표에서는 추적 인프라의 기본 구성 요소에 대해 자세히 설명합니다
 
 |구성 요소|설명|
 |---------------|-----------------|
@@ -47,7 +47,7 @@ public abstract class TrackingParticipant
 }
 ```
 
- 전체 추적 참가자는 ConsoleTrackingParticipant.cs 파일에서 구현되며, 다음 코드 예제는 사용자 지정 추적 참가자를 위한 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 메서드입니다.
+ ConsoleTrackingParticipant.cs 파일에서 전체 추적 참가자가 구현 됩니다. 다음 코드 예제 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 는 사용자 지정 추적 참가자에 대 한 메서드입니다.
 
 ```csharp
 protected override void Track(TrackingRecord record, TimeSpan timeout)
@@ -110,9 +110,9 @@ invoker.Extensions.Add(customTrackingParticipant);
 ### <a name="emitting-custom-tracking-records"></a>사용자 지정 추적 레코드 내보내기
  이 샘플에서는 사용자 지정 워크플로 활동에서 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 기능도 보여 줍니다.
 
--   <xref:System.Activities.Tracking.CustomTrackingRecord> 개체가 만들어지고, 레코드와 함께 내보낼 사용자 정의 데이터로 채워집니다.
+- <xref:System.Activities.Tracking.CustomTrackingRecord> 개체가 만들어지고, 레코드와 함께 내보낼 사용자 정의 데이터로 채워집니다.
 
--   합니다 <xref:System.Activities.Tracking.CustomTrackingRecord> 의 추적 메서드를 호출 하 여 내보내집니다는 <xref:System.Activities.ActivityContext>합니다.
+- 는의 track 메서드를 호출 하 여 내보내집니다. <xref:System.Activities.ActivityContext> <xref:System.Activities.Tracking.CustomTrackingRecord>
 
  다음 예제에서는 사용자 지정 활동에서 <xref:System.Activities.Tracking.CustomTrackingRecord> 개체를 내보내는 방법을 보여 줍니다.
 
@@ -133,20 +133,21 @@ context.Track(customRecord);
 
 #### <a name="to-use-this-sample"></a>이 샘플을 사용하려면
 
-1.  Visual Studio 2010을 사용 하 여 CustomTrackingSample.sln 솔루션 파일을 엽니다.
+1. Visual Studio 2010을 사용 하 여 CustomTrackingSample .sln 솔루션 파일을 엽니다.
 
-2.  Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
+2. Ctrl+Shift+B를 눌러 솔루션을 빌드합니다.
 
-3.  Ctrl+F5를 눌러 솔루션을 실행합니다.
+3. Ctrl+F5를 눌러 솔루션을 실행합니다.
 
 > [!IMPORTANT]
->  컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
+> 컴퓨터에 이 샘플이 이미 설치되어 있을 수도 있습니다. 계속하기 전에 다음(기본) 디렉터리를 확인하세요.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples`  
+> `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  이 디렉터리가 없으면로 이동 [Windows Communication Foundation (WCF) 및.NET Framework 4 용 Windows WF (Workflow Foundation) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 모든 Windows Communication Foundation (WCF)를 다운로드 하 고 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플. 이 샘플은 다음 디렉터리에 있습니다.  
+> 이 디렉터리가 없는 경우 [.NET Framework 4에 대 한 Windows Communication Foundation (wcf) 및 Windows Workflow Foundation (WF) 샘플](https://go.microsoft.com/fwlink/?LinkId=150780) 로 이동 하 여 모든 Windows Communication Foundation (wcf) 및 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 샘플을 다운로드 합니다. 이 샘플은 다음 디렉터리에 있습니다.  
 >   
->  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
+> `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
-## <a name="see-also"></a>참고 항목  
- [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)
+## <a name="see-also"></a>참고자료
+
+- [AppFabric 모니터링 샘플](https://go.microsoft.com/fwlink/?LinkId=193959)

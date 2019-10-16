@@ -20,17 +20,17 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8f126aa5b69c99beae740de261ac3da3c5d2544
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: dd5ec18147c074400457581618bacba11d9ee40a
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698564"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69963414"
 ---
 # <a name="comparing-strings-in-net"></a>.NET에서 문자열 비교
 .NET에서는 문자열의 값을 비교하는 여러 가지 메서드를 제공합니다. 다음 표에서는 값 비교 메서드를 나열하고 설명합니다.  
   
-|메서드 이름|사용|  
+|메서드 이름|기능|  
 |-----------------|---------|  
 |<xref:System.String.Compare%2A?displayProperty=nameWithType>|두 문자열의 값을 비교합니다. 정수 값을 반환합니다.|  
 |<xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType>|로컬 문화권에 관계없이 두 문자열을 비교합니다. 정수 값을 반환합니다.|  
@@ -51,7 +51,7 @@ ms.locfileid: "45698564"
 |양의 정수<br /><br /> 또는<br /><br /> 1|정렬 순서에서 첫 번째 문자열이 두 번째 문자열 뒤에 옵니다.<br /><br /> 또는<br /><br /> 두 번째 문자열이 `null`입니다.|  
   
 > [!IMPORTANT]
->  <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
+> <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
   
  다음 예제에서는 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 사용하여 두 문자열의 상대 값을 확인합니다.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "45698564"
   
  이 예제에서는 콘솔에 `-1` 를 표시합니다.  
   
- 앞의 예제는 기본적으로 문화권을 구분합니다. 문화권을 구분하지 않는 문자열 비교를 수행하려면 *culture* 매개 변수를 제공하여 사용할 문화권을 지정할 수 있게 해주는 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드의 오버로드를 사용합니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 사용하여 문화권을 구분하지 않는 비교를 수행하는 방법을 보여주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
+ 앞의 예제는 기본적으로 문화권을 구분합니다. 문화권을 구분하지 않는 문자열 비교를 수행하려면 <xref:System.String.Compare%2A?displayProperty=nameWithType> culture *매개 변수를 제공하여 사용할 문화권을 지정할 수 있게 해주는* 메서드의 오버로드를 사용합니다. <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드를 사용하여 문화권을 구분하지 않는 비교를 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
   
 ## <a name="compareordinal"></a>CompareOrdinal  
  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드는 로컬 문화권을 고려하지 않고 두 문자열 개체를 비교합니다. 이 메서드의 반환 값은 앞의 표에서 **Compare** 메서드가 반환하는 값과 동일합니다.  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
+> <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.CompareOrdinal%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
   
  다음 예제에서는 **CompareOrdinal** 메서드를 사용하여 두 문자열의 값을 비교합니다.  
   
@@ -78,10 +78,10 @@ ms.locfileid: "45698564"
  이 예제에서는 콘솔에 `-32` 를 표시합니다.  
   
 ## <a name="compareto"></a>CompareTo  
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 현재 문자열 개체가 캡슐화하는 문자열을 다른 문자열 또는 개체와 비교합니다. 이 메서드의 반환 값은 앞의 표에서 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드가 반환하는 값과 같습니다.  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 현재 문자열 개체가 캡슐화하는 문자열을 다른 문자열 또는 개체와 비교합니다. 이 메서드의 반환 값은 앞의 표에서 <xref:System.String.Compare%2A?displayProperty=nameWithType> 메서드가 반환하는 값과 동일합니다.  
   
 > [!IMPORTANT]
->  <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
+> <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드는 주로 문자열의 순서를 지정하거나 정렬할 때 사용됩니다. <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드를 통해 같은지 여부를 테스트하면 안 됩니다(즉, 한 문자열이 다른 문자열보다 작거나 큰지에 관계없이 반환 값 0을 명시적으로 찾기 위해 사용하면 안 됨). 대신, 두 문자열이 같은지 여부를 확인하려면 <xref:System.String.Equals%28System.String%2CSystem.String%2CSystem.StringComparison%29?displayProperty=nameWithType> 메서드를 사용합니다.  
   
  다음 예제에서는 <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드를 사용하여 `string1` 개체를 `string2` 개체와 비교합니다.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "45698564"
   
  이 예제에서는 콘솔에 `-1` 를 표시합니다.  
   
- <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 모든 오버로드는 기본적으로 문화권 구분 및 대/소문자 구분 비교 작업을 수행합니다. 문화권을 구분하지 않는 비교를 수행할 수 있는 이 메서드의 오버로드는 제공되지 않습니다. 코드를 이해하기 쉽도록 문화권 구분 작업에는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>를 지정하고 문화권을 구분하지 않는 작업에는 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>를 지정하여 **String.Compare** 메서드를 대신 사용하는 것이 좋습니다. **String.Compare** 메서드를 사용하여 문화권 구분 비교와 문화권을 구분하지 않는 비교를 둘 다 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
+ <xref:System.String.CompareTo%2A?displayProperty=nameWithType> 메서드의 모든 오버로드는 기본적으로 문화권 구분 및 대/소문자 구분 비교 작업을 수행합니다. 문화권을 구분하지 않는 비교를 수행할 수 있는 이 메서드의 오버로드는 제공되지 않습니다. 코드를 이해하기 쉽도록 문화권 구분 작업에는 **를 지정하고 문화권을 구분하지 않는 작업에는** 를 지정하여 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> String.Compare <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 메서드를 대신하는 것이 좋습니다. **String.Compare** 메서드를 사용하여 문화권 구분 비교와 문화권을 구분하지 않는 비교를 둘 다 수행하는 방법을 보여 주는 예제는 [문화권을 구분하지 않는 문자열 비교 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-comparisons.md)을 참조하세요.  
   
 ## <a name="equals"></a>같음  
  **String.Equals** 메서드는 두 문자열이 같은지 여부를 쉽게 확인할 수 있습니다. 대/소문자 구분 메서드는 **true** 또는 **false** 부울 값을 반환합니다. 다음 예제와 같이 기존 클래스에서 사용할 수 있습니다. 다음 예제에서는 **Equals** 메서드를 사용하여 문자열 개체에 "Hello World"라는 구가 포함되어 있는지 여부를 확인합니다.  
@@ -117,7 +117,7 @@ ms.locfileid: "45698564"
  [!code-csharp[Conceptual.String.BasicOps#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.string.basicops/cs/compare.cs#11)]
  [!code-vb[Conceptual.String.BasicOps#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.string.basicops/vb/compare.vb#11)]  
   
- 이 예제에서는 콘솔에 `True`을 표시합니다.  
+ 이 예제에서는 콘솔에 `True` 를 표시합니다.  
   
  **String.EndsWith** 메서드는 전달된 문자열을 현재 문자열 개체의 끝에 있는 문자와 비교합니다. 역시 부울 값을 반환합니다. 다음 예제에서는 **EndsWith** 메서드를 사용하여 문자열의 끝을 검사합니다.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "45698564"
   
 ## <a name="see-also"></a>참고 항목
 
-- [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)  
+- [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)
 - [Culture의 영향을 받지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [정렬 가중치 테이블(Windows의 .NET용)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [정렬 가중치 테이블(Windows의 .NET용)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [기본 유니코드 데이터 정렬 요소 테이블(Linux 및 macOS의 .NET Core용)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

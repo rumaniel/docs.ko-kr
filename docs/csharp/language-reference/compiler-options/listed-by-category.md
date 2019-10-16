@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: 891e5eac249f4bd22b6eadde7509de2d07cd1576
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7319d424b84d5edd41fc255e3aea763da55961a9
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527189"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606736"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>C# 컴파일러 옵션 범주별 목록
 
@@ -54,7 +54,8 @@ ms.locfileid: "43527189"
 |[-reference](reference-compiler-option.md)|어셈블리를 포함하는 파일에서 메타데이터를 가져옵니다.|
 |-analyzer|이 어셈블리에서 분석기를 실행합니다(약식: /a).|
 |-additionalfile|코드 생성에 직접 영향을 주지 않지만 오류 또는 경고를 생성하기 위해 분석기에서 사용할 수 있는 추가 파일에 이름을 지정합니다.|
-
+|-embed|PDB에 모든 소스 파일을 포함합니다.|
+|-embed:\<file list>|PDB에 특정 파일을 포함합니다.|
 ## <a name="debuggingerror-checking"></a>디버깅/오류 검사
 
 |옵션|용도|
@@ -95,16 +96,16 @@ ms.locfileid: "43527189"
 |[-codepage](codepage-compiler-option.md)|컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다.|
 |[-help](help-compiler-option.md)|stdout에 컴파일러 옵션을 나열합니다.|
 |[-highentropyva](highentropyva-compiler-option.md)|실행 파일이 ASLR(주소 공간 레이아웃 불규칙화)을 지원하도록 지정합니다.|
-|[-langversion](langversion-compiler-option.md)|언어 버전(기본값, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 또는 최신)을 지정합니다. |
+|[-langversion](langversion-compiler-option.md)|언어 버전 지정: 기본값, ISO-1, ISO-2, 3, 4, 5, 6, 7, 7.1, 7.2, 7.3 또는 최신 |
 |[-main](main-compiler-option.md)|**Main** 메서드의 위치를 지정합니다.|
 |[-noconfig](noconfig-compiler-option.md)|csc.rsp를 사용하여 컴파일하지 않도록 컴파일러에 지시합니다.|
 |[-nologo](nologo-compiler-option.md)|컴파일러 배너 정보를 표시하지 않습니다.|
 |[-recurse](recurse-compiler-option.md)|하위 디렉터리에서 컴파일할 소스 파일을 검색합니다.|
 |[-subsystemversion](subsystemversion-compiler-option.md)|실행 파일이 사용할 수 있는 하위 시스템의 최소 버전을 지정합니다.|
-|[/unsafe](unsafe-compiler-option.md)|[unsafe](../../../csharp/language-reference/keywords/unsafe.md) 키워드를 사용하는 코드를 컴파일할 수 있도록 설정합니다.|
+|[/unsafe](unsafe-compiler-option.md)|[unsafe](../keywords/unsafe.md) 키워드를 사용하는 코드를 컴파일할 수 있도록 설정합니다.|
 |[-utf8output](utf8output-compiler-option.md)|UTF-8 인코딩을 사용하여 컴파일러 출력을 표시합니다.|
 |-parallel[+&#124;-]|동시 빌드(+)를 사용할지 여부를 지정합니다.|
-|-checksumalgorithm:\<alg>|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 SHA1(기본값) 또는 SHA256입니다.|
+|-checksumalgorithm:\<alg>|PDB에 저장된 소스 파일 체크섬을 계산하기 위한 알고리즘을 지정합니다.  지원되는 값은 다음과 같습니다. SHA1(기본값) 또는 SHA256.<br>SHA1 관련 충돌 문제로 인해 SHA256을 사용하는 것이 좋습니다.|
 
 ## <a name="obsolete-options"></a>사용되지 않는 옵션
 
@@ -114,6 +115,6 @@ ms.locfileid: "43527189"
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](index.md)  
-- [사전순 C# 컴파일러 옵션 목록](listed-alphabetically.md)  
+- [C# 컴파일러 옵션](index.md)
+- [사전순 C# 컴파일러 옵션 목록](listed-alphabetically.md)
 - [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](how-to-set-environment-variables-for-the-visual-studio-command-line.md)

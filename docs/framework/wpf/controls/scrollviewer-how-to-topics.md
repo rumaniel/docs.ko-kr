@@ -7,26 +7,27 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
-ms.openlocfilehash: ab8b416afb03b5ce0a64f46c3d7ca5d363d4fd34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971017"
 ---
 # <a name="scrollviewer-how-to-topics"></a>ScrollViewer 방법 항목
-이 섹션의 항목을 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.ScrollViewer> 응용 프로그램에서 스크롤 가능한 영역을 만드는 데 요소입니다.  
+이 섹션의에서 항목에서는 사용 하는 방법을 보여 줍니다는 <xref:System.Windows.Controls.ScrollViewer> 응용 프로그램에서 스크롤 가능한 영역을 만드는 요소입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [ScrollChanged 이벤트 처리](../../../../docs/framework/wpf/controls/how-to-handle-the-scrollchanged-event.md)  
- [IScrollInfo 인터페이스를 사용하여 콘텐츠 스크롤](../../../../docs/framework/wpf/controls/how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [ScrollViewer의 콘텐츠 스크롤 메서드 사용](../../../../docs/framework/wpf/controls/how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+ [ScrollChanged 이벤트 처리](how-to-handle-the-scrollchanged-event.md)  
+ [IScrollInfo 인터페이스를 사용하여 콘텐츠 스크롤](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [ScrollViewer의 콘텐츠 스크롤 메서드 사용](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a>참고 항목  
- [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)
+## <a name="see-also"></a>참고자료
+
+- [패널 개요](panels-overview.md)
+- [레이아웃](../advanced/layout.md)

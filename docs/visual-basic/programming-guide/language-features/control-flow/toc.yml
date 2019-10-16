@@ -1,0 +1,17 @@
+- name: 제어 흐름
+  href: index.md
+  items:
+    - name: 판단 구조체
+      href: decision-structures.md
+    - name: 루프 구조체
+      href: loop-structures.md
+      items:
+        - name: '연습: IEnumerable(Of T) 구현'
+          href: walkthrough-implementing-ienumerable-of-t.md
+    - name: 기타 제어 구조체
+      href: other-control-structures.md
+      items:
+        - name: '방법: 시스템 리소스 삭제'
+          href: how-to-dispose-of-a-system-resource.md
+    - name: 중첩 제어 구조체
+      href: nested-control-structures.md

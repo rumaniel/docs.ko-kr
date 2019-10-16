@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21cce26c94d26f6c079fca644a31bf83cd1a6432
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 08f997e133fa6cc8769efe18e7ca06c0153f15a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33440712"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781805"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 열거형
 어셈블리 매니페스트에 인코딩된 리소스의 표시 여부를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorManifestResourceFlags {  
   
     mrVisibilityMask        =   0x0007,  
@@ -40,18 +40,19 @@ typedef enum CorManifestResourceFlags {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`mrVisibilityMask`|예약됨.|  
+|`mrVisibilityMask`|예약되어 있습니다.|  
 |`mrPublic`|리소스는 공용입니다.|  
 |`mrPrivate`|리소스는 private입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorHdr.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -1,0 +1,57 @@
+- name: 강력한 이름 지정
+  href: index.md
+  items:
+    - name: GetHashFromAssemblyFile 함수
+      href: gethashfromassemblyfile-function.md
+    - name: GetHashFromAssemblyFileW 함수
+      href: gethashfromassemblyfilew-function.md
+    - name: GetHashFromBlob 함수
+      href: gethashfromblob-function.md
+    - name: GetHashFromFile 함수
+      href: gethashfromfile-function.md
+    - name: GetHashFromFileW 함수
+      href: gethashfromfilew-function.md
+    - name: GetHashFromHandle 함수
+      href: gethashfromhandle-function.md
+    - name: PublicKeyBlob 구조체
+      href: publickeyblob-structure.md
+    - name: StrongNameCompareAssemblies 함수
+      href: strongnamecompareassemblies-function.md
+    - name: StrongNameErrorInfo 함수
+      href: strongnameerrorinfo-function.md
+    - name: StrongNameFreeBuffer 함수
+      href: strongnamefreebuffer-function.md
+    - name: StrongNameGetBlob 함수
+      href: strongnamegetblob-function.md
+    - name: StrongNameGetBlobFromImage 함수
+      href: strongnamegetblobfromimage-function.md
+    - name: StrongNameGetPublicKey 함수
+      href: strongnamegetpublickey-function.md
+    - name: StrongNameHashSize 함수
+      href: strongnamehashsize-function.md
+    - name: StrongNameKeyDelete 함수
+      href: strongnamekeydelete-function.md
+    - name: StrongNameKeyGen 함수
+      href: strongnamekeygen-function.md
+    - name: StrongNameKeyGenEx 함수
+      href: strongnamekeygenex-function.md
+    - name: StrongNameKeyInstall 함수
+      href: strongnamekeyinstall-function.md
+    - name: StrongNameSignatureGeneration 함수
+      href: strongnamesignaturegeneration-function.md
+    - name: StrongNameSignatureGenerationEx 함수
+      href: strongnamesignaturegenerationex-function.md
+    - name: StrongNameSignatureSize 함수
+      href: strongnamesignaturesize-function.md
+    - name: StrongNameSignatureVerification 함수
+      href: strongnamesignatureverification-function.md
+    - name: StrongNameSignatureVerificationEx 함수
+      href: strongnamesignatureverificationex-function.md
+    - name: StrongNameSignatureVerificationFromImage 함수
+      href: strongnamesignatureverificationfromimage-function.md
+    - name: StrongNameTokenFromAssembly 함수
+      href: strongnametokenfromassembly-function.md
+    - name: StrongNameTokenFromAssemblyEx 함수
+      href: strongnametokenfromassemblyex-function.md
+    - name: StrongNameTokenFromPublicKey 함수
+      href: strongnametokenfrompublickey-function.md

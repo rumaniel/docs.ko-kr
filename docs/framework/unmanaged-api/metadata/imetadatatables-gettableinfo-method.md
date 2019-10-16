@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea617668a72413f3387a35fe009b37fa15d03354
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 4844834232e34ab5dacfa34e7aa5d204ee344612
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33449610"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781355"
 ---
 # <a name="imetadatatablesgettableinfo-method"></a>IMetaDataTables::GetTableInfo 메서드
-이름, 행 크기, 행의 수, 열 개수 및 지정된 된 테이블의 키 열 인덱스를 가져옵니다.  
+이름, 행 크기, 행의 수, 열 수 및 지정된 된 테이블의 키 열 인덱스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetTableInfo (  
     [in]  ULONG       ixTbl,  
     [out] ULONG       *pcbRow,  
@@ -40,12 +40,12 @@ HRESULT GetTableInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ixTbl`  
- [in] 테이블의 식별자 해당 속성을 반환 합니다.  
+ [in] 테이블의 식별자를 반환할 속성입니다.  
   
  `pcbRow`  
- [out] 테이블 행의 바이트 단위로 크기에 대 한 포인터입니다.  
+ [out] 테이블 행의 바이트 크기에 대 한 포인터입니다.  
   
  `pcRows`  
  [out] 테이블의 행 수에 대 한 포인터입니다.  
@@ -60,14 +60,15 @@ HRESULT GetTableInfo (
  [out] 테이블 이름에 대 한 포인터에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

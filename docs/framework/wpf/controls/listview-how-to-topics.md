@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], how-to topics
 ms.assetid: aafce40c-9bfe-45ec-86a3-599616a11276
-ms.openlocfilehash: 0e99793a1c8ec179ee01744f8618ff6463766704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2665fc60e1366f30fb7f3621bb0669db1ea3db0a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932251"
 ---
 # <a name="listview-how-to-topics"></a>ListView 방법 항목
-이 섹션의 항목을 사용 하는 방법을 설명는 <xref:System.Windows.Controls.ListView> 컨트롤에 데이터 항목 집합을 표시 합니다.  
+이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.ListView> 데이터 항목 집합이 표시를 제어 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [헤더를 클릭하면 GridView 열 정렬](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [ListView의 사용자 지정 뷰 모드 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
- [템플릿을 사용하여 GridView 사용 ListView의 스타일 지정](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [끌어 온 GridView 열 머리글의 스타일 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [GridView를 사용하여 ListView 콘텐츠 표시](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
- [ListView에서 트리거를 사용하여 선택한 항목의 스타일 지정](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [CheckBox를 사용하여 ListViewItems 만들기](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
- [GridViewRowPresenter를 사용하여 데이터 표시](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
- [GridView를 구현하는 ListView의 항목 그룹화](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [GridView를 구현하는 ListView 행의 스타일 지정](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [ListView에 있는 열의 가로 맞춤 변경](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [ListView의 각 항목에 대한 MouseDoubleClick 이벤트 처리](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+ [헤더를 클릭하면 GridView 열 정렬](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [ListView의 사용자 지정 뷰 모드 만들기](how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [템플릿을 사용하여 GridView 사용 ListView의 스타일 지정](how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [끌어 온 GridView 열 머리글의 스타일 만들기](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [GridView를 사용하여 ListView 콘텐츠 표시](how-to-display-listview-contents-by-using-a-gridview.md)  
+ [ListView에서 트리거를 사용하여 선택한 항목의 스타일 지정](how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [CheckBox를 사용하여 ListViewItems 만들기](how-to-create-listviewitems-with-a-checkbox.md)  
+ [GridViewRowPresenter를 사용하여 데이터 표시](how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [GridView를 구현하는 ListView의 항목 그룹화](how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [GridView를 구현하는 ListView 행의 스타일 지정](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [ListView에 있는 열의 가로 맞춤 변경](how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [ListView의 각 항목에 대한 MouseDoubleClick 이벤트 처리](how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.ListView>  
@@ -39,4 +39,4 @@ ms.locfileid: "33555804"
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>관련 단원  
- [ListView 개요](../../../../docs/framework/wpf/controls/listview-overview.md)
+ [ListView 개요](listview-overview.md)

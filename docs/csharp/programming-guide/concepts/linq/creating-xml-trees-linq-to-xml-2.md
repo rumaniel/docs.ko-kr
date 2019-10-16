@@ -2,17 +2,17 @@
 title: C#에서 XML 트리 만들기(LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 98bad6bfc3b563b39f9e58eadbff673f202646c1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a77171ebbc07e54f6988fb97aff197b4c6d31721
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43502286"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69594627"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C#에서 XML 트리 만들기(LINQ to XML)
 이 단원에서는 C#에서 XML 트리를 만드는 방법에 대해 설명합니다.  
   
- LINQ 쿼리의 결과를 <xref:System.Xml.Linq.XElement>의 내용으로 사용하는 방법에 대한 자세한 내용은 [함수 생성(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)을 참조하세요.  
+ LINQ 쿼리의 결과를 <xref:System.Xml.Linq.XElement>의 내용으로 사용하는 방법에 대한 자세한 내용은 [함수 생성(LINQ to XML)(C#)](./functional-construction-linq-to-xml.md)을 참조하세요.  
   
 ## <a name="constructing-elements"></a>요소 생성
  <xref:System.Xml.Linq.XElement> 및 <xref:System.Xml.Linq.XAttribute> 생성자의 시그니처를 사용하여 요소나 특성의 내용을 생성자에 인수로 전달할 수 있습니다. 생성자 중 하나의 인수 수가 고정되어 있지 않기 때문에 원하는 수의 자식 요소를 전달할 수 있습니다. 물론 이러한 각 자식 요소에는 자신의 자식 요소가 포함될 수 있습니다. 각 요소에는 원하는 수의 특성을 추가할 수 있습니다.  
@@ -50,17 +50,17 @@ XElement contacts =
   
  `content` 매개 변수는 융통성이 매우 크기 때문에 <xref:System.Xml.Linq.XElement>의 유효한 자식인 모든 형식의 개체를 지원합니다. 이 매개 변수로 전달되는 개체의 형식에 따라 다음과 같은 규칙이 적용됩니다.  
   
--   문자열은 텍스트 내용으로 추가됩니다.  
+- 문자열은 텍스트 내용으로 추가됩니다.  
   
--   <xref:System.Xml.Linq.XElement>는 자식 요소로 추가됩니다.  
+- <xref:System.Xml.Linq.XElement>는 자식 요소로 추가됩니다.  
   
--   <xref:System.Xml.Linq.XAttribute>는 특성으로 추가됩니다.  
+- <xref:System.Xml.Linq.XAttribute>는 특성으로 추가됩니다.  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> 또는 <xref:System.Xml.Linq.XText>는 자식 내용으로 추가됩니다.  
+- <xref:System.Xml.Linq.XProcessingInstruction>, <xref:System.Xml.Linq.XComment> 또는 <xref:System.Xml.Linq.XText>는 자식 내용으로 추가됩니다.  
   
--   <xref:System.Collections.IEnumerable>이 열거되고 이러한 규칙이 결과에 재귀적으로 적용됩니다.  
+- <xref:System.Collections.IEnumerable>이 열거되고 이러한 규칙이 결과에 재귀적으로 적용됩니다.  
   
--   다른 모든 형식의 경우 `ToString` 메서드가 호출되고 결과가 텍스트 내용으로 추가됩니다.  
+- 다른 모든 형식의 경우 `ToString` 메서드가 호출되고 결과가 텍스트 내용으로 추가됩니다.  
   
 ### <a name="creating-an-xelement-with-content"></a>콘텐츠를 사용하여 XElement 만들기  
  메서드를 한 번 호출하여 간단한 내용이 포함된 <xref:System.Xml.Linq.XElement>를 만들 수 있습니다. 이렇게 하려면 다음과 같이 내용을 두 번째 매개 변수로 지정합니다.  
@@ -168,7 +168,23 @@ Console.WriteLine(contacts);
   </Contact>  
 </Contacts>  
 ```  
+
+### <a name="creating-an-xelement-with-an-xattribute"></a>XAttribute를 사용하여 XElement 만들기
+ <xref:System.Xml.Linq.XAttribute> 클래스의 인스턴스를 내용 인수로 전달하면 생성자가 특성을 사용하여 요소를 만듭니다.
+
+```csharp  
+XElement phone = new XElement("Phone",  
+    new XAttribute("Type", "Home"),  
+    "555-555-5555");  
+Console.WriteLine(phone);  
+```  
   
+ 이 예제는 다음과 같은 출력을 생성합니다.  
+  
+```xml  
+<Phone Type="Home">555-555-5555</Phone>
+```   
+
 ### <a name="creating-an-empty-element"></a>빈 요소 만들기  
  빈 <xref:System.Xml.Linq.XElement>를 만들려면 내용을 생성자에 전달하지 않습니다. 다음 예제에서는 빈 요소를 만듭니다.  
   
@@ -220,4 +236,4 @@ Console.WriteLine("Child2 was {0}",
 
 ## <a name="see-also"></a>참고 항목
 
-- [XML 트리 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML 트리 만들기(C#)](./linq-to-xml-overview.md)

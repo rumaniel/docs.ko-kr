@@ -7,29 +7,29 @@ helpviewer_keywords:
 - WPF application [WPF], building
 - WPF application [WPF], deploying
 ms.assetid: 88952ad2-5b74-48ca-a4c5-3f4fbb53ce12
-ms.openlocfilehash: bed7484f7ff487d1ff34ef1ff1e86bc8689a2cfc
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 4aaeeed4ff6a130c6d3ddda696286222d7c9efaf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46561018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052237"
 ---
 # <a name="build-and-deploy-how-to-topics"></a>빌드 및 배포 방법 항목
 다음 항목에는 다양 한 프로젝트 파일을 만드는 방법을 보여 줍니다 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 응용 프로그램 유형입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [IIS 5.0 및 IIS 6.0을 구성하여 WPF 응용 프로그램 배포](../../../../docs/framework/wpf/app-development/how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
- [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 응용 프로그램 디버깅](../../../../docs/framework/wpf/app-development/configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
- [설치된 WPF 버전 확인](../../../../docs/framework/wpf/app-development/how-to-determine-the-installed-version-of-wpf.md)  
- [.NET Framework 3.0 설치 여부 확인](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
- [.NET Framework 3.5 설치 여부 확인](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
- [Firefox용 WPF 플러그 인 설치 여부 확인](../../../../docs/framework/wpf/app-development/how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
+ [IIS 5.0 및 IIS 6.0을 구성하여 WPF 애플리케이션 배포](how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md)  
+ [Visual Studio를 구성하여 웹 서비스를 호출하는 XAML 브라우저 애플리케이션 디버깅](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)  
+ [설치된 WPF 버전 확인](how-to-determine-the-installed-version-of-wpf.md)  
+ [.NET Framework 3.0 설치 여부 확인](how-to-detect-whether-the-net-framework-3-0-is-installed.md)  
+ [.NET Framework 3.5 설치 여부 확인](how-to-detect-whether-the-net-framework-3-5-is-installed.md)  
+ [Firefox용 WPF 플러그 인 설치 여부 확인](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)  
   
 ## <a name="related-sections"></a>관련 단원  
- [WPF 응용 프로그램 빌드](../../../../docs/framework/wpf/app-development/building-a-wpf-application-wpf.md)  
+ [WPF 응용 프로그램 빌드](building-a-wpf-application-wpf.md)  
   
- [WPF 응용 프로그램 배포](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)  
+ [WPF 응용 프로그램 배포](deploying-a-wpf-application-wpf.md)  
   
- [방법: 새 WPF 응용 프로그램 프로젝트 만들기](https://msdn.microsoft.com/library/1f6aea7a-33e1-4d3f-8555-1daa42e95d82)  
+ [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](https://msdn.microsoft.com/library/72ef4d90-e163-42a1-8df0-ea7ccfd1901f)
+ [방법: 새 WPF 브라우저 응용 프로그램 프로젝트 만들기](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628663(v=vs.100))

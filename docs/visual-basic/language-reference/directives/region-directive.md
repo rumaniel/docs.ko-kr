@@ -10,12 +10,12 @@ helpviewer_keywords:
 - region directive (#region)
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
-ms.openlocfilehash: 204b53751fce4f9a3e038ae7c44634522d54657c
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: eaaf0f8279ec905767be3f364a88357f0d393bba
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61812647"
 ---
 # <a name="region-directive"></a>#Region 지시문
 Visual Basic 파일에서 코드 섹션을 축소하고 숨깁니다.  
@@ -31,7 +31,7 @@ Visual Basic 파일에서 코드 섹션을 축소하고 숨깁니다.
   
 |용어|정의|  
 |---|---|  
-|`identifier_string`|필수. 축소된 경우 영역의 제목 역할을 하는 문자열입니다. 영역은 기본적으로 축소되어 있습니다.|  
+|`identifier_string`|필수 요소. 축소된 경우 영역의 제목 역할을 하는 문자열입니다. 영역은 기본적으로 축소되어 있습니다.|  
 |`#End Region`|`#Region` 블록을 종료합니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -40,9 +40,10 @@ Visual Basic 파일에서 코드 섹션을 축소하고 숨깁니다.
 ## <a name="example"></a>예제  
  이 예제에서는 `#Region` 지시문을 사용합니다.  
   
- [!code-vb[VbVbalrConditionalComp#4](../../../visual-basic/language-reference/directives/codesnippet/VisualBasic/region-directive_1.vb)]  
+ [!code-vb[VbVbalrConditionalComp#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrConditionalComp/VB/Class1.vb#4)]  
   
-## <a name="see-also"></a>참고 항목  
- [#If...Then...#Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md)  
- [개요](/visualstudio/ide/outlining)  
- [방법: 코드 섹션 축소 및 숨기기](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)
+## <a name="see-also"></a>참고자료
+
+- [#If...Then...#Else 지시문](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
+- [개요](/visualstudio/ide/outlining)
+- [방법: 코드 섹션 축소 및 숨기기](../../../visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md)

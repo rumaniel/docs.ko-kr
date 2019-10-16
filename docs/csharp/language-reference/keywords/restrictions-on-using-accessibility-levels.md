@@ -1,15 +1,16 @@
 ---
-title: 액세스 가능성 수준 사용에 대한 제한(C# 참조)
+title: 액세스 가능성 수준 사용에 대한 제한 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: 2bcf2b12d1aa1488e6d3e46f5b37ac9535b138dd
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 13adfbb96cea2c192b84931b529bf92fd2b50116
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47208843"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922325"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>액세스 가능성 수준 사용에 대한 제한(C# 참조)
 
@@ -33,7 +34,7 @@ public class MyClass: BaseClass {...} // Error
 |[속성](../../programming-guide/classes-and-structs/properties.md)|속성의 형식은 적어도 속성 자체 수준만큼 액세스 가능해야 합니다.|
 |[이벤트](../../programming-guide/events/index.md)|이벤트의 형식은 적어도 이벤트 자체 수준만큼 액세스 가능해야 합니다.|
 |[인덱서](../../programming-guide/indexers/index.md)|인덱서의 형식 및 매개 변수 형식은 적어도 인덱서 자체 수준만큼 액세스 가능해야 합니다.|
-|[연산자](../../programming-guide/statements-expressions-operators/operators.md)|연산자의 반환 형식 및 매개 변수 형식은 적어도 연산자 자체 수준만큼 액세스 가능해야 합니다.|
+|[연산자](../operators/index.md)|연산자의 반환 형식 및 매개 변수 형식은 적어도 연산자 자체 수준만큼 액세스 가능해야 합니다.|
 |[생성자](../../programming-guide/classes-and-structs/constructors.md)|생성자의 매개 변수 형식은 적어도 생성자 자체 수준만큼 액세스 가능해야 합니다.|
 
 ## <a name="example"></a>예

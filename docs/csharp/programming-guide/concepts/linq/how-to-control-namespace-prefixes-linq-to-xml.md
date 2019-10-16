@@ -2,12 +2,12 @@
 title: '방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)'
 ms.date: 07/20/2015
 ms.assetid: 64de5186-b81a-4ddd-8327-8693df59a01b
-ms.openlocfilehash: dd2a91fde868425cadbc395d6db0f913e2be600f
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 5b836be46001b660547532311b1b507ff234975f
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45649707"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710158"
 ---
 # <a name="how-to-control-namespace-prefixes-c-linq-to-xml"></a>방법: 네임스페이스 접두사 제어(C#)(LINQ to XML)
 이 항목에서는 XML 트리를 serialize할 때 네임스페이스 접두사를 제어하는 방법에 대해 설명합니다.  
@@ -56,4 +56,4 @@ Console.WriteLine(root);
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 네임스페이스 작업(C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [네임스페이스 개요(LINQ to XML)(C#)](namespaces-overview-linq-to-xml.md)

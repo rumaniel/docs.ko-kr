@@ -2,12 +2,12 @@
 title: ServiceCredentials
 ms.date: 03/30/2017
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
-ms.openlocfilehash: 26bd0c95f930bf7859ae6409d797afbb596844fa
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d9563bd3bfe067ad83bfa03e7c6375a9db933f14
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956983"
 ---
 # <a name="servicecredentials"></a>ServiceCredentials
 ServiceCredentials  
@@ -88,5 +88,6 @@ class ServiceCredentials : Behavior
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Description.ServiceCredentials>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Description.ServiceCredentials>

@@ -16,35 +16,36 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d124ce5dd38bed7eb439a055ff9e30a75efe5891
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ea0fbceb1e778a2f26e0625a337b803f417b59eb
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33400746"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70777254"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob 메서드
-Win32 리소스 blob와 연결 된 리소스를 해제합니다.  
+Win32 리소스 blob 및 관련 리소스를 해제 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT FreeWin32ResBlob(  
     const void** ppResBlob  
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ppResBlob`  
- 릴리스될 리소스 blob입니다. 이 메서드는 NULL로 blob 파일에 대 한 포인터를 할당합니다.  
+ 해제할 리소스 blob입니다. 이 메서드는 blob 포인터를 NULL에 할당 합니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h 필요  
+ Alink 필요  
   
-## <a name="see-also"></a>참고 항목  
- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>참고자료
+
+- [IALink 인터페이스](ialink-interface.md)
+- [IALink2 인터페이스](ialink2-interface.md)
+- [ALink API](index.md)

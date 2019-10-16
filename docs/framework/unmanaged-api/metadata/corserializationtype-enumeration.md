@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4959d595030df476f5554841c2ae3c73a86a2c31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b9b7138d403bc84ab377301b82d697fd137416c6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446661"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781586"
 ---
 # <a name="corserializationtype-enumeration"></a>CorSerializationType 열거형
-공용 언어 런타임에서 개체가 serialize 되는 방식을 지정 합니다.  
+공용 언어 런타임에 의해 개체가 serialize 되는 방식을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorSerializationType {  
   
     SERIALIZATION_TYPE_UNDEFINED     = 0,  
@@ -60,32 +60,33 @@ typedef enum CorSerializationType {
 |멤버|설명|  
 |------------|-----------------|  
 |`SERIALIZATION_TYPE_UNDEFINED`|개체의 serialization 정의 되지 않습니다.|  
-|`SERIALIZATION_TYPE_BOOLEAN`|Boolean 형식의 개체를 serialize|  
-|`SERIALIZATION_TYPE_CHAR`|개체가 문자 형식으로 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_I1`|부호 있는 1 바이트 정수로 개체가 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_U1`|부호 없는 1 바이트 정수로 개체가 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_I2`|부호 있는 2 바이트 정수 개체가 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_U2`|부호 없는 2 바이트 정수인 개체가 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_I4`|부호 있는 4 바이트 정수로 개체가 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_U4`|부호 없는 4 바이트 정수로 개체가 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_I8`|부호 있는 8 바이트 정수 개체가 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_U8`|부호 없는 8 바이트 정수로 개체가 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_R4`|4 바이트 부동 소수점으로 개체가 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_R8`|8 바이트 부동 소수점으로 개체가 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_STRING`|개체가는 System.String 형식으로 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_SZARRAY`|단일 차원, 개체를 serialize 0 인 배열입니다.|  
+|`SERIALIZATION_TYPE_BOOLEAN`|부울 형식으로 개체를 serialize 할|  
+|`SERIALIZATION_TYPE_CHAR`|개체는 문자 형식으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_I1`|개체를 부호 있는 1 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_U1`|개체를 부호 없는 1 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_I2`|개체를 부호 있는 2 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_U2`|개체를 부호 없는 2 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_I4`|개체는 부호 있는 4 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_U4`|개체를 부호 없는 4 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_I8`|개체를 부호 있는 8 바이트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_U8`|개체를 부호 없는 8 비트 정수로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_R4`|개체는 4 바이트 부동 소수점으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_R8`|개체는 8 바이트 부동 소수점으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_STRING`|개체는 System.String 형식으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_SZARRAY`|1 차원, 개체를 serialize 0 인 배열입니다.|  
 |`SERIALIZATION_TYPE_TYPE`|개체가 제네릭 형식으로 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_TAGGED_OBJECT`|개체가는 태그가 지정 된 개체로 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_FIELD`|개체가 필드로 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_PROPERTY`|개체가 속성으로 serialize 됩니다.|  
-|`SERIALIZATION_TYPE_ENUM`|열거형으로 개체가 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_TAGGED_OBJECT`|개체는 태그가 지정 된 개체로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_FIELD`|개체 필드로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_PROPERTY`|개체 속성으로 serialize 됩니다.|  
+|`SERIALIZATION_TYPE_ENUM`|개체를 열거형으로 serialize 됩니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorHdr.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

@@ -2,30 +2,30 @@
 title: 파일 액세스에 Async 사용(Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c989305f-08e3-4687-95c3-948465cda202
-ms.openlocfilehash: e12eaa57d0f7186e9d281b89ec3abd26280e12ed
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: dac3348657310a38284d9b6680082050a07e19bb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644227"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642410"
 ---
 # <a name="using-async-for-file-access-visual-basic"></a>파일 액세스에 Async 사용(Visual Basic)
-파일에 액세스 하려면 비동기 기능을 사용할 수 있습니다. 비동기 기능을 사용하면 콜백을 사용하거나 여러 메서드 또는 람다 식에 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다. 동기 코드를 비동기로 만들려면 동기 메서드 대신 비동기 메서드를 호출하고 몇 가지 키워드를 코드에 추가하면 됩니다.  
+파일에 액세스 하는 비동기 기능을 사용할 수 있습니다. 비동기 기능을 사용하면 콜백을 사용하거나 여러 메서드 또는 람다 식에 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다. 동기 코드를 비동기로 만들려면 동기 메서드 대신 비동기 메서드를 호출하고 몇 가지 키워드를 코드에 추가하면 됩니다.  
   
  파일 액세스 호출에 비동기를 추가하는 이유로 다음을 고려할 수 있습니다.  
   
--   비동기는 UI 응용 프로그램의 응답성을 개선합니다. 작업을 시작하는 UI 스레드가 다른 작업을 수행할 수 있기 때문입니다. UI 스레드가 시간이 오래 걸리는(예: 50밀리초 이상) 코드를 실행해야 하는 경우, I/O가 완료되고 UI 스레드가 키보드와 마우스 입력 및 기타 이벤트를 다시 처리할 수 있을 때까지 UI가 정지할 수 있습니다.  
+- 비동기는 UI 애플리케이션의 응답성을 개선합니다. 작업을 시작하는 UI 스레드가 다른 작업을 수행할 수 있기 때문입니다. UI 스레드가 시간이 오래 걸리는(예: 50밀리초 이상) 코드를 실행해야 하는 경우, I/O가 완료되고 UI 스레드가 키보드와 마우스 입력 및 기타 이벤트를 다시 처리할 수 있을 때까지 UI가 정지할 수 있습니다.  
   
--   비동기는 스레드의 필요성을 줄임으로써 ASP.NET 및 기타 서버 기반 응용 프로그램의 확장성을 개선합니다. 응용 프로그램이 각 응답에 전용 스레드를 사용하고 1,000개의 요청이 동시에 처리되는 경우 수천 개의 스레드가 필요합니다. 비동기 작업은 대기 중에 종종 스레드를 사용할 필요가 없습니다. 끝날 때 기존 I/O 완료 스레드를 잠시 사용합니다.  
+- 비동기는 스레드의 필요성을 줄임으로써 ASP.NET 및 기타 서버 기반 애플리케이션의 확장성을 개선합니다. 애플리케이션이 각 응답에 전용 스레드를 사용하고 1,000개의 요청이 동시에 처리되는 경우 수천 개의 스레드가 필요합니다. 비동기 작업은 대기 중에 종종 스레드를 사용할 필요가 없습니다. 끝날 때 기존 I/O 완료 스레드를 잠시 사용합니다.  
   
--   파일 액세스 작업의 대기 시간은 현재 조건에서 매우 낮을 수 있지만 나중에 대기 시간이 크게 늘어날 수 있습니다. 예를 들어 전 세계에 있는 서버로 파일을 이동할 수 있습니다.  
+- 파일 액세스 작업의 대기 시간은 현재 조건에서 매우 낮을 수 있지만 나중에 대기 시간이 크게 늘어날 수 있습니다. 예를 들어 전 세계에 있는 서버로 파일을 이동할 수 있습니다.  
   
--   비동기 기능을 사용할 경우에는 추가되는 오버헤드가 적습니다.  
+- 비동기 기능을 사용할 경우에는 추가되는 오버헤드가 적습니다.  
   
--   비동기 작업은 쉽게 병렬로 실행할 수 있습니다.  
+- 비동기 작업은 쉽게 병렬로 실행할 수 있습니다.  
   
 ## <a name="running-the-examples"></a>예제 실행  
- 이 항목의 예제를 실행하려면 **WPF 응용 프로그램** 또는 **Windows Forms 응용 프로그램**을 만든 후 **단추**를 추가할 수 있습니다. 단추의 `Click` 이벤트에서 각 예제의 첫 번째 메서드에 대한 호출을 추가합니다.  
+ 이 항목의 예제를 실행하려면 **WPF 애플리케이션** 또는 **Windows Forms 애플리케이션**을 만든 후 **단추**를 추가할 수 있습니다. 단추의 `Click` 이벤트에서 각 예제의 첫 번째 메서드에 대한 호출을 추가합니다.  
   
  다음 예제에서는 `Imports` 문을 포함합니다.  
   
@@ -73,10 +73,10 @@ Dim theTask As Task = sourceStream.WriteAsync(encodedText, 0, encodedText.Length
 Await theTask  
 ```  
   
- 첫 번째 문은 작업을 반환하여 파일 처리가 시작되도록 합니다. await가 있는 두 번째 문은 메서드를 즉시 종료하고 다른 작업을 반환하도록 합니다. 나중에 파일 처리가 완료되면 await 뒤에 오는 문으로 실행이 반환됩니다. 자세한 내용은 참조 [비동기 프로그램 (Visual Basic)의 제어 흐름](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)합니다.  
+ 첫 번째 문은 작업을 반환하여 파일 처리가 시작되도록 합니다. await가 있는 두 번째 문은 메서드를 즉시 종료하고 다른 작업을 반환하도록 합니다. 나중에 파일 처리가 완료되면 await 뒤에 오는 문으로 실행이 반환됩니다. 자세한 내용은 [비동기 프로그램 (Visual Basic)의 제어 흐름](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)합니다.  
   
 ## <a name="reading-text"></a>텍스트 읽기  
- 다음 예제에서는 파일에서 텍스트를 읽습니다. 텍스트가 버퍼링되고, 이 경우 <xref:System.Text.StringBuilder>에 배치됩니다. 이전 예제와 달리 await의 계산에서 값이 생성됩니다. <xref:System.IO.Stream.ReadAsync%2A> 메서드는 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>를 반환하므로 작업이 완료된 후 await 평가에서 `Int32` 값(`numRead`)이 생성됩니다. 자세한 내용은 참조 [비동기 반환 형식 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)합니다.  
+ 다음 예제에서는 파일에서 텍스트를 읽습니다. 텍스트가 버퍼링되고, 이 경우 <xref:System.Text.StringBuilder>에 배치됩니다. 이전 예제와 달리 await의 계산에서 값이 생성됩니다. <xref:System.IO.Stream.ReadAsync%2A> 메서드는 <xref:System.Threading.Tasks.Task>\<<xref:System.Int32>>를 반환하므로 작업이 완료된 후 await 평가에서 `Int32` 값(`numRead`)이 생성됩니다. 자세한 내용은 [비동기 반환 형식 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)합니다.  
   
 ```vb  
 Public Async Sub ProcessRead()  
@@ -158,9 +158,10 @@ Public Async Sub ProcessWriteMult()
 End Sub  
 ```  
   
- <xref:System.IO.Stream.WriteAsync%2A> 및 <xref:System.IO.Stream.ReadAsync%2A> 메서드를 사용하는 경우 중간에 작업을 취소하는 데 사용할 수 있는 <xref:System.Threading.CancellationToken>을 지정할 수 있습니다. 자세한 내용은 참조 [미세 조정 Your 비동기 응용 프로그램 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) 및 [관리 되는 스레드의 취소](../../../../standard/threading/cancellation-in-managed-threads.md)합니다.  
+ <xref:System.IO.Stream.WriteAsync%2A> 및 <xref:System.IO.Stream.ReadAsync%2A> 메서드를 사용하는 경우 중간에 작업을 취소하는 데 사용할 수 있는 <xref:System.Threading.CancellationToken>을 지정할 수 있습니다. 자세한 내용은 [미세 조정 Your 비동기 응용 프로그램 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md) 하 고 [관리 되는 스레드의 취소](../../../../standard/threading/cancellation-in-managed-threads.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)  
- [비동기 반환 형식(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)  
- [비동기 프로그램의 제어 흐름(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+## <a name="see-also"></a>참고자료
+
+- [Async 및 Await를 사용한 비동기 프로그래밍(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
+- [비동기 반환 형식(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [비동기 프로그램의 제어 흐름(Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)

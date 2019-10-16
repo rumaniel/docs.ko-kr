@@ -1,24 +1,19 @@
 ---
-title: 샘플 및 자습서
+title: .NET 샘플 및 자습서
 description: .NET Core, ASP.NET Core 및 .NET에 대해 배우는 데 도움이 되는 C# 언어용 샘플 및 자습서에 대한 정보입니다.
-keywords: .NET, .NET Core, ASP.NET, C#, 샘플, 자습서
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: f69aa704b05bffeaf932a093b991810f8678251c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
+ms.openlocfilehash: e4906feb7cda026848c990c7dd6f1dc8146dc7aa
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30957648"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70855779"
 ---
-# <a name="samples-and-tutorials"></a>샘플 및 자습서
+# <a name="net-samples-and-tutorials"></a>.NET 샘플 및 자습서
 
-.NET 설명서에는 .NET에 대해 설명하는 샘플 및 자습서 집합이 포함되어 있습니다. 이 항목에서는 .NET Core, ASP.NET Core 및 C# 샘플 및 자습서를 찾고, 보고, 다운로드하는 방법을 설명합니다. F# 프로그래밍 언어를 학습하기 위한 리소스는 [F# Foundation 사이트](http://fsharp.org/learn.html)에서 찾을 수 있습니다. 온라인 코드 편집기를 사용하여 C#을 살펴보는 데 관심이 있는 경우 [이 대화형 자습서](https://www.microsoft.com/net/learn/in-browser-tutorial/1)로 시작하고 [C# 대화형 빠른 시작](../csharp/quick-starts/index.md)을 계속 진행하세요. 샘플 코드를 보고 다운로드 하는 방법에 대한 지침은 [샘플 보기 및 다운로드](#viewing-and-downloading-samples) 섹션을 참조하세요.
+.NET 설명서에는 .NET에 대해 설명하는 샘플 및 자습서 집합이 포함되어 있습니다. 이 항목에서는 .NET Core, ASP.NET Core 및 C# 샘플 및 자습서를 찾고, 보고, 다운로드하는 방법을 설명합니다. F# 프로그래밍 언어를 학습하기 위한 리소스는 [F# Foundation 사이트](https://fsharp.org/learn.html)에서 찾을 수 있습니다. 온라인 코드 편집기를 사용하여 C#을 살펴보는 데 관심이 있는 경우 [이 대화형 자습서](https://dotnet.microsoft.com/learn/dotnet/in-browser-tutorial/1)로 시작하고 [C# 대화형 자습서](../csharp/tutorials/intro-to-csharp/index.md)를 계속 진행하세요. 샘플 코드를 보고 다운로드 하는 방법에 대한 지침은 [샘플 보기 및 다운로드](#viewing-and-downloading-samples) 섹션을 참조하세요.
 
 ## <a name="net-core"></a>.NET Core
 
@@ -66,9 +61,17 @@ ms.locfileid: "30957648"
 
 이러한 일련의 샘플에서는 LINQ(Language-Integrated Query)의 여러 가지 기능을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/core/linq/csharp)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
+**관리형 COM 서버 샘플**
+
+[COM 서버](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo) 샘플은 관리형 COM 서버를 만들고 전역적으로 등록하거나 RegFree Com을 통해 소비하는 방법을 보여줍니다.
+
+**Microsoft Office PIA 샘플**
+
+[ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) 샘플은 .NET Core에서 [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies)의 사용을 보여줍니다.
+
 ### <a name="tutorials"></a>자습서
 
-**[콘솔 응용 프로그램](../csharp/tutorials/console-teleprompter.md)**
+**[콘솔 애플리케이션](../csharp/tutorials/console-teleprompter.md)**
 
 이 자습서에서는 콘솔 I/O, 콘솔 앱의 구조 및 태스크 기반 비동기 프로그래밍 모델의 기본 사항을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
@@ -80,10 +83,6 @@ ms.locfileid: "30957648"
 
 이 자습서에서는 LINQ의 다양한 기능과 LINQ를 지원하는 언어 요소를 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
-**[Docker에서 호스트되는 마이크로 서비스](../csharp/tutorials/microservices.md)**
-
-이 자습서에서는 ASP.NET Core 마이크로 서비스를 빌드하고 Docker에서 호스트하는 과정을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
-
 **[Visual Studio for Mac을 사용하여 macOS에서 .NET Core 시작](../core/tutorials/using-on-mac-vs.md)**
 
 이 자습서에서는 Visual Studio for Mac을 사용하여 간단한 .NET Core 콘솔 앱을 빌드하는 방법을 보여 줍니다.
@@ -92,13 +91,17 @@ ms.locfileid: "30957648"
 
 이 자습서에서는 재사용 가능한 라이브러리 및 단위 테스트를 포함하는 완전한 .NET Core 솔루션을 빌드하는 방법을 보여 줍니다.
 
+**[플러그 인을 지원하는 .NET Core 애플리케이션 만들기](../core/tutorials/creating-app-with-plugin-support.md)**
+
+이 자습서에서는 플러그 인 아키텍처를 지원하는.NET Core에서 간단한 애플리케이션을 빌드하는 방법을 보여줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
+
 ## <a name="deploying-to-containers"></a>컨테이너에 배포
 
-**[Windows Docker 컨테이너에서 ASP.NET MVC 응용 프로그램 실행](../framework/docker/aspnetmvc.md)**
+**[Windows Docker 컨테이너에서 ASP.NET MVC 애플리케이션 실행](../framework/docker/aspnetmvc.md)**
 
 이 자습서에서는 Windows Docker 컨테이너에 기존 ASP.NET MVC 응용 프로그램을 배포하는 방법을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/framework/docker/MVCRandomAnswerGenerator)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
-**[Windows 컨테이너에서 .NET Framework 콘솔 응용 프로그램 실행](../framework/docker/console.md)**
+**[Windows 컨테이너에서 .NET Framework 콘솔 애플리케이션 실행](../framework/docker/console.md)**
 
 이 자습서에서는 Windows 컨테이너에 기존 콘솔 앱을 배포하는 방법을 보여 줍니다. [완료된 샘플](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)은 GitHub의 dotnet/samples 리포지토리에서 사용 가능합니다.
 
@@ -112,7 +115,7 @@ ms.locfileid: "30957648"
    * 리포지토리를 로컬로 복제합니다. 로컬 시스템에 직접 문서 리포지토리를 복제하는 경우 공식 리포지토리에 직접 커밋할 수 없으므로 나중에 설명서에 기여할 수가 없습니다. 나중에 설명서에 기여할 수 있는 기회를 잃지 않으려면 앞서 설명한 분기 및 복제 절차를 사용하세요.
 1. 리포지토리의 폴더 내에서 샘플의 위치로 이동합니다. 샘플에 대한 링크를 따라가면 브라우저의 주소 표시줄에 샘플 위치에 대한 상대 경로가 나타납니다.
 1. 다음과 같은 몇 가지 옵션을 사용하여 샘플을 실행할 수 있습니다.
-   * [dotnet CLI 도구](../core/tools/index.md) 사용: 콘솔 창에서 샘플의 폴더로 이동한 후 dotnet CLI 명령을 사용합니다.
-   * [Visual Studio](https://www.visualstudio.com/) 또는 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/) 사용: 메뉴 모음에서 **파일 > 열기 > 프로젝트/솔루션**을 선택하여 샘플을 열고 샘플 프로젝트 폴더로 이동하여 프로젝트 파일(*.csproj* 또는 *.fsproj*)을 선택합니다.
-   * [Visual Studio 코드](https://code.visualstudio.com/) 사용: 메뉴 모음에서 **파일 > 폴더 열기**를 선택하고 샘플의 프로젝트 폴더를 선택하여 샘플을 엽니다.
+   * [dotnet CLI 도구](../core/tools/index.md) 사용: 콘솔 창에서 샘플의 폴더로 이동하고 dotnet CLI 명령을 사용합니다.
+   * [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 또는 [Mac용 Visual Studio](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 사용: 메뉴 모음에서 **파일 > 열기 > 프로젝트/솔루션**을 선택하여 샘플을 열고 샘플 프로젝트 폴더로 이동하여 프로젝트 파일( *.csproj* 또는 *.fsproj*)을 선택합니다.
+   * [Visual Studio Code](https://code.visualstudio.com/) 사용: 메뉴 모음에서 **파일 > 폴더 열기**를 선택하고 샘플의 프로젝트 폴더를 선택하여 샘플을 엽니다.
    * .NET Core 프로젝트를 지원하는 다른 IDE를 사용합니다.

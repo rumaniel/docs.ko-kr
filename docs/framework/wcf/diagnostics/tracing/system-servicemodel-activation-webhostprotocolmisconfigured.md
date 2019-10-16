@@ -2,12 +2,12 @@
 title: System.ServiceModel.Activation.WebHostProtocolMisconfigured
 ms.date: 03/30/2017
 ms.assetid: cb5bdc6b-4281-452d-bc42-1181f2966e2a
-ms.openlocfilehash: 557fc9ef3e8508ea3acec783547c3e10ecab4fe6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 71dc60c932871608b9ac832331de82db818c525e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33476614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752807"
 ---
 # <a name="systemservicemodelactivationwebhostprotocolmisconfigured"></a>System.ServiceModel.Activation.WebHostProtocolMisconfigured
 WAS(Windows Process Activation Service)에서 프로토콜이 잘못 구성되었습니다.  
@@ -18,7 +18,8 @@ WAS(Windows Process Activation Service)에서 프로토콜이 잘못 구성되�
 ## <a name="troubleshooting"></a>문제 해결  
  web.config에서 전송 구성 매개 변수를 확인하여 수정하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)  
- [추적을 사용하여 응용 프로그램 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a>참고자료
+
+- [추적](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [추적을 사용하여 애플리케이션 문제 해결](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [관리 및 진단](../../../../../docs/framework/wcf/diagnostics/index.md)

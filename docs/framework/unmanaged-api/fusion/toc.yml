@@ -1,0 +1,145 @@
+- name: Fusion
+  href: index.md
+  items:
+    - name: Fusion 인터페이스
+      href: fusion-interfaces.md
+      items:
+        - name: IAppIdAuthority 인터페이스
+          href: iappidauthority-interface.md
+        - name: IAssemblyCache 인터페이스
+          href: iassemblycache-interface.md
+          items:
+            - name: CreateAssemblyCacheItem 메서드
+              href: iassemblycache-createassemblycacheitem-method.md
+            - name: CreateAssemblyScavenger 메서드
+              href: iassemblycache-createassemblyscavenger-method.md
+            - name: InstallAssembly 메서드
+              href: iassemblycache-installassembly-method.md
+            - name: QueryAssemblyInfo 메서드
+              href: iassemblycache-queryassemblyinfo-method.md
+            - name: UninstallAssembly 메서드
+              href: iassemblycache-uninstallassembly-method.md
+        - name: IAssemblyCacheItem 인터페이스
+          href: iassemblycacheitem-interface.md
+          items:
+            - name: AbortItem 메서드
+              href: iassemblycacheitem-abortitem-method.md
+            - name: Commit 메서드
+              href: iassemblycacheitem-commit-method.md
+            - name: CreateStream 메서드
+              href: iassemblycacheitem-createstream-method.md
+        - name: IAssemblyEnum 인터페이스
+          href: iassemblyenum-interface.md
+          items:
+            - name: Clone 메서드
+              href: iassemblyenum-clone-method.md
+            - name: GetNextAssembly 메서드
+              href: iassemblyenum-getnextassembly-method.md
+            - name: Reset 메서드
+              href: iassemblyenum-reset-method.md
+        - name: IAssemblyName 인터페이스
+          href: iassemblyname-interface.md
+          items:
+            - name: Clone 메서드
+              href: iassemblyname-clone-method.md
+            - name: Finalize 메서드
+              href: iassemblyname-finalize-method.md
+            - name: GetDisplayName 메서드
+              href: iassemblyname-getdisplayname-method.md
+            - name: GetName 메서드
+              href: iassemblyname-getname-method.md
+            - name: GetProperty 메서드
+              href: iassemblyname-getproperty-method.md
+            - name: GetVersion 메서드
+              href: iassemblyname-getversion-method.md
+            - name: IsEqual 메서드
+              href: iassemblyname-isequal-method.md
+            - name: SetProperty 메서드
+              href: iassemblyname-setproperty-method.md
+        - name: IDefinitionAppId 인터페이스
+          href: idefinitionappid-interface.md
+        - name: IDefinitionIdentity 인터페이스
+          href: idefinitionidentity-interface.md
+        - name: IEnumDefinitionIdentity 인터페이스
+          href: ienumdefinitionidentity-interface.md
+        - name: IEnumIDENTITY_ATTRIBUTE 인터페이스
+          href: ienumidentity-attribute-interface.md
+        - name: IEnumReferenceIdentity 인터페이스
+          href: ienumreferenceidentity-interface.md
+        - name: IIdentityAuthority 인터페이스
+          href: iidentityauthority-interface.md
+        - name: IInstallReferenceEnum 인터페이스
+          href: iinstallreferenceenum-interface.md
+          items:
+            - name: GetNextInstallReferenceItem 메서드
+              href: iinstallreferenceenum-getnextinstallreferenceitem-method.md
+        - name: IInstallReferenceItem 인터페이스
+          href: iinstallreferenceitem-interface.md
+          items:
+            - name: GetReference 메서드
+              href: iinstallreferenceitem-getreference-method.md
+        - name: IReferenceAppId 인터페이스
+          href: ireferenceappid-interface.md
+        - name: IReferenceIdentity 인터페이스
+          href: ireferenceidentity-interface.md
+    - name: Fusion 전역 정적 함수
+      href: fusion-global-static-functions.md
+      items:
+        - name: ClearDownloadCache 함수
+          href: cleardownloadcache-function.md
+        - name: CompareAssemblyIdentity 함수
+          href: compareassemblyidentity-function.md
+        - name: CreateApplicationContext 함수
+          href: createapplicationcontext-function.md
+        - name: CreateAssemblyCache 함수
+          href: createassemblycache-function.md
+        - name: CreateAssemblyEnum 함수
+          href: createassemblyenum-function.md
+        - name: CreateAssemblyNameObject 함수
+          href: createassemblynameobject-function.md
+        - name: CreateHistoryReader 함수
+          href: createhistoryreader-function.md
+        - name: CreateInstallReferenceEnum 함수
+          href: createinstallreferenceenum-function.md
+        - name: GetAppIdAuthority 함수
+          href: getappidauthority-function.md
+        - name: GetAssemblyIdentityFromFile 함수
+          href: getassemblyidentityfromfile-function.md
+        - name: GetCachePath 함수
+          href: getcachepath-function.md
+        - name: GetHistoryFileDirectory 함수
+          href: gethistoryfiledirectory-function.md
+        - name: GetIdentityAuthority 함수
+          href: getidentityauthority-function.md
+        - name: IsFrameworkAssembly 함수
+          href: isframeworkassembly-function.md
+        - name: NukeDownloadedCache 함수
+          href: nukedownloadedcache-function.md
+        - name: PreBindAssemblyEx 함수
+          href: prebindassemblyex-function.md
+    - name: Fusion 열거형
+      href: fusion-enumerations.md
+      items:
+        - name: ASM_CACHE_FLAGS 열거형
+          href: asm-cache-flags-enumeration.md
+        - name: ASM_CMP_FLAGS 열거형
+          href: asm-cmp-flags-enumeration.md
+        - name: ASM_DISPLAY_FLAGS 열거형
+          href: asm-display-flags-enumeration.md
+        - name: ASM_NAME 열거형
+          href: asm-name-enumeration.md
+        - name: AssemblyComparisonResult 열거형
+          href: assemblycomparisonresult-enumeration.md
+        - name: CREATE_ASM_NAME_OBJ_FLAGS 열거형
+          href: create-asm-name-obj-flags-enumeration.md
+    - name: Fusion 구조체
+      href: fusion-structures.md
+      items:
+        - name: ASSEMBLY_INFO 구조체
+          href: assembly-info-structure.md
+        - name: FUSION_INSTALL_REFERENCE 구조체
+          href: fusion-install-reference-structure.md
+        - name: IDENTITY_ATTRIBUTE 구조체
+          href: identity-attribute-structure.md
+        - name: IDENTITY_ATTRIBUTE_BLOB 구조체
+          href: identity-attribute-blob-structure.md

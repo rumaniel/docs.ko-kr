@@ -17,18 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 343cedcf26112f0f2bcc7943ea5ee9f302329a15
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 31fad9e82d0b93360f92676f6357c136ae60634a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771123"
 ---
 # <a name="icorprofilerinfo2getfunctionfromtokenandtypeargs-method"></a>ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs 메서드
-가져옵니다는 `FunctionID` 클래스가 포함 된 지정 된 메타 데이터 토큰을 사용 하 여 함수의 및 `ClassID` 값 형식 인수입니다.  
+가져옵니다 합니다 `FunctionID` 클래스를 포함 하는 지정 된 메타 데이터 토큰을 사용 하 여 함수 및 `ClassID` 값의 형식 인수입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetFunctionFromTokenAndTypeArgs(  
     [in] ModuleID moduleID,  
     [in] mdMethodDef funcDef,  
@@ -38,7 +39,7 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
     [out] FunctionID* pFunctionID);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `moduleID`  
  [in] 함수가 상주 하는 모듈의 ID입니다.  
   
@@ -49,30 +50,31 @@ HRESULT GetFunctionFromTokenAndTypeArgs(
  [in] 함수의 포함 하는 클래스의 ID입니다.  
   
  `cTypeArgs`  
- [in] 지정된 된 함수에 대 한 형식 매개 변수 수를 지정 합니다. 이 값에는 제네릭이 아닌 함수에 대 한 0 이어야 합니다.  
+ [in] 지정된 된 함수에 대 한 형식 매개 변수의 수입니다. 이 값에는 제네릭이 아닌 함수에 대 한 0 이어야 합니다.  
   
  `typeArgs`  
- [in] 배열 `ClassID` 된 함수의 인수 값입니다. 값 `typeArgs` 경우 NULL이 될 수 `cTypeArgs` 0으로 설정 됩니다.  
+ [in] 배열을 `ClassID` 각각는 함수의 인수 값입니다. 변수의 `typeArgs` NULL 일 수 `cTypeArgs` 0으로 설정 됩니다.  
   
  `pFunctionID`  
- [out] 에 대 한 포인터는 `FunctionID` 지정 된 함수입니다.  
+ [out] 에 대 한 포인터를 `FunctionID` 지정 된 함수입니다.  
   
 ## <a name="remarks"></a>설명  
- 호출의 `GetFunctionFromTokenAndTypeArgs` 메서드는 `mdMethodRef` 대신 메타 데이터는 `mdMethodDef` 메타 데이터 토큰에서 예기치 않은 결과 가질 수 있습니다. 호출자에 게 해결 해야는 `mdMethodRef` 에 `mdMethodDef` 전달할 경우.  
+ 호출 된 `GetFunctionFromTokenAndTypeArgs` 메서드는 `mdMethodRef` 대신 메타 데이터는 `mdMethodDef` 메타 데이터 토큰에 예기치 않은 결과가 있을 수 있습니다. 호출자가 해결 해야 합니다 `mdMethodRef` 에 `mdMethodDef` 전달 되는 경우.  
   
- 함수가 아직 로드 되지 않은 경우 호출 `GetFunctionFromTokenAndTypeArgs` 여러 컨텍스트에서 위험한 작업 발생을 로드 하면 합니다. 예를 들어, 런타임에서 순환 로드를 시도할 때 모듈이 나 형식을 로드 하는 동안이 메서드를 호출 무한 루프가 발생할 수입니다.  
+ 함수가 이미 로드 되어 있지 않으면 호출 `GetFunctionFromTokenAndTypeArgs` 발생 하는 여러 상황에서 위험한 작업 인 로드 하면 됩니다. 예를 들어 모듈이 나 형식을 로드 하는 동안이 메서드를 호출 하면 런타임에 순환 로드를 시도할 때 무한 루프 발생할 수 있습니다.  
   
- 일반적으로 사용 하 여 `GetFunctionFromTokenAndTypeArgs` 않는 것이 좋습니다. 저장 해야 프로파일러 특정 기능에 대 한 이벤트에 관심이 `ModuleID` 및 `mdMethodDef` 해당 기능에 [icorprofilerinfo2:: Getfunctioninfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 확인 하려면 여부는 주어진 `FunctionID` 은 원하는 함수입니다.  
+ 일반적으로 사용 `GetFunctionFromTokenAndTypeArgs` 것이 좋습니다. 저장 해야 프로파일러 특정 함수에 대 한 이벤트에 관심이 있는 경우는 `ModuleID` 및 `mdMethodDef` 사용 하 여 해당 함수 [ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md) 검사할 여부를 지정 된 `FunctionID` 는 원하는 함수입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [ICorProfilerInfo2 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)

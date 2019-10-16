@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ded6b4e0ac8f3e70fd0145ab6e2410c3b38e02
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: cf9f6cc1e568463f2ca9afa38c10f50d0c247013
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448676"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755345"
 ---
 # <a name="imetadataimport2getgenericparamprops-method"></a>IMetaDataImport2::GetGenericParamProps 메서드
-지정한 토큰이 나타내는 제네릭 매개 변수와 연관 된 메타 데이터를 가져옵니다.  
+지정된 된 토큰을 나타내는 제네릭 매개 변수를 사용 하 여 연결 된 메타 데이터를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetGenericParamProps (  
    [in]  mdGenericParam  gp,  
    [out] ULONG           *pulParamSeq,  
@@ -42,21 +42,21 @@ HRESULT GetGenericParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `gp`  
- [in] 반환할 메타 데이터에 대 한 제네릭 매개 변수를 나타내는 토큰입니다.  
+ [in] 메타 데이터를 반환 하는 제네릭 매개 변수를 나타내는 토큰입니다.  
   
  `pulParamSeq`  
  [out] 서 수 위치는 `Type` 부모 생성자 또는 메서드 매개 변수입니다.  
   
  `pdwParamFlags`  
- [out] 값은 [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) 설명 하는 열거형의 `Type` 제네릭 매개 변수입니다.  
+ [out] 값을 [CorGenericParamAttr](../../../../docs/framework/unmanaged-api/metadata/corgenericparamattr-enumeration.md) 설명 하는 열거형은 `Type` 제네릭 매개 변수입니다.  
   
  `ptOwner`  
  [out] 형식 정의 또는 MethodDef 토큰 매개 변수의 소유자를 나타내는입니다.  
   
  `reserved`  
- [out] 다음 버전의 확장에 대 한 예약 되어 있습니다.  
+ [out] 향후 확장성을 위해 예약 되어 있습니다.  
   
  `wzName`  
  [out] 제네릭 매개 변수의 이름입니다.  
@@ -65,17 +65,18 @@ HRESULT GetGenericParamProps (
  [in] 크기는 `wzName` 버퍼입니다.  
   
  `pchName`  
- [out] 와이드 문자에서는 이름의 반환 된 크기입니다.  
+ [out] 반환 된 크기의 와이드 문자 이름입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)  
- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

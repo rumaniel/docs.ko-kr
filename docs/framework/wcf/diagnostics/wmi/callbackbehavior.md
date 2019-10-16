@@ -2,12 +2,12 @@
 title: CallbackBehavior
 ms.date: 03/30/2017
 ms.assetid: 42acd302-2b62-4849-a2d1-a03084343ecd
-ms.openlocfilehash: 38a38a71db2927d187ccdd93e5e364b0d4955373
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.openlocfilehash: 9d8f4335c304d164daafeb0ad4de5b4e3bba4590
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49452614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963958"
 ---
 # <a name="callbackbehavior"></a>CallbackBehavior
 CallbackBehavior  
@@ -79,7 +79,7 @@ class CallbackBehavior : Behavior
   
  액세스 형식: 읽기 전용  
   
- 시스템 또는 응용 프로그램에서 SOAP MustUnderstand 헤더 처리를 적용할지 여부를 지정합니다.  
+ 시스템 또는 애플리케이션에서 SOAP MustUnderstand 헤더 처리를 적용할지 여부를 지정합니다.  
   
 ## <a name="requirements"></a>요구 사항  
   
@@ -87,5 +87,6 @@ class CallbackBehavior : Behavior
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.CallbackBehaviorAttribute>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.CallbackBehaviorAttribute>

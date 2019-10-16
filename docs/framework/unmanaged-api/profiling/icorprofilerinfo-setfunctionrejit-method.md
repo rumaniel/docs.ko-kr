@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4419e49eecb3cae037115472b4a9893d2eb5b89c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 30be03b6d57a7cfeff56234f02af586b704bb063
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454507"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772071"
 ---
 # <a name="icorprofilerinfosetfunctionrejit-method"></a>ICorProfilerInfo::SetFunctionReJIT 메서드
 구현되지 않았습니다. 사용하지 마십시오.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetFunctionReJIT(  
     [in] FunctionID functionId);  
 ```  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -43,5 +43,6 @@ HRESULT SetFunctionReJIT(
   
  **.NET framework 버전:** 1.0  
   
-## <a name="see-also"></a>참고 항목  
- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

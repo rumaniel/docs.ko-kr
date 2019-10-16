@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 53c7b5f7-d47a-402a-b194-7244a696a88b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6373def6859023377bf899f02d710c2ac6d83c44
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c4c505c679c46494f7dc2534c2bbe9f50243a7dd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33389602"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70790072"
 ---
 # <a name="how-to-determine-which-net-framework-security-updates-and-hotfixes-are-installed"></a>방법: 설치된 .NET Framework 보안 업데이트 및 핫픽스 확인
 
@@ -37,7 +37,7 @@ ms.locfileid: "33389602"
 
      설치된 업데이트가 적용되는 .NET Framework 버전을 식별하는 하위 키 아래에 나열됩니다. 각 업데이트는 KB(기술 자료) 번호로 식별됩니다.
 
-레지스트리 편집기에서 .NET Framework 버전과 각 버전에 대해 설치된 업데이트는 서로 다른 하위 키에 저장되어 있습니다. 설치된 버전 번호 검색에 대한 자세한 내용은 [방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)을 참조하세요.
+레지스트리 편집기에서 .NET Framework 버전과 각 버전에 대해 설치된 업데이트는 서로 다른 하위 키에 저장되어 있습니다. 설치된 버전 번호를 검색하는 방법에 대한 내용은 [방법: 설치된 .NET Framework 버전 확인](how-to-determine-which-versions-are-installed.md)을 참조하세요.
 
 ## <a name="to-find-installed-updates-by-querying-the-registry-in-code"></a>코드에서 레지스트리를 쿼리하여 설치된 업데이트를 찾으려면
 
@@ -108,6 +108,6 @@ KB2600217
 
 ## <a name="see-also"></a>참고 항목
 
-[방법: 설치된 .NET Framework 버전 확인](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)  
-[개발자용 .NET Framework 설치](../../../docs/framework/install/guide-for-developers.md)  
-[버전 및 종속성](../../../docs/framework/migration-guide/versions-and-dependencies.md)
+- [방법: 설치된 .NET Framework 버전 확인](how-to-determine-which-versions-are-installed.md)
+- [개발자용 .NET Framework 설치](../install/guide-for-developers.md)
+- [버전 및 종속성](versions-and-dependencies.md)

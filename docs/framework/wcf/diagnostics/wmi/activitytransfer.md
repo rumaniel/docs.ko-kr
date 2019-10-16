@@ -2,12 +2,12 @@
 title: ActivityTransfer
 ms.date: 03/30/2017
 ms.assetid: fc40ef17-2a92-4ce2-853c-6ba8e5d571f3
-ms.openlocfilehash: 936e870c1ec991e2e33acf8a08ccc93975989679
-ms.sourcegitcommit: 9bd8f213b50f0e1a73e03bd1e840c917fbd6d20a
+ms.openlocfilehash: 6237d65d6964a4ebca34af895158c83239641593
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50034431"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662818"
 ---
 # <a name="activitytransfer"></a>ActivityTransfer
 활동 전송 이벤트  
@@ -30,17 +30,17 @@ class ActivityTransfer : WSAT_TraceEvent
   
 ### <a name="activityid"></a>ActivityID  
   
--   데이터 형식: object  
+- 데이터 형식: object  
     액세스 형식: 읽기 전용  
   
--   활동 ID  
+- 작업 ID  
   
 ### <a name="relatedactivityid"></a>RelatedActivityID  
   
--   데이터 형식: object  
+- 데이터 형식: object  
     액세스 형식: 읽기 전용  
   
--   관련 활동 ID  
+- 관련 활동 ID  
   
 ## <a name="requirements"></a>요구 사항  
   

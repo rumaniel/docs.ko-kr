@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74df7ee71fc541c35bc393f637ad1d7b9f7aa2a0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d1db08dfcd2adf1247dd717d6c826bce4726b8a1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425528"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777044"
 ---
 # <a name="isymunmanagedreadergetvariables-method"></a>ISymUnmanagedReader::GetVariables 메서드
-지정 된 부모 및 이름을 로컬이 아닌 변수를 반환 합니다.  
+해당 부모와 이름을 지정 하는 로컬이 아닌 변수를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetVariables (  
     [in]  mdToken  parent,  
     [in]  ULONG32  cVars,  
@@ -38,7 +38,7 @@ HRESULT GetVariables (
         length_is (*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `parent`  
  [in] 부모 변수입니다.  
   
@@ -46,16 +46,17 @@ HRESULT GetVariables (
  [in] `pVars` 배열의 크기입니다.  
   
  `pcVars`  
- [out] 반환 된 변수의 수를 받는 변수에 대 한 포인터 `pVars`합니다.  
+ [out] 반환 된 변수의 수를 받는 변수의에 대 한 포인터 `pVars`합니다.  
   
  `pVars`  
- [out] 포인터 변수를 받는 변수입니다.  
+ [out] 변수를 받는 변수의 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.  
+ 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

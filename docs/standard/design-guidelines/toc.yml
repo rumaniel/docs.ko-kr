@@ -1,0 +1,104 @@
+- name: 프레임워크 디자인 지침
+  href: index.md
+  items:
+    - name: 명명 지침
+      href: naming-guidelines.md
+      items:
+        - name: 대/소문자 표기법
+          href: capitalization-conventions.md
+        - name: 일반 명명 규칙
+          href: general-naming-conventions.md
+        - name: 어셈블리 및 DLL의 이름
+          href: names-of-assemblies-and-dlls.md
+        - name: 네임스페이스의 이름
+          href: names-of-namespaces.md
+        - name: '클래스, 구조체 및 인터페이스의 이름'
+          href: names-of-classes-structs-and-interfaces.md
+        - name: 형식 멤버의 이름
+          href: names-of-type-members.md
+        - name: 매개 변수 이름 지정
+          href: naming-parameters.md
+        - name: 리소스 이름 지정
+          href: naming-resources.md
+    - name: 형식 디자인 지침
+      href: type.md
+      items:
+        - name: 클래스와 구조체 간의 선택
+          href: choosing-between-class-and-struct.md
+        - name: 추상 클래스 디자인
+          href: abstract-class.md
+        - name: 정적 클래스 디자인
+          href: static-class.md
+        - name: 인터페이스 디자인
+          href: interface.md
+        - name: 구조체 디자인
+          href: struct.md
+        - name: 열거형 디자인
+          href: enum.md
+        - name: 중첩 형식
+          href: nested-types.md
+    - name: 멤버 디자인 지침
+      href: member.md
+      items:
+        - name: 멤버 오버로드
+          href: member-overloading.md
+        - name: 속성 디자인
+          href: property.md
+        - name: 생성자 디자인
+          href: constructor.md
+        - name: 이벤트 디자인
+          href: event.md
+        - name: 필드 디자인
+          href: field.md
+        - name: 확장명 메서드
+          href: extension-methods.md
+        - name: 연산자 오버로드
+          href: operator-overloads.md
+        - name: 매개 변수 디자인
+          href: parameter-design.md
+    - name: 확장성을 위한 디자인
+      href: designing-for-extensibility.md
+      items:
+        - name: 봉인되지 않은 클래스
+          href: unsealed-classes.md
+        - name: 보호된 멤버
+          href: protected-members.md
+        - name: 이벤트 및 콜백
+          href: events-and-callbacks.md
+        - name: 가상 멤버
+          href: virtual-members.md
+        - name: 추상화(추상 형식 및 인터페이스)
+          href: abstractions-abstract-types-and-interfaces.md
+        - name: 추상화 구현을 위한 기본 클래스
+          href: base-classes-for-implementing-abstractions.md
+        - name: 봉인
+          href: sealing.md
+    - name: 예외 디자인 지침
+      href: exceptions.md
+      items:
+        - name: 예외 Throw
+          href: exception-throwing.md
+        - name: 표준 예외 형식 사용
+          href: using-standard-exception-types.md
+        - name: 예외 및 성능
+          href: exceptions-and-performance.md
+    - name: 사용 지침
+      href: usage-guidelines.md
+      items:
+        - name: 배열
+          href: arrays.md
+        - name: 특성
+          href: attributes.md
+        - name: 컬렉션
+          href: guidelines-for-collections.md
+        - name: Serialization
+          href: serialization.md
+        - name: System.Xml 사용법
+          href: system-xml-usage.md
+        - name: 같음 연산자
+          href: equality-operators.md
+    - name: 일반 디자인 패턴
+      href: common-design-patterns.md
+      items:
+        - name: 종속성 속성
+          href: dependency-properties.md

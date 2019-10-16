@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76767e7c-0607-4e1d-9ca2-a94f311f45eb
-ms.openlocfilehash: c0a6dde667c4f858d8177dc80a726619f463f3a5
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b802abae9fc2c1731a623209862f61ed5ee51f9c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33354055"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70247881"
 ---
 # <a name="concatenate-two-sequences"></a>두 시퀀스 연결
 <xref:System.Linq.Queryable.Concat%2A> 연산자를 사용하여 두 시퀀스를 연결합니다.  
@@ -31,6 +31,7 @@ ms.locfileid: "33354055"
  [!code-csharp[DLinqQueryExamples#40](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#40)]
  [!code-vb[DLinqQueryExamples#40](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#40)]  
   
-## <a name="see-also"></a>참고 항목  
- [쿼리 예제](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)  
- [표준 쿼리 연산자 변환](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)
+## <a name="see-also"></a>참고자료
+
+- [쿼리 예제](query-examples.md)
+- [표준 쿼리 연산자 변환](standard-query-operator-translation.md)

@@ -3,14 +3,14 @@ title: .NET API 분석기
 description: .NET API 분석기가 사용되지 않는 API 및 플랫폼 호환성 문제를 발견하는 데 어떻게 도움이 되는지 알아봅니다.
 author: oliag
 ms.author: mairaw
-ms.date: 05/31/2018
+ms.date: 04/26/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: 4394bc77b499db1960d61bad5e828f77f1144c65
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.openlocfilehash: 584f9f952148ebf72c5d5aaed64a2a078be00ce5
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34696886"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929359"
 ---
 # <a name="net-api-analyzer"></a>.NET API 분석기
 
@@ -23,13 +23,14 @@ API 분석기는 NuGet 패키지 [Microsoft.DotNet.Analyzers.Compatibility](http
 
 ## <a name="prerequisites"></a>전제 조건
 
-* Visual Studio 2017 또는 Mac용 Visual Studio(모든 버전).
+- Visual Studio 2017 이상 버전 또는 Mac용 Visual Studio(모든 버전).
 
 ## <a name="discovering-deprecated-apis"></a>사용되지 않는 API 검색
 
 ### <a name="what-are-deprecated-apis"></a>사용되지 않는 API란 무엇인가요?
 
 .NET 제품군은 고객의 요구 사항을 더 잘 해결하기 위해 지속적으로 업그레이드되는 대규모 제품 집합입니다. 일부 API를 더 이상 사용하지 않고 새 API를 교체하는 것은 자연스러운 일입니다. 더 나은 대체가 있는 경우 API는 사용되지 않는 것으로 간주합니다. API가 사용되지 않으며 사용되면 안 된다는 것을 알리는 한 가지 방법은 <xref:System.ObsoleteAttribute> 특성을 사용하여 표시하는 것입니다. 이 방법의 단점은 모든 사용되지 않는 API에 대한 진단 ID가 하나만 있다는 것입니다(C#의 경우 [CS0612](../../csharp/misc/cs0612.md)). 이는 다음을 의미합니다.
+
 - 각 사례에 대한 전용 문서를 포함할 수는 없습니다.
 - 특정 경고 범주를 표시하지 않을 수는 없습니다. 모든 경고를 표시하거나 아무것도 표시하지 않을 수는 없습니다.
 - 사용자에게 새로운 사용 중단을 알리려면 참조된 어셈블리 또는 대상 패키지를 업데이트해야 합니다.
@@ -44,22 +45,22 @@ API 분석기는 개별 경고 표시를 제어할 수 있는 DE(사용 중단 �
 
 다음 예제(`DE004`)와 같이 **오류 목록** 창에는 사용되지 않는 API별 고유 ID가 포함된 경고가 있습니다. 
 
-![“경고 ID 및 설명을 표시하는 오류 목록 창의 스크린샷”](media/api-analyzer/warnings.jpg)
+![“경고 ID 및 설명을 표시하는 오류 목록 창의 스크린샷”](media/api-analyzer/warnings-id-and-descriptions.jpg "경고를 포함하는 오류 목록 창입니다.")
 
 ID를 클릭하면 API가 사용되지 않는 이유에 대한 자세한 정보와 사용할 수 있는 대체 API에 대한 제안이 있는 웹 페이지로 이동합니다.
 
 강조 표시된 멤버를 마우스 오른쪽 단추로 클릭하고 **\<진단 ID>을(를) 표시하지 않음**을 선택하여 모든 경고를 표시하지 않을 수 있습니다. 경고를 표시하지 않는 두 가지 방법이 있습니다. 
 
-* [로컬로(소스)](#suppressing-warnings-locally)
-* [전역으로(비표시 오류(Suppression) 파일)](#suppressing-warnings-globally) - 권장됨
+- [로컬로(소스)](#suppressing-warnings-locally)
+- [전역으로(비표시 오류(Suppression) 파일)](#suppressing-warnings-globally) - 권장됨
 
 ### <a name="suppressing-warnings-locally"></a>로컬로 경고 표시 안 함
 
-로컬로 경고를 표시하지 않으려면 경고를 표시하지 않을 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** > **‘진단 ID’ 표시 안 함\<진단 ID>** > **소스**를 선택합니다. [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 경고 전처리기 지시문이 정의된 범위의 소스 코드에 추가됩니다. ![“#pragma warning disable로 묶인 코드의 스크린샷”](media/api-analyzer/suppress-in-source.jpg)
+로컬로 경고를 표시하지 않으려면 경고를 표시하지 않을 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** >  **‘진단 ID’ 표시 안 함\<진단 ID>**  > **소스**를 선택합니다.  [#pragma](../../csharp/language-reference/preprocessor-directives/preprocessor-pragma-warning.md) 경고 전처리기 지시문이 정의된 범위의 소스 코드에 추가됩니다. !["#pragma warning disable로 묶인 코드의 스크린샷"](media/api-analyzer/suppress-in-source.jpg)
 
 ### <a name="suppressing-warnings-globally"></a>전역으로 경고 표시 안 함
 
-전역으로 경고를 표시하지 않으려면 경고를 표시하지 않을 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** > **‘진단 ID’ 표시 안 함\<진단 ID>** > **비표시 오류(Suppression) 파일**을 선택합니다.
+전역으로 경고를 표시하지 않으려면 경고를 표시하지 않을 멤버를 마우스 오른쪽 단추로 클릭한 다음, **빠른 작업 및 리팩터링** >  **‘진단 ID’ 표시 안 함\<진단 ID>**  > **비표시 오류(Suppression) 파일**을 선택합니다. 
 
 ![“왼쪽에 있는 녹색 물결선과 전구가 있는 WebClient API의 스크린샷”](media/api-analyzer/suppress-in-sup-file.jpg)
 
@@ -95,10 +96,11 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 현재 분석기는 다음과 같은 경우를 처리합니다.
 
-* <xref:System.PlatformNotSupportedException>(PC001)을 throw하는 .NET Standard API 사용.
-* .NET Framework 4.6.1(PC002)에서 사용할 수 없는 .NET Standard API 사용.
-* UWP(PC003)에 존재하지 않는 네이티브 API 사용.
-* 사용되지 않음(DEXXXX)으로 표시된 API 사용.
+- <xref:System.PlatformNotSupportedException>(PC001)을 throw하는 .NET Standard API 사용.
+- .NET Framework 4.6.1(PC002)에서 사용할 수 없는 .NET Standard API 사용.
+- UWP(PC003)에 존재하지 않는 네이티브 API 사용.
+- Delegate.BeginInvoke 및 EndInvoke API(PC004) 사용.
+- 사용되지 않음(DEXXXX)으로 표시된 API 사용.
 
 ## <a name="ci-machine"></a>CI 컴퓨터
 
@@ -112,5 +114,5 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="see-also"></a>참고 항목
 
-* [API 분석기 소개](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) 블로그 게시물.
-* YouTube의 [API 분석기](https://youtu.be/eeBEahYXGd0) 데모 동영상.
+- [API 분석기 소개](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) 블로그 게시물.
+- YouTube의 [API 분석기](https://youtu.be/eeBEahYXGd0) 데모 동영상.

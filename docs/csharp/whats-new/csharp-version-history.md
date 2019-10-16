@@ -3,20 +3,32 @@ title: C#의 역사 - C# 가이드
 description: 이 언어의 초창기 버전은 어떤 모습이었으며 이후 어떻게 변했는가?
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 5e8ecdd971a043dc47c50b10c974d86f836818dc
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: bce61d7a1838753f6cc2397440208e0c02b8194a
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316261"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72002699"
 ---
-# <a name="the-history-of-c"></a>C#의 역사 #
+# <a name="the-history-of-c"></a>C\#의 역사
 
-이 언어의 초창기 구현은 어떤 모습이었는가? 이후에 몇 년간 어떻게 진화했는가?
+이 문서에서는 C# 언어의 각 주요 릴리스에 대한 기록을 제공합니다. C# 팀은 계속해서 새로운 기능을 혁신하고 추가하고 있습니다. 예정된 릴리스에서 고려되는 기능을 비롯한 자세한 언어 기능 상태는 GitHub의 [dotnet/roslyn 리포지토리에서](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md) 확인할 수 있습니다.
+
+> [!IMPORTANT]
+> C # 언어는 C# 사양이 일부 기능에 대해 *표준 라이브러리*로 정의하는 형식 및 메서드를 사용합니다. .NET 플랫폼은 다양한 패키지에서 이러한 유형과 메서드를 제공합니다. 한 가지 예는 예외 처리입니다. 모든 `throw` 문 또는 식은 throw된 개체가 <xref:System.Exception>에서 파생되는지 확인합니다. 마찬가지로 모든 `catch`는 발견되는 형식이 <xref:System.Exception>에서 파생되는지 확인합니다. 각 버전은 새 요구 사항을 추가할 수 있습니다. 이전 환경에서 최신 언어 기능을 사용하려면 특정 라이브러리를 설치해야 합니다. 이러한 종속성은 각 특정 버전에 대한 페이지에서 설명합니다. 이 종속성의 배경은 [언어 및 라이브러리 간 관계](relationships-between-language-and-library.md)에서 자세히 알아볼 수 있습니다.
+
+C# 빌드 도구는 최신 주요 언어 릴리스가 기본 언어 버전으로 고려합니다. 주요 릴리스 사이에는 이 섹션의 다른 문서에서 상세히 설명한 포인트 릴리스가 있을 수 있습니다. 포인트 릴리스에서 최신 기능을 사용하려면 [컴파일러 언어 버전을 구성](../language-reference/configure-language-version.md)하고 해당 버전을 선택해야 합니다. C# 7.0 이후 세 가지 포인트 릴리스가 있습니다.
+
+- [C# 7.3](csharp-7-3.md):
+  - C# 7.3은 [Visual Studio 2017 버전 15.7](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.1 SDK](../../core/whats-new/dotnet-core-2-1.md)부터 사용할 수 있습니다.
+- [C# 7.2](csharp-7-2.md):
+  - C# 7.2는 [Visual Studio 2017 버전 15.5](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)부터 사용할 수 있습니다.
+- [C# 7.1](csharp-7-1.md):
+  - C# 7.1은 [Visual Studio 2017 버전 15.3](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 및 [.NET Core 2.0 SDK](../../core/whats-new/dotnet-core-2-0.md)부터 사용할 수 있습니다.
 
 ## <a name="c-version-10"></a>C# 버전 1.0
 
-시간을 거슬러 올라가 보면 C# 버전 1.0은 Java와 매우 흡사했습니다. [ECMA에 대해 명시된 설계 목표의 일부](http://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)로 "단순하고 현대적인 범용 개체 지향 언어"를 추구했습니다.  당시에 Java와 같은 형태는 이러한 초기 설계 목표를 달성한 것을 의미했습니다.
+돌이켜보면 Visual Studio.Net 2002와 함께 릴리스된 C# 버전 1.0은 Java와 매우 비슷했습니다. [ECMA에 대해 명시된 설계 목표의 일부](https://feeldotneteasy.blogspot.com/2011/01/c-design-goals.html)로 "단순하고 현대적인 범용 개체 지향 언어"를 추구했습니다.  당시에 Java와 같은 형태는 이러한 초기 설계 목표를 달성한 것을 의미했습니다.
 
 그러나 지금 다시 C# 1.0을 돌이켜보면 조금 어지러워질 것입니다. 기본 제공 비동기 기능과 당연한 것으로 여겨지는 제네릭과 관련된 멋진 기능 중 일부가 부족했습니다. 사실, 제네릭이 아예 없었습니다.  그리고 [LINQ](../linq/index.md)는 아직 사용할 수 없습니다. 그러한 추가 사항은 나올 때까지 몇 년이 걸릴 것입니다.
 
@@ -33,11 +45,10 @@ C# 1.0의 주요 기능에는 다음이 포함되어 있습니다.
 - [식](../programming-guide/statements-expressions-operators/expressions.md)
 - [문](../programming-guide/statements-expressions-operators/statements.md)
 - [특성](../programming-guide/concepts/attributes/index.md)
-- 리터럴
 
 ## <a name="c-version-12"></a>C# 버전 1.2
 
-C# 버전 1.2는 Visual Studio 2003과 함께 제공됩니다. 여기에는 언어에 대한 몇 가지 작은 개선이 포함되어 있습니다. 가장 주목할 만한 점은 이 버전부터 <xref:System.Collections.IEnumerator>가 <xref:System.IDisposable>를 구현할 때 <xref:System.Collections.IEnumerator>의 <xref:System.IDisposable.Dispose%2A>라는 `foreach` 루트에서 생성된 코드입니다.
+C# 버전 1.2는 Visual Studio .NET 2003과 함께 제공됩니다. 여기에는 언어에 대한 몇 가지 작은 개선이 포함되어 있습니다. 가장 주목할 만한 점은 이 버전부터 <xref:System.Collections.IEnumerator>가 <xref:System.IDisposable>를 구현할 때 <xref:System.Collections.IEnumerator>의 <xref:System.IDisposable.Dispose%2A>라는 `foreach` 루트에서 생성된 코드입니다.
 
 ## <a name="c-version-20"></a>C# 버전 2.0
 
@@ -45,8 +56,8 @@ C# 버전 1.2는 Visual Studio 2003과 함께 제공됩니다. 여기에는 언�
 
 - [제네릭](../programming-guide/generics/index.md)
 - [부분 형식(Partial Type)](../programming-guide/classes-and-structs/partial-classes-and-methods.md#partial-classes)
-- [무명 메서드](../programming-guide/statements-expressions-operators/anonymous-methods.md)
-- [Nullable 형식](../programming-guide/nullable-types/index.md)
+- [무명 메서드](../language-reference/operators/delegate-operator.md)
+- [Nullable 값 형식](../programming-guide/nullable-types/index.md)
 - [반복기](../programming-guide/concepts/iterators.md)
 - [공변성(Covariance) 및 반공변성(Contravariance)](../programming-guide/concepts/covariance-contravariance/index.md)
 
@@ -69,12 +80,12 @@ C# 버전 2.0에서는 반복기라는 기능이 도입되었습니다. 간단�
 
 C# 버전 3.0은 Visual Studio 2008과 함께 2007년말에 출시되었지만 언어 기능을 완전히 갖춘 버전은 .NET Framework 버전 3.5와 함께 제공됩니다. 이 버전은 C#의 성장에 큰 변화를 가져왔습니다. C#은 진정으로 강력한 프로그래밍 언어로 자리매김했습니다. 이 버전의 몇 가지 주요 특징을 살펴보겠습니다.
 
-- [자동 구현된 속성](../programming-guide/classes-and-structs/auto-implemented-properties.md)
+- [자동 구현 속성](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [무명 형식](../programming-guide/classes-and-structs/anonymous-types.md)
 - [쿼리 식](../linq/query-expression-basics.md)
-- [람다 식](https://www.daedtech.com/introduction-to-c-lambda-expressions/)
-- [식 트리](https://blogs.msdn.microsoft.com/charlie/2008/01/31/expression-tree-basics/)
-- [확장 메서드](https://www.codeproject.com/Tips/709310/Extension-Method-In-Csharp)
+- [람다 식](../programming-guide/statements-expressions-operators/lambda-expressions.md)
+- [식 트리](../expression-trees.md)
+- [확장 메서드](../programming-guide/classes-and-structs/extension-methods.md)
 - [암시적 형식 지역 변수](../language-reference/keywords/var.md)
 - [부분 메서드](../language-reference/keywords/partial-method.md)
 - [개체 및 컬렉션 이니셜라이저](../programming-guide/classes-and-structs/object-and-collection-initializers.md)
@@ -89,14 +100,14 @@ C# 버전 3.0은 Visual Studio 2008과 함께 2007년말에 출시되었지만 �
 
 ## <a name="c-version-40"></a>C# 버전 4.0
 
-C# 버전 4.0은 버전 3.0의 혁신적인 상태를 유지하느라 힘든 시기를 겪었습니다. 버전 3.0에서 C#은 Java의 그림자를 확실히 벗어나 두각을 나타내었습니다. 금세 정교해졌습니다.
+Visual Studio 2010과 함께 릴리스된 C# 버전 4.0은 버전 3.0의 혁신에 따른 기대에 부응하느라 어려움을 겪을 것으로 예상되었습니다. 버전 3.0에서 C#은 Java의 그림자를 확실히 벗어나 두각을 나타내었습니다. 금세 정교해졌습니다.
 
 다음 버전에서는 몇 가지 흥미로운 새 기능이 도입되었습니다.
 
 - [동적 바인딩](../language-reference/keywords/dynamic.md)
 - [명명된/선택적 인수](../programming-guide/classes-and-structs/named-and-optional-arguments.md)
 - [제네릭 공변(covariant) 및 반공변(contravariant)](../../standard/generics/covariance-and-contravariance.md)
-- [포함된 interop 형식](https://stackoverflow.com/questions/20514240/whats-the-difference-setting-embed-interop-types-true-and-false-in-visual-studi)
+- [포함된 interop 형식](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
 포함된 interop 형식은 배포의 어려움을 완화합니다. 제네릭 공변성(Covariance)과 반공변성(Contravariance)은 제네릭을 사용하는 기능을 더 많이 제공하지만, 약간 학문적이며, 프레임워크와 라이브러리 작성자에게 가장 높은 평가를 받을 것입니다. 명명되고 선택적인 매개 변수를 사용하면 많은 메서드 오버로드를 제거하고 편리성을 제공할 수 있습니다. 그러나 이러한 기능 중 어느 것도 정확히 패러다임의 변화는 아닙니다.
 
@@ -106,14 +117,14 @@ C# 버전 4.0은 버전 3.0의 혁신적인 상태를 유지하느라 힘든 시
 
 ## <a name="c-version-50"></a>C# 버전 5.0
 
-C# 버전 5.0은 집중된 버전의 언어였습니다. 해당 버전에 대한 거의 모든 노력은 다른 획기적인 언어 개념인 비동기 프로그래밍을 위한 `async` 및 `await` 모델로 옮겨 갔습니다.  다음은 주요 기능 목록입니다.
+Visual Studio 2012과 함께 릴리스된 C# 버전 5.0은 언어에 중점을 둔 버전이었습니다. 해당 버전에 대한 거의 모든 노력은 다른 획기적인 언어 개념인 비동기 프로그래밍을 위한 `async` 및 `await` 모델로 옮겨 갔습니다.  다음은 주요 기능 목록입니다.
 
 - [비동기 멤버](../async.md)
 - [호출자 정보 특성](../programming-guide/concepts/caller-information.md)
 
 ### <a name="see-also"></a>참고 항목
 
-* [코드 프로젝트: C# 5.0에서 호출자 정보 특성](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
+- [코드 프로젝트: C# 5.0의 호출자 정보 특성](https://www.codeproject.com/Tips/606379/Caller-Info-Attributes-in-Csharp)
 
 호출자 정보 특성을 사용하면 엄청난 양의 상용구 리플렉션 코드를 사용하지 않고도 실행 중인 컨텍스트에 대한 정보를 쉽게 검색할 수 있습니다. 진단 및 로깅 작업의 용도는 매우 다양합니다.
 
@@ -121,16 +132,16 @@ C# 버전 5.0은 집중된 버전의 언어였습니다. 해당 버전에 대한
 
 ## <a name="c-version-60"></a>C# 버전 6.0
 
-버전 3.0과 5.0에서 C#은 개체 지향 언어의 주요 새 기능을 추가했습니다. 버전 6.0에서 지배적인 핵심 기능을 수행하지 않는 대신 C# 프로그래밍을 보다 생산적으로 만드는 많은 작은 기능을 릴리스했습니다. 다음은 몇 가지 예입니다.
+버전 3.0과 5.0에서 C#은 개체 지향 언어의 주요 새 기능을 추가했습니다. Visual Studio 2013과 함께 릴리스된 버전 6.0은 주요 핵심 기능 대신 C# 프로그래밍을 보다 생산적으로 만드는 많은 작은 기능을 릴리스했습니다. 다음은 몇 가지 예입니다.
 
-- [정적 가져오기](../language-reference/keywords/using-static.md)
-- [예외 필터](https://www.thomaslevesque.com/2015/06/21/exception-filters-in-c-6/)
-- [속성 이니셜라이저](http://geekswithblogs.net/WinAZ/archive/2015/06/30/whatrsquos-new-in-c-6.0-auto-property-initializers.aspx)
-- [식 본문 멤버](https://lostechies.com/jimmybogard/2015/12/17/c-6-feature-review-expression-bodied-function-members/)
-- [Null 전파자](https://davefancher.com/2014/08/14/c-6-0-null-propagation-operator/)
-- [문자열 보간](../language-reference/tokens/interpolated.md)
-- [nameof 연산자](https://stackoverflow.com/questions/31695900/what-is-the-purpose-of-nameof)
-- [인덱스 이니셜라이저](csharp-6.md#index-initializers)
+- [정적 가져오기](./csharp-6.md#using-static)
+- [예외 필터](./csharp-6.md#exception-filters)
+- [Auto 속성 이니셜라이저](./csharp-6.md#auto-property-initializers)
+- [식 본문 멤버](./csharp-6.md#expression-bodied-function-members)
+- [Null 전파자](./csharp-6.md#null-conditional-operators)
+- [문자열 보간](./csharp-6.md#string-interpolation)
+- [nameof 연산자](./csharp-6.md#the-nameof-expression)
+- [인덱스 이니셜라이저](csharp-6.md#extension-add-methods-in-collection-initializers)
 
 기타 새로운 기능은 다음과 같습니다.
 
@@ -143,25 +154,23 @@ C# 버전 5.0은 집중된 버전의 언어였습니다. 해당 버전에 대한
 
 ## <a name="c-version-70"></a>C# 버전 7.0
 
-최신 주요 버전은 C# 버전 7.0입니다. 이 버전에는 C# 6.0 방식의 혁신적이고 유용한 기능이 있지만 서비스형 컴파일러는 없습니다. 다음은 새 기능 중 일부입니다.
+최신 주 버전은 Visual Studio 2017과 함께 릴리스된 C# 버전 7.0입니다. 이 버전에는 C# 6.0 방식의 혁신적이고 유용한 기능이 있지만 서비스형 컴파일러는 없습니다. 다음은 새 기능 중 일부입니다.
 
-- [외부 변수](https://www.c-sharpcorner.com/article/out-variables-in-c-sharp-7-0/)
-- [튜플 및 분해](https://www.thomaslevesque.com/2016/08/23/tuple-deconstruction-in-c-7/)
+- [외부 변수](./csharp-7.md#out-variables)
+- [튜플 및 분해](./csharp-7.md#tuples)
 - [패턴 일치](./csharp-7.md#pattern-matching)
-- [로컬 함수](https://www.infoworld.com/article/3182416/application-development/c-7-in-depth-exploring-local-functions.html)
+- [로컬 함수](./csharp-7.md#local-functions)
 - [확장된 식 본문 멤버](./csharp-7.md#more-expression-bodied-members)
 - [참조 로컬 및 반환](./csharp-7.md#ref-locals-and-returns)
 
 이러한 기능에는 다음이 포함됩니다.
 
-- [삭제](../discards.md)
-- [이진 리터럴](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/binary-literals.md)
-- [자릿수 구분 기호](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/digit-separators.md)
-- 참조 반환 및 로컬
-- [Throw 식](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.0/throw-expression.md)
+- [삭제](./csharp-7.md#discards)
+- [이진 리터럴 및 자릿수 구분 기호](./csharp-7.md#numeric-literal-syntax-improvements)
+- [Throw 식](./csharp-7.md#throw-expressions)
 
 이러한 모든 기능은 개발자에게 멋진 새 기능과 이전보다 훨씬 깔끔한 코드를 작성할 수 있는 기회를 제공합니다. 하이라이트는 `out` 키워드와 함께 사용할 변수의 선언을 압축하고 튜플을 통해 여러 개의 반환 값을 허용하는 것입니다.
 
 그러나 C#은 더욱 광범위하게 사용되고 있습니다. .NET Core는 이제 모든 운영 체제를 대상으로 하며 클라우드와 휴대성에 확실히 집중하고 있습니다.  이는 새로운 기능을 제공하는 것 외에도 언어 디자이너가 많이 생각하고 시간을 투자하게 만듭니다.
 
-_아티클_ [_NDepend 블로그에 최초로 게시됨_](https://blog.ndepend.com/c-versions-look-language-history/)_, Erik Dietrich 및 Patrick Smacchia 제공_
+_아티클_ [_NDepend 블로그에 최초로 게시됨_](https://blog.ndepend.com/c-versions-look-language-history/) _, Erik Dietrich 및 Patrick Smacchia 제공_

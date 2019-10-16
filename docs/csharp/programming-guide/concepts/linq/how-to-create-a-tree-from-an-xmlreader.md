@@ -2,18 +2,18 @@
 title: '방법: XmlReader에서 트리 조각 만들기(C#)'
 ms.date: 07/20/2015
 ms.assetid: 60951c9c-7087-406c-b5bb-c60e58609b21
-ms.openlocfilehash: f0e75e4d3f6964fa44c41265c1c276c32fb9e87d
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f632bbdad7d52ea37e2587516792dfd13178d702
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43501756"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69593880"
 ---
 # <a name="how-to-create-a-tree-from-an-xmlreader-c"></a>방법: XmlReader에서 트리 조각 만들기(C#)
 이 항목에서는 <xref:System.Xml.XmlReader>에서 XML 트리를 직접 만드는 방법을 보여 줍니다. <xref:System.Xml.Linq.XElement>에서 <xref:System.Xml.XmlReader>를 만들려면 요소 노드에 <xref:System.Xml.XmlReader>를 배치해야 합니다. <xref:System.Xml.XmlReader>는 주석과 처리 명령을 건너뛰지만 <xref:System.Xml.XmlReader>가 텍스트 노드에 배치되면 오류가 throw됩니다. 이러한 오류를 방지하려면 <xref:System.Xml.XmlReader>에서 XML 트리를 만들기 전에 항상 <xref:System.Xml.XmlReader>를 요소에 배치하세요.  
   
 ## <a name="example"></a>예  
- 이 예제에서는 XML 문서 [샘플 XML 파일: Books(LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)를 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Books(LINQ to XML)](./sample-xml-file-books-linq-to-xml.md).  
   
  다음 코드에서는 `T:System.Xml.XmlReader` 개체를 만들고 첫 번째 요소 노드를 찾을 때까지 노드를 읽은 다음 <xref:System.Xml.Linq.XElement> 개체를 로드합니다.  
   
@@ -53,4 +53,4 @@ Console.WriteLine(e);
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 구문 분석(C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)
+- [XML 구문 분석(C#)](./parsing-xml.md)

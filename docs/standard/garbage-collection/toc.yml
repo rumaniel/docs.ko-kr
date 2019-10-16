@@ -1,0 +1,31 @@
+- name: 메모리 관리 및 가비지 수집
+  href: memory-management-and-gc.md
+  items:
+    - name: 관리되지 않는 리소스 정리
+      href: unmanaged.md
+      items:
+        - name: Dispose 메서드 구현
+          href: implementing-dispose.md
+        - name: IDisposable을 구현하는 개체 사용
+          href: using-objects.md
+    - name: 가비지 컬렉션
+      href: index.md
+      items:
+        - name: 가비지 컬렉션 기본 사항
+          href: fundamentals.md
+        - name: LOB(Large Object) 힙
+          href: large-object-heap.md
+        - name: 가비지 컬렉션 및 성능
+          href: performance.md
+        - name: 인덱싱된 컬렉션
+          href: induced.md
+        - name: 대기 모드
+          href: latency.md
+        - name: 공유 웹 호스팅을 위한 최적화
+          href: optimization-for-shared-web-hosting.md
+        - name: 가비지 컬렉션 알림
+          href: notifications.md
+        - name: 애플리케이션 도메인 리소스 모니터링
+          href: app-domain-resource-monitoring.md
+        - name: 약한 참조
+          href: weak-references.md

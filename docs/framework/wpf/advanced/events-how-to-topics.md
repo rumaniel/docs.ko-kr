@@ -6,22 +6,22 @@ f1_keywords:
 helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
-ms.openlocfilehash: fea698dd137a0e5639e4777b85284beaf83ace1b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33543529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962447"
 ---
 # <a name="events-how-to-topics"></a>이벤트 방법 항목
-이 섹션의 항목에는 WPF에서 이벤트를 사용 하는 방법을 설명 합니다.  
+이 섹션의에서 항목에서는 WPF에서 이벤트를 사용 하는 방법에 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [코드를 사용하여 이벤트 처리기 추가](../../../../docs/framework/wpf/advanced/how-to-add-an-event-handler-using-code.md)  
- [라우트된 이벤트 처리](../../../../docs/framework/wpf/advanced/how-to-handle-a-routed-event.md)  
- [사용자 지정 라우트된 이벤트 만들기](../../../../docs/framework/wpf/advanced/how-to-create-a-custom-routed-event.md)  
- [이벤트 처리기에서 소스 요소 찾기](../../../../docs/framework/wpf/advanced/how-to-find-the-source-element-in-an-event-handler.md)  
- [라우트된 이벤트에 대한 클래스 처리 추가](../../../../docs/framework/wpf/advanced/how-to-add-class-handling-for-a-routed-event.md)  
+ [코드를 사용하여 이벤트 처리기 추가](how-to-add-an-event-handler-using-code.md)  
+ [라우트된 이벤트 처리](how-to-handle-a-routed-event.md)  
+ [사용자 지정 라우트된 이벤트 만들기](how-to-create-a-custom-routed-event.md)  
+ [이벤트 처리기에서 소스 요소 찾기](how-to-find-the-source-element-in-an-event-handler.md)  
+ [라우트된 이벤트에 대한 클래스 처리 추가](how-to-add-class-handling-for-a-routed-event.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.RoutedEvent>  

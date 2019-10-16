@@ -1,0 +1,591 @@
+- name: 메타데이터
+  href: index.md
+  items:
+    - name: 메타데이터 인터페이스
+      href: metadata-interfaces.md
+      items:
+        - name: ICeeGen 인터페이스
+          href: iceegen-interface.md
+          items:
+            - name: AddSectionReloc 메서드
+              href: iceegen-addsectionreloc-method.md
+            - name: AllocateMethodBuffer 메서드
+              href: iceegen-allocatemethodbuffer-method.md
+            - name: ComputePointer 메서드
+              href: iceegen-computepointer-method.md
+            - name: EmitString 메서드
+              href: iceegen-emitstring-method.md
+            - name: GenerateCeeFile 메서드
+              href: iceegen-generateceefile-method.md
+            - name: GenerateCeeMemoryImage 메서드
+              href: iceegen-generateceememoryimage-method.md
+            - name: GetIlSection 메서드
+              href: iceegen-getilsection-method.md
+            - name: GetIMapTokenIface 메서드
+              href: iceegen-getimaptokeniface-method.md
+            - name: GetMethodBuffer 메서드
+              href: iceegen-getmethodbuffer-method.md
+            - name: GetSectionBlock 메서드
+              href: iceegen-getsectionblock-method.md
+            - name: GetSectionCreate 메서드
+              href: iceegen-getsectioncreate-method.md
+            - name: GetSectionDataLen 메서드
+              href: iceegen-getsectiondatalen-method.md
+            - name: GetString 메서드
+              href: iceegen-getstring-method.md
+            - name: GetStringSection 메서드
+              href: iceegen-getstringsection-method.md
+            - name: TruncateSection 메서드
+              href: iceegen-truncatesection-method.md
+        - name: IHostFilter 인터페이스
+          href: ihostfilter-interface.md
+          items:
+            - name: MarkToken 메서드
+              href: ihostfilter-marktoken-method.md
+        - name: IMapToken 인터페이스
+          href: imaptoken-interface.md
+          items:
+            - name: Map 메서드
+              href: imaptoken-map-method.md
+        - name: IMetaDataAssemblyEmit 인터페이스
+          href: imetadataassemblyemit-interface.md
+          items:
+            - name: DefineAssembly 메서드
+              href: imetadataassemblyemit-defineassembly-method.md
+            - name: DefineAssemblyRef 메서드
+              href: imetadataassemblyemit-defineassemblyref-method.md
+            - name: DefineExportedType 메서드
+              href: imetadataassemblyemit-defineexportedtype-method.md
+            - name: DefineFile 메서드
+              href: imetadataassemblyemit-definefile-method.md
+            - name: DefineManifestResource 메서드
+              href: imetadataassemblyemit-definemanifestresource-method.md
+            - name: SetAssemblyProps 메서드
+              href: imetadataassemblyemit-setassemblyprops-method.md
+            - name: SetAssemblyRefProps 메서드
+              href: imetadataassemblyemit-setassemblyrefprops-method.md
+            - name: SetExportedTypeProps 메서드
+              href: imetadataassemblyemit-setexportedtypeprops-method.md
+            - name: SetFileProps 메서드
+              href: imetadataassemblyemit-setfileprops-method.md
+            - name: SetManifestResourceProps 메서드
+              href: imetadataassemblyemit-setmanifestresourceprops-method.md
+        - name: IMetaDataAssemblyImport 인터페이스
+          href: imetadataassemblyimport-interface.md
+          items:
+            - name: CloseEnum 메서드
+              href: imetadataassemblyimport-closeenum-method.md
+            - name: EnumAssemblyRefs 메서드
+              href: imetadataassemblyimport-enumassemblyrefs-method.md
+            - name: EnumExportedTypes 메서드
+              href: imetadataassemblyimport-enumexportedtypes-method.md
+            - name: EnumFiles 메서드
+              href: imetadataassemblyimport-enumfiles-method.md
+            - name: EnumManifestResources 메서드
+              href: imetadataassemblyimport-enummanifestresources-method.md
+            - name: FindAssembliesByName 메서드
+              href: imetadataassemblyimport-findassembliesbyname-method.md
+            - name: FindExportedTypeByName 메서드
+              href: imetadataassemblyimport-findexportedtypebyname-method.md
+            - name: FindManifestResourceByName 메서드
+              href: imetadataassemblyimport-findmanifestresourcebyname-method.md
+            - name: GetAssemblyFromScope 메서드
+              href: imetadataassemblyimport-getassemblyfromscope-method.md
+            - name: GetAssemblyProps 메서드
+              href: imetadataassemblyimport-getassemblyprops-method.md
+            - name: GetAssemblyRefProps 메서드
+              href: imetadataassemblyimport-getassemblyrefprops-method.md
+            - name: GetExportedTypeProps 메서드
+              href: imetadataassemblyimport-getexportedtypeprops-method.md
+            - name: GetFileProps 메서드
+              href: imetadataassemblyimport-getfileprops-method.md
+            - name: GetManifestResourceProps 메서드
+              href: imetadataassemblyimport-getmanifestresourceprops-method.md
+        - name: IMetaDataConverter 인터페이스
+          href: imetadataconverter-interface.md
+          items:
+            - name: GetMetaDataFromTypeInfo 메서드
+              href: imetadataconverter-getmetadatafromtypeinfo-method.md
+            - name: GetMetaDataFromTypeLib 메서드
+              href: imetadataconverter-getmetadatafromtypelib-method.md
+            - name: GetTypeLibFromMetaData 메서드
+              href: imetadataconverter-gettypelibfrommetadata-method.md
+        - name: IMetaDataDispenser 인터페이스
+          href: imetadatadispenser-interface.md
+          items:
+            - name: DefineScope 메서드
+              href: imetadatadispenser-definescope-method.md
+            - name: OpenScope 메서드
+              href: imetadatadispenser-openscope-method.md
+            - name: OpenScopeOnMemory 메서드
+              href: imetadatadispenser-openscopeonmemory-method.md
+        - name: IMetaDataDispenserEx 인터페이스
+          href: imetadatadispenserex-interface.md
+          items:
+            - name: FindAssembly 메서드
+              href: imetadatadispenserex-findassembly-method.md
+            - name: FindAssemblyModule 메서드
+              href: imetadatadispenserex-findassemblymodule-method.md
+            - name: GetCORSystemDirectory 메서드
+              href: imetadatadispenserex-getcorsystemdirectory-method.md
+            - name: GetOption 메서드
+              href: imetadatadispenserex-getoption-method.md
+            - name: OpenScopeOnITypeInfo 메서드
+              href: imetadatadispenserex-openscopeonitypeinfo-method.md
+            - name: SetOption 메서드
+              href: imetadatadispenserex-setoption-method.md
+        - name: IMetaDataEmit 인터페이스
+          href: imetadataemit-interface.md
+          items:
+            - name: ApplyEditAndContinue 메서드
+              href: imetadataemit-applyeditandcontinue-method.md
+            - name: DefineCustomAttribute 메서드
+              href: imetadataemit-definecustomattribute-method.md
+            - name: DefineEvent 메서드
+              href: imetadataemit-defineevent-method.md
+            - name: DefineField 메서드
+              href: imetadataemit-definefield-method.md
+            - name: DefineImportMember 메서드
+              href: imetadataemit-defineimportmember-method.md
+            - name: DefineImportType 메서드
+              href: imetadataemit-defineimporttype-method.md
+            - name: DefineMemberRef 메서드
+              href: imetadataemit-definememberref-method.md
+            - name: DefineMethod 메서드
+              href: imetadataemit-definemethod-method.md
+            - name: DefineMethodImpl 메서드
+              href: imetadataemit-definemethodimpl-method.md
+            - name: DefineModuleRef 메서드
+              href: imetadataemit-definemoduleref-method.md
+            - name: DefineNestedType 메서드
+              href: imetadataemit-definenestedtype-method.md
+            - name: DefineParam 메서드
+              href: imetadataemit-defineparam-method.md
+            - name: DefinePermissionSet 메서드
+              href: imetadataemit-definepermissionset-method.md
+            - name: DefinePinvokeMap 메서드
+              href: imetadataemit-definepinvokemap-method.md
+            - name: DefineProperty 메서드
+              href: imetadataemit-defineproperty-method.md
+            - name: DefineSecurityAttributeSet 메서드
+              href: imetadataemit-definesecurityattributeset-method.md
+            - name: DefineTypeDef 메서드
+              href: imetadataemit-definetypedef-method.md
+            - name: DefineTypeRefByName 메서드
+              href: imetadataemit-definetyperefbyname-method.md
+            - name: DefineUserString 메서드
+              href: imetadataemit-defineuserstring-method.md
+            - name: DeleteClassLayout 메서드
+              href: imetadataemit-deleteclasslayout-method.md
+            - name: DeleteFieldMarshal 메서드
+              href: imetadataemit-deletefieldmarshal-method.md
+            - name: DeletePinvokeMap 메서드
+              href: imetadataemit-deletepinvokemap-method.md
+            - name: DeleteToken 메서드
+              href: imetadataemit-deletetoken-method.md
+            - name: GetSaveSize 메서드
+              href: imetadataemit-getsavesize-method.md
+            - name: GetTokenFromSig 메서드
+              href: imetadataemit-gettokenfromsig-method.md
+            - name: GetTokenFromTypeSpec 메서드
+              href: imetadataemit-gettokenfromtypespec-method.md
+            - name: Merge 메서드
+              href: imetadataemit-merge-method.md
+            - name: MergeEnd 메서드
+              href: imetadataemit-mergeend-method.md
+            - name: Save 메서드
+              href: imetadataemit-save-method.md
+            - name: SaveToMemory 메서드
+              href: imetadataemit-savetomemory-method.md
+            - name: SaveToStream 메서드
+              href: imetadataemit-savetostream-method.md
+            - name: SetClassLayout 메서드
+              href: imetadataemit-setclasslayout-method.md
+            - name: SetCustomAttributeValue 메서드
+              href: imetadataemit-setcustomattributevalue-method.md
+            - name: SetEventProps 메서드
+              href: imetadataemit-seteventprops-method.md
+            - name: SetFieldMarshal 메서드
+              href: imetadataemit-setfieldmarshal-method.md
+            - name: SetFieldProps 메서드
+              href: imetadataemit-setfieldprops-method.md
+            - name: SetFieldRVA 메서드
+              href: imetadataemit-setfieldrva-method.md
+            - name: SetHandler 메서드
+              href: imetadataemit-sethandler-method.md
+            - name: SetMethodImplFlags 메서드
+              href: imetadataemit-setmethodimplflags-method.md
+            - name: SetMethodProps 메서드
+              href: imetadataemit-setmethodprops-method.md
+            - name: SetModuleProps 메서드
+              href: imetadataemit-setmoduleprops-method.md
+            - name: SetParamProps 메서드
+              href: imetadataemit-setparamprops-method.md
+            - name: SetParent 메서드
+              href: imetadataemit-setparent-method.md
+            - name: SetPermissionSetProps 메서드
+              href: imetadataemit-setpermissionsetprops-method.md
+            - name: SetPinvokeMap 메서드
+              href: imetadataemit-setpinvokemap-method.md
+            - name: SetPropertyProps 메서드
+              href: imetadataemit-setpropertyprops-method.md
+            - name: SetRVA 메서드
+              href: imetadataemit-setrva-method.md
+            - name: SetTypeDefProps 메서드
+              href: imetadataemit-settypedefprops-method.md
+            - name: TranslateSigWithScope 메서드
+              href: imetadataemit-translatesigwithscope-method.md
+        - name: IMetaDataEmit2 인터페이스
+          href: imetadataemit2-interface.md
+          items:
+            - name: DefineGenericParam 메서드
+              href: imetadataemit2-definegenericparam-method.md
+            - name: DefineMethodSpec 메서드
+              href: imetadataemit2-definemethodspec-method.md
+            - name: GetDeltaSaveSize 메서드
+              href: imetadataemit2-getdeltasavesize-method.md
+            - name: ResetENCLog 메서드
+              href: imetadataemit2-resetenclog-method.md
+            - name: SaveDelta 메서드
+              href: imetadataemit2-savedelta-method.md
+            - name: SaveDeltaToMemory 메서드
+              href: imetadataemit2-savedeltatomemory-method.md
+            - name: SaveDeltaToStream 메서드
+              href: imetadataemit2-savedeltatostream-method.md
+            - name: SetGenericParamProps 메서드
+              href: imetadataemit2-setgenericparamprops-method.md
+        - name: IMetaDataError 인터페이스
+          href: imetadataerror-interface.md
+          items:
+            - name: OnError 메서드
+              href: imetadataerror-onerror-method.md
+        - name: IMetaDataFilter 인터페이스
+          href: imetadatafilter-interface.md
+          items:
+            - name: IsTokenMarked 메서드
+              href: imetadatafilter-istokenmarked-method.md
+            - name: MarkToken 메서드
+              href: imetadatafilter-marktoken-method.md
+            - name: UnmarkAll 메서드
+              href: imetadatafilter-unmarkall-method.md
+        - name: IMetaDataImport 인터페이스
+          href: imetadataimport-interface.md
+          items:
+            - name: CloseEnum 메서드
+              href: imetadataimport-closeenum-method.md
+            - name: CountEnum 메서드
+              href: imetadataimport-countenum-method.md
+            - name: EnumCustomAttributes 메서드
+              href: imetadataimport-enumcustomattributes-method.md
+            - name: EnumEvents 메서드
+              href: imetadataimport-enumevents-method.md
+            - name: EnumFields 메서드
+              href: imetadataimport-enumfields-method.md
+            - name: EnumFieldsWithName 메서드
+              href: imetadataimport-enumfieldswithname-method.md
+            - name: EnumInterfaceImpls 메서드
+              href: imetadataimport-enuminterfaceimpls-method.md
+            - name: EnumMemberRefs 메서드
+              href: imetadataimport-enummemberrefs-method.md
+            - name: EnumMembers 메서드
+              href: imetadataimport-enummembers-method.md
+            - name: EnumMembersWithName 메서드
+              href: imetadataimport-enummemberswithname-method.md
+            - name: EnumMethodImpls 메서드
+              href: imetadataimport-enummethodimpls-method.md
+            - name: EnumMethods 메서드
+              href: imetadataimport-enummethods-method.md
+            - name: EnumMethodSemantics 메서드
+              href: imetadataimport-enummethodsemantics-method.md
+            - name: EnumMethodsWithName 메서드
+              href: imetadataimport-enummethodswithname-method.md
+            - name: EnumModuleRefs 메서드
+              href: imetadataimport-enummodulerefs-method.md
+            - name: EnumParams 메서드
+              href: imetadataimport-enumparams-method.md
+            - name: EnumPermissionSets 메서드
+              href: imetadataimport-enumpermissionsets-method.md
+            - name: EnumProperties 메서드
+              href: imetadataimport-enumproperties-method.md
+            - name: EnumSignatures 메서드
+              href: imetadataimport-enumsignatures-method.md
+            - name: EnumTypeDefs 메서드
+              href: imetadataimport-enumtypedefs-method.md
+            - name: EnumTypeRefs 메서드
+              href: imetadataimport-enumtyperefs-method.md
+            - name: EnumTypeSpecs 메서드
+              href: imetadataimport-enumtypespecs-method.md
+            - name: EnumUnresolvedMethods 메서드
+              href: imetadataimport-enumunresolvedmethods-method.md
+            - name: EnumUserStrings 메서드
+              href: imetadataimport-enumuserstrings-method.md
+            - name: FindField 메서드
+              href: imetadataimport-findfield-method.md
+            - name: FindMember 메서드
+              href: imetadataimport-findmember-method.md
+            - name: FindMemberRef 메서드
+              href: imetadataimport-findmemberref-method.md
+            - name: FindMethod 메서드
+              href: imetadataimport-findmethod-method.md
+            - name: FindTypeDefByName 메서드
+              href: imetadataimport-findtypedefbyname-method.md
+            - name: FindTypeRef 메서드
+              href: imetadataimport-findtyperef-method.md
+            - name: GetClassLayout 메서드
+              href: imetadataimport-getclasslayout-method.md
+            - name: GetCustomAttributeByName 메서드
+              href: imetadataimport-getcustomattributebyname-method.md
+            - name: GetCustomAttributeProps 메서드
+              href: imetadataimport-getcustomattributeprops-method.md
+            - name: GetEventProps 메서드
+              href: imetadataimport-geteventprops-method.md
+            - name: GetFieldMarshal 메서드
+              href: imetadataimport-getfieldmarshal-method.md
+            - name: GetFieldProps 메서드
+              href: imetadataimport-getfieldprops-method.md
+            - name: GetInterfaceImplProps 메서드
+              href: imetadataimport-getinterfaceimplprops-method.md
+            - name: GetMemberProps 메서드
+              href: imetadataimport-getmemberprops-method.md
+            - name: GetMemberRefProps 메서드
+              href: imetadataimport-getmemberrefprops-method.md
+            - name: GetMethodProps 메서드
+              href: imetadataimport-getmethodprops-method.md
+            - name: GetMethodSemantics 메서드
+              href: imetadataimport-getmethodsemantics-method.md
+            - name: GetModuleFromScope 메서드
+              href: imetadataimport-getmodulefromscope-method.md
+            - name: GetModuleRefProps 메서드
+              href: imetadataimport-getmodulerefprops-method.md
+            - name: GetNameFromToken 메서드
+              href: imetadataimport-getnamefromtoken-method.md
+            - name: GetNativeCallConvFromSig 메서드
+              href: imetadataimport-getnativecallconvfromsig-method.md
+            - name: GetNestedClassProps 메서드
+              href: imetadataimport-getnestedclassprops-method.md
+            - name: GetParamForMethodIndex 메서드
+              href: imetadataimport-getparamformethodindex-method.md
+            - name: GetParamProps 메서드
+              href: imetadataimport-getparamprops-method.md
+            - name: GetPermissionSetProps 메서드
+              href: imetadataimport-getpermissionsetprops-method.md
+            - name: GetPinvokeMap
+              href: imetadataimport-getpinvokemap-method.md
+            - name: GetPropertyProps 메서드
+              href: imetadataimport-getpropertyprops-method.md
+            - name: GetRVA 메서드
+              href: imetadataimport-getrva-method.md
+            - name: GetScopeProps 메서드
+              href: imetadataimport-getscopeprops-method.md
+            - name: GetSigFromToken 메서드
+              href: imetadataimport-getsigfromtoken-method.md
+            - name: GetTypeDefProps 메서드
+              href: imetadataimport-gettypedefprops-method.md
+            - name: GetTypeRefProps 메서드
+              href: imetadataimport-gettyperefprops-method.md
+            - name: GetTypeSpecFromToken 메서드
+              href: imetadataimport-gettypespecfromtoken-method.md
+            - name: GetUserString 메서드
+              href: imetadataimport-getuserstring-method.md
+            - name: IsGlobal 메서드
+              href: imetadataimport-isglobal-method.md
+            - name: IsValidToken 메서드
+              href: imetadataimport-isvalidtoken-method.md
+            - name: ResetEnum 메서드
+              href: imetadataimport-resetenum-method.md
+            - name: ResolveTypeRef 메서드
+              href: imetadataimport-resolvetyperef-method.md
+        - name: IMetaDataImport2 인터페이스
+          href: imetadataimport2-interface.md
+          items:
+            - name: EnumGenericParamConstraints 메서드
+              href: imetadataimport2-enumgenericparamconstraints-method.md
+            - name: EnumGenericParams 메서드
+              href: imetadataimport2-enumgenericparams-method.md
+            - name: EnumMethodSpecs 메서드
+              href: imetadataimport2-enummethodspecs-method.md
+            - name: GetGenericParamConstraintProps 메서드
+              href: imetadataimport2-getgenericparamconstraintprops-method.md
+            - name: GetGenericParamProps 메서드
+              href: imetadataimport2-getgenericparamprops-method.md
+            - name: GetMethodSpecProps 메서드
+              href: imetadataimport2-getmethodspecprops-method.md
+            - name: GetPEKind 메서드
+              href: imetadataimport2-getpekind-method.md
+            - name: GetVersionString 메서드
+              href: imetadataimport2-getversionstring-method.md
+        - name: IMetaDataInfo 인터페이스
+          href: imetadatainfo-interface.md
+          items:
+            - name: GetFileMapping 메서드
+              href: imetadatainfo-getfilemapping-method.md
+        - name: IMetaDataTables 인터페이스
+          href: imetadatatables-interface.md
+          items:
+            - name: GetBlob 메서드
+              href: imetadatatables-getblob-method.md
+            - name: GetBlobHeapSize 메서드
+              href: imetadatatables-getblobheapsize-method.md
+            - name: GetCodedTokenInfo 메서드
+              href: imetadatatables-getcodedtokeninfo-method.md
+            - name: GetColumn 메서드
+              href: imetadatatables-getcolumn-method.md
+            - name: GetColumnInfo 메서드
+              href: imetadatatables-getcolumninfo-method.md
+            - name: GetGuid 메서드
+              href: imetadatatables-getguid-method.md
+            - name: GetGuidHeapSize 메서드
+              href: imetadatatables-getguidheapsize-method.md
+            - name: GetNextBlob 메서드
+              href: imetadatatables-getnextblob-method.md
+            - name: GetNextGuid 메서드
+              href: imetadatatables-getnextguid-method.md
+            - name: GetNextString 메서드
+              href: imetadatatables-getnextstring-method.md
+            - name: GetNextUserString 메서드
+              href: imetadatatables-getnextuserstring-method.md
+            - name: GetNumTables 메서드
+              href: imetadatatables-getnumtables-method.md
+            - name: GetRow 메서드
+              href: imetadatatables-getrow-method.md
+            - name: GetString 메서드
+              href: imetadatatables-getstring-method.md
+            - name: GetStringHeapSize 메서드
+              href: imetadatatables-getstringheapsize-method.md
+            - name: GetTableIndex 메서드
+              href: imetadatatables-gettableindex-method.md
+            - name: GetTableInfo 메서드
+              href: imetadatatables-gettableinfo-method.md
+            - name: GetUserString 메서드
+              href: imetadatatables-getuserstring-method.md
+            - name: GetUserStringHeapSize 메서드
+              href: imetadatatables-getuserstringheapsize-method.md
+        - name: IMetaDataTables2 인터페이스
+          href: imetadatatables2-interface.md
+          items:
+            - name: GetMetaDataStorage 메서드
+              href: imetadatatables2-getmetadatastorage-method.md
+            - name: GetMetaDataStreamInfo 메서드
+              href: imetadatatables2-getmetadatastreaminfo-method.md
+        - name: IMetaDataValidate 인터페이스
+          href: imetadatavalidate-interface.md
+          items:
+            - name: ValidateMetaData 메서드
+              href: imetadatavalidate-validatemetadata-method.md
+            - name: ValidatorInit 메서드
+              href: imetadatavalidate-validatorinit-method.md
+    - name: 메타데이터 전역 정적 함수
+      href: metadata-global-static-functions.md
+    - name: 메타데이터 열거형
+      href: metadata-enumerations.md
+      items:
+        - name: AssemblyFlags 열거형
+          href: assemblyflags-enumeration.md
+        - name: AssemblyRefFlags 열거형
+          href: assemblyrefflags-enumeration.md
+        - name: CeeSectionAttr 열거형
+          href: ceesectionattr-enumeration.md
+        - name: CeeSectionRelocType 열거형
+          href: ceesectionreloctype-enumeration.md
+        - name: COINITICOR 열거형
+          href: coiniticor-enumeration.md
+        - name: COINITIEE 열거형
+          href: coinitiee-enumeration.md
+        - name: CorArgType 열거형
+          href: corargtype-enumeration.md
+        - name: CorAssemblyFlags 열거형
+          href: corassemblyflags-enumeration.md
+        - name: CorAttributeTargets 열거형
+          href: corattributetargets-enumeration.md
+        - name: CorCallingConvention 열거형
+          href: corcallingconvention-enumeration.md
+        - name: CorCheckDuplicatesFor 열거형
+          href: corcheckduplicatesfor-enumeration.md
+        - name: CorDeclSecurity 열거형
+          href: cordeclsecurity-enumeration.md
+        - name: CorElementType 열거형1
+          href: corelementtype-enumeration.md
+        - name: CorErrorIfEmitOutOfOrder 열거형
+          href: corerrorifemitoutoforder-enumeration.md
+        - name: CorEventAttr 열거형
+          href: coreventattr-enumeration.md
+        - name: CorFieldAttr 열거형
+          href: corfieldattr-enumeration.md
+        - name: CorFileFlags 열거형
+          href: corfileflags-enumeration.md
+        - name: CorFileMapping 열거형
+          href: corfilemapping-enumeration.md
+        - name: CorGenericParamAttr 열거형
+          href: corgenericparamattr-enumeration.md
+        - name: CorImportOptions 열거형
+          href: corimportoptions-enumeration.md
+        - name: CorLinkerOptions 열거형
+          href: corlinkeroptions-enumeration.md
+        - name: CorLocalRefPreservation 열거형
+          href: corlocalrefpreservation-enumeration.md
+        - name: CorManifestResourceFlags 열거형
+          href: cormanifestresourceflags-enumeration.md
+        - name: CorMethodAttr 열거형
+          href: cormethodattr-enumeration.md
+        - name: CorMethodImpl 열거형
+          href: cormethodimpl-enumeration.md
+        - name: CorMethodSemanticsAttr 열거형
+          href: cormethodsemanticsattr-enumeration.md
+        - name: CorNativeLinkFlags 열거형
+          href: cornativelinkflags-enumeration.md
+        - name: CorNativeLinkType 열거형
+          href: cornativelinktype-enumeration.md
+        - name: CorNativeType 열거형
+          href: cornativetype-enumeration.md
+        - name: CorNotificationForTokenMovement 열거형
+          href: cornotificationfortokenmovement-enumeration.md
+        - name: CorOpenFlags 열거형
+          href: coropenflags-enumeration.md
+        - name: CorParamAttr 열거형
+          href: corparamattr-enumeration.md
+        - name: CorPEKind 열거형
+          href: corpekind-enumeration.md
+        - name: CorPinvokeMap 열거형
+          href: corpinvokemap-enumeration.md
+        - name: CorPropertyAttr 열거형
+          href: corpropertyattr-enumeration.md
+        - name: CorRefToDefCheck 열거형
+          href: correftodefcheck-enumeration.md
+        - name: CorRegFlags 열거형
+          href: corregflags-enumeration.md
+        - name: CorSaveSize 열거형
+          href: corsavesize-enumeration.md
+        - name: CorSerializationType 열거형
+          href: corserializationtype-enumeration.md
+        - name: CorSetENC 열거형
+          href: corsetenc-enumeration.md
+        - name: CorThreadSafetyOptions 열거형
+          href: corthreadsafetyoptions-enumeration.md
+        - name: CorTokenType 열거형
+          href: cortokentype-enumeration.md
+        - name: CorTypeAttr 열거형
+          href: cortypeattr-enumeration.md
+        - name: CorUnmanagedCallingConvention 열거형
+          href: corunmanagedcallingconvention-enumeration.md
+        - name: CorValidatorModuleType 열거형
+          href: corvalidatormoduletype-enumeration.md
+        - name: COUNINITIEE 열거형
+          href: couninitiee-enumeration.md
+    - name: 메타데이터 구조체
+      href: metadata-structures.md
+      items:
+        - name: ASSEMBLYMETADATA 구조체
+          href: assemblymetadata-structure.md
+        - name: COR_FIELD_OFFSET 구조체
+          href: cor-field-offset-structure.md
+        - name: COR_NATIVE_LINK 구조체
+          href: cor-native-link-structure.md
+        - name: CVStruct 구조체
+          href: cvstruct-structure.md
+        - name: OSINFO 구조체
+          href: osinfo-structure.md
+    - name: 메타데이터 공용 구조체
+      href: metadata-unions.md
+      items:
+        - name: CeeSectionRelocExtra 공용 구조체
+          href: ceesectionrelocextra-union.md

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ce2372be02bc0bae7097389d4933f1f28a4ed79
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ffc4d5a1e6b8f1acc7603e9c2e01216e3188989e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33427052"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751298"
 ---
 # <a name="isymunmanagedscopegetchildren-method"></a>ISymUnmanagedScope::GetChildren 메서드
 이 범위의 자식을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetChildren(  
     [in]  ULONG32  cChildren,  
     [out] ULONG32  *pcChildren,  
@@ -37,22 +37,23 @@ HRESULT GetChildren(
         length_is(*pcChildren)] ISymUnmanagedScope* children[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cChildren`  
- [in] A `ULONG32` 크기를 표시 하는 `children` 배열입니다.  
+ [in] A `ULONG32` 의 크기를 나타내는 `children` 배열입니다.  
   
  `pcChildren`  
- [out] 에 대 한 포인터는 `ULONG32` 자식을 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
+ [out] 에 대 한 포인터를 `ULONG32` 자식을 포함 하는 데 필요한 버퍼의 크기를 받는 합니다.  
   
  `children`  
- [out] 자식 항목의 반환 된 배열입니다.  
+ [out] 자식의 반환 된 배열입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.  
+ 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedScope 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)  
- [GetParent 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedScope 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+- [GetParent 메서드](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-getparent-method.md)

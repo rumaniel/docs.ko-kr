@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: 5bd7ebefc03dbe6b44a199ba3123414e7b282c90
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 7c76435b8a0f7a874504813d91d5eda929d08f67
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45646810"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70786427"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 및 DataRowView
-<xref:System.Data.DataView>는 <xref:System.Data.DataRowView> 개체의 열거할 수 있는 컬렉션을 노출시킵니다. 합니다 **DataRowView** 개체 이름 또는 기본 테이블의 열 서 수 참조에 따라 인덱싱된 개체 배열로 값을 노출 합니다. 액세스할 수 있습니다는 <xref:System.Data.DataRow> 의해 노출 되는 **DataRowView** 를 사용 하 여를 <xref:System.Data.DataRowView.Row%2A> 의 속성을 **DataRowView**.  
+<xref:System.Data.DataView>는 <xref:System.Data.DataRowView> 개체의 열거할 수 있는 컬렉션을 노출시킵니다. **DataRowView** 개체는 기본 테이블에 있는 열의 이름 또는 서 수 참조로 인덱싱되는 개체 배열로 값을 노출 합니다. DataRowView의 속성을 <xref:System.Data.DataRow> <xref:System.Data.DataRowView.Row%2A> 사용 하 여 **DataRowView** 에 의해 노출 되는에 액세스할 수있습니다.  
   
- 사용 하 여 값을 볼 때를 **DataRowView**, <xref:System.Data.DataView.RowStateFilter%2A> 의 속성을 **DataView** 기본 행 버전을 결정 **DataRow** 노출 됩니다. 사용 하 여 다른 행 버전에 액세스 하는 방법에 대 한 정보에 대 한는 **DataRow**를 참조 하세요 [행 상태 및 행 버전](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)합니다.  
+ **DataRowView**를 사용 하 여 값을 볼 때 <xref:System.Data.DataView.RowStateFilter%2A> **DataView** 의 속성은 기본 **DataRow** 가 노출 되는 행 버전을 결정 합니다. **DataRow**를 사용 하 여 다른 행 버전에 액세스 하는 방법에 대 한 자세한 내용은 [행 상태 및 행 버전](row-states-and-row-versions.md)을 참조 하세요.  
   
  다음 코드 예제에서는 테이블의 현재 값과 원래 값을 모두 표시합니다.  
   
@@ -59,10 +59,11 @@ public static void WriteView(DataView thisDataView)
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Data.DataRowVersion>  
- <xref:System.Data.DataViewRowState>  
- <xref:System.Data.DataView>  
- <xref:System.Data.DataRowView>  
- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Data.DataRowVersion>
+- <xref:System.Data.DataViewRowState>
+- <xref:System.Data.DataView>
+- <xref:System.Data.DataRowView>
+- [DataView](dataviews.md)
+- [ADO.NET 개요](../ado-net-overview.md)

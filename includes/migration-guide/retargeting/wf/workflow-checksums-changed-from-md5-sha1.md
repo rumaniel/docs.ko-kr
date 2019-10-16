@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f007a2b81820a1d25a2d101b35f3a49e7794fec1
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67859112"
+---
 ### <a name="workflow-checksums-changed-from-md5-to-sha1"></a>워크플로 체크섬이 MD5에서 SHA1로 변경됨
 
 |   |   |

@@ -2,20 +2,20 @@
 title: 순수 함수를 사용하여 리팩터링(C#)
 ms.date: 07/20/2015
 ms.assetid: a3416a45-9e12-4e4a-9747-897f06eef510
-ms.openlocfilehash: 28f31b144cbdbd85febfc57acccb9bd7a158d702
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: f264a0028ed265a5a4fbe1dc32f430c648724c20
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45610123"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253088"
 ---
 # <a name="refactoring-using-a-pure-function-c"></a>순수 함수를 사용하여 리팩터링(C#)
-다음 예제에서는 순수 함수를 사용하기 위해 이전 예제 [확장 메서드를 사용하여 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)을 리팩터링합니다. 이 예제에서 단락의 텍스트를 찾는 코드는 순수 정적 메서드 `ParagraphText`로 이동됩니다.  
+다음 예제에서는 순수 함수를 사용하기 위해 이전 예제 [확장 메서드를 사용하여 리팩터링(C#)](./refactoring-using-an-extension-method.md)을 리팩터링합니다. 이 예제에서 단락의 텍스트를 찾는 코드는 순수 정적 메서드 `ParagraphText`로 이동됩니다.  
   
 ## <a name="example"></a>예  
  이 예제에서는 WordprocessingML 문서를 처리하여 WordprocessingML 문서에서 단락 노드를 검색합니다. 또한 각 단락의 스타일도 식별합니다. 이 예제는 이 자습서의 이전 예제를 기반으로 합니다. 리팩터링된 코드는 아래에 있는 코드의 주석에서 호출됩니다.  
   
- 이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](../../../../csharp/programming-guide/concepts/linq/creating-the-source-office-open-xml-document.md)를 참조하세요.  
+ 이 예제의 소스 문서 만들기에 대한 지침은 [원본 Office Open XML 문서 만들기(C#)](./creating-the-source-office-open-xml-document.md)를 참조하세요.  
   
  이 예제에서는 WindowsBase 어셈블리의 클래스를 사용하고 <xref:System.IO.Packaging?displayProperty=nameWithType> 네임스페이스의 형식을 사용합니다.  
   
@@ -156,7 +156,7 @@ class Program
   
  이 예제의 결과는 리팩터링하기 전의 결과와 동일합니다.  
   
-```  
+```output  
 StyleName:Heading1 >Parsing WordprocessingML with LINQ to XML<  
 StyleName:Normal ><  
 StyleName:Normal >The following example prints to the console.<  
@@ -177,10 +177,10 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>다음 단계  
  다음 예제에서는 XML을 다른 모양으로 프로젝션하는 방법을 보여 줍니다.  
   
--   [다른 모양으로 XML 프로젝션(C#)](../../../../csharp/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [다른 모양으로 XML 프로젝션(C#)](./projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: WordprocessingML 문서에서 내용 조작(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)  
-- [확장 메서드를 사용하여 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
-- [순수 함수로 리팩터링(C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-into-pure-functions.md)
+- [자습서: WordprocessingML 문서에서 내용 조작(C#)](./shape-of-wordprocessingml-documents.md)
+- [확장 메서드를 사용하여 리팩터링(C#)](./refactoring-using-an-extension-method.md)
+- [순수 함수로 리팩터링(C#)](./refactoring-into-pure-functions.md)

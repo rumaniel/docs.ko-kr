@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5825f0425947f109ed834879684357fef7b70959
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: f07685351425a4685ac4a0c8e1b8e3c198b14187
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49123776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777321"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 메서드
 현재 메서드 내에서 시퀀스 위치 그룹을 정의합니다. 각 시작 줄 및 시작 열 메서드 내에서 문의 시작을 정의 합니다. 각 끝 줄과 끝 열 메서드 내에서 문의 끝을 정의 합니다. 배열은 오프셋의 오름차순으로 정렬 되어야 합니다. 오프셋은 항상 메서드 바이트의 시작 부분에서 측정 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT DefineSequencePoints(  
     [in] ISymUnmanagedDocumentWriter*  document,  
     [in] ULONG32 spCount,  
@@ -40,7 +40,7 @@ HRESULT DefineSequencePoints(
     [in, size_is(spCount)] ULONG32     endColumns[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `document`  
  [in] 시퀀스 위치를 정의 하는 문서 개체입니다.  
   
@@ -57,16 +57,17 @@ HRESULT DefineSequencePoints(
  [in] 시퀀스 위치의 시작 열 번호를 지정 합니다.  
   
  `endLines`  
- [in] 시퀀스 위치의 끝 줄 번호를 지정 합니다. 이 매개 변수는 선택적 요소입니다.  
+ [in] 시퀀스 위치의 끝 줄 번호를 지정 합니다. 이 매개 변수는 선택 사항입니다.  
   
  `endColumns`  
- [in] 시퀀스 위치의 끝 열 번호를 지정 합니다. 이 매개 변수는 선택적 요소입니다.  
+ [in] 시퀀스 위치의 끝 열 번호를 지정 합니다. 이 매개 변수는 선택 사항입니다.  
   
 ## <a name="return-value"></a>반환 값  
  메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedWriter 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

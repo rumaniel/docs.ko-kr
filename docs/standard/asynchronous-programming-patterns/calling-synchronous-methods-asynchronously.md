@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41972034-92ed-450a-9664-ab93fcc6f1fb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 371e958aca87c922c902d8efd945d94d611672d9
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 342af20b78ae996bb61c6b563ecf42137ee51022
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702883"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629098"
 ---
 # <a name="calling-synchronous-methods-asynchronously"></a>동기 메서드를 비동기 방식으로 호출
 
@@ -45,13 +45,13 @@ ms.locfileid: "46702883"
 
 이 항목의 코드 예제에서는 `BeginInvoke` 및 `EndInvoke` 를 사용하여 비동기 호출을 수행하는 네 가지 일반적인 방법을 보여 줍니다. `BeginInvoke` 를 호출한 후 다음과 같은 작업을 수행할 수 있습니다.
 
--   작업을 수행한 다음 `EndInvoke` 를 호출하여 호출이 완료될 때까지 실행을 차단합니다.
+- 작업을 수행한 다음 `EndInvoke` 를 호출하여 호출이 완료될 때까지 실행을 차단합니다.
 
--   <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> 속성을 사용하여 <xref:System.Threading.WaitHandle>을 가져오고 해당 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 사용하여 <xref:System.Threading.WaitHandle>이 신호를 받을 때까지 실행을 차단한 다음, `EndInvoke`를 호출합니다.
+- <xref:System.Threading.WaitHandle> 속성을 사용하여 <xref:System.IAsyncResult.AsyncWaitHandle%2A?displayProperty=nameWithType> 을 가져오고 해당 <xref:System.Threading.WaitHandle.WaitOne%2A> 메서드를 사용하여 <xref:System.Threading.WaitHandle> 이 신호를 받을 때까지 실행을 차단한 다음 `EndInvoke`를 호출합니다.
 
--   <xref:System.IAsyncResult> 에서 반환한 `BeginInvoke` 를 폴링하여 비동기 호출이 완료되는 시점을 확인한 다음 `EndInvoke`를 호출합니다.
+- <xref:System.IAsyncResult> 에서 반환한 `BeginInvoke` 를 폴링하여 비동기 호출이 완료되는 시점을 확인한 다음 `EndInvoke`를 호출합니다.
 
--   콜백 메서드의 대리자를 `BeginInvoke`에 전달합니다. 이 메서드는 비동기 호출이 완료될 때 <xref:System.Threading.ThreadPool> 스레드에서 실행됩니다. 콜백 메서드는 `EndInvoke`를 호출합니다.
+- 콜백 메서드의 대리자를 `BeginInvoke`에 전달합니다. 이 메서드는 비동기 호출이 완료될 때 <xref:System.Threading.ThreadPool> 스레드에서 실행됩니다. 콜백 메서드는 `EndInvoke`를 호출합니다.
 
 > [!IMPORTANT]
 > 사용하는 방법에 관계없이 항상 `EndInvoke` 를 호출하여 비동기 호출을 완료해야 합니다.
@@ -97,15 +97,15 @@ ms.locfileid: "46702883"
 ## <a name="executing-a-callback-method-when-an-asynchronous-call-completes"></a>비동기 호출이 완료될 때 콜백 메서드 실행
  비동기 호출을 시작하는 스레드와 결과를 처리하는 스레드가 서로 다를 수 있는 경우에는 호출이 완료될 때 콜백 메서드를 실행할 수 있습니다. 콜백 메서드는 <xref:System.Threading.ThreadPool> 스레드에서 실행됩니다.
 
- 콜백 메서드를 사용하려면 `BeginInvoke` 에 콜백 메서드를 나타내는 <xref:System.AsyncCallback> 대리자를 전달해야 합니다. 콜백 메서드에서 사용할 정보가 들어 있는 개체를 전달할 수도 있습니다. 콜백 메서드에서는 콜백 메서드의 유일한 매개 변수인 <xref:System.IAsyncResult>를 <xref:System.Runtime.Remoting.Messaging.AsyncResult> 개체로 캐스팅할 수 있습니다. 그런 다음, <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> 속성을 사용하여 호출을 시작하는 데 사용된 대리자를 가져오면 `EndInvoke`를 호출할 수 있습니다.
+ 콜백 메서드를 사용하려면 `BeginInvoke` 에 콜백 메서드를 나타내는 <xref:System.AsyncCallback> 대리자를 전달해야 합니다. 콜백 메서드에서 사용할 정보가 들어 있는 개체를 전달할 수도 있습니다. 콜백 메서드에서는 콜백 메서드의 유일한 매개 변수인 <xref:System.IAsyncResult>를 <xref:System.Runtime.Remoting.Messaging.AsyncResult> 개체로 캐스팅할 수 있습니다. 그런 다음 <xref:System.Runtime.Remoting.Messaging.AsyncResult.AsyncDelegate%2A?displayProperty=nameWithType> 속성을 사용하여 호출을 시작하는 데 사용된 대리자를 가져오면 `EndInvoke`를 호출할 수 있습니다.
 
  예제 관련 참고 사항:
 
--   `TestMethod`의 `threadId` 매개 변수는 `out` 매개 변수(Visual Basic의 경우 [`<Out>` `ByRef`)이므로 입력 값은 `TestMethod`에서 사용되지 않습니다. `BeginInvoke` 를 호출할 때는 더미 변수가 전달됩니다. `threadId` 매개 변수가 `ref` 매개 변수(Visual Basic의 경우`ByRef` )인 경우에는 변수가 `BeginInvoke` 및 `EndInvoke`에 전달 가능한 클래스 수준 필드여야 합니다.
+- `TestMethod`의 `threadId` 매개 변수는 `out` 매개 변수(Visual Basic의 경우 [`<Out>` `ByRef`)이므로 입력 값은 `TestMethod`에서 사용되지 않습니다. `BeginInvoke` 를 호출할 때는 더미 변수가 전달됩니다. `threadId` 매개 변수가 `ref` 매개 변수(Visual Basic의 경우`ByRef` )인 경우에는 변수가 `BeginInvoke` 및 `EndInvoke`에 전달 가능한 클래스 수준 필드여야 합니다.
 
--   `BeginInvoke` 에 전달되는 상태 정보는 콜백 메서드에서 출력 메시지의 형식을 지정하는 데 사용하는 형식 문자열입니다. 이 문자열은 <xref:System.Object>형식으로 전달되므로 상태 정보를 적절한 형식으로 캐스팅해야 사용할 수 있습니다.
+- `BeginInvoke` 에 전달되는 상태 정보는 콜백 메서드에서 출력 메시지의 형식을 지정하는 데 사용하는 형식 문자열입니다. 이 문자열은 <xref:System.Object>형식으로 전달되므로 상태 정보를 적절한 형식으로 캐스팅해야 사용할 수 있습니다.
 
--   콜백은 <xref:System.Threading.ThreadPool> 스레드에서 수행됩니다. <xref:System.Threading.ThreadPool> 스레드는 주 스레드가 종료된 경우 응용 프로그램 실행을 유지하지 않는 배경 스레드이므로 예제의 주 스레드는 콜백이 완료될 때까지 충분히 대기해야 합니다.
+- 콜백은 <xref:System.Threading.ThreadPool> 스레드에서 수행됩니다. <xref:System.Threading.ThreadPool> 스레드는 주 스레드가 종료된 경우 애플리케이션 실행을 유지하지 않는 배경 스레드이므로 예제의 주 스레드는 콜백이 완료될 때까지 충분히 대기해야 합니다.
 
  [!code-cpp[AsyncDelegateExamples#5](../../../samples/snippets/cpp/VS_Snippets_CLR/AsyncDelegateExamples/cpp/callback.cpp#5)]
  [!code-csharp[AsyncDelegateExamples#5](../../../samples/snippets/csharp/VS_Snippets_CLR/AsyncDelegateExamples/CS/callback.cs#5)]

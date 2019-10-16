@@ -2,12 +2,12 @@
 title: '방법: XmlSerializer를 사용하여 serialize(C#)'
 ms.date: 07/20/2015
 ms.assetid: 2e0a0bbc-c548-4fe2-8741-be5a9ccd0cbb
-ms.openlocfilehash: 32a23792947639c2c0eb1dc14b640c3786bdfd4c
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: a3b9976dc4aaf132e8c3c8f03c678724db2b6989
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45990403"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253328"
 ---
 # <a name="how-to-serialize-using-xmlserializer-c"></a>방법: XmlSerializer를 사용하여 serialize(C#)
 이 항목에서는 <xref:System.Xml.Serialization.XmlSerializer>를 사용하여 serialize하고 deserialize하는 예제를 보여 줍니다.  
@@ -80,7 +80,7 @@ class XLinqTest
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 Testing for type: XElementNullContainer  
   Deserialized type: XElementNullContainer  
 Testing for type: System.Xml.Linq.XElement  
@@ -88,7 +88,3 @@ Testing for type: System.Xml.Linq.XElement
 Testing for type: XElementContainer  
   Deserialized type: XElementContainer  
 ```  
-  
-## <a name="see-also"></a>참고 항목
-
-- [XElement 개체를 포함하는 개체 그래프 serialize(C#)](../../../../csharp/programming-guide/concepts/linq/serializing-object-graphs-that-contain-xelement-objects.md)

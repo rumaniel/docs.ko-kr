@@ -1,45 +1,45 @@
 ---
-title: 콘솔 응용 프로그램
+title: 콘솔 애플리케이션
 description: 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다.
 ms.date: 03/06/2017
 ms.assetid: 883cd93d-50ce-4144-b7c9-2df28d9c11a0
-ms.openlocfilehash: da3f8f913d452b5c3c9dcda6079067c879a678dd
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 4324b25daa253b3d2446955ad9ca57c2f0294f0c
+ms.sourcegitcommit: 205b9a204742e9c77256d43ac9d94c3f82909808
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46937594"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70851013"
 ---
-# <a name="console-application"></a>콘솔 응용 프로그램
+# <a name="console-application"></a>콘솔 애플리케이션
 
 이 자습서에서는 .NET Core 및 C# 언어의 다양한 기능에 대해 설명합니다. 다음을 배울 수 있습니다.
 
 - .NET Core CLI(명령줄 인터페이스)의 기본 사항
-- C# 콘솔 응용 프로그램의 구조
+- C# 콘솔 애플리케이션의 구조
 - 콘솔 I/O
 - .NET에 포함된 파일 I/O API의 기본 사항
 - .NET에 포함된 작업 비동기 프로그래밍의 기본 사항
 
-텍스트 파일을 읽고 콘솔에 해당 텍스트 파일의 내용을 에코하는 응용 프로그램을 빌드해 보겠습니다. 콘솔의 출력은 소리 내어 읽는 속도에 맞춰집니다. ‘<’(보다 작음) 또는 ‘>’(보다 큼) 키를 눌러 속도를 높이거나 낮출 수 있습니다.
+텍스트 파일을 읽고 콘솔에 해당 텍스트 파일의 내용을 에코하는 애플리케이션을 빌드해 보겠습니다. 콘솔의 출력은 소리 내어 읽는 속도에 맞춰집니다. ‘<’(보다 작음) 또는 ‘>’(보다 큼) 키를 눌러 속도를 높이거나 낮출 수 있습니다.
 
 이 자습서에는 많은 기능이 있습니다. 하나씩 빌드해 보겠습니다.
 
 ## <a name="prerequisites"></a>전제 조건
 
-.NET Core를 실행하도록 컴퓨터에 설정해야 합니다. [.NET Core](https://www.microsoft.com/net/core) 페이지에서 설치 지침을 확인할 수 있습니다. Windows, Linux, macOS 또는 Docker 컨테이너에서 이 응용 프로그램을 실행할 수 있습니다.
+.NET Core를 실행하도록 컴퓨터에 설정해야 합니다. [.NET Core 다운로드](https://dotnet.microsoft.com/download) 페이지에서 설치 지침을 찾을 수 있습니다. Windows, Linux, macOS 또는 Docker 컨테이너에서 이 애플리케이션을 실행할 수 있습니다.
 선호하는 코드 편집기를 설치해야 합니다.
 
-## <a name="create-the-application"></a>응용 프로그램 만들기
+## <a name="create-the-application"></a>애플리케이션 만들기
 
-첫 번째 단계에서는 새 응용 프로그램을 만듭니다. 명령 프롬프트를 열고 응용 프로그램에 대한 새 디렉터리를 만듭니다. 해당 디렉터리를 현재 디렉터리로 지정합니다. 명령 프롬프트에 명령 `dotnet new console`을 입력합니다. 이렇게 하면 기본 "Hello World" 응용 프로그램에 대한 시작 파일이 만들어집니다.
+첫 번째 단계에서는 새 애플리케이션을 만듭니다. 명령 프롬프트를 열고 애플리케이션에 대한 새 디렉터리를 만듭니다. 해당 디렉터리를 현재 디렉터리로 지정합니다. 명령 프롬프트에 명령 `dotnet new console`을 입력합니다. 이렇게 하면 기본 "Hello World" 애플리케이션에 대한 시작 파일이 만들어집니다.
 
-파일 수정을 시작하기 전에 간단한 Hello World 응용 프로그램을 실행하는 단계를 진행해 보겠습니다. 응용 프로그램을 만든 후에 명령 프롬프트에서 `dotnet restore`를 입력합니다. 이 명령은 NuGet 패키지 복원 프로세스를 실행합니다. NuGet은 .NET 패키지 관리자입니다. 이 명령은 프로젝트에 대한 누락된 종속성 중 하나를 다운로드합니다. 이 프로젝트는 새 프로젝트이므로 어떤 종속성도 없습니다. 따라서 처음 실행하면 .NET Core 프레임워크가 다운로드됩니다. 이 초기 단계 후에 새 종속 패키지를 추가하거나 종속성 버전을 업데이트할 때 `dotnet restore`를 실행하기만 하면 됩니다.
+파일 수정을 시작하기 전에 간단한 Hello World 애플리케이션을 실행하는 단계를 진행해 보겠습니다. 애플리케이션을 만든 후에 명령 프롬프트에서 `dotnet restore`를 입력합니다. 이 명령은 NuGet 패키지 복원 프로세스를 실행합니다. NuGet은 .NET 패키지 관리자입니다. 이 명령은 프로젝트에 대한 누락된 종속성 중 하나를 다운로드합니다. 이 프로젝트는 새 프로젝트이므로 어떤 종속성도 없습니다. 따라서 처음 실행하면 .NET Core 프레임워크가 다운로드됩니다. 이 초기 단계 후에 새 종속 패키지를 추가하거나 종속성 버전을 업데이트할 때 `dotnet restore`를 실행하기만 하면 됩니다.
 
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
-패키지를 복원한 후 `dotnet build`를 실행합니다. 이렇게 하면 빌드 엔진이 실행되고 응용 프로그램 실행 파일이 만들어집니다. 마지막으로 `dotnet run`을 실행하여 응용 프로그램을 실행합니다.
+패키지를 복원한 후 `dotnet build`를 실행합니다. 이렇게 하면 빌드 엔진이 실행되고 애플리케이션 실행 파일이 만들어집니다. 마지막으로 `dotnet run`을 실행하여 애플리케이션을 실행합니다.
 
-이 간단한 Hello World 응용 프로그램 코드은 모두 Program.cs에 있습니다. 원하는 텍스트 편집기를 사용하여 해당 파일을 엽니다. 이제 첫 번째 변경을 수행해 보겠습니다.
+이 간단한 Hello World 애플리케이션 코드은 모두 Program.cs에 있습니다. 원하는 텍스트 편집기를 사용하여 해당 파일을 엽니다. 이제 첫 번째 변경을 수행해 보겠습니다.
 파일 맨 위에서 using 문을 보세요.
 
 ```csharp
@@ -54,7 +54,7 @@ namespace TeleprompterConsole
 
 ## <a name="reading-and-echoing-the-file"></a>파일 읽기 및 에코
 
-추가할 첫 번째 기능은 텍스트 파일을 읽고 콘솔에 해당 텍스트를 모두 표시하는 기능입니다. 먼저 텍스트 파일을 추가해 보겠습니다. 이 [샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)에 대한 GitHub 리포지토리의 [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 파일을 프로젝트 디렉터리로 복사합니다. 이 파일은 응용 프로그램에 대한 스크립트로 작동합니다. 이 항목에 대한 샘플 앱을 다운로드하는 방법에 대한 정보를 원하는 경우 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) 항목의 지침을 참조하세요.
+추가할 첫 번째 기능은 텍스트 파일을 읽고 콘솔에 해당 텍스트를 모두 표시하는 기능입니다. 먼저 텍스트 파일을 추가해 보겠습니다. 이 [샘플](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-teleprompter)에 대한 GitHub 리포지토리의 [sampleQuotes.txt](https://github.com/dotnet/samples/raw/master/csharp/getting-started/console-teleprompter/sampleQuotes.txt) 파일을 프로젝트 디렉터리로 복사합니다. 이 파일은 애플리케이션에 대한 스크립트로 작동합니다. 이 항목에 대한 샘플 앱을 다운로드하는 방법에 대한 정보를 원하는 경우 [샘플 및 자습서](../../samples-and-tutorials/index.md#viewing-and-downloading-samples) 항목의 지침을 참조하세요.
 
 다음에는 다음 메서드를 `Program` 클래스에 추가합니다(`Main` 메서드 바로 아래).
 
@@ -155,7 +155,7 @@ if (lineLength > 70)
 
 ## <a name="async-tasks"></a>비동기 작업
 
-이 마지막 단계에서는 텍스트 표시 속도를 높이거나 낮추려는 경우 사용자로부터 입력을 읽는 작업을 실행하면서 다른 작업에서 비동기적으로 출력을 쓰는 코드를 추가합니다. 이 과정은 몇 가지 단계로 진행되며 마지막에 필요한 모든 업데이트가 수행됩니다.
+이 마지막 단계에서는 텍스트 표시 속도를 높이거나 낮추려는 경우 또는 텍스트 표시를 완전히 중지하려는 경우 사용자로부터 입력을 읽는 작업을 실행하면서 다른 작업에서 비동기적으로 출력을 쓰는 코드를 추가합니다. 이 과정은 몇 가지 단계로 진행되며 마지막에 필요한 모든 업데이트가 수행됩니다.
 첫 번째 단계는 지금까지 파일을 읽고 표시하기 위해 만든 코드를 나타내는 비동기 <xref:System.Threading.Tasks.Task> 반환 메서드를 만드는 것입니다.
 
 이 메서드를 `Program` 클래스(`Main` 메서드 본문에서 가져옴)에 추가합니다.
@@ -185,12 +185,12 @@ private static async Task ShowTeleprompter()
 ShowTeleprompter().Wait();
 ```
 
-여기 `Main`에서 코드는 동기적으로 대기합니다. 가능한 경우 동기적으로 대기하는 대신 `await` 연산자를 사용하는 것이 좋습니다. 그러나 콘솔 응용 프로그램의 `Main` 메서드에서는 `await` 연산자를 사용할 수 없습니다. 결과적으로 모든 작업을 완료하기 전에 응용 프로그램이 종료됩니다.
+여기 `Main`에서 코드는 동기적으로 대기합니다. 가능한 경우 동기적으로 대기하는 대신 `await` 연산자를 사용하는 것이 좋습니다. 그러나 콘솔 애플리케이션의 `Main` 메서드에서는 `await` 연산자를 사용할 수 없습니다. 결과적으로 모든 작업을 완료하기 전에 애플리케이션이 종료됩니다.
 
 > [!NOTE]
-> C# 7.1 이상을 사용하는 경우 [`async` `Main` 메서드](../whats-new/csharp-7-1.md#async-main)로 콘솔 응용 프로그램을 만들 수 있습니다.
+> C# 7.1 이상을 사용하는 경우 [`async``Main` 메서드](../whats-new/csharp-7-1.md#async-main)로 콘솔 애플리케이션을 만들 수 있습니다.
 
-다음에는 콘솔에서 읽는 두 번째 비동기 메서드를 작성하고 ‘<’(보다 작음) 또는 ‘>’(보다 큼) 키를 확인해야 합니다. 해당 작업에 대해 추가하는 메서드는 다음과 같습니다.
+다음에는 콘솔에서 읽는 두 번째 비동기 메서드를 작성하고 ‘<’(보다 작음), ‘>’(보다 큼) 및 ‘X’ 또는 ‘x’ 키를 확인해야 합니다. 해당 작업에 대해 추가하는 메서드는 다음과 같습니다.
 
 ```csharp
 private static async Task GetInput()
@@ -208,13 +208,18 @@ private static async Task GetInput()
             {
                 delay += 10;
             }
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+            {
+                break;
+            }
         } while (true);
     };
     await Task.Run(work);
 }
 ```
 
-이 메서드는 콘솔에서 키를 읽고 사용자가 ‘<’(보다 작음) 또는 ‘>’(보다 큼) 키를 누를 때 지연을 나타내는 지역 변수를 수정하는 <xref:System.Action> 대리자를 나타내는 람다 식을 만듭니다. 이 메서드는 <xref:System.Console.ReadKey> 를 사용하여 차단한 후 사용자가 키를 누를 때까지 기다립니다.
+이 메서드는 콘솔에서 키를 읽고 사용자가 ‘<’(보다 작음) 또는 ‘>’(보다 큼) 키를 누를 때 지연을 나타내는 지역 변수를 수정하는 <xref:System.Action> 대리자를 나타내는 람다 식을 만듭니다. 사용자가 ‘X’ 또는 ‘x’ 키를 누를 때 대리자 메서드가 완료되면 사용자가 언제든지 텍스트 표시를 중지할 수 있습니다.
+이 메서드는 <xref:System.Console.ReadKey> 를 사용하여 차단한 후 사용자가 키를 누를 때까지 기다립니다.
 
 이 기능을 완료하려면 이러한 두 작업(`GetInput` 및 `ShowTeleprompter`)을 시작하고 이러한 두 작업 간에 공유 데이터를 관리하는 새 `async Task` 반환 메서드를 만들어야 합니다.
 
@@ -225,17 +230,13 @@ namespace TeleprompterConsole
 {
     internal class TelePrompterConfig
     {
-        private object lockHandle = new object();
         public int DelayInMilliseconds { get; private set; } = 200;
 
         public void UpdateDelay(int increment) // negative to speed up
         {
             var newDelay = Min(DelayInMilliseconds + increment, 1000);
             newDelay = Max(newDelay, 20);
-            lock (lockHandle)
-            {
-                DelayInMilliseconds = newDelay;
-            }
+            DelayInMilliseconds = newDelay;
         }
 
         public bool Done { get; private set; }
@@ -253,8 +254,6 @@ namespace TeleprompterConsole
 ```csharp
 using static System.Math;
 ```
-
-[`lock`](../language-reference/keywords/lock-statement.md) 문에 새로 추가된 다른 언어 기능이 있습니다. 이 문은 언제든지 단일 스레드만 해당 코드에 포함될 수 있도록 합니다. 한 스레드가 잠긴 섹션에 있으면 다른 스레드는 첫 번째 스레드가 해당 섹션을 종료할 때까지 기다려야 합니다. `lock` 문은 잠금 섹션을 보호하는 개체를 사용합니다. 이 클래스를 클래스의 전용 개체를 잠그기 위해 표준 관용구를 사용합니다.
 
 다음에는 새 `config` 개체를 사용하도록 `ShowTeleprompter` 및 `GetInput` 메서드를 업데이트해야 합니다. 두 작업을 모두 시작한 다음 첫 번째 작업이 완료될 때 종료되는 하나의 최종 `Task` 반환 `async` 메서드를 작성합니다.
 
@@ -298,6 +297,8 @@ private static async Task GetInput(TelePrompterConfig config)
                 config.UpdateDelay(-10);
             else if (key.KeyChar == '<')
                 config.UpdateDelay(10);
+            else if (key.KeyChar == 'X' || key.KeyChar == 'x')
+                config.SetDone();
         } while (!config.Done);
     };
     await Task.Run(work);
@@ -312,7 +313,7 @@ RunTeleprompter().Wait();
 
 ## <a name="conclusion"></a>결론
 
-이 자습서에서는 콘솔 응용 프로그램 사용과 관련된 다양한 C# 언어 및 .NET Core 라이브러리 기능을 살펴보았습니다.
+이 자습서에서는 콘솔 애플리케이션 사용과 관련된 다양한 C# 언어 및 .NET Core 라이브러리 기능을 살펴보았습니다.
 이 지식을 토대로 해당 언어 및 여기서 소개된 클래스에 대해 좀 더 자세히 알아볼 수 있습니다. 지금까지 파일 및 콘솔 I/O 기본 사항, 작업 기반 비동기 프로그래밍의 차단 및 비차단 사용, C# 언어 둘러보기, C# 프로그램이 구성되는 방식, .NET Core 명령줄 인터페이스 및 도구에 대해 살펴보았습니다.
 
 파일 I/O에 대한 자세한 내용은 [파일 및 스트림 I/O](../../standard/io/index.md) 항목을 참조하세요. 이 자습서에서 사용된 비동기 프로그래밍 모델에 대한 자세한 내용은 [작업 기반 비동기 프로그래밍](../..//standard/parallel-programming/task-based-asynchronous-programming.md) 항목 및 [비동기 프로그래밍](../async.md) 항목을 참조하세요.

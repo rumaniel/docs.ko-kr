@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a2d4b7592727ca20ee79867094d6972eb9c4baed
+ms.sourcegitcommit: d55e14eb63588830c0ba1ea95a24ce6c57ef8c8c
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67857237"
+---
 ### <a name="wcf-msmqsecurehashalgorithm-default-value-is-now-sha256"></a>WCF MsmqSecureHashAlgorithm 기본값은 이제 SHA256입니다.
 
 |   |   |

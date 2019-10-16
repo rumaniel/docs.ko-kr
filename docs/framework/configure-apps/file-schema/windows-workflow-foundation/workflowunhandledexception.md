@@ -1,23 +1,24 @@
 ---
-title: '&lt;workflowUnhandledException&gt;'
+title: <workflowUnhandledException>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
-ms.openlocfilehash: d9db6ecc2e95e0d1ec5738f1d2f4a09a89c57f21
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 29b6d8982e712a0fa595b3103803f1795adea892
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32755138"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398563"
 ---
-# <a name="ltworkflowunhandledexceptiongt"></a>&lt;workflowUnhandledException&gt;
+# <a name="workflowunhandledexception"></a>\<workflowUnhandledException>
 워크플로 서비스 내에서 처리되지 않은 예외가 발생할 때 수행할 동작을 지정할 수 있는 서비스 동작입니다.  
   
-\<system.ServiceModel>  
-\<동작 >  
-\<serviceBehaviors>  
-\<동작 >  
-\<workflowUnhandledException >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<컴퓨터. ServiceModel >** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-servicebehaviors-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<workflowUnhandledException >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -45,10 +46,11 @@ ms.locfileid: "32755138"
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<동작 >의 \<serviceBehaviors >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|동작 요소를 지정합니다.|  
+|[\<servicebehaviors의 \<동작 > >](behavior-of-servicebehaviors-of-workflow.md)|동작 요소를 지정합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>  
- <xref:System.ServiceModel.Activities.Configuration.WorkflowUnhandledExceptionElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>
+- <xref:System.ServiceModel.Activities.Configuration.WorkflowUnhandledExceptionElement>

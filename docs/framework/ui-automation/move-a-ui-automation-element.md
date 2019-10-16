@@ -9,18 +9,16 @@ helpviewer_keywords:
 - elements, moving
 - UI Automation, moving elements
 ms.assetid: 4042cb44-e27e-4a03-ac36-9be1eed65b47
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 144d2ce4b539a5eb4a744f176593b29f920cc528
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 43b1e005cdb499fae920a0999feaa56c5409f653
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582085"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69964688"
 ---
 # <a name="move-a-ui-automation-element"></a>UI 자동화 요소 이동
 > [!NOTE]
->  이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 최신 정보에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]를 참조 하세요 [Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746)합니다.  
+> 이 설명서는 <xref:System.Windows.Automation> 네임스페이스에 정의된 관리되는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 클래스를 사용하려는 .NET Framework 개발자를 위한 것입니다. 에 대 한 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] [최신 정보는 Windows Automation API: UI 자동화](https://go.microsoft.com/fwlink/?LinkID=156746).  
   
  이 예에서는 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 요소를 지정된 화면 위치로 이동하는 방법을 보여 줍니다.  
   
@@ -32,5 +30,6 @@ ms.locfileid: "48582085"
 [!code-csharp[WindowMove#1300](../../../samples/snippets/csharp/VS_Snippets_Wpf/WindowMove/CSharp/WindowMove.cs#1300)]
 [!code-vb[WindowMove#1300](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WindowMove/VisualBasic/windowmove.vb#1300)]  
   
-## <a name="see-also"></a>참고 항목  
- [설명은 WindowPattern 샘플](https://msdn.microsoft.com/library/598b695c-8baf-406e-bbfb-2a1c7842a1de)
+## <a name="see-also"></a>참고자료
+
+- [WindowPattern 샘플](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/WindowMove)

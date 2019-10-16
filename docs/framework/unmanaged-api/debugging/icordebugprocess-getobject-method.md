@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 84b6edf122aa3d6d942e06c9f5c7dd13b0bfa19e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8b67006a1e8db8bf52e9bbfbcba4632f09f68a35
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416395"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737049"
 ---
 # <a name="icordebugprocessgetobject-method"></a>ICorDebugProcess::GetObject 메서드
 이 메서드는 구현되지 않았습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetObject(  
     [out] ICorDebugValue **ppObject  
 );  

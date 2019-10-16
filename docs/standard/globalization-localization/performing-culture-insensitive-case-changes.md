@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 822d551c-c69a-4191-82f4-183d82c9179c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 844b0edb93b93704c4886495c673dc0496f7ba71
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 04601ac0e6b1bc3289be36ce3e1a144ce57ccefb
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44192979"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54550515"
 ---
 # <a name="performing-culture-insensitive-case-changes"></a>Culture를 구분하지 않는 대/소문자 변경 수행
 <xref:System.String.ToUpper%2A?displayProperty=nameWithType>, <xref:System.String.ToLower%2A?displayProperty=nameWithType>, <xref:System.Char.ToUpper%2A?displayProperty=nameWithType> 및 <xref:System.Char.ToLower%2A?displayProperty=nameWithType> 메서드는 매개 변수를 허용하지 않는 오버로드를 제공합니다. 기본적으로 매개 변수가 없는 이러한 오버로드는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType>의 값에 따라 대/소문자 변경을 수행합니다. 이렇게 하면 문화권에 따라 달라질 수 있는 대/소문자 구분 결과가 생성됩니다. 대/소문자 변경에 문화권을 구분할지 또는 문화권을 구분하지 않을지 명확하게 하려면 `culture` 매개 변수를 명시적으로 지정하도록 요구하는 이러한 메서드의 오버로드를 사용해야 합니다. 문화권을 구분하는 대/소문자 변경의 경우 `culture` 매개 변수에 대해 `CultureInfo.CurrentCulture`를 지정합니다. 문화권을 구분하지 않는 대/소문자 변경의 경우 `culture` 매개 변수에 대해 `CultureInfo.InvariantCulture`를 지정합니다.  
@@ -34,7 +34,7 @@ ms.locfileid: "44192979"
 ## <a name="using-the-stringtoupper-and-stringtolower-methods"></a>String.ToUpper 및 String.ToLower 메서드 사용  
  코드를 명확히 하기 위해 항상 `culture` 매개 변수를 명시적으로 지정할 수 있게 하는 `String.ToUpper` 및 `String.ToLower` 메서드의 오버로드를 사용하는 것이 좋습니다. 예를 들어 다음 코드에서는 ID 조회를 수행합니다. `key.ToLower` 작업은 기본적으로 문화권을 구분하지만, 이 동작은 코드 읽기에서 명확하지 않습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
   
 ```vb  
 Shared Function LookupKey(key As String) As Object  
@@ -69,8 +69,8 @@ static object LookupKey(string key)
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>  
-- <xref:System.String.ToLower%2A?displayProperty=nameWithType>  
-- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>  
-- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>  
+- <xref:System.String.ToUpper%2A?displayProperty=nameWithType>
+- <xref:System.String.ToLower%2A?displayProperty=nameWithType>
+- <xref:System.Char.ToUpper%2A?displayProperty=nameWithType>
+- <xref:System.Char.ToLower%2A?displayProperty=nameWithType>
 - [Culture의 영향을 받지 않는 문자열 작업 수행](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)

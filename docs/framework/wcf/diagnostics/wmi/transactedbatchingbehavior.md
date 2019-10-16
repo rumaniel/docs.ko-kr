@@ -2,12 +2,12 @@
 title: TransactedBatchingBehavior
 ms.date: 03/30/2017
 ms.assetid: 2d03e6ae-f06c-4ada-b279-e01838b2ecdc
-ms.openlocfilehash: d64671ea8bdbfe6ede4cfe43ca517b32ea84f839
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 0b083e46b3f53a0080308deccc0e37768af40fe3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641725"
 ---
 # <a name="transactedbatchingbehavior"></a>TransactedBatchingBehavior
 TransactedBatchingBehavior  
@@ -40,5 +40,6 @@ class TransactedBatchingBehavior : Behavior
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Description.TransactedBatchingBehavior>

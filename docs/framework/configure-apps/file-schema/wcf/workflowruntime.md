@@ -1,37 +1,39 @@
 ---
-title: '&lt;workflowRuntime&gt;'
+title: <workflowRuntime>
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: 849b09936f303c21fe55a6a46d561590c6a4c808
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d12656b77fa219080382603fd04a542d2fa9064a
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504963"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399081"
 ---
-# <a name="ltworkflowruntimegt"></a>&lt;workflowRuntime&gt;
-인스턴스에 대 한 설정을 지정 <xref:System.Workflow.Runtime.WorkflowRuntime> 호스팅 워크플로 기반 Windows Communication Foundation (WCF) 서비스에 대 한 합니다.  
+# <a name="workflowruntime"></a>\<workflowRuntime>
+WCF (워크플로 기반 Windows Communication Foundation) <xref:System.Workflow.Runtime.WorkflowRuntime> 서비스를 호스팅하기 위한의 인스턴스에 대 한 설정을 지정 합니다.  
   
- \<system.ServiceModel>  
-\<동작 >  
-\<serviceBehaviors>  
-\<동작 >  
-\<workflowRuntime>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<serviceBehaviors >** ](servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<동작 >** ](behavior-of-servicebehaviors.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<workflowRuntime >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<workflowRuntime cachedInstanceExpiration="TimeSpan"  
-                                  enablePerformanceCounters="Boolean"  
-                                  name="String"  
-                                  validateOnCreate="Boolean">  
-                 <commonParameters>  
-                    <add name="String" value="String" />  
-                 </commonParameters>  
-                 <services>  
-                    <add type="String"/>  
-                 </services>  
-</workflowRuntime>  
+<workflowRuntime cachedInstanceExpiration="TimeSpan"
+                 enablePerformanceCounters="Boolean"
+                 name="String"
+                 validateOnCreate="Boolean">
+  <commonParameters>
+    <add name="String"
+         value="String" />
+  </commonParameters>
+  <services>
+    <add type="String" />
+  </services>
+</workflowRuntime>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -39,7 +41,7 @@ ms.locfileid: "43504963"
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |cachedInstanceExpiration|워크플로 인스턴스가 강제로 언로드되거나 중단되기 전에 메모리에 유휴 상태로 유지될 수 있는 최대 기간을 지정하는 선택적 <xref:System.TimeSpan> 값입니다. workflowruntime에 unloadOnIdle을 수행하는 `PersistenceService`가 있으면 이 특성이 무시됩니다.|  
 |enablePerformanceCounters|성능 카운터를 사용하는지 여부를 지정하는 선택적 부울 값입니다. 성능 카운터는 다양한 워크플로 관련 통계에 대한 정보를 제공하지만 워크플로 런타임 엔진이 시작될 때 및 워크플로 인스턴스가 실행되고 있을 때 성능을 저하시킵니다. 기본값은 `true`입니다.|  
@@ -57,33 +59,34 @@ ms.locfileid: "43504963"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<동작 >](../../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
+|[\<behavior>](behavior-of-endpointbehaviors.md)|동작 요소를 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
- 동작을 제어 하려면 구성 파일을 사용 하는 방법은 <xref:System.Workflow.Runtime.WorkflowRuntime> 개체는 Windows Workflow Foundation 호스트 응용 프로그램의 참조 [워크플로 구성 파일](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))합니다.  
+ 구성 파일을 사용 하 여 Windows Workflow Foundation 호스트 응용 프로그램 <xref:System.Workflow.Runtime.WorkflowRuntime> 개체의 동작을 제어 하는 방법에 대 한 자세한 내용은 [워크플로 구성 파일](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))을 참조 하세요.  
   
 ## <a name="example"></a>예제  
   
 ```xml  
-<serviceBehaviors>  
-   <behavior name="ServiceBehavior">  
-      <workflowRuntime name="WorkflowServiceHostRuntime"  
-                       validateOnCreate="true"  
-                       enablePerformanceCounters="true">  
-         <commonParameters>  
-            <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />  
-            <add name="EnableRetries" value="True" />  
-         </commonParameters>  
-         <services>  
-             <add type="NetFx.Checkin.Scenario.WorkflowServices.WorkflowBasedServices.Common.TestPersistenceService.FilePersistenceService, NetFx.Checkin.Scenario.WorkflowServices.WorkflowBasedServices.Common"/>  
-         </services>  
-      </workflowRuntime>  
-   </behavior>  
-</serviceBehaviors>  
+<serviceBehaviors>
+   <behavior name="ServiceBehavior">
+      <workflowRuntime name="WorkflowServiceHostRuntime"
+                       validateOnCreate="true"
+                       enablePerformanceCounters="true">
+         <commonParameters>
+            <add name="ConnectionString" value="Initial Catalog=WorkflowStore;Data Source=localhost;Integrated Security=SSPI;" />
+            <add name="EnableRetries" value="True" />
+         </commonParameters>
+         <services>
+             <add type="NetFx.Checkin.Scenario.WorkflowServices.WorkflowBasedServices.Common.TestPersistenceService.FilePersistenceService, NetFx.Checkin.Scenario.WorkflowServices.WorkflowBasedServices.Common"/>
+         </services>
+      </workflowRuntime>
+   </behavior>
+</serviceBehaviors>
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>  
- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>  
- <xref:System.Workflow.Runtime.WorkflowRuntime>  
- [워크플로 구성 파일](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
+- <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
+- <xref:System.Workflow.Runtime.WorkflowRuntime>
+- [워크플로 구성 파일](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms732240(v=vs.90))

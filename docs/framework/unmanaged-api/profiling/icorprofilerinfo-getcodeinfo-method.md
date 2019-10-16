@@ -17,28 +17,28 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21dc937bef2bbe197a5dc4af72ff50dff64dbbbd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2cc587edf763a352501a0d9097bdab2c54658d98
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33454145"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762850"
 ---
 # <a name="icorprofilerinfogetcodeinfo-method"></a>ICorProfilerInfo::GetCodeInfo 메서드
 지정된 함수 ID와 연결된 네이티브 코드의 범위를 가져옵니다.  
   
- 이 메서드는 사용되지 않습니다. 사용 하 여 [icorprofilerinfo2:: Getcodeinfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) 메서드 대신 합니다.  
+ 이 메서드는 사용되지 않습니다. 사용 된 [ICorProfilerInfo2::GetCodeInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getcodeinfo2-method.md) 메서드 대신 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetCodeInfo(  
     [in]  FunctionID functionId,  
     [out] LPCBYTE    *pStart,  
     [out] ULONG      *pcSize);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `functionId`  
  [in] 네이티브 코드가 연결된 함수의 ID입니다.  
   
@@ -54,7 +54,7 @@ HRESULT GetCodeInfo(
  이 함수는 호출자 할당 버퍼를 사용합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
@@ -62,7 +62,8 @@ HRESULT GetCodeInfo(
   
  **.NET framework 버전:** 1.0  
   
-## <a name="see-also"></a>참고 항목  
- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)  
- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)  
- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorProfilerInfo 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [프로파일링 인터페이스](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [프로파일링](../../../../docs/framework/unmanaged-api/profiling/index.md)

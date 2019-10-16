@@ -1,0 +1,7 @@
+- name: 네임스페이스
+  href: index.md
+  items:
+    - name: 네임스페이스 사용
+      href: using-namespaces.md
+    - name: '방법: My 네임스페이스 사용'
+      href: how-to-use-the-my-namespace.md

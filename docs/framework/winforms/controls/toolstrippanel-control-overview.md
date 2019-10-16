@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - ToolStripPanel control [Windows Forms], about ToolStripPanel control
 ms.assetid: ce54a60c-5eba-4b4c-bd77-cf0748a666cc
-ms.openlocfilehash: 1f13240df9879f656d986845552e8e93a74ade8f
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 694cb88807f718a1f3122ae8cd9d7d4af4e576e1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47193371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009372"
 ---
 # <a name="toolstrippanel-control-overview"></a>ToolStripPanel 컨트롤 개요
 A <xref:System.Windows.Forms.ToolStripPanel> 배치 및 래프팅 할 단일 영역을 제공 <xref:System.Windows.Forms.ToolStrip>를 <xref:System.Windows.Forms.MenuStrip>, 및 <xref:System.Windows.Forms.StatusStrip> 컨트롤입니다. 여러 <xref:System.Windows.Forms.ToolStrip> 컨트롤에 따라 가로 또는 세로로 쌓입니다 합니다 <xref:System.Windows.Forms.ToolStripPanelRow.Orientation%2A> 의 <xref:System.Windows.Forms.ToolStripPanel>합니다.  
@@ -28,7 +28,8 @@ A <xref:System.Windows.Forms.ToolStripPanel> 배치 및 래프팅 할 단일 영
 |<xref:System.Windows.Forms.ToolStripPanel.Rows%2A>|가져옵니다 합니다 <xref:System.Windows.Forms.ToolStripPanelRow> 이 <xref:System.Windows.Forms.ToolStripPanel>합니다.|  
 |<xref:System.Windows.Forms.ToolStripPanel.Join%2A>|추가 된 <xref:System.Windows.Forms.ToolStrip> 에 <xref:System.Windows.Forms.ToolStripPanel>합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.ToolStripContainer>  
- <xref:System.Windows.Forms.ToolStripContentPanel>  
- [ToolStrip 샘플](https://msdn.microsoft.com/library/b7352439-184a-4a3a-b2ad-07465d3af9ed)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.ToolStripContainer>
+- <xref:System.Windows.Forms.ToolStripContentPanel>
+- [ToolStrip 샘플](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/ms181005(v=vs.90))

@@ -1,22 +1,22 @@
 ---
-title: '방법: 한 파일 그룹 (LINQ) (Visual Basic)를 사용 하 여 여러 파일로 분할'
+title: '방법: 그룹을 사용 하 여 파일을 여러 파일로 분할 (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 19b542e22aa6e987a21095025a136d7602057b2c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e12de7380ca34478506fde98aecae2501d2529ee
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33642154"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835104"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>방법: 한 파일 그룹 (LINQ) (Visual Basic)를 사용 하 여 여러 파일로 분할
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>방법: 그룹을 사용 하 여 파일을 여러 파일로 분할 (LINQ) (Visual Basic)
 이 예제에서는 두 파일의 내용을 병합한 다음 새로운 방식으로 데이터를 구성하는 새 파일 집합을 만드는 한 가지 방법을 보여 줍니다.  
   
 ### <a name="to-create-the-data-files"></a>데이터 파일을 만들려면  
   
-1.  이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.  
+1. 이러한 이름을 names1.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다.  
   
-    ```  
+    ```text  
     Bankov, Peter  
     Holm, Michael  
     Garcia, Hugo  
@@ -29,9 +29,9 @@ ms.locfileid: "33642154"
     Garcia, Debra  
     ```  
   
-2.  이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일에서 일부 이름은 공통됩니다.  
+2. 이러한 이름을 names2.txt 텍스트 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 두 파일의 일부 이름에는 공통점이 있습니다.  
   
-    ```  
+    ```text  
     Liu, Jinghao  
     Bankov, Peter  
     Holm, Michael  
@@ -116,8 +116,9 @@ End Class
  프로그램에서 데이터 파일과 동일한 폴더에 각 그룹에 대한 별도 파일을 작성합니다.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
+VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다. 여기에는 system.string 네임 스페이스에 대 한 `Imports` 문이 사용 됩니다.
   
-## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>참조
+
+- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

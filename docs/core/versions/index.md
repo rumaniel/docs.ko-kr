@@ -1,27 +1,27 @@
 ---
-title: .NET Core 버전 관리
-description: .NET Core 버전 관리의 작동 방식을 이해합니다.
+title: .NET Core 런타임 및 SDK의 버전 관리 방법
+description: 이 문서에서는 .NET Core SDK 및 런타임의 버전 관리 방법을 설명합니다(유의적 버전과 유사함).
 author: bleroy
-ms.author: mairaw
 ms.date: 07/26/2018
-ms.openlocfilehash: 9f77709abf59d5346bf5e3c6f512cfabbf9e50de
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.custom: seodec18
+ms.openlocfilehash: b8cfb2d40b1ae88ef03daca6c31b283256bc6f26
+ms.sourcegitcommit: dfd612ba454ce775a766bcc6fe93bc1d43dfda47
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188471"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72179952"
 ---
-# <a name="net-core-versioning"></a>.NET Core 버전 관리
+# <a name="overview-of-how-net-core-is-versioned"></a>.NET Core의 버전 관리 방법 개요
 
-.NET core는 응용 프로그램을 개발하는 데 필요한 도구를 포함하는 .NET Core 런타임 및 .NET Core SDK를 가리킵니다. .NET Core SDK는 이전 버전의 .NET Core 런타임에서 작동하도록 설계되었습니다. 이 문서에서는 런타임 및 SDK 버전 전략을 설명합니다. .NET Standard의 버전 번호에 대한 설명은 [.NET Standard](../../standard/net-standard.md#net-implementation-support)를 소개하는 문서에 있습니다.
+.NET core는 애플리케이션을 개발하는 데 필요한 도구를 포함하는 .NET Core 런타임 및 .NET Core SDK를 가리킵니다. .NET Core SDK는 이전 버전의 .NET Core 런타임에서 작동하도록 설계되었습니다. 이 문서에서는 런타임 및 SDK 버전 전략을 설명합니다. .NET Standard의 버전 번호에 대한 설명은 [.NET Standard](../../standard/net-standard.md#net-implementation-support)를 소개하는 문서에 있습니다.
 
-.NET Core 런타임 및.NET Core SDK는 다른 속도로 새 기능을 추가합니다. 일반적으로 .NET Core SDK는 .NET Core 런타임이 프로덕션 환경에서 사용하는 런타임을 변경하는 것보다 신속하게 업데이트된 도구를 제공합니다. 안타깝게도 이 문제는 지난 몇 년 동안 몇 가지 버전 관리 전략을 가져왔습니다. [.NET Core 버전 관리](version-history.md) 문서에서 이력에 대해 알아볼 수 있습니다.
+.NET Core 런타임 및.NET Core SDK는 다른 속도로 새 기능을 추가합니다. 일반적으로 .NET Core SDK는 .NET Core 런타임이 프로덕션 환경에서 사용하는 런타임을 변경하는 것보다 신속하게 업데이트된 도구를 제공합니다.
 
 ## <a name="versioning-details"></a>버전 관리 정보
 
 ".NET Core 2.1"은 .NET Core 런타임 버전 번호를 가리킵니다. .NET Core 런타임에는 [유의적 버전](#semantic-versioning)을 따르는 버전 관리에 대한 주/부/패치 접근 방식이 있습니다.
 
-.NET Core SDK는 유의적 버전을 따르지 않습니다. .NET Core SDK는 더 빠르게 릴리스되며 해당 버전은 정렬된 런타임과 SDK의 자체 보조 및 패치 릴리스 모두를 전달해야 합니다. .NET Core SDK 버전의 처음 두 위치는 릴리스된 .NET Core 런타임에 고정되어 있습니다. SDK의 각 버전은 이 런타임 또는 다른 하위 버전에 대한 응용 프로그램을 만들 수 있습니다.
+.NET Core SDK는 유의적 버전을 따르지 않습니다. .NET Core SDK는 더 빠르게 릴리스되며 해당 버전은 정렬된 런타임과 SDK의 자체 보조 및 패치 릴리스 모두를 전달해야 합니다. .NET Core SDK 버전의 처음 두 위치는 릴리스된 .NET Core 런타임에 고정되어 있습니다. SDK의 각 버전은 이 런타임 또는 다른 하위 버전에 대한 애플리케이션을 만들 수 있습니다.
 
 SDK 버전 번호의 세 번째 위치는 보조 및 패치 번호를 모두 전달합니다. 부 버전에는 100이 곱해집니다. 부 버전 1, 패치 버전 2는 102로 표시됩니다. 마지막 두 자리는 패치 번호를 나타냅니다. 예를 들어 .NET Core 2.2의 릴리스에서는 다음 표와 같은 릴리스를 만들 수 있습니다.
 
@@ -32,12 +32,12 @@ SDK 버전 번호의 세 번째 위치는 보조 및 패치 번호를 모두 전
 | 런타임 및 SDK 패치 | 2.2.1             | 2.2.102           |
 | SDK 기능 변경    | 2.2.1             | 2.2.200           |
 
-(\*) 이 차트는 향후 2.2 .NET Core Runtime를 사용합니다. 기록 아티팩트는 예제와 같이 .NET Core 2.1에 대한 첫 번째 SDK가 2.1.300이기 때문입니다. 자세한 내용은 [.NET Core 버전 관리 기록](version-history.md)을 참조하세요.
+(\*) 이 차트는 향후 2.2 .NET Core Runtime를 사용합니다. 기록 아티팩트는 예제와 같이 .NET Core 2.1에 대한 첫 번째 SDK가 2.1.300이기 때문입니다. 자세한 내용은 [.NET Core 버전 선택](selection.md)을 참조하세요.
 
 참고:
 
-* 런타임 기능 업데이트 전에 SDK에 10개의 기능 업데이트가 있는 경우 버전 번호는 2.2.900 이후의 기능 릴리스로 2.2.1000과 같은 숫자를 가진 1000 시리즈로 롤링됩니다. 이 상황은 발생할 것으로 예상되지 않습니다.
-* 기능 릴리스가 없는 99 패치 릴리스는 발생하지 않습니다. 릴리스가 이 숫자에 가까워지면 기능 릴리스가 강제 실행됩니다.
+- 런타임 기능 업데이트 전에 SDK에 10개의 기능 업데이트가 있는 경우 버전 번호는 2.2.900 이후의 기능 릴리스로 2.2.1000과 같은 숫자를 가진 1000 시리즈로 롤링됩니다. 이 상황은 발생할 것으로 예상되지 않습니다.
+- 기능 릴리스가 없는 99 패치 릴리스는 발생하지 않습니다. 릴리스가 이 숫자에 가까워지면 기능 릴리스가 강제 실행됩니다.
 
 [dotnet/designs](https://github.com/dotnet/designs/pull/29) 리포지토리에서 초기 제안서에 자세한 내용을 확인할 수 있습니다.
 
@@ -55,24 +55,24 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 다음 경우에는 `MAJOR`가 증가합니다.
 
-* 제품 또는 새 제품 방향에 중대한 변경이 발생합니다.
-* 주요 변경 내용이 있었습니다. 주요 변경 내용을 받아들이는 데는 높은 장벽이 있습니다.
-* 이전 버전이 더 이상 지원되지 않는 경우
-* 기존 종속성의 최신 `MAJOR` 버전이 채택된 경우
+- 제품 또는 새 제품 방향에 중대한 변경이 발생합니다.
+- 주요 변경 내용이 있었습니다. 주요 변경 내용을 받아들이는 데는 높은 장벽이 있습니다.
+- 이전 버전이 더 이상 지원되지 않는 경우
+- 기존 종속성의 최신 `MAJOR` 버전이 채택된 경우
 
 다음 경우에는 `MINOR`가 증가합니다.
 
-* 공용 API 노출 영역이 추가된 경우
-* 새 동작이 추가된 경우
-* 기존 종속성의 최신 `MINOR` 버전이 채택된 경우
-* 새 종속성이 도입된 경우
+- 공용 API 노출 영역이 추가된 경우
+- 새 동작이 추가된 경우
+- 기존 종속성의 최신 `MINOR` 버전이 채택된 경우
+- 새 종속성이 도입된 경우
 
 다음 경우에는 `PATCH`가 증가합니다.
 
-* 버그 수정이 이루어진 경우
-* 최신 플랫폼에 대한 지원이 추가된 경우
-* 기존 종속성의 최신 `PATCH` 버전이 채택된 경우
-* 위 경우 중 하나에 해당하지 않는 다른 변경 내용이 있는 경우
+- 버그 수정이 이루어진 경우
+- 최신 플랫폼에 대한 지원이 추가된 경우
+- 기존 종속성의 최신 `PATCH` 버전이 채택된 경우
+- 위 경우 중 하나에 해당하지 않는 다른 변경 내용이 있는 경우
 
 여러 가지 변경이 이루어진 경우에는 개별 변경의 영향을 받는 가장 높은 요소가 증가되고 다음은 0으로 다시 설정됩니다. 예를 들어 `MAJOR`가 증가하면 `MINOR` 및 `PATCH`는 0으로 다시 설정됩니다. `MINOR`가 증가하면 `PATCH`는 0으로 다시 설정되지만 `MAJOR`는 변경되지 않습니다.
 
@@ -82,11 +82,11 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ### <a name="preview-versions"></a>미리 보기 버전
 
-미리 보기 버전에는 `-preview[number]-([build]|"final")`이 추가됩니다. 예를 들어, `2.0.0-preview1-final`을 입력합니다.
+미리 보기 버전에는 `-preview[number]-([build]|"final")`이 추가됩니다. 예: `2.0.0-preview1-final`
 
 ### <a name="servicing-versions"></a>서비스 버전
 
-릴리스가 출시된 후에 릴리스 분기는 일반적으로 매일 빌드 만들기를 중지하고 대신 서비스 빌드를 만들기 시작합니다. 서비스 버전에는 `-servicing-[number]`이 추가됩니다. 예를 들어, `2.0.1-servicing-006924`을 입력합니다.
+릴리스가 출시된 후에 릴리스 분기는 일반적으로 매일 빌드 만들기를 중지하고 대신 서비스 빌드를 만들기 시작합니다. 서비스 버전에는 `-servicing-[number]`이 추가됩니다. 예: `2.0.1-servicing-006924`
 
 ## <a name="relationship-to-net-standard-versions"></a>.NET Standard 버전과의 관계
 
@@ -103,11 +103,13 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 | 1.0       | 최대 1.6     |
 | 2.0       | 최대 2.0     |
 | 2.1       | 최대 2.0     |
+| 2.2       | 최대 2.0     |
+| 3.0       | 최대 2.1     |
 
 ## <a name="see-also"></a>참고 항목
 
-* [대상 프레임워크](../../standard/frameworks.md)  
-* [.NET Core 배포 패키징](../build/distribution-packaging.md)  
-* [.NET Core Support Lifecycle Fact Sheet](https://www.microsoft.com/net/core/support)(.NET Core 지원 수명 주기 팩트 시트)  
-* [.NET Core 2+ 버전 바인딩](https://github.com/dotnet/designs/issues/3)  
-* [.NET Core용 Docker 이미지](https://hub.docker.com/r/microsoft/dotnet/)
+- [대상 프레임워크](../../standard/frameworks.md)
+- [.NET Core 배포 패키징](../build/distribution-packaging.md)
+- [.NET Core Support Lifecycle Fact Sheet](https://dotnet.microsoft.com/platform/support/policy)(.NET Core 지원 수명 주기 팩트 시트)
+- [.NET Core 2+ 버전 바인딩](https://github.com/dotnet/designs/issues/3)
+- [.NET Core용 Docker 이미지](https://hub.docker.com/_/microsoft-dotnet-core/)

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 573336b32040f44ff1b59fcbb75b59aa00976b5c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 46dab35c44e59a149822005575c83c13e9350455
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430181"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758538"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2 함수
 지정된 된 메모리 매핑된 코드에서 진입점을 실행합니다. 이 함수는 운영 체제 로더에 의해 호출 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 __int32 STDMETHODCALLTYPE _CorExeMain2 (  
    [in] PBYTE           pUnmappedPE,  
    [in] DWORD           cUnmappedPE,  
@@ -38,7 +38,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pUnmappedPE`  
  [in] 메모리 매핑된 코드에 대 한 포인터입니다.  
   
@@ -49,19 +49,20 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
  [in] 실행 가능 이미지의 이름에 대 한 포인터입니다.  
   
  `pLoadersFileName`  
- [in] 로더 파일의 이름입니다.  
+ [in] 로더에서 파일의 이름입니다.  
   
  `pCmdLine`  
- [in] 명령줄 매개 변수가 있는 경우입니다.  
+ [in] 명령줄 매개 변수, 있는 경우입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 전역 정적 함수](../../../../docs/framework/unmanaged-api/metadata/metadata-global-static-functions.md)

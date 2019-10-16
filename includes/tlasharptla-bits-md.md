@@ -1,1 +1,0 @@
-Microsoft BITS(Background Intelligent Transfer Service)

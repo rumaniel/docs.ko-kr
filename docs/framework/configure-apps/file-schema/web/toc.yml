@@ -1,0 +1,8 @@
+- name: 웹 설정 스키마
+  href: index.md
+  items:
+    - name: <system.web> 요소(웹 설정)
+      href: system-web-element-web-settings.md
+      items:
+        - name: <applicationPool> 요소(웹 설정)
+          href: applicationpool-element-web-settings.md

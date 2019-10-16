@@ -1,0 +1,24 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: .NET 애플리케이션 아키텍처 지침
+metadata:
+  document_id: na
+  title: .NET 애플리케이션 아키텍처 지침
+  meta.description: 'Learn about recommended practices for architecting, designing and building .NET software.'
+  ms.topic: landing-page
+  ms.date: 06/12/2019
+abstract:
+  description: 무료로 제공되는 애플리케이션 아키텍처 지침에 따라 프로덕션 준비 .NET 앱을 빌드하는 방법을 알아봅니다.
+sections:
+  - title: 사용 가능한 eBook
+    items:
+      - html: <ul><li><p><a href="containerized-lifecycle/index">Microsoft 플랫폼 및 도구를 사용하여 컨테이너화된 Docker 애플리케이션 수명 주기</a></p>
+      - html: '<p>이 가이드에서는 Visual Studio 및 Microsoft Azure를 사용하여 컨테이너화된 Docker 애플리케이션을 개발하고 유효성을 검사하고 배포하는 데 사용할 수 있는, 권장되는 종단 간 생명 주기 프로세스를 소개합니다.</p></li></ul>'
+      - html: <ul><li><p><a href="modernize-with-azure-containers/index">Azure 클라우드와 Windows 컨테이너를 사용하여 기존 .NET 애플리케이션을 최신으로 바꾸기</a></p>
+      - html: '<p>이 가이드에서는 기존 웹 애플리케이션을 Azure Cloud와 Windows 컨테이너로 마이그레이션하는 데 필요한 방법을 소개합니다. 코딩 방법과 데이터 마이그레이션, 오케스트레이터, CI/CD 프로세스를 알아봅니다.</p></li></ul>'
+      - html: <ul><li><p><a href="modern-web-apps-azure/index">ASP.NET Core 및 Azure를 사용하여 현대식 웹 애플리케이션 설계</a></p>
+      - html: '<p>이 가이드에서는 ASP.NET과 ASP.NET Core 애플리케이션을 빌드하고 해당 애플리케이션을 Azure에서 호스트하는 데 사용할 수 있는 권장 아키텍처와 디자인, 배포 프로세스를 소개합니다.</p></li></ul>'
+      - html: <ul><li><p><a href="microservices/index">컨테이너와 마이크로 서비스 기반 애플리케이션 설계</a></p>
+      - html: <p>이 가이드는 마이크로 서비스 기반 애플리케이션을 개발하고 컨테이너를 사용하여 해당 애플리케이션을 관리하는 방법을 소개합니다. 또한 .NET Core와 Docker 컨테이너를 사용하여 아키텍처를 설계하고 구현하는 방법을 설명합니다.</p></li></ul>
+      - html: '<ul><li><p><a href="serverless/index">서버리스 앱: 아키텍처 및 패턴, Azure 구현</a></p>'
+      - html: '<p>Azure를 활용한 예제를 통해 서버리스 애플리케이션을 빌드하기 위한 가이드입니다. 다양한 아키텍처와 함께 서버리스의 디자인 방법과 장점 및 해결해야 할 문제에 대해 알아보고, 서비스리 앱의 시나리오와 사용 사례를 제공합니다.</p></li></ul>'

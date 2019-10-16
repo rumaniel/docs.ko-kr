@@ -1,5 +1,5 @@
 ---
-title: '&lt;추가&gt; NameValueSectionHandler 및 DictionarySectionHandler 요소'
+title: <add>NameValueSectionHandler 및 DictionarySectionHandler에 대 한 요소
 ms.date: 05/01/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/sectionName/add
@@ -7,22 +7,22 @@ helpviewer_keywords:
 - add Element
 - <add> Element
 ms.assetid: 0d4ddb53-eb2b-49c0-9c33-a8dec5c39b46
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: aeb3e3a4be201369ca2df8d231498dd2400d3c07
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ec6d5045580e887de5f05a05c8f39fa62c6e3f2e
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33361373"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69921321"
 ---
-# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<추가 > NameValueSectionHandler 및 DictionarySectionHandler 요소
+# <a name="add-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<NameValueSectionHandler 및 DictionarySectionHandler에 대 한 > 요소 추가
 
-사용자 지정 응용 프로그램 설정을 추가합니다. 각  **\<추가 >** 태그는 키/값 쌍을 포함 합니다.
+사용자 지정 응용 프로그램 설정을 추가 합니다. **각\<추가 >** 태그에는 키/값 쌍이 포함 되어 있습니다.
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName >**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<추가 >**
+[ **\<configuration>** ](configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<add>**
 
 ## <a name="syntax"></a>구문
 
@@ -34,14 +34,14 @@ ms.locfileid: "33361373"
 
 | 특성 | 설명 |
 | --------- | ----------- |
-| **key**   | 필수 특성입니다.<br><br>설정의 이름을 지정합니다. |
-| **value** | 필수 특성입니다.<br><br>설정의 값을 지정합니다. |
+| **key**   | 필수 특성입니다.<br><br>설정의 이름을 지정 합니다. |
+| **value** | 필수 특성입니다.<br><br>설정 값을 지정 합니다. |
 
 ## <a name="parent-element"></a>부모 요소
 
-| 요소 | 설명 |
+| 요소 | Description |
 | ------- | ------------|
-| [**\<sectionName >** 요소](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 설정을 사용 하는 사용자 지정 구성 섹션에 대 한 정의 <xref:System.Configuration.NameValueSectionHandler> 및 <xref:System.Configuration.DictionarySectionHandler> 클래스입니다. |
+| [섹션 이름 > 요소  **\<** ](custom-element-2.md) | <xref:System.Configuration.NameValueSectionHandler> 및<xref:System.Configuration.DictionarySectionHandler> 클래스를 사용 하는 사용자 지정 구성 섹션에 대 한 설정을 정의 합니다. |
 
 ## <a name="child-elements"></a>자식 요소
 
@@ -49,7 +49,7 @@ ms.locfileid: "33361373"
 
 ## <a name="example"></a>예제
 
-사용자 지정 구성 섹션 정의 및 사용 하는 방법을 보여 주는 다음 예제는  **\<추가 >** 요소 섹션으로 설정을 적용 합니다.
+다음 예제에서는 사용자 지정 구성 섹션을 정의 하 고  **\<add >** 요소를 사용 하 여 설정을 섹션에 배치 하는 방법을 보여 줍니다.
 
 ```xml
 <configuration>
@@ -64,8 +64,8 @@ ms.locfileid: "33361373"
 
 ## <a name="configuration-file"></a>구성 파일
 
-이 요소는 응용 프로그램 구성 파일을 컴퓨터 구성 파일에 사용할 수 있습니다 (*Machine.config*), 및 *Web.config* 응용 프로그램 디렉터리 수준에서 포함 되지 않은 파일입니다.
+이 요소는 응용 프로그램 구성 파일, 컴퓨터 구성 파일 (machine.config) 및응용 프로그램 디렉터리 수준에 없는 web.config 파일에서 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고자료
 
-[.NET Framework에 대 한 구성 파일 스키마](~/docs/framework/configure-apps/file-schema/index.md)
+- [.NET Framework에 대 한 구성 파일 스키마](index.md)

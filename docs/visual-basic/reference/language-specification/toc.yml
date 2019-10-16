@@ -1,0 +1,35 @@
+- name: Visual Basic 언어 사양
+  href: index.md
+  items:
+    - name: 소개
+      href: ../../../../_vblang/spec/introduction.md
+    - name: 어휘 문법
+      href: ../../../../_vblang/spec/lexical-grammar.md
+    - name: 전처리 지시문
+      href: ../../../../_vblang/spec/preprocessing-directives.md
+    - name: 일반 개념
+      href: ../../../../_vblang/spec/general-concepts.md
+    - name: 특성
+      href: ../../../../_vblang/spec/attributes.md
+    - name: 소스 파일 및 네임스페이스
+      href: ../../../../_vblang/spec/source-files-and-namespaces.md
+    - name: 유형
+      href: ../../../../_vblang/spec/types.md
+    - name: 변환
+      href: ../../../../_vblang/spec/conversions.md
+    - name: 형식 멤버
+      href: ../../../../_vblang/spec/type-members.md
+    - name: 문
+      href: ../../../../_vblang/spec/statements.md
+    - name: 식
+      href: ../../../../_vblang/spec/expressions.md
+    - name: 설명서 주석
+      href: ../../../../_vblang/spec/documentation-comments.md
+    - name: 오버로드 해결
+      href: ../../../../_vblang/spec/overload-resolution.md
+    - name: 문법
+      items:
+        - name: vb.html
+          href: 'https://ljw1004.github.io/vbspec/vb.html'
+        - name: vb.g4 - ANTLR 형식
+          href: 'https://ljw1004.github.io/vbspec/vb.g4?raw=true'

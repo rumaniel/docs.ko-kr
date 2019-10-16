@@ -1,5 +1,6 @@
 ---
-title: abstract(C# 참조)
+title: abstract - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - abstract
@@ -7,56 +8,56 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: d0a51afe61e75b750ed8bf336ca4636cb58dfbba
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 547ecd9ff823f61bf3995c02959235b65a4a3979
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45742247"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69606149"
 ---
 # <a name="abstract-c-reference"></a>abstract(C# 참조)
-`abstract` 한정자는 수정되는 항목에 누락되거나 불완전한 구현이 있음을 나타냅니다. abstract 한정자는 클래스, 메서드, 속성, 인덱서 및 이벤트와 함께 사용될 수 있습니다. 클래스 선언에서 `abstract` 한정자를 사용하여 클래스가 다른 클래스의 기본 클래스로만 사용됨을 나타냅니다. abstract로 표시되거나 추상 클래스에 포함된 멤버는 추상 클래스에서 파생 클래스에 의해 구현되어야 합니다.  
+`abstract` 한정자는 수정되는 항목에 누락되거나 불완전한 구현이 있음을 나타냅니다. abstract 한정자는 클래스, 메서드, 속성, 인덱서 및 이벤트와 함께 사용될 수 있습니다. 클래스 선언에서 `abstract` 한정자를 사용하여 클래스가 자체에서 인스턴스화되지 않고 다른 클래스의 기본 클래스로만 사용됨을 나타냅니다. 추상으로 표시된 멤버는 추상 클래스에서 파생된 비 추상 클래스에 의해 구현되어야 합니다.
   
 ## <a name="example"></a>예  
- 이 예제에서 `Square` 클래스는 `ShapesClass`에서 파생되므로 `Area` 구현을 제공해야 합니다.  
+ 이 예제에서 `Square` 클래스는 `Shape`에서 파생되므로 `GetArea` 구현을 제공해야 합니다.  
   
  [!code-csharp[csrefKeywordsModifiers#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsModifiers/CS/csrefKeywordsModifiers.cs#1)]
   
  다음 기능이 있는 추상 클래스:  
   
--   추상 클래스는 인스턴스화할 수 없습니다.  
+- 추상 클래스는 인스턴스화할 수 없습니다.  
   
--   추상 클래스에 추상 메서드 및 접근자가 포함될 수 있습니다.  
+- 추상 클래스에 추상 메서드 및 접근자가 포함될 수 있습니다.  
   
--   [sealed](../../../csharp/language-reference/keywords/sealed.md) 한정자를 사용하여 추상 클래스를 수정할 수는 없습니다. 두 한정자가 상반된 의미를 가지기 때문입니다. `sealed` 한정자를 사용하면 클래스가 상속되지 않고 `abstract` 한정자를 사용하려면 클래스가 상속되어야 합니다.  
+- [sealed](./sealed.md) 한정자를 사용하여 추상 클래스를 수정할 수는 없습니다. 두 한정자가 상반된 의미가 있기 때문입니다. `sealed` 한정자를 사용하면 클래스가 상속되지 않고 `abstract` 한정자를 사용하려면 클래스가 상속되어야 합니다.  
   
--   추상 클래스에서 추상이 아닌 파생 클래스에는 모든 상속된 메서드 및 접근자의 실제 구현이 포함되어야 합니다.  
+- 추상 클래스에서 추상이 아닌 파생 클래스에는 모든 상속된 메서드 및 접근자의 실제 구현이 포함되어야 합니다.  
   
  메서드 또는 속성 선언에서 `abstract` 한정자를 사용하여 메서드 또는 속성에 구현이 포함되지 않음을 나타냅니다.  
   
  추상 메서드에는 다음과 같은 기능이 있습니다.  
   
--   추상 메서드는 암시적으로 가상 메서드입니다.  
+- 추상 메서드는 암시적으로 가상 메서드입니다.  
   
--   추상 메서드 선언은 추상 클래스에서만 허용됩니다.  
+- 추상 메서드 선언은 추상 클래스에서만 허용됩니다.  
   
--   추상 메서드 선언은 실제 구현을 제공하지 않으므로 메서드 본문이 없습니다. 메서드 선언은 세미콜론으로 끝나고 시그니처 뒤에 중괄호({ })가 없습니다. 예:  
+- 추상 메서드 선언은 실제 구현을 제공하지 않으므로 메서드 본문이 없습니다. 메서드 선언은 세미콜론으로 끝나고 시그니처 뒤에 중괄호({ })가 없습니다. 예:  
   
     ```csharp  
     public abstract void MyMethod();  
     ```  
   
-     구현은 비추상 클래스의 멤버인 메서드 [override](../../../csharp/language-reference/keywords/override.md)에 의해 제공됩니다.  
+     구현은 비추상 클래스의 멤버인 메서드 [override](./override.md)에 의해 제공됩니다.  
   
--   추상 메서드 선언에서 [static](../../../csharp/language-reference/keywords/static.md) 또는 [virtual](../../../csharp/language-reference/keywords/virtual.md) 한정자를 사용하는 것은 오류입니다.  
+- 추상 메서드 선언에서 [static](./static.md) 또는 [virtual](./virtual.md) 한정자를 사용하는 것은 오류입니다.  
   
  선언 및 호출 구문의 차이점을 제외하고 추상 속성은 추상 메서드처럼 동작합니다.  
   
--   정적 속성에서 `abstract` 한정자를 사용하는 것은 오류입니다.  
+- 정적 속성에서 `abstract` 한정자를 사용하는 것은 오류입니다.  
   
--   [override](../../../csharp/language-reference/keywords/override.md) 한정자를 사용하는 속성 선언을 포함하여 상속된 추상 속성을 파생 클래스에서 재정의할 수 있습니다.  
+- [override](./override.md) 한정자를 사용하는 속성 선언을 포함하여 상속된 추상 속성을 파생 클래스에서 재정의할 수 있습니다.  
   
- 추상 클래스에 대한 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
+ 추상 클래스에 대한 자세한 내용은 [추상 및 봉인 클래스와 클래스 멤버](../../programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)를 참조하세요.  
   
  추상 클래스는 모든 인터페이스 멤버에 대한 구현을 제공해야 합니다.  
   
@@ -80,11 +81,11 @@ BaseClass bc = new BaseClass();   // Error
 ## <a name="c-language-specification"></a>C# 언어 사양  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../../csharp/language-reference/index.md)  
-- [C# 프로그래밍 가이드](../../../csharp/programming-guide/index.md)  
-- [한정자](../../../csharp/language-reference/keywords/modifiers.md)  
-- [virtual](../../../csharp/language-reference/keywords/virtual.md)  
-- [override](../../../csharp/language-reference/keywords/override.md)  
-- [C# 키워드](../../../csharp/language-reference/keywords/index.md)
+- [C# 참조](../index.md)
+- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [한정자](./modifiers.md)
+- [virtual](./virtual.md)
+- [override](./override.md)
+- [C# 키워드](./index.md)

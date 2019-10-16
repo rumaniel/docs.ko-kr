@@ -94,7 +94,7 @@ Hello World 프로그램의 텍스트를 `Program` 클래스의 상수로 추가
 
 [!code-csharp[Examine the root node](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/HelloSyntaxTree/Program.cs#3 "Examine the root node")]
 
-응용 프로그램을 실행하여 코드가 이 트리에서 루트 노드에 대해 검색한 내용을 확인합니다.
+애플리케이션을 실행하여 코드가 이 트리에서 루트 노드에 대해 검색한 내용을 확인합니다.
 
 일반적으로 코드에 대해 자세히 알아보려면 트리를 탐색합니다. 이 예제에서는 API를 탐색하기 위해 알아야 하는 코드를 분석합니다. 다음 코드를 추가하여 `root` 노드의 첫 번째 멤버를 검사합니다.
 
@@ -178,7 +178,7 @@ The body text of the Main method follows:
 
 [!code-csharp[Declare the base class for the using collector](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#3 "Declare the base class for the UsingCollector")]
 
-수집 중인 네임스페이스 노드를 포함하는 저장소가 있어야 합니다.  `UsingCollector` 클래스에서 공용 읽기 전용 속성을 선언합니다. 이 변수를 사용하여 찾은 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> 노드를 저장합니다.
+수집 중인 네임스페이스 노드를 포함하는 스토리지가 있어야 합니다.  `UsingCollector` 클래스에서 공용 읽기 전용 속성을 선언합니다. 이 변수를 사용하여 찾은 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.UsingDirectiveSyntax> 노드를 저장합니다.
 
 [!code-csharp[Declare storage for the using syntax nodes](../../../../samples/csharp/roslyn-sdk/SyntaxQuickStart/SyntaxWalker/UsingCollector.cs#4 "Declare storage for the using syntax nodes")]
 

@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2515e21ec00bd656eafd21a092a27304f7b1769
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2ad7dd3ae0e547933fdf7d579116dccc62ae579c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419018"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766153"
 ---
 # <a name="icordebugprocessclearcurrentexception-method"></a>ICorDebugProcess::ClearCurrentException 메서드
-지정 된 스레드에 대해 현재 관리 되지 않는 예외를 지웁니다.  
+지정 된 스레드에서 현재 관리 되지 않는 예외를 지웁니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT ClearCurrentException([in] DWORD threadID);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `threadID`  
- [in] 현재 관리 되지 않는 예외는 지워집니다 스레드의 ID입니다.  
+ [in] 현재 관리 되지 않는 예외를 지울 수 스레드의 ID입니다.  
   
 ## <a name="remarks"></a>설명  
- 이 메서드를 호출 하기 전에 호출 [icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 스레드가 디버기에 서 무시 해야 하는 관리 되지 않는 예외에서 보고 하는 경우. 처리 중인 대역 (IB)와 지정한 스레드에서 밴드의 범위를 벗어난 (OOB) 이벤트를 지웁니다. 모든 OOB 중단점 및 단일 단계 예외 자동으로 지워집니다.  
+ 이 메서드를 호출 하기 전에 [icordebugcontroller:: Continue](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-continue-method.md) 경우 스레드가 디버기는 무시 해야 하는 관리 되지 않는 예외를 보고 했습니다. 처리 중인 대역 (IB) 및 지정 된 스레드에서 대역의 (OOB) 이벤트를 모두 지웁니다. 모든 OOB 중단점 및 단일 단계 예외를 자동으로 지워집니다.  
   
- 사용 하 여 [icordebugthread2:: Interceptcurrentexception](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) 현재 가로채기 위해 스레드의 예외를 관리 합니다.  
+ 사용 하 여 [ICorDebugThread2::InterceptCurrentException](../../../../docs/framework/unmanaged-api/debugging/icordebugthread2-interceptcurrentexception-method.md) 를 가로채는 현재 스레드에서 예외를 관리 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

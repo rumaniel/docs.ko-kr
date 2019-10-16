@@ -1,19 +1,19 @@
 ---
-title: '방법: 개체 그래프 (Visual Basic) 프로젝트'
+title: '방법: (Visual Basic) 개체 그래프 프로젝션'
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 0a8bf33075ada306cf639006ab099115aad43348
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 6403bb0aa63120b6ec82e4e94d483769f2cfe1aa
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43487145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038243"
 ---
-# <a name="how-to-project-an-object-graph-visual-basic"></a>방법: 개체 그래프 (Visual Basic) 프로젝트
+# <a name="how-to-project-an-object-graph-visual-basic"></a>방법: (Visual Basic) 개체 그래프 프로젝션
 이 항목에서는 XML에서 개체 그래프를 프로젝션하거나 채우는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드에서는 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 문서의 `Address`, `PurchaseOrder` 및 `PurchaseOrderItem` 클래스를 사용하여 개체 그래프를 채웁니다.  
+ 다음 코드에서는 `Address`, `PurchaseOrder` 및 `PurchaseOrderItem` 클래스를 사용하여 [샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 문서에서 개체 그래프를 채웁니다.  
   
 ```vb  
 Class Address  
@@ -337,7 +337,8 @@ USPrice: 39.98
 ShipDate: 5/21/1999  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Linq.Enumerable.Select%2A>  
- <xref:System.Linq.Enumerable.ToList%2A>  
- [프로젝션 및 변형 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Linq.Enumerable.Select%2A>
+- <xref:System.Linq.Enumerable.ToList%2A>
+- [프로젝션 및 변형 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

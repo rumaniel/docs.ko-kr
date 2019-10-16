@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names in XAML [XAML Services]
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
-ms.openlocfilehash: 2a934316517047da6b6aec8e88026024b9a25f65
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 837a18ca18d0c634dfa5cc133aa013919cfb9d96
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43514803"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71053894"
 ---
 # <a name="xamlname-grammar"></a>XamlName 문법
-XamlName 문법에는 편의 위해 여기에 재현 되어 있는 XAML 언어 사양 [MS-XAML]에 정의 된 특정 문법입니다.  
+XamlName Grammar은 편의를 위해 여기에서 재현 되는 XAML 언어 사양 [MS XAML]에 정의 된 특정 문법입니다.  
   
 ## <a name="from-the-xaml-specification"></a>XAML 사양에서  
- [MS XAML] 형식 및 속성에 사용 되는 올바른 기호 식별자 집합을 식별 하기 위해 XamlName 문법을 정의 합니다.  
+ [XamlName] 사양은 문법 검사를 정의 하 여 형식 및 속성에 사용 되는 유효한 기호화 된 식별자 집합을 식별 합니다.  
   
- XamlName 다음 문법을 준수 해야 하는 형식의 값을 문자열:  
+ XamlName 형식의 문자열 값은 다음 문법을 준수 해야 합니다.  
   
-```  
+```xaml  
 XamlName ::= NameStartChar ( NameChar )*   
 NameStartChar ::= LetterCharacter | '_'   
 NameChar ::= NameStartChar | DecimalDigit | CombiningCharacter   
@@ -32,36 +32,27 @@ DecimalDigit ::= UnicodeNd
 CombiningCharacter ::= UnicodeMn | UnicodeMc  
 ```  
   
- 유니코드 문자 데이터베이스에 정의 된 대로 다음과 같은 일반 범주 값을 가정 하는  
+ 유니코드 문자 데이터베이스에 정의 된 다음과 같은 일반 범주 값을 가정 합니다.  
+
+| 유니코드 범주   | Description                   |
+|--------------------|-------------------------------|
+| Lu                 | 문자, 대문자             |
+| Ll                 | 문자, 소문자             |
+| Lt                 | 문자, 제목 스타일             |
+| Lm                 | 문자, 한정자              |
+| Lo                 | 문자, 기타                 |
+| Mn                 | 표시, 공백 없음             |
+| Mc                 | 표시, 공백 조합       |
+| Nd                 | 숫자, 10 진수               |
+| Nl                 | 숫자, 문자                |
+ 
+ XAML은 속성 및 이벤트 정규화 된 참조와 연결 된 멤버에 사용 되는 두 번째 문법 인 DottedXamlName를 정의 합니다. 자세한 내용은 및 <xref:System.Windows.DependencyProperty> [XAML 개요 (WPF)](../wpf/advanced/xaml-overview-wpf.md)를 참조 하세요.  
   
-```  
-Lu  
-Letter, Uppercase  
-Ll  
-Letter, Lowercase  
-Lt  
-Letter, Titlecase  
-Lm  
-Letter, Modifier  
-Lo  
-Letter, Other  
-Mn  
-Mark, Non-Spacing  
-Mc  
-Mark, Spacing Combining  
-Nd  
-Number, Decimal  
-Nl  
-Number, Letter  
-```  
+ DottedXamlName 형식의 문자열 값은 다음 문법을 준수 해야 합니다.  
   
- XAML DottedXamlName 속성에 사용 되는 두 번째 문법에 정의 및 이벤트 참조를 정규화도 대 한 멤버를 연결 합니다. 자세한 내용은 <xref:System.Windows.DependencyProperty> 하 고 [XAML 개요 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)합니다.  
-  
- DottedXamlName 다음 문법을 준수 해야 하는 형식의 값을 문자열:  
-  
-```  
+```xaml  
 DottedXamlName ::= XamlName '.' XamlName  
 ```  
   
 ## <a name="remarks"></a>설명  
- 완전 한 사양에 대해서 [ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)합니다.
+ 전체 사양은 [ \[MS-XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)을 참조 하세요.

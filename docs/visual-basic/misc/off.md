@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Off keyword [Visual Basic]
 ms.assetid: e0b5aa68-bde1-4cdd-b9e4-152798ae1b8b
-ms.openlocfilehash: 579c1fddc82b6f4e5add3485103da9da01a9c0d9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2934d0f44357ed8ae99586e8e3d38c75ae235bbe
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33637434"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944848"
 ---
 # <a name="off-visual-basic"></a>Off(Visual Basic)
 컴파일러 옵션을 해제합니다.  
@@ -26,5 +26,6 @@ ms.locfileid: "33637434"
   
  [Option Infer 문](../../visual-basic/language-reference/statements/option-infer-statement.md)  
   
-## <a name="see-also"></a>참고 항목  
- [키워드](../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>참고자료
+
+- [C++ 키워드](../../visual-basic/language-reference/keywords/index.md)

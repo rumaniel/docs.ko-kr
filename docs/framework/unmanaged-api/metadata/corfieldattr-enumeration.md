@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a57318103fd875d6f2f2fe4ca54c776da86c0e53
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e909680428c7957da2283d13f5676329d953bf22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446622"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781886"
 ---
 # <a name="corfieldattr-enumeration"></a>CorFieldAttr 열거형
 필드에 대한 메타데이터를 설명하는 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorFieldAttr {  
   
     fdFieldAccessMask           =   0x0007,  
@@ -60,34 +60,35 @@ typedef enum CorFieldAttr {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
 |`fdFieldAccessMask`|내게 필요한 옵션 정보를 지정합니다.|  
 |`fdPrivateScope`|필드는 참조할 수 없음을 지정 합니다.|  
-|`fdPrivate`|필드 부모 형식의 액세스할 수 있게 임을 지정 합니다.|  
+|`fdPrivate`|필드에 해당 부모 형식에 의해서만 액세스할 수 있는지를 지정 합니다.|  
 |`fdFamANDAssem`|필드에 해당 어셈블리의 파생된 클래스에서 액세스할 수 있는지를 지정 합니다.|  
 |`fdAssembly`|필드에 해당 어셈블리의 모든 형식에서 액세스할 수 있는지를 지정 합니다.|  
-|`fdFamily`|필드가 해당 형식을 액세스할 수 있게 되며 파생 클래스를 지정 합니다.|  
-|`fdFamORAssem`|어셈블리의 모든 형식 및 파생된 클래스에서 액세스할 수 있는 필드 임을 지정 합니다.|  
-|`fdPublic`|필드에이 범위의 표시 유형이 적용 된 모든 형식에서 액세스할 수 있는지를 지정 합니다.|  
-|`fdStatic`|필드가 해당 형식의 멤버가 아닌 인스턴스 멤버 임을 지정 합니다.|  
-|`fdInitOnly`|초기화 한 후 필드를 변경할 수를 지정 합니다.|  
+|`fdFamily`|필드는 해당 형식에 의해서만 액세스할 수 있습니다 하 고 파생 클래스를 지정 합니다.|  
+|`fdFamORAssem`|필드에 해당 어셈블리의 모든 형식 및 파생된 클래스에서 액세스할 수 있는지를 지정 합니다.|  
+|`fdPublic`|필드에이 범위의 표시 여부를 사용 하 여 모든 형식에서 액세스할 수 있는지를 지정 합니다.|  
+|`fdStatic`|해당 형식의 멤버 대신 인스턴스 멤버가 필드 임을 지정 합니다.|  
+|`fdInitOnly`|초기화 한 후 필드를 변경할 수 없습니다 지정 합니다.|  
 |`fdLiteral`|필드 값은 컴파일 타임 상수 임을 지정 합니다.|  
-|`fdNotSerialized`|해당 유형이 원격으로 연결할 때는 필드가 serialize 되지 않음을 지정 합니다.|  
-|`fdSpecialName`|필드가 특수 문자이 고 해당 이름을 설명 하 고 있음을 지정 방법입니다.|  
-|`fdPinvokeImpl`|필드 구현은 PInvoke를 통해 전달 되도록 지정 합니다.|  
+|`fdNotSerialized`|해당 형식이 원격 필드가 직렬화 되지 않습니다 지정 합니다.|  
+|`fdSpecialName`|필드가 특별 하 고 이름과 설명 하는지 지정 하는 방법입니다.|  
+|`fdPinvokeImpl`|필드 구현이 PInvoke를 통해 전달 되는 것을 지정 합니다.|  
 |`fdReservedMask`|공용 언어 런타임에서 내부 용도로 예약 되어 있습니다.|  
-|`fdRTSpecialName`|공용 언어 런타임 메타 데이터 내부 Api 확인 하도록 지정 합니다 이름의 인코딩을 합니다.|  
+|`fdRTSpecialName`|공용 언어 런타임 메타 데이터 내부 Api 인코딩을 확인 하도록 이름을 지정 합니다.|  
 |`fdHasFieldMarshal`|필드에 마샬링 정보가 포함 되도록 지정 합니다.|  
 |`fdHasDefault`|필드 기본값을 갖도록 지정 합니다.|  
 |`fdHasFieldRVA`|필드의 상대 가상 주소를 지정 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorHdr.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

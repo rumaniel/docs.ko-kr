@@ -17,39 +17,40 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03607cf96d73e96eef63fe62b86b50be02f34421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8721f7c30061fbfd4a761bed090b761762c3c13c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33428204"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69939035"
 ---
 # <a name="isymunmanagedreaderreplacesymbolstore-method"></a>ISymUnmanagedReader::ReplaceSymbolStore 메서드
-기존 기호 저장소를 델타 기호 저장소로 바꿉니다. 이 메서드는 비슷합니다는 [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) 메서드를 제외 하 고 지정 된 델타 업데이트 보다는 완전 한 대체 역할도 합니다.  
+기존 기호 저장소를 델타 기호 저장소로 바꿉니다. 이 메서드는 지정 된 델타가 업데이트가 아닌 완전 한 대체 역할을 한다는 점을 제외 하 고 [UpdateSymbolStore](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-updatesymbolstore-method.md) 메서드와 비슷합니다.  
   
 > [!NOTE]
->  중 하나만 지정할 필요는 `filename` 또는 `pIStream` 두 매개 변수입니다. 경우 `filename` 지정, 기호 저장소는 해당 파일에 있는 기호도 업데이트 됩니다. 경우 `pIStream` 를 지정 된 저장소의 데이터로 업데이트 됩니다는 <xref:System.Runtime.InteropServices.ComTypes.IStream>합니다.  
+> `filename` 또는`pIStream` 매개 변수 중 하나만 지정 해야 합니다. 을 `filename` 지정 하면 기호 저장소가 해당 파일의 기호를 사용 하 여 업데이트 됩니다. 을 `pIStream` 지정 하면 저장소는의 <xref:System.Runtime.InteropServices.ComTypes.IStream>데이터로 업데이트 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT ReplaceSymbolStore (  
     [in] const WCHAR *filename,  
     [in] IStream *pIStream);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `filename`  
- [in] 기호 저장소를 포함 하는 파일의 이름입니다.  
+ 진행 기호 저장소를 포함 하는 파일의 이름입니다.  
   
  `pIStream`  
- [in] 대 안으로 사용 되는 파일 스트림을 `filename` 매개 변수입니다.  
+ 진행 `filename` 매개 변수의 대 안으로 사용 되는 파일 스트림입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.  
+ 메서드가 성공 하면 S_OK이 고, 그렇지 않으면입니다. 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

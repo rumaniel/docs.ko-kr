@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 20dc7caa9e4c3e023bf2848b1dd8c63a9b94a01b
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 59af252967a18eca858035fb0a3465d909734ddf
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47170011"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71044736"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio용 개발자 명령 프롬프트
 
 Visual Studio에 대한 개발자 명령 프롬프트를 통해 .NET Framework 도구를 더 쉽게 사용할 수 있습니다. 이는 특정 환경 변수를 자동으로 설정하는 명령 프롬프트입니다.
 
 > [!div class="button"]
-[Visual Studio 다운로드](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+> [Visual Studio 다운로드](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019)
 
 ## <a name="search-for-the-command-prompt-on-your-machine"></a>머신에서 명령 프롬프트 검색
 
@@ -34,11 +34,11 @@ Visual Studio에 대한 개발자 명령 프롬프트를 통해 .NET Framework �
 
 1. 작업 표시줄의 검색 상자에 `dev` 또는 `developer command prompt`와 같은 도구 이름을 입력합니다. 그러면 검색 패턴과 일치하는 설치된 앱의 목록이 표시됩니다. 다른 명령 프롬프트를 찾으려면 `prompt`와 같은 다른 검색어를 입력해 봅니다.
 
-2. **개발자 명령 프롬프트**(또는 사용할 명령 프롬프트)를 선택합니다.
+2. **Visual Studio용 개발자 명령 프롬프트**(또는 사용할 명령 프롬프트)를 선택합니다.
 
 ### <a name="in-windows-81"></a>Windows 8.1에서
 
-1. 키보드에서 Windows 로고 키 ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")를 눌러 **시작** 화면으로 이동합니다.
+1. Windows 로고 키 ![키보드에서 Windows 로고 키](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)를 눌러 **시작** 화면으로 이동합니다. 예를 들어 키보드에서
 
 2. **시작** 화면에서 **Ctrl**+**Tab**을 눌러 **앱** 목록을 열고 `V`를 입력합니다. 그러면 설치된 모든 Visual Studio 명령 프롬프트가 포함된 목록을 가져옵니다.
 
@@ -46,9 +46,9 @@ Visual Studio에 대한 개발자 명령 프롬프트를 통해 .NET Framework �
 
 ### <a name="in-windows-8"></a>Windows 8에서
 
-1. 키보드에서 Windows 로고 키 ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo")를 눌러 **시작** 화면으로 이동합니다.
+1. Windows 로고 키 ![키보드에서 Windows 로고 키](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)를 눌러 **시작** 화면으로 이동합니다. 예를 들어 키보드에서
 
-2. **시작**에서 Windows 로고 키 ![Windows logo](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") `+ Z`를 누릅니다.
+2. **시작** 화면에서 Windows 로고 키 ![키보드에서 로고 키](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)를 누릅니다. `+ Z`.
 
 3. 화면 아래쪽에서 **앱 보기** 아이콘을 선택하고 `V` 키를 누릅니다. 그러면 설치된 모든 Visual Studio 명령 프롬프트가 포함된 목록을 가져옵니다.
 
@@ -88,9 +88,9 @@ Visual Studio 개발자 명령 프롬프트 또는 다른 명령 프롬프트를
 
    새 메뉴 항목이 추가되고 **도구** 메뉴에서 명령 프롬프트에 액세스할 수 있습니다.
 
-   ![Visual Studio의 명령 프롬프트 메뉴 항목](media/command-prompt-vs-menu.png)
+   ![Visual Studio의 명령 프롬프트 메뉴 항목](./media/command-prompt-vs-menu.png)
 
 ## <a name="see-also"></a>참고 항목
 
-- [도구](../../../docs/framework/tools/index.md)
+- [도구](index.md)
 - [외부 도구 관리](/visualstudio/ide/managing-external-tools)

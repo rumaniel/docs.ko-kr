@@ -1,5 +1,5 @@
 ---
-title: 인덱스를 사용한 정렬된 노드 검색
+title: 인덱스별로 정렬된 노드 검색
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -8,23 +8,23 @@ dev_langs:
 ms.assetid: 5412c90f-2703-4aa8-a9c4-1b8a35183c37
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 515edf26df6190d2bf4906f3de2d019b1a4175fb
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4e4847dd6bc05127799cb6d8424a8fdb63fbc0f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45676193"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590069"
 ---
-# <a name="ordered-node-retrieval-by-index"></a>인덱스를 사용한 정렬된 노드 검색
+# <a name="ordered-node-retrieval-by-index"></a>인덱스별로 정렬된 노드 검색
 W3C(World Wide Web 컨소시엄) XML DOM(문서 개체 모델)에서는 **XmlNamedNodeMap**으로 처리되는 정렬되지 않은 집합과 반대되는 정렬된 노드 목록을 처리할 수 있는 NodeList에 대해서도 설명합니다. Microsoft .NET Framework에서는 NodeList를 **XmlNodeList**라고 합니다. **XmlNodeList**를 반환하는 메서드와 속성은 다음과 같습니다.  
   
--   XmlNode.ChildNodes  
+- XmlNode.ChildNodes  
   
--   XmlDocument.GetElementsByTagName  
+- XmlDocument.GetElementsByTagName  
   
--   XmlElement.GetElementsByTagName  
+- XmlElement.GetElementsByTagName  
   
--   XmlNode.SelectNodes  
+- XmlNode.SelectNodes  
   
  **XmlNodeList**에는 다음 코드 샘플과 같이 **XmlNodeList**의 노드를 반복하는 루프를 작성하는 데 사용할 수 있는 **Count** 속성이 있습니다.  
   

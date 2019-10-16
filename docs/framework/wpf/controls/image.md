@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: 0e5fc4e97457858cfbf517726a6f2904a282727d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4da98f5caa0cbf4714d16f66a18c67844bf5c201
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696320"
 ---
 # <a name="image"></a>이미지
-<xref:System.Windows.Controls.Image> 에서 비트맵 이미지를 표시 하려면 요소를 사용 하는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다.  
+합니다 <xref:System.Windows.Controls.Image> 요소 안에 비트맵 이미지를 표시 하는 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 응용 프로그램입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [방법 항목](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+ [방법 항목](image-how-to-topics.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Image>  
@@ -27,6 +27,7 @@ ms.locfileid: "33554007"
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a>참고 항목  
- [이미징 개요](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)  
- [방법 항목](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a>참고자료
+
+- [이미징 개요](../graphics-multimedia/imaging-overview.md)
+- [방법 항목](../graphics-multimedia/imaging-how-to-topics.md)

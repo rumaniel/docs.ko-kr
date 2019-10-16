@@ -2,12 +2,12 @@
 title: LINQ to XML과 비교 DOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
-ms.openlocfilehash: 4feb0df2e4d3ffe5c79ce61d7b94142833a312c7
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 4ca04991fb012aa522e7c0e35eea08d790007f7a
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44213873"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710367"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML과 비교 DOM (Visual Basic)
 이 섹션에서는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 현재 주로 사용되는 XML 프로그래밍 API인 W3C DOM(문서 개체 모델)의 몇 가지 주요 차이점에 대해 설명합니다.  
@@ -51,7 +51,7 @@ doc.AppendChild(contacts)
 Console.WriteLine(doc.OuterXml)  
 ```  
   
- 이 코딩 스타일은 XML 트리의 구조에 대한 많은 정보를 시각적으로 제공하지 않습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 이러한 XML 트리 생성 방법을 지원하지만 다른 방법인 *함수 생성*도 지원합니다. Visual Basic의 함수 생성 XML 리터럴을 사용 하 여 XML 트리를 빌드합니다.  
+ 이 코딩 스타일은 XML 트리의 구조에 대한 많은 정보를 시각적으로 제공하지 않습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 이러한 XML 트리 생성 방법을 지원하지만 다른 방법인 *함수 생성*도 지원합니다. Visual Basic에서 함수 생성은 XML 리터럴을 사용 하 여 XML 트리를 작성 합니다.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 함수 생성을 사용하여 동일한 XML 트리를 생성하는 방법은 다음과 같습니다.  
   
@@ -74,16 +74,16 @@ Dim contacts = _
   
  XML 트리를 생성하는 코드의 들여쓰기는 기본 XML의 구조를 나타냅니다.  
   
- 자세한 내용은 [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)합니다.  
+ 자세한 내용은 [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)를 참조 하세요.  
   
 ## <a name="working-directly-with-xml-elements"></a>XML 요소로 직접 작업  
  XML을 사용하여 프로그래밍하는 경우 XML 요소를 대개 집중적으로 다루고 특성도 집중적으로 다룰 수 있습니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 XML 요소 및 특성으로 직접 작업할 수 있습니다. 예를 들어, 다음을 수행할 수 있습니다.  
   
--   문서 개체를 전혀 사용하지 않고 XML 요소를 만듭니다. 이에 따라 XML 트리의 조각으로 작업해야 하는 경우 프로그래밍이 단순해집니다.  
+- 문서 개체를 전혀 사용하지 않고 XML 요소를 만듭니다. 이에 따라 XML 트리의 조각으로 작업해야 하는 경우 프로그래밍이 단순해집니다.  
   
--   XML 파일에서 `T:System.Xml.Linq.XElement` 개체를 직접 로드합니다.  
+- XML 파일에서 `T:System.Xml.Linq.XElement` 개체를 직접 로드합니다.  
   
--   `T:System.Xml.Linq.XElement` 개체를 파일이나 스트림으로 serialize합니다.  
+- `T:System.Xml.Linq.XElement` 개체를 파일이나 스트림으로 serialize합니다.  
   
  이와 비교할 때 W3C DOM에서는 XML 문서가 XML 트리의 논리 컨테이너로 사용됩니다. DOM에서 요소 및 특성을 비롯한 XML 노드는 XML 문서의 컨텍스트에서 만들어져야 합니다. DOM에서 이름 요소를 만드는 코드의 조각은 다음과 같습니다.  
   
@@ -99,12 +99,12 @@ doc.AppendChild(name)
  LINQ to XML을 사용할 때 문서의 루트 수준에서 주석이나 처리 명령을 추가하려는 경우에만 <xref:System.Xml.Linq.XDocument> 클래스를 사용합니다.  
   
 ## <a name="simplified-handling-of-names-and-namespaces"></a>이름 및 네임스페이스의 간단한 처리  
- 이름, 네임스페이스 및 네임스페이스 접두사의 처리는 대개 XML 프로그래밍의 복잡한 부분입니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 네임스페이스 접두사를 처리해야 하는 요구 사항을 제거하여 이름과 네임스페이스를 단순화합니다. 네임스페이스 접두사를 제어하고 싶으면 제어할 수 있습니다. 그러나 네임스페이스 접두사를 명시적으로 제어하지 않도록 결정하는 경우 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 serialize할 때 필요한 경우 네임스페이스 접두사를 할당하거나, 기본 네임스페이스를 사용하여 serialize합니다. 기본 네임스페이스가 사용되는 경우 생성되는 문서에는 네임스페이스 접두사가 없습니다. 자세한 내용은 [XML 네임 스페이스 (Visual Basic)를 사용 하 여 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)합니다.  
+ 이름, 네임스페이스 및 네임스페이스 접두사의 처리는 대개 XML 프로그래밍의 복잡한 부분입니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 네임스페이스 접두사를 처리해야 하는 요구 사항을 제거하여 이름과 네임스페이스를 단순화합니다. 네임스페이스 접두사를 제어하고 싶으면 제어할 수 있습니다. 그러나 네임스페이스 접두사를 명시적으로 제어하지 않도록 결정하는 경우 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 serialize할 때 필요한 경우 네임스페이스 접두사를 할당하거나, 기본 네임스페이스를 사용하여 serialize합니다. 기본 네임스페이스가 사용되는 경우 생성되는 문서에는 네임스페이스 접두사가 없습니다. 자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.  
   
  DOM의 또 다른 문제는 노드의 이름을 변경할 수 없다는 것입니다. 대신 새 노드를 만들고 모든 자식 노드를 새 노드에 복사해야 하므로 원래 노드 ID가 손실됩니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 노드에서 <xref:System.Xml.Linq.XName> 속성을 설정할 수 있도록 하여 이 문제를 방지합니다.  
   
 ## <a name="static-method-support-for-loading-xml"></a>XML을 로드하기 위한 정적 메서드 지원  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 인스턴스 메서드 대신 정적 메서드를 사용하여 XML을 로드할 수 있습니다. 이에 따라 로드와 구문 분석이 간단해집니다. 자세한 내용은 [방법: 파일 (Visual Basic)에서 XML 로드](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)합니다.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 인스턴스 메서드 대신 정적 메서드를 사용하여 XML을 로드할 수 있습니다. 이에 따라 로드와 구문 분석이 간단해집니다. 자세한 내용은 [방법: 파일에서 XML을 로드 합니다 (Visual Basic](../../../../visual-basic/programming-guide/concepts/linq/how-to-load-xml-from-a-file.md)).  
   
 ## <a name="removal-of-support-for-dtd-constructs"></a>DTD 구문에 대한 지원 제거  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 엔터티와 엔터티 참조에 대한 지원 기능을 제거하여 XML 프로그래밍을 더욱 단순화합니다. 엔터티의 관리는 복잡하므로 드물게 사용됩니다. 이러한 지원 기능을 제거하면 성능이 향상되고 프로그래밍 인터페이스가 간단해집니다. [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 트리가 채워지면 모든 DTD 엔터티가 확장됩니다.  
@@ -125,10 +125,11 @@ doc.AppendChild(name)
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 DOM의 경우처럼 serialize된 <xref:System.Xml.Linq.XText> 노드 형식을 사용하는 대신 <xref:System.Xml.XmlNodeType.Whitespace> 노드로 공백을 저장합니다.  
   
 ## <a name="support-for-annotations"></a>주석에 대한 지원  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 요소는 확장 가능한 주석 집합을 지원합니다. 이러한 지원은 스키마 정보, 요소가 UI에 바인딩되어 있는지 여부 또는 다른 종류의 응용 프로그램 관련 정보와 같은 요소에 대한 기타 정보를 추적하는 데 유용합니다. 자세한 내용은 [LINQ to XML 주석](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)을 참조하세요.  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 요소는 확장 가능한 주석 집합을 지원합니다. 이러한 지원은 스키마 정보, 요소가 UI에 바인딩되어 있는지 여부 또는 다른 종류의 애플리케이션 관련 정보와 같은 요소에 대한 기타 정보를 추적하는 데 유용합니다. 자세한 내용은 [LINQ to XML 주석](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-annotations.md)을 참조하세요.  
   
 ## <a name="support-for-schema-information"></a>스키마 정보에 대한 지원  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 <xref:System.Xml.Schema?displayProperty=nameWithType> 네임스페이스의 확장 메서드를 통해 XSD 유효성 검사를 지원합니다. XML 트리가 XSD를 준수하는지 확인할 수 있으며, PSVI(Post-Schema-Validation Infoset)를 사용하여 XML 트리를 채울 수 있습니다. 자세한 내용은 [방법: XSD를 사용하여 유효성 검사](../../../../visual-basic/programming-guide/concepts/linq/how-to-validate-using-xsd-linq-to-xml.md) 및 <xref:System.Xml.Schema.Extensions>를 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [시작(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)
+## <a name="see-also"></a>참고자료
+
+- [시작(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/getting-started-linq-to-xml.md)

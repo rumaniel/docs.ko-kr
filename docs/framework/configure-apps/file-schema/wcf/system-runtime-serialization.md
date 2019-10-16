@@ -1,36 +1,37 @@
 ---
-title: '&lt;system.runtime.serialization&gt;'
+title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: 6ffd4057028adcd123086173a05164eb5d2622f3
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: b67f51e634d1294830690dad8c8cffb1fc9a6cd2
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32748502"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399459"
 ---
-# <a name="ltsystemruntimeserializationgt"></a>&lt;system.runtime.serialization&gt;
+# <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 <xref:System.Runtime.Serialization> 네임스페이스 섹션의 루트 요소를 나타내며 <xref:System.Runtime.Serialization.DataContractSerializer>의 옵션을 설정하기 위한 요소를 포함합니다.  
-  
- system.runtime.serialization  
+
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<>를 직렬화 합니다.**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<configuration>  
-  <system.runtime.serialization>  
-    <dataContractSerializer ignoreExtensionDataObject="Boolean"  
-      maxItemsInObjectGraph="Integer">  
-      <declaredTypes>  
-        <add type="String ">  
-          <knownType type="String">  
-             <parameter index="Integer"/>  
-          </knownType>  
-        </add>  
-      </declaredTypes>  
-    <dataContractSerializer>  
-  </system.runtime.serialization>  
-</configuration>  
+<configuration>
+  <system.runtime.serialization>
+    <dataContractSerializer ignoreExtensionDataObject="Boolean"
+                            maxItemsInObjectGraph="Integer">
+      <declaredTypes>
+        <add type="String">
+          <knownType type="String">
+            <parameter index="Integer" />
+          </knownType>
+        </add>
+      </declaredTypes>
+    <dataContractSerializer>
+  </system.runtime.serialization>
+</configuration>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -43,15 +44,17 @@ ms.locfileid: "32748502"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<dataContractSerializer >](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-of-system-runtime-serialization.md)|deserialization 시 사용할 알려진 형식을 추가할 수 있습니다.|  
+|[\<dataContractSerializer>](datacontractserializer-of-system-runtime-serialization.md)|deserialization 시 사용할 알려진 형식을 추가할 수 있습니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<configuration> 요소](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|구성의 최상위 요소입니다.|  
+|[\<configuration> 요소](../configuration-element.md)|구성의 최상위 요소입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.Serialization>  
- [데이터 계약 사용](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)  
- [데이터 계약 알려진 형식](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Runtime.Serialization>
+- [데이터 계약 사용](../../../wcf/feature-details/using-data-contracts.md)
+- [데이터 계약 알려진 형식](../../../wcf/feature-details/data-contract-known-types.md)
+ 

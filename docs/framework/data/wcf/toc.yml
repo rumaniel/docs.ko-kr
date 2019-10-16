@@ -1,0 +1,164 @@
+- name: WCF Data Services 4.5
+  href: index.md
+  items:
+    - name: 개요
+      href: wcf-data-services-overview.md
+    - name: 시작
+      href: getting-started-with-wcf-data-services.md
+      items:
+        - name: 서비스로 데이터 공개
+          href: exposing-your-data-as-a-service-wcf-data-services.md
+        - name: 데이터 서비스 리소스 액세스
+          href: accessing-data-service-resources-wcf-data-services.md
+        - name: 클라이언트 애플리케이션에서 데이터 서비스 사용
+          href: using-a-data-service-in-a-client-application-wcf-data-services.md
+        - name: 빠른 시작
+          href: quickstart-wcf-data-services.md
+          items:
+            - name: 데이터 서비스 만들기
+              href: creating-the-data-service.md
+            - name: 웹 브라우저에서 서비스 액세스
+              href: accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md
+            - name: .NET Framework 클라이언트 애플리케이션 만들기
+              href: creating-the-dotnet-client-application-wcf-data-services-quickstart.md
+        - name: 애플리케이션 시나리오
+          href: application-scenarios-wcf-data-services.md
+        - name: 자료
+          href: wcf-data-services-resources.md
+    - name: WCF Data Services 정의
+      href: defining-wcf-data-services.md
+      items:
+        - name: 데이터 서비스 구성
+          href: configuring-the-data-service-wcf-data-services.md
+          items:
+            - name: '방법: IIS에서 실행되는 WCF Data Service 개발'
+              href: how-to-develop-a-wcf-data-service-running-on-iis.md
+            - name: '방법: 데이터 서비스에 액세스할 수 있도록 설정'
+              href: how-to-enable-access-to-the-data-service-wcf-data-services.md
+            - name: '방법: 데이터 서비스 결과의 페이징 사용'
+              href: how-to-enable-paging-of-data-service-results-wcf-data-services.md
+        - name: Data Services 공급자
+          href: data-services-providers-wcf-data-services.md
+          items:
+            - name: Entity Framework 공급자
+              href: entity-framework-provider-wcf-data-services.md
+              items:
+                - name: '방법: ADO.NET Entity Framework 데이터 원본을 사용하여 데이터 서비스 만들기'
+                  href: create-a-data-service-using-an-adonet-ef-data-wcf.md
+            - name: 리플렉션 공급자
+              href: reflection-provider-wcf-data-services.md
+              items:
+                - name: '방법: 리플렉션 공급자를 사용하여 데이터 서비스 만들기'
+                  href: create-a-data-service-using-rp-wcf-data-services.md
+                - name: '방법: LINQ to SQL 데이터 원본을 사용하여 데이터 서비스 만들기'
+                  href: create-a-data-service-using-linq-to-sql-wcf.md
+            - name: 사용자 지정 데이터 서비스 공급자
+              href: custom-data-service-providers-wcf-data-services.md
+            - name: 스트리밍 공급자
+              href: streaming-provider-wcf-data-services.md
+        - name: 서비스 작업
+          href: service-operations-wcf-data-services.md
+          items:
+            - name: '방법: 서비스 작업 정의'
+              href: how-to-define-a-service-operation-wcf-data-services.md
+        - name: 피드 사용자 지정
+          href: feed-customization-wcf-data-services.md
+          items:
+            - name: '방법: Entity Framework 공급자를 사용하여 피드 사용자 지정'
+              href: how-to-customize-feeds-with-ef-provider-wcf-data-services.md
+            - name: '방법: 리플렉션 공급자를 사용하여 피드 사용자 지정'
+              href: how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md
+        - name: 인터셉터
+          href: interceptors-wcf-data-services.md
+          items:
+            - name: '방법: 데이터 서비스 메시지 가로채기'
+              href: how-to-intercept-data-service-messages-wcf-data-services.md
+        - name: WCF Data Services 개발 및 배포
+          href: developing-and-deploying-wcf-data-services.md
+        - name: WCF Data Services에 보안 설정
+          href: securing-wcf-data-services.md
+        - name: 데이터 서비스 호스팅
+          href: hosting-the-data-service-wcf-data-services.md
+        - name: 데이터 서비스 버전 관리
+          href: data-service-versioning-wcf-data-services.md
+        - name: WCF Data Services 프로토콜 구현 정보
+          href: wcf-data-services-protocol-implementation-details.md
+        - name: 동작을 사용하여 서버 쪽 동작 구현
+          href: using-actions-to-implement-server-side-behavior.md
+    - name: WCF Data Services 클라이언트 라이브러리
+      href: wcf-data-services-client-library.md
+      items:
+        - name: 데이터 서비스 클라이언트 라이브러리 생성
+          href: generating-the-data-service-client-library-wcf-data-services.md
+          items:
+            - name: WCF Data Services 클라이언트 유틸리티(DataSvcUtil.exe)
+              href: wcf-data-service-client-utility-datasvcutil-exe.md
+            - name: '방법: 데이터 서비스 참조 추가'
+              href: how-to-add-a-data-service-reference-wcf-data-services.md
+            - name: '방법: 수동으로 클라이언트 데이터 서비스 클래스 생성'
+              href: how-to-manually-generate-client-data-service-classes-wcf-data-services.md
+        - name: 데이터 서비스 쿼리
+          href: querying-the-data-service-wcf-data-services.md
+          items:
+            - name: 프로젝션 쿼리
+              href: query-projections-wcf-data-services.md
+              items:
+                - name: '방법: 프로젝트 쿼리 결과'
+                  href: how-to-project-query-results-wcf-data-services.md
+            - name: LINQ 고려 사항
+              href: linq-considerations-wcf-data-services.md
+            - name: 개체 구체화
+              href: object-materialization-wcf-data-services.md
+            - name: '방법: 데이터 서비스 쿼리 실행'
+              href: how-to-execute-data-service-queries-wcf-data-services.md
+            - name: '방법: 데이터 서비스 쿼리에 쿼리 옵션 추가'
+              href: how-to-add-query-options-to-a-data-service-query-wcf-data-services.md
+            - name: '방법: 쿼리에서 반환하는 엔터티의 수 확인'
+              href: number-of-entities-returned-by-a-query-wcf.md
+            - name: '방법: 데이터 서비스 요청에 대한 클라이언트 자격 증명 지정'
+              href: specify-client-creds-for-a-data-service-request-wcf.md
+            - name: '방법: 클라이언트 요청의 헤더 설정'
+              href: how-to-set-headers-in-the-client-request-wcf-data-services.md
+        - name: 지연 콘텐츠 로드
+          href: loading-deferred-content-wcf-data-services.md
+          items:
+            - name: '방법: 관련 엔터티 로드'
+              href: how-to-load-related-entities-wcf-data-services.md
+            - name: '방법: 페이징된 결과 로드'
+              href: how-to-load-paged-results-wcf-data-services.md
+        - name: 데이터 서비스 업데이트
+          href: updating-the-data-service-wcf-data-services.md
+          items:
+            - name: '방법: 엔터티 추가, 수정 및 삭제'
+              href: how-to-add-modify-and-delete-entities-wcf-data-services.md
+            - name: '방법: 엔터티 관계 정의'
+              href: how-to-define-entity-relationships-wcf-data-services.md
+            - name: '방법: DataServiceContext에 기존 엔터티 연결'
+              href: attach-an-existing-entity-to-dc-wcf-data.md
+        - name: 비동기 작업
+          href: asynchronous-operations-wcf-data-services.md
+          items:
+            - name: '방법: 비동기 데이터 서비스 쿼리 실행'
+              href: how-to-execute-asynchronous-data-service-queries-wcf-data-services.md
+            - name: '방법: 비동기 Windows Presentation Foundation 애플리케이션 만들기'
+              href: create-an-asynchronous-wpf-application-wcf-data-services.md
+        - name: 일괄 처리 작업
+          href: batching-operations-wcf-data-services.md
+          items:
+            - name: '방법: 일괄 처리로 쿼리 실행'
+              href: how-to-execute-queries-in-a-batch-wcf-data-services.md
+        - name: 컨트롤에 데이터 바인딩
+          href: binding-data-to-controls-wcf-data-services.md
+          items:
+            - name: '방법: Windows Presentation Foundation 요소에 데이터 바인딩'
+              href: bind-data-to-wpf-elements-wcf-data-services.md
+            - name: '방법: 프로젝트 데이터 원본을 사용하여 데이터 바인딩'
+              href: how-to-bind-data-using-a-project-data-source-wcf-data-services.md
+            - name: '방법: 데이터 바인딩 동작 사용자 지정'
+              href: how-to-customize-data-binding-behaviors-wcf-data-services.md
+        - name: 서비스 작업 호출
+          href: calling-service-operations-wcf-data-services.md
+        - name: 데이터 서비스 컨텍스트 관리
+          href: managing-the-data-service-context-wcf-data-services.md
+        - name: 이진 데이터 사용
+          href: working-with-binary-data-wcf-data-services.md

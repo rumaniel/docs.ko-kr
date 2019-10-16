@@ -1,1 +1,0 @@
-Microsoft IIS(인터넷 정보 서비스) 5.0

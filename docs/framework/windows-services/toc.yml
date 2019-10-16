@@ -1,0 +1,34 @@
+- name: Windows 서비스 애플리케이션
+  href: index.md
+  items:
+    - name: Windows 서비스 애플리케이션 소개
+      href: introduction-to-windows-service-applications.md
+    - name: '연습: Windows 서비스 앱 만들기'
+      href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+    - name: 서비스 애플리케이션 프로그래밍 아키텍처
+      href: service-application-programming-architecture.md
+    - name: '방법: Windows 서비스 만들기'
+      href: how-to-create-windows-services.md
+      items:
+        - name: '방법: 프로그래밍 방식으로 서비스 작성'
+          href: how-to-write-services-programmatically.md
+        - name: '방법: 서비스 애플리케이션에 설치 관리자 추가'
+          href: how-to-add-installers-to-your-service-application.md
+        - name: '방법: 서비스에 대한 보안 컨텍스트 지정'
+          href: how-to-specify-the-security-context-for-services.md
+        - name: '방법: 서비스 설치 및 제거'
+          href: how-to-install-and-uninstall-services.md
+        - name: '방법: 서비스 시작'
+          href: how-to-start-services.md
+        - name: '방법: Windows 서비스 일시 중지(Visual Basic)'
+          href: how-to-pause-a-windows-service-visual-basic.md
+        - name: '방법: Windows 서비스 계속(Visual Basic)'
+          href: how-to-continue-a-windows-service-visual-basic.md
+        - name: '방법: Windows 서비스 애플리케이션 디버그'
+          href: how-to-debug-windows-service-applications.md
+        - name: '방법: 서비스에 대한 정보 로깅'
+          href: how-to-log-information-about-services.md
+        - name: '문제 해결: Windows 서비스 디버그'
+          href: troubleshooting-debugging-windows-services.md
+        - name: '문제 해결: 서비스 애플리케이션이 설치되지 않음'
+          href: troubleshooting-service-application-wont-install.md

@@ -1,16 +1,14 @@
 ---
 title: global.json 개요
 description: .NET Core CLI 명령을 실행할 때 global.json 파일을 사용하여 .NET Core SDK 버전을 설정하는 방법에 대해 알아보세요.
-author: mairaw
-ms.author: mairaw
-ms.date: 07/30/2018
-ms.custom: updateeachrelease
-ms.openlocfilehash: 05ec296c4c8210c63c7c1b5ce63ef598ca6ac719
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.date: 12/03/2018
+ms.custom: updateeachrelease, seodec18
+ms.openlocfilehash: 2c1fec102993b61e1eb699e8d3508b773302f569
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48838080"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117428"
 ---
 # <a name="globaljson-overview"></a>global.json 개요
 
@@ -26,13 +24,13 @@ ms.locfileid: "48838080"
 
 ### <a name="sdk"></a>sdk
 
-형식: Object
+유형: 개체
 
 선택할 .NET Core SDK에 대한 정보를 지정합니다.
 
 #### <a name="version"></a>버전
 
-형식: String
+유형: 문자열
 
 사용할 .NET Core SDK의 버전입니다.
 
@@ -46,25 +44,25 @@ ms.locfileid: "48838080"
 ```json
 {
   "sdk": {
-    "version": "2.1.300"
+    "version": "2.2.100"
   }
 }
 ```
 
 ## <a name="globaljson-and-the-net-core-cli"></a>global.json 및 .NET Core CLI
 
-*global.json* 파일에서 어떤 버전을 설정할 수 있는지 알고 있으면 도움이 됩니다. [.NET 다운로드](https://www.microsoft.com/net/download/all) 사이트에서 지원되는 사용 가능한 SDK의 전체 목록을 찾을 수 있습니다. .NET Core SDK 2.1부터는 다음 명령을 실행하여 머신에 이미 설치된 SDK 버전을 확인할 수 있습니다.
+*global.json* 파일에서 어떤 버전을 설정할 수 있는지 알고 있으면 도움이 됩니다. [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지에서 지원되는 사용 가능한 SDK의 전체 목록을 찾을 수 있습니다. .NET Core 2.1 SDK부터 다음 명령을 실행하여 머신에 이미 설치된 SDK 버전을 확인할 수 있습니다.
 
-```console
+```dotnetcli
 dotnet --list-sdks
 ```
 
-머신에 추가 .NET Core SDK 버전을 설치하려면 [.NET 다운로드](https://www.microsoft.com/net/download/all) 사이트를 방문하세요.
+컴퓨터에 추가 .NET Core SDK 버전을 설치하려면 [.NET Core 다운로드](https://dotnet.microsoft.com/download/dotnet-core) 페이지를 방문하세요.
 
 다음 예제와 비슷한 [dotnet new](dotnet-new.md) 명령을 실행하여 현재 디렉터리에서 *global.json* 파일을 새로 만들 수 있습니다.
 
-```console
-dotnet new globaljson --sdk-version 2.1.300
+```dotnetcli
+dotnet new globaljson --sdk-version 2.2.100
 ```
 
 ## <a name="matching-rules"></a>일치 규칙
@@ -103,8 +101,8 @@ SDK 버전은 현재 다음과 같은 부분으로 구성됩니다.
 > [!WARNING]
 > 스타트업 프로젝트 '{startupProject}'는 '.NETCoreApp' 버전 '{targetFrameworkVersion}' 프레임워크를 대상으로 합니다. 이 버전의 Entity Framework Core .NET 명령줄 도구는 버전 2.0 이상만 지원합니다. 이전 버전의 도구 사용에 대한 자세한 내용은 <https://go.microsoft.com/fwlink/?linkid=871254>를 참조하세요.
 
-.NET Core SDK 2.1(v. 2.1.300)부터는 `dotnet ef` 명령이 SDK에 포함됩니다. 이 경고는 프로젝트가 EF Core 1.0 또는 1.1을 대상으로 하고 .NET Core SDK 2.1 이상 버전과 호환되지 않음을 나타냅니다. 프로젝트를 컴파일하려면 .NET Core SDK 2.0(v. 2.1.201) 이전 버전을 머신에 설치하고 *global.json* 파일을 사용하여 원하는 SDK 버전을 정의합니다. `dotnet ef` 명령에 대한 자세한 내용은 [EF Core .NET 명령줄 도구](/ef/core/miscellaneous/cli/dotnet)를 참조하세요.
+.NET Core 2.1 SDK(버전 2.1.300)부터 `dotnet ef` 명령이 SDK에 포함되었습니다. 이 경고는 프로젝트가 EF Core 1.0 또는 1.1을 대상으로 하고 .NET Core 2.1 SDK 이상 버전과 호환되지 않음을 나타냅니다. 프로젝트를 컴파일하려면 .NET Core 2.0 SDK(버전 2.1.201) 및 이전 버전을 머신에 설치하고 *global.json* 파일을 사용하여 원하는 SDK 버전을 정의합니다. `dotnet ef` 명령에 대한 자세한 내용은 [EF Core .NET 명령줄 도구](/ef/core/miscellaneous/cli/dotnet)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-* [프로젝트 SDK를 확인하는 방법](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)
+- [프로젝트 SDK를 확인하는 방법](/visualstudio/msbuild/how-to-use-project-sdk#how-project-sdks-are-resolved)

@@ -2,15 +2,15 @@
 title: 메모리 내 XML 트리 수정과 함수 생성 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d91c4ebf-6549-43cc-9961-26d4a82f722b
-ms.openlocfilehash: 71b8799d4da2f8f4fb10bdec6ca7cfcec76e036a
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: 5b43d28390927fa1426f914fa6fd88a1a5d00b9d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/01/2018
-ms.locfileid: "43452783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613605"
 ---
 # <a name="in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml-visual-basic"></a>메모리 내 XML 트리 수정과 함수 생성 (LINQ to XML) (Visual Basic)
-메모리 내 XML 트리 수정은 XML 문서의 모양을 변경하는 일반적인 방법입니다. 일반적인 응용 프로그램에서는 문서를 DOM 또는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 같은 데이터 저장소로 로드하고 프로그래밍 인터페이스를 사용하여 노드를 삽입 또는 삭제하거나 노드의 내용을 변경한 다음 XML을 파일에 저장하거나 네트워크를 통해 전송합니다.  
+메모리 내 XML 트리 수정은 XML 문서의 모양을 변경하는 일반적인 방법입니다. 일반적인 애플리케이션에서는 문서를 DOM 또는 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]과 같은 데이터 저장소로 로드하고 프로그래밍 인터페이스를 사용하여 노드를 삽입 또는 삭제하거나 노드의 내용을 변경한 다음 XML을 파일에 저장하거나 네트워크를 통해 전송합니다.  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]에서는 대부분의 경우에 유용한 *함수 생성*이라는 다른 방법을 사용할 수 있습니다. 함수 생성은 데이터 수정을 데이터 저장소의 세부 조작이 아니라 변환 문제로 취급합니다. 데이터 표현을 가져온 다음 효율적으로 한 형태에서 다른 형태로 변환할 수 있는 경우 결과는 하나의 데이터 저장소를 가져와서 다른 모양을 갖도록 조작하는 경우와 동일합니다. 함수 생성 방법의 핵심은 쿼리의 결과를 <xref:System.Xml.Linq.XDocument> 및 <xref:System.Xml.Linq.XElement> 생성자에 전달하는 것입니다.  
   
@@ -74,5 +74,6 @@ Console.WriteLine(newTree)
   
  이 예제는 매우 간단하지만 두 방법에 대한 개념의 차이를 보여 줍니다. 함수 방법의 경우 큰 XML 문서를 변환할 때 생산성이 더 높습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>참고자료
+
+- [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

@@ -1,42 +1,43 @@
 ---
-title: '&lt;webHttpBinding&gt;의 &lt;transport&gt;'
+title: <webHttpBinding>의 <transport>
 ms.date: 03/30/2017
 ms.assetid: f150fb19-7de1-44af-81f4-86cad881cd05
-ms.openlocfilehash: 3401eada9ae2580cc665d9b4a5a6475f86b68072
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 98cdaa86441f91552c7133d8e5694f88019a6dbf
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873815"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70399276"
 ---
-# <a name="lttransportgt-of-ltwebhttpbindinggt"></a>&lt;webHttpBinding&gt;의 &lt;transport&gt;
+# <a name="transport-of-webhttpbinding"></a>\<webHttpBinding >의 \<전송 >
 HTTP 요청을 수신하도록 구성된 서비스 엔드포인트의 전송 수준 보안 설정을 정의합니다.  
   
- \<system.ServiceModel>  
-\<바인딩 >  
-\<webHttpBinding>  
-\<바인딩 >  
-\<security>  
-\<transport>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<webHttpBinding >** ](webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-webhttpbinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<전송 >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<webHttpBinding>  
-    <binding>  
-        <security  
-        mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">  
-            <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"  
-             proxyCredentialType="None|Basic|Digest|Ntlm|Windows" realm="string" >  
-                <extendedProtectionPolicy  
-                     policyEnforcement="Never|WhenSupported|Always"  
-                     protectionScenario="TransportSelected|TrustedProxy">  
-                    <customServiceNames></customServiceNames>  
-                        </extendedProtectionPolicy>  
-            </transport>  
-        </security>  
-    </binding>  
-</WebHttpBinding>  
+<webHttpBinding>
+  <binding>
+    <security mode="None|Transport|Message|TransportWithMessageCredential|TransportCredentialOnly">
+      <transport clientCredentialType="None|Basic|Digest|Ntlm|Windows"
+                 proxyCredentialType="None|Basic|Digest|Ntlm|Windows"
+                 realm="string">
+        <extendedProtectionPolicy policyEnforcement="Never|WhenSupported|Always"
+                                  protectionScenario="TransportSelected|TrustedProxy">
+          <customServiceNames>
+          </customServiceNames>
+        </extendedProtectionPolicy>
+      </transport>
+    </security>
+  </binding>
+</webHttpBinding>
 ```  
   
 ## <a name="type"></a>형식  
@@ -56,7 +57,7 @@ HTTP 요청을 수신하도록 구성된 서비스 엔드포인트의 전송 수
   
 ## <a name="clientcredentialtype-attribute"></a>clientCredentialType 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`None`|보안이 해제되어 있습니다.|  
 |`Basic`|기본 인증을 사용합니다.|  
@@ -67,7 +68,7 @@ HTTP 요청을 수신하도록 구성된 서비스 엔드포인트의 전송 수
   
 ## <a name="proxycredentialtype-attribute"></a>proxyCredentialType 특성  
   
-|값|설명|  
+|값|Description|  
 |-----------|-----------------|  
 |`None`|보안이 해제되어 있습니다.|  
 |`Basic`|기본 인증을 사용합니다.|  
@@ -82,16 +83,17 @@ HTTP 요청을 수신하도록 구성된 서비스 엔드포인트의 전송 수
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-webhttpbinding.md)|보안 기능을 나타내는 합니다 [ \<wsHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md) 요소입니다.|  
+|[\<security>](security-of-webhttpbinding.md)|WsHttpBinding > 요소의 보안 기능 [ \<](wshttpbinding.md) 을 나타냅니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.HttpTransportSecurity>  
- <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>  
- <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>  
- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>  
- [서비스 및 클라이언트에 보안 설정](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
- [바인딩](../../../../../docs/framework/wcf/bindings.md)  
- [시스템 제공 바인딩 구성](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)  
- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
- [\<binding>](../../../../../docs/framework/misc/binding.md)  
- [WCF 웹 HTTP 프로그래밍 모델](../../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.HttpTransportSecurity>
+- <xref:System.ServiceModel.Configuration.WebHttpSecurityElement.Transport%2A>
+- <xref:System.ServiceModel.WebHttpSecurity.Transport%2A>
+- <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
+- [서비스 및 클라이언트에 보안 설정](../../../wcf/feature-details/securing-services-and-clients.md)
+- [바인딩](../../../wcf/bindings.md)
+- [시스템 제공 바인딩 구성](../../../wcf/feature-details/configuring-system-provided-bindings.md)
+- [바인딩을 사용하여 서비스 및 클라이언트 구성](../../../wcf/using-bindings-to-configure-services-and-clients.md)
+- [\<binding>](../../../misc/binding.md)
+- [WCF 웹 HTTP 프로그래밍 모델](../../../wcf/feature-details/wcf-web-http-programming-model.md)

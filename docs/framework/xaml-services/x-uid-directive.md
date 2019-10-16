@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 7075f8258e617d2d13d4585fdd5fb7aefaa50664
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938842"
 ---
 # <a name="xuid-directive"></a>x:Uid 지시문
 태그 요소에 대 한 고유 식별자를 제공합니다. 대부분의 시나리오에서이 고유 식별자는 XAML 지역화 프로세스와 도구에서 사용 됩니다.  
@@ -39,9 +39,10 @@ ms.locfileid: "43528390"
  프레임 워크에 대 한 별칭이 되도록 해당 개체 모델에서 특정 속성을 지정할 수 있습니다 `x:Uid` 특성을 적용 하 여 <xref:System.Windows.Markup.UidPropertyAttribute> 정의 형식입니다. 프레임 워크는 특정 속성을 지정 하는 경우 유효 하지 않은 두 가지 다 지정할 `x:Uid` 와 같은 개체에 별칭이 지정 된 멤버입니다. 둘 다 `x:Uid` 별칭이 지정 된 멤버는 지정 된,.NET Framework XAML 서비스 API는 일반적으로 throw <xref:System.Xaml.XamlDuplicateMemberException> 이 사례에 대 한 합니다.  
   
 ## <a name="wpf-usage-notes"></a>WPF 사용 정보  
- 역할에 대 한 자세한 내용은 `x:Uid` WPF 지역화 프로세스와 XAML의 BAML 양식에서 참조 [WPF의 전역화](../../../docs/framework/wpf/advanced/globalization-for-wpf.md) 또는 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ 역할에 대 한 자세한 내용은 `x:Uid` WPF 지역화 프로세스와 XAML의 BAML 양식에서 참조 [WPF의 전역화](../wpf/advanced/globalization-for-wpf.md) 또는 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
- <xref:Microsoft.Build.Tasks.Windows.UidManager>  
- [WPF의 전역화](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
+- <xref:Microsoft.Build.Tasks.Windows.UidManager>
+- [WPF의 전역화](../wpf/advanced/globalization-for-wpf.md)

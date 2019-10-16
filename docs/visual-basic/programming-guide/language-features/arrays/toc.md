@@ -1,6 +1,0 @@
-# [Visual Basic의 배열](index.md)
-## [배열 차원](array-dimensions.md)
-## [방법: 배열 변수 초기화](how-to-initialize-an-array-variable.md)
-## [방법: 배열 정렬](how-to-sort-an-array.md)
-## [방법: 한 배열에 다른 배열 할당](how-to-assign-one-array-to-another-array.md)
-## [배열 문제 해결](troubleshooting-arrays.md)

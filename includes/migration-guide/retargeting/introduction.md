@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d4f22aa41eb7aeffd655d980cb8418649462273e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757794"
+---
 ## <a name="introduction"></a>소개
 대상 다시 지정 변경 내용은 다른 .NET Framework를 대상으로 다시 컴파일되는 앱에 영향을 미칩니다. 다음과 같은 변경 내용이 해당됩니다.
 

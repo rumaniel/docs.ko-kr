@@ -10,21 +10,21 @@ helpviewer_keywords:
 - reserved words, Visual Basic keywords
 - Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
-ms.openlocfilehash: eaa8813613a0d17b6d1e32cdcdb8361e9b2e8d84
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61dc57b2e44e7b98fbce85e81491c76736c7ad78
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33605318"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69959960"
 ---
 # <a name="keywords-visual-basic"></a>키워드(Visual Basic)
-다음 표에서 모든 Visual Basic 언어 키워드를 보여 줍니다.  
+다음 표에는 모든 Visual Basic 언어 키워드가 나와 있습니다.  
   
 ## <a name="reserved-keywords"></a>예약 키워드  
  다음 키워드는 *예약*되어 있습니다. 즉, 이러한 키워드를 변수 또는 프로시저와 같은 프로그래밍 요소의 이름으로 사용할 수 없습니다. 이름을 대괄호(`[]`)로 묶으면 이 제한을 무시할 수 있습니다. 자세한 내용은 [선언 요소 이름](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)에서 "이스케이프 이름"을 참조하세요.  
   
 > [!NOTE]
->  이스케이프 이름을 사용하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 이스케이프 이름을 사용하지 않는 것이 좋습니다.  
+> 이스케이프 이름을 사용하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 이스케이프 이름을 사용하지 않는 것이 좋습니다.  
   
 |||||  
 |---|---|---|---|  
@@ -77,7 +77,7 @@ ms.locfileid: "33605318"
 |[>> 연산자](../../../visual-basic/language-reference/operators/right-shift-operator.md)|[>>= 연산자](../../../visual-basic/language-reference/operators/right-shift-assignment-operator.md)|[<<](../../../visual-basic/language-reference/operators/left-shift-operator.md)|[<\<=](../../../visual-basic/language-reference/operators/left-shift-assignment-operator.md)|  
   
 > [!NOTE]
->  `EndIf``GoSub`, `Variant`, 및 `Wend` Visual Basic에서 더 이상 사용 하지만 예약 된 키워드 변수로 유지 됩니다. `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../../../visual-basic/language-reference/queries/let-clause.md)을 참조하세요.  
+> `EndIf`, `GoSub`, 및`Wend` 는 Visual Basic에서 더 이상 사용 되지 않지만 예약 된 키워드로 유지 됩니다. `Variant` `Let` 키워드의 의미가 변경되었습니다. `Let`은 이제 LINQ 쿼리에서 사용됩니다. 자세한 내용은 [Let 절](../../../visual-basic/language-reference/queries/let-clause.md)을 참조하세요.  
   
 ## <a name="unreserved-keywords"></a>예약되지 않은 키워드  
  다음 키워드는 예약되어 있지 않습니다. 즉, 이러한 키워드를 프로그래밍 요소의 이름으로 사용할 수 있습니다. 하지만 이렇게 하면 코드를 읽기 힘들어 사소한 오류를 찾기 어려울 수 있으므로 권장하지 않습니다.  
@@ -112,10 +112,11 @@ ms.locfileid: "33605318"
 |[입력 및 출력 요약](../../../visual-basic/language-reference/keywords/input-and-output-summary.md)|파일에서 읽거나 쓰고, 파일을 관리하고, 출력을 인쇄하는 데 사용되는 함수를 나열합니다.|  
 |[정보 및 상호 작용 요약](../../../visual-basic/language-reference/keywords/information-and-interaction-summary.md)|다른 프로그램을 실행하고, 명령줄 인수를 가져오고, COM 개체를 조작하고, 색 정보를 검색하고, 컨트롤 대화 상자를 사용하는 데 사용되는 함수를 나열합니다.|  
 |[수학 요약](../../../visual-basic/language-reference/keywords/math-summary.md)|삼각 및 기타 수학적 계산을 수행하는 데 사용되는 함수를 나열합니다.|  
-|[My 참조](../../../visual-basic/language-reference/keywords/my-reference.md)|응용 프로그램이 실행되는 컴퓨터의 자주 사용되는 메서드, 속성 및 이벤트, 현재 응용 프로그램, 응용 프로그램 리소스, 응용 프로그램 설정 등에 액세스할 수 있는 기능인 `My`에 포함된 개체를 나열합니다.|  
+|[My 참조](../../../visual-basic/language-reference/keywords/my-reference.md)|애플리케이션이 실행되는 컴퓨터의 자주 사용되는 메서드, 속성 및 이벤트, 현재 애플리케이션, 애플리케이션 리소스, 애플리케이션 설정 등에 액세스할 수 있는 기능인 `My`에 포함된 개체를 나열합니다.|  
 |[연산자 요약](../../../visual-basic/language-reference/keywords/operators-summary.md)|대입 및 비교 식과 기타 연산자를 나열합니다.|  
 |[레지스트리 요약](../../../visual-basic/language-reference/keywords/registry-summary.md)|프로그램 설정을 읽고, 저장 및 삭제하는 데 사용되는 함수를 나열합니다.|  
 |[문자열 조작 요약](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|문자열을 조작하는 데 사용되는 함수를 나열합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)
+## <a name="see-also"></a>참고자료
+
+- [Visual Basic 런타임 라이브러리 멤버](../../../visual-basic/language-reference/runtime-library-members.md)

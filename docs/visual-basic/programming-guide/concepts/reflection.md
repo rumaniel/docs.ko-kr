@@ -2,12 +2,12 @@
 title: 리플렉션 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
-ms.openlocfilehash: f47f78ff9989fc44ad46b66a447061c3fa84a86e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 6d1206d84dec4202a7dad8f03c3d88c8a97ff5ba
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646691"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70972115"
 ---
 # <a name="reflection-visual-basic"></a>리플렉션 (Visual Basic)
 리플렉션은 어셈블리, 모듈 및 형식을 설명하는 개체(<xref:System.Type> 형식)를 제공합니다. 리플렉션을 사용하면 동적으로 형식 인스턴스를 만들거나, 형식을 기존 개체에 바인딩하거나, 기존 개체에서 형식을 가져와 해당 메서드를 호출하거나, 필드 및 속성에 액세스할 수 있습니다. 코드에서 특성을 사용하는 경우 리플렉션은 특성에 대한 액세스를 제공합니다. 자세한 내용은 [특성](../../../standard/attributes/index.md)을 참조하세요.  
@@ -40,27 +40,28 @@ System.Console.WriteLine(info)
 ## <a name="reflection-overview"></a>리플렉션 개요  
  리플렉션은 다음과 같은 상황에서 유용합니다.  
   
--   프로그램 메타데이터의 특성에 액세스해야 하는 경우. 자세한 내용은 [특성에 저장된 정보 검색](../../../standard/attributes/retrieving-information-stored-in-attributes.md)을 참조하세요.  
+- 프로그램 메타데이터의 특성에 액세스해야 하는 경우. 자세한 내용은 [특성에 저장된 정보 검색](../../../standard/attributes/retrieving-information-stored-in-attributes.md)을 참조하세요.  
   
--   어셈블리에서 형식을 검사하고 인스턴스화하려는 경우.  
+- 어셈블리에서 형식을 검사하고 인스턴스화하려는 경우.  
   
--   런타임에 새 형식을 빌드하려는 경우. <xref:System.Reflection.Emit>의 클래스를 사용합니다.  
+- 런타임에 새 형식을 빌드하려는 경우. <xref:System.Reflection.Emit>의 클래스를 사용합니다.  
   
--   런타임에 바인딩을 수행하고 런타임에 생성된 형식의 메서드에 액세스하려는 경우. [동적으로 형식 로드 및 사용](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md) 항목을 참조하세요.  
+- 런타임에 바인딩을 수행하고 런타임에 생성된 형식의 메서드에 액세스하려는 경우. [동적으로 형식 로드 및 사용](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md) 항목을 참조하세요.  
   
 ## <a name="related-sections"></a>관련 단원  
  추가 정보  
   
--   [리플렉션](../../../framework/reflection-and-codedom/reflection.md)  
+- [리플렉션](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [형식 정보 보기](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+- [형식 정보 보기](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [리플렉션 및 제네릭 형식](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [리플렉션 및 제네릭 형식](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
--   <xref:System.Reflection.Emit>  
+- <xref:System.Reflection.Emit>  
   
--   [특성에 저장된 정보 검색](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [특성에 저장된 정보 검색](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic 프로그래밍 가이드](../../../visual-basic/programming-guide/index.md)  
- [공용 언어 런타임의 어셈블리](../../../framework/app-domains/assemblies-in-the-common-language-runtime.md)
+## <a name="see-also"></a>참고자료
+
+- [Visual Basic 프로그래밍 가이드](../../../visual-basic/programming-guide/index.md)
+- [.NET 어셈블리](../../../standard/assembly/index.md)

@@ -1,5 +1,6 @@
 ---
-title: 네임스페이스 키워드(C# 참조)
+title: 네임스페이스 키워드 - C# 참조
+ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 2cdc1e33d86dae675411b571e553b467e5c1f891
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 8cc1d1461a33ab94f8ae399d6ff40f26eaf7f74a
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43856428"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039460"
 ---
 # <a name="namespace-c-reference"></a>namespace(C# 참조)
 
@@ -51,24 +52,15 @@ C# 소스 파일에서 네임스페이스를 명시적으로 선언하는지 여
 
 [!code-csharp[csrefKeywordsNamespace#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csrefKeywordsNamespace/CS/csrefKeywordsNamespace.cs#3)]
 
-## <a name="related-resources"></a>관련 참고 자료
-
-네임스페이스를 사용하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.
-
-- [네임스페이스](../../programming-guide/namespaces/index.md)
-
-- [네임스페이스 사용](../../programming-guide/namespaces/using-namespaces.md)
-
-- [방법: 전역 네임스페이스 별칭 사용](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
-
 ## <a name="c-language-specification"></a>C# 언어 사양
 
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+자세한 내용은 [C# 언어 사양](~/_csharplang/spec/introduction.md)의 [네임스페이스](~/_csharplang/spec/namespaces.md) 섹션을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 참조](../../language-reference/index.md)
-- [C# 프로그래밍 가이드](../../programming-guide/index.md)
+- [C# 참조](../index.md)
 - [C# 키워드](index.md)
-- [네임스페이스 키워드](namespace-keywords.md)
-- [using](using.md)
+- [using](using-directive.md)
+- [using static](using-static.md)
+- [네임스페이스 별칭 한정자`::`](../operators/namespace-alias-qualifier.md)
+- [네임스페이스](../../programming-guide/namespaces/index.md)

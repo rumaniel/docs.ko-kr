@@ -1,28 +1,28 @@
 ---
-title: '방법: 관리되는 응용 프로그램에서 WCF 서비스 호스팅'
+title: '방법: 관리형 애플리케이션에서 WCF 서비스 호스트'
 ms.date: 09/17/2018
 dev_langs:
 - csharp
 - vb
 ms.assetid: 5eb29db0-b6dc-4e77-8c68-0a62f79d743b
-ms.openlocfilehash: 131d99457427e0818f78076d987f550a99ad7cf0
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b6d1c9c38e2cc5f1b1b7b5538af0339987563de6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196853"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637587"
 ---
 # <a name="how-to-host-a-wcf-service-in-a-managed-app"></a>방법: 관리 되는 앱에서 WCF 서비스 호스팅
 
-관리되는 응용 프로그램 내에서 서비스를 호스팅하려면 관리되는 응용 프로그램 코드 내에 서비스에 대한 코드를 포함하고, 코드에서 명령적으로, 구성을 통해 선언적으로 또는 기본 엔드포인트를 사용해 서비스에 대한 엔드포인트를 정의한 다음 <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만듭니다.
+관리되는 애플리케이션 내에서 서비스를 호스팅하려면 관리되는 애플리케이션 코드 내에 서비스에 대한 코드를 포함하고, 코드에서 명령적으로, 구성을 통해 선언적으로 또는 기본 엔드포인트를 사용해 서비스에 대한 엔드포인트를 정의한 다음 <xref:System.ServiceModel.ServiceHost>의 인스턴스를 만듭니다.
 
 메시지 받기를 시작하려면 <xref:System.ServiceModel.ICommunicationObject.Open%2A>에서 <xref:System.ServiceModel.ServiceHost>을 호출합니다. 이렇게 하면 서비스에 대한 수신기가 만들어지고 열립니다. 관리되는 응용 프로그램이 호스팅 작업을 직접 수행하므로 이런 방식으로 서비스를 호스팅하는 것을 "자체 호스팅"이라고 합니다. 서비스를 닫으려면 <xref:System.ServiceModel.Channels.CommunicationObject.Close%2A?displayProperty=nameWithType>에서 <xref:System.ServiceModel.ServiceHost>를 호출합니다.
 
 서비스는 관리되는 Windows 서비스, IIS(인터넷 정보 서비스) 또는 WAS(Windows Process Activation Service)에서 호스팅될 수도 있습니다. 호스팅 서비스에 대 한 옵션에 대 한 자세한 내용은 참조 하세요. [호스팅 서비스](../../../docs/framework/wcf/hosting-services.md)합니다.
 
-관리되는 응용 프로그램에서 서비스를 호스팅할 경우 최소한의 배포 인프라를 필요로 하기 때문에 가장 유연한 옵션입니다. 관리 되는 응용 프로그램에서 서비스를 호스트 하는 방법에 대 한 자세한 내용은 참조 하세요. [관리 되는 응용 프로그램에서 호스팅](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)합니다.
+관리되는 애플리케이션에서 서비스를 호스팅할 경우 최소한의 배포 인프라를 필요로 하기 때문에 가장 유연한 옵션입니다. 관리 되는 응용 프로그램에서 서비스를 호스트 하는 방법에 대 한 자세한 내용은 참조 하세요. [관리 되는 응용 프로그램에서 호스팅](../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)합니다.
 
-다음 절차에서는 콘솔 응용 프로그램에서 자체 호스팅된 서비스를 구현하는 방법을 보여 줍니다.
+다음 절차에서는 콘솔 애플리케이션에서 자체 호스팅된 서비스를 구현하는 방법을 보여 줍니다.
 
 ## <a name="create-a-self-hosted-service"></a>자체 호스팅된 서비스 만들기
 
@@ -50,7 +50,7 @@ ms.locfileid: "47196853"
      [!code-vb[CFX_SelfHost4#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_selfhost4/vb/module1.vb#2)]
 
     > [!NOTE]
-    > 정의 및 서비스 인터페이스를 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 서비스 계약을 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) 하 고 [방법: 서비스 계약을 구현](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)합니다.
+    > 정의 및 서비스 인터페이스를 구현 하는 방법에 대 한 자세한 내용은 참조 하세요. [방법: 서비스 계약을 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md) 고 [방법: 서비스 계약을 구현](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)합니다.
 
 5. 서비스의 기본 주소를 사용하여 `Main` 메서드 맨 위에 <xref:System.Uri> 클래스의 인스턴스를 만듭니다.
 
@@ -99,7 +99,7 @@ ms.locfileid: "47196853"
 - <xref:System.Uri>
 - <xref:System.Configuration.ConfigurationManager.AppSettings%2A>
 - <xref:System.Configuration.ConfigurationManager>
-- [방법: IIS에서 WCF 서비스 호스트](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [방법: IIS에서 WCF 서비스 호스팅](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
 - [자체 호스팅](../../../docs/framework/wcf/samples/self-host.md)
 - [서비스 호스팅](../../../docs/framework/wcf/hosting-services.md)
 - [방법: 서비스 계약 정의](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)

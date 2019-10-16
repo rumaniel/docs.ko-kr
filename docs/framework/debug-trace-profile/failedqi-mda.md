@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60fd5c29f716aa55f35c520794fbc9a0f673b9f8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fec1bfb402f3b394ceb36590c3a880f82c5cb101
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387174"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052789"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 `failedQI` MDA(관리 디버깅 도우미)는 런타임이 RCW(런타임 호출 가능 래퍼)를 대신하여 COM 인터페이스 포인터에서 `QueryInterface`를 호출할 때 활성화되며 `QueryInterface` 호출이 실패합니다.  
@@ -25,13 +25,13 @@ ms.locfileid: "33387174"
   
 ## <a name="cause"></a>원인  
   
--   잘못된 컨텍스트에서 호출했습니다.  
+- 잘못된 컨텍스트에서 호출했습니다.  
   
--   잘못된 컨텍스트에서 호출이 시도되었기 때문에 등록된 프록시가 `QueryInterface` 호출에 실패합니다.  
+- 잘못된 컨텍스트에서 호출이 시도되었기 때문에 등록된 프록시가 `QueryInterface` 호출에 실패합니다.  
   
--   OLE 소유 프록시에서 실패 HRESULT가 반환되었습니다.  
+- OLE 소유 프록시에서 실패 HRESULT가 반환되었습니다.  
   
-## <a name="resolution"></a>해결  
+## <a name="resolution"></a>해결 방법  
  COM 규칙에 MSDN 설명서를 참조하세요.  
   
 ## <a name="effect-on-the-runtime"></a>런타임에 대한 영향  
@@ -40,7 +40,7 @@ ms.locfileid: "33387174"
 ## <a name="output"></a>출력  
  인터페이스의 관리되는 이름, 인터페이스의 GUID 및 실패 HRESULT입니다.  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>Configuration  
   
 ```xml  
 <mdaConfig>  
@@ -50,7 +50,8 @@ ms.locfileid: "33387174"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.InteropServices.MarshalAsAttribute>  
- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)  
- [interop 마샬링](../../../docs/framework/interop/interop-marshaling.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Runtime.InteropServices.MarshalAsAttribute>
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)
+- [interop 마샬링](../interop/interop-marshaling.md)

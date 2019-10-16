@@ -1,21 +1,22 @@
 ---
-title: '&lt;securityTokenHandlers&gt;'
+title: <securityTokenHandlers>
 ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
-ms.openlocfilehash: e63f02add81495e474b59b6c5cc090bd69add3d2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 017309436660991c69da569e9cc4219e842ecaa3
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47206183"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251869"
 ---
-# <a name="ltsecuritytokenhandlersgt"></a>&lt;securityTokenHandlers&gt;
-끝점을 사용 하 여 등록 된 보안 토큰 처리기 컬렉션을 지정 합니다.  
+# <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
+끝점에 등록 된 보안 토큰 처리기의 컬렉션을 지정 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<securityTokenHandlers>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<securityTokenHandlers >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -35,26 +36,26 @@ ms.locfileid: "47206183"
   
 |특성|설명|  
 |---------------|-----------------|  
-|name|토큰 처리기 컬렉션의 이름을 지정합니다. 프레임 워크에서 인식 유일한 값은 "ActAs" 및 "OnBehalfOf"입니다. 토큰 처리기 컬렉션은 이러한 이름 중 하나를 사용 하 여 지정 된 경우에 각각 토큰 ActAs 또는 OnBehalfOf를 처리 하는 경우 컬렉션 사용 됩니다.|  
+|name|토큰 처리기 컬렉션의 이름을 지정 합니다. 프레임 워크에서 인식 되는 값은 "ActAs" 및 "OnBehalfOf" 뿐입니다. 이러한 이름 중 하나를 사용 하 여 토큰 처리기 컬렉션을 지정 하면 ActAs 또는 OnBehalfOf 토큰을 각각 처리할 때 컬렉션이 사용 됩니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/add.md)|토큰 처리기 컬렉션에는 보안 토큰 처리기를 추가합니다.|  
-|[\<clear>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/clear.md)|토큰 처리기 컬렉션에서 모든 보안 토큰 처리기를 지웁니다.|  
-|[\<remove>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/remove.md)|토큰 처리기 컬렉션에서 보안 토큰 처리기를 제거합니다.|  
-|[\<securityTokenHandlerConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/securitytokenhandlerconfiguration.md)|토큰 처리기 컬렉션에 대 한 구성을 제공합니다.|  
+|[\<add>](add.md)|토큰 처리기 컬렉션에 보안 토큰 처리기를 추가 합니다.|  
+|[\<clear>](clear.md)|토큰 처리기 컬렉션에서 모든 보안 토큰 처리기를 지웁니다.|  
+|[\<remove>](remove.md)|토큰 처리기 컬렉션에서 보안 토큰 처리기를 제거 합니다.|  
+|[\<securityTokenHandlerConfiguration>](securitytokenhandlerconfiguration.md)|토큰 처리기의 컬렉션에 대 한 구성을 제공 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|서비스 수준 id 설정을 지정합니다.|  
+|[\<identityConfiguration>](identityconfiguration.md)|서비스 수준 id 설정을 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 서비스 구성에서 하나 이상의 명명 된 보안 토큰 처리기 컬렉션을 지정할 수 있습니다. 사용 하 여 컬렉션의 이름을 지정할 수 있습니다는 `name` 특성입니다. 프레임 워크를 처리 하는 유일한 이름에는 "ActAs" 및 "OnBehalfOf"입니다. 이러한 컬렉션의 처리기가 없는 경우 사용할 보안 토큰 서비스 (STS)에서 기본 처리기를 대신 처리 하는 동안 `ActAs` 고 `OnBehalfOf` 토큰입니다.  
+ 서비스 구성에서 보안 토큰 처리기의 명명 된 컬렉션을 하나 이상 지정할 수 있습니다. 특성을 `name` 사용 하 여 컬렉션의 이름을 지정할 수 있습니다. 프레임 워크를 처리 하는 유일한 이름에는 "ActAs" 및 "OnBehalfOf"입니다. 이러한 컬렉션에 처리기가 있는 경우 및 토큰을 처리 `ActAs` 하 `OnBehalfOf` 는 경우 기본 처리기 대신 STS (보안 토큰 서비스)에서 사용 됩니다.  
   
- 기본적으로 컬렉션 채워집니다 처리기 형식은: <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>, <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>를 <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>, 및 <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>합니다. 사용 하 여 컬렉션을 수정할 수는 `<add>`, `<remove>`, 및 `<clear>` 요소입니다. 특정 형식의 단일 처리기만 컬렉션에 있는지를 확인 해야 합니다. 예를 들어에서 처리기를 파생 하는 경우는 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 하거나 클래스 처리기 또는 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 단일 컬렉션, 하지만 둘 다에서 구성할 수 있습니다.  
+ <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>기본적으로 컬렉션은 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> ,<xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>, <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler> ,,<xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>및 처리기 형식으로 채워집니다. <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler> `<add>` ,`<remove>`및 요소`<clear>` 를 사용 하 여 컬렉션을 수정할 수 있습니다. 컬렉션에 특정 형식의 처리기가 하나만 있는지 확인 해야 합니다. 예를 들어 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 클래스에서 처리기를 파생 하는 경우 처리기 또는는 단일 컬렉션에서 <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler> 구성 될 수 있지만 둘 다로 구성 될 수는 없습니다.  
   
- 사용 된 `<securityTokenHandlerConfiguration>` 컬렉션의 처리기에 대 한 구성 설정을 지정 하는 요소입니다. 이 요소를 통해 지정 된 설정을 재정의 통해 서비스에 지정 된 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md) 요소입니다. 일부 처리기 (몇 가지 기본 제공 처리기 형식을 포함)의 자식 요소를 통해 추가 구성을 지원할 수는 `<add>` 요소입니다. 처리기에 지정 된 설정은 컬렉션 또는 서비스에서 지정 된 해당 설정을 재정의 합니다.
+ `<securityTokenHandlerConfiguration>` 요소를 사용 하 여 컬렉션의 처리기에 대 한 구성 설정을 지정 합니다. 이 요소를 통해 지정 된 설정은 [ \<identityConfiguration >](identityconfiguration.md) 요소를 통해 서비스에 지정 된 설정을 재정의 합니다. 일부 처리기 (몇 가지 기본 제공 처리기 형식 포함)는 `<add>` 요소의 자식 요소를 통해 추가 구성을 지원할 수 있습니다. 처리기에 지정 된 설정이 컬렉션 또는 서비스에 지정 된 것과 동일한 설정을 재정의 합니다.

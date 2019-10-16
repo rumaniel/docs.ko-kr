@@ -1,21 +1,21 @@
 ---
-title: '방법: 여러 키 (Visual Basic)로 요소 정렬'
+title: '방법: 여러 키로 요소 정렬 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: 69509eb0bbc28045b71ad44c178d042367f3c03e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9e70a54dcf7ff8cd2e0f767773ad7a56b1da2330
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33644110"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71835134"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>방법: 여러 키 (Visual Basic)로 요소 정렬
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a>방법: 여러 키로 요소 정렬 (Visual Basic)
 이 항목에서는 여러 키에 대해 정렬하는 방법을 보여 줍니다.  
   
 ## <a name="example"></a>예제  
  이 예제에서 결과는 먼저 배송 우편 번호로 정렬된 다음 주문 날짜로 정렬됩니다.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 고객 및 주문(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로을 사용합니다. [샘플 XML 파일: Customers 및 Orders(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -36,7 +36,7 @@ Next
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```console  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997  
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997  
@@ -62,9 +62,9 @@ CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997
 ```  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 참조 [XML 네임 스페이스 (Visual Basic) 작업](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)합니다.  
+ 다음 예제에서는 네임스페이스에 있는 XML에 대한 동일한 쿼리를 보여 줍니다. 자세한 내용은 [네임 스페이스 개요 (LINQ to XML) (Visual Basic)](namespaces-overview-linq-to-xml.md)를 참조 하세요.  
   
- 이 예제에서는 XML 문서 [샘플 XML 파일: 네임스페이스의 Customers 및 Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)을 사용합니다.  
+ 이 예제에서는 XML 문서로 을 사용합니다. [샘플 XML 파일: 네임스페이스의 Customers 및 Orders](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -91,7 +91,7 @@ End Module
   
  이 코드의 결과는 다음과 같습니다.  
   
-```  
+```console  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
 CustomerID:LETSS EmployeeID:8 ShipPostalCode:94117 OrderDate:10/27/1997  
 CustomerID:LETSS EmployeeID:6 ShipPostalCode:94117 OrderDate:11/10/1997  
@@ -116,5 +116,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a>참조
+
+- [기본 쿼리 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

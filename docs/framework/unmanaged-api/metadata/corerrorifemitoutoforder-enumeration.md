@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4e9d03dcf4603f9470f8f2509050eb6f875746a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 16f6d7bf6fa1730d50cfe81526817e492a453dad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33442642"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781980"
 ---
 # <a name="corerrorifemitoutoforder-enumeration"></a>CorErrorIfEmitOutOfOrder 열거형
 메타데이터를 내보내는 순서가 잘못되었을 때 오류 메시지가 생성되어야 하는 조건을 나타내는 플래그 값을 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorErrorIfEmitOutOfOrder {  
   
     MDErrorOutOfOrderDefault    = 0x00000000,  
@@ -45,23 +45,24 @@ typedef enum CorErrorIfEmitOutOfOrder {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`MDErrorOutOfOrderDefault`|오류 메시지를 표시 하지 않는 기본 동작을 나타냅니다.|  
+|`MDErrorOutOfOrderDefault`|오류 메시지를 생성 하지 않는 기본 동작을 나타냅니다.|  
 |`MDErrorOutOfOrderNone`|컴파일러 오류 메시지를 생성 하지 해야 함을 나타냅니다.|  
-|`MDErrorOutOfOrderAll`|필드, 속성, 이벤트, 메서드 때 컴파일러에서 오류 메시지를 생성 하도록 하거나 매개 변수 순서가 내보내집니다 나타냅니다.|  
-|`MDMethodOutOfOrder`|메서드에 잘못 된 순서로 경우 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.|  
+|`MDErrorOutOfOrderAll`|필드, 속성, 이벤트, 메서드, 하는 경우 컴파일러 오류 메시지를 생성할지 또는 매개 변수 순서가 내보내집니다 나타냅니다.|  
+|`MDMethodOutOfOrder`|메서드는 내보내는 순서가 잘못 되었을 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.|  
 |`MDFieldOutOfOrder`|필드는 내보내는 순서가 잘못 되었을 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.|  
 |`MDParamOutOfOrder`|매개 변수가 잘못 된 순서로 경우 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.|  
 |`MDPropertyOutOfOrder`|속성은 내보내는 순서가 잘못 되었을 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.|  
-|`MDEventOutOfOrder`|이벤트가 잘못 된 순서로 발생 하는 경우 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.|  
+|`MDEventOutOfOrder`|이벤트의 순서가 내보내집니다 때 컴파일러에서 오류 메시지를 생성 해야 함을 나타냅니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorHdr.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

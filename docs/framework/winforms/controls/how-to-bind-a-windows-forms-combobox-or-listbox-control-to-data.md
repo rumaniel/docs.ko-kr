@@ -15,25 +15,25 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 270ed1c9fab4013df72b715ce8b074d287616713
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f361526c44f8fbb9ab282fe15ae109b67e8f01dd
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33530135"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69922750"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>방법: 데이터에 Windows Forms ComboBox 또는 ListBox 컨트롤 바인딩
-바인딩할 수 있습니다는 <xref:System.Windows.Forms.ComboBox> 및 <xref:System.Windows.Forms.ListBox> 데이터베이스에서 데이터를 찾아보는 등의 작업을 수행 하는 데이터에 새 데이터를 입력 하거나 기존 데이터를 편집 합니다.  
+<xref:System.Windows.Forms.ComboBox> 및<xref:System.Windows.Forms.ListBox> 를 데이터에 바인딩하여 데이터베이스의 데이터 검색, 새 데이터 입력, 기존 데이터 편집 등의 작업을 수행할 수 있습니다.  
   
-### <a name="to-bind-a-combobox-or-listbox-control"></a>ComboBox 또는 ListBox 컨트롤에 바인딩  
+### <a name="to-bind-a-combobox-or-listbox-control"></a>ComboBox 또는 ListBox 컨트롤을 바인딩하려면  
   
-1.  설정의 `DataSource` 속성을 데이터 원본 개체입니다. 가능한 데이터 소스는 <xref:System.Windows.Forms.BindingSource> 데이터, 데이터 테이블, 데이터 뷰, 데이터 집합에 바인딩된 데이터 뷰 관리자, 배열 또는 클래스를 구현 하는 모든 클래스는 <xref:System.Collections.IList> 인터페이스입니다. 자세한 내용은 참조 [Windows Forms에서 데이터 원본을 지 원하는](../../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)합니다.  
+1. `DataSource` 속성을 데이터 원본 개체로 설정 합니다. 가능한 데이터 원본에는 <xref:System.Windows.Forms.BindingSource> 데이터에 바인딩된 데이터, 데이터 테이블, 데이터 뷰, 데이터 집합, 데이터 뷰 관리자, 배열 또는 인터페이스를 <xref:System.Collections.IList> 구현 하는 클래스가 포함 됩니다. 자세한 내용은 [Windows Forms에서 지 원하는 데이터 원본](../data-sources-supported-by-windows-forms.md)을 참조 하세요.  
   
-2.  테이블에 바인딩하는 경우에 설정 된 `DisplayMember` 속성을 데이터 원본에 있는 열의 이름입니다.  
+2. 테이블에 바인딩하는 경우 `DisplayMember` 속성을 데이터 원본의 열 이름으로 설정 합니다.  
   
      \- 또는 -  
   
-     바인딩하는 경우는 <xref:System.Collections.IList>, 표시 멤버 목록에는 형식의 공용 속성을 설정 합니다.  
+     에 <xref:System.Collections.IList>바인딩하는 경우 표시 멤버를 목록에 있는 형식의 public 속성으로 설정 합니다.  
   
     ```vb  
     Private Sub BindComboBox()  
@@ -51,11 +51,12 @@ ms.locfileid: "33530135"
     ```  
   
     > [!NOTE]
-    >  구현 하지 않는 데이터 소스에 바인딩된 경우는 <xref:System.ComponentModel.IBindingList> 인터페이스와 같은 프로그램 <xref:System.Collections.ArrayList>, 바인딩된 컨트롤의 데이터는 데이터 소스 업데이트 될 때 업데이트 되지 것입니다. 예를 들어 있는 경우 콤보 상자에 바인딩된 프로그램 <xref:System.Collections.ArrayList> 데이터를 추가 하 고는 <xref:System.Collections.ArrayList>, 콤보 상자에 이러한 새 항목이 표시 되지 것입니다. 그러나 콤보 상자를 호출 하 여 업데이트를 적용할 수 있습니다는 <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> 및 <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> 인스턴스의 대 한 메서드는 <xref:System.Windows.Forms.BindingContext> 컨트롤이 바인딩되는 클래스입니다.  
+    > <xref:System.ComponentModel.IBindingList> 인터페이스를 구현 하지 않는 데이터 소스 (예: <xref:System.Collections.ArrayList>)에 바인딩되는 경우 데이터 소스가 업데이트 될 때 바인딩된 컨트롤의 데이터가 업데이트 되지 않습니다. 예를 들어에 바인딩된 <xref:System.Collections.ArrayList> 콤보 상자가 있고 데이터를에 추가 <xref:System.Collections.ArrayList>하는 경우 이러한 새 항목은 콤보 상자에 표시 되지 않습니다. 그러나 컨트롤이 바인딩되는 <xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A> <xref:System.Windows.Forms.BindingContext> 클래스의 인스턴스에서 및 <xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A> 메서드를 호출 하 여 콤보 상자를 강제로 업데이트할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.ComboBox>  
- <xref:System.Windows.Forms.ListBox>  
- [Windows Forms 데이터 바인딩](../../../../docs/framework/winforms/windows-forms-data-binding.md)  
- [데이터 바인딩 및 Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)  
- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.ComboBox>
+- <xref:System.Windows.Forms.ListBox>
+- [Windows Forms 데이터 바인딩](../windows-forms-data-binding.md)
+- [데이터 바인딩 및 Windows Forms](../data-binding-and-windows-forms.md)
+- [옵션 목록 표시에 사용된 Windows Forms 컨트롤](windows-forms-controls-used-to-list-options.md)

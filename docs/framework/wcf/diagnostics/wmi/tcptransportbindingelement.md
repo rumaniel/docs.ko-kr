@@ -2,12 +2,12 @@
 title: TcpTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 33bbc1e5-44e4-4ee3-b7b5-801dc78956e4
-ms.openlocfilehash: 04326484bbf1f07c66ad8fb401642880f9ba8c6e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6d2717bc2d1d14e369af2b9c5a8c0affb67501d9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193931"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956548"
 ---
 # <a name="tcptransportbindingelement"></a>TcpTransportBindingElement
 TcpTransportBindingElement  
@@ -64,5 +64,6 @@ class TcpTransportBindingElement : ConnectionOrientedTransportBindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

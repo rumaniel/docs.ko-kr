@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 58d65ee9842270b07a76ff438c975955689197e9
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47079729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017659"
 ---
 # <a name="control-styles-and-templates"></a>Control 스타일 및 템플릿
 Windows Presentation Foundation (WPF)에서 컨트롤을 <xref:System.Windows.Controls.ControlTemplate> 해당 컨트롤의 시각적 트리를 포함 하는 합니다. 컨트롤의 모양과 구조를 수정 하 여 변경할 수 있습니다는 <xref:System.Windows.Controls.ControlTemplate> 해당 컨트롤의 합니다. 컨트롤의 시각적 트리의 일부만 교체할 수 없으므로 설정 해야 하는 컨트롤의 시각적 트리를 변경 하는 <xref:System.Windows.Controls.Control.Template%2A> 새롭고 완전 컨트롤의 속성 <xref:System.Windows.Controls.ControlTemplate>합니다.  
@@ -34,38 +34,38 @@ Windows Presentation Foundation (WPF)에서 컨트롤을 <xref:System.Windows.Co
 |Aero.normalcolor.xaml|Windows Vista 운영 체제의 기본 테마|  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Button 스타일 및 템플릿](../../../../docs/framework/wpf/controls/button-styles-and-templates.md)  
- [Calendar 스타일 및 템플릿](../../../../docs/framework/wpf/controls/calendar-styles-and-templates.md)  
- [CheckBox 스타일 및 템플릿](../../../../docs/framework/wpf/controls/checkbox-styles-and-templates.md)  
- [ComboBox 스타일 및 템플릿](../../../../docs/framework/wpf/controls/combobox-styles-and-templates.md)  
- [ContextMenu 스타일 및 템플릿](../../../../docs/framework/wpf/controls/contextmenu-styles-and-templates.md)  
- [DataGrid 스타일 및 템플릿](../../../../docs/framework/wpf/controls/datagrid-styles-and-templates.md)  
- [DatePicker 스타일 및 템플릿](../../../../docs/framework/wpf/controls/datepicker-styles-and-templates.md)  
- [DocumentViewer 스타일 및 템플릿](../../../../docs/framework/wpf/controls/documentviewer-styles-and-templates.md)  
- [Expander 스타일 및 템플릿](../../../../docs/framework/wpf/controls/expander-styles-and-templates.md)  
- [Frame 스타일 및 템플릿](../../../../docs/framework/wpf/controls/frame-styles-and-templates.md)  
- [GroupBox 스타일 및 템플릿](../../../../docs/framework/wpf/controls/groupbox-styles-and-templates.md)  
- [Label 스타일 및 템플릿](../../../../docs/framework/wpf/controls/label-styles-and-templates.md)  
- [ListBox 스타일 및 템플릿](../../../../docs/framework/wpf/controls/listbox-styles-and-templates.md)  
- [ListView 스타일 및 템플릿](../../../../docs/framework/wpf/controls/listview-styles-and-templates.md)  
- [Menu 스타일 및 템플릿](../../../../docs/framework/wpf/controls/menu-styles-and-templates.md)  
- [NavigationWindow 스타일 및 템플릿](../../../../docs/framework/wpf/controls/navigationwindow-styles-and-templates.md)  
- [PasswordBox 스타일 및 템플릿](../../../../docs/framework/wpf/controls/passwordbox-syles-and-templates.md)  
- [ProgressBar 스타일 및 템플릿](../../../../docs/framework/wpf/controls/progressbar-styles-and-templates.md)  
- [RadioButton 스타일 및 템플릿](../../../../docs/framework/wpf/controls/radiobutton-styles-and-templates.md)  
- [RepeatButton 스타일 및 템플릿](../../../../docs/framework/wpf/controls/repeatbutton-syles-and-templates.md)  
- [ScrollBar 스타일 및 템플릿](../../../../docs/framework/wpf/controls/scrollbar-styles-and-templates.md)  
- [ScrollViewer 스타일 및 템플릿](../../../../docs/framework/wpf/controls/scrollviewer-styles-and-templates.md)  
- [Slider 스타일 및 템플릿](../../../../docs/framework/wpf/controls/slider-styles-and-templates.md)  
- [StatusBar 스타일 및 템플릿](../../../../docs/framework/wpf/controls/statusbar-styles-and-templates.md)  
- [TabControl 스타일 및 템플릿](../../../../docs/framework/wpf/controls/tabcontrol-styles-and-templates.md)  
- [TextBox 스타일 및 템플릿](../../../../docs/framework/wpf/controls/textbox-styles-and-templates.md)  
- [Thumb 스타일 및 템플릿](../../../../docs/framework/wpf/controls/thumb-syles-and-templates.md)  
- [ToggleButton 스타일 및 템플릿](../../../../docs/framework/wpf/controls/togglebutton-syles-and-templates.md)  
- [ToolBar 스타일 및 템플릿](../../../../docs/framework/wpf/controls/toolbar-styles-and-templates.md)  
- [ToolTip 스타일 및 템플릿](../../../../docs/framework/wpf/controls/tooltip-styles-and-templates.md)  
- [TreeView스타일 및 템플릿s](../../../../docs/framework/wpf/controls/treeview-styles-and-templates.md)  
- [Window 스타일 및 템플릿](../../../../docs/framework/wpf/controls/window-styles-and-templates.md)  
+ [Button 스타일 및 템플릿](button-styles-and-templates.md)  
+ [Calendar 스타일 및 템플릿](calendar-styles-and-templates.md)  
+ [CheckBox 스타일 및 템플릿](checkbox-styles-and-templates.md)  
+ [ComboBox 스타일 및 템플릿](combobox-styles-and-templates.md)  
+ [ContextMenu 스타일 및 템플릿](contextmenu-styles-and-templates.md)  
+ [DataGrid 스타일 및 템플릿](datagrid-styles-and-templates.md)  
+ [DatePicker 스타일 및 템플릿](datepicker-styles-and-templates.md)  
+ [DocumentViewer 스타일 및 템플릿](documentviewer-styles-and-templates.md)  
+ [Expander 스타일 및 템플릿](expander-styles-and-templates.md)  
+ [Frame 스타일 및 템플릿](frame-styles-and-templates.md)  
+ [GroupBox 스타일 및 템플릿](groupbox-styles-and-templates.md)  
+ [Label 스타일 및 템플릿](label-styles-and-templates.md)  
+ [ListBox 스타일 및 템플릿](listbox-styles-and-templates.md)  
+ [ListView 스타일 및 템플릿](listview-styles-and-templates.md)  
+ [Menu 스타일 및 템플릿](menu-styles-and-templates.md)  
+ [NavigationWindow 스타일 및 템플릿](navigationwindow-styles-and-templates.md)  
+ [PasswordBox 스타일 및 템플릿](passwordbox-styles-and-templates.md)  
+ [ProgressBar 스타일 및 템플릿](progressbar-styles-and-templates.md)  
+ [RadioButton 스타일 및 템플릿](radiobutton-styles-and-templates.md)  
+ [RepeatButton 스타일 및 템플릿](repeatbutton-styles-and-templates.md)  
+ [ScrollBar 스타일 및 템플릿](scrollbar-styles-and-templates.md)  
+ [ScrollViewer 스타일 및 템플릿](scrollviewer-styles-and-templates.md)  
+ [Slider 스타일 및 템플릿](slider-styles-and-templates.md)  
+ [StatusBar 스타일 및 템플릿](statusbar-styles-and-templates.md)  
+ [TabControl 스타일 및 템플릿](tabcontrol-styles-and-templates.md)  
+ [TextBox 스타일 및 템플릿](textbox-styles-and-templates.md)  
+ [Thumb 스타일 및 템플릿](thumb-styles-and-templates.md)  
+ [ToggleButton 스타일 및 템플릿](togglebutton-styles-and-templates.md)  
+ [ToolBar 스타일 및 템플릿](toolbar-styles-and-templates.md)  
+ [ToolTip 스타일 및 템플릿](tooltip-styles-and-templates.md)  
+ [TreeView스타일 및 템플릿s](treeview-styles-and-templates.md)  
+ [Window 스타일 및 템플릿](window-styles-and-templates.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls>  
@@ -73,6 +73,6 @@ Windows Presentation Foundation (WPF)에서 컨트롤을 <xref:System.Windows.Co
  <xref:System.Windows.Controls.ControlTemplate>  
   
 ## <a name="related-sections"></a>관련 단원  
- [컨트롤 제작 개요](../../../../docs/framework/wpf/controls/control-authoring-overview.md)  
+ [컨트롤 제작 개요](control-authoring-overview.md)  
   
- [스타일 지정 및 템플릿](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+ [스타일 지정 및 템플릿](styling-and-templating.md)

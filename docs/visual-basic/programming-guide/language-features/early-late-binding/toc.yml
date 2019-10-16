@@ -1,0 +1,9 @@
+- name: 컴파일 시 바인딩 및 런타임에 바인딩
+  href: index.md
+  items:
+    - name: 개체 형식 확인
+      href: determining-object-type.md
+    - name: 문자열 이름을 사용하여 속성 또는 메서드 호출
+      href: calling-a-property-or-method-using-a-string-name.md
+    - name: 동적 개체 작업
+      href: working-with-dynamic-objects.md

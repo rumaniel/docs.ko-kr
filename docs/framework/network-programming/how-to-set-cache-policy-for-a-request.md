@@ -7,17 +7,17 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: f2e3e7ccc16dc24cf79574f8607245b66ea53cb1
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 7b28cf6e27fa6f5a5d255621d8e21e9a565ddbc4
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50190660"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71048105"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>방법: 요청에 캐시 정책 설정
 다음 예제에서는 요청에 대한 캐시 정책을 설정하는 방법을 보여 줍니다. 예제 입력은 `http://www.contoso.com/` 등의 URI입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 리소스가 캐시에 포함된 기간이 하루를 초과하지 않으면 캐시에서 요청된 리소스를 사용하도록 허용하는 캐시 정책을 만듭니다. 예제에서는 리소스가 캐시에서 사용되었는지 여부를 나타내는 메시지(예: `"The response was retrieved from the cache : False."`)를 표시하고 나서 리소스를 표시합니다. 클라이언트와 서버 간에 캐시를 통해 요청을 수행할 수 있습니다.  
   
 ```csharp  
@@ -105,9 +105,10 @@ Namespace Examples.System.Net.Cache
 End Namespace  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [네트워크 응용 프로그램에 대한 캐시 관리](../../../docs/framework/network-programming/cache-management-for-network-applications.md)  
- [캐시 정책](../../../docs/framework/network-programming/cache-policy.md)  
- [위치 기반 캐시 정책](../../../docs/framework/network-programming/location-based-cache-policies.md)  
- [시간 기반 캐시 정책](../../../docs/framework/network-programming/time-based-cache-policies.md)  
- [\<requestCaching> 요소(네트워크 설정)](../../../docs/framework/configure-apps/file-schema/network/requestcaching-element-network-settings.md)
+## <a name="see-also"></a>참고 항목
+
+- [네트워크 애플리케이션에 대한 캐시 관리](cache-management-for-network-applications.md)
+- [캐시 정책](cache-policy.md)
+- [위치 기반 캐시 정책](location-based-cache-policies.md)
+- [시간 기반 캐시 정책](time-based-cache-policies.md)
+- [\<requestCaching> 요소(네트워크 설정)](../configure-apps/file-schema/network/requestcaching-element-network-settings.md)

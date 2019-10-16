@@ -1,19 +1,19 @@
 ---
-title: 비트 논리 연산자 (Visual Basic)
+title: 논리-비트 연산자 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - operators [Visual Basic], logical
 - logical operators [Visual Basic], Visual Basic
 ms.assetid: 55de4889-7679-4859-8063-bee15abca53f
-ms.openlocfilehash: 3b3a5befb0edcb9bbabf601a16da6398dd2d9a2a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b501d21efd02a0b96d98bc32af7968a61aae1f29
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33600820"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774792"
 ---
 # <a name="logicalbitwise-operators-visual-basic"></a>논리/비트 연산자(Visual Basic)
-Visual Basic에서 정의 된 논리/비트 연산자는 다음과 같습니다.  
+Visual Basic의 정의 논리/비트 연산자는 다음과 같습니다.  
   
  [And 연산자](../../../visual-basic/language-reference/operators/and-operator.md)  
   
@@ -31,6 +31,7 @@ Visual Basic에서 정의 된 논리/비트 연산자는 다음과 같습니다.
   
  [IsTrue 연산자](../../../visual-basic/language-reference/operators/istrue-operator.md)  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)  
- [Visual Basic의 논리 및 비트 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
+## <a name="see-also"></a>참고자료
+
+- [Visual Basic에서의 연산자 우선 순위](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [Visual Basic의 논리 및 비트 연산자](../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

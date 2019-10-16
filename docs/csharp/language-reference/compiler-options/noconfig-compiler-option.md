@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -noconfig compiler option [C#]
 - noconfig compiler option [C#]
 ms.assetid: cd26967e-e494-4c8c-b5c9-af13b2f78b2e
-ms.openlocfilehash: b689a4bf0d8a1e57bf36f8ded7f2c9308f241670
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 2d6d0c52be2306292224d7831f8818c6f865f2f4
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43527305"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69602743"
 ---
 # <a name="-noconfig-c-compiler-options"></a>-noconfig(C# 컴파일러 옵션)
 **-noconfig** 옵션은 csc.exe 파일과 동일한 디렉터리에 있고 여기서 로드되는 csc.rsp 파일로 컴파일하지 않도록 컴파일러에 알립니다.  
@@ -36,7 +36,7 @@ ms.locfileid: "43527305"
   
  이 컴파일러 옵션은 Visual Studio에서 사용할 수 없으며 프로그래밍 방식으로 변경할 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
 
-- [C# 컴파일러 옵션](../../../csharp/language-reference/compiler-options/index.md)  
+- [C# 컴파일러 옵션](./index.md)
 - [프로젝트 및 솔루션 속성 관리](/visualstudio/ide/managing-project-and-solution-properties)

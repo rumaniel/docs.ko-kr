@@ -1,5 +1,5 @@
 ---
-title: '&lt;webProxyScript&gt; 요소 (네트워크 설정)'
+title: <webProxyScript> 요소(네트워크 설정)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webProxyScript
@@ -8,20 +8,20 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: 683c4c5e3f3f62d947ce244c66cc590eabe64f17
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2abab3de2965c31c11d9acaf7b78f3a668563506
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50195790"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71697448"
 ---
-# <a name="ltwebproxyscriptgt-element-network-settings"></a>&lt;webProxyScript&gt; 요소 (네트워크 설정)
-웹 프록시 검색에 사용 되는 스크립트의 특성을 구성 합니다.  
+# <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 요소 (네트워크 설정)
+웹 프록시를 검색 하는 데 사용 되는 스크립트의 특징을 구성 합니다.  
   
- \<configuration>  
-\<system.net>  
-\<settings>  
-\<webProxyScript >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t-1[ **@no__t -4c.net >** ](system-net-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t[ **\<settings >** ](settings-element-network-settings.md)  
+&nbsp; @ no__t-1 @ no__t @ no__t @ @ no__t-4 @ no__t-5 **\<webProxyScript >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,7 +38,7 @@ ms.locfileid: "50195790"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`downloadTimeout`|스크립트 시간, 분 및 초를 다운로드 하는 최대 시간을 지정 합니다. 기본값은 1 분입니다.|  
+|`downloadTimeout`|스크립트를 다운로드 하는 최대 시간을 시간, 분, 초 단위로 지정 합니다. 기본값은 1 분입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -47,12 +47,13 @@ ms.locfileid: "50195790"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
+|[settings](settings-element-network-settings.md)|<xref:System.Net> 네임스페이스에 대한 기본 네트워크 옵션을 구성합니다.|  
   
 ## <a name="remarks"></a>설명  
   
 ## <a name="configuration-files"></a>구성 파일  
- 이 요소는 응용 프로그램 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
+ 이 요소는 애플리케이션 구성 파일 또는 컴퓨터 구성 파일(Machine.config)에서 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
-- [네트워크 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+## <a name="see-also"></a>참조
+
+- [네트워크 설정 스키마](index.md)

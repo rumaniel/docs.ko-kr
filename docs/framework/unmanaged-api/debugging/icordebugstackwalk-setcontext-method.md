@@ -17,27 +17,27 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6025a31f26c635ac40dcc2e35e7017be1c81feba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d6eb97fc70fec25f4b225c3fd5bad1e780091f7c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423017"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771042"
 ---
 # <a name="icordebugstackwalksetcontext-method"></a>ICorDebugStackWalk::SetContext 메서드
-설정의 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 개체의 현재 컨텍스트 스레드에 대 한 올바른 컨텍스트를 합니다.  
+집합의 [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) 스레드에 대 한 올바른 컨텍스트 개체의 현재 컨텍스트가 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetContext([in] CorDebugSetContextFlag flag,  
                    [in] ULONG32 contextSize,  
                    [in, size_is(contextSize)] BYTE context[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `flag`  
- [in] A [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) 컨텍스트 스택에 활성 프레임에서 인지 컨텍스트 스택을 해제 하 여 얻은 인지를 나타내는 플래그입니다.  
+ [in] A [CorDebugSetContextFlag](../../../../docs/framework/unmanaged-api/debugging/cordebugsetcontextflag-enumeration.md) 컨텍스트가 스택의 활성 프레임에서 또는 컨텍스트 스택을 해제 하 여 얻은 여부를 나타내는 플래그입니다.  
   
  `contextSize`  
  [in] 할당 된 크기는 `CONTEXT` 버퍼입니다.  
@@ -60,19 +60,20 @@ HRESULT SetContext([in] CorDebugSetContextFlag flag,
 ## <a name="remarks"></a>설명  
  이 메서드는 스레드의 현재 컨텍스트를 변경 하지 않습니다.  
   
- 잘못 된 컨텍스트를 현재 컨텍스트를 설정 합니다. 스택 워크에서 예기치 않은 결과가 발생할 수 있습니다.  
+ 잘못 된 컨텍스트에 현재 컨텍스트를 설정 합니다. 스택 워크에서 예기치 않은 결과가 발생할 수 있습니다.  
   
- 이 컨텍스트의 비트 정확한 복사본을 즉시 호출 하 여 검색할 수 있습니다는 [icordebugstackwalk:: Getcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) 메서드.  
+ 이 컨텍스트에서의 정확한 비트 복사본을 즉시 호출 하 여 검색할 수 있습니다 합니다 [icordebugstackwalk:: Getcontext](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md) 메서드.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)  
- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a>참고자료
+
+- [디버깅 인터페이스](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [디버깅](../../../../docs/framework/unmanaged-api/debugging/index.md)

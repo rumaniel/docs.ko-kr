@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e9b9bc8e364342a601c0738d5a64c5eac3cb7e7e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 81592b6da7fa7cdf275e9fa5b4b82ef0a15061c0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33447712"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782563"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs 메서드
 현재 메타데이터 범위에서 정의된 TypeSpec 토큰을 열거합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EnumTypeSpecs (  
    [in, out] HCORENUM    *phEnum,  
    [out] mdTypeSpec      rTypeSpecs[],  
@@ -38,7 +38,7 @@ HRESULT EnumTypeSpecs (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `phEnum`  
  [out에서] 열거자에 대 한 포인터입니다. 이 값이 메서드의 첫 번째 호출에 대 한 NULL 이어야 합니다.  
   
@@ -49,27 +49,28 @@ HRESULT EnumTypeSpecs (
  [in] `rTypeSpecs` 배열의 최대 크기입니다.  
   
  `pcTypeSpecs`  
- [out] 반환 된 TypeSpec 토큰 수 `rTypeSpecs`합니다.  
+ [out] TypeSpec 토큰에서 반환 된 수가 `rTypeSpecs`합니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
 |`S_OK`|`EnumTypeSpecs` 성공적으로 반환 합니다.|  
-|`S_FALSE`|열거할 토큰이 있습니다. 이 경우 `pcTypeSpecs` 은 0입니다.|  
+|`S_FALSE`|열거할 토큰이 있습니다. 이런 경우 `pcTypeSpecs` 0입니다.|  
   
 ## <a name="remarks"></a>설명  
- TypeSpec 토큰에 의해 만들어집니다는 [imetadataemit:: Gettokenfromtypespec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) 메서드.  
+ TypeSpec 토큰은 만든 합니다 [imetadataemit:: Gettokenfromtypespec](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromtypespec-method.md) 메서드.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에 리소스로 포함  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)  
- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataImport 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [IMetaDataImport2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

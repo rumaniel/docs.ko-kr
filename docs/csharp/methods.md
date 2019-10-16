@@ -5,16 +5,16 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: f5fd156ba25352fb1f816349c5e130267f7da8c2
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: b95818e06d37b0e98bf55428ff97dd476f92fac7
+ms.sourcegitcommit: 1b020356e421a9314dd525539da12463d980ce7a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42925846"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70168510"
 ---
-# <a name="methods"></a>메서드 #
+# <a name="methods"></a>메서드
 
-메서드는 일련의 문을 포함하는 코드 블록입니다. 프로그램을 통해 메서드를 호출하고 필요한 메서드 인수를 지정하여 문을 실행합니다. C#에서는 실행된 모든 명령이 메서드의 컨텍스트에서 수행됩니다. `Main` 메서드는 모든 C# 응용 프로그램의 진입점이고 프로그램이 시작될 때 CLR(공용 언어 런타임)에서 호출됩니다.
+메서드는 일련의 문을 포함하는 코드 블록입니다. 프로그램을 통해 메서드를 호출하고 필요한 메서드 인수를 지정하여 문을 실행합니다. C#에서는 실행된 모든 명령이 메서드의 컨텍스트에서 수행됩니다. `Main` 메서드는 모든 C# 애플리케이션의 진입점이고 프로그램이 시작될 때 CLR(공용 언어 런타임)에서 호출됩니다.
 
 > [!NOTE]
 > 이 항목에서는 명명된 메서드에 대해 설명합니다. 익명 함수에 대한 자세한 내용은 [익명 함수](programming-guide/statements-expressions-operators/anonymous-functions.md)를 참조하세요.
@@ -36,7 +36,8 @@ ms.locfileid: "42925846"
 - [반복기](#iterators)
 
 <a name="signatures"></a>
-## <a name="method-signatures"></a>메서드 시그니처 ##
+
+## <a name="method-signatures"></a>메서드 시그니처
 
 메서드는 다음을 지정하여 `class` 또는 `struct`에서 선언됩니다.
 
@@ -58,7 +59,8 @@ ms.locfileid: "42925846"
 `Motorcycle` 클래스에는 오버로드된 메서드 `Drive`가 있습니다. 두 메서드는 이름이 같지만 해당 매개 변수 형식으로 구별되어야 합니다.
 
 <a name="invocation"></a>
-## <a name="method-invocation"></a>메서드 호출 ##
+
+## <a name="method-invocation"></a>메서드 호출
 
 메서드는 *인스턴스* 또는 *정적*일 수 있습니다. 인스턴스 메서드를 호출하려면 개체를 인스턴스화하고 해당 개체에서 메서드를 호출해야 합니다. 인스턴스 메서드는 인스턴스 및 해당 데이터에 대해 작동합니다. 메서드가 속하는 형식의 이름을 참조하여 정적 메서드를 호출합니다. 정적 메서드는 인스턴스 데이터에 대해 작동하지 않습니다. 개체 인스턴스를 통해 정적 메서드를 호출하려고 하면 컴파일러 오류가 생성됩니다.
 
@@ -80,8 +82,9 @@ ms.locfileid: "42925846"
 
 [!code-csharp[csSnippets.Methods#46](../../samples/snippets/csharp/concepts/methods/named2.cs#46)]
 
- <a name="inherited"></a>
- ## <a name="inherited-and-overridden-methods"></a>상속 및 재정의된 메서드 ##
+<a name="inherited"></a>
+
+## <a name="inherited-and-overridden-methods"></a>상속 및 재정의된 메서드
 
 형식은 해당 형식에서 명시적으로 정의된 멤버 외에도 기본 클래스에서 정의된 멤버를 상속합니다. 관리되는 형식 시스템의 모든 형식이 직접 또는 간접적으로 <xref:System.Object> 클래스에서 상속하므로 모든 형식은 <xref:System.Object.Equals(System.Object)>, <xref:System.Object.GetType> 및 <xref:System.Object.ToString>과 같은 해당 멤버를 상속합니다. 다음 예제에서는 `Person` 클래스를 정의하고, 두 개의 `Person` 개체를 인스턴스화하고, `Person.Equals` 메서드를 호출하여 두 개체가 같은지 여부를 확인합니다. 그러나 `Equals` 메서드는 `Person` 클래스에서 정의되지 않고 <xref:System.Object>에서 상속됩니다.
 
@@ -92,12 +95,14 @@ ms.locfileid: "42925846"
 [!code-csharp[csSnippets.Methods#105](../../samples/snippets/csharp/concepts/methods/overridden1.cs#105)]
 
 <a name="passing"></a>
-## <a name="passing-parameters"></a>매개 변수 전달 ##
+
+## <a name="passing-parameters"></a>매개 변수 전달
 
 C#의 형식은 *값 형식* 또는 *참조 형식*입니다. 기본 제공 값 형식 목록을 보려면 [형식 및 변수](./tour-of-csharp/types-and-variables.md)를 참조하세요. 기본적으로, 값 형식과 참조 형식은 둘 다 값으로 메서드에 전달됩니다.
 
 <a name="byval"></a>
-### <a name="passing-parameters-by-value"></a>값으로 매개 변수 전달 ###
+
+### <a name="passing-parameters-by-value"></a>값으로 매개 변수 전달
 
 값 형식이 값으로 메서드에 전달되는 경우 개체 자체가 아니라 개체의 복사본이 메서드에 전달됩니다. 따라서 제어가 호출자로 반환될 때 호출된 메서드의 개체 변경 내용은 원래 개체에 영향을 주지 않습니다.
 
@@ -112,7 +117,8 @@ C#의 형식은 *값 형식* 또는 *참조 형식*입니다. 기본 제공 값 
 [!code-csharp[csSnippets.Methods#42](../../samples/snippets/csharp/concepts/methods/byvalue42.cs#42)]
 
 <a name="byref"></a>
-### <a name="passing-parameters-by-reference"></a>참조로 매개 변수 전달 ###
+
+### <a name="passing-parameters-by-reference"></a>참조로 매개 변수 전달
 
 메서드의 인수 값을 변경하고 제어가 호출하는 메서드로 반환될 때 해당 변경 내용을 반영하려는 경우 참조로 매개 변수를 전달합니다. 참조로 매개 변수를 전달하려면 [`ref`](language-reference/keywords/ref.md) 또는 [`out`](language-reference/keywords/out-parameter-modifier.md) 키워드를 사용합니다. 복사를 방지하지만 여전히 [`in`](language-reference/keywords/in-parameter-modifier.md) 키워드를 사용하여 수정을 방지하도록 참조로 값을 전달할 수도 있습니다.
 
@@ -127,7 +133,8 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 참조 형식 매개 변수를 전달하면 해당 개별 요소 또는 필드의 값이 아니라 참조 자체의 값을 변경할 수 있습니다.
 
 <a name="paramarray"></a>
-### <a name="parameter-arrays"></a>매개 변수 배열 ###
+
+### <a name="parameter-arrays"></a>매개 변수 배열
 
 경우에 따라 메서드의 인수 개수를 정확하게 지정하라는 요구 사항은 제한적입니다. `params` 키워드를 사용하여 매개 변수를 매개 변수 배열로 지정하면 가변 개수의 인수로 메서드를 호출할 수 있습니다. `params` 키워드로 태그가 지정된 매개 변수는 배열 형식이어야 하며, 메서드의 매개 변수 목록에서 마지막 매개 변수여야 합니다.
 
@@ -137,19 +144,20 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 - 적절한 형식의 개별 인수가 포함된 쉼표로 구분된 목록을 메서드에 전달
 - 매개 변수 배열에 인수 제공 안 함
 
-다음 예제에서는 첫 번째 매개 변수인 `StringOperation` 열거형 멤버에 지정된 문자열 작업을 수행하는 `DoStringOperation` 메서드를 정의합니다. 작업을 수행하는 대상 문자열은 매개 변수 배열에 의해 정의됩니다. `Main` 메서드는 해당 메서드를 호출하는 세 가지 방법을 모두 보여 줍니다. `params` 키워드로 태그가 지정된 메서드는 매개 변수 배열에 대한 인수가 제공되지 않은 경우 해당 값을 `null`로 처리하도록 준비해야 합니다.
+다음 예제에서는 매개 변수 배열의 모든 모음을 반환하는 `GetVowels` 메서드를 정의합니다. `Main` 메서드는 해당 메서드를 호출하는 세 가지 방법을 모두 보여 줍니다. 호출자가 `params` 한정자를 포함하는 매개 변수의 인수를 제공할 필요는 없습니다. 이 경우 매개 변수는 `null`입니다.
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
-## <a name="optional-parameters-and-arguments"></a>선택적 매개 변수 및 인수 ##
+
+## <a name="optional-parameters-and-arguments"></a>선택적 매개 변수 및 인수
 
 메서드 정의에서 해당 매개 변수를 필수 또는 선택 사항으로 지정할 수 있습니다. 기본적으로 매개 변수는 필수입니다. 선택적 매개 변수는 메서드 정의에 매개 변수의 기본값을 포함하여 지정됩니다. 메서드를 호출할 때 선택적 매개 변수에 대한 인수가 제공되지 않은 경우 기본값이 대신 사용됩니다.
 
 다음 종류의 식 중 하나로 매개 변수의 기본값을 할당해야 합니다.
 
 - 리터럴 문자열이나 숫자와 같은 상수
-- `new ValType` 형태의 식. 여기서 `ValType`은 값 형식입니다. 이 경우 형식의 실제 멤버가 아닌 값 형식의 암시적 기본 생성자가 호출됩니다.
+- `new ValType` 형태의 식. 여기서 `ValType`은 값 형식입니다. 이 경우 형식의 실제 멤버가 아닌 값 형식의 매개 변수가 없는 암시적 생성자가 호출됩니다.
 - `default(ValType)` 형태의 식. 여기서 `ValType`은 값 형식입니다.
 
 메서드에 필수 및 선택적 매개 변수가 둘 다 포함된 경우 선택적 매개 변수는 매개 변수 목록의 끝에서 모든 필수 매개 변수 다음에 정의됩니다.
@@ -158,7 +166,7 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 
 [!code-csharp[csSnippets.Methods#21](../../samples/snippets/csharp/concepts/methods/optional1.cs#21)]
 
-여러 선택적 인수가 있는 메서드를 위치 인수로 호출하는 경우 호출자가 첫 번째 매개 변수부터 인수가 제공되는 마지막 매개 변수까지 모든 선택적 매개 변수에 대한 인수를 제공해야 합니다. 예를 들어 `ExampleMethod` 메서드에서 호출자가 `description` 매개 변수에 대한 인수를 제공하는 경우 `optionalInt` 매개 변수에 대한 인수도 제공해야 합니다. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");`는 유효한 메서드 호출이고, `opt.ExampleMethod(2, , "Addition of 2 and 0);`은 "인수가 없습니다." 컴파일러 오류를 생성합니다.
+여러 선택적 인수가 있는 메서드를 위치 인수로 호출하는 경우 호출자가 첫 번째 매개 변수부터 인수가 제공되는 마지막 매개 변수까지 모든 선택적 매개 변수에 대한 인수를 제공해야 합니다. 예를 들어 `ExampleMethod` 메서드에서 호출자가 `description` 매개 변수에 대한 인수를 제공하는 경우 `optionalInt` 매개 변수에 대한 인수도 제공해야 합니다. `opt.ExampleMethod(2, 2, "Addition of 2 and 2");`는 유효한 메서드 호출이고, `opt.ExampleMethod(2, , "Addition of 2 and 0");`은 "인수가 없습니다." 컴파일러 오류를 생성합니다.
 
 명명된 인수 또는 위치 인수와 명명된 인수의 조합을 사용하여 메서드를 호출하는 경우 호출자는 메서드 호출에서 마지막 위치 인수 뒤에 오는 모든 인수를 생략할 수 있습니다.
 
@@ -172,8 +180,9 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 - 둘 이상의 인증서가 있으면 기본 설정 변환에 대한 오버로드 확인 규칙이 명시적으로 지정된 인수에 적용됩니다. 선택적 매개 변수에 대해 생략된 인수는 무시됩니다.
 - 두 후보가 똑같이 정상이라고 판단되는 경우 기본적으로 호출에서 인수가 생략된 선택적 매개 변수가 없는 후보가 설정됩니다. 이는 매개 변수가 적은 후보에 대한 오버로드 확인에서 일반적인 기본 설정의 결과입니다.
 
- <a name="return"></a>
- ## <a name="return-values"></a>반환 값 ##
+<a name="return"></a>
+
+## <a name="return-values"></a>반환 값
 
 메서드는 호출자에 값을 반환할 수 있습니다. 메서드 이름 앞에 나열된 반환 형식이 `void`가 아니면 메서드는 `return` 키워드를 사용하여 값을 반환할 수 있습니다. `return` 키워드에 이어 반환 형식과 일치하는 변수, 상수 또는 식을 포함하는 문은 메서드 호출자에 값을 반환합니다. `return` 키워드를 사용하여 값을 반환하려면 void가 아닌 반환 값을 포함한 메서드가 필요합니다. `return` 키워드는 메서드 실행을 중지합니다.
 
@@ -197,10 +206,7 @@ by ref 매개 변수를 사용하는 일반적인 패턴은 변수 값의 교환
 public (string, string, string, int) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -208,8 +214,7 @@ public (string, string, string, int) GetPersonalInfo(string id)
 
 ```csharp
 var person = GetPersonalInfo("111111111")
-if (person != null)
-   Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
+Console.WriteLine("{person.Item1} {person.Item3}: age = {person.Item4}");
 ```
 
 튜플 형식 정의의 튜플 요소에 이름을 할당할 수도 있습니다. 다음 예제에서는 명명된 요소를 사용하는 `GetPersonalInfo` 메서드의 대체 버전을 보여 줍니다.
@@ -218,10 +223,7 @@ if (person != null)
 public (string FName, string MName, string LName, int Age) GetPersonalInfo(string id)
 {
     PersonInfo per = PersonInfo.RetrieveInfoById(id);
-    if (per != null)
-       return (per.FirstName, per.MiddleName, per.LastName, per.Age);
-    else
-       return null;
+    return (per.FirstName, per.MiddleName, per.LastName, per.Age);
 }
 ```
 
@@ -229,16 +231,16 @@ public (string FName, string MName, string LName, int Age) GetPersonalInfo(strin
 
 ```csharp
 var person = GetPersonalInfo("111111111");
-if (person != null)
-   Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
+Console.WriteLine("{person.FName} {person.LName}: age = {person.Age}");
 ```
 
 메서드에 배열이 인수로 전달되고 메서드가 개별 요소의 값을 수정하는 경우 값의 스타일 또는 기능 흐름 개선을 위해 메서드에서 배열을 반환하도록 선택할 수도 있지만 필수는 아닙니다.  이는 C#에서 모든 참조 형식을 값으로 전달하고 배열 참조의 값이 배열에 대한 포인터이기 때문입니다. 다음 예제에서는 `DoubleValues` 메서드에서 수행한 `values` 배열 내용의 변경 사항을 배열에 대한 참조가 있는 모든 코드에서 관찰할 수 있습니다.
 
 [!code-csharp[csSnippets.Methods#101](../../samples/snippets/csharp/concepts/methods/returnarray1.cs#101)]
 
- <a name="exten"></a>
- ## <a name="extension-methods"></a>확장 메서드 ##
+<a name="extension"></a>
+
+## <a name="extension-methods"></a>확장 메서드
 
 일반적으로 기존 형식에 메서드를 추가하는 방법에는 다음 두 가지가 있습니다.
 
@@ -250,11 +252,12 @@ if (person != null)
 자세한 내용은 [확장 메서드](programming-guide/classes-and-structs/extension-methods.md)를 참조하세요.
 
 <a name="async"></a>
-## <a name="async-methods"></a>비동기 메서드 ##
+
+## <a name="async-methods"></a>비동기 메서드
 
 비동기 기능을 사용하면 명시적 콜백을 사용하거나 수동으로 여러 메서드 또는 람다 식에 코드를 분할하지 않고도 비동기 메서드를 호출할 수 있습니다.
 
-메서드에 [async](language-reference/keywords/async.md) 한정자를 표시하면 메서드에서 [await](language-reference/keywords/await.md) 연산자를 사용할 수 있습니다. 제어가 비동기 메서드의 `await` 식에 도달하면 대기된 작업이 완료되지 않은 경우 제어가 호출자로 반환되고, 대기된 작업이 완료될 때까지 `await` 키워드가 있는 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다.
+메서드에 [async](language-reference/keywords/async.md) 한정자를 표시하면 메서드에서 [await](language-reference/operators/await.md) 연산자를 사용할 수 있습니다. 제어가 비동기 메서드의 `await` 식에 도달하면 대기된 작업이 완료되지 않은 경우 제어가 호출자로 반환되고, 대기된 작업이 완료될 때까지 `await` 키워드가 있는 메서드의 진행이 일시 중단됩니다. 작업이 완료되면 메서드가 실행이 다시 시작될 수 있습니다.
 
 > [!NOTE]
 > 비동기 메서드는 아직 완료되지 않은 첫 번째 대기된 개체를 검색할 때나 비동기 메서드의 끝에 도달할 때 중에서 먼저 발생하는 시점에 호출자에게 반환됩니다.
@@ -270,7 +273,8 @@ if (person != null)
  비동기 메서드에 대한 자세한 내용은 [Async 및 Await를 사용한 비동기 프로그래밍](async.md), [비동기 프로그램의 제어 흐름](programming-guide/concepts/async/control-flow-in-async-programs.md) 및 [비동기 반환 형식](programming-guide/concepts/async/async-return-types.md)을 참조하세요.
 
 <a name="expr"></a>
-## <a name="expression-bodied-members"></a>식 본문 멤버 ##
+
+## <a name="expression-bodied-members"></a>식 본문 멤버
 
 일반적으로 식의 결과와 함께 바로 반환되거나 단일 문이 메서드 본문으로 포함된 메서드 정의가 있습니다.  `=>`를 사용하여 해당 메서드를 속성을 정의하기 위한 구문 바로 가기는 다음과 같습니다.
 
@@ -286,7 +290,8 @@ public Customer this[long id] => store.LookupCustomer(id);
 메서드가 `void`를 반환하거나 비동기 메서드이면 메서드 본문은 문 식이어야 합니다(람다에서와 같음).  속성 및 인덱서의 경우 읽기 전용이어야 하며, `get` 접근자 키워드를 사용하지 않습니다.
 
 <a name="iterators"></a>
-## <a name="iterators"></a>반복기 ##
+
+## <a name="iterators"></a>반복기
 
 반복기는 배열 목록과 같은 컬렉션에 대해 사용자 지정 반복을 수행합니다. 반복기는 [yield return](language-reference/keywords/yield.md) 문을 사용하여 각 요소를 한 번에 하나씩 반환합니다. `yield return` 문에 도달하면 호출자가 시퀀스의 다음 요소를 요청할 수 있도록 현재 위치가 기억됩니다.
 
@@ -294,14 +299,14 @@ public Customer this[long id] => store.LookupCustomer(id);
 
 자세한 내용은 [반복기](programming-guide/concepts/iterators.md)를 참조하세요.
 
-## <a name="see-also"></a>참고 항목 ##
+## <a name="see-also"></a>참고 항목
 
-- [액세스 한정자](language-reference/keywords/access-modifiers.md)   
-- [정적 클래스 및 정적 클래스 멤버](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)   
-- [상속](programming-guide/classes-and-structs/inheritance.md)   
-- [추상/봉인된 클래스 및 클래스 멤버](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)   
-- [params](language-reference/keywords/params.md)   
-- [out](language-reference/keywords/out-parameter-modifier.md)   
-- [ref](language-reference/keywords/ref.md)   
-- [in](language-reference/keywords/in-parameter-modifier.md)   
+- [액세스 한정자](language-reference/keywords/access-modifiers.md)
+- [정적 클래스 및 정적 클래스 멤버](programming-guide/classes-and-structs/static-classes-and-static-class-members.md)
+- [상속](programming-guide/classes-and-structs/inheritance.md)
+- [추상/봉인된 클래스 및 클래스 멤버](programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
+- [params](language-reference/keywords/params.md)
+- [out](language-reference/keywords/out-parameter-modifier.md)
+- [ref](language-reference/keywords/ref.md)
+- [in](language-reference/keywords/in-parameter-modifier.md)
 - [매개 변수 전달](programming-guide/classes-and-structs/passing-parameters.md)

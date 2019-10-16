@@ -1,16 +1,17 @@
 ---
-title: 쿼리 키워드(C# 참조)
+title: 쿼리 키워드 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - query keywords [C#]
 - LINQ [C#], query keywords
 ms.assetid: 6c9bec16-dbd7-4a7c-a060-fe4600b2021f
-ms.openlocfilehash: 9ec163e1de018bd87348a5b39a1f34654d7d6d84
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: ed931871e8abbfd9ff421a1307fb21c3490493fb
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48028734"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69608460"
 ---
 # <a name="query-keywords-c-reference"></a>쿼리 키워드(C# 참조)
 
@@ -39,5 +40,5 @@ ms.locfileid: "48028734"
 
 - [C# 키워드](index.md)
 - [LINQ(Language-Integrated Query)](../../programming-guide/concepts/linq/index.md)
-- [LINQ 쿼리 식](../../../csharp/programming-guide/linq-query-expressions/index.md)
-- [C#에서 LINQ 시작](../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
+- [LINQ 쿼리 식](../../programming-guide/linq-query-expressions/index.md)
+- [C#에서 LINQ 시작](../../programming-guide/concepts/linq/getting-started-with-linq.md)

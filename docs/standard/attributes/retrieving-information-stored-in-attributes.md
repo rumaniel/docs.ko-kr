@@ -13,26 +13,26 @@ helpviewer_keywords:
 ms.assetid: 37dfe4e3-7da0-48b6-a3d9-398981524e1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7021a984f844660c45ae3e2d98569432ab64b657
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 8873b4938f654213bd659631175ba4526a35dcc3
+ms.sourcegitcommit: 7bfe1682d9368cf88d43e895d1e80ba2d88c3a99
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002998"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71957335"
 ---
 # <a name="retrieving-information-stored-in-attributes"></a>특성에 저장된 정보 검색
 사용자 지정 특성 검색은 간단한 프로세스입니다. 먼저, 검색하려는 특성의 인스턴스를 선언합니다. 그런 다음, <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType> 메서드를 사용하여 검색하려는 특성 값으로 새 특성을 초기화합니다. 새 특성이 초기화되면 해당 속성을 사용하여 값을 가져오기만 하면 됩니다.  
   
 > [!IMPORTANT]
->  이 항목에서는 실행 컨텍스트에 로드된 코드에 대한 특성을 검색하는 방법을 설명합니다. 리플렉션 전용 컨텍스트에 로드된 코드의 특성을 검색하려면 [방법: 리플렉션 전용 컨텍스트에 어셈블리 로드](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)와 같이 <xref:System.Reflection.CustomAttributeData> 클래스를 사용해야 합니다.  
+> 이 항목에서는 실행 컨텍스트에 로드된 코드에 대한 특성을 검색하는 방법을 설명합니다. 리플렉션 전용 컨텍스트에 로드 된 코드의 특성을 검색 하려면 다음과 같이 <xref:System.Reflection.CustomAttributeData> 클래스 [를 사용 해야 합니다. 어셈블리를 리플렉션 전용 컨텍스트에](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)로드 합니다.  
   
  이 섹션에서는 특성을 검색하는 다음 방법에 대해 설명합니다.  
   
--   [특성의 단일 인스턴스 검색](#cpconretrievingsingleinstanceofattribute)  
+- [특성의 단일 인스턴스 검색](#cpconretrievingsingleinstanceofattribute)  
   
--   [동일한 범위에 적용된 특성의 다중 인스턴스 검색](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
+- [동일한 범위에 적용된 특성의 다중 인스턴스 검색](#cpconretrievingmultipleinstancesofattributeappliedtosamescope)  
   
--   [다양한 범위에 적용된 특성의 다중 인스턴스 검색](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
+- [다양한 범위에 적용된 특성의 다중 인스턴스 검색](#cpconretrievingmultipleinstancesofattributeappliedtodifferentscopes)  
   
 <a name="cpconretrievingsingleinstanceofattribute"></a>   
 ## <a name="retrieving-a-single-instance-of-an-attribute"></a>특성의 단일 인스턴스 검색  
@@ -44,7 +44,7 @@ ms.locfileid: "46002998"
   
  이 프로그램은 실행 시 다음 텍스트를 표시합니다.  
   
-```  
+```console  
 The Name Attribute is: Joan Smith.  
 The Level Attribute is: 42.  
 The Reviewed Attribute is: True.  
@@ -52,7 +52,7 @@ The Reviewed Attribute is: True.
   
  특성을 찾을 수 없는 경우 **GetCustomAttribute** 메서드는 `MyAttribute`를 null 값으로 초기화합니다. 이 예제는 해당 인스턴스의 `MyAttribute`를 확인하고 특성을 찾을 수 없는 경우 사용자에게 알립니다. 클래스 범위에서 `DeveloperAttribute`를 찾을 수 없는 경우 다음 메시지가 콘솔에 표시됩니다.  
   
-```  
+```console  
 The attribute was not found.   
 ```  
   
@@ -86,7 +86,7 @@ The attribute was not found.
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Type?displayProperty=nameWithType>  
-- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>  
-- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>  
+- <xref:System.Type?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttribute%2A?displayProperty=nameWithType>
+- <xref:System.Attribute.GetCustomAttributes%2A?displayProperty=nameWithType>
 - [특성](../../../docs/standard/attributes/index.md)

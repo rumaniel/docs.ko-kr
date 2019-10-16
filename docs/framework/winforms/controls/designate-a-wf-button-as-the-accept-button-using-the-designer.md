@@ -7,29 +7,27 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: a1da0590-755f-49f2-aca7-609fac6351bf
-ms.openlocfilehash: ca049e86ab53fbd84cb24e81b0a850050ec2823f
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 27ecb26c493232bcfb996d012f9760b7ef91e5b2
+ms.sourcegitcommit: cf9515122fce716bcfb6618ba366e39b5a2eb81e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702922"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69039653"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms 단추를 적용 단추로 지정
-모든 Windows Form에 지정할 수 있습니다는 <xref:System.Windows.Forms.Button> 컨트롤을 적용 단추가 기본 단추 라고도 합니다. ENTER 키를 누를 때마다 폼에서 다른 컨트롤에 포커스가 관계 없이 기본 단추 클릭 됩니다. 이 하는 경우 포커스가 있는 컨트롤은 다른 단추에 대 한 예외-포커스가 있는 단추를 클릭 하는 경우-여러 줄 텍스트 상자 또는 ENTER 키를 트래핑 하는 사용자 지정 컨트롤입니다.  
-  
-> [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
-  
-### <a name="to-designate-the-accept-button"></a>적용 단추를 지정 하려면  
-  
-1.  단추 상주 하는 폼을 선택 합니다.  
-  
-2.  에 **속성** 창에서 양식의 설정 <xref:System.Windows.Forms.Form.AcceptButton%2A> 속성을를 <xref:System.Windows.Forms.Button> 컨트롤의 이름입니다.  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.Form.AcceptButton%2A>  
- [Button 컨트롤 개요](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)  
- [Windows Forms Button 컨트롤 선택 방법](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)  
- [방법: Windows Forms 단추 클릭에 응답](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)  
- [방법: 디자이너를 사용하여 Windows Forms 단추를 취소 단추로 지정](../../../../docs/framework/winforms/controls/designate-a-wf-button-as-the-cancel-button-using-the-designer.md)  
- [Button 컨트롤](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+Windows Form에서 컨트롤을 <xref:System.Windows.Forms.Button> 기본 단추 라고도 하는 허용 단추로 지정할 수 있습니다. 사용자가 ENTER 키를 누를 때마다 폼의 다른 컨트롤에 포커스가 있는지 여부에 관계 없이 기본 단추가 클릭 됩니다. 이에 대 한 예외는 포커스가 있는 컨트롤이 다른 단추인 경우입니다 .이 경우 포커스가 있는 단추를 클릭 하거나 여러 줄 텍스트 상자를 클릭 하거나 ENTER 키를 트래핑 하는 사용자 지정 컨트롤을 클릭 합니다.
+
+## <a name="to-designate-the-accept-button"></a>수락 단추를 지정 하려면
+
+1. 단추가 있는 폼을 선택 합니다.
+
+2. **속성** 창에서 폼의 <xref:System.Windows.Forms.Form.AcceptButton%2A> 속성을 <xref:System.Windows.Forms.Button> 컨트롤의 이름으로 설정 합니다.
+
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.Form.AcceptButton%2A>
+- [Button 컨트롤 개요](button-control-overview-windows-forms.md)
+- [Windows Forms Button 컨트롤 선택 방법](ways-to-select-a-windows-forms-button-control.md)
+- [방법: Windows Forms 단추 클릭에 응답](how-to-respond-to-windows-forms-button-clicks.md)
+- [방법: 디자이너를 사용 하 여 Windows Forms 단추를 취소 단추로 지정](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [Button 컨트롤](button-control-windows-forms.md)

@@ -1,42 +1,44 @@
 ---
-title: '&lt;localServiceSettings&gt; 요소'
+title: <localServiceSettings> 요소
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 1257b151f75d05b610fe3463f8bef5f78d2b2fcd
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 4883fd563ecf989d67c369085df4fc43d0c5f078
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32751157"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400312"
 ---
-# <a name="ltlocalservicesettingsgt-element"></a>&lt;localServiceSettings&gt; 요소
+# <a name="localservicesettings-element"></a>\<localServiceSettings > 요소
 이 바인딩에 대한 로컬 서비스의 보안 설정을 지정합니다.  
   
- \<system.serviceModel>  
-\<바인딩 >  
-\<customBinding>  
-\<바인딩 >  
-\<security>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<보안 >** ](security-of-custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<localServiceSettings >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<security>  
-   <localServiceSettings detectReplays="Boolean"  
-      inactivityTimeout="TimeSpan"  
-      issuedCookieLifeTime="TimeSpan"  
-      maxCachedCookies="Integer"   
-      maxClockSkew="TimeSpan"   
-      maxPendingSessions="Integer"  
-      maxStatefulNegotiations="Integer"  
-      negotiationTimeout="TimeSpan"  
-      reconnectTransportOnFailure="Boolean"  
-            replayCacheSize="Integer"  
-      replayWindow="TimeSpan"  
-      sessionKeyRenewalInterval="TimeSpan"  
-      sessionKeyRolloverInterval="TimeSpan"  
-      timestampValidityDuration="TimeSpan" />  
-</security>  
+<security>
+  <localServiceSettings detectReplays="Boolean"
+                        inactivityTimeout="TimeSpan"
+                        issuedCookieLifeTime="TimeSpan"
+                        maxCachedCookies="Integer"
+                        maxClockSkew="TimeSpan"
+                        maxPendingSessions="Integer"
+                        maxStatefulNegotiations="Integer"
+                        negotiationTimeout="TimeSpan"
+                        reconnectTransportOnFailure="Boolean"
+                        replayCacheSize="Integer"
+                        replayWindow="TimeSpan"
+                        sessionKeyRenewalInterval="TimeSpan"
+                        sessionKeyRolloverInterval="TimeSpan"
+                        timestampValidityDuration="TimeSpan" />
+</security>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -68,33 +70,34 @@ ms.locfileid: "32751157"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다.|  
-|[\<secureConversationBootstrap >](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|보안 대화 서비스 개시에 사용되는 기본값을 지정합니다.|  
+|[\<security>](security-of-custombinding.md)|사용자 지정 바인딩에 대한 보안 옵션을 지정합니다.|  
+|[\<secureConversationBootstrap>](secureconversationbootstrap.md)|보안 대화 서비스 개시에 사용되는 기본값을 지정합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 설정은 서비스 보안 정책의 일부로 게시되지 않고 클라이언트의 바인딩에 영향을 주지 않으므로 로컬 속성에 속합니다.  
   
  `localServiceSecuritySettings` 요소의 다음 특성을 사용하면 DOS(서비스 거부) 보안 공격을 줄일 수 있습니다.  
   
--   `maxCachedCookies`: SPNEGO 또는 SSL 협상 후에 서버에서 캐시하는 시간 제한 SecurityContextToken의 최대 개수를 제어합니다.  
+- `maxCachedCookies`: SPNEGO 또는 SSL 협상 후에 서버에서 캐시하는 시간 제한 SecurityContextToken의 최대 개수를 제어합니다.  
   
--   `issuedCookieLifetime`: SPNEGO 또는 SSL 협상 후에 서버에서 발급하는 SecurityContextToken의 수명을 제어합니다. 서버는 이 기간 동안 SecurityContextToken을 캐시합니다.  
+- `issuedCookieLifetime`: SPNEGO 또는 SSL 협상 후에 서버에서 발급하는 SecurityContextToken의 수명을 제어합니다. 서버는 이 기간 동안 SecurityContextToken을 캐시합니다.  
   
--   `maxPendingSessions`: 서버에서 설정되었지만 응용 프로그램 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+- `maxPendingSessions`: 서버에서 설정되었지만 애플리케이션 메시지가 처리되지 않은 보안 대화의 최대 개수를 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
--   `inactivityTimeout`: 응용 프로그램 메시지가 수신되지 않을 때 서비스에서 보안 대화를 활성 상태로 유지하는 최대 시간을 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
+- `inactivityTimeout`: 애플리케이션 메시지가 수신되지 않을 때 서비스에서 보안 대화를 활성 상태로 유지하는 최대 시간을 제어합니다. 이 할당량은 클라이언트가 서비스에서 보안 대화를 설정할 수 없도록 하고 서비스에서 각 클라이언트의 상태를 유지 관리하게 하지만 사용하지는 않습니다.  
   
  보안 대화 세션에서 바인딩의 `inactivityTimeout` 및 `receiveTimeout` 특성은 모두 세션 시간 제한에 영향을 줍니다. 제한 시간은 두 속성 값 중 짧은 시간으로 결정됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>  
- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>  
- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [바인딩](../../../../../docs/framework/wcf/bindings.md)  
- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [방법: SecurityBindingElement를 사용하여 사용자 지정 바인딩 만들기](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
- [사용자 지정 바인딩 보안](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
+- <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [바인딩](../../../wcf/bindings.md)
+- [바인딩 확장](../../../wcf/extending/extending-bindings.md)
+- [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [방법: SecurityBindingElement를 사용 하 여 사용자 지정 바인딩 만들기](../../../wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [사용자 지정 바인딩 보안](../../../wcf/samples/custom-binding-security.md)

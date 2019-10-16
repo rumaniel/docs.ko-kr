@@ -1,15 +1,13 @@
 ---
-title: dotnet sln 명령 - .NET Core CLI
+title: dotnet sln 명령
 description: dotnet-sln 명령은 솔루션 파일의 프로젝트를 추가, 제거 및 나열하는 간편한 옵션을 제공합니다.
-author: mairaw
-ms.author: mairaw
 ms.date: 06/13/2018
-ms.openlocfilehash: 65ae402ef5519863886c8cf833598f5314b4bdad
-ms.sourcegitcommit: 6bc4efca63e526ce6f2d257fa870f01f8c459ae4
+ms.openlocfilehash: 84508aaefff61b31e2965576ebc2daaae7331951
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/19/2018
-ms.locfileid: "36207793"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117590"
 ---
 # <a name="dotnet-sln"></a>dotnet sln
 
@@ -21,7 +19,7 @@ ms.locfileid: "36207793"
 
 ## <a name="synopsis"></a>개요
 
-```
+```dotnetcli
 dotnet sln [<SOLUTION_NAME>] add <PROJECT> <PROJECT> ...
 dotnet sln [<SOLUTION_NAME>] add <GLOBBING_PATTERN>
 dotnet sln [<SOLUTION_NAME>] remove <PROJECT> <PROJECT> ...
@@ -36,7 +34,7 @@ dotnet sln [-h|--help]
 
 `dotnet sln` 명령을 사용하려면 솔루션 파일이 이미 있어야 합니다. 하나를 생성해야 하는 경우, 다음 예제와 같이 [dotnet new](dotnet-new.md) 명령을 사용합니다.
 
-```
+```dotnetcli
 dotnet new sln
 ```
 
@@ -95,3 +93,6 @@ dotnet new sln
 와일드카드 사용 패턴을 사용하여 솔루션에서 여러 C# 프로젝트를 제거합니다.
 
 `dotnet sln todo.sln remove **/*.csproj`
+
+> [!NOTE]
+> 와일드카드 사용은 CLI 기능이 아니라 명령 셸의 기능입니다. 파일을 확장하려면 와일드카드 사용을 지원하는 셸을 사용해야 합니다. 와일드카드 사용에 대한 자세한 내용은 [Wikipedia](https://en.wikipedia.org/wiki/Glob_(programming))를 참조하세요.

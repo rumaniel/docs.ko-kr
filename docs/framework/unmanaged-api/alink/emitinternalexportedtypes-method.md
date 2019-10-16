@@ -17,25 +17,25 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 55b9d185804f25c7431f2696d67753cc3ba02d1f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 04103ad305e0ae97669f3e07e06f03c2cdb4dfbd
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402043"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70787513"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes 메서드
 어셈블리에 추가 된 형식을 내보냅니다. 알려진 내부 형식이 추가 된 후이 메서드를 호출 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT EmitInternalExportedTypes(  
     mdAssembly AssemblyID  
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `AssemblyID`  
  어셈블리의 ID입니다.  
   
@@ -43,9 +43,10 @@ HRESULT EmitInternalExportedTypes(
  메서드가 성공 하면 S_OK를 반환 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- Alink.h 필요  
+ Alink 필요  
   
-## <a name="see-also"></a>참고 항목  
- [IALink2 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)  
- [IALink 인터페이스](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)  
- [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a>참고자료
+
+- [IALink2 인터페이스](ialink2-interface.md)
+- [IALink 인터페이스](ialink-interface.md)
+- [ALink API](index.md)

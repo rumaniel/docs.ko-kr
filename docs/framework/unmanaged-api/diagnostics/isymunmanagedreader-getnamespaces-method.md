@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f50a5cb1f16be44b03cd94b69fdf32efa9e9007b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e0c72cd6e7dce784064f7653ba35e488061d9fd7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425144"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773585"
 ---
 # <a name="isymunmanagedreadergetnamespaces-method"></a>ISymUnmanagedReader::GetNamespaces 메서드
 이 기호 저장소 내의 전역 범위에서 정의 된 네임 스페이스를 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetNamespaces (  
     [in]  ULONG32  cNameSpaces,  
     [out] ULONG32  *pcNameSpaces,  
@@ -38,21 +38,22 @@ HRESULT GetNamespaces (
         ISymUnmanagedNamespace*  namespaces[]);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `cNameSpaces`  
  [in] 네임 스페이스 배열의 크기입니다.  
   
  `pcNameSpaces`  
- [out] 네임 스페이스 목록의 길이 받는 변수에 대 한 포인터입니다.  
+ [out] 네임 스페이스 목록 길이 수신 하는 변수에 대 한 포인터입니다.  
   
  `namespaces`  
- [out] 네임 스페이스 목록을 수신 하는 변수에 대 한 포인터입니다.  
+ [out] 네임 스페이스 목록에서 받는 변수에 대 한 포인터입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.  
+ 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymUnmanagedReader 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

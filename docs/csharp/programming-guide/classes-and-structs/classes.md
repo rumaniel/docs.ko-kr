@@ -1,25 +1,26 @@
 ---
-title: 클래스(C# 프로그래밍 가이드)
+title: 클래스 - C# 프로그래밍 가이드
+ms.custom: seodec18
 description: 클래스 형식 및 이를 만드는 방법을 자세히 알아봅니다.
 ms.date: 08/21/2018
 helpviewer_keywords:
 - classes [C#]
 - C# language, classes
 ms.assetid: e8848524-7273-429f-8aba-c658d5eff5ad
-ms.openlocfilehash: db490225bbef4517c1306aee7afb5c01d2d0fec6
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 193446ff98edce3b7c078c6eeba07cf9acdadaf0
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44081478"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69597182"
 ---
 # <a name="classes-c-programming-guide"></a>클래스(C# 프로그래밍 가이드)
 
 ## <a name="reference-types"></a>참조 형식  
-[클래스](../../../csharp/language-reference/keywords/class.md)로 정의된 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../../csharp/language-reference/keywords/new.md) 연산자를 사용하여 클래스의 인스턴스를 명시적으로 만들거나 다음 예제와 같이 다른 곳에서 만들어진 호환성 있는 형식의 개체를 할당할 때까지 변수에는 [null](../../../csharp/language-reference/keywords/null.md) 값이 포함됩니다.
+[클래스](../../language-reference/keywords/class.md)로 정의된 형식은 *참조 형식*입니다. 런타임에 참조 형식의 변수를 선언하면 [new](../../language-reference/operators/new-operator.md) 연산자를 사용하여 클래스의 인스턴스를 명시적으로 만들거나 다음 예제와 같이 다른 곳에서 만들어진 호환성 있는 형식의 개체를 할당할 때까지 변수에는 [null](../../language-reference/keywords/null.md) 값이 포함됩니다.
 
 ```csharp
-//Declaring a object of type MyClass.
+//Declaring an object of type MyClass.
 MyClass mc = new MyClass();
 
 //Declaring another object of the same type, assigning it the value of the first object.
@@ -30,7 +31,7 @@ MyClass mc2 = mc;
   
 ## <a name="declaring-classes"></a>클래스 선언
 
- 클래스는 다음 예제와 같이 [class](../../../csharp/language-reference/keywords/class.md) 키워드 다음에 고유 식별자를 사용하여 선언됩니다.
+ 클래스는 다음 예제와 같이 [class](../../language-reference/keywords/class.md) 키워드 다음에 고유 식별자를 사용하여 선언됩니다.
 
  ```csharp
 //[access modifier] - [class] - [identifier]
@@ -46,7 +47,7 @@ MyClass mc2 = mc;
 
 클래스와 개체는 바꿔 사용되기도 하지만 서로 다른 항목입니다. 클래스는 개체의 형식을 정의하지만 개체 자체는 아닙니다. 개체는 클래스에 기반을 둔 구체적 엔터티이고 클래스의 인스턴스라고도 합니다.  
   
- 개체를 만들려면 다음과 같이 [new](../../language-reference/keywords/new.md) 키워드 뒤에 개체의 기반이 되는 클래스의 이름을 사용합니다.  
+ 개체를 만들려면 다음과 같이 [new](../../language-reference/operators/new-operator.md) 키워드 뒤에 개체의 기반이 되는 클래스의 이름을 사용합니다.  
 
  ```csharp
  Customer object1 = new Customer();
@@ -69,7 +70,7 @@ MyClass mc2 = mc;
   
 ## <a name="class-inheritance"></a>클래스 상속  
 
-클래스는 개체 지향 프로그래밍의 기본적인 특성인 ‘상속’을 완전히 지원합니다. 클래스를 만들 때 [sealed](../../../csharp/language-reference/keywords/sealed.md)로 정의되지 않은 기타 인터페이스 또는 클래스에서 상속될 수 있고 기타 클래스는 직접 만든 클래스에서 상속되고 클래스 가상 메서드를 재정의할 수 있습니다.
+클래스는 개체 지향 프로그래밍의 기본적인 특성인 ‘상속’을 완전히 지원합니다.  클래스를 만들 때 [sealed](../../language-reference/keywords/sealed.md)로 정의되지 않은 기타 인터페이스 또는 클래스에서 상속될 수 있고 기타 클래스는 직접 만든 클래스에서 상속되고 클래스 가상 메서드를 재정의할 수 있습니다.
 
 상속은 *파생*을 통해 수행합니다. 즉, 클래스는 데이터와 동작을 상속하는 소스 *기본 클래스*를 사용하여 선언됩니다. 다음과 같이 파생 클래스 이름 뒤에 콜론 및 기본 클래스 이름을 추가하여 기본 클래스를 지정합니다.  
 
@@ -89,7 +90,7 @@ C++와 달리 C#의 클래스는 하나의 기본 클래스에서만 직접 상�
   
 클래스 정의는 여러 소스 파일로 분할될 수 있습니다. 자세한 내용은 참조 [Partial 클래스 및 메서드](partial-classes-and-methods.md)합니다.  
   
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 [자동 구현 속성](auto-implemented-properties.md), 메서드 및 생성자라는 특수 메서드를 포함하는 공용 클래스를 정의합니다. 자세한 내용은 [속성](properties.md), [메서드](methods.md) 및 [생성자](constructors.md) 항목을 참조하세요. 그런 다음, 클래스의 인스턴스는 `new` 키워드를 사용하여 인스턴스화됩니다.  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [C#], searching with String methods
 - strings [C#], searching with regular expressions
 ms.assetid: fb1d9a6d-598d-4a35-bd5f-b86012edcb2b
-ms.openlocfilehash: b6d5ab1c4588e72bf49c5ca2f859b9996c0d3834
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: b9c27e419d37b6c0730f214d3b2b9bbdf7e30d11
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43857156"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202875"
 ---
 # <a name="how-to-search-strings"></a>방법: 문자열 검색
 
@@ -46,7 +46,7 @@ ms.locfileid: "43857156"
 | pattern  | 의미     |
 | -------- |-------------|
 | the      | 텍스트 "the" 일치 |
-| (eir)?   | "eir"와 0 또는 1개 항목 일치 |
+| (eir)?   | “eir”과 0 또는 1개 항목 일치 |
 | \s       | 공백 문자 찾기    |
   
 [!code-csharp-interactive[Search using regular expressions](../../../samples/snippets/csharp/how-to/strings/SearchStrings.cs#3)]
@@ -74,12 +74,12 @@ ms.locfileid: "43857156"
 
 [GitHub 리포지토리](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)의 코드를 확인하여 이러한 샘플을 시험해 볼 수 있습니다. 또는 샘플을 [zip 파일로](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip) 다운로드할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../programming-guide/index.md)  
-- [문자열](../programming-guide/strings/index.md)  
+- [C# 프로그래밍 가이드](../programming-guide/index.md)
+- [문자열](../programming-guide/strings/index.md)
 - [LINQ 및 문자열](../programming-guide/concepts/linq/linq-and-strings.md)
 - <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>
 - [.NET Framework 정규식](../../standard/base-types/regular-expressions.md)
 - [정규식 언어 - 빠른 참조](../../standard/base-types/regular-expression-language-quick-reference.md)
-- [.NET에서 문자열 사용에 대한 모범 사례](../../standard/base-types/best-practices-strings.md)  
+- [.NET에서 문자열 사용에 대한 모범 사례](../../standard/base-types/best-practices-strings.md)

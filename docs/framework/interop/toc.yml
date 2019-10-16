@@ -1,0 +1,104 @@
+- name: 비관리 코드와의 상호 운용
+  href: index.md
+  items:
+    - name: .NET Framework에 COM 구성 요소 노출
+      href: exposing-com-components.md
+      items:
+        - name: 형식 라이브러리를 어셈블리로 가져오기
+          href: importing-a-type-library-as-an-assembly.md
+        - name: '방법: 형식 라이브러리에 참조 추가'
+          href: how-to-add-references-to-type-libraries.md
+        - name: '방법: 형식 라이브러리에서 Interop 어셈블리 생성'
+          href: how-to-generate-interop-assemblies-from-type-libraries.md
+        - name: Interop 프로젝트 컴파일
+          href: compiling-an-interop-project.md
+        - name: Interop 애플리케이션 배포
+          href: deploying-an-interop-application.md
+        - name: 'COM Interop 샘플: .NET 클라이언트 및 COM 서버'
+          href: com-interop-sample-net-client-and-com-server.md
+    - name: .NET Framework 구성 요소를 COM에 노출
+      href: exposing-dotnet-components-to-com.md
+      items:
+        - name: COM에서 사용할 어셈블리의 패키징
+          href: packaging-an-assembly-for-com.md
+        - name: COM에 어셈블리 등록
+          href: registering-assemblies-with-com.md
+        - name: '방법: COM에서 .NET 형식 참조'
+          href: how-to-reference-net-types-from-com.md
+        - name: 'COM Interop 샘플: COM 클라이언트 및 .NET 서버'
+          href: com-interop-sample-com-client-and-net-server.md
+    - name: 관리되지 않는 DLL 함수 사용
+      href: consuming-unmanaged-dll-functions.md
+      items:
+        - name: DLL 함수 식별
+          href: identifying-functions-in-dlls.md
+        - name: DLL 함수가 포함된 클래스 만들기
+          href: creating-a-class-to-hold-dll-functions.md
+        - name: 관리 코드에서 프로토타입 만들기
+          href: creating-prototypes-in-managed-code.md
+          items:
+            - name: 진입점 지정
+              href: specifying-an-entry-point.md
+            - name: 문자 집합 지정
+              href: specifying-a-character-set.md
+            - name: 플랫폼 호출 예제
+              href: platform-invoke-examples.md
+        - name: DLL 함수 호출
+          href: calling-a-dll-function.md
+          items:
+            - name: 구조체 전달
+              href: passing-structures.md
+            - name: 콜백 함수
+              href: callback-functions.md
+            - name: '방법: 콜백 함수 구현'
+              href: how-to-implement-callback-functions.md
+    - name: Interop 마샬링
+      href: interop-marshaling.md
+      items:
+        - name: 기본 마샬링 동작
+          href: default-marshaling-behavior.md
+          items:
+            - name: Blittable 형식 및 비 Blittable 형식
+              href: blittable-and-non-blittable-types.md
+            - name: 복사 및 고정
+              href: copying-and-pinning.md
+            - name: 배열에 대한 기본 마샬링
+              href: default-marshaling-for-arrays.md
+            - name: 개체에 대한 마샬링
+              href: default-marshaling-for-objects.md
+            - name: 문자열에 대한 기본 마샬링
+              href: default-marshaling-for-strings.md
+        - name: 플랫폼 호출을 사용하여 데이터 마샬링
+          href: marshaling-data-with-platform-invoke.md
+          items:
+            - name: 문자열 마샬링
+              href: marshaling-strings.md
+            - name: MsgBox 샘플
+              href: msgbox-sample.md
+            - name: '클래스, 구조체 및 공용 구조체 마샬링'
+              href: marshaling-classes-structures-and-unions.md
+            - name: 여러 형식의 배열 마샬링
+              href: marshaling-different-types-of-arrays.md
+            - name: 콜백 메서드로 대리자 마샬링
+              href: marshaling-a-delegate-as-a-callback-method.md
+        - name: COM Interop를 사용하여 데이터 마샬링
+          href: marshaling-data-with-com-interop.md
+          items:
+            - name: '방법: 수동으로 래퍼 만들기'
+              href: how-to-create-wrappers-manually.md
+            - name: '방법: 관리 코드 DCOM을 WCF로 마이그레이션'
+              href: how-to-migrate-managed-code-dcom-to-wcf.md
+    - name: '방법: HRESULT 및 예외 매핑'
+      href: how-to-map-hresults-and-exceptions.md
+    - name: '방법: COM 래퍼 만들기'
+      href: how-to-create-com-wrappers.md
+    - name: 형식 동등 및 포함된 Interop 형식
+      href: type-equivalence-and-embedded-interop-types.md
+    - name: '방법: Tlbimp.exe를 사용하여 주 Interop 어셈블리 생성'
+      href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
+    - name: '방법: 주 Interop 어셈블리 등록'
+      href: how-to-register-primary-interop-assemblies.md
+    - name: 등록이 필요 없는 COM Interop
+      href: registration-free-com-interop.md
+    - name: '방법: 등록이 필요 없는 활성화를 위한 .NET Framework 기반 COM 구성 요소 구성'
+      href: configure-net-framework-based-com-components-for-reg.md

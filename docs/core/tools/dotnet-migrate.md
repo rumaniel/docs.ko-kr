@@ -1,34 +1,32 @@
 ---
-title: dotnet migrate 명령 - .NET Core CLI
+title: dotnet migrate 명령
 description: dotnet migrate 명령은 프로젝트와 모든 종속성을 마이그레이션합니다.
-author: mairaw
-ms.author: mairaw
-ms.date: 05/25/2018
-ms.openlocfilehash: 67a845f7604dededd00746fa6b74a320b3e134fa
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 08/08/2019
+ms.openlocfilehash: afc16161761d151e743e53a8572a6564add43517
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34697107"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117684"
 ---
 # <a name="dotnet-migrate"></a>dotnet 마이그레이션
 
-[!INCLUDE [topic-appliesto-net-core-all](../../../includes/topic-appliesto-net-core-all.md)]
+**이 문서 적용 대상: ✓** .NET Core 1.x SDK **✓** .NET Core 2.x SDK
 
 ## <a name="name"></a>name
 
-`dotnet migrate` - Preview 2 .NET Core 프로젝트를 .NET Core SDK 1.0 프로젝트로 마이그레이션합니다.
+`dotnet migrate` - Preview 2 .NET Core 프로젝트를 .NET Core SDK 스타일 프로젝트로 마이그레이션합니다.
 
 ## <a name="synopsis"></a>개요
 
-```
+```dotnetcli
 dotnet migrate [<SOLUTION_FILE|PROJECT_DIR>] [--format-report-file-json] [-r|--report-file] [-s|--skip-project-references] [--skip-backup] [-t|--template-file] [-v|--sdk-package-version] [-x|--xproj-file]
 dotnet migrate [-h|--help]
 ```
 
 ## <a name="description"></a>설명
 
-`dotnet migrate` 명령은 유효한 Preview 2 *project.json* 기반 프로젝트를 유효한 .NET Core SDK 1.0 *csproj* 프로젝트로 마이그레이션합니다.
+`dotnet migrate` 명령은 유효한 Preview 2 *project.json* 기반 프로젝트를 유효한 .NET Core SDK 스타일 *csproj* 프로젝트로 마이그레이션합니다.
 
 기본적으로 이 명령은 루트 프로젝트와, 루트 프로젝트에 포함된 모든 프로젝트 참조를 마이그레이션합니다. 이 동작은 런타임에 `--skip-project-references` 옵션을 사용하여 사용하지 않도록 설정합니다.
 
@@ -44,6 +42,8 @@ dotnet migrate [-h|--help]
 기본적으로 마이그레이션 작업은 표준 출력(STDOUT)에 마이그레이션 프로세스의 상태를 출력합니다. `--report-file <REPORT_FILE>` 옵션을 사용하는 경우 출력이 지정된 파일에 저장됩니다.
 
 `dotnet migrate` 명령은 유효한 Preview 2 *project.json* 기반 프로젝트만 지원합니다. 즉, DNX 또는 Preview 1 *project.json* 기반 프로젝트를 MSBuild/csproj 프로젝트에 직접 마이그레이션하는 데는 사용할 수 없습니다. 먼저 수동으로 프로젝트를 Preview 2 *project.json* 기반 프로젝트로 마이그레이션한 다음 `dotnet migrate` 명령을 사용하여 프로젝트를 마이그레이션해야 합니다.
+
+`dotnet migrate` 명령은 .NET Core 3.0 SDK부터 더 이상 사용할 수 없습니다.
 
 ## <a name="arguments"></a>인수
 

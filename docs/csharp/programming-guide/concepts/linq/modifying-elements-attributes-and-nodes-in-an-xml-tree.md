@@ -2,12 +2,12 @@
 title: XML 트리에서 요소, 특성 및 노드 수정3
 ms.date: 07/20/2015
 ms.assetid: 0ed22e4e-4c6b-4eb1-b0eb-06685efd8c33
-ms.openlocfilehash: 9567d0c6c5cd4853eeb2a86066cd1a805f20a031
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 93a4d67129e22d0bbeef464c1d4d8758439edb7b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43777352"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484238"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>XML 트리에서 요소, 특성 및 노드 수정
 다음 표에는 요소, 해당 요소의 자식 요소 또는 특성을 수정하는 데 사용할 수 있는 메서드와 속성이 요약되어 있습니다.  
@@ -44,7 +44,3 @@ ms.locfileid: "43777352"
 |메서드|설명|  
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A?displayProperty=nameWithType>|자식 노드를 새 내용으로 바꿉니다.|  
-  
-## <a name="see-also"></a>참고 항목
-
-- [XML 트리 수정(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

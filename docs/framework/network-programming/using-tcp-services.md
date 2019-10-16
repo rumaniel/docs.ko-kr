@@ -16,21 +16,20 @@ helpviewer_keywords:
 - protocols, TCP
 - Internet, TCP
 ms.assetid: d2811830-3bcb-495c-b82d-cda9cf919aad
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: e6ab51da72a7cecac02a2bbd5664dee164239401
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d9b3c9975c4d10649bdecd6f63cf362a2b2a2738
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195471"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611954"
 ---
 # <a name="using-tcp-services"></a>TCP 서비스 사용
-<xref:System.Net.Sockets.TcpClient> 클래스는 TCP를 사용하여 인터넷 리소스의 데이터를 요청합니다. **TcpClient**의 메서드 및 속성은 TCP를 사용하여 데이터를 요청 및 수신하는 <xref:System.Net.Sockets.Socket>을 만들기 위한 세부 정보를 추상화합니다. 원격 장치에 대한 연결은 스트림으로 표현되므로 .NET Framework 스트림 처리 기법을 사용하여 데이터를 읽고 쓸 수 있습니다.  
+
+<xref:System.Net.Sockets.TcpClient> 클래스는 TCP를 사용하여 인터넷 리소스의 데이터를 요청합니다. **TcpClient**의 메서드 및 속성은 TCP를 사용하여 데이터를 요청 및 수신하는 <xref:System.Net.Sockets.Socket>을 만들기 위한 세부 정보를 추상화합니다. 원격 디바이스에 대한 연결은 스트림으로 표현되므로 .NET Framework 스트림 처리 기법을 사용하여 데이터를 읽고 쓸 수 있습니다.  
   
  TCP 프로토콜은 원격 엔드포인트에 연결한 후 해당 연결을 사용하여 데이터 패킷을 주고받습니다. TCP는 데이터 패킷이 엔드포인트로 전송되고 도착 시 올바른 순서로 어셈블되도록 합니다.  
   
- TCP 연결을 설정하려면 필요한 서비스를 호스트하는 네트워크 장치의 주소를 알고 있어야 하고 서비스가 통신에 사용하는 TCP 포트를 알고 있어야 합니다. Iana(Internet Assigned Numbers Authority)는 공통 서비스의 포트 번호를 정의합니다(www.iana.org/assignments/port-numbers 참조). Iana 목록에 없는 서비스에는 1,024~65,535 범위의 포트 번호를 사용할 수 있습니다.  
+ TCP 연결을 설정하려면 필요한 서비스를 호스트하는 네트워크 디바이스의 주소를 알고 있어야 하고 서비스가 통신에 사용하는 TCP 포트를 알고 있어야 합니다. IANA(Internet Assigned Numbers Authority)는 공통 서비스의 포트 번호를 정의합니다([서비스 이름 및 전송 프로토콜 포트 번호 레지스트리](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml) 참조). Iana 목록에 없는 서비스에는 1,024~65,535 범위의 포트 번호를 사용할 수 있습니다.  
   
  다음 예제에서는 TCP 포트 13에서 시간 서버에 연결하도록 **TcpClient**를 설정하는 방법을 보여 줍니다.  
   
@@ -194,7 +193,4 @@ public class TcpTimeServer {
     }  
   
 }  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- 
+```

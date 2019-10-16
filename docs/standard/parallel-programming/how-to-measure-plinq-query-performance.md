@@ -21,7 +21,7 @@ ms.locfileid: "45749111"
 이 예제는 <xref:System.Diagnostics.Stopwatch> 클래스를 사용하여 PLINQ 쿼리를 실행하는 데 걸리는 시간을 측정하는 방법을 보여줍니다.  
   
 ## <a name="example"></a>예  
- 이 예제에서는 빈 `foreach` 루프(Visual basic에서 `For Each`)를 사용하여 쿼리를 실행하는 데 걸리는 시간을 측정합니다. 실제 코드에서 루프는 일반적으로 전체 쿼리 실행 시간에 추가되는 추가 처리 단계를 포함합니다. 쿼리 실행을 시작하는 시점이기 때문에 루프 바로 전까지 스톱워치를 시작하지 않습니다. 보다 세밀한 측정이 필요한 경우 `ElapsedMilliseconds` 대신 `ElapsedTicks` 속성을 사용할 수 있습니다.  
+ 이 예제에서는 빈 `foreach` 루프(Visual Basic에서 `For Each`)를 사용하여 쿼리를 실행하는 데 걸리는 시간을 측정합니다. 실제 코드에서 루프는 일반적으로 전체 쿼리 실행 시간에 추가되는 추가 처리 단계를 포함합니다. 쿼리 실행을 시작하는 시점이기 때문에 루프 바로 전까지 스톱워치를 시작하지 않습니다. 보다 세밀한 측정이 필요한 경우 `ElapsedMilliseconds` 대신 `ElapsedTicks` 속성을 사용할 수 있습니다.  
   
  [!code-csharp[PLINQ#19](../../../samples/snippets/csharp/VS_Snippets_Misc/plinq/cs/measure2.cs#19)]
  [!code-vb[PLINQ#19](../../../samples/snippets/visualbasic/VS_Snippets_Misc/plinq/vb/measure2.vb#19)]  

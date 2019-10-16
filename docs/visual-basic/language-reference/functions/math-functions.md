@@ -7,12 +7,12 @@ helpviewer_keywords:
 - math routines
 - Atn function
 ms.assetid: 4d2d82e7-6924-42fe-a4a7-b4dd5bebbd0c
-ms.openlocfilehash: da0b612feb5b9a479d50f52cf65e38007ab3b196
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e5f87a8e367e8c9df65b979fea3781b42ee3ce83
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45746525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801350"
 ---
 # <a name="math-functions-visual-basic"></a>수학 함수(Visual Basic)
 메서드는 <xref:System.Math?displayProperty=nameWithType> 클래스 삼각, 로그 및 기타 일반 수학 함수를 제공 합니다.  
@@ -162,13 +162,14 @@ End Function
 ## <a name="requirements"></a>요구 사항  
  **클래스:** <xref:System.Math>  
   
- **Namespace:** <xref:System>  
+ **네임스페이스:** <xref:System>  
   
  **어셈블리:** mscorlib (mscorlib.dll)  
   
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>  
- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>  
- <xref:System.Double.NaN>  
- [파생된 수학 함수](../../../visual-basic/language-reference/keywords/derived-math-functions.md)  
- [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:Microsoft.VisualBasic.VBMath.Rnd%2A>
+- <xref:Microsoft.VisualBasic.VBMath.Randomize%2A>
+- <xref:System.Double.NaN>
+- [파생된 수학 함수](../../../visual-basic/language-reference/keywords/derived-math-functions.md)
+- [산술 연산자](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

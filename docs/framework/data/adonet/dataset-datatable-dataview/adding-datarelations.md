@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a4a564fb-c1c4-4135-b6c2-b030e51195e4
-ms.openlocfilehash: d0f481979ead7af775d462a2624ec43080e2c5a9
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8157d296636d0f8661a35af35de561f5cc49c30b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47235652"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70784813"
 ---
 # <a name="adding-datarelations"></a>DataRelation 추가
 여러 <xref:System.Data.DataSet> 개체가 포함된 <xref:System.Data.DataTable>에서는 <xref:System.Data.DataRelation> 개체를 사용하여 하나의 테이블을 다른 테이블에 연관시키거나, 테이블 사이를 탐색하거나, 연관된 테이블의 자식 또는 부모 행을 반환할 수 있습니다.  
   
- 만드는 데 필요한 인수를 **DataRelation** 에 대 한 이름과 합니다 **DataRelation** 생성 되 고 하나 이상의 배열 <xref:System.Data.DataColumn> 부모 및 자식으로 작동 하는 열에 대 한 참조 관계의 열입니다. 만든 후에 **DataRelation**, 테이블 사이 탐색 하 고 값을 검색 하려면 사용할 수 있습니다.  
+ **Datarelation** 을 만드는 데 필요한 인수는 만들어지는 **datarelation** 의 이름과 관계의 부모 및 자식 열로 사용 되는 열에 <xref:System.Data.DataColumn> 대 한 하나 이상의 참조의 배열입니다. **DataRelation**을 만든 후에는이를 사용 하 여 테이블 간에 이동 하 고 값을 검색할 수 있습니다.  
   
- 추가 **DataRelation** 에 <xref:System.Data.DataSet> 기본적으로 추가 <xref:System.Data.UniqueConstraint> 부모 테이블에 및 <xref:System.Data.ForeignKeyConstraint> 자식 테이블에 있습니다. 이러한 기본 제약 조건에 대 한 자세한 내용은 참조 하세요. [DataTable 제약 조건](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)합니다.  
+ <xref:System.Data.UniqueConstraint> **DataRelation** <xref:System.Data.ForeignKeyConstraint> 을에 추가 하면 기본적으로 부모 테이블 및에 대 한가 자식 테이블에 추가됩니다.<xref:System.Data.DataSet> 이러한 기본 제약 조건에 대 한 자세한 내용은 [DataTable 제약 조건](datatable-constraints.md)을 참조 하세요.  
   
- 다음 코드 예제는 **DataRelation** 2를 사용 하 여 <xref:System.Data.DataTable> 개체를 <xref:System.Data.DataSet>. 각 <xref:System.Data.DataTable> 라는 열이 포함 되어 **CustID**, 둘 사이의 링크로 작동 하는 <xref:System.Data.DataTable> 개체입니다. 이 예제에서는 단일 추가 **DataRelation** 에 **관계** 의 컬렉션을 <xref:System.Data.DataSet>. 예제에서 첫 번째 인수의 이름을 지정 합니다 **DataRelation** 만들어지는 합니다. 부모를 설정 하는 두 번째 인수 **DataColumn** 세 번째 인수 설정 자식 **DataColumn**합니다.  
+ 다음 코드 예제에서는에 두 개의 <xref:System.Data.DataTable> 개체를 <xref:System.Data.DataSet>사용 하 여 DataRelation을 만듭니다. 각 <xref:System.Data.DataTable> 에는 두 <xref:System.Data.DataTable> 개체 간의 링크 역할을 하는 **CustID**라는 열이 포함 되어 있습니다. 이 예에서는 단일 **DataRelation** 을의 **관계** <xref:System.Data.DataSet>컬렉션에 추가 합니다. 예제의 첫 번째 인수는 만들 **DataRelation** 의 이름을 지정 합니다. 두 번째 인수는 부모 **datacolumn** 을 설정 하 고 세 번째 인수는 자식 **datacolumn**을 설정 합니다.  
   
 ```vb  
 customerOrders.Relations.Add("CustOrders", _  
@@ -33,8 +33,9 @@ customerOrders.Relations.Add("CustOrders",
   customerOrders.Tables["Orders"].Columns["CustID"]);  
 ```  
   
- **DataRelation** 역시를 **중첩** 속성을로 설정 하면 **true**을 부모 테이블의 관련된 행 내에서 중첩 된 자식 테이블에서 행을 사용 하면 사용 하 여 XML 요소로 작성할 경우 <xref:System.Data.DataSet.WriteXml%2A> 합니다. 자세한 내용은 [데이터 집합에서 XML 사용](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)을 참조하세요.  
+ 또한 **DataRelation** 에는 **중첩** 된 속성이 있습니다 .이 속성을 **true**로 설정 하면를 사용 하 여 <xref:System.Data.DataSet.WriteXml%2A> XML 요소로 작성 될 때 자식 테이블의 행이 부모 테이블의 연결 된 행 내에 중첩 됩니다. 자세한 내용은 [데이터 세트에서 XML 사용](using-xml-in-a-dataset.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [DataSet, DataTable 및 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [DataSet, DataTable 및 DataView](index.md)
+- [ADO.NET 개요](../ado-net-overview.md)

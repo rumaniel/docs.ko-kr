@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 9d187d4f-c76e-4223-a670-cc290783ce47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ef2b5b200f95cdfac9b08a33c328c1dfb797e59e
-ms.sourcegitcommit: 2350a091ef6459f0fcfd894301242400374d8558
+ms.openlocfilehash: 79078b16f0d56c40a3dcfeabaaed9b5cbb7753a0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46537776"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589834"
 ---
 # <a name="xml-document-object-model-dom-hierarchy"></a>XML DOM(문서 개체 모델) 계층 구조
 다음 그림은 관련 위치에 클래스 이름과 함께 괄호 안에 W3C(World Wide Web 컨소시엄) 이름을 표시하여 XML DOM(문서 개체 모델)에 대한 클래스 계층 구조를 보여 줍니다.  
@@ -20,13 +20,13 @@ XML DOM(문서 개체 모델) 계층 구조
   
  다음 클래스는 **XmlNode**에서 상속하지 않습니다.  
   
--   **XmlImplementation**  
+- **XmlImplementation**  
   
--   **XmlNamedNodeMap**  
+- **XmlNamedNodeMap**  
   
--   **XmlNodeList**  
+- **XmlNodeList**  
   
--   **XmlNodeChangedEventArgs**  
+- **XmlNodeChangedEventArgs**  
   
  **XmlImplementation** 클래스는 XML 문서를 만드는 데 사용됩니다. 자세한 내용은 [XML 문서 만들기](../../../../docs/standard/data/xml/xml-document-creation.md)를 참조하세요.  
   

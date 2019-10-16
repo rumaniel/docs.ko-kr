@@ -8,17 +8,17 @@ dev_langs:
 ms.assetid: 0fe844e3-5b6f-4fe7-ad15-22459501738b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c382b22825512000a906af8a865b6b7c5f4c73c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 9d26872fb97551e5392eb3f6a1a0825728046553
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44204892"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69965888"
 ---
 # <a name="event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs"></a>XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리
 **XmlNodeChangedEventArgs**는 이벤트 처리를 위해 **XmlDocument** 개체에 등록된 이벤트 처리기에 전달되는 인수를 캡슐화합니다. 다음 표에서는 이벤트와 해당 이벤트가 발생하는 시기에 대해 설명합니다.  
   
-|이벤트(event)|발생 시기|  
+|이벤트|발생 시기|  
 |-----------|-----------|  
 |<xref:System.Xml.XmlDocument.NodeInserting>|현재 문서에 속한 노드가 다른 노드에 삽입되기 직전|  
 |<xref:System.Xml.XmlDocument.NodeInserted>|현재 문서에 속한 노드가 다른 노드에 삽입된 후|  
@@ -28,7 +28,7 @@ ms.locfileid: "44204892"
 |<xref:System.Xml.XmlDocument.NodeChanged>|노드 값이 변경된 직후|  
   
 > [!NOTE]
->  **XmlDataDocument** 메모리 사용이 **DataSet** 저장소를 사용하도록 완전히 최적화된 경우 기본 **DataSet**이 변경될 때 **XmlDataDocument**에서 위에 나열된 어떠한 이벤트도 발생시키지 않을 수 있습니다. 이러한 이벤트가 필요한 경우 전체 **XmlDocument**를 한 번 트래버스하여 메모리 사용이 완전히 최적화되지 않은 상태로 만들어야 합니다.  
+> **XmlDataDocument** 메모리 사용이 **DataSet** 스토리지를 사용하도록 완전히 최적화된 경우 기본 **DataSet**이 변경될 때 **XmlDataDocument**에서 위에 나열된 어떠한 이벤트도 발생시키지 않을 수 있습니다. 이러한 이벤트가 필요한 경우 전체 **XmlDocument**를 한 번 트래버스하여 메모리 사용이 완전히 최적화되지 않은 상태로 만들어야 합니다.  
   
  다음 코드 예제에서는 이벤트 처리기를 정의하는 방법과 이벤트에 이벤트 처리기를 추가하는 방법을 보여 줍니다.  
   

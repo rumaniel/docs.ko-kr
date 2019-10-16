@@ -17,36 +17,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0412089fee27e556c2f9230e9b34de3391b9bd4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1a3f01edcd6ce1d16ab2c651a66d2fd9cd2eb0ba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402563"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737826"
 ---
 # <a name="icordebugappdomainisattached-method"></a>ICorDebugAppDomain::IsAttached 메서드
-응용 프로그램 도메인에서 디버거가 연결 되어 있는지 여부를 나타내는 값을 가져옵니다.  
+디버거에서 응용 프로그램 도메인에 연결 되는지 여부를 나타내는 값을 가져옵니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT IsAttached (  
     [out] BOOL  *pbAttached  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pbAttached`  
  [out] `true` 디버거 고, 그렇지 않으면 응용 프로그램 도메인에 연결 된 경우 `false`합니다.  
   
 ## <a name="remarks"></a>설명  
- 응용 프로그램 도메인에서 디버거가 연결 될 때까지 ICorDebugController 메서드를 사용할 수 없습니다.  
+ 응용 프로그램 도메인에 디버거가 연결 될 때까지 ICorDebugController 메서드를 사용할 수 없습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

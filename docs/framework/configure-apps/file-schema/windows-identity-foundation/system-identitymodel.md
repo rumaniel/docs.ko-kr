@@ -1,19 +1,20 @@
 ---
-title: '&lt;system.identityModel&gt;'
+title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: 1b3121a6e7e036ec268cf83ffbf545c0e669a9b9
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a54f5ce86aee1a5e831c0b10aa1471d4a82f40a5
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50199398"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70251801"
 ---
-# <a name="ltsystemidentitymodelgt"></a>&lt;system.identityModel&gt;
-응용 프로그램에서 Windows Identity Foundation (WIF) 옵션을 사용 하도록 설정 하는 것에 대 한 구성을 제공 합니다.  
+# <a name="systemidentitymodel"></a>\<system.identityModel>
+응용 프로그램에서 WIF (Windows Identity Foundation) 옵션을 사용 하도록 구성 하는 구성을 제공 합니다.  
   
- \<system.identityModel>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp; **\<System.identitymodel >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -32,19 +33,19 @@ ms.locfileid: "50199398"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|서비스 수준 id 설정을 지정합니다.|  
+|[\<identityConfiguration>](identityconfiguration.md)|서비스 수준 id 설정을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|`<configuration>`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`<configuration>`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="remarks"></a>설명  
- 추가 된 `<system.identityModel>` 서비스나 Windows Identity Foundation (WIF)을 사용 하도록 응용 프로그램을 구성 하려면이 구성 파일 섹션입니다. 합니다 `<system.identityModel>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> 클래스입니다.  
+ 구성 파일 `<system.identityModel>` 에 섹션을 추가 하 여 WIF (Windows Identity Foundation)를 사용 하도록 서비스 또는 응용 프로그램을 구성 합니다. 합니다 `<system.identityModel>` 에서 요소가 표시 되는 <xref:System.IdentityModel.Configuration.SystemIdentityModelSection> 클래스입니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 추가 하는 방법을 보여 줍니다는 `<system.identityModel>` 구성 파일 섹션입니다. 아래에 있는 구성 섹션 및 네임 스페이스 선언을 추가 해야 합니다 `<configSections>` 요소입니다. 추가할 수 있습니다는 `<system.IdentityModel>` 요소를 하나 이상의 id 구성을 지정 하 여 구성 파일입니다.  
+ 다음 예제에서는 구성 파일에 `<system.identityModel>` 섹션을 추가 하는 방법을 보여 줍니다. 먼저 `<configSections>` 요소 아래에 구성 섹션과 네임 스페이스 선언을 추가 해야 합니다. 그런 다음 구성 파일에 `<system.IdentityModel>` 요소를 추가 하 여 하나 이상의 id 구성을 지정할 수 있습니다.  
   
 ```xml  
 <configuration>  
@@ -75,5 +76,6 @@ ms.locfileid: "50199398"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

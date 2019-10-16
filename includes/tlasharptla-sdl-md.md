@@ -1,1 +1,0 @@
-Microsoft SDL(Security Development Lifecycle)

@@ -2,12 +2,12 @@
 title: 조인 작업(C#)
 ms.date: 07/20/2015
 ms.assetid: 5105e0da-1267-4c00-837a-f0e9602279b8
-ms.openlocfilehash: f03d5cf14525a6d23240747c2f377348bf608782
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 95661e2d0d7f4f0e75c1fa1b10e1f322923189b1
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47193059"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69592087"
 ---
 # <a name="join-operations-c"></a>조인 작업(C#)
 두 데이터 소스를 *조인*하는 것은 한 데이터 소스의 개체를 공통 특성을 공유하는 다른 데이터 소스의 개체와 연결하는 것입니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "47193059"
   
  다음 그림에서는 내부 조인 또는 왼쪽 우선 외부 조인에 포함된 두 집합 및 해당 집합 내의 요소를 개념적으로 보여줍니다.  
   
- ![내부&#47;외부를 보여 주는 두 개의 겹치는 원](../../../../csharp/programming-guide/concepts/linq/media/joincircles.png "JoinCircles")  
+ ![내부/외부를 보여주는 두 개의 겹치는 원](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>메서드  
   
@@ -29,16 +29,16 @@ ms.locfileid: "47193059"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Linq>  
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [익명 형식](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)  
-- [조인 및 교차곱 쿼리 작성](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)  
-- [join 절](../../../../csharp/language-reference/keywords/join-clause.md)  
-- [방법: 복합 키를 사용하여 조인](../../../../csharp/programming-guide/linq-query-expressions/how-to-join-by-using-composite-keys.md)  
-- [방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)  
-- [방법: Join 절 결과를 순서대로 정렬](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
-- [방법: 사용자 지정 조인 작업 수행](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-custom-join-operations.md)  
-- [방법: 그룹화 조인 수행](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-grouped-joins.md)  
-- [방법: 내부 조인 수행](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-inner-joins.md)  
-- [방법: 왼쪽 우선 외부 조인 수행](../../../../csharp/programming-guide/linq-query-expressions/how-to-perform-left-outer-joins.md)  
-- [방법: 여러 소스로 개체 컬렉션 채우기(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md)
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [익명 형식](../../classes-and-structs/anonymous-types.md)
+- [조인 및 교차곱 쿼리 작성](../../../../framework/data/adonet/sql/linq/formulate-joins-and-cross-product-queries.md)
+- [join 절](../../../language-reference/keywords/join-clause.md)
+- [방법: 복합 키를 사용하여 조인](../../linq-query-expressions/how-to-join-by-using-composite-keys.md)
+- [방법: 서로 다른 파일의 콘텐츠 조인(LINQ)(C#)](./how-to-join-content-from-dissimilar-files-linq.md)
+- [방법: Join 절 결과를 순서대로 정렬](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [방법: 사용자 지정 조인 작업 수행](../../linq-query-expressions/how-to-perform-custom-join-operations.md)
+- [방법: 그룹화 조인 수행](../../linq-query-expressions/how-to-perform-grouped-joins.md)
+- [방법: 내부 조인 수행](../../linq-query-expressions/how-to-perform-inner-joins.md)
+- [방법: 왼쪽 우선 외부 조인 수행](../../linq-query-expressions/how-to-perform-left-outer-joins.md)
+- [방법: 여러 소스로 개체 컬렉션 채우기(LINQ)(C#)](./how-to-populate-object-collections-from-multiple-sources-linq.md)

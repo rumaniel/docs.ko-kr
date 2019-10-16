@@ -1,0 +1,121 @@
+- name: 클래스 및 구조체
+  href: index.md
+  items:
+    - name: 클래스
+      href: classes.md
+    - name: 개체
+      href: objects.md
+    - name: 구조체
+      items:
+        - name: 개요
+          href: structs.md
+        - name: 구조체 사용
+          href: using-structs.md
+    - name: 상속
+      href: inheritance.md
+    - name: 다형성
+      items:
+        - name: 개요
+          href: polymorphism.md
+        - name: 재정의 및 신규 키워드를 사용하여 버전 관리
+          href: versioning-with-the-override-and-new-keywords.md
+        - name: 재정의 및 신규 키워드를 사용해야 하는 경우
+          href: knowing-when-to-use-override-and-new-keywords.md
+        - name: '방법: ToString 메서드 재정의'
+          href: how-to-override-the-tostring-method.md
+    - name: 멤버
+      items:
+        - name: 멤버 개요
+          href: members.md
+        - name: 추상/봉인된 클래스 및 클래스 멤버
+          href: abstract-and-sealed-classes-and-class-members.md
+        - name: 정적 클래스 및 정적 클래스 멤버
+          href: static-classes-and-static-class-members.md
+        - name: 액세스 한정자
+          href: access-modifiers.md
+        - name: 필드
+          href: fields.md
+        - name: 상수
+          href: constants.md
+        - name: '방법: 추상 속성 정의'
+          href: how-to-define-abstract-properties.md
+        - name: '방법: C#에서 상수 정의'
+          href: how-to-define-constants.md
+    - name: 속성
+      items:
+        - name: 속성 개요
+          href: properties.md
+        - name: 속성 사용
+          href: using-properties.md
+        - name: 인터페이스 속성
+          href: interface-properties.md
+        - name: 접근자 액세스 가능성 제한
+          href: restricting-accessor-accessibility.md
+        - name: '방법: 읽기 쓰기 속성 선언 및 사용'
+          href: how-to-declare-and-use-read-write-properties.md
+        - name: 자동으로 구현된 속성
+          href: auto-implemented-properties.md
+        - name: '방법: 자동 구현 속성을 사용하여 간단한 클래스 구현'
+          href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
+    - name: 메서드
+      items:
+        - name: 메서드 개요
+          href: methods.md
+        - name: 로컬 함수
+          href: local-functions.md
+        - name: 참조 반환 및 참조 로컬
+          href: ref-returns.md
+        - name: 매개 변수
+          items:
+            - name: 매개 변수 전달
+              href: passing-parameters.md
+            - name: 값-형식 매개 변수 전달
+              href: passing-value-type-parameters.md
+            - name: 참조-형식 매개 변수 전달
+              href: passing-reference-type-parameters.md
+            - name: '방법: 메서드에 구조체를 전달하는 것과 클래스 참조를 전달하는 것의 차이점 이해'
+              href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
+        - name: 암시적으로 형식화한 지역 변수
+          href: implicitly-typed-local-variables.md
+        - name: '방법: 쿼리 식에서 암시적 형식 지역 변수 및 배열 사용'
+          href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+        - name: 확장명 메서드
+          href: extension-methods.md
+        - name: '방법: 사용자 지정 확장 메서드 구현 및 호출'
+          href: how-to-implement-and-call-a-custom-extension-method.md
+        - name: '방법: 새 열거형 메서드 만들기'
+          href: how-to-create-a-new-method-for-an-enumeration.md
+        - name: 명명된 인수 및 선택적 인수
+          href: named-and-optional-arguments.md
+        - name: '방법: Office 프로그래밍에서 명명된 인수 및 선택적 인수 사용'
+          href: how-to-use-named-and-optional-arguments-in-office-programming.md
+    - name: 생성자
+      items:
+        - name: 생성자 개요
+          href: constructors.md
+        - name: 생성자 사용
+          href: using-constructors.md
+        - name: 인스턴스 생성자
+          href: instance-constructors.md
+        - name: 전용 생성자
+          href: private-constructors.md
+        - name: 정적 생성자
+          href: static-constructors.md
+        - name: '방법: 복사 생성자 작성'
+          href: how-to-write-a-copy-constructor.md
+    - name: 종료자
+      href: destructors.md
+    - name: 개체 및 컬렉션 이니셜라이저
+      href: object-and-collection-initializers.md
+    - name: '방법: 개체 이니셜라이저를 사용하여 개체 초기화'
+      href: how-to-initialize-objects-by-using-an-object-initializer.md
+    - name: '방법: 컬렉션 이니셜라이저를 사용하여 사전 초기화'
+      href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
+    - name: 중첩 형식
+      href: nested-types.md
+    - name: Partial 클래스 및 메서드
+      href: partial-classes-and-methods.md
+    - name: 익명 형식
+      href: anonymous-types.md
+    - name: '방법: 쿼리에서 요소 속성의 하위 세트 반환'
+      href: how-to-return-subsets-of-element-properties-in-a-query.md

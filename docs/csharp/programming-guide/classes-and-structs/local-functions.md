@@ -1,16 +1,17 @@
 ---
-title: 로컬 함수(C# 프로그래밍 가이드)
+title: 로컬 함수 - C# 프로그래밍 가이드
+ms.custom: seodec18
 ms.date: 06/14/2017
 helpviewer_keywords:
 - local functions [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42b980bcbb47ed98b9cb8d7234044ae2c92c3124
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f572f683511fe90951f841c80eae448a9cb6054b
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529491"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785082"
 ---
 # <a name="local-functions-c-programming-guide"></a>로컬 함수(C# 프로그래밍 가이드)
 

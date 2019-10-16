@@ -9,27 +9,31 @@ helpviewer_keywords:
 - WPF programming model [WPF]
 - XAML [WPF], content models
 ms.assetid: 58843391-b28c-4d32-adf5-87acaf6578a1
-ms.openlocfilehash: 3c933e7062e270a9f4d03772ffbece2500ef9482
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 800711df51326e09546f559a9d4d1d84af173d4c
+ms.sourcegitcommit: eb9ff6f364cde6f11322e03800d8f5ce302f3c73
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544112"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68710206"
 ---
 # <a name="advanced-windows-presentation-foundation"></a>고급(Windows Presentation Foundation)
 이 섹션의 WPF에서 일부 고급 영역을 설명합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
- [WPF 아키텍처](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
- [기본 요소](../../../../docs/framework/wpf/advanced/base-elements.md)  
- [요소 트리 및 Serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
- [끌어서 놓기](../../../../docs/framework/wpf/advanced/drag-and-drop.md)  
- [문서](../../../../docs/framework/wpf/advanced/documents.md)  
- [전역화 및 지역화](../../../../docs/framework/wpf/advanced/globalization-and-localization.md)  
- [마이그레이션 및 상호 운용성](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)  
- [성능](../../../../docs/framework/wpf/advanced/performance.md)  
- [스레딩 모델](../../../../docs/framework/wpf/advanced/threading-model.md)  
- [WPF 추가 기능 개요](../../../../docs/framework/wpf/app-development/wpf-add-ins-overview.md)  
- [관리되지 않는 WPF API 참조](../../../../docs/framework/wpf/advanced/wpf-unmanaged-api-reference.md)  
-  
-## <a name="related-sections"></a>관련 단원
+## <a name="in-this-section"></a>섹션 내용
+
+[WPF 아키텍처](wpf-architecture.md)  
+[WPF의 XAML](xaml-in-wpf.md)  
+[기본 요소 클래스](base-elements.md)  
+[요소 트리 및 Serialization](element-tree-and-serialization.md)  
+[WPF 속성 시스템](properties-wpf.md)  
+[WPF 이벤트](events-wpf.md)  
+[입력](input-wpf.md)  
+[끌어서 놓기](drag-and-drop.md)  
+[리소스](resources-wpf.md)  
+[문서](documents.md)  
+[전역화 및 지역화](globalization-and-localization.md)  
+[레이아웃](layout.md)  
+[마이그레이션 및 상호 운용성](migration-and-interoperability.md)  
+[성능](performance.md)  
+[스레딩 모델](threading-model.md)  
+[관리되지 않는 WPF API 참조](wpf-unmanaged-api-reference.md)  

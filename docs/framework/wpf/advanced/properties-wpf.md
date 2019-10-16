@@ -9,31 +9,32 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], properties
 - properties [WPF]
 ms.assetid: d6e0197f-f2c4-48ed-b45b-b9cdb64aab1c
-ms.openlocfilehash: 1d6d9ac86ccc15ccc55d27e4222864c4cda92ad0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b394c4bbb294f9eb09666cf3e2223f897abd09b
+ms.sourcegitcommit: eff6adb61852369ab690f3f047818c90580e7eb1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546031"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72003148"
 ---
 # <a name="properties-wpf"></a>속성(WPF)
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]에서는 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 속성의 기능을 확장하는 데 사용할 수 있는 서비스 집합을 제공합니다. 일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다. [!INCLUDE[TLA#tla_titlewinclient](../../../../includes/tlasharptla-titlewinclient-md.md)] 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다.  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]은 CLR (공용 언어 런타임) 속성의 기능을 확장 하는 데 사용할 수 있는 서비스 집합을 제공 합니다. 일반적으로 이러한 서비스를 WPF 속성 시스템이라고 통칭합니다. WPF 속성 시스템에서 지원하는 속성을 종속성 속성이라고 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [종속성 속성 개요](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)  
- [연결된 속성 개요](../../../../docs/framework/wpf/advanced/attached-properties-overview.md)  
- [종속성 속성 콜백 및 유효성 검사](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)  
- [사용자 지정 종속성 속성](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)  
- [종속성 속성 메타데이터](../../../../docs/framework/wpf/advanced/dependency-property-metadata.md)  
- [프레임워크 속성 메타데이터](../../../../docs/framework/wpf/advanced/framework-property-metadata.md)  
- [종속성 속성 값 우선 순위](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)  
- [읽기 전용 종속성 속성](../../../../docs/framework/wpf/advanced/read-only-dependency-properties.md)  
- [속성 값 상속](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)  
- [종속성 속성 보안](../../../../docs/framework/wpf/advanced/dependency-property-security.md)  
- [DependencyObjects의 안전한 생성자 패턴](../../../../docs/framework/wpf/advanced/safe-constructor-patterns-for-dependencyobjects.md)  
- [컬렉션 형식 종속성 속성](../../../../docs/framework/wpf/advanced/collection-type-dependency-properties.md)  
- [XAML 로드 및 종속성 속성](../../../../docs/framework/wpf/advanced/xaml-loading-and-dependency-properties.md)  
- [방법 항목](../../../../docs/framework/wpf/advanced/properties-how-to-topics.md)  
+
+- [종속성 속성 개요](dependency-properties-overview.md)
+- [연결된 속성 개요](attached-properties-overview.md)
+- [사용자 지정 종속성 속성](custom-dependency-properties.md)
+- [종속성 속성 메타데이터](dependency-property-metadata.md)
+- [종속성 속성 콜백 및 유효성 검사](dependency-property-callbacks-and-validation.md)
+- [프레임워크 속성 메타데이터](framework-property-metadata.md)
+- [종속성 속성 값 우선 순위](dependency-property-value-precedence.md)
+- [읽기 전용 종속성 속성](read-only-dependency-properties.md)
+- [속성 값 상속](property-value-inheritance.md)
+- [종속성 속성 보안](dependency-property-security.md)
+- [DependencyObjects의 안전한 생성자 패턴](safe-constructor-patterns-for-dependencyobjects.md)
+- [컬렉션 형식 종속성 속성](collection-type-dependency-properties.md)
+- [XAML 로드 및 종속성 속성](xaml-loading-and-dependency-properties.md)
+- [방법 항목](properties-how-to-topics.md)
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.DependencyProperty>  
@@ -45,12 +46,12 @@ ms.locfileid: "33546031"
  <xref:System.Windows.DependencyObject>  
   
 ## <a name="related-sections"></a>관련 단원  
- [WPF 아키텍처](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF의 XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [기본 요소](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [요소 트리 및 serialization](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [이벤트](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [입력](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [리소스](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [WPF 콘텐츠 모델](../../../../docs/framework/wpf/controls/wpf-content-model.md)  
-  [스레딩 모델](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF 아키텍처](wpf-architecture.md)  
+  [WPF의 XAML](xaml-in-wpf.md)  
+  [기본 요소](base-elements.md)  
+  [요소 트리 및 serialization](element-tree-and-serialization.md)  
+  [이벤트](events-wpf.md)  
+  [입력](input-wpf.md)  
+  [리소스](resources-wpf.md)  
+  [WPF 콘텐츠 모델](../controls/wpf-content-model.md)  
+  [스레딩 모델](threading-model.md)

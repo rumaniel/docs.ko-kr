@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d5284cf6072aa5c1c11cc83355a3e9fa5c96837
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 9d7432771a7d8eee9cea10f883dd3bd91f5ffb74
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415924"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761394"
 ---
 # <a name="icordebugmanagedcallbacklogswitch-method"></a>ICorDebugManagedCallback::LogSwitch 메서드
-공용 언어 런타임 (CLR) 관리 되는 스레드에서의 메서드를 호출 했습니다 디버거에 알립니다는 <xref:System.Diagnostics.Switch> 클래스를 만들거나 수정 하거나 디버깅/추적 스위치를 삭제 합니다.  
+공용 언어 런타임 (CLR) 관리 되는 스레드에서의 메서드를 호출에 디버거에 알립니다는 <xref:System.Diagnostics.Switch> 클래스를 만들기, 수정 또는 디버깅/추적 스위치를 삭제 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT LogSwitch (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugThread     *pThread,  
@@ -39,33 +39,34 @@ HRESULT LogSwitch (
     [in] WCHAR               *pParentName);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `PAppDomain`  
- [in] ICorDebugAppDomain 생성/수정 / 디버깅/추적 스위치를 삭제 하는 관리 되는 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 개체에 대 한 포인터입니다.  
+ [in] ICorDebugAppDomain 개체 생성, 수정 또는 디버깅/추적 스위치를 삭제 하는 관리 되는 스레드를 포함 하는 응용 프로그램 도메인을 나타내는 포인터입니다.  
   
  `pThread`  
  [in] 관리 되는 스레드를 나타내는 ICorDebugThread 개체에 대 한 포인터입니다.  
   
  `lLevel`  
- [in] 이벤트 로그에 작성 된 설명 하는 메시지의 심각도 수준을 나타내는 값입니다.  
+ [in] 이벤트 로그에 기록 된 설명이 포함 된 메시지의 심각도 나타내는 값입니다.  
   
  `ulReason`  
- [in] 값은 [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) 디버깅/추적 스위치에 수행 후 작업을 나타내는 열거형입니다.  
+ [in] 값을 [LogSwitchCallReason](../../../../docs/framework/unmanaged-api/debugging/logswitchcallreason-enumeration.md) 디버깅/추적 스위치에서 수행할 작업을 나타내는 열거형입니다.  
   
  `pLogSwitchName`  
  [in] 디버깅/추적 스위치의 이름에 대 한 포인터입니다.  
   
  `pParentName`  
- [in] 디버깅/추적 스위치에 대 한 부모 노드의 이름에 대 한 포인터입니다.  
+ [in] 디버깅/추적 스위치의 부모 이름에 대 한 포인터입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebugManagedCallback 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)

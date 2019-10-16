@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5c14867c-9a99-45bc-ae7f-2686700d377a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 099e2de40458e42c9df34e74dee8d9fc7c425dea
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 2f18bdfaee1d79ce84a5b2822d52231f4bed098c
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44197316"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54620060"
 ---
 # <a name="using-the-stringbuilder-class-in-net"></a>.NET에서 StringBuilder 클래스 사용
 <xref:System.String> 개체는 변경할 수 없습니다. <xref:System.String?displayProperty=nameWithType> 클래스에서 메서드 중 하나를 사용할 때마다 메모리에 새 문자열 개체가 생성되므로, 새 개체에 대한 공간을 새로 할당해야 합니다. 문자열을 반복적으로 수정해야 하는 경우 새로운 <xref:System.String> 개체 생성과 관련된 오버헤드로 인해 비용이 증가할 수 있습니다. 새 개체를 만들지 않고 문자열을 수정하려는 경우 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 클래스를 사용할 수 있습니다. 예를 들어 <xref:System.Text.StringBuilder> 클래스를 사용하면 루프에서 많은 문자열을 연결할 때 성능이 향상될 수 있습니다.  
@@ -113,6 +113,6 @@ ms.locfileid: "44197316"
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Text.StringBuilder?displayProperty=nameWithType>  
-- [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)  
+- <xref:System.Text.StringBuilder?displayProperty=nameWithType>
+- [기본적인 문자열 작업](../../../docs/standard/base-types/basic-string-operations.md)
 - [형식 서식 지정](../../../docs/standard/base-types/formatting-types.md)

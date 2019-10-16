@@ -9,11 +9,11 @@ ms.assetid: f5cdac93-a28c-48ef-8a19-5773376e9e7c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8a704d531b1c49ffe653009e0e90f33b7a126e91
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33451001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049819"
 ---
 # <a name="metadata-interfaces"></a>메타데이터 인터페이스
 이 섹션에서는 .NET Framework 형식, 메서드, 필드 등이 노출하는 메타데이터에 대한 액세스를 제공하는 관리되지 않는 인터페이스를 설명합니다.  
@@ -65,7 +65,7 @@ ms.locfileid: "33451001"
  디스크에 있는 파일에서 메모리로의 메타데이터 매핑에 대한 정보를 가져오는 메서드를 제공합니다.  
   
  [IMetaDataTables 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)  
- 테이블에서 메타데이터 정보를 저장 및 검색하는 메서드를 제공합니다.  
+ 테이블에서 메타데이터 정보를 스토리지 및 검색하는 메서드를 제공합니다.  
   
  [IMetaDataTables2 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)  
  메타데이터 스트림 작업을 수행하는 메서드를 포함하도록 `IMetaDataTables`를 확장합니다.  

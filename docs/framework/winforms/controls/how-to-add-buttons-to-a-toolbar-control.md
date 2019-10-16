@@ -12,31 +12,31 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: e61a635d59bd9adfb73a0293df776187cdbca499
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ab1fa8fc163ed50e51801769d40e61483e8ed5b
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33527104"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69912640"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>방법: ToolBar 컨트롤에 단추 추가
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
+> <xref:System.Windows.Forms.ToolStrip> 컨트롤은 <xref:System.Windows.Forms.ToolBar> 컨트롤을 대체하고 여기에 다른 기능을 추가하여 새로 도입된 컨트롤이지만 이전 버전과의 호환성 및 이후 사용 가능성을 고려하여 <xref:System.Windows.Forms.ToolBar> 컨트롤을 계속 유지하도록 선택할 수 있습니다.  
   
- 핵심은 <xref:System.Windows.Forms.ToolBar> 컨트롤은 단추를 추가 합니다. 또는 메뉴 명령에 쉽게 액세스할을 사용할 수 있습니다 이러한 또는 명령을 메뉴 구조에서 사용할 수 없는 사용자에 게 노출 하는 응용 프로그램의 사용자 인터페이스의 다른 영역에 배치 될 수 있습니다.  
+ <xref:System.Windows.Forms.ToolBar> 컨트롤의 정수 부분은 컨트롤에 추가 하는 단추입니다. 메뉴 명령에 쉽게 액세스 하는 데 사용할 수 있습니다. 또는 메뉴 구조에서 사용할 수 없는 사용자에 게 명령을 노출 하기 위해 응용 프로그램의 사용자 인터페이스의 다른 영역에 배치할 수 있습니다.  
   
- 아래 예제에서는 한 <xref:System.Windows.Forms.ToolBar> 컨트롤이 Windows Form에 추가 되었습니다 (`Form1`).  
+ 아래 예제에서는 컨트롤을 <xref:System.Windows.Forms.ToolBar> Windows Form (`Form1`)에 추가 했다고 가정 합니다.  
   
 ### <a name="to-add-buttons-programmatically"></a>프로그래밍 방식으로 단추를 추가 하려면  
   
-1.  프로시저에서에 추가 하 여 도구 모음 단추 만들기는 <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> 컬렉션입니다.  
+1. 프로시저에서 도구 모음 단추를 <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> 컬렉션에 추가 하 여 만듭니다.  
   
-2.  단추의 인덱스를 통해 전달 하 여 개별 단추에 대 한 속성 설정을 지정는 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 속성입니다.  
+2. 속성을 <xref:System.Windows.Forms.ToolBar.Buttons%2A> 통해 단추의 인덱스를 전달 하 여 개별 단추의 속성 설정을 지정 합니다.  
   
-     다음 예제에서는 가정 된 폼을 <xref:System.Windows.Forms.ToolBar> 컨트롤이 이미 추가 합니다.  
+     아래 예제에서는 <xref:System.Windows.Forms.ToolBar> 컨트롤이 이미 추가 된 폼을 가정 합니다.  
   
     > [!NOTE]
-    >  <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> 컬렉션 컬렉션이 0부터 시작 이므로 코드에 따라 진행 해야 합니다.  
+    > <xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType> 컬렉션은 0부터 시작 하는 컬렉션 이므로 코드를 적절 하 게 진행 해야 합니다.  
   
     ```vb  
     Public Sub CreateToolBarButtons()  
@@ -148,9 +148,10 @@ ms.locfileid: "33527104"
        }  
     ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.ToolBar>  
- [방법: ToolBar 단추의 아이콘 정의](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)  
- [방법: Toolbar 단추의 메뉴 이벤트 트리거](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)  
- [ToolBar 컨트롤 개요](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)  
- [ToolBar 컨트롤](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.ToolBar>
+- [방법: 도구 모음 단추의 아이콘 정의](how-to-define-an-icon-for-a-toolbar-button.md)
+- [방법: 도구 모음 단추에 대 한 트리거 메뉴 이벤트](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar 컨트롤 개요](toolbar-control-overview-windows-forms.md)
+- [ToolBar 컨트롤](toolbar-control-windows-forms.md)

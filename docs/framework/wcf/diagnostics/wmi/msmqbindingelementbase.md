@@ -2,12 +2,12 @@
 title: MsmqBindingElementBase
 ms.date: 03/30/2017
 ms.assetid: 210d41ab-a2a4-4d7a-afd2-0916c08a4015
-ms.openlocfilehash: e7f4cf41168bd1e5483524195e20541d896a6569
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 1df4b32feda246a536183a42ac11b113bc4bb259
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50183193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963438"
 ---
 # <a name="msmqbindingelementbase"></a>MsmqBindingElementBase
 MsmqBindingElementBase  
@@ -42,7 +42,7 @@ class MsmqBindingElementBase : TransportBindingElement
   
  액세스 형식: 읽기 전용  
   
- 응용 프로그램별 배달 못 한 편지 큐의 위치를 포함하는 URI입니다. 이 큐에는 만료되었거나 전송 또는 전달하지 못한 메시지가 보관됩니다.  
+ 애플리케이션별 배달 못 한 편지 큐의 위치를 포함하는 URI입니다. 이 큐에는 만료되었거나 전송 또는 전달하지 못한 메시지가 보관됩니다.  
   
 ### <a name="deadletterqueue"></a>DeadLetterQueue  
  데이터 형식: string  
@@ -70,7 +70,7 @@ class MsmqBindingElementBase : TransportBindingElement
   
  액세스 형식: 읽기 전용  
   
- 수신 응용 프로그램으로 메시지 전달을 시도하는 최대 재시도 주기 수입니다.  
+ 수신 애플리케이션으로 메시지 전달을 시도하는 최대 재시도 주기 수입니다.  
   
 ### <a name="receiveerrorhandling"></a>ReceiveErrorHandling  
  데이터 형식: string  
@@ -84,7 +84,7 @@ class MsmqBindingElementBase : TransportBindingElement
   
  액세스 형식: 읽기 전용  
   
- 응용 프로그램 큐에서 읽은 메시지에 대해 즉시 재시도하는 최대 횟수입니다.  
+ 애플리케이션 큐에서 읽은 메시지에 대해 즉시 재시도하는 최대 횟수입니다.  
   
 ### <a name="retrycycledelay"></a>RetryCycleDelay  
  데이터 형식: datetime  
@@ -120,6 +120,7 @@ class MsmqBindingElementBase : TransportBindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.NetMsmqBinding>  
- <xref:System.ServiceModel.MsmqBindingBase>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.NetMsmqBinding>
+- <xref:System.ServiceModel.MsmqBindingBase>

@@ -2,12 +2,12 @@
 title: ReliableSessionBindingElement
 ms.date: 03/30/2017
 ms.assetid: effda125-b8d3-4de6-8c0e-f59f5ea8f6eb
-ms.openlocfilehash: 2e2e36486c3788cd714ffd0ed545fbb14f831476
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b0a621da43402777cc620f1876bd968a72bb8c12
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962918"
 ---
 # <a name="reliablesessionbindingelement"></a>ReliableSessionBindingElement
 ReliableSessionBindingElement  
@@ -96,5 +96,6 @@ class ReliableSessionBindingElement : BindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>

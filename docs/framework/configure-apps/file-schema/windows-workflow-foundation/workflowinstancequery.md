@@ -1,26 +1,27 @@
 ---
-title: '&lt;workflowInstanceQuery&gt;'
+title: <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9096e812-626a-409a-9eda-c31a60b84c55
-ms.openlocfilehash: eb8b84f70025df3a8a8ac96f61dec6755eb3a364
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 68e44584858e55c136bc3c3dc5f1fb333485fa17
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32757842"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70397505"
 ---
-# <a name="ltworkflowinstancequerygt"></a>&lt;workflowInstanceQuery&gt;
+# <a name="workflowinstancequery"></a>\<workflowInstanceQuery>
 시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 쿼리를 나타냅니다.  
   
- 추적 프로필 쿼리에 대 한 자세한 내용은 참조 하세요. [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)  
+ 추적 프로필 쿼리에 대 한 자세한 내용은 [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md) 을 참조 하세요.  
   
-\<system.serviceModel>  
-\<tracking>  
-\<trackingProfile>  
-\<workflow>  
-\<workflowInstanceQueries>  
-\<workflowInstanceQuery >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<컴퓨터. ServiceModel >** ](system-servicemodel-of-workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<추적 >** ](tracking.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Tracking&gt >** ](trackingprofile.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<워크플로 >** ](workflow.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<Workflowinstancequeries&gt >** ](workflowinstancequeries.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<workflowInstanceQuery >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -50,26 +51,26 @@ ms.locfileid: "32757842"
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<상태 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/states.md)|추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션입니다.|  
+|[\<states>](states.md)|추적 레코드가 만들어질 때 추적된 워크플로 인스턴스에서 구독된 상태의 컬렉션입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<workflowInstanceQueries>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflowinstancequeries.md)|시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 구성 요소의 컬렉션을 나타냅니다.|  
+|[\<workflowInstanceQueries>](workflowinstancequeries.md)|시작된 이벤트나 완료된 이벤트와 같이 워크플로 인스턴스 수명 주기의 변경 내용을 추적하는 구성 요소의 컬렉션을 나타냅니다.|  
   
 ## <a name="remarks"></a>설명  
  <xref:System.Activities.Tracking.WorkflowInstanceQuery>는 다음 <xref:System.Activities.Tracking.TrackingRecord> 개체를 구독하는 데 사용됩니다.  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
   
 ## <a name="example"></a>예제  
  다음 구성은 이 쿼리를 사용하여 `Started` 인스턴스 상태에 대한 워크플로 인스턴스 수준 추적 레코드를 구독합니다.  
@@ -84,8 +85,9 @@ ms.locfileid: "32757842"
 </workflowInstanceQueries>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>       
- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>       
- [워크플로 추적](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)  
- [추적 프로필](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
+- <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
+- [워크플로 추적](../../../windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [추적 프로필](../../../windows-workflow-foundation/tracking-profiles.md)

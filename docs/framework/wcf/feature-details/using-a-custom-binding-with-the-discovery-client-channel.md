@@ -2,12 +2,12 @@
 title: Discovery 클라이언트 채널을 통해 사용자 지정 바인딩 사용
 ms.date: 03/30/2017
 ms.assetid: 36f95e75-04f7-44f3-a995-a0d623624d7f
-ms.openlocfilehash: 7473262ec52adfd917b8ec5cd7ec1f4935a3646d
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 6fe9370bb22ca424774fc8cb4566e0802bc06697
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47195227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918621"
 ---
 # <a name="using-a-custom-binding-with-the-discovery-client-channel"></a>Discovery 클라이언트 채널을 통해 사용자 지정 바인딩 사용
 <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>와 함께 사용자 지정 바인딩을 사용하는 경우 <xref:System.ServiceModel.Discovery.DiscoveryEndpointProvider> 인스턴스를 만드는 <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>를 정의해야 합니다.  
@@ -45,7 +45,7 @@ customBinding.Elements.Insert(0, discoveryBindingElement);
   
  Discovery 클라이언트 채널을 사용 하는 방법에 대 한 자세한 내용은 참조 하세요. [Discovery 클라이언트 채널을 사용 하 여](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)입니다. 
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
 
-- [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)  
-- [검색 클라이언트 채널 사용](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)  
+- [WCF 검색 개요](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
+- [검색 클라이언트 채널 사용](../../../../docs/framework/wcf/feature-details/using-the-discovery-client-channel.md)

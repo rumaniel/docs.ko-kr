@@ -1,22 +1,22 @@
 ---
-title: '값 옵션 (F #)'
-description: '옵션 종류의 구조체 버전인는 F # 값 옵션 형식에 대해 알아봅니다.'
-ms.date: 06/16/2018
-ms.openlocfilehash: 978bd1713c16f7c050ccb097cb134973d10ef6f5
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+title: 값 옵션
+description: 에 대해 알아봅니다는 F# 옵션 종류의 구조체 버전인 값 옵션 종류입니다.
+ms.date: 02/06/2019
+ms.openlocfilehash: e1036c83189c853b3704d94ca245e4818acc98c1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185838"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982581"
 ---
 # <a name="value-options"></a>값 옵션
 
-F # 값 옵션 종류는 다음과 같은 두 가지 경우를 저장할 때 사용 됩니다.
+값 옵션 형식 F# 다음 두 경우 저장할 때 사용 됩니다.
 
-1. 시나리오에 적합 한 [F # 옵션](options.md)합니다.
+1. 시나리오에 적합 한 [ F# 옵션](options.md)합니다.
 2. 구조체를 사용 하는 시나리오의 성능 이점을 제공 합니다.
 
-일부 성능에 민감한 시나리오는 "해결" 구조체를 사용 하 여 합니다. 참조 형식 대신 사용 하는 경우 복사 하는 추가 비용을 고려해 야 합니다. 그러나 큰 F # 프로그램 일반적으로 인스턴스화할 실행 부하 과다 경로 통해 이동 하는 많은 선택적 형식 구조체 때로는 프로그램의 수명 동안 전반적인 성능 향상을 위해을 얻을 수 있습니다.
+일부 성능에 민감한 시나리오는 "해결" 구조체를 사용 하 여 합니다. 참조 형식 대신 사용 하는 경우 복사 하는 추가 비용을 고려해 야 합니다. 그러나 많은 F# 프로그램 일반적으로 실행 부하 과다 경로 통해 이동 하는 다양 한 선택적 형식을 인스턴스화하고 이러한 경우 구조체 수 종종 성능이 향상 전체 프로그램의 수명 동안.
 
 ## <a name="definition"></a>정의
 

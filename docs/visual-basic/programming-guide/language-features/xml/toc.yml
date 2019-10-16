@@ -1,0 +1,42 @@
+- name: Visual Basic의 XML
+  href: index.md
+  items:
+    - name: LINQ to XML 개요
+      href: overview-of-linq-to-xml.md
+    - name: XML 만들기
+      href: creating-xml.md
+      items:
+        - name: XML 리터럴 개요
+          href: xml-literals-overview.md
+        - name: XML의 포함 식
+          href: embedded-expressions-in-xml.md
+        - name: 선언된 XML 요소 및 특성의 이름
+          href: names-of-declared-xml-elements-and-attributes.md
+        - name: XML 리터럴 및 XML 1.0 사양
+          href: xml-literals-and-the-xml-1-0-specification.md
+        - name: XML 리터럴의 공백
+          href: white-space-in-xml-literals.md
+        - name: '방법: XML 리터럴 만들기'
+          href: how-to-create-xml-literals.md
+        - name: '방법: XML 리터럴에 식 포함'
+          href: how-to-embed-expressions-in-xml-literals.md
+    - name: XML 조작
+      href: manipulating-xml.md
+      items:
+        - name: '방법: 파일, 문자열 또는 스트림에서 XML 로드'
+          href: how-to-load-xml-from-a-file-string-or-stream.md
+        - name: '방법: LINQ를 사용하여 XML 변형'
+          href: how-to-transform-xml-by-using-linq.md
+        - name: '방법: XML 리터럴 수정'
+          href: how-to-modify-xml-literals.md
+    - name: XML에 액세스
+      href: accessing-xml.md
+      items:
+        - name: '방법: XML 하위 요소에 액세스'
+          href: how-to-access-xml-descendant-elements.md
+        - name: '방법: XML 자식 요소에 액세스'
+          href: how-to-access-xml-child-elements.md
+        - name: '방법: XML 특성에 액세스'
+          href: how-to-access-xml-attributes.md
+        - name: '방법: XML 네임스페이스 접두사 선언 및 사용'
+          href: how-to-declare-and-use-xml-namespace-prefixes.md

@@ -1,0 +1,472 @@
+- name: LINQ(Language-Integrated Query)
+  href: index.md
+  items:
+    - name: LINQ 소개
+      href: introduction-to-linq.md
+    - name: LINQ 시작
+      href: getting-started-with-linq.md
+      items:
+        - name: 첫 번째 LINQ 쿼리 작성
+          href: writing-your-first-linq-query.md
+        - name: 기본 쿼리 작업
+          href: basic-query-operations.md
+        - name: LINQ를 지원하는 Visual Basic 기능
+          href: features-that-support-linq.md
+        - name: 쿼리 작업의 형식 관계
+          href: type-relationships-in-query-operations.md
+        - name: '연습: 쿼리 작성'
+          href: walkthrough-writing-queries.md
+        - name: '방법: 항목 목록 만들기'
+          href: how-to-create-a-list-of-items.md
+    - name: 표준 쿼리 연산자 개요
+      href: standard-query-operators-overview.md
+      items:
+        - name: 표준 쿼리 연산자에 대한 쿼리 식 구문
+          href: query-expression-syntax-for-standard-query-operators.md
+        - name: 실행 방식에 따른 표준 쿼리 연산자 분류
+          href: classification-of-standard-query-operators-by-manner-of-execution.md
+        - name: 데이터 정렬
+          href: sorting-data.md
+        - name: 집합 작업
+          href: set-operations.md
+        - name: 데이터 필터링
+          href: filtering-data.md
+        - name: 수량자 작업
+          href: quantifier-operations.md
+        - name: 프로젝션 작업
+          href: projection-operations.md
+        - name: 데이터 분할
+          href: partitioning-data.md
+        - name: 조인 작업
+          href: join-operations.md
+        - name: 데이터 그룹화
+          href: grouping-data.md
+        - name: 생성 작업
+          href: generation-operations.md
+        - name: 같음 연산
+          href: equality-operations.md
+        - name: 요소 작업
+          href: element-operations.md
+        - name: 데이터 형식 변환
+          href: converting-data-types.md
+        - name: 연결 작업
+          href: concatenation-operations.md
+        - name: 집계 작업
+          href: aggregation-operations.md
+- name: LINQ to Objects
+  href: linq-to-objects.md
+  items:
+    - name: LINQ 및 문자열
+      href: linq-and-strings.md
+      items:
+        - name: '방법: 문자열에서 단어의 발생 횟수 계산(LINQ)'
+          href: how-to-count-occurrences-of-a-word-in-a-string-linq.md
+        - name: '방법: 지정된 단어 세트가 포함된 문장 쿼리(LINQ)'
+          href: how-to-query-for-sentences-that-contain-a-specified-set-of-words.md
+        - name: '방법: 문자열에서 문자 쿼리(LINQ)'
+          href: how-to-query-for-characters-in-a-string-linq.md
+        - name: '방법: LINQ 쿼리와 정규식 결합'
+          href: how-to-combine-linq-queries-with-regular-expressions.md
+        - name: '방법: 두 목록 간의 차집합 구하기(LINQ)'
+          href: how-to-find-the-set-difference-between-two-lists-linq.md
+        - name: '방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링(LINQ)'
+          href: how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
+        - name: '방법: 구분된 파일의 필드 다시 정렬(LINQ)'
+          href: how-to-reorder-the-fields-of-a-delimited-file.md
+        - name: '방법: 문자열 컬렉션 결합 및 비교(LINQ)'
+          href: how-to-combine-and-compare-string-collections-linq.md
+        - name: '방법: 여러 원본에서 개체 컬렉션 채우기(LINQ)'
+          href: how-to-populate-object-collections-from-multiple-sources-linq.md
+        - name: '방법: 그룹을 사용하여 여러 파일로 파일 분할(LINQ)'
+          href: how-to-split-a-file-into-many-files-by-using-groups-linq.md
+        - name: '방법: 서로 다른 파일의 콘텐츠 조인(LINQ)'
+          href: how-to-join-content-from-dissimilar-files-linq.md
+        - name: '방법: CSV 텍스트 파일에서 열 값 컴퓨팅(LINQ)'
+          href: how-to-compute-column-values-in-a-csv-text-file-linq.md
+    - name: LINQ 및 리플렉션
+      href: linq-and-reflection.md
+      items:
+        - name: '방법: 리플렉션을 사용하여 어셈블리의 메타데이터 쿼리(LINQ)'
+          href: how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+    - name: LINQ 및 파일 디렉터리
+      href: linq-and-file-directories.md
+      items:
+        - name: '방법: 지정된 특성 또는 이름이 있는 파일 쿼리'
+          href: how-to-query-for-files-with-a-specified-attribute-or-name.md
+        - name: '방법: 확장명에 따라 파일 그룹화(LINQ)'
+          href: how-to-group-files-by-extension-linq.md
+        - name: '방법: 폴더 세트에서 총 바이트 수 쿼리(LINQ)'
+          href: how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders.md
+        - name: '방법: 두 폴더의 콘텐츠 비교(LINQ)'
+          href: how-to-compare-the-contents-of-two-folders-linq.md
+        - name: '방법: 디렉터리 트리에서 가장 큰 파일을 하나 이상 쿼리(LINQ)'
+          href: how-to-query-for-the-largest-file-or-files-in-a-directory-tree.md
+        - name: '방법: 디렉터리 트리에서 중복 파일 쿼리(LINQ)'
+          href: how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
+        - name: '방법: 폴더에서 파일의 콘텐츠 쿼리(LINQ)'
+          href: how-to-query-the-contents-of-files-in-a-folder-linq.md
+        - name: '방법: LINQ를 사용하여 ArrayList 쿼리'
+          href: how-to-query-an-arraylist-with-linq.md
+        - name: '방법: LINQ 쿼리에 대한 사용자 지정 메서드 추가'
+          href: how-to-add-custom-methods-for-linq-queries.md
+- name: LINQ to XML
+  href: linq-to-xml.md
+  items:
+    - name: 시작(LINQ to XML)
+      href: getting-started-linq-to-xml.md
+      items:
+        - name: LINQ to XML 개요
+          href: linq-to-xml-overview.md
+        - name: LINQ to XML과 비교 DOM 비교
+          href: linq-to-xml-vs-dom.md
+        - name: LINQ to XML과 비교 기타 XML 기술 비교
+          href: linq-to-xml-vs-other-xml-technologies.md
+    - name: 프로그래밍 가이드(LINQ to XML)
+      href: programming-guide-linq-to-xml.md
+      items:
+        - name: LINQ to XML 프로그래밍 개요
+          href: linq-to-xml-programming-overview.md
+        - name: 함수형 프로그래밍과 절차적 프로그래밍 비교(LINQ to XML)
+          href: functional-vs-procedural-programming-linq-to-xml.md
+        - name: LINQ to XML 클래스 개요
+          href: linq-to-xml-classes-overview.md
+        - name: XElement 클래스 개요
+          href: xelement-class-overview.md
+        - name: XAttribute 클래스 개요
+          href: xattribute-class-overview.md
+          items:
+            - name: XDocument 클래스 개요
+              href: xdocument-class-overview.md
+            - name: '방법: LINQ to XML 예제 빌드'
+              href: how-to-build-linq-to-xml-examples.md
+        - name: XML 트리 만들기
+          href: creating-xml-trees.md
+          items:
+            - name: 함수 생성(LINQ to XML)
+              href: functional-construction-linq-to-xml.md
+            - name: XML 리터럴 소개
+              href: introduction-to-xml-literals.md
+            - name: 복제와 연결 비교
+              href: cloning-vs-attaching.md
+            - name: XML 구문 분석
+              href: parsing-xml.md
+              items:
+                - name: '방법: 문자열 구문 분석'
+                  href: how-to-parse-a-string.md
+                - name: '방법: 파일에서 XML 로드'
+                  href: how-to-load-xml-from-a-file.md
+                - name: XML을 로드 또는 구문 분석할 때 공백 유지
+                  href: preserving-white-space-while-loading-or-parsing-xml.md
+                - name: '방법: 구문 분석 오류 catch'
+                  href: how-to-catch-parsing-errors.md
+                - name: '방법: XmlReader에서 트리 만들기'
+                  href: how-to-create-a-tree-from-an-xmlreader.md
+                - name: '방법: XmlReader에서 XML 조각 스트리밍'
+                  href: how-to-stream-xml-fragments-from-an-xmlreader.md
+            - name: '방법: XmlWriter를 사용하여 XML 트리 채우기(LINQ to XML)'
+              href: how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
+            - name: '방법: XSD를 사용하여 유효성 검사(LINQ to XML)'
+              href: how-to-validate-using-xsd-linq-to-xml.md
+            - name: XElement 및 XDocument 개체의 올바른 콘텐츠
+              href: valid-content-of-xelement-and-xdocument-objects.md
+    - name: XML 네임스페이스 사용
+      href: working-with-xml-namespaces.md
+      items:
+        - name: 네임스페이스 개요(LINQ to XML)
+          href: namespaces-overview-linq-to-xml.md
+        - name: '방법: 네임스페이스를 사용하여 문서 만들기(LINQ to XML)'
+          href: how-to-create-a-document-with-namespaces.md
+        - name: '방법: 네임스페이스 접두사 제어(LINQ to XML)'
+          href: how-to-control-namespace-prefixes-linq-to-xml.md
+        - name: 기본 네임스페이스 범위
+          href: scope-of-default-namespaces.md
+        - name: 글로벌 네임스페이스 사용(LINQ to XML)
+          href: working-with-global-namespaces-linq-to-xml.md
+        - name: '방법: 네임스페이스의 XML에 대한 쿼리 작성'
+          href: how-to-write-queries-on-xml-in-namespaces.md
+    - name: XML 트리 serialization
+      href: serializing-xml-trees.md
+      items:
+        - name: serialize할 때 공백 유지
+          href: preserving-white-space-while-serializing.md
+        - name: XML 선언으로 serialization
+          href: serializing-with-an-xml-declaration.md
+        - name: 'Files, TextWriters 및 XmlWriters로 serialization'
+          href: serializing-to-files-textwriters-and-xmlwriters.md
+        - name: XmlReader에 직렬화(XSLT 호출)
+          href: serializing-to-an-xmlreader-invoking-xslt.md
+    - name: LINQ to XML 축
+      href: linq-to-xml-axes.md
+      items:
+        - name: LINQ to XML 축 개요
+          href: linq-to-xml-axes-overview.md
+        - name: '방법: 요소 컬렉션 검색(LINQ to XML)'
+          href: how-to-retrieve-a-collection-of-elements-linq-to-xml.md
+        - name: '방법: 요소 값 검색(LINQ to XML)'
+          href: how-to-retrieve-the-value-of-an-element-linq-to-xml.md
+        - name: '방법: 요소 이름 필터링(LINQ to XML)'
+          href: how-to-filter-on-element-names-linq-to-xml.md
+        - name: '방법: 축 메서드 호출 연결(LINQ to XML)'
+          href: how-to-chain-axis-method-calls-linq-to-xml.md
+        - name: '방법: 단일 자식 요소 검색(LINQ to XML)'
+          href: how-to-retrieve-a-single-child-element-linq-to-xml.md
+        - name: '방법: 특성 컬렉션 검색(LINQ to XML)'
+          href: how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
+        - name: '방법: 단일 특성 검색(LINQ to XML)'
+          href: how-to-retrieve-a-single-attribute-linq-to-xml.md
+        - name: '방법: 특성 값 검색(LINQ to XML)'
+          href: how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
+        - name: '방법: 요소의 단순 값 검색'
+          href: how-to-retrieve-the-shallow-value-of-an-element.md
+        - name: 언어 통합 축(LINQ to XML)
+          href: language-integrated-axes.md
+    - name: XML 트리 쿼리
+      href: querying-xml-trees.md
+      items:
+        - name: 기본 쿼리(LINQ to XML)
+          href: basic-queries-linq-to-xml.md
+          items:
+            - name: '방법: 특정 특성으로 요소 찾기'
+              href: how-to-find-an-element-with-a-specific-attribute.md
+            - name: '방법: 특정 자식 요소로 요소 찾기'
+              href: how-to-find-an-element-with-a-specific-child-element.md
+            - name: XDocument 쿼리와 XElement 쿼리 비교
+              href: querying-an-xdocument-vs-querying-an-xelement.md
+            - name: '방법: 특정 요소 이름으로 하위 항목 찾기'
+              href: how-to-find-descendants-with-a-specific-element-name.md
+            - name: '방법: Descendants 메서드를 사용하여 단일 하위 항목 찾기'
+              href: how-to-find-a-single-descendant-using-the-descendants-method.md
+            - name: '방법: 복합 필터링을 사용하여 쿼리 작성'
+              href: how-to-write-queries-with-complex-filtering.md
+            - name: '방법: 선택적 요소 필터링'
+              href: how-to-filter-on-an-optional-element.md
+            - name: '방법: 네임스페이스에서 모든 노드 찾기'
+              href: how-to-find-all-nodes-in-a-namespace.md
+            - name: '방법: 요소 정렬'
+              href: how-to-sort-elements.md
+            - name: '방법: 여러 키로 요소 정렬'
+              href: how-to-sort-elements-on-multiple-keys.md
+            - name: '방법: 중간 값 계산'
+              href: how-to-calculate-intermediate-values.md
+            - name: '방법: 컨텍스트에 따라 요소를 찾는 쿼리 작성'
+              href: how-to-write-a-query-that-finds-elements-based-on-context.md
+            - name: '방법: 빈 쿼리 결과 집합 디버깅'
+              href: how-to-debug-empty-query-results-sets.md
+        - name: 프로젝션 및 변환(LINQ to XML)
+          href: projections-and-transformations-linq-to-xml.md
+        - name: '방법: LINQ to XML을 통해 사전 사용'
+          href: how-to-work-with-dictionaries-using-linq-to-xml.md
+          items:
+            - name: '방법: XML 트리의 모양 변환'
+              href: how-to-transform-the-shape-of-an-xml-tree.md
+            - name: '방법: 프로젝션 형식 제어'
+              href: how-to-control-the-type-of-a-projection.md
+            - name: '방법: 새 형식 프로젝션(LINQ to XML)'
+              href: how-to-project-a-new-type-linq-to-xml.md
+            - name: '방법: 개체 그래프 프로젝션'
+              href: how-to-project-an-object-graph.md
+            - name: '방법: 익명 형식 프로젝션'
+              href: how-to-project-an-anonymous-type.md
+            - name: '방법: XML에서 텍스트 파일 생성'
+              href: how-to-generate-text-files-from-xml.md
+            - name: '방법: CSV 파일에서 XML 생성'
+              href: how-to-generate-xml-from-csv-files.md
+        - name: 고급 쿼리 기술(LINQ to XML)
+          href: advanced-query-techniques-linq-to-xml.md
+          items:
+            - name: '방법: 두 컬렉션 조인(LINQ to XML)'
+              href: how-to-join-two-collections-linq-to-xml.md
+              items:
+                - name: '방법: 그룹화를 사용하여 계층 구조 만들기'
+                  href: how-to-create-hierarchy-using-grouping.md
+                - name: '방법: XPath를 사용하여 LINQ to XML 쿼리'
+                  href: how-to-query-linq-to-xml-using-xpath.md
+                - name: '방법: LINQ to XML 축 메서드 작성'
+                  href: how-to-write-a-linq-to-xml-axis-method.md
+                - name: '방법: 트리의 모든 노드 나열'
+                  href: how-to-list-all-nodes-in-a-tree.md
+                - name: '방법: Office Open XML 문서에서 단락 검색'
+                  href: how-to-retrieve-paragraphs-from-an-office-open-xml-document.md
+                - name: '방법: Office Open XML 문서 수정'
+                  href: how-to-modify-an-office-open-xml-document.md
+                - name: '방법: 파일 시스템에서 XML 트리 채우기'
+                  href: how-to-populate-an-xml-tree-from-the-file-system.md
+        - name: XPath 사용자용 LINQ to XML
+          href: linq-to-xml-for-xpath-users.md
+          items:
+            - name: XPath 및 LINQ to XML 비교
+              href: comparison-of-xpath-and-linq-to-xml.md
+            - name: '방법: 자식 요소 찾기(XPath-LINQ to XML)'
+              href: how-to-find-a-child-element-xpath-linq-to-xml.md
+            - name: '방법: 자식 요소 목록 찾기(XPath-LINQ to XML)'
+              href: how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
+            - name: '방법: 루트 요소 찾기(XPath-LINQ to XML)'
+              href: how-to-find-the-root-element-xpath-linq-to-xml.md
+            - name: '방법: 하위 항목 요소 찾기(XPath-LINQ to XML)'
+              href: how-to-find-descendant-elements-xpath-linq-to-xml.md
+            - name: '방법: 특성 필터링(XPath-LINQ to XML)'
+              href: how-to-filter-on-an-attribute-xpath-linq-to-xml.md
+            - name: '방법: 관련 요소 찾기(XPath-LINQ to XML)'
+              href: how-to-find-related-elements-xpath-linq-to-xml.md
+            - name: '방법: 네임스페이스에서 요소 찾기(XPath-LINQ to XML)'
+              href: how-to-find-elements-in-a-namespace.md
+            - name: '방법: 선행 형제 찾기(XPath-LINQ to XML)'
+              href: how-to-find-preceding-siblings-xpath-linq-to-xml.md
+            - name: '방법: 자식 요소의 하위 항목 찾기(XPath-LINQ to XML)'
+              href: how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
+            - name: '방법: 두 위치 경로의 합집합 찾기(XPath-LINQ to XML)'
+              href: how-to-find-a-union-of-two-location-paths-xpath.md
+            - name: '방법: 형제 노드 찾기(XPath-LINQ to XML)'
+              href: how-to-find-sibling-nodes-xpath-linq-to-xml.md
+            - name: '방법: 부모의 특성 찾기(XPath-LINQ to XML)'
+              href: how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
+            - name: '방법: 특정 이름으로 형제의 특성 찾기(XPath-LINQ to XML)'
+              href: how-to-find-attributes-of-siblings-with-a-specific-name.md
+            - name: '방법: 특정 특성으로 요소 찾기(XPath-LINQ to XML)'
+              href: how-to-find-elements-with-a-specific-attribute.md
+            - name: '방법: 위치에 따라 자식 요소 찾기(XPath-LINQ to XML)'
+              href: how-to-find-child-elements-based-on-position.md
+            - name: '방법: 직접 선행 형제 찾기(XPath-LINQ to XML)'
+              href: how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
+        - name: XML의 순수 함수 변환
+          href: pure-functional-transformations-of-xml.md
+          items:
+            - name: 순수 함수 변환 소개
+              href: introduction-to-pure-functional-transformations.md
+            - name: 개념과 용어(함수 변환)
+              href: concepts-and-terminology-functional-transformation.md
+            - name: 함수형 프로그래밍과 명령형 프로그래밍 비교
+              href: functional-programming-vs-imperative-programming.md
+            - name: 순수 함수로 리팩터링
+              href: refactoring-into-pure-functions.md
+            - name: 함수 변환의 적용 가능 범위
+              href: applicability-of-functional-transformation.md
+            - name: XML의 함수 변환
+              href: functional-transformation-of-xml.md
+            - name: '자습서: 지연된 실행'
+              href: tutorial-deferred-execution.md
+            - name: LINQ to XML의 지연 실행 및 지연 계산
+              href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
+            - name: 지연 실행 예제
+              href: deferred-execution-example.md
+            - name: '자습서: WordprocessingML 문서에서 콘텐츠 조작'
+              href: tutorial-manipulating-content-in-a-wordprocessingml-document.md
+            - name: WordprocessingML 문서의 모양
+              href: shape-of-wordprocessingml-documents.md
+            - name: 원본 Office Open XML 문서 만들기
+              href: creating-the-source-office-open-xml-document.md
+            - name: 기본 단락 스타일 찾기
+              href: finding-the-default-paragraph-style.md
+            - name: 단락 및 해당 스타일 검색
+              href: retrieving-the-paragraphs-and-their-styles.md
+            - name: 단락 텍스트 검색
+              href: retrieving-the-text-of-the-paragraphs.md
+            - name: 확장 메서드를 사용하여 리팩터링
+              href: refactoring-using-an-extension-method.md
+            - name: 순수 함수를 사용하여 리팩터링
+              href: refactoring-using-a-pure-function.md
+            - name: 여러 모양으로 XML 프로젝션
+              href: projecting-xml-in-a-different-shape.md
+            - name: Word 문서에서 텍스트 찾기
+              href: finding-text-in-word-documents.md
+            - name: Office Open XML WordprocessingML 문서 정보
+              href: details-of-office-open-xml-wordprocessingml-documents.md
+            - name: 스타일이 사용된 WordprocessingML 문서
+              href: wordprocessingml-document-with-styles.md
+            - name: WordprocessingML 문서의 스타일 부분
+              href: style-part-of-a-wordprocessingml-document.md
+            - name: Office Open XML 문서 부분을 출력하는 예제
+              href: example-that-outputs-office-open-xml-document-parts.md
+    - name: XML 트리 수정(LINQ to XML)
+      href: modifying-xml-trees-linq-to-xml.md
+      items:
+        - name: 메모리 내 XML 트리 수정과 함수 생성 비교(LINQ to XML)
+          href: in-memory-xml-tree-modification-vs-functional-construction.md
+        - name: 'XML 트리에 요소, 특성 및 노드 추가'
+          href: adding-elements-attributes-and-nodes-to-an-xml-tree.md
+        - name: 'XML 트리에서 요소, 특성 및 노드 수정'
+          href: modifying-elements-attributes-and-nodes-in-an-xml-tree.md
+        - name: 'XML 트리에서 요소, 특성 및 노드 제거'
+          href: removing-elements-attributes-and-nodes-from-an-xml-tree.md
+        - name: 이름-값 쌍 유지 관리
+          href: maintaining-name-value-pairs.md
+        - name: '방법: 전체 XML 트리에 대한 네임스페이스 변경'
+          href: how-to-change-the-namespace-for-an-entire-xml-tree.md
+    - name: 성능(LINQ to XML)
+      href: performance-linq-to-xml.md
+      items:
+        - name: 연결된 쿼리 성능(LINQ to XML)
+          href: performance-of-chained-queries-linq-to-xml.md
+        - name: 원자화된 XName 및 XNamespace 개체(LINQ to XML)
+          href: atomized-xname-and-xnamespace-objects-linq-to-xml.md
+        - name: XName 개체의 사전 원자화(LINQ to XML)
+          href: pre-atomization-of-xname-objects-linq-to-xml.md
+        - name: 정적으로 컴파일된 쿼리(LINQ to XML)
+          href: statically-compiled-queries-linq-to-xml.md
+    - name: 고급 LINQ to XML 프로그래밍
+      href: advanced-linq-to-xml-programming.md
+      items:
+        - name: LINQ to XML 주석
+          href: linq-to-xml-annotations.md
+        - name: LINQ to XML 이벤트
+          href: linq-to-xml-events.md
+        - name: 노드를 사용한 프로그래밍
+          href: programming-with-nodes.md
+        - name: 혼합된 선언적 코드-명령적 코드 버그(LINQ to XML)
+          href: mixed-declarative-code-imperative-code-bugs-linq-to-xml.md
+        - name: '방법: 헤더 정보에 액세스하여 XML 조각 스트리밍'
+          href: how-to-stream-xml-fragments-with-access-to-header-information.md
+        - name: '방법: 큰 XML 문서의 스트리밍 변환 수행'
+          href: how-to-perform-streaming-transform-of-large-xml-documents.md
+        - name: '방법: 인코딩된 문서 읽기 및 쓰기'
+          href: how-to-read-and-write-an-encoded-document.md
+        - name: XSLT를 사용하여 XML 트리 변환
+          href: using-xslt-to-transform-an-xml-tree.md
+        - name: '방법: XSLT 스타일에서 주석을 사용하여 LINQ to XML 트리 변환'
+          href: how-to-use-annotation-trees-to-transform-linq-to-xml-trees-in-an-xslt-style.md
+        - name: XElement 요소가 포함된 개체 그래프 직렬화
+          href: serializing-object-graphs-that-contain-xelement-objects.md
+          items:
+            - name: '방법: XmlSerializer를 사용하여 직렬화'
+              href: how-to-serialize-using-xmlserializer.md
+            - name: '방법: DataContractSerializer를 사용하여 직렬화'
+              href: how-to-serialize-using-datacontractserializer.md
+        - name: LINQ to XML 보안
+          href: linq-to-xml-security.md
+        - name: 샘플 XML 문서(LINQ to XML)
+          href: sample-xml-documents-linq-to-xml.md
+          items:
+            - name: '샘플 XML 파일: 일반적인 구매 주문(LINQ to XML)'
+              href: sample-xml-file-typical-purchase-order-linq-to-xml.md
+            - name: '샘플 XML 파일: 네임스페이스에서 일반적인 구매 주문'
+              href: sample-xml-file-typical-purchase-order-in-a-namespace.md
+            - name: '샘플 XML 파일: 여러 구매 주문(LINQ to XML)'
+              href: sample-xml-file-multiple-purchase-orders-linq-to-xml.md
+            - name: '샘플 XML 파일: 네임스페이스에서 여러 구매 주문'
+              href: sample-xml-file-multiple-purchase-orders-in-a-namespace.md
+            - name: '샘플 XML 파일: 테스트 구성(LINQ to XML)'
+              href: sample-xml-file-test-configuration-linq-to-xml.md
+            - name: '샘플 XML 파일: 네임스페이스에서 테스트 구성'
+              href: sample-xml-file-test-configuration-in-a-namespace.md
+            - name: '샘플 XML 파일: Customers 및 Orders(LINQ to XML)'
+              href: sample-xml-file-customers-and-orders-linq-to-xml.md
+            - name: '샘플 XSD 파일: Customer 및 Order'
+              href: sample-xsd-file-customers-and-orders.md
+            - name: '샘플 XML 파일: 네임스페이스의 Customers 및 Orders'
+              href: sample-xml-file-customers-and-orders-in-a-namespace.md
+            - name: '샘플 XML 파일: 숫자 데이터(LINQ to XML)'
+              href: sample-xml-file-numerical-data-linq-to-xml.md
+            - name: '샘플 XML 파일: 네임스페이스의 숫자 데이터'
+              href: sample-xml-file-numerical-data-in-a-namespace.md
+            - name: '샘플 XML 파일: Books(LINQ to XML)'
+              href: sample-xml-file-books-linq-to-xml.md
+            - name: '샘플 XML 파일: 통합된 구매 주문'
+              href: sample-xml-file-consolidated-purchase-orders.md
+            - name: 참조(LINQ to XML)
+              href: reference-linq-to-xml.md
+- name: LINQ to ADO.NET(포털 페이지)
+  href: linq-to-adonet-portal-page.md
+- name: LINQ 쿼리에 대한 데이터 소스 활성화
+  href: enabling-a-data-source-for-linq-querying.md
+- name: Visual Studio IDE 및 도구에서 LINQ 지원
+  href: visual-studio-ide-and-tools-support-for-linq.md

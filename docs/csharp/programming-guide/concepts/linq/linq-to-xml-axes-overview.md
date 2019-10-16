@@ -2,17 +2,17 @@
 title: LINQ to XML 축 개요(C#)
 ms.date: 07/20/2015
 ms.assetid: 516792fb-461d-40a8-8a50-9993a51258fc
-ms.openlocfilehash: 1eabd6a171637b85a5d22afa209e6c80dbbb9f4c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: b775a37869f0c8baa7d482475e301347cb77c538
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44211712"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591930"
 ---
 # <a name="linq-to-xml-axes-overview-c"></a>LINQ to XML 축 개요(C#)
 XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리를 쿼리하여 요소와 특성을 찾고 해당 값을 검색할 수 있습니다. *축 메서드*(*축*)를 통해 컬렉션을 검색합니다. 일부 축은 <xref:System.Xml.Linq.XElement> 컬렉션을 반환하는 <xref:System.Xml.Linq.XDocument> 및 <xref:System.Collections.Generic.IEnumerable%601> 클래스의 메서드이고, 일부 축은 <xref:System.Xml.Linq.Extensions> 클래스의 확장 메서드입니다. 확장명 메서드로 구현되는 축은 컬렉션에 대해 작동하고 컬렉션을 반환합니다.  
   
- [XElement 클래스 개요](../../../../csharp/programming-guide/concepts/linq/xelement-class-overview.md)에 설명된 대로 <xref:System.Xml.Linq.XElement> 개체는 단일 요소 노드를 나타냅니다. 요소의 내용은 복합 요소(구조화된 내용이라고도 함)이거나 단순 요소일 수 있습니다. 단순 요소는 비어 있거나 값을 포함할 수 있습니다. 노드에 구조화된 내용이 포함되어 있으면 다양한 축 메서드를 사용하여 하위 요소의 열거형을 검색할 수 있습니다. 가장 일반적으로 사용되는 축 메서드는 <xref:System.Xml.Linq.XContainer.Elements%2A> 및 <xref:System.Xml.Linq.XContainer.Descendants%2A>입니다.  
+ [XElement 클래스 개요](./xelement-class-overview.md)에 설명된 대로 <xref:System.Xml.Linq.XElement> 개체는 단일 요소 노드를 나타냅니다. 요소의 내용은 복합 요소(구조화된 내용이라고도 함)이거나 단순 요소일 수 있습니다. 단순 요소는 비어 있거나 값을 포함할 수 있습니다. 노드에 구조화된 내용이 포함되어 있으면 다양한 축 메서드를 사용하여 하위 요소의 열거형을 검색할 수 있습니다. 가장 일반적으로 사용되는 축 메서드는 <xref:System.Xml.Linq.XContainer.Elements%2A> 및 <xref:System.Xml.Linq.XContainer.Descendants%2A>입니다.  
   
  컬렉션을 반환하는 축 메서드 외에도 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 쿼리에서 일반적으로 사용하는 두 메서드가 있습니다. <xref:System.Xml.Linq.XContainer.Element%2A> 메서드는 단일 <xref:System.Xml.Linq.XElement>를 반환합니다. <xref:System.Xml.Linq.XElement.Attribute%2A> 메서드는 단일 <xref:System.Xml.Linq.XAttribute>를 반환합니다.  
   
@@ -56,4 +56,4 @@ XML 트리를 만들거나 XML 문서를 XML 트리에 로드한 후 XML 트리�
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML 축(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)
+- [LINQ to XML 축(C#)](./linq-to-xml-axes.md)

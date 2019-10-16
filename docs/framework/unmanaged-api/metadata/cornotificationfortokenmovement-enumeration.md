@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96ab659e6ab6cc9601c0e9a1ab511da92905c242
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 7a7859bd890a2ecc10b5117f697ff8b06ad569f6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33448258"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781695"
 ---
 # <a name="cornotificationfortokenmovement-enumeration"></a>CorNotificationForTokenMovement 열거형
-알림을 토큰 다시 매핑 발생할 때 메타 데이터 API 클라이언트에 보낼 수를 지정 합니다.  
+토큰 다시 매핑으로 발생할 때 메타 데이터 API 클라이언트에 보낼 알림을 지정 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorNotificationForTokenMovement {  
   
     MDNotifyDefault             = 0x0000000f,  
@@ -63,41 +63,42 @@ typedef enum CorNotificationForTokenMovement {
   
 ## <a name="members"></a>멤버  
   
-|멤버|설명|  
+|멤버|Description|  
 |------------|-----------------|  
-|`MDNotifyDefault`|될 경우 알림을 `mdTypeRef`, `mdMethodDef`, `mdMemberRef`, 또는 `mdFieldDef` 토큰 이동 합니다.|  
-|`MDNotifyAll`|모든 토큰 이동 하면 알립니다.|  
-|`MDNotifyNone`|토큰 이동에 알리지 않습니다.|  
-|`MDNotifyMethodDef`|될 경우 알림을 `mdMethodDef` 토큰이 이동 합니다.|  
-|`MDNotifyMemberRef`|될 경우 알림을 `mdMemberRef` 토큰이 이동 합니다.|  
-|`MDNotifyFieldDef`|될 경우 알림을 `mdFieldDef` 토큰이 이동 합니다.|  
-|`MDNotifyTypeRef`|될 경우 알림을 `mdTypeRef` 토큰이 이동 합니다.|  
-|`MDNotifyTypeDef`|될 경우 알림을 `mdTypeDef` 토큰이 이동 합니다.|  
-|`MDNotifyParamDef`|될 경우 알림을 `mdParamDef` 토큰이 이동 합니다.|  
-|`MDNotifyInterfaceImpl`|될 경우 알림을 `mdInterfaceImpl` 토큰이 이동 합니다.|  
-|`MDNotifyProperty`|될 경우 알림을 `mdProperty` 토큰이 이동 합니다.|  
-|`MDNotifyEvent`|될 경우 알림을 `mdEvent` 토큰이 이동 합니다.|  
-|`MDNotifySignature`|될 경우 알림을 `mdSignature` 토큰이 이동 합니다.|  
-|`MDNotifyTypeSpec`|될 경우 알림을 `mdTypeSpec` 토큰이 이동 합니다.|  
-|`MDNotifyCustomAttribute`|될 경우 알림을 `mdCustomAttribute` 토큰이 이동 합니다.|  
-|`MDNotifySecurityValue`|될 경우 알림을 `mdSecurityValue` 토큰이 이동 합니다.|  
-|`MDNotifyPermission`|될 경우 알림을 `mdPermission` 토큰이 이동 합니다.|  
-|`MDNotifyModuleRef`|될 경우 알림을 `mdModuleRef` 토큰이 이동 합니다.|  
-|`MDNotifyNameSpace`|될 경우 알림을 `mdNameSpace` 토큰이 이동 합니다.|  
-|`MDNotifyAssemblyRef`|될 경우 알림을 `mdAssemblyRef` 토큰이 이동 합니다.|  
-|`MDNotifyFile`|될 경우 알림을 `mdFile` 토큰이 이동 합니다.|  
-|`MDNotifyExportedType`|될 경우 알림을 `mdExportedType` 토큰이 이동 합니다.|  
-|`MDNotifyResource`|될 경우 알림을 `mdManifestResource` 토큰이 이동 합니다.|  
+|`MDNotifyDefault`|알립니다 `mdTypeRef`, `mdMethodDef`를 `mdMemberRef`, 또는 `mdFieldDef` 토큰이 이동 합니다.|  
+|`MDNotifyAll`|모든 토큰 이동할 때 알립니다.|  
+|`MDNotifyNone`|토큰 이동 하는 경우를 알리지 않습니다.|  
+|`MDNotifyMethodDef`|알릴 시기는 `mdMethodDef` 토큰이 이동 합니다.|  
+|`MDNotifyMemberRef`|알릴 시기는 `mdMemberRef` 토큰이 이동 합니다.|  
+|`MDNotifyFieldDef`|알릴 시기는 `mdFieldDef` 토큰이 이동 합니다.|  
+|`MDNotifyTypeRef`|알릴 시기는 `mdTypeRef` 토큰이 이동 합니다.|  
+|`MDNotifyTypeDef`|알릴 시기는 `mdTypeDef` 토큰이 이동 합니다.|  
+|`MDNotifyParamDef`|알릴 시기는 `mdParamDef` 토큰이 이동 합니다.|  
+|`MDNotifyInterfaceImpl`|알릴 시기는 `mdInterfaceImpl` 토큰이 이동 합니다.|  
+|`MDNotifyProperty`|알릴 시기는 `mdProperty` 토큰이 이동 합니다.|  
+|`MDNotifyEvent`|알릴 시기는 `mdEvent` 토큰이 이동 합니다.|  
+|`MDNotifySignature`|알릴 시기는 `mdSignature` 토큰이 이동 합니다.|  
+|`MDNotifyTypeSpec`|알릴 시기는 `mdTypeSpec` 토큰이 이동 합니다.|  
+|`MDNotifyCustomAttribute`|알릴 시기는 `mdCustomAttribute` 토큰이 이동 합니다.|  
+|`MDNotifySecurityValue`|알릴 시기는 `mdSecurityValue` 토큰이 이동 합니다.|  
+|`MDNotifyPermission`|알릴 시기는 `mdPermission` 토큰이 이동 합니다.|  
+|`MDNotifyModuleRef`|알릴 시기는 `mdModuleRef` 토큰이 이동 합니다.|  
+|`MDNotifyNameSpace`|알릴 시기는 `mdNameSpace` 토큰이 이동 합니다.|  
+|`MDNotifyAssemblyRef`|알릴 시기는 `mdAssemblyRef` 토큰이 이동 합니다.|  
+|`MDNotifyFile`|알릴 시기는 `mdFile` 토큰이 이동 합니다.|  
+|`MDNotifyExportedType`|알릴 시기는 `mdExportedType` 토큰이 이동 합니다.|  
+|`MDNotifyResource`|알릴 시기는 `mdManifestResource` 토큰이 이동 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 토큰을 다시 매핑할 수 (이동)이 표시 된 메타 데이터를 병합 하는 동안 합니다.  
+ 토큰이 다시 매핑될 수 (이동)이 표시 된 메타 데이터를 병합 하는 동안.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorHdr.h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 열거형](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

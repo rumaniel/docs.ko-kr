@@ -1,18 +1,18 @@
 ---
-title: '방법: 헤더 정보 (Visual Basic)에 대 한 액세스를 사용 하 여 XML 조각 Stream'
+title: '방법: 헤더 정보 (Visual Basic)에 대 한 액세스를 사용 하 여 Stream XML 조각'
 ms.date: 07/20/2015
 ms.assetid: effd10df-87c4-4d7a-8a9a-1434d829dca5
-ms.openlocfilehash: 60ec63c33d20fa38bed32d9c46c4acfe649ecd15
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: c11a64eb28e8952636ab877479852bd883fc7eba
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39245187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614649"
 ---
-# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>방법: 헤더 정보 (Visual Basic)에 대 한 액세스를 사용 하 여 XML 조각 Stream
-예상할 수 없는 큰 크기의 XML 파일을 읽고 응용 프로그램의 메모리 사용 공간이 예상 가능하도록 응용 프로그램을 작성해야 하는 경우가 있습니다. XML 트리를 큰 XML 파일로 채우려는 경우 파일 크기에 비례하여 메모리가 사용되므로 메모리 사용량이 지나치게 증가하게 됩니다. 따라서 스트리밍 기법을 대신 사용해야 합니다.  
+# <a name="how-to-stream-xml-fragments-with-access-to-header-information-visual-basic"></a>방법: 헤더 정보 (Visual Basic)에 대 한 액세스를 사용 하 여 Stream XML 조각
+예상할 수 없는 큰 크기의 XML 파일을 읽고 애플리케이션의 메모리 사용 공간이 예상 가능하도록 애플리케이션을 작성해야 하는 경우가 있습니다. XML 트리를 큰 XML 파일로 채우려는 경우 파일 크기에 비례하여 메모리가 사용되므로 메모리 사용량이 지나치게 증가하게 됩니다. 따라서 스트리밍 기법을 대신 사용해야 합니다.  
   
- 한 가지 방법은 <xref:System.Xml.XmlReader>를 사용하여 응용 프로그램을 작성하는 것입니다. 그러나 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]를 사용하여 XML 트리를 쿼리할 수도 있습니다. 이 경우에는 사용자 지정 축 메서드를 직접 작성할 수 있습니다. 자세한 내용은 [방법: LINQ to XML 축 메서드 (Visual Basic) 작성](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)합니다.  
+ 한 가지 방법은 <xref:System.Xml.XmlReader>를 사용하여 애플리케이션을 작성하는 것입니다. 그러나 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]를 사용하여 XML 트리를 쿼리할 수도 있습니다. 이 경우에는 사용자 지정 축 메서드를 직접 작성할 수 있습니다. 자세한 내용은 [방법: LINQ to XML 축 메서드 (Visual Basic) 작성](../../../../visual-basic/programming-guide/concepts/linq/how-to-write-a-linq-to-xml-axis-method.md)합니다.  
   
  축 메서드를 직접 작성하려면 <xref:System.Xml.XmlReader>를 사용하여 관심이 있는 노드 중 하나에 도달할 때까지 노드를 읽는 작은 메서드를 작성해야 합니다. 이 메서드는 <xref:System.Xml.Linq.XNode.ReadFrom%2A>에서 읽고 XML 조각을 인스턴스화하는 <xref:System.Xml.XmlReader>을 호출한 후 그런 다음 사용자 지정 축 메서드에 대한 LINQ 쿼리를 작성할 수 있습니다.  
   
@@ -230,5 +230,6 @@ End Class
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)
+## <a name="see-also"></a>참고자료
+
+- [고급 LINQ to XML 프로그래밍 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

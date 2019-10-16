@@ -1,0 +1,11 @@
+- name: 대리자
+  href: index.md
+  items:
+    - name: 대리자 사용
+      href: using-delegates.md
+    - name: '대리자 비교: 명명된 메서드 및 무명 메서드'
+      href: delegates-with-named-vs-anonymous-methods.md
+    - name: '방법: 대리자 결합(멀티캐스트 대리자)(C# 프로그래밍 가이드)'
+      href: how-to-combine-delegates-multicast-delegates.md
+    - name: '방법: 대리자 선언, 인스턴스화 및 사용'
+      href: how-to-declare-instantiate-and-use-a-delegate.md

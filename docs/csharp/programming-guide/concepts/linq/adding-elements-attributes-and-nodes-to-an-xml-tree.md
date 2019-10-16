@@ -2,12 +2,12 @@
 title: 요소, 특성 및 노드를 XML 트리에 추가(C#)
 ms.date: 07/20/2015
 ms.assetid: db911e4f-40aa-499a-9500-a9763bb6df56
-ms.openlocfilehash: 1ebc300d74f8dbf0ec746a14f19b5cf0c7ffa51b
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fee03dd2ba0818778afb3447e8930a2c2567b067
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43517061"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486231"
 ---
 # <a name="adding-elements-attributes-and-nodes-to-an-xml-tree-c"></a>요소, 특성 및 노드를 XML 트리에 추가(C#)
 내용(요소, 특성, 주석, 처리 명령, 텍스트 및 CDATA)을 기존 XML 트리에 추가할 수 있습니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "43517061"
 |<xref:System.Xml.Linq.XNode.AddAfterSelf%2A>|<xref:System.Xml.Linq.XNode> 뒤에 내용을 추가합니다.|  
 |<xref:System.Xml.Linq.XNode.AddBeforeSelf%2A>|<xref:System.Xml.Linq.XNode> 앞에 내용을 추가합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 예제에서는 두 가지 XML 트리를 만든 다음 두 트리 중 하나를 수정합니다.  
@@ -77,6 +77,3 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목
-
-- [XML 트리 수정(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

@@ -1,0 +1,31 @@
+- name: ASP.NET Web Forms용 Blazor 개발자 eBook
+  href: index.md
+  items:
+    - name: 소개
+      href: introduction.md
+    - name: 아키텍처 비교
+      href: architecture-comparison.md
+    - name: 호스팅 모델
+      href: hosting-models.md
+    - name: 프로젝트 구조
+      href: project-structure.md
+    - name: Startup 클래스
+      href: app-startup.md
+    - name: 구성 요소
+      href: components.md
+    - name: '페이지, 라우팅, 레이아웃'
+      href: pages-routing-layouts.md
+    - name: 상태 관리
+      href: state-management.md
+    - name: 양식 및 유효성 검사
+      href: forms-validation.md
+    - name: 데이터 처리
+      href: data.md
+    - name: 미들웨어
+      href: middleware.md
+    - name: Configuration
+      href: config.md
+    - name: 보안
+      href: security-authentication-authorization.md
+    - name: 마이그레이션
+      href: migration.md

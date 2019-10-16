@@ -1,0 +1,13 @@
+- name: Visual Basic의 배열
+  href: index.md
+  items:
+    - name: 배열 차원
+      href: array-dimensions.md
+    - name: '방법: 배열 변수 초기화'
+      href: how-to-initialize-an-array-variable.md
+    - name: '방법: 배열 정렬'
+      href: how-to-sort-an-array.md
+    - name: '방법: 한 배열에 다른 배열 할당'
+      href: how-to-assign-one-array-to-another-array.md
+    - name: 배열 문제 해결
+      href: troubleshooting-arrays.md

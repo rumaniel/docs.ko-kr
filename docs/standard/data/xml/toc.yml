@@ -1,0 +1,281 @@
+- name: XML 문서 및 데이터
+  href: index.md
+  items:
+    - name: XML 처리 옵션
+      href: xml-processing-options.md
+    - name: 메모리 내 XML 데이터 처리
+      href: processing-xml-data-in-memory.md
+      items:
+        - name: DOM 모델을 사용하여 XML 데이터 처리
+          href: process-xml-data-using-the-dom-model.md
+          items:
+            - name: XML DOM(문서 개체 모델)
+              href: xml-document-object-model-dom.md
+            - name: XML 노드 형식
+              href: types-of-xml-nodes.md
+            - name: XML DOM(문서 개체 모델) 계층 구조
+              href: xml-document-object-model-dom-hierarchy.md
+            - name: XML 데이터에 개체 계층 구조 매핑
+              href: mapping-the-object-hierarchy-to-xml-data.md
+            - name: XML 문서 만들기
+              href: xml-document-creation.md
+            - name: DOM에 XML 문서 읽어오기
+              href: reading-an-xml-document-into-the-dom.md
+              items:
+                - name: 문서에 포함된 스타일시트 지시문
+                  href: style-sheet-directives-embedded-in-a-document.md
+                - name: 판독기에서 데이터 로드
+                  href: load-data-from-a-reader.md
+                - name: DOM을 로드할 경우 공백 문자 및 유효 공백 문자 처리
+                  href: white-space-and-significant-white-space-handling-when-loading-the-dom.md
+                - name: DOM에서 특성 액세스
+                  href: accessing-attributes-in-the-dom.md
+                - name: DOM에 엔터티 선언 및 엔터티 참조 읽어오기
+                  href: reading-entity-declarations-and-entity-references-into-the-dom.md
+                - name: 엔터티 참조 유지
+                  href: entity-references-are-preserved.md
+                - name: 유지되지 않고 확장되는 엔터티 참조
+                  href: entity-references-are-expanded-and-not-preserved.md
+            - name: XML 문서에 노드 삽입
+              href: inserting-nodes-into-an-xml-document.md
+              items:
+                - name: DOM에서 새 노드 만들기
+                  href: create-new-nodes-in-the-dom.md
+                  items:
+                    - name: DOM에서 요소의 새 특성 만들기
+                      href: creating-new-attributes-for-elements-in-the-dom.md
+                    - name: 새 노드를 만들 때 XML 요소 및 특성 이름 확인
+                      href: xml-element-and-attribute-name-verification-when-creating-new-nodes.md
+                    - name: 새 엔터티 참조 만들기
+                      href: creating-new-entity-references.md
+                    - name: 요소 및 특성이 있는 새 노드의 엔터티 참조 확장에 대한 네임스페이스의 영향
+                      href: namespace-affect-on-entity-ref-expansion-for-new-nodes.md
+                - name: 기존 노드 복사
+                  href: copy-existing-nodes.md
+                - name: 한 문서에서 다른 문서로 기존 노드 복사
+                  href: copying-existing-nodes-from-one-document-to-another.md
+                - name: 문서 조각 복사
+                  href: copying-document-fragments.md
+            - name: 'XML 문서에서 노드, 내용 및 값 제거'
+              href: removing-nodes-content-and-values-from-an-xml-document.md
+              items:
+                - name: DOM에서 노드 제거
+                  href: removing-nodes-from-the-dom.md
+                - name: DOM의 요소 노드에서 특성 제거
+                  href: removing-attributes-from-an-element-node-in-the-dom.md
+                - name: DOM에서 노드 내용 제거
+                  href: removing-node-content-in-the-dom.md
+            - name: 'XML 문서에서 노드, 내용 및 값 수정'
+              href: modifying-nodes-content-and-values-in-an-xml-document.md
+            - name: DOM에서의 XML 문서 유효성 검사
+              href: validating-an-xml-document-in-the-dom.md
+            - name: 문서 작성 및 저장
+              href: saving-and-writing-a-document.md
+            - name: XPath 탐색을 사용하여 노드 선택
+              href: select-nodes-using-xpath-navigation.md
+            - name: 외부 리소스 확인
+              href: resolving-external-resources.md
+            - name: XmlNameTable을 사용한 개체 비교
+              href: object-comparison-using-xmlnametable.md
+            - name: NamedNodeMap 및 NodeList의 노드 컬렉션
+              href: node-collections-in-namednodemaps-and-nodelists.md
+              items:
+                - name: 이름 또는 인덱스별로 정렬되지 않은 노드 검색
+                  href: unordered-node-retrieval-by-name-or-index.md
+                - name: 인덱스별로 정렬된 노드 검색
+                  href: ordered-node-retrieval-by-index.md
+            - name: NodeList 및 NamedNodeMap에 대한 동적 업데이트
+              href: dynamic-updates-to-nodelists-and-namednodemaps.md
+            - name: DOM의 네임스페이스 지원
+              href: namespace-support-in-the-dom.md
+              items:
+                - name: DOM의 네임스페이스 및 DTD
+                  href: namespaces-and-dtds-in-the-dom.md
+                - name: XML 문서에서 네임스페이스 선언 변경
+                  href: changing-namespace-declarations-in-an-xml-document.md
+                - name: 네임스페이스 접두사 속성 변경
+                  href: changing-namespace-prefix-properties.md
+            - name: XmlNodeChangedEventArgs를 사용한 XML 문서의 이벤트 처리
+              href: event-handling-in-an-xml-document-using-the-xmlnodechangedeventargs.md
+            - name: DOM 확장
+              href: extending-the-dom.md
+        - name: XPath 데이터 모델을 사용하여 XML 데이터 처리
+          href: process-xml-data-using-the-xpath-data-model.md
+          items:
+            - name: XPathDocument 및 XmlDocument를 사용하여 XML 데이터 읽기
+              href: reading-xml-data-using-xpathdocument-and-xmldocument.md
+            - name: 'XPathNavigator를 사용하여 XML 데이터 선택, 평가 및 일치시키기'
+              href: selecting-evaluating-and-matching-xml-data-using-xpathnavigator.md
+              items:
+                - name: XPathNavigator를 사용하여 XML 데이터 선택
+                  href: select-xml-data-using-xpathnavigator.md
+                - name: XPathNavigator를 사용하여 XPath 식 계산
+                  href: evaluate-xpath-expressions-using-xpathnavigator.md
+                - name: XPathNavigator를 사용하여 노드 일치시키기
+                  href: matching-nodes-using-xpathnavigator.md
+                - name: XPath 쿼리에서 인식하는 노드 형식
+                  href: node-types-recognized-with-xpath-queries.md
+                - name: XPath 쿼리 및 네임스페이스
+                  href: xpath-queries-and-namespaces.md
+                - name: 컴파일된 XPath 식
+                  href: compiled-xpath-expressions.md
+                - name: XPath 네임스페이스 탐색
+                  href: xpath-namespace-navigation.md
+            - name: XPathNavigator를 사용하여 XML 데이터 액세스
+              href: accessing-xml-data-using-xpathnavigator.md
+              items:
+                - name: XPathNavigator를 사용하여 노드 집합 탐색
+                  href: node-set-navigation-using-xpathnavigator.md
+                - name: XPathNavigator를 사용하여 특성 및 네임스페이스 노드 탐색
+                  href: attribute-and-namespace-node-navigation-using-xpathnavigator.md
+                - name: XPathNavigator를 사용하여 XML 데이터 추출
+                  href: extract-xml-data-using-xpathnavigator.md
+                - name: XPathNavigator를 사용하여 강력한 형식의 XML 데이터 액세스
+                  href: accessing-strongly-typed-xml-data-using-xpathnavigator.md
+                - name: 사용자 정의 함수 및 변수
+                  href: user-defined-functions-and-variables.md
+            - name: XPathNavigator를 사용하여 XML 데이터 편집
+              href: editing-xml-data-using-xpathnavigator.md
+              items:
+                - name: XPathNavigator를 사용하여 XML 데이터 삽입
+                  href: insert-xml-data-using-xpathnavigator.md
+                - name: XPathNavigator를 사용하여 XML 데이터 수정
+                  href: modify-xml-data-using-xpathnavigator.md
+                - name: XPathNavigator를 사용하여 XML 데이터 제거
+                  href: remove-xml-data-using-xpathnavigator.md
+            - name: XPathNavigator를 사용하여 스키마 유효성 검사
+              href: schema-validation-using-xpathnavigator.md
+        - name: LINQ to XML을 사용하여 XML 데이터 처리
+          href: process-xml-data-using-linq-to-xml.md
+    - name: XSLT 변환
+      href: xslt-transformations.md
+      items:
+        - name: XslCompiledTransform 클래스 사용
+          href: using-the-xslcompiledtransform-class.md
+          items:
+            - name: XslCompiledTransform 클래스에 대한 입력
+              href: inputs-to-the-xslcompiledtransform-class.md
+            - name: XslCompiledTransform 클래스의 출력 옵션
+              href: output-options-on-the-xslcompiledtransform-class.md
+            - name: XSLT 처리 중 외부 리소스 확인
+              href: resolving-external-resources-during-xslt-processing.md
+            - name: XSLT 스타일시트 확장
+              href: extending-xslt-style-sheets.md
+              items:
+                - name: XSLT 확장명 개체
+                  href: xslt-extension-objects.md
+                - name: XSLT 매개 변수
+                  href: xslt-parameters.md
+                - name: 'msxsl:script를 사용하는 스크립트 블록'
+                  href: script-blocks-using-msxsl-script.md
+            - name: 복구할 수 있는 XSLT 오류
+              href: recoverable-xslt-errors.md
+            - name: '방법: 노드 조각 변환'
+              href: how-to-transform-a-node-fragment.md
+        - name: XslTransform 클래스에서 마이그레이션
+          href: migrating-from-the-xsltransform-class.md
+          items:
+            - name: '방법: XslTransform 코드 마이그레이션'
+              href: how-to-migrate-your-xsltransform-code.md
+        - name: XSLT 보안 고려 사항
+          href: xslt-security-considerations.md
+        - name: XSLT 컴파일러(xsltc.exe)
+          href: xslt-compiler-xsltc-exe.md
+          items:
+            - name: '방법: 어셈블리를 사용하여 XSLT 변형 수행'
+              href: how-to-perform-an-xslt-transformation-by-using-an-assembly.md
+        - name: XslTransform 클래스를 사용하여 XSLT 변형
+          href: xslt-transformations-with-the-xsltransform-class.md
+          items:
+            - name: XslTransform 클래스에서 임의 동작 구현
+              href: implementation-of-discretionary-behaviors-in-the-xsltransform-class.md
+            - name: XslTransform 클래스의 XSLT 프로세서 구현
+              href: xsltransform-class-implements-the-xslt-processor.md
+              items:
+                - name: XslTransform의 출력
+                  href: outputs-from-an-xsltransform.md
+                - name: 여러 저장소에서의 XSLT 변환
+                  href: xslt-transformations-over-different-stores.md
+                - name: 외부 XSLT 스타일시트 및 문서 확인
+                  href: resolving-external-xslt-style-sheets-and-documents.md
+                - name: 스타일시트 매개 변수 및 확장 개체의 XsltArgumentList
+                  href: xsltargumentlist-for-style-sheet-parameters-and-extension-objects.md
+                - name: '<msxsl:script>를 사용한 XSLT 스타일시트 스크립팅'
+                  href: xslt-stylesheet-scripting-using-msxsl-script.md
+                - name: 'msxsl:node-set() 함수에 대한 지원'
+                  href: support-for-the-msxsl-node-set-function.md
+                - name: 변환 과정에서 노드 집합의 역할
+                  href: node-sets-in-transformations.md
+                - name: 변형의 결과 트리 조각
+                  href: result-tree-fragment-in-transformations.md
+            - name: 변환 과정에서 XPathNavigator의 역할
+              href: xpathnavigator-in-transformations.md
+            - name: 변형 과정에서 XPathNodeIterator의 역할
+              href: xpathnodeiterator-in-transformations.md
+            - name: XslTransform에 대한 XPathDocument 입력
+              href: xpathdocument-input-to-xsltransform.md
+            - name: XslTransform에 대한 XmlDataDocument 입력
+              href: xmldatadocument-input-to-xsltransform.md
+            - name: XslTransform에 대한 XmlDocument 입력
+              href: xmldocument-input-to-xsltransform.md
+    - name: XML 스키마 작업
+      href: working-with-xml-schemas.md
+      items:
+        - name: XML SOM(스키마 개체 모델)
+          href: xml-schema-object-model-som.md
+          items:
+            - name: XML 스키마 개체 모델 개요
+              href: xml-schema-object-model-overview.md
+            - name: XML 스키마 읽기 및 쓰기
+              href: reading-and-writing-xml-schemas.md
+            - name: XML 스키마 빌드
+              href: building-xml-schemas.md
+            - name: XML 스키마 통과
+              href: traversing-xml-schemas.md
+            - name: XML 스키마 편집
+              href: editing-xml-schemas.md
+            - name: XML 스키마 포함하기 또는 가져오기
+              href: including-or-importing-xml-schemas.md
+        - name: 스키마 컴파일을 위한 XmlSchemaSet
+          href: xmlschemaset-for-schema-compilation.md
+          items:
+            - name: Post-Schema Compilation Infoset
+              href: post-schema-compilation-infoset.md
+            - name: XmlSchemaSet을 사용하여 XSD(XML 스키마) 유효성 검사
+              href: xml-schema-xsd-validation-with-xmlschemaset.md
+            - name: XmlSchemaCollection 스키마 컴파일
+              href: xmlschemacollection-schema-compilation.md
+              items:
+                - name: XmlSchemaCollection을 사용하여 XDR 유효성 검사
+                  href: xdr-validation-with-xmlschemacollection.md
+                - name: XmlSchemaCollection을 사용하여 XSD(XML 스키마) 유효성 검사
+                  href: xml-schema-xsd-validation-with-xmlschemacollection.md
+        - name: XmlSchemaValidator 푸시 기반 유효성 검사
+          href: xmlschemavalidator-push-based-validation.md
+        - name: XML 스키마 유추
+          href: inferring-an-xml-schema.md
+          items:
+            - name: XML 문서에서 스키마 유추
+              href: inferring-schemas-from-xml-documents.md
+            - name: 스키마 노드 형식 및 구조 유추 규칙
+              href: rules-for-inferring-schema-node-types-and-structure.md
+            - name: 단순 형식 유추 규칙
+              href: rules-for-inferring-simple-types.md
+    - name: XML과 관계형 데이터 및 ADO.NET의 통합
+      href: xml-integration-with-relational-data-and-adonet.md
+    - name: XML 문서의 네임스페이스 관리
+      href: managing-namespaces-in-an-xml-document.md
+    - name: System.Xml 클래스의 형식 지원
+      href: type-support-in-the-system-xml-classes.md
+      items:
+        - name: CLR 형식에 XML 데이터 형식 매핑
+          href: mapping-xml-data-types-to-clr-types.md
+        - name: XML 형식 지원 구현 참고 사항
+          href: xml-type-support-implementation-notes.md
+        - name: XML 데이터 형식 변환
+          href: conversion-of-xml-data-types.md
+          items:
+            - name: 문자열을 .NET Framework 데이터 형식으로 변환
+              href: converting-strings-to-dotnet-data-types.md
+            - name: .NET Framework 형식을 문자열로 변환
+              href: converting-dotnet-types-to-strings.md

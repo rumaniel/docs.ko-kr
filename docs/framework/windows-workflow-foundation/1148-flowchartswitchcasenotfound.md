@@ -3,11 +3,11 @@ title: 1148 - FlowchartSwitchCaseNotFound
 ms.date: 03/30/2017
 ms.assetid: 9ee7fcee-e040-4306-968e-ed840a1cb00c
 ms.openlocfilehash: 7e96b5b7652d404e6fdbe2c04c6a4069ca78f20f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33511961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009918"
 ---
 # <a name="1148---flowchartswitchcasenotfound"></a>1148 - FlowchartSwitchCaseNotFound
 ## <a name="properties"></a>속성  
@@ -17,7 +17,7 @@ ms.locfileid: "33511961"
 |ID|1148|  
 |키워드|WFActivities|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/디버그|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/디버그|  
   
 ## <a name="description"></a>설명  
  Flowchart 스위치에서 일치 사례 또는 기본 사례를 찾을 수 있음을 나타냅니다. Flowchart 실행이 종료됩니다.  

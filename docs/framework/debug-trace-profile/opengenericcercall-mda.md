@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: da3e4ff3-2e67-4668-9720-fa776c97407e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 486c3c44b69c69a472b7405b6c14f9d27a29d756
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fa6ad656a5f762bf86d277d986bb087c97d7a78f
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33387522"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71052412"
 ---
 # <a name="opengenericcercall-mda"></a>openGenericCERCall MDA
 루트 메서드에서 제네릭 형식 변수를 사용하는 제약이 있는 실행 지역(CER) 그래프가 JIT 컴파일 또는 네이티브 이미지 생성 시에 처리되며 제네릭 형식 변수 중 하나 이상의 개체 참조 형식임을 경고하기 위해 `openGenericCERCall` 관리 디버깅 도우미가 활성화됩니다.  
   
 ## <a name="symptoms"></a>증상  
- 스레드가 중단되거나 응용 프로그램 도메인이 언로드되면 CER 코드가 실행되지 않습니다.  
+ 스레드가 중단되거나 애플리케이션 도메인이 언로드되면 CER 코드가 실행되지 않습니다.  
   
 ## <a name="cause"></a>원인  
  결과적으로 생성되는 코드는 공유되며 각 개체 참조 형식 변수는 임의 개체 참조 형식일 수 있으므로 JIT 컴파일 시 개체 참조 형식을 포함하는 인스턴스는 대표일 뿐입니다. 따라서 런타임 리소스를 미리 준비하지 못할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.locfileid: "33387522"
   
  `declaringType name="OpenGenericCERCall"`  
   
-## <a name="configuration"></a>구성  
+## <a name="configuration"></a>구성하기  
   
 ```xml  
 <mdaConfig>  
@@ -64,7 +64,7 @@ ms.locfileid: "33387522"
 ## <a name="example"></a>예제  
  CER 코드가 실행되지 않습니다.  
   
-```  
+```csharp
 using System;  
 using System.Collections.Generic;  
 using System.Runtime.CompilerServices;  
@@ -106,7 +106,8 @@ class Program
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>  
- <xref:System.Runtime.ConstrainedExecution>  
- [관리 디버깅 도우미를 사용하여 오류 진단](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
+- <xref:System.Runtime.ConstrainedExecution>
+- [관리 디버깅 도우미를 사용하여 오류 진단](diagnosing-errors-with-managed-debugging-assistants.md)

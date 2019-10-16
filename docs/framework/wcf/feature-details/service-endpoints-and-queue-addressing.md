@@ -2,12 +2,12 @@
 title: 서비스 엔드포인트 및 큐 주소 지정
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 71ebf29e51118a7f555f3e79598e49ffd65e0c63
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: b31c000fa15b2651a965deff0b4deecf681b992b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196306"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586173"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>서비스 엔드포인트 및 큐 주소 지정
 이 항목에서는 클라이언트가 큐에서 읽는 서비스에 주소를 지정하는 방법 및 서비스 엔드포인트가 큐에 매핑되는 방법을 설명합니다. 참고로, 다음 그림과 클래식 Windows Communication Foundation (WCF) 응용 프로그램 배포를 대기 합니다.  
@@ -34,26 +34,26 @@ ms.locfileid: "47196306"
   
  다음은 각 문자에 대한 설명입니다.  
   
--   \<*호스트 이름*> 대상 큐를 호스팅하는 컴퓨터의 이름입니다.  
+- \<*호스트 이름*> 대상 큐를 호스팅하는 컴퓨터의 이름입니다.  
   
--   [private]는 선택 사항입니다. 개인 큐인 대상 큐에 주소를 지정할 때 사용됩니다. 공개 큐에 주소를 지정하려면 private를 지정하지 않아야 합니다. MSMQ 경로 달리 있습니다는 "$" WCF URI 형태로 note 합니다.  
+- [private]는 선택 사항입니다. 개인 큐인 대상 큐에 주소를 지정할 때 사용됩니다. 공개 큐에 주소를 지정하려면 private를 지정하지 않아야 합니다. MSMQ 경로 달리 있습니다는 "$" WCF URI 형태로 note 합니다.  
   
--   \<*큐 이름*> 큐의 이름입니다. 큐 이름은 하위 큐를 참조할 수도 있습니다. 따라서 \< *큐 이름*> = \< *큐 이름*> [; *하위 큐 이름*].  
+- \<*큐 이름*> 큐의 이름입니다. 큐 이름은 하위 큐를 참조할 수도 있습니다. Thus, \<*queue-name*> = \<*name-of-queue*>[;*sub-queue-name*].  
   
- 예제 1: abc atadatum.com 컴퓨터에서 호스팅된 개인 큐 PurchaseOrders에 주소를 지정하는 경우 URI는 net.msmq://abc.adatum.com/private/PurchaseOrders입니다.  
+ 예 1: 개인 큐 PurchaseOrders abc atadatum.com 컴퓨터에서 호스트를 해결 하기 위해 URI net.msmq://abc.adatum.com/private/PurchaseOrders 것입니다.  
   
- 예제 2: def atadatum.com 컴퓨터에서 호스팅된 공개 큐 AccountsPayable에 주소를 지정하는 경우 URI는 net.msmq://def.adatum.com/AccountsPayable입니다.  
+ Example2: 공개 큐 AccountsPayable def atadatum.com 컴퓨터에서 호스트를 해결 하기 위해 URI net.msmq://def.adatum.com/AccountsPayable 것입니다.  
   
  큐 주소는 메시지를 읽을 수신기에 의해 수신 대기 URI로 사용됩니다. 즉, 큐 주소는 TCP 소켓의 수신 대기 포트에 해당합니다.  
   
- 큐에서 읽는 엔드포인트에서는 ServiceHost를 열 때 이전에 지정한 같은 체계를 사용하여 큐의 주소를 지정해야 합니다. 예제를 보려면 [Net MSMQ 바인딩](../../../../docs/framework/wcf/samples/net-msmq-binding.md) 하 고 [메시지 큐 통합 바인딩 샘플](https://msdn.microsoft.com/library/997d11cb-f2c5-4ba0-9209-92843d4d0e1a)합니다.  
+ 큐에서 읽는 엔드포인트에서는 ServiceHost를 열 때 이전에 지정한 같은 체계를 사용하여 큐의 주소를 지정해야 합니다. 예제를 보려면 [Net MSMQ 바인딩](../../../../docs/framework/wcf/samples/net-msmq-binding.md)합니다.  
   
 ### <a name="multiple-contracts-in-a-queue"></a>큐의 여러 계약  
  큐의 메시지는 서로 다른 계약을 구현할 수 있습니다. 이 경우 다음 중 하나가 충족되어야 모든 메시지를 읽고 처리할 수 있습니다.  
   
--   모든 계약을 구현하는 서비스 엔드포인트를 지정합니다. 이는 권장되는 방법입니다.  
+- 모든 계약을 구현하는 서비스 엔드포인트를 지정합니다. 이는 권장되는 방법입니다.  
   
--   서로 다른 계약으로 여러 엔드포인트를 지정하지만 모든 엔드포인트가 같은 `NetMsmqBinding` 개체를 사용해야 합니다. ServiceModel에서 디스패치 논리는 디스패치용 전송 채널에서 메시지를 읽는 메시지 펌프를 사용하므로, 서로 다른 엔드포인트로 계약 기반 메시지를 역 멀티플렉싱합니다. 메시지 펌프는 수신 대기 URI/바인딩 쌍에 대해 만들어집니다. 큐 주소는 대기 중인 수신기에 의해 수신 대기 URI로 사용됩니다. 모든 엔드포인트가 같은 바인딩 개체를 사용하는 경우 단일 메시지 펌프가 메시지를 읽고 계약을 기반으로 관련 엔드포인트에 역 멀티플렉싱하는 데 사용됩니다.  
+- 서로 다른 계약으로 여러 엔드포인트를 지정하지만 모든 엔드포인트가 같은 `NetMsmqBinding` 개체를 사용해야 합니다. ServiceModel에서 디스패치 논리는 디스패치용 전송 채널에서 메시지를 읽는 메시지 펌프를 사용하므로, 서로 다른 엔드포인트로 계약 기반 메시지를 역 멀티플렉싱합니다. 메시지 펌프는 수신 대기 URI/바인딩 쌍에 대해 만들어집니다. 큐 주소는 대기 중인 수신기에 의해 수신 대기 URI로 사용됩니다. 모든 엔드포인트가 같은 바인딩 개체를 사용하는 경우 단일 메시지 펌프가 메시지를 읽고 계약을 기반으로 관련 엔드포인트에 역 멀티플렉싱하는 데 사용됩니다.  
   
 ### <a name="srmp-messaging"></a>SRMP 메시징  
  앞에서 설명한 대로 큐 간 전송에 SRMP 프로토콜을 사용할 수 있습니다. 일반적으로 이 방법은 HTTP 전송이 전송 큐와 대상 큐 간에 메시지를 전송할 때 사용됩니다.  
@@ -73,13 +73,13 @@ ms.locfileid: "47196306"
 |WCF URI 기반 큐 주소|Active Directory 속성 사용|큐 전송 프로토콜 속성|결과 MSMQ 형식 이름|  
 |----------------------------------|-----------------------------------|--------------------------------------|---------------------------------|  
 |Net.msmq://\<machine-name>/private/abc|False(기본값)|Native(기본값)|DIRECT=OS:machine-name\private$\abc|  
-|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT =http://machine/msmq/private$/ abc|  
+|Net.msmq://\<machine-name>/private/abc|False|SRMP|DIRECT=http://machine/msmq/private $/abc|  
 |Net.msmq://\<machine-name>/private/abc|True|네이티브|PUBLIC=some-guid(큐의 GUID)|  
   
 ### <a name="reading-messages-from-the-dead-letter-queue-or-the-poison-message-queue"></a>배달 못 한 편지 큐 또는 포이즌 메시지 큐에서 메시지 읽기  
  대상 큐의 하위 큐인 포이즌 메시지 큐에서 메시지를 읽으려면 하위 큐의 주소가 있는 `ServiceHost`를 엽니다.  
   
- 예제: 로컬 컴퓨터에 있는 개인 큐 PurchaseOrders의 포이즌 메시지 큐에서 읽는 서비스는 net.msmq://localhost/private/PurchaseOrders;poison 주소를 지정합니다.  
+ 예제: 로컬 컴퓨터에서 개인 큐 PurchaseOrders의 포이즌 메시지 큐에서 읽는 서비스는 //localhost/private/purchaseorders; poison 주소입니다.  
   
  시스템 트랜잭션 배달 못 한 편지 큐에서 메시지를 읽으려면 URI가 net.msmq://localhost/system$;DeadXact 형식이어야 합니다.  
   
@@ -92,7 +92,7 @@ ms.locfileid: "47196306"
  WCF 서비스는 받은 모든 메시지에 현재 수신 중인 특정 큐로 주소가 지정 있는지 확인 합니다. 메시지의 대상 큐가 메시지가 있는 큐와 일치하지 않으면 서비스가 메시지를 처리하지 않습니다. 이 경우 배달 못 한 편지 큐의 메시지를 다른 곳으로 배달해야 하므로 배달 못 한 편지 큐를 수신하는 서비스가 주소를 지정해야 하는 문제가 있습니다. 배달 못 한 편지 큐에서 또는 포이즌 큐에서 메시지를 읽으려면 `ServiceBehavior` 매개 변수를 포함하는 <xref:System.ServiceModel.AddressFilterMode.Any>를 사용해야 합니다. 예를 들어 참조 [배달 못 한 편지 큐](../../../../docs/framework/wcf/samples/dead-letter-queues.md)합니다.  
   
 ## <a name="msmqintegrationbinding-and-service-addressing"></a>MsmqIntegrationBinding 및 서비스 주소 지정  
- `MsmqIntegrationBinding`은 기존 MSMQ 응용 프로그램과의 통신에 사용됩니다. 기존 MSMQ 응용 프로그램과 상호 운용을 쉽게 하려면 WCF는 유일한 형식 이름 주소 지정을 지원 합니다. 따라서 이 바인딩을 사용하여 보낸 메시지는 URI 체계를 따라야 합니다.  
+ `MsmqIntegrationBinding`은 기존 MSMQ 애플리케이션과의 통신에 사용됩니다. 기존 MSMQ 응용 프로그램과 상호 운용을 쉽게 하려면 WCF는 유일한 형식 이름 주소 지정을 지원 합니다. 따라서 이 바인딩을 사용하여 보낸 메시지는 URI 체계를 따라야 합니다.  
   
  msmq.formatname:\<*MSMQ-format-name*>>  
   
@@ -100,9 +100,10 @@ ms.locfileid: "47196306"
   
  `MsmqIntegrationBinding`을 사용하여 큐에서 메시지를 받을 때 직접 형식 이름, 공개 및 개인 형식 이름만 사용할 수 있습니다(Active Directory 통합 필요). 그러나 직접 형식 이름을 사용하는 것이 좋습니다. 예를 들어 [!INCLUDE[wv](../../../../includes/wv-md.md)]에서 다른 형식 이름을 사용하면 시스템이 직접 형식 이름으로만 열 수 있는 하위 큐를 열려고 하므로 오류가 발생합니다.  
   
- `MsmqIntegrationBinding`을 사용하여 SRMP에 주소를 지정할 때 IIS(인터넷 정보 서비스)가 디스패치할 수 있도록 직접 형식 이름에 /msmq/를 추가하지 않아도 됩니다. 예를 들어: abc는 SRMP를 사용 하 여 프로토콜을 직접 대신 큐 주소를 지정할 때 =http://adatum.com/msmq/private$/abc를 사용 해야 DIRECT =http://adatum.com/private$입니다.  
+ `MsmqIntegrationBinding`을 사용하여 SRMP에 주소를 지정할 때 IIS(인터넷 정보 서비스)가 디스패치할 수 있도록 직접 형식 이름에 /msmq/를 추가하지 않아도 됩니다. 예를 들어: Abc는 SRMP를 사용 하 여 프로토콜을 직접 대신 큐 주소를 지정할 때 =http://adatum.com/msmq/private $/abc를 사용 해야 DIRECT =http://adatum.com/private $입니다.  
   
  `MsmqIntegrationBinding`과 함께 net.msmq:// 주소 지정을 사용할 수 없습니다. 때문에 `MsmqIntegrationBinding` 자유 형식의 MSMQ 형식 이름 주소 지정을 지원 합니다.이 바인딩을 사용 하 여 MSMQ의 멀티 캐스트 및 메일 그룹 기능을 사용 하는 WCF 서비스를 사용할 수 있습니다. 한 가지 예외의 경우는 `CustomDeadLetterQueue`을 사용할 때 `MsmqIntegrationBinding`를 지정하는 것입니다. 이 경우 net.msmq:// 형식이어야 하며, `NetMsmqBinding`을 사용하여 지정하는 방법과 비슷합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [대기 중인 응용 프로그램 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)
+## <a name="see-also"></a>참고자료
+
+- [대기 중인 애플리케이션 웹 호스팅](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

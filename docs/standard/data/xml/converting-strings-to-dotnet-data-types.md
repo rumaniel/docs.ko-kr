@@ -8,15 +8,15 @@ dev_langs:
 ms.assetid: 65455ef3-9120-412c-819b-d0f59f88ac09
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bc07779f03784cd32524e1b1189faae343710a05
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 31f277d11cba8191c326d56f017b8acc6503c6b7
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43865789"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69968719"
 ---
 # <a name="converting-strings-to-net-framework-data-types"></a>문자열을 .NET Framework 데이터 형식으로 변환
-문자열을 .NET Framework 데이터 형식으로 변환하려면 응용 프로그램 요구 사항에 적합한 **XmlConvert** 메서드를 사용합니다. **XmlConvert** 클래스에서 사용 가능한 변환 메서드의 전체 목록은 <xref:System.Xml.XmlConvert>를 참조하세요.  
+문자열을 .NET Framework 데이터 형식으로 변환하려면 애플리케이션 요구 사항에 적합한 **XmlConvert** 메서드를 사용합니다. **XmlConvert** 클래스에서 사용 가능한 변환 메서드의 전체 목록은 <xref:System.Xml.XmlConvert>를 참조하세요.  
   
  **ToString** 메서드에서 반환된 문자열은 전달된 데이터를 문자열 버전으로 표시한 것입니다. 또한 일부 .NET Framework 형식에서는 **XmlConvert** 클래스를 사용하여 변환을 수행하지만, 이러한 형식은 **System.Convert** 클래스에 있는 메서드를 사용하지 않습니다. **XmlConvert** 클래스는 XSD(XML 스키마) 데이터 형식 사양을 준수하며, **XmlConvert**가 매핑할 수 있는 데이터 형식을 갖습니다.  
   
@@ -33,7 +33,7 @@ ms.locfileid: "43865789"
 |Timespan|형식은 PnYnMnTnHnMnS입니다. 즉, `P2Y10M15DT10H30M20S`는 2년 10개월 15일 10시간 30분 20초의 지속 시간을 나타냅니다.|  
   
 > [!NOTE]
->  **ToString** 메서드를 사용하여 이 테이블에 나열된 특정 .NET Framework 형식을 변환하는 경우, 반환되는 문자열의 형식은 기본 형식이 아니라 XSD(XML 스키마) 문자열 형식입니다.  
+> **ToString** 메서드를 사용하여 이 테이블에 나열된 특정 .NET Framework 형식을 변환하는 경우, 반환되는 문자열의 형식은 기본 형식이 아니라 XSD(XML 스키마) 문자열 형식입니다.  
   
  **DateTime** 및 **Timespan**의 값 형식은 다릅니다. 즉, **DateTime**은 순간적인 시각을 나타내며 **TimeSpan**은 시간 간격을 나타냅니다. **DateTime** 및 **Timespan** 형식은 XSD(XML 스키마) 데이터 형식 사양에 지정되어 있습니다. 예:  
   
@@ -135,5 +135,5 @@ writer.WriteElementString("Infinity", XmlConvert.ToString(value));
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 데이터 형식 변환](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)  
+- [XML 데이터 형식 변환](../../../../docs/standard/data/xml/conversion-of-xml-data-types.md)
 - [.NET Framework 형식을 문자열로 변환](../../../../docs/standard/data/xml/converting-dotnet-types-to-strings.md)

@@ -6,46 +6,46 @@ ms.author: wiwagn
 ms.date: 05/22/2017
 ms.technology: dotnet-standard
 ms.assetid: bbfe6465-329d-4982-869d-472e7ef85d93
-ms.openlocfilehash: f9b4e3d885725afc4181256e02e3b174318e3ece
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a83253e37d3afde9ed8266ec1195c9726f6462cc
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47232848"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291599"
 ---
 # <a name="tour-of-net"></a>.NET 둘러보기
 
-.NET은 범용 개발 플랫폼입니다. 여러 플랫폼에서 다양한 시나리오를 사용할 수 있는 여러 프로그래밍 언어 지원, 비동기 및 동시 실행 프로그래밍 모델 및 기본 상호 운용성과 같은 여러 중요한 특징이 있습니다.
+.NET은 범용 개발 플랫폼입니다. 여러 플랫폼에서 다양한 시나리오가 가능하게 하는 다양한 프로그래밍 언어 지원, 비동기 및 동시 실행 프로그래밍 모델 및 기본 상호 운용성과 같은 여러 중요한 특징이 있습니다.
 
-이 문서에서는 .NET의 몇 가지 주요 기능에 대해 살펴볼 수 있습니다. .NET의 구조적인 부분과 사용 목적에 대해 살펴보려면 [.NET 아키텍처 구성 요소](components.md) 항목을 참조하세요.
+이 문서에서는 .NET의 몇 가지 주요 기능을 살펴볼 수 있습니다. .NET의 구조와 사용 목적은 [.NET 아키텍처 구성 요소](components.md) 항목을 참조하세요.
 
 ## <a name="how-to-run-the-code-samples"></a>코드 샘플을 실행하는 방법
 
-코드 샘플을 실행하도록 개발 환경을 설정하는 방법을 알아보려면 [시작](get-started.md) 항목을 참조하세요. 이 페이지의 코드 샘플을 복사하여 샘플을 실행할 환경에 붙여넣으세요. 
+코드 샘플을 실행하기 위한 개발 환경 설정 방법은 [시작](get-started.md) 항목을 참조하세요. 이 페이지의 코드 샘플을 복사하여 샘플을 실행할 환경에 붙여넣으세요. 
 
 ## <a name="programming-languages"></a>프로그래밍 언어
 
 .NET은 여러 프로그래밍 언어를 지원합니다. .NET 구현은 무엇보다 언어와 관련이 없는 런타임과 언어 상호 운용성을 지정하는 [CLI(공용 언어 인프라)](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/)를 구현합니다. 즉 어떤 .NET 언어를 선택해도 .NET에서 앱과 서비스를 빌드할 수 있습니다.
 
-Microsoft는 C#, F# 및 VB(Visual Basic)라는 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
+Microsoft에서는 C#과 F#, VB(Visual Basic) 이 세 가지 .NET 언어를 적극적으로 개발하고 지원합니다. 
 
-* C#은 C 스타일 언어의 표현력과 우아함은 그대로 유지하면서 간단하고 형식이 안전한 개체 지향 언어입니다. C 및 이와 비슷한 언어에 익숙한 사용자라면 누구나 거의 문제 없이 C#을 사용할 수 있을 것입니다. C#에 대한 자세한 내용을 보려면 [C# 가이드](../csharp/index.md)를 참조하세요.
+* C#은 C 스타일 언어의 표현력과 우아함은 그대로 유지하면서 간단하고 형식이 안전한 개체 지향 언어입니다. C나 이와 비슷한 언어에 익숙한 사용자라면 누구나 거의 문제 없이 C#을 사용할 수 있을 것입니다. C#에 대한 자세한 내용은 [C# 가이드](../csharp/index.md)를 참조하세요.
 
-* F#은 일반적인 개체 지향 및 명령형 프로그래밍도 지원하는 플랫폼 간 기능 우선 프로그래밍 언어입니다. F#에 대한 자세한 내용을 보려면 [F# 가이드](../fsharp/index.md)를 참조하세요.
+* F#은 일반적인 개체 지향 프로그래밍과 명령형 프로그래밍을 지원하며 다양한 플랫폼에서 사용할 수 있는 함수 우선 프로그래밍 언어입니다. F#에 대한 자세한 내용을 보려면 [F# 가이드](../fsharp/index.md)를 참조하세요.
 
-* Visual Basic은 .NET에서 실행되는 다양한 앱을 빌드하는 데 사용할 수 있는 배우기 쉬운 언어입니다. .NET 언어 중에서 VB 구문이 일반적인 인간 언어와 가장 유사하여 소프트웨어 개발이 처음인 사람도 쉽게 배울 수 있습니다.
+* Visual Basic은 .NET에서 실행되는 다양한 앱을 만들 수 있는 배우기 쉬운 언어입니다. .NET 언어 중에서 VB 구문이 일반적인 인간 언어와 가장 유사하여 소프트웨어를 처음 개발하는 사람도 쉽게 배울 수 있습니다.
 
 ## <a name="automatic-memory-management"></a>자동 메모리 관리
 
-.NET에서는 [GC(가비지 수집)](garbagecollection/index.md)를 사용하여 프로그램에 대한 자동 메모리 관리를 제공합니다. GC는 메모리 관리에 대해 지연 방식으로 작동하며 메모리의 즉각적인 수집보다 앱 처리량을 우선합니다. .NET GC에 대한 자세한 내용을 살펴보려면 [GC(가비지 수집) 기본 사항](garbagecollection/fundamentals.md)을 확인하세요.
+.NET에서는 [GC(가비지 수집)](garbagecollection/index.md)를 사용하여 프로그램의 메모리를 자동으로 관리합니다. GC는 메모리 관리를 지연하는 방식으로 작동하며 메모리를 즉각적으로 수집하기보다는 앱의 처리량을 우선합니다. .NET GC의 자세한 내용은 [GC(가비지 수집) 기본 사항](garbagecollection/fundamentals.md)을 확인하세요.
 
 다음 두 줄에서는 모두 메모리를 할당합니다.
 
 [!code-csharp[MemoryManagement](../../samples/csharp/snippets/tour/MemoryManagement.csx#L1-L2)]
 
-할당 취소는 가비지 수집기에서 예약 실행을 통해 메모리를 회수할 때 자동으로 수행되기 때문에 메모리 할당을 취소하는 유사 키워드가 없습니다.
+할당 취소는 가비지 수집기의 예약 실행을 통해 메모리를 회수할 때 자동으로 수행되기 때문에 메모리 할당을 취소하는 유사 키워드는 없습니다.
 
-가비지 수집기는 *메모리 안전성*을 보장해주는 서비스 중 하나입니다. 프로그램이 할당된 메모리에만 액세스하면 메모리가 안전합니다. 예를 들어 런타임은 앱이 배열의 범위를 넘어 할당되지 않은 메모리에 액세스하지 않도록 합니다.
+가비지 수집기는 *메모리 안전성*을 보장해주는 서비스 중 하나입니다. 프로그램이 할당된 메모리만 액세스하면 메모리가 안전합니다. 예를 들어 런타임은 앱이 배열의 범위를 넘어 할당되지 않은 메모리를 액세스하지 못하도록 합니다.
 
 다음 예제에서 런타임은 `InvalidIndexException` 예외를 throw하여 메모리 안전성을 강화합니다.
 
@@ -55,7 +55,7 @@ Microsoft는 C#, F# 및 VB(Visual Basic)라는 세 가지 .NET 언어를 적극�
 
 일부 개체는 *관리되지 않는 리소스*를 참조합니다. 관리되지 않는 리소스는 .NET 런타임에서 자동 유지 관리되지 않는 리소스입니다. 예를 들어, 파일 핸들은 관리되지 않는 리소스입니다. <xref:System.IO.FileStream> 개체는 관리되는 개체이지만, 관리되지 않는 파일 핸들을 참조합니다. <xref:System.IO.FileStream> 사용을 마치면 파일 핸들을 릴리스해야 합니다.
 
-.NET에서는 관리되지 않는 리소스를 참조하는 개체가 <xref:System.IDisposable> 인터페이스를 구현합니다. 개체 사용을 마치면 관리되지 않는 모든 리소스 릴리스를 담당하는 개체의 <xref:System.IDisposable.Dispose> 메서드를 호출합니다. 다음 예제와 같이 .NET 언어는 이러한 개체에 대해 편리한 `using` 구문을 제공합니다.
+.NET에서는 관리되지 않는 리소스를 참조하는 개체가 <xref:System.IDisposable> 인터페이스를 구현합니다. 개체 사용을 마치면 관리되지 않는 모든 리소스 릴리스를 담당하는 개체의 <xref:System.IDisposable.Dispose> 메서드를 호출합니다. 다음 예제와 같이 .NET 언어는 이러한 개체에 대해 편리한 [`using` 문](../csharp/language-reference/keywords/using.md)을 제공합니다.
 
 [!code-csharp[UnmanagedResources](../../samples/csharp/snippets/tour/UnmanagedResources.csx#L1-L6)]
 
@@ -119,13 +119,13 @@ LINQ는 데이터에 적용할 간단하고 선언적인 코드를 작성할 수
 
 ## <a name="native-interoperability"></a>기본 상호 운용성
 
-모든 운영 체제에는 시스템 서비스를 제공하는 API(응용 프로그래밍 인터페이스)가 있습니다. .NET은 이러한 API를 호출하는 여러 가지 방법을 제공합니다.
+모든 운영 체제에는 시스템 서비스를 제공하는 API(애플리케이션 프로그래밍 인터페이스)가 있습니다. .NET은 이러한 API를 호출하는 여러 가지 방법을 제공합니다.
 
 기본 상호 운용성은 대체로 “플랫폼 호출” 또는 줄여서 P/Invoke를 통해 수행되며, Linux 및 Windows 플랫폼에서 지원됩니다. 기본 상호 운용성을 수행하는 Windows 전용 방법은 “COM interop”라고 하며, 관리 코드에서 [COM 구성 요소](/cpp/atl/introduction-to-com)로 작업하는 데 사용됩니다. 이 방법은 P/Invoke 인프라를 기반으로 하지만 약간 다른 방식으로 작동합니다.
 
 Java 및 Objective-C에 대한 Mono(및 Xamarin)의 상호 운용성 지원은 대부분 비슷하게 작성되었습니다. 즉, 동일한 원칙을 사용합니다.
 
-기본 상호 운용성에 대한 자세한 내용은 [기본 상호 운용성](native-interop.md) 항목을 참조하세요.
+기본 상호 운용성에 대한 자세한 내용은 [기본 상호 운용성](native-interop/index.md) 문서를 참조하세요.
 
 ## <a name="unsafe-code"></a>안전하지 않은 코드
 

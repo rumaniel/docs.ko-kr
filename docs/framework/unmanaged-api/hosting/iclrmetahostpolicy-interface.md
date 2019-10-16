@@ -16,46 +16,47 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9a70cf0812f84908630f109ef06aafa4b4f7525
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e2735d3e0bbcb6326ca8ea87a3358824bca81108
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33434424"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69951183"
 ---
 # <a name="iclrmetahostpolicy-interface"></a>ICLRMetaHostPolicy 인터페이스
-제공 된 [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 메서드, 정책 조건에 따라 공용 언어 런타임 (CLR) 인터페이스에 대 한 포인터를 반환 하는 어셈블리, 버전 및 구성 파일을 관리 합니다.  
+정책 기준, 관리 되는 어셈블리, 버전 및 구성 파일을 기반으로 CLR (공용 언어 런타임) 인터페이스에 대 한 포인터를 반환 하는 [GetRequestedRuntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md) 메서드를 제공 합니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
-|[GetRequestedRuntime 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|기본 CLR 인터페이스 정책 조건에 따라, 어셈블리, 버전 및 구성 파일을 관리를 제공 합니다.|  
+|[GetRequestedRuntime 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)|정책 기준, 관리 되는 어셈블리, 버전 및 구성 파일을 기반으로 기본 CLR 인터페이스를 제공 합니다.|  
   
 ## <a name="remarks"></a>설명  
- 호출 하 여이 인터페이스에 대 한 참조를 가져올 수 있습니다는 [CLRCreateInstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) 다음 코드에 나와 있는 것 처럼 작동 합니다.  
+ 다음 코드와 같이 [Clrcreateinstance](../../../../docs/framework/unmanaged-api/hosting/clrcreateinstance-function.md) 함수를 호출 하 여이 인터페이스에 대 한 참조를 가져올 수 있습니다.  
   
-```  
+```cpp  
 ICLRMetaHostPolicy *pMetaHostPolicy = NULL;  
 HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHostPolicy,  
                    IID_ICLRMetaHostPolicy, (LPVOID*)&pMetaHostPolicy);  
 ```  
   
 > [!NOTE]
->  이 인터페이스를 로드 하거나 CLR, 하지만 기본 CLR 버전 설치 되거나 로드 된 사용 가능한 버전에 따라 반환 활성화 실제로 않습니다.  
+> 이 인터페이스는 실제로 CLR을 로드 하거나 활성화 하지 않지만 설치 또는 로드 된 사용 가능한 버전에 따라 기본 CLR 버전을 반환 합니다.  
   
- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] API를 호스팅하는 특정 요구 사항이 있는 호스트가 헤드 의도 하지 않은 저하 없이 기본 기능을 사용할 수 있도록 정책을 통합 합니다. 예를 들어 다양 한 방법으로 MSCorEE.dll 내보내기에 바인딩됩니다 특정 CLR 메서드 수 필요 하지 않지만 논리적으로 것입니다. [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 열거형은 대부분의 호스트에 공통적으로 적용 하는 바인딩 정책을 제공 합니다.  
+ .NET Framework 4 호스팅 API는 정책을 통합 하므로 특정 요구 사항이 있는 호스트에서 의도 하지 않은 페널티를 발생 시 키 지 않고 기본 기능을 사용할 수 있습니다. 예를 들어, 대부분의 Mscoree.dll 내보내기는 특정 CLR에 바인딩되고, 메서드는 논리적으로이를 요구 하지 않을 수 있습니다. [METAHOST_POLICY_FLAGS](../../../../docs/framework/unmanaged-api/hosting/metahost-policy-flags-enumeration.md) 열거형은 대부분의 호스트에 공통 되는 바인딩 정책을 제공 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MetaHost.h  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a>참고자료
+
+- [.NET Framework 4 및 4.5에 추가된 CLR 호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)
+- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)

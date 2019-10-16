@@ -17,56 +17,57 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f86cc83936dd8150ca6b3f28c9b6a624278e2b36
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: af933be9edc0d0fe7249f33800fe259ddc779aeb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406294"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738322"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 메서드
-새 프로세스를 시작 하거나 지정한 기존 프로세스에 연결 하는 현재 컴퓨터 및 런타임 구성의 컨텍스트 내에서 가능한 지 여부를 나타내는 HRESULT를 반환 합니다.  
+새 프로세스를 시작 하거나 지정한 기존 프로세스에 연결 하는 현재 컴퓨터 및 런타임 구성 컨텍스트 내에서 가능한 지 여부를 나타내는 HRESULT를 반환 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT CanLaunchOrAttach (  
     [in] DWORD      dwProcessId,  
     [in] BOOL       win32DebuggingEnabled  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `dwProcessId`  
  [in] 기존 프로세스의 ID입니다.  
   
  `win32DebuggingEnabled`  
- [in] 전달 `true` Win32 설정 된 상태로 실행 하려면 하거나 Win32 디버깅 그렇지 않으면 연결에 전달 하는 경우 `false`합니다.  
+ [in] 전달 `true` Win32 디버깅 사용을 시작 하려고 하거나 Win32 디버깅, 그렇지 않으면 연결을 전달 하면 `false`합니다.  
   
 ## <a name="return-value"></a>반환 값  
- 현재 컴퓨터 및 런타임 구성에 대 한 정보를 제공 합니다. 새 프로세스를 시작 하거나 지정된 된 프로세스에 연결 하는 디버깅 서비스 결정 하면 s_ok이 고가 가능 합니다. 가능한 HRESULT 값은 같습니다.  
+ 디버깅 서비스를 확인 하는 새 프로세스를 시작 하거나 지정된 된 프로세스에 연결 하는 경우 S_OK이 현재 컴퓨터 및 런타임 구성에 대 한 정보 지정 가능 합니다. 가능한 HRESULT 값은:  
   
--   S_OK  
+- S_OK  
   
--   CORDBG_E_DEBUGGING_NOT_POSSIBLE  
+- CORDBG_E_DEBUGGING_NOT_POSSIBLE  
   
--   CORDBG_E_KERNEL_DEBUGGER_PRESENT  
+- CORDBG_E_KERNEL_DEBUGGER_PRESENT  
   
--   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
+- CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>설명  
- 이 방법은 정보로 합니다. 인터페이스는 나타나도에서 시작 하는에서 반환 된 값에 상관 없이 프로세스에 연결 하거나 `CanLaunchOrAttach`합니다.  
+ 이 메서드는 순수 알림입니다. 인터페이스는 중지 되지 것입니다 하에서 시작 또는에서 반환 된 값에 관계 없이 프로세스에 연결 `CanLaunchOrAttach`합니다.  
   
- Win32 설정 된 상태로 시작 또는 Win32 디버깅 하도록 설정한 연결을 전달 하려는 경우 `true` 에 대 한 `win32DebuggingEnabled`합니다. 반환 된 HRESULT `CanLaunchOrAttach` 이 옵션을 사용 하는 경우 다를 수 있습니다.  
+ Win32 디버깅이 설정 된 시작 또는 Win32 디버깅 하도록 설정한 연결을 전달 하려는 경우 `true` 에 대 한 `win32DebuggingEnabled`합니다. 반환 된 HRESULT `CanLaunchOrAttach` 이 옵션을 사용 하는 경우 다를 수 있습니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorDebug 인터페이스](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)

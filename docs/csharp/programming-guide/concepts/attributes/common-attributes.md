@@ -2,55 +2,55 @@
 title: 공통 특성(C#)
 ms.date: 07/20/2015
 ms.assetid: 785a0526-6c0e-4599-8c61-ccdc88dd9965
-ms.openlocfilehash: 3b02b750ad4801177cb2ee4e2ef4bf51ecb2f20f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 7988dad410c6e51869ec9d7e40d94e874443a5f8
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43504397"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69595465"
 ---
 # <a name="common-attributes-c"></a>공통 특성(C#)
 이 항목에서는 C# 프로그램에서 가장 일반적으로 사용되는 특성을 설명합니다.  
   
--   [전역 특성](#Global)  
+- [전역 특성](#Global)  
   
--   [사용되지 않는 특성](#Obsolete)  
+- [사용되지 않는 특성](#Obsolete)  
   
--   [조건부 특성](#Conditional)  
+- [조건부 특성](#Conditional)  
   
--   [호출자 정보 특성](#CallerInfo)  
+- [호출자 정보 특성](#CallerInfo)  
   
-##  <a name="Global"></a> 전역 특성  
+## <a name="Global"></a> 전역 특성  
  대부분의 특성은 클래스나 메서드와 같은 특정 언어 요소에 적용되지만 일부 특성은 전체 어셈블리나 모듈에 적용되는 전역 특성입니다. 예를 들어 다음과 같이 <xref:System.Reflection.AssemblyVersionAttribute> 특성을 사용하여 버전 정보를 어셈블리에 포함할 수 있습니다.  
   
 ```csharp  
 [assembly: AssemblyVersion("1.0.0.0")]  
 ```  
   
- 전역 특성은 소스 코드에서 최상위 `using` 지시문 뒤와 형식, 모듈 또는 네임스페이스 선언 앞에 나타납니다. 전역 특성은 여러 소스 파일에 나타날 수 있지만 파일은 하나의 컴파일 패스에서 컴파일되어야 합니다. C# 프로젝트에서 전역 특성은 AssemblyInfo.cs 파일에 삽입됩니다.  
+ 전역 특성은 소스 코드에서 최상위 `using` 지시문 뒤 그리고 형식, 모듈 또는 네임스페이스 선언 앞에 나타납니다. 전역 특성은 여러 소스 파일에 나타날 수 있지만 파일은 하나의 컴파일 패스에서 컴파일되어야 합니다. C# 프로젝트에서 전역 특성은 AssemblyInfo.cs 파일에 삽입됩니다.  
   
  어셈블리 특성은 어셈블리에 대한 정보를 제공하는 값입니다. 어셈블리 특성은 다음 범주로 구분됩니다.  
   
--   어셈블리 ID 특성  
+- 어셈블리 ID 특성  
   
--   정보 특성  
+- 정보 특성  
   
--   어셈블리 매니페스트 특성  
+- 어셈블리 매니페스트 특성  
   
 ### <a name="assembly-identity-attributes"></a>어셈블리 ID 특성  
  name, version 및 culture의 세 가지 특성(해당하는 경우 강력한 이름 포함)이 어셈블리의 ID를 결정합니다. 이러한 특성은 어셈블리의 전체 이름을 구성하며 코드에서 어셈블리를 참조할 때 필요합니다. 특성을 사용하여 어셈블리의 버전 및 문화권을 설정할 수 있습니다. 그러나 이름 값은 어셈블리가 만들어질 때 어셈블리 매니페스트가 포함된 파일에 따라 컴파일러, [어셈블리 정보 대화 상자](/visualstudio/ide/reference/assembly-information-dialog-box)의 Visual Studio IDE 또는 어셈블리 링커(Al.exe)에서 설정됩니다. <xref:System.Reflection.AssemblyFlagsAttribute> 특성은 어셈블리의 여러 복사본이 공존할 수 있는지 여부를 지정합니다.  
   
- 다음 표에서는 ID 특성을 보여 줍니다.  
+ 다음 표에서는 ID 특성들을 보여 줍니다.  
   
 |특성|용도|  
 |---------------|-------------|  
-|<xref:System.Reflection.AssemblyName>|어셈블리의 ID를 완전히 설명합니다.|  
+|<xref:System.Reflection.AssemblyName>|어셈블리의 ID를 모두 설명합니다.|  
 |<xref:System.Reflection.AssemblyVersionAttribute>|어셈블리의 버전을 지정합니다.|  
 |<xref:System.Reflection.AssemblyCultureAttribute>|어셈블리에서 지원하는 문화권을 지정합니다.|  
-|<xref:System.Reflection.AssemblyFlagsAttribute>|어셈블리가 같은 컴퓨터, 같은 프로세스 또는 같은 응용 프로그램 도메인에서 Side-by-side 실행을 지원하는지 지정합니다.|  
+|<xref:System.Reflection.AssemblyFlagsAttribute>|어셈블리가 같은 컴퓨터, 같은 프로세스 또는 같은 애플리케이션 도메인에서 Side-by-side 실행을 지원하는지 지정합니다.|  
   
 ### <a name="informational-attributes"></a>정보 특성  
- 정보 특성을 사용하여 어셈블리에 대한 추가 회사 또는 제품 정보를 제공할 수 있습니다. 다음 표에서는 <xref:System.Reflection?displayProperty=nameWithType> 네임스페이스에 정의된 정보 특성을 보여 줍니다.  
+ 정보 특성을 사용하여 어셈블리와 연관된 회사 또는 제품에 대한 추가적인 정보를 제공할 수 있습니다. 다음 표에서는 <xref:System.Reflection?displayProperty=nameWithType> 네임스페이스에 정의된 정보 특성을 보여 줍니다.  
   
 |특성|용도|  
 |---------------|-------------|  
@@ -72,8 +72,8 @@ ms.locfileid: "43504397"
 |<xref:System.Reflection.AssemblyConfigurationAttribute>|어셈블리 매니페스트에 대한 어셈블리 구성(예: 정품 또는 디버그)을 지정하는 사용자 지정 특성을 정의합니다.|  
 |<xref:System.Reflection.AssemblyDefaultAliasAttribute>|어셈블리 매니페스트에 대한 친숙한 기본 별칭을 정의합니다.|  
   
-##  <a name="Obsolete"></a> 사용되지 않는 특성  
- `Obsolete` 특성은 프로그램 엔터티를 더 이상 사용이 권장되지 않는 항목으로 표시합니다. 나중에 사용되지 않음으로 표시된 엔터티를 사용할 때마다 특성 구성 방법에 따라 경고나 오류가 생성됩니다. 예:  
+## <a name="Obsolete"></a> 사용되지 않는 특성  
+ `Obsolete` 특성은 프로그램 엔터티를 더 이상 사용이 권장되지 않는 항목으로 표시합니다. 나중에 사용되지 않음으로 표시된 엔터티를 사용할 때마다 특성 구성 방법에 따라 경고나 오류가 생성됩니다. 예를 들면 다음과 같습니다:  
   
 ```csharp  
 [System.Obsolete("use class B")]  
@@ -111,7 +111,7 @@ b.NewMethod();
   
  `Obsolete` 특성은 단일 사용 특성이고 특성을 허용하는 모든 엔터티에 적용할 수 있습니다. `Obsolete`는 <xref:System.ObsoleteAttribute>의 별칭입니다.  
   
-##  <a name="Conditional"></a> 조건부 특성  
+## <a name="Conditional"></a> 조건부 특성  
  `Conditional` 특성을 사용하면 메서드 실행이 전처리 식별자에 따라 달라집니다. `Conditional` 특성은 <xref:System.Diagnostics.ConditionalAttribute>의 별칭이고 메서드 또는 특성 클래스에 적용할 수 있습니다.  
   
  이 예제에서 `Conditional`은 프로그램 관련 진단 정보 표시를 사용하거나 사용하지 않도록 설정하는 메서드에 적용됩니다.  
@@ -216,7 +216,7 @@ class SampleClass
 }  
 ```  
   
-##  <a name="CallerInfo"></a> 호출자 정보 특성  
+## <a name="CallerInfo"></a> 호출자 정보 특성  
  호출자 정보 특성을 사용하여 메서드 호출자에 대한 정보를 얻을 수 있습니다. 소스 코드 파일 경로, 소스 코드 줄 번호 및 호출자의 멤버 이름을 얻을 수 있습니다.  
   
  멤버 호출자 정보를 얻으려면 선택적 매개 변수에 적용되는 특성을 사용합니다. 각 선택적 매개 변수는 기본값을 지정합니다. 다음 표에서는 <xref:System.Runtime.CompilerServices?displayProperty=nameWithType> 네임스페이스에 정의된 호출자 정보 특성을 보여줍니다.  
@@ -225,15 +225,15 @@ class SampleClass
 |---|---|---|  
 |<xref:System.Runtime.CompilerServices.CallerFilePathAttribute>|호출자를 포함한 소스 파일의 전체 경로입니다. 컴파일 시간의 경로입니다.|`String`|  
 |<xref:System.Runtime.CompilerServices.CallerLineNumberAttribute>|메서드가 호출되는 소스 파일의 줄 번호입니다.|`Integer`|  
-|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 이름 또는 속성 이름입니다. 자세한 내용은 [호출자 정보(C#)](../../../../csharp/programming-guide/concepts/caller-information.md)를 참조하세요.|`String`|  
+|<xref:System.Runtime.CompilerServices.CallerMemberNameAttribute>|호출자의 메서드 이름 또는 속성 이름입니다. 자세한 내용은 [호출자 정보(C#)](../caller-information.md)를 참조하세요.|`String`|  
   
- 호출자 정보 특성에 대한 자세한 내용은 [호출자 정보(C#)](../../../../csharp/programming-guide/concepts/caller-information.md)를 참조하세요.  
+ 호출자 정보 특성에 대한 자세한 내용은 [호출자 정보(C#)](../caller-information.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Reflection>  
-- <xref:System.Attribute>  
-- [C# 프로그래밍 가이드](../../../../csharp/programming-guide/index.md)  
-- [특성](../../../../../docs/standard/attributes/index.md)  
-- [리플렉션(C#)](../../../../csharp/programming-guide/concepts/reflection.md)  
-- [리플렉션을 사용하여 특성 액세스(C#)](../../../../csharp/programming-guide/concepts/attributes/accessing-attributes-by-using-reflection.md)
+- <xref:System.Reflection>
+- <xref:System.Attribute>
+- [C# 프로그래밍 가이드](../../index.md)
+- [특성](../../../../standard/attributes/index.md)
+- [리플렉션(C#)](../reflection.md)
+- [리플렉션을 사용하여 특성 액세스(C#)](./accessing-attributes-by-using-reflection.md)

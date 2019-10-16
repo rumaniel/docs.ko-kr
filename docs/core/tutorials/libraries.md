@@ -1,15 +1,15 @@
 ---
 title: 플랫폼 간 도구로 라이브러리 개발
-description: .NET Core CLI 도구를 사용하여 .NET용 라이브러리를 만드는 방법에 관해 알아봅니다.
+description: .NET Core CLI 도구를 사용하여 .NET Core 라이브러리를 만드는 방법을 알아봅니다. 여러 프레임워크를 지원하는 라이브러리를 만듭니다.
 author: cartermp
-ms.author: mairaw
 ms.date: 05/01/2017
-ms.openlocfilehash: a6db7a15c484122600afd54814d19ea11bd1abc1
-ms.sourcegitcommit: fe02afbc39e78afd78cc6050e4a9c12a75f579f8
+ms.custom: seodec18
+ms.openlocfilehash: 536319bc02b45e7948c89ae67988e821a55a842d
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/30/2018
-ms.locfileid: "43256198"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117414"
 ---
 # <a name="developing-libraries-with-cross-platform-tools"></a>플랫폼 간 도구로 라이브러리 개발
 
@@ -17,11 +17,11 @@ ms.locfileid: "43256198"
 
 ## <a name="prerequisites"></a>전제 조건
 
-컴퓨터에 [.NET Core SDK 및 CLI](https://www.microsoft.com/net/core)를 설치해야 합니다.
+컴퓨터에 [.NET Core SDK 및 CLI](https://dotnet.microsoft.com/download)를 설치해야 합니다.
 
-.NET Framework 버전을 다루는 이 문서의 섹션에서는 [.NET Framework](http://getdotnet.azurewebsites.net/)가 설치된 Windows 컴퓨터가 필요합니다.
+.NET Framework 버전을 다루는 이 문서의 섹션에서는 [.NET Framework](https://dotnet.microsoft.com)가 설치된 Windows 컴퓨터가 필요합니다.
 
-또한 이전.NET Framework 대상을 지원하려는 경우 [.NET 대상 플랫폼 페이지](http://getdotnet.azurewebsites.net/target-dotnet-platforms.html)에서 이전 프레임워크 버전용 타기팅/개발자 팩을 설치해야 합니다. 다음 표를 참조하세요.
+또한 이전 .NET Framework 대상을 지원하려는 경우 [.NET 다운로드 보관 페이지](https://dotnet.microsoft.com/download/archives)에서 이전 프레임워크 버전용 타기팅/개발자 팩을 설치해야 합니다. 다음 표를 참조하세요.
 
 | .NET Framework 버전 | 다운로드할 파일                                       |
 | ---------------------- | ------------------------------------------------------ |
@@ -39,7 +39,7 @@ ms.locfileid: "43256198"
 
 이 문서에는 .NET 표준을 다양한 구현에 매핑하는 표가 있습니다.
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../../includes/net-standard-table.md)]
 
 라이브러리 만들기 작업에서 이 표의 의미는 다음과 같습니다.
 
@@ -58,9 +58,9 @@ ms.locfileid: "43256198"
     ```
 
 2. 프로젝트 파일의 `TargetFramework` 노드에 있는 값을 수정하여 하위 또는 상위 버전의 .NET 표준을 사용할 수 있습니다.
-    
+
     .NET 표준 버전은 이전 버전과 호환됩니다. 즉, `netstandard1.0` 라이브러리는 `netstandard1.1` 플랫폼 이상에서 실행됩니다. 그러나 이후 버전과는 호환되지 않습니다. 더 낮은 .NET 표준 플랫폼은 더 높은 버전을 참조할 수 없습니다. 즉, `netstandard1.0` 라이브러리는 `netstandard1.1` 이상을 대상으로 하는 라이브러리를 참조할 수 없습니다. 요구에 맞게 API와 플랫폼 지원이 올바르게 혼합된 표준 버전을 선택하세요. 지금은 `netstandard1.4`를 사용하는 것이 좋습니다.
-    
+
 3. .NET Framework 버전 4.0 이하를 대상으로 하거나 .NET Framework에서는 사용 가능하지만 .NET 표준에서는 사용할 수 없는 API를 사용하려는 경우(예: `System.Drawing`) 다음 섹션을 읽어보고 멀티 타기팅 방법을 알아보세요.
 
 ## <a name="how-to-target-the-net-framework"></a>.NET Framework를 대상으로 지정하는 방법
@@ -72,19 +72,20 @@ ms.locfileid: "43256198"
 
 가장 많은 수의 개발자 및 프로젝트에 도달하려면 기준 대상으로 .NET Framework 4.0을 사용합니다. .NET Framework를 대상으로 하려면 지원할 .NET Framework 버전에 해당하는 올바른 TFM(Target Framework Moniker)을 사용하여 시작해야 합니다.
 
-```
-.NET Framework 2.0   --> net20
-.NET Framework 3.0   --> net30
-.NET Framework 3.5   --> net35
-.NET Framework 4.0   --> net40
-.NET Framework 4.5   --> net45
-.NET Framework 4.5.1 --> net451
-.NET Framework 4.5.2 --> net452
-.NET Framework 4.6   --> net46
-.NET Framework 4.6.1 --> net461
-.NET Framework 4.6.2 --> net462
-.NET Framework 4.7   --> net47
-```
+| .NET Framework 버전 | TFM      |
+| ---------------------- | -------- |
+| .NET Framework 2.0     | `net20`  |
+| .NET Framework 3.0     | `net30`  |
+| .NET Framework 3.5     | `net35`  |
+| .NET Framework 4.0     | `net40`  |
+| .NET Framework 4.5     | `net45`  |
+| .NET Framework 4.5.1   | `net451` |
+| .NET Framework 4.5.2   | `net452` |
+| .NET Framework 4.6     | `net46`  |
+| .NET Framework 4.6.1   | `net461` |
+| .NET Framework 4.6.2   | `net462` |
+| .NET Framework 4.7     | `net47`  |
+| .NET Framework 4.8     | `net48`  |
 
 그런 다음 이 TFM을 프로젝트 파일의 `TargetFramework` 섹션에 삽입합니다. 예를 들어 .NET Framework 4.0을 대상으로 하는 라이브러리의 작성 방법을 같습니다.
 
@@ -131,12 +132,12 @@ ms.locfileid: "43256198"
 여기서 다음 세 가지 주요 변경 내용을 확인할 수 있습니다.
 
 1. `TargetFramework` 노드가 `TargetFrameworks`로 대체되었으며, 세 개의 TFM이 내부에 표시됩니다.
-1. `net40 ` 대상에는 .NET Framework 참조 하나를 끌어오는 `<ItemGroup>` 노드가 있습니다.
+1. `net40` 대상에는 .NET Framework 참조 하나를 끌어오는 `<ItemGroup>` 노드가 있습니다.
 1. `net45` 대상에는 .NET Framework 참조 두 개를 끌어오는 `<ItemGroup>` 노드가 있습니다.
 
 빌드 시스템은 `#if` 지시문에 사용된 다음의 전처리기 기호를 인식합니다.
 
-[!INCLUDE [Preprocessor symbols](~/includes/preprocessor-symbols.md)]
+[!INCLUDE [Preprocessor symbols](../../../includes/preprocessor-symbols.md)]
 
 대상당 조건부 컴파일을 사용하는 예는 다음과 같습니다.
 
@@ -167,7 +168,7 @@ namespace MultitargetLib
         // .NET Framework 4.0 does not have async/await
         public string GetDotNetCount()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             var uri = new Uri(url);
 
@@ -187,7 +188,7 @@ namespace MultitargetLib
         // .NET 4.5+ can use async/await!
         public async Task<string> GetDotNetCountAsync()
         {
-            string url = "http://www.dotnetfoundation.org/";
+            string url = "https://www.dotnetfoundation.org/";
 
             // HttpClient is thread-safe, so no need to explicitly lock here
             var result = await _client.GetStringAsync(url);
@@ -213,7 +214,7 @@ netstandard1.4/
 
 ## <a name="how-to-test-libraries-on-net-core"></a>.NET Core에서 라이브러리를 테스트하는 방법
 
-플랫폼 간에 테스트할 수 있는 기능이 중요합니다. 기본적으로 [xUnit](http://xunit.github.io/) 또는 MSTest를 사용할 수 있습니다. 둘 다 .NET Core에서 라이브러리를 단위 테스트하는 데 적합합니다. 테스트 프로젝트로 솔루션을 설정하는 방법은 [솔루션 구조](#structuring-a-solution)에 따라 달라집니다. 다음 예제에서는 테스트 및 원본 디렉터리가 동일한 최상위 디렉터리에 있다고 가정합니다.
+플랫폼 간에 테스트할 수 있는 기능이 중요합니다. 기본적으로 [xUnit](https://xunit.github.io/) 또는 MSTest를 사용할 수 있습니다. 둘 다 .NET Core에서 라이브러리를 단위 테스트하는 데 적합합니다. 테스트 프로젝트로 솔루션을 설정하는 방법은 [솔루션 구조](#structuring-a-solution)에 따라 달라집니다. 다음 예제에서는 테스트 및 원본 디렉터리가 동일한 최상위 디렉터리에 있다고 가정합니다.
 
 > [!NOTE]
 > 일부 [.NET Core CLI 명령](../tools/index.md)이 사용됩니다. 자세한 내용은 [dotnet new](../tools/dotnet-new.md) 및 [dotnet sln](../tools/dotnet-sln.md)을 참조하세요.
@@ -248,15 +249,15 @@ netstandard1.4/
 
 1. 패키지를 복원하고 프로젝트를 빌드합니다.
 
-   ```bash
+   ```dotnetcli
    dotnet restore
    dotnet build
    ```
 
-   [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+   [!INCLUDE[DotNet Restore Note](../../../includes/dotnet-restore-note.md)]
 
 1. `dotnet test` 명령을 실행하여 xUnit가 실행되는지 확인합니다. MSTest를 사용하도록 선택한 경우 MSTest 콘솔 실행기가 대신 실행되어야 합니다.
-    
+
 됐습니다! 이제 명령줄 도구를 사용하여 모든 플랫폼 라이브러리를 테스트할 수 있습니다. 이제 모든 것이 설정되어 계속해서 테스트하려는 경우 라이브러리 테스트는 매우 간단합니다.
 
 1. 라이브러리를 변경합니다.
@@ -320,8 +321,8 @@ dotnet sln add AwesomeLibrary.FSharp/AwesomeLibrary.FSharp.fsproj
 
 프로젝트를 참조하는 가장 좋은 방법은 .NET Core CLI를 사용하여 프로젝트 참조를 추가하는 것입니다. **AwesomeLibrary.CSharp** 및 **AwesomeLibrary.FSharp** 프로젝트 디렉터리에서 다음 명령을 실행할 수 있습니다.
 
-```console
-$ dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
+```dotnetcli
+dotnet add reference ../AwesomeLibrary.Core/AwesomeLibrary.Core.csproj
 ```
 
 이제 **AwesomeLibrary.CSharp** 및 **AwesomeLibrary.FSharp** 둘 다의 프로젝트 파일에서 **AwesomeLibrary.Core**를 `ProjectReference` 대상으로 참조합니다.  프로젝트 파일을 검사하고 파일에서 다음을 통해 이를 확인할 수 있습니다.

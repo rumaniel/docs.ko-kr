@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
-ms.openlocfilehash: cd910b35f82f816158cb686a283e44e3b8b6b33b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7de65579cb41641aded0b9a320fac59804959ff5
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33359974"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70782223"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>시퀀스에서 일부 또는 모든 요소가 조건을 만족하는지 확인
 시퀀스의 모든 요소가 조건을 만족하면 <xref:System.Linq.Enumerable.All%2A> 연산자에서는 `true`를 반환합니다.  
@@ -18,7 +18,7 @@ ms.locfileid: "33359974"
  시퀀스의 모든 요소가 조건을 만족하면 <xref:System.Linq.Queryable.Any%2A> 연산자에서는 `true`를 반환합니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 적어도 하나의 주문이 있는 고객의 시퀀스를 반환합니다. `Where` / `where` 절 `true` 경우는 주어진 `Customer` 있는지 `Order`합니다.  
+ 다음 예제에서는 적어도 하나의 주문이 있는 고객의 시퀀스를 반환합니다. 지정 `Where` `where` 된에`Order`가 `true` 있는 경우 절은 / 로 평가 됩니다. `Customer`  
   
  [!code-csharp[DLinqQueryExamples#37](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#37)]
  [!code-vb[DLinqQueryExamples#37](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#37)]  
@@ -33,5 +33,6 @@ ms.locfileid: "33359974"
   
  [!code-csharp[DLinqQueryExamples#38](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#38)]  
   
-## <a name="see-also"></a>참고 항목  
- [쿼리 예제](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
+## <a name="see-also"></a>참고자료
+
+- [쿼리 예제](query-examples.md)

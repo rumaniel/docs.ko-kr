@@ -4,27 +4,27 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: e22e5812-89c6-41f0-9302-bb899a46dbff
-ms.openlocfilehash: 21868f808a6d39c935b612f745d720180df2dd73
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: da0695aff9447355b1fc44a033c1b4a1cc224435
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43507264"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70785876"
 ---
 # <a name="the-load-method"></a>로드 메서드
-<xref:System.Data.DataTable.Load%2A> 메서드를 사용하여 데이터 소스의 행과 함께 <xref:System.Data.DataTable>을 로드할 수 있습니다. 이 가장 간단한 형태로 단일 매개 변수를 허용 하는 오버 로드 된 메서드를 **DataReader**합니다. 이 형식으로 로드 하는 기능만 합니다 **DataTable** 행. 선택적으로 지정할 수 있습니다는 **LoadOption** 매개 변수 데이터 추가 하는 방법을 제어 하는 **DataTable**합니다.  
+<xref:System.Data.DataTable.Load%2A> 메서드를 사용하여 데이터 소스의 행과 함께 <xref:System.Data.DataTable>을 로드할 수 있습니다. 가장 간단한 형식으로 **DataReader**인 단일 매개 변수를 허용 하는 오버 로드 된 메서드입니다. 이 폼에서는 행이 있는 **DataTable** 을 로드 하기만 하면 됩니다. 필요에 따라 **LoadOption** 매개 변수를 지정 하 여 **DataTable**에 데이터를 추가 하는 방법을 제어할 수 있습니다.  
   
- 합니다 **LoadOption** 매개 변수는 경우에 특히 유용 여기서 합니다 **DataTable** 이미 데이터 행이 포함 된, 데이터 원본에서 어떻게 들어오는 데이터 설명 하므로 데이터를 사용 하 여 결합 됩니다 이미 표에 합니다. 예를 들어 **PreserveCurrentValues** (기본값)를 지정 하는로 표시 된 행의 경우에서 **Added** 에 **DataTable**, **원래** 값 이나 각 열은 데이터 원본에서 일치 하는 행의 내용으로 설정 됩니다. **현재** 값은 행이 추가 하는 경우 할당 된 값을 유지 및 **RowState** 행의로 설정 됩니다 **Changed**합니다.  
+ **LoadOption** 매개 변수는 데이터 원본에서 들어오는 데이터를 테이블에 이미 있는 데이터와 결합 하는 방법을 설명 하기 때문에 **DataTable** 에 이미 데이터 행이 포함 되어 있는 경우에 특히 유용 합니다. 예를 들어 **PreserveCurrentValues** (기본값)는 **DataTable**에 행이 **추가** 된 것으로 표시 된 경우 **원래** 값 또는 각 열이 데이터 소스에서 일치 하는 행의 내용으로 설정 되도록 지정 합니다. **현재** 값에는 행이 추가 될 때 할당 된 값이 유지 되 고 행의 **RowState** 가 **변경**된 것으로 설정 됩니다.  
   
  다음 표에서는 <xref:System.Data.LoadOption> 열거형 값에 대해 간략하게 설명합니다.  
   
-|LoadOption 값|설명|  
+|LoadOption 값|Description|  
 |----------------------|-----------------|  
-|**OverwriteRow**|들어오는 행을가 같으면 **PrimaryKey** 에 이미 행 값을 **DataTable**의 **원래** 및 **현재** 각 값 열 들어오는 행의 값으로 바뀝니다. 및 **RowState** 속성이 **Unchanged**합니다.<br /><br /> 에 이미 존재 하지 않는 데이터 원본에서 행을 **DataTable** 와 함께 추가 되는 **RowState** 값 **Unchanged**.<br /><br /> 이 옵션에는 실제로 내용을 새로 고칩니다 합니다 **DataTable** 데이터 소스의 내용과 일치 하도록 합니다.|  
-|**PreserveCurrentValues (기본값)**|들어오는 행을가 같으면 **PrimaryKey** 에 이미 행 값을 **DataTable**의 **원래** 들어오는 행 및 합니다 내용의값이설정**현재** 값 변경 되지 않습니다.<br /><br /> 경우는 **RowState** 는 **Added** 또는 **Modified**로 설정 됩니다 **Modified**합니다.<br /><br /> 경우는 **RowState** 되었습니다 **Deleted**, 상태로 유지 됩니다 **삭제**합니다.<br /><br /> 에 이미 존재 하지 않는 데이터 원본에서 행을 **DataTable** 추가 되 면 및 **RowState** 로 설정 되어 **Unchanged**합니다.|  
-|**UpdateCurrentValues**|들어오는 행을가 같으면 **PrimaryKey** 에 이미 행 값을 **DataTable**의 **현재** 값으로 복사 됩니다는 **원래**값 및 **현재** 들어오는 행의 내용에 값이 설정 됩니다.<br /><br /> 경우는 **RowState** 에 **DataTable** 되었습니다 **Added**, **RowState** 유지 됩니다 **Added**. 행으로 표시 된 **Modified** 또는 **Deleted**, **RowState** 는 **수정**합니다.<br /><br /> 에 이미 존재 하지 않는 데이터 원본에서 행을 **DataTable** 추가 되 면 및 **RowState** 로 설정 되어 **Added**합니다.|  
+|**OverwriteRow**|들어오는 행에 이미 **DataTable**에 있는 행과 같은 **PrimaryKey** 값이 있는 경우 각 열의 **원래** 값과 **현재** 값은 들어오는 행의 값으로 바뀌고 **RowState** 속성은로 설정 됩니다. **변경 되지 않았습니다**.<br /><br /> **DataTable** 에 없는 데이터 원본의 행은 **RowState** 값이 **변경 되지**않은 상태로 추가 됩니다.<br /><br /> 이 옵션을 적용 하면 데이터 원본의 내용과 일치 하도록 **DataTable** 의 내용이 새로 고쳐집니다.|  
+|**PreserveCurrentValues (기본값)**|들어오는 행에 이미 **DataTable**에 있는 행과 같은 **PrimaryKey** 값이 있으면 **원래** 값은 들어오는 행의 내용으로 설정 되 고 **현재** 값은 변경 되지 않습니다.<br /><br /> **RowState** 를 **추가** 하거나 **수정**하는 경우 **수정**됨으로 설정 됩니다.<br /><br /> **RowState** **삭제**된 경우 **삭제**된 상태로 유지 됩니다.<br /><br /> **DataTable** 에 없는 데이터 소스의 행이 추가 되 고 **RowState** 이 변경 되지 않은 **상태로**설정 됩니다.|  
+|**UpdateCurrentValues**|들어오는 행에 이미 **DataTable**에 있는 행과 같은 **PrimaryKey** 값이 있는 경우 **현재** 값이 **원래** 값으로 복사 되 고 **현재** 값이 들어오는 행의 콘텐츠로 설정 됩니다.<br /><br /> **DataTable** 의 **RowState** 이 **추가**된 경우 **RowState** 는 **추가**된 상태로 유지 됩니다. **Modified** 또는 **Deleted**로 표시 된 행의 경우에는 **RowState** 가 **수정**됩니다.<br /><br /> **DataTable** 에 없는 데이터 소스의 행이 추가 되 고 **RowState** 이 **추가**로 설정 됩니다.|  
   
- 다음 샘플에서는 합니다 **부하** 에 직원 생일 목록을 표시 하는 메서드는 **Northwind** 데이터베이스입니다.  
+ 다음 예제에서는 **Load** 메서드를 사용 하 여 **Northwind** 데이터베이스에 있는 직원의 생일 목록을 표시 합니다.  
   
 ```vb  
 Private Sub LoadBirthdays(ByVal connectionString As String)  
@@ -68,6 +68,7 @@ Private Sub LoadBirthdays(ByVal connectionString As String)
 End Sub  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [DataTable에서 데이터 조작](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
- [ADO.NET 관리되는 공급자 및 데이터 집합 개발자 센터](https://go.microsoft.com/fwlink/?LinkId=217917)
+## <a name="see-also"></a>참고자료
+
+- [DataTable에서 데이터 조작](manipulating-data-in-a-datatable.md)
+- [ADO.NET 개요](../ado-net-overview.md)

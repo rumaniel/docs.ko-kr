@@ -2,18 +2,18 @@
 title: 발급자 이름 레지스트리 유효성 검사 패키지 다운로드
 ms.date: 10/10/2018
 ms.assetid: ff8b0014-c5d4-4614-90f0-13fcc0ba777a
-ms.openlocfilehash: 833a0722fdd27df4e488ed7fac99444c6d9b8905
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 5684844f1db33b075df099b3026d9d0c1061199f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316193"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631843"
 ---
 # <a name="download-the-validating-issuer-name-registry-package"></a>발급자 이름 레지스트리를 유효성 검사 패키지 다운로드
 
 이 항목에서는 VINR(발급자 이름 레지스트리 유효성 검사)을 다운로드하고 프로젝트에서 사용하는 방법을 설명합니다.
 
-VINR은 필요한 어셈블리 및 참조를 프로젝트에 추가하는 NuGet 패키지로 사용할 수 있습니다. NuGet이 아직 설치되지 않은 경우 [nuget.org](https://nuget.org)로 이동하여 패키지를 설치합니다. NuGet의 해당 페이지 [Microsoft Validating Issuer Name Registry on NuGet](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)(NuGet의 Microsoft 발급자 이름 레지스트리 패키지 유효성 검사)을 방문하여 확장에 대한 버전 관리 기록을 확인할 수 있습니다.
+VINR은 필요한 어셈블리 및 참조를 프로젝트에 추가하는 NuGet 패키지로 사용할 수 있습니다. NuGet이 아직 설치되지 않은 경우 [nuget.org](https://nuget.org)로 이동하여 패키지를 설치합니다. NuGet의 해당 페이지를 방문 하 여 확장에 대 한 버전 관리 기록을 확인할 수 있습니다. [Microsoft NuGet의 발급자 이름 레지스트리 유효성 검사](https://nuget.org/packages/System.IdentityModel.Tokens.ValidatingIssuerNameRegistry/)
 
 ## <a name="use-the-package-manager-gui"></a>패키지 관리자 GUI를 사용 하 여
 

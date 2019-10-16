@@ -11,19 +11,19 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e89545b5fa29f6e5bf99bb9b85322d7ee14422a4
+ms.sourcegitcommit: 33c8d6f7342a4bb2c577842b7f075b0e20a2fa40
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188122"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929018"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>작업 기반 비동기 패턴 사용
 
 TAP(작업 기반 비동기 패턴)을 사용하여 비동기 작업을 수행할 경우 콜백을 사용하면 차단 없이 대기를 진행할 수 있습니다.  작업의 경우 이는 <xref:System.Threading.Tasks.Task.ContinueWith%2A?displayProperty=nameWithType>와 같은 메서드를 통해 수행됩니다. 언어 기반 비동기 지원은 정상적인 제어 흐름 내에서 비동기 작업이 대기할 수 있도록 함으로써 콜백 숨김을 지원하고, 컴파일러에서 생성된 코드는 이와 동일한 API 수준 지원을 제공합니다.
 
 ## <a name="suspending-execution-with-await"></a>Await로 실행 일시 중지
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]부터는 C#의 [await](~/docs/csharp/language-reference/keywords/await.md) 키워드 및 Visual Basic의 [Await 연산자](~/docs/visual-basic/language-reference/operators/await-operator.md)를 사용하여 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체를 비동기적으로 대기할 수 있습니다. <xref:System.Threading.Tasks.Task> 개체를 대기하고 있을 때 `await` 식은 `void` 형식입니다. <xref:System.Threading.Tasks.Task%601> 개체를 대기하고 있을 때 `await` 식은 `TResult` 형식입니다. `await` 식은 비동기 메서드의 본문 내에서 발생해야 합니다. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]의 C# 및 Visual Basic 언어 지원에 대한 자세한 내용은 C# 및 Visual Basic 언어 사양을 참조하세요.
+ .NET Framework 4.5부터는 C#의 [await](../../csharp/language-reference/operators/await.md) 키워드 및 Visual Basic의 [Await 연산자](../../visual-basic/language-reference/operators/await-operator.md)를 사용하여 <xref:System.Threading.Tasks.Task> 및 <xref:System.Threading.Tasks.Task%601> 개체를 비동기적으로 대기할 수 있습니다. <xref:System.Threading.Tasks.Task> 개체를 대기하고 있을 때 `await` 식은 `void` 형식입니다. <xref:System.Threading.Tasks.Task%601> 개체를 대기하고 있을 때 `await` 식은 `TResult` 형식입니다. `await` 식은 비동기 메서드의 본문 내에서 발생해야 합니다. .NET Framework 4.5의 C# 및 Visual Basic 언어 지원에 대한 자세한 내용은 C# 및 Visual Basic 언어 사양을 참조하세요.
 
  내부적으로 await 기능은 연속을 사용해서 작업에 콜백을 설치합니다.  이 콜백은 일시 중지 시점에서 비동기 메서드를 재개합니다. 비동기 메서드가 재개될 때 대기된 작업이 성공적으로 완료되고 <xref:System.Threading.Tasks.Task%601>인 경우 해당 `TResult`가 반환됩니다.  대기된 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체가 <xref:System.Threading.Tasks.TaskStatus.Canceled> 상태에서 종료된 경우 <xref:System.OperationCanceledException> 예외가 throw됩니다.  대기된 <xref:System.Threading.Tasks.Task> 또는 <xref:System.Threading.Tasks.Task%601> 개체가 <xref:System.Threading.Tasks.TaskStatus.Faulted> 상태에서 종료된 경우 오류를 초래한 예외가 throw됩니다. `Task`에서는 여러 식의 결과로 오류가 발생할 수 있지만 이러한 예외 중 하나만 전파됩니다. 그러나 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 속성은 모든 오류가 포함된 <xref:System.AggregateException> 예외를 반환합니다.
 
@@ -64,7 +64,7 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>비동기 작업 취소
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]부터는 취소를 지원하는 TAP 메서드가 취소 토큰(<xref:System.Threading.CancellationToken> 개체)을 수락하는 오버로드를 하나 이상 제공합니다.
+ .NET Framework 4부터는 취소를 지원하는 TAP 메서드가 취소 토큰(<xref:System.Threading.CancellationToken> 개체)을 수락하는 오버로드를 하나 이상 제공합니다.
 
  취소 토큰은 취소 토큰 소스(<xref:System.Threading.CancellationTokenSource> 개체)를 통해 생성됩니다.  소스의 <xref:System.Threading.CancellationTokenSource.Token%2A> 속성은 소스의 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 메서드가 호출될 때 신호를 받을 취소 토큰을 반환합니다.  예를 들어 단일 웹 페이지를 다운로드하려고 하며 작업을 취소할 수 있게 하려는 경우 <xref:System.Threading.CancellationTokenSource> 개체를 만들고, 해당 토큰을 TAP 메서드에 전달한 후 작업을 취소할 준비가 되면 소스의 <xref:System.Threading.CancellationTokenSource.Cancel%2A> 메서드를 호출합니다.
 
@@ -101,16 +101,16 @@ var cts = new CancellationTokenSource();
 
  이러한 취소 방법에는 다음과 같은 여러 가지 이점이 있습니다.
 
--   제한 없는 수의 비동기 및 동기 작업에 동일한 취소 토큰을 전달할 수 있습니다.
+- 제한 없는 수의 비동기 및 동기 작업에 동일한 취소 토큰을 전달할 수 있습니다.
 
--   동일한 취소 요청을 제한 없는 수의 수신기에 확산시킬 수 있습니다.
+- 동일한 취소 요청을 제한 없는 수의 수신기에 확산시킬 수 있습니다.
 
--   비동기 API의 개발자는 취소를 요청할 수 있는지 여부 및 적용되는 시기 등을 완전히 제어할 수 있습니다.
+- 비동기 API의 개발자는 취소를 요청할 수 있는지 여부 및 적용되는 시기 등을 완전히 제어할 수 있습니다.
 
--   API를 사용하는 코드는 취소 요청이 전파되는 비동기 호출을 선택적으로 결정할 수 있습니다.
+- API를 사용하는 코드는 취소 요청이 전파되는 비동기 호출을 선택적으로 결정할 수 있습니다.
 
 ## <a name="monitoring-progress"></a>진행률 모니터링
- 일부 비동기 메서드는 비동기 메서드에 전달된 진행률 인터페이스를 통해 진행 상황을 제공합니다.  예를 들어 텍스트 문자열을 비동기적으로 다운로드하고 지금까지 완료된 다운로드의 비율을 포함하는 진행률 업데이트를 야기하는 함수를 고려하세요.  이러한 메서드는 다음과 같이 WPF(Windows Presentation Foundation) 응용 프로그램에서 사용될 수 있습니다.
+ 일부 비동기 메서드는 비동기 메서드에 전달된 진행률 인터페이스를 통해 진행 상황을 제공합니다.  예를 들어 텍스트 문자열을 비동기적으로 다운로드하고 지금까지 완료된 다운로드의 비율을 포함하는 진행률 업데이트를 야기하는 함수를 고려하세요.  이러한 메서드는 다음과 같이 WPF(Windows Presentation Foundation) 애플리케이션에서 사용될 수 있습니다.
 
 ```csharp
 private async void btnDownload_Click(object sender, RoutedEventArgs e)
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 사용하여 작업(task)으로 표현되는 여러 비동기 작업 중 하나가 완료될 때까지만 비동기적으로 대기할 수 있습니다.  이 메서드는 다음 네 가지 기본 사용 사례를 따릅니다.
 
--   중복: 작업을 여러 번 수행하고 먼저 완료되는 작업을 선택합니다(예를 들어, 단일의 결과를 생성하는 여러 주식 시세 웹 서비스에 연결하고 가장 빨리 완료되는 결과를 선택).
+- 중복성:  작업을 여러 번 수행하고 먼저 완료되는 작업을 선택합니다(예를 들어, 단일의 결과를 생성하는 여러 주식 시세 웹 서비스에 연결하고 가장 빨리 완료되는 결과를 선택).
 
--   인터리브: 여러 작업을 시작하고 모두 완료해야 하지만 완료되었을 때 작업을 처리합니다.
+- 인터리브:  여러 작업을 시작하고 모두 완료해야 하지만 완료되었을 때 작업을 처리합니다.
 
--   스로틀: 다른 작업이 완료되면 추가 작업을 시작할 수 있습니다.  이것은 인터리브 시나리오의 확장입니다.
+- 스로틀:  다른 작업이 완료되면 추가 작업을 시작할 수 있습니다.  이것은 인터리브 시나리오의 확장입니다.
 
--   초기 재귀 한도: 예를 들어, 작업 t1으로 표시되는 작업은 다른 작업 t2를 사용하여 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 그룹화할 수 있으며 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 대기할 수 있습니다. 작업 t2는 시간 제한 또는 취소를 나타내거나 t1이 완료되기 전에 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업이 완료되도록 하는 일부 다른 신호를 나타낼 수 있습니다.
+- 초기 재귀 한도 초과:  예를 들어, 작업 t1으로 표시되는 작업은 다른 작업 t2를 사용하여 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 그룹화할 수 있으며 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업에서 대기할 수 있습니다. 작업 t2는 시간 제한 또는 취소를 나타내거나 t1이 완료되기 전에 <xref:System.Threading.Tasks.Task.WhenAny%2A> 작업이 완료되도록 하는 일부 다른 신호를 나타낼 수 있습니다.
 
 #### <a name="redundancy"></a>중복성
  주식 구매 여부를 결정하려는 경우를 고려해 봅니다.  신뢰할 수 있는 일부 주식 권장 웹 서비스가 있지만 매일의 부하에 따라 각 서비스가 서로 다른 시간에 느려질 수 있습니다.  다음과 같이 <xref:System.Threading.Tasks.Task.WhenAny%2A> 메서드를 사용하면 작업이 완료될 때 알림을 받을 수 있습니다.
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- 또한 첫 번째 작업이 성공적으로 완료되더라도 후속 작업은 실패할 수 있습니다.  이 시점에서 예외를 처리할 수 있는 여러 옵션이 있습니다. <xref:System.Threading.Tasks.Task.WhenAll%2A> 메서드를 사용할 수 있는 경우 시작된 모든 작업이 완료될 때까지 기다릴 수도 있고 또는 모든 예외가 중요하며 로그온해야 한다고 결정할 수도 있습니다.  이를 위해 연속 작업을 사용하여 작업이 비동기적으로 완료되었을 때 알림을 받을 수 있습니다.
+ 또한 첫 번째 작업이 성공적으로 완료되더라도 후속 작업은 실패할 수 있습니다.  이 시점에서는 예외를 처리하는 몇 가지 옵션이 있습니다.  <xref:System.Threading.Tasks.Task.WhenAll%2A> 메서드를 사용할 수 있는 경우 시작된 모든 작업이 완료될 때까지 기다릴 수도 있고 또는 모든 예외가 중요하며 로그온해야 한다고 결정할 수도 있습니다.  이를 위해 연속 작업을 사용하여 작업이 비동기적으로 완료되었을 때 알림을 받을 수 있습니다.
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -483,7 +483,7 @@ public async void btnRun_Click(object sender, EventArgs e)
 
  더 큰 비동기 작업(예: ASP.NET 웹 서비스)에 속하는 작업(task)이 완료하는 데 너무 오래 걸리는 경우 전체 작업에 문제가 발생하며, 완료가 실패하는 경우에는 더 큰 문제가 됩니다.  이러한 이유로 비동기 작업을 대기하는 경우 시간이 초과되도록 할 수 있어야 합니다.  동기 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType>, <xref:System.Threading.Tasks.Task.WaitAll%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task.WaitAny%2A?displayProperty=nameWithType> 메서드는 시간 제한 값을 허용하지만, 해당 <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A?displayProperty=nameWithType>/<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 및 앞에서 언급한 <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>/<xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> 메서드는 시간 제한 값을 허용하지 않습니다.  대신, <xref:System.Threading.Tasks.Task.Delay%2A?displayProperty=nameWithType> 및 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>를 함께 사용하여 시간 제한을 구현할 수 있습니다.
 
- 예를 들어 UI 응용 프로그램에서 이미지를 다운로드하려고 하며 이미지를 다운로드하는 동안에 UI를 사용하지 않도록 설정하려고 합니다. 그러나 다운로드가 너무 오래 걸리는 경우 UI를 다시 사용하도록 설정하고 다운로드를 취소하려고 합니다.
+ 예를 들어 UI 애플리케이션에서 이미지를 다운로드하려고 하며 이미지를 다운로드하는 동안에 UI를 사용하지 않도록 설정하려고 합니다. 그러나 다운로드가 너무 오래 걸리는 경우 UI를 다시 사용하도록 설정하고 다운로드를 취소하려고 합니다.
 
 ```csharp
 public async void btnDownload_Click(object sender, EventArgs e)
@@ -569,7 +569,7 @@ public static async Task<T> RetryOnFault<T>(
 }
 ```
 
- 이 조합기를 사용하여 응용 프로그램의 논리에 다시 시도를 인코딩할 수 있습니다. 예를 들면 다음과 같습니다.
+ 이 조합기를 사용하여 애플리케이션의 논리에 다시 시도를 인코딩할 수 있습니다. 예를 들면 다음과 같습니다.
 
 ```csharp
 // Download the URL, trying up to three times in case of failure
@@ -727,7 +727,7 @@ public class AsyncCache<TKey, TValue>
 }
 ```
 
- [AsyncCache\<TKey,TValue>](https://blogs.msdn.microsoft.com/pfxteam/2010/04/23/parallelextensionsextras-tour-12-asynccache/) 클래스는 `TKey`를 받고 <xref:System.Threading.Tasks.Task%601> 개체를 반환하는 함수를 해당 생성자에 대한 대리자로 허용합니다.  캐시에서 이전에 액세스했던 값은 내부 사전에 저장되며, 캐시에 동시에 액세스하더라도 `AsyncCache`는 키당 하나의 작업만 생성되도록 합니다.
+ [AsyncCache\<TKey,TValue>](https://devblogs.microsoft.com/pfxteam/parallelextensionsextras-tour-12-asynccache/) 클래스는 `TKey`를 받고 <xref:System.Threading.Tasks.Task%601> 개체를 반환하는 함수를 해당 생성자에 대한 대리자로 허용합니다.  캐시에서 이전에 액세스했던 값은 내부 사전에 저장되며, 캐시에 동시에 액세스하더라도 `AsyncCache`는 키당 하나의 작업만 생성되도록 합니다.
 
  예를 들어 다운로드한 웹 페이지에 대한 캐시를 빌드할 수 있습니다.
 
@@ -833,7 +833,7 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> <xref:System.Threading.Tasks.Dataflow> 네임스페이스는 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]에서 **NuGet**을 통해 사용할 수 있습니다. <xref:System.Threading.Tasks.Dataflow> 네임스페이스가 포함된 어셈블리를 설치하려면 Visual Studio에서 프로젝트를 열고 프로젝트 메뉴에서 **NuGet 패키지 관리**를 선택한 후 온라인으로 Microsoft.Tpl.Dataflow 패키지를 검색합니다.
+> <xref:System.Threading.Tasks.Dataflow> 네임스페이스는 .NET Framework 4.5에서 **NuGet**을 통해 사용할 수 있습니다. <xref:System.Threading.Tasks.Dataflow> 네임스페이스가 포함된 어셈블리를 설치하려면 Visual Studio에서 프로젝트를 열고 프로젝트 메뉴에서 **NuGet 패키지 관리**를 선택한 후 온라인으로 Microsoft.Tpl.Dataflow 패키지를 검색합니다.
 
 ## <a name="see-also"></a>참고 항목
 

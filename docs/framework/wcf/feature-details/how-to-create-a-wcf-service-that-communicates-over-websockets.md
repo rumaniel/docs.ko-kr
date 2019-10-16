@@ -2,19 +2,19 @@
 title: '방법: WebSocket을 통해 통신하는 WCF 서비스 만들기'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: a9b3ae8d8dcac7844e241fa668e1199669d216e6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 706c2886bda9497835d98eeeb594e68c2191d8d8
+ms.sourcegitcommit: 7b1ce327e8c84f115f007be4728d29a89efe11ef
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196202"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70969999"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>방법: WebSocket을 통해 통신하는 WCF 서비스 만들기
 WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> 바인딩을 사용하여 WebSocket에서 통신할 수 있습니다.  WebSocket은 <xref:System.ServiceModel.NetHttpBinding>에서 서비스 계약이 콜백 계약을 정의한다고 판단할 때 사용됩니다. 이 항목은 WebSocket에서 통신하기 위해 <xref:System.ServiceModel.NetHttpBinding>을 사용하는 WCF 서비스와 클라이언트를 구현하는 방법을 설명합니다.  
   
 ### <a name="define-the-service"></a>서비스 정의  
   
-1.  콜백 계약 정의  
+1. 콜백 계약 정의  
   
     ```csharp  
     [ServiceContract]  
@@ -27,7 +27,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
   
      이 계약은 클라이언트 응용 프로그램에서 서비스가 메시지를 다시 클라이언트로 보낼 수 있도록 허용하기 위해 구현합니다.  
   
-2.  서비스 계약을 정의하고 `IStockQuoteCallback` 인터페이스를 콜백 계약으로 지정합니다.  
+2. 서비스 계약을 정의하고 `IStockQuoteCallback` 인터페이스를 콜백 계약으로 지정합니다.  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,9 +38,9 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
         }  
     ```  
   
-3.  서비스 계약을 구현합니다.  
+3. 서비스 계약을 구현합니다.  
   
-    ```  
+    ```csharp
     public class StockQuoteService : IStockQuoteService  
         {  
             public async Task StartSendingQuotes()  
@@ -61,7 +61,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
   
      서비스 작업 `StartSendingQuotes`는 비동기 호출로 구현됩니다. `OperationContext`를 사용하여 콜백 채널을 검색하고 채널이 열려 있을 경우 콜백 채널에 대해 비동기 호출을 수행합니다.  
   
-4.  서비스 구성  
+4. 서비스 구성  
   
     ```xml  
     <configuration>  
@@ -94,7 +94,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
   
 ### <a name="define-the-client"></a>클라이언트 정의  
   
-1.  콜백 계약을 구현합니다.  
+1. 콜백 계약을 구현합니다.  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  
@@ -108,7 +108,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
   
      콜백 계약 작업은 비동기 메서드로 구현됩니다.  
   
-    1.  클라이언트 코드를 구현합니다.  
+    1. 클라이언트 코드를 구현합니다.  
   
         ```csharp  
         class Program  
@@ -133,7 +133,7 @@ WCF 서비스 및 클라이언트는 <xref:System.ServiceModel.NetHttpBinding> �
   
          여기서 쉽게 구분할 수 있도록 CallbackHandler가 반복되었습니다. 클라이언트 응용 프로그램은 새 InstanceContext를 만들고 콜백 인스턴스의 구현을 지정합니다. 그런 다음 새로 만들어진 InstanceContext에 참조를 보내는 프록시 클래스의 인스턴스를 만듭니다. 클라이언트가 서비스를 호출하면 서비스는 지정된 콜백 계약을 사용하여 클라이언트를 호출합니다.  
   
-    2.  클라이언트 구성  
+    2. 클라이언트 구성  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  
@@ -191,7 +191,7 @@ namespace Server
 }  
 ```  
   
-```  
+```csharp
 // StockQuoteService.svc.cs  
 using System;  
 using System.Collections.Generic;  
@@ -257,7 +257,7 @@ namespace Server
 </configuration>  
 ```  
   
-```  
+```
 <!-- StockQuoteService.svc -->  
 <%@ ServiceHost Language="C#" Debug="true" Service="Server.StockQuoteService" CodeBehind="StockQuoteService.svc.cs" %>  
 ```  
@@ -295,7 +295,7 @@ namespace Client
 ```  
   
 ```xml  
-<!—App.config -->  
+<!--App.config -->  
 <?xml version="1.0" encoding="utf-8" ?>  
 <configuration>  
     <startup>   
@@ -318,6 +318,7 @@ namespace Client
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [동기 및 비동기 작업](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)  
- [NetHttpBinding 사용](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)
+## <a name="see-also"></a>참고자료
+
+- [동기 및 비동기 작업](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
+- [NetHttpBinding 사용](../../../../docs/framework/wcf/feature-details/using-the-nethttpbinding.md)

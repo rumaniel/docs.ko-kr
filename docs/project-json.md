@@ -4,12 +4,12 @@ description: .NET Core 및 ASP.NET Core용 시험판 도구에 대한 설명서�
 author: mairaw
 ms.author: mairaw
 ms.date: 03/08/2017
-ms.openlocfilehash: f5f4dd8f335d940d5c63baef73e83dd3d0eccf6e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: ccdf897727ed52ccbed3e56b5a9a08cb45427d70
+ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47216619"
+ms.lasthandoff: 01/17/2019
+ms.locfileid: "54361965"
 ---
 # <a name="projectjson-and-visual-studio-2015-with-net-core"></a>.NET Core를 사용하는 project.json 및 Visual Studio 2015
 
@@ -17,12 +17,9 @@ ms.locfileid: "47216619"
 
 3월 7일 업데이트 이전의 설명서 버전은 PDF 파일 및 설명서 리포지토리의 분기에서 제공됩니다.
 
-## <a name="pdf-files"></a>PDF 파일
+## <a name="pdf-documentation"></a>PDF 문서
 
-이전 설명서의 가장 좋은 원본은 PDF 파일입니다.
-
-* [.NET Core - project.json 및 Visual Studio 2015에 대한 PDF](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf)
-* [ASP.NET Core - project.json 및 Visual Studio 2015에 대한 PDF](https://github.com/aspnet/Docs/blob/master/aspnetcore/common/_static/aspnet-core-project-json.pdf)
+이전 문서의 가장 좋은 소스는 [.NET Core - project.json 및 Visual Studio 2015에 대한 PDF](https://github.com/dotnet/docs/blob/project.json/net-core-project-json.pdf)입니다.
 
 ## <a name="documentation-repository-branch"></a>설명서 리포지토리 분기
 

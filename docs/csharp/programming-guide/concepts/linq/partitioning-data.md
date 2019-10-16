@@ -2,19 +2,19 @@
 title: 데이터 분할(C#)
 ms.date: 07/20/2015
 ms.assetid: 2a5c507b-fe22-443c-a768-dec7f9ec568d
-ms.openlocfilehash: 2e719b3a61b7c42d8ec6afe5fffe88a5bf83f82e
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: d9330e9973b2f25903e1f81a7296362e2a7c756b
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43523463"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591585"
 ---
 # <a name="partitioning-data-c"></a>데이터 분할(C#)
 LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하지 않고 입력 시퀀스를 두 개의 섹션으로 나누는 작업을 가리킵니다.  
   
  다음 그림은 문자 시퀀스에 대한 세 가지 분할 작업의 결과를 보여 줍니다. 첫 번째 작업은 시퀀스에서 처음 세 개의 요소를 반환합니다. 두 번째 작업은 처음 세 개의 요소를 건너뛰고 나머지 요소를 반환합니다. 세 번째 작업은 시퀀스에서 처음 두 개의 요소를 건너뛰고 다음 세 개의 요소를 반환합니다.  
   
- ![LINQ 분할 작업](../../../../csharp/programming-guide/concepts/linq/media/linq_partition.png "LINQ_Partition")  
+ ![세 개의 LINQ 분할 작업을 보여주는 그림.](./media/partitioning-data/linq-partitioning-operations.png)  
   
  시퀀스를 분할하는 표준 쿼리 연산자 메서드가 다음 섹션에 나와 있습니다.  
   
@@ -29,5 +29,5 @@ LINQ의 분할은 요소를 다시 정렬한 후 섹션 중 하나를 반환하�
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Linq>  
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)

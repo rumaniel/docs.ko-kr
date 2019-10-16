@@ -11,11 +11,11 @@ api_type:
 - Assembly
 author: stevewhims
 ms.openlocfilehash: 640a925c3aec86b4743b1b2b62eb3793af1cc0bb
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32742207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675418"
 ---
 # <a name="coreresponsedata-class"></a>CoreResponseData 클래스
 
@@ -28,14 +28,14 @@ internal class CoreResponseData
 ```
 
 > [!WARNING]
-> 이 API는 내부 하며 사용자 코드에서 직접 사용할 수 다루지는지 않습니다. 를 대신 사용 해야는 <xref:System.Diagnostics.DiagnosticSource> 네트워킹 코드를 연결 합니다. 참조 [DiagnosticSource 사용자 가이드](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)합니다.
+> 이 API는 내부 및 코드에서 직접 사용할 수 없습니다 것입니다. 대신 사용 해야는 <xref:System.Diagnostics.DiagnosticSource> 네트워킹 코드를 연결 합니다. 참조 [DiagnosticSource 사용자 가이드](https://github.com/dotnet/corefx/blob/master/src/System.Diagnostics.DiagnosticSource/src/DiagnosticSourceUsersGuide.md)합니다.
 > 
-> Microsoft은 프로덕션 응용 프로그램의 어떤 상황에서이 클래스의 사용을 지원 하지 않습니다.
+> Microsoft는 어떤 상황에서 프로덕션 응용 프로그램에서이 클래스의 사용을 지원 하지 않습니다.
 
 ## <a name="requirements"></a>요구 사항
 
-**Namespace:** <xref:System.Net>
+**네임스페이스:** <xref:System.Net>
 
-**어셈블리:** 시스템 (System.dll)
+**어셈블리:** 시스템 (에: System.dll)
 
-**.NET framework 버전:** 2.0부터 사용 가능 합니다.
+**.NET framework 버전:** 2.0부터 사용할 수 있습니다.

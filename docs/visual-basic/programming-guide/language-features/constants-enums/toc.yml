@@ -1,0 +1,29 @@
+- name: 상수 및 열거형
+  href: index.md
+  items:
+    - name: 상수 개요
+      href: constants-overview.md
+      items:
+        - name: '방법: 상수 선언'
+          href: how-to-declare-a-constant.md
+        - name: 사용자 정의 상수
+          href: user-defined-constants.md
+        - name: 상수 및 리터럴 데이터 형식
+          href: constant-and-literal-data-types.md
+        - name: '방법: 관련 상수 값 그룹화'
+          href: how-to-group-related-constant-values-together.md
+    - name: 열거형 개요
+      href: enumerations-overview.md
+      items:
+        - name: '방법: 열거형 선언'
+          href: how-to-declare-enumerations.md
+        - name: '방법: 열거형 멤버 참조'
+          href: how-to-refer-to-an-enumeration-member.md
+        - name: 열거형 및 이름 한정
+          href: enumerations-and-name-qualification.md
+        - name: '방법: 열거형 반복'
+          href: how-to-iterate-through-an-enumeration.md
+        - name: '방법: 열거형 값과 연결된 문자열 확인'
+          href: how-to-determine-the-string-associated-with-an-enumeration-value.md
+        - name: 열거형을 사용하는 경우
+          href: when-to-use-an-enumeration.md

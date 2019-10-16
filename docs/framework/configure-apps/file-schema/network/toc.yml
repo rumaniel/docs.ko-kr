@@ -1,0 +1,99 @@
+- name: 네트워크 설정 스키마
+  href: index.md
+  items:
+    - name: <system.Net> 요소(네트워크 설정)
+      href: system-net-element-network-settings.md
+      items:
+        - name: <authenticationModules> 요소(네트워크 설정)
+          href: authenticationmodules-element-network-settings.md
+          items:
+            - name: authenticationModules의 <add> 요소(네트워크 설정)
+              href: add-element-for-authenticationmodules-network-settings.md
+            - name: authenticationModules의 <remove> 요소(네트워크 설정)
+              href: remove-element-for-authenticationmodules-network-settings.md
+            - name: authenticationModules의 <clear> 요소(네트워크 설정)
+              href: clear-element-for-authenticationmodules-network-settings.md
+        - name: <connectionManagement> 요소(네트워크 설정)
+          href: connectionmanagement-element-network-settings.md
+          items:
+            - name: connectionManagement의 <add> 요소(네트워크 설정)
+              href: add-element-for-connectionmanagement-network-settings.md
+            - name: connectionManagement의 <clear> 요소(네트워크 설정)
+              href: clear-element-for-connectionmanagement-network-settings.md
+            - name: connectionManagement의 <remove> 요소(네트워크 설정)
+              href: remove-element-for-connectionmanagement-network-settings.md
+        - name: <defaultProxy> 요소(네트워크 설정)
+          href: defaultproxy-element-network-settings.md
+          items:
+            - name: <bypasslist> 요소(네트워크 설정)
+              href: bypasslist-element-network-settings.md
+              items:
+                - name: bypasslist의 <add> 요소(네트워크 설정)
+                  href: add-element-for-bypasslist-network-settings.md
+                - name: bypasslist의 <clear> 요소(네트워크 설정)
+                  href: clear-element-for-bypasslist-network-settings.md
+                - name: bypasslist의 <remove> 요소(네트워크 설정)
+                  href: remove-element-for-bypasslist-network-settings.md
+            - name: <module> 요소(네트워크 설정)
+              href: module-element-network-settings.md
+            - name: <proxy> 요소(네트워크 설정)
+              href: proxy-element-network-settings.md
+        - name: <mailSettings> 요소(네트워크 설정)
+          href: mailsettings-element-network-settings.md
+          items:
+            - name: <smtp> 요소(네트워크 설정)
+              href: smtp-element-network-settings.md
+              items:
+                - name: <specifiedPickupDirectory> 요소(네트워크 설정)
+                  href: specifiedpickupdirectory-element-network-settings.md
+                - name: <network> 요소(네트워크 설정)
+                  href: network-element-network-settings.md
+        - name: <requestCaching> 요소(네트워크 설정)
+          href: requestcaching-element-network-settings.md
+          items:
+            - name: <defaultHttpCachePolicy> 요소(네트워크 설정)
+              href: defaulthttpcachepolicy-element-network-settings.md
+            - name: <defaultFtpCachePolicy> 요소(네트워크 설정)
+              href: defaultftpcachepolicy-element-network-settings.md
+        - name: <settings> 요소(네트워크 설정)
+          href: settings-element-network-settings.md
+          items:
+            - name: <httpWebRequest> 요소(네트워크 설정)
+              href: httpwebrequest-element-network-settings.md
+            - name: <ipv6> 요소(네트워크 설정)
+              href: ipv6-element-network-settings.md
+            - name: <performanceCounter> 요소(네트워크 설정)
+              href: performancecounter-element-network-settings.md
+            - name: <servicePointManager> 요소(네트워크 설정)
+              href: servicepointmanager-element-network-settings.md
+            - name: <socket> 요소(네트워크 설정)
+              href: socket-element-network-settings.md
+            - name: <webProxyScript> 요소(네트워크 설정)
+              href: webproxyscript-element-network-settings.md
+            - name: <httpListener> 요소(네트워크 설정)
+              href: httplistener-element-network-settings.md
+        - name: <webRequestModules> 요소(네트워크 설정)
+          href: webrequestmodules-element-network-settings.md
+          items:
+            - name: webRequestModules의 <add> 요소(네트워크 설정)
+              href: add-element-for-webrequestmodules-network-settings.md
+            - name: webRequestModules의 <remove> 요소(네트워크 설정)
+              href: remove-element-for-webrequestmodules-network-settings.md
+            - name: webRequestModules의 <clear> 요소(네트워크 설정)
+              href: clear-element-for-webrequestmodules-network-settings.md
+    - name: <uri> 요소(URI 설정)
+      href: uri-element-uri-settings.md
+      items:
+        - name: <idn> 요소(URI 설정)
+          href: idn-element-uri-settings.md
+        - name: <iriParsing> 요소(URI 설정)
+          href: iriparsing-element-uri-settings.md
+        - name: <schemeSettings> 요소(URI 설정)
+          href: schemesettings-element-uri-settings.md
+          items:
+            - name: schemeSettings의 <add> 요소(URI 설정)
+              href: add-element-for-schemesettings-uri-settings.md
+            - name: schemeSettings의 <clear> 요소(URI 설정)
+              href: clear-element-for-schemesettings-uri-settings.md
+            - name: schemeSettings의 <remove> 요소(URI 설정)
+              href: remove-element-for-schemesettings-uri-settings.md

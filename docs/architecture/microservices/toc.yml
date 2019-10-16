@@ -1,0 +1,159 @@
+- name: '.NET 마이크로 서비스: 컨테이너화된 .NET 애플리케이션을 위한 아키텍처'
+  href: index.md
+  items:
+    - name: 컨테이너 및 Docker 소개
+      href: container-docker-introduction/index.md
+      items:
+        - name: Docker란?
+          href: container-docker-introduction/docker-defined.md
+        - name: Docker 용어
+          href: container-docker-introduction/docker-terminology.md
+        - name: 'Docker 컨테이너, 이미지 및 레지스트리'
+          href: container-docker-introduction/docker-containers-images-registries.md
+    - name: Docker 컨테이너에 대해 .NET Core와 .NET Framework 중에 선택
+      href: net-core-net-framework-containers/index.md
+      items:
+        - name: 일반 지침
+          href: net-core-net-framework-containers/general-guidance.md
+        - name: Docker 컨테이너에 대해 .NET Core를 선택할 경우
+          href: net-core-net-framework-containers/net-core-container-scenarios.md
+        - name: Docker 컨테이너에 대해 .NET Framework를 선택하는 경우
+          href: net-core-net-framework-containers/net-framework-container-scenarios.md
+        - name: '의사 결정 테이블: Docker에 사용할 .NET Framework'
+          href: net-core-net-framework-containers/container-framework-choice-factors.md
+        - name: .NET 컨테이너에서 대상으로 지정할 OS
+          href: net-core-net-framework-containers/net-container-os-targets.md
+        - name: 공식 .NET Docker 이미지
+          href: net-core-net-framework-containers/official-net-docker-images.md
+    - name: 컨테이너 및 마이크로 서비스 기반 애플리케이션 설계
+      href: architect-microservice-container-applications/index.md
+      items:
+        - name: 모놀리식 애플리케이션 컨테이너화
+          href: architect-microservice-container-applications/containerize-monolithic-applications.md
+        - name: Docker 애플리케이션의 상태 및 데이터
+          href: architect-microservice-container-applications/docker-application-state-data.md
+        - name: 서비스 지향 아키텍처
+          href: architect-microservice-container-applications/service-oriented-architecture.md
+        - name: 마이크로 서비스 아키텍처
+          href: architect-microservice-container-applications/microservices-architecture.md
+        - name: 마이크로 서비스별 데이터 주권
+          href: architect-microservice-container-applications/data-sovereignty-per-microservice.md
+        - name: 논리적 아키텍처 대 물리적 아키텍처
+          href: architect-microservice-container-applications/logical-versus-physical-architecture.md
+        - name: 분산 데이터 관리를 위한 과제 및 해결 방법
+          href: architect-microservice-container-applications/distributed-data-management.md
+        - name: 각 마이크로 서비스의 도메인 모델 경계 식별
+          href: architect-microservice-container-applications/identify-microservice-domain-model-boundaries.md
+        - name: 클라이언트-마이크로 서비스 간 직접 통신과 API 게이트웨이 패턴 비교
+          href: architect-microservice-container-applications/direct-client-to-microservice-communication-versus-the-api-gateway-pattern.md
+        - name: 마이크로 서비스 아키텍처의 통신
+          href: architect-microservice-container-applications/communication-in-microservice-architecture.md
+        - name: 비동기 메시지 기반 통신
+          href: architect-microservice-container-applications/asynchronous-message-based-communication.md
+        - name: '마이크로 서비스 API 및 계약 만들기, 개선 및 버전 관리'
+          href: architect-microservice-container-applications/maintain-microservice-apis.md
+        - name: 마이크로 서비스 주소 지정 기능 및 서비스 레지스트리
+          href: architect-microservice-container-applications/microservices-addressability-service-registry.md
+        - name: 여러 마이크로 서비스에서 생성된 시각적 UI 셰이프 및 레이아웃을 포함하여 마이크로 서비스를 기반으로 복합 UI 만들기
+          href: architect-microservice-container-applications/microservice-based-composite-ui-shape-layout.md
+        - name: 마이크로 서비스의 복원력 및 고가용성
+          href: architect-microservice-container-applications/resilient-high-availability-microservices.md
+        - name: 높은 확장성 및 가용성을 위한 마이크로 서비스 및 다중 컨테이너 애플리케이션 오케스트레이션
+          href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
+    - name: Docker 기반 애플리케이션에 대한 개발 프로세스
+      href: docker-application-development-process/index.md
+      items:
+        - name: Docker 앱에 대한 개발 워크플로
+          href: docker-application-development-process/docker-app-development-workflow.md
+    - name: 다중 컨테이너 및 마이크로서비스 기반 NET 애플리케이션 디자인 및 개발
+      href: multi-container-microservice-net-applications/index.md
+      items:
+        - name: 마이크로 서비스 지향 애플리케이션 디자인
+          href: multi-container-microservice-net-applications/microservice-application-design.md
+        - name: 단순 데이터 기반 CRUD 마이크로 서비스 만들기
+          href: multi-container-microservice-net-applications/data-driven-crud-microservice.md
+        - name: docker-compose.yml을 사용하여 다중 컨테이너 애플리케이션 정의
+          href: multi-container-microservice-net-applications/multi-container-applications-docker-compose.md
+        - name: 컨테이너로 실행되는 데이터베이스 서버 사용
+          href: multi-container-microservice-net-applications/database-server-container.md
+        - name: 마이크로 서비스(통합 이벤트) 간 이벤트 기반 통신 구현
+          href: multi-container-microservice-net-applications/integration-event-based-microservice-communications.md
+        - name: RabbitMQ를 사용하여 개발 또는 테스트 환경에 대한 이벤트 서비스 구현
+          href: multi-container-microservice-net-applications/rabbitmq-event-bus-development-test-environment.md
+        - name: 이벤트 구독
+          href: multi-container-microservice-net-applications/subscribe-events.md
+        - name: ASP.NET Core 서비스 및 웹앱 테스트
+          href: multi-container-microservice-net-applications/test-aspnet-core-services-web-apps.md
+        - name: IHostedService를 사용하여 마이크로서비스에서 백그라운드 작업 구현
+          href: multi-container-microservice-net-applications/background-tasks-with-ihostedservice.md
+        - name: Ocelot을 사용하여 API 게이트웨이 구현
+          href: multi-container-microservice-net-applications/implement-api-gateways-with-ocelot.md
+    - name: DDD 및 CQRS 패턴을 사용하여 마이크로 서비스에서 비즈니스 복잡성 처리
+      href: microservice-ddd-cqrs-patterns/index.md
+      items:
+        - name: 마이크로 서비스에서 간소화된 CQRS 및 DDD 패턴 적용
+          href: microservice-ddd-cqrs-patterns/apply-simplified-microservice-cqrs-ddd-patterns.md
+        - name: eShopOnContainers의 DDD 마이크로 서비스에서 CQRS 및 CQS 방법 적용
+          href: microservice-ddd-cqrs-patterns/eshoponcontainers-cqrs-ddd-microservice.md
+        - name: CQRS 마이크로 서비스에서 읽기/쿼리 구현
+          href: microservice-ddd-cqrs-patterns/cqrs-microservice-reads.md
+        - name: DDD 중심 마이크로 서비스 설계
+          href: microservice-ddd-cqrs-patterns/ddd-oriented-microservice.md
+        - name: 마이크로 서비스 도메인 모델 디자인
+          href: microservice-ddd-cqrs-patterns/microservice-domain-model.md
+        - name: .NET Core를 사용하여 마이크로 서비스 도메인 모델 구현
+          href: microservice-ddd-cqrs-patterns/net-core-microservice-domain-model.md
+        - name: Seedwork(도메인 모델에 대해 재사용이 가능한 기본 클래스 및 인터페이스)
+          href: microservice-ddd-cqrs-patterns/seedwork-domain-model-base-classes-interfaces.md
+        - name: 값 개체 구현
+          href: microservice-ddd-cqrs-patterns/implement-value-objects.md
+        - name: 열거형 형식 대신 열거형 클래스 사용
+          href: microservice-ddd-cqrs-patterns/enumeration-classes-over-enum-types.md
+        - name: 도메인 모델 레이어에서 유효성 검사 디자인
+          href: microservice-ddd-cqrs-patterns/domain-model-layer-validations.md
+        - name: 클라이언트 쪽 유효성 검사(프레젠테이션 레이어의 유효성 검사)
+          href: microservice-ddd-cqrs-patterns/client-side-validation.md
+        - name: '도메인 이벤트: 디자인 및 구현'
+          href: microservice-ddd-cqrs-patterns/domain-events-design-implementation.md
+        - name: 인프라 지속성 계층 디자인
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-design.md
+        - name: Entity Framework Core를 사용하여 인프라 지속성 레이어 구현
+          href: microservice-ddd-cqrs-patterns/infrastructure-persistence-layer-implemenation-entity-framework-core.md
+        - name: NoSQL 데이터베이스를 지속성 인프라로 사용
+          href: microservice-ddd-cqrs-patterns/nosql-database-persistence-infrastructure.md
+        - name: 마이크로 서비스 애플리케이션 레이어 및 웹 API 설계
+          href: microservice-ddd-cqrs-patterns/microservice-application-layer-web-api-design.md
+        - name: Web API를 사용하여 마이크로 서비스 애플리케이션 계층 구현
+          href: microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md
+    - name: 복원력 있는 애플리케이션 구현
+      href: implement-resilient-applications/index.md
+      items:
+        - name: 부분 실패 처리
+          href: implement-resilient-applications/handle-partial-failure.md
+        - name: 부분 실패 처리 전략
+          href: implement-resilient-applications/partial-failure-strategies.md
+        - name: 지수 백오프를 사용하여 다시 시도 구현
+          href: implement-resilient-applications/implement-retries-exponential-backoff.md
+        - name: 복원력 있는 Entity Framework Core SQL 연결 구현
+          href: implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md
+        - name: 지수 백오프를 사용하여 사용자 지정 HTTP 호출 다시 시도 살펴보기
+          href: implement-resilient-applications/explore-custom-http-call-retries-exponential-backoff.md
+        - name: HttpClientFactory를 사용하여 복원력 있는 HTTP 요청 구현
+          href: implement-resilient-applications/use-httpclientfactory-to-implement-resilient-http-requests.md
+        - name: Polly를 통해 지수 백오프를 사용하여 HTTP 호출 다시 시도 구현
+          href: implement-resilient-applications/implement-http-call-retries-exponential-backoff-polly.md
+        - name: 회로 차단기 패턴 구현
+          href: implement-resilient-applications/implement-circuit-breaker-pattern.md
+        - name: 상태 모니터링
+          href: implement-resilient-applications/monitor-app-health.md
+    - name: NET 마이크로서비스 및 웹 애플리케이션 보호
+      href: secure-net-microservices-web-applications/index.md
+      items:
+        - name: .NET 마이크로 서비스 및 웹 애플리케이션의 권한 부여 정보
+          href: secure-net-microservices-web-applications/authorization-net-microservices-web-applications.md
+        - name: 개발하는 동안 애플리케이션 비밀 저장
+          href: secure-net-microservices-web-applications/developer-app-secrets-storage.md
+        - name: Azure Key Vault를 사용하여 프로덕션 시 비밀 보호
+          href: secure-net-microservices-web-applications/azure-key-vault-protects-secrets.md
+    - name: 핵심 내용
+      href: key-takeaways.md

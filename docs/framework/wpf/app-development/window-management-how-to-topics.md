@@ -6,30 +6,30 @@ f1_keywords:
 helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
-ms.openlocfilehash: df22dcbc64bff95e2263ba11195146622b9d58cf
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550139"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788689"
 ---
 # <a name="window-management-how-to-topics"></a>창 관리 방법 도움말 항목
-다음 항목에서는 관리 하는 방법을 보여 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows 합니다.  
+다음 항목에서는 관리 하는 방법을 보여 줍니다 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] windows.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [콘텐츠에 맞게 자동으로 창 크기 조정](../../../../docs/framework/wpf/app-development/how-to-automatically-size-a-window-to-fit-its-content.md)  
-  [응용 프로그램의 모든 창 가져오기](../../../../docs/framework/wpf/app-development/how-to-get-all-windows-in-an-application.md)  
-  [기본 응용 프로그램 창 가져오기 및 설정](../../../../docs/framework/wpf/app-development/how-to-get-and-set-the-main-application-window.md)  
-  [대화 상자 열기](../../../../docs/framework/wpf/app-development/how-to-open-a-dialog-box.md)  
-  [메시지 상자 열기](../../../../docs/framework/wpf/app-development/how-to-open-a-message-box.md)  
-  [창 열기](../../../../docs/framework/wpf/app-development/how-to-open-a-window.md)  
-  [대화 상자 결과 반환](../../../../docs/framework/wpf/app-development/how-to-return-a-dialog-box-result.md)  
+ [콘텐츠에 맞게 자동으로 창 크기 조정](how-to-automatically-size-a-window-to-fit-its-content.md)  
+  [애플리케이션의 모든 창 가져오기](how-to-get-all-windows-in-an-application.md)  
+  [기본 애플리케이션 창 가져오기 및 설정](how-to-get-and-set-the-main-application-window.md)  
+  [대화 상자 열기](how-to-open-a-dialog-box.md)  
+  [메시지 상자 열기](how-to-open-a-message-box.md)  
+  [창 열기](how-to-open-a-window.md)  
+  [대화 상자 결과 반환](how-to-return-a-dialog-box-result.md)  
   
 ## <a name="related-sections"></a>관련 단원  
- [응용 프로그램 관리 개요](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
+ [응용 프로그램 관리 개요](application-management-overview.md)  
   
- [탐색 개요](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
+ [탐색 개요](navigation-overview.md)  
   
- [호스팅](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
+ [호스팅](hosting-wpf-applications.md)  
   
- [빌드 및 배포](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [빌드 및 배포](building-and-deploying-wpf-applications.md)

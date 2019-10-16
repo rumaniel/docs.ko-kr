@@ -1,16 +1,15 @@
 ---
 title: System.Xml 사용법
-ms.date: 03/30/2017
+ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: 82302f0d-a621-4c6f-b57d-999bd61f21a6
-author: rpetrusha
-ms.author: ronpet
-ms.openlocfilehash: 5c3eb01e1050bc78d2b31de19a8a728af92777e8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+author: KrzysztofCwalina
+ms.openlocfilehash: fc94ac62d1f2413c5f51446a8f6d0a52d9151557
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650130"
 ---
 # <a name="systemxml-usage"></a>System.Xml 사용법
 이 섹션에 있는 여러 유형의 사용 방법과 <xref:System.Xml?displayProperty=nameWithType> 네임 스페이스는 XML 데이터를 나타내는 데 사용할 수 있습니다.  
@@ -25,9 +24,9 @@ ms.locfileid: "43863389"
   
  *Portions © 2005, 2009 Microsoft Corporation. 모든 권리 보유.*  
   
- *Pearson Education, Inc의 동의로 재인쇄. 출처: [Framework Design Guidelines: Conventions, Idioms, and Patterns for Reusable .NET Libraries, 2nd Edition](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) 작성자: Krzysztof Cwalina 및 Brad Abrams, 출판 정보: Oct 22, 2008 by Addison-Wesley Professional as part of the Microsoft Windows Development Series.*  
+ *사용 권한에서 교육, inc. 피어슨 재인쇄 [Framework 디자인 지침: 다시 사용할 수 있는.NET 라이브러리, 2nd Edition에 대 한 규칙, 관용구 패턴과](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Krzysztof Cwalina를 Brad Abrams Addison Wesley Professional에서 2008 년 10 월 22 일 Microsoft Windows 개발 시리즈의 일부로 게시 합니다.*  
   
 ## <a name="see-also"></a>참고자료
 
-- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)  
+- [프레임워크 디자인 지침](../../../docs/standard/design-guidelines/index.md)
 - [사용 지침](../../../docs/standard/design-guidelines/usage-guidelines.md)

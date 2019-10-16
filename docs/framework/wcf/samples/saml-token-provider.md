@@ -2,33 +2,33 @@
 title: SAML Token Provider
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: dfd693e262e7566c865d5b9faed5b9e00a8cfec9
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 4a6ee808d224696d4fc21337cc558fcc6218e71d
+ms.sourcegitcommit: 581ab03291e91983459e56e40ea8d97b5189227e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308528"
+ms.lasthandoff: 08/27/2019
+ms.locfileid: "70044762"
 ---
 # <a name="saml-token-provider"></a>SAML Token Provider
-이 샘플에서는 사용자 지정 클라이언트 SAML 토큰 공급자를 구현하는 방법을 보여 줍니다. 토큰 공급자를 Windows Communication Foundation (WCF)에서 보안 인프라에 자격 증명 제공에 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 기본 자격 증명 관리자 토큰 공급자를 사용 하 여 제공 됩니다. WCF도와 함께 제공 되는 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] 토큰 공급자입니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.
+이 샘플에서는 사용자 지정 클라이언트 SAML 토큰 공급자를 구현하는 방법을 보여 줍니다. WCF (Windows Communication Foundation)의 토큰 공급자는 보안 인프라에 자격 증명을 제공 하는 데 사용 됩니다. 일반적으로 토큰 공급자는 대상을 검사하고 적절한 자격 증명을 발급하여 보안 인프라에서 메시지의 보안을 유지할 수 있도록 합니다. WCF는 기본 자격 증명 관리자 토큰 공급자와 함께 제공 됩니다. WCF는 또한 CardSpace 토큰 공급자와 함께 제공 됩니다. 사용자 지정 토큰 공급자는 다음과 같은 경우에 유용합니다.
 
--   이러한 토큰 공급자가 작동되지 않는 자격 증명 저장소가 있는 경우
+- 이러한 토큰 공급자가 작동되지 않는 자격 증명 저장소가 있는 경우
 
--   WCF 클라이언트 프레임 워크에서 자격 증명을 사용 하는 경우에 세부 정보를 제공 하는 사용자 지점에서 자격 증명을 변형에 대 한 사용자 고유의 사용자 지정 메커니즘을 제공 하려면.
+- WCF 클라이언트 프레임 워크에서 자격 증명을 사용 하는 경우 사용자가 세부 정보를 제공 하는 시점에서 자격 증명을 변환 하는 사용자 지정 메커니즘을 제공 하려는 경우
 
--   사용자 지정 토큰을 빌드하고 있는 경우
+- 사용자 지정 토큰을 빌드하고 있는 경우
 
- 이 샘플에 사용할 WCF 클라이언트 프레임 워크 외부에서 가져온 SAML 토큰을 허용 하는 사용자 지정 토큰 공급자를 빌드하는 방법을 보여 줍니다.
+ 이 샘플에서는 WCF 클라이언트 프레임 워크 외부에서 가져온 SAML 토큰을 사용 하도록 허용 하는 사용자 지정 토큰 공급자를 빌드하는 방법을 보여 줍니다.
 
  즉, 이 샘플에서는 다음 방법을 보여 줍니다.
 
--   사용자 지정 토큰 공급자로 클라이언트를 구성하는 방법
+- 사용자 지정 토큰 공급자로 클라이언트를 구성하는 방법
 
--   사용자 지정 클라이언트 자격 증명으로 SAML 토큰을 전달하는 방법
+- 사용자 지정 클라이언트 자격 증명으로 SAML 토큰을 전달하는 방법
 
--   어떻게 SAML 토큰은 WCF 클라이언트 프레임 워크에 제공 됩니다.
+- WCF 클라이언트 프레임 워크에 SAML 토큰을 제공 하는 방법입니다.
 
--   서버의 X.509 인증서를 사용하여 클라이언트에서 서버를 인증하는 방법
+- 서버의 X.509 인증서를 사용하여 클라이언트에서 서버를 인증하는 방법
 
  서비스는 App.config 구성 파일을 사용하여 정의된, 서비스와의 통신에 사용되는 두 개의 끝점을 노출합니다. 각 끝점은 하나의 주소, 바인딩 및 계약으로 구성됩니다. 바인딩은 메시지 보안을 사용하는 표준 `wsFederationHttpBinding`으로 구성됩니다. 한 끝점에서는 클라이언트가 대칭 증명 키를 사용하는 SAML 토큰으로 인증할 것으로 예상하고, 다른 끝점에서는 클라이언트가 비대칭 증명 키를 사용하는 SAML 토큰으로 인증할 것으로 예상합니다. 또한 서비스는 `serviceCredentials` 동작을 사용하여 서비스 인증서를 구성합니다. `serviceCredentials` 동작을 통해 서비스 인증서를 구성할 수 있습니다. 서비스 인증서는 클라이언트에서 서비스를 인증하고 메시지 보호를 제공하는 데 사용됩니다. 다음 구성에서는 이 항목의 끝에 나오는 설치 지침에 설명된 대로 샘플 설치 중에 설치되는 "localhost" 인증서를 참조합니다. `serviceCredentials` 동작을 사용하면 SAML 토큰에 서명하도록 신뢰되는 인증서를 구성할 수도 있습니다. 다음 구성에서는 샘플 설치 중에 설치되는 'Alice' 인증서를 참조합니다.
 
@@ -111,9 +111,9 @@ ms.locfileid: "49308528"
 </system.serviceModel>
 ```
 
- 다음 단계를 사용자 지정 SAML 토큰 공급자를 개발 하 고 WCF와 통합 하는 방법을 보여 줍니다: 보안 프레임 워크:
+ 다음 단계에서는 사용자 지정 SAML 토큰 공급자를 개발 하 고 WCF: 보안 프레임 워크와 통합 하는 방법을 보여 줍니다.
 
-1.  사용자 지정 SAML 토큰 공급자를 씁니다.
+1. 사용자 지정 SAML 토큰 공급자를 씁니다.
 
      이 샘플에서는 생성 시에 제공되는 SAML 어설션을 기반으로 보안 토큰을 반환하는 사용자 지정 SAML 토큰 공급자를 구현합니다.
 
@@ -156,7 +156,7 @@ ms.locfileid: "49308528"
     }
     ```
 
-2.  사용자 지정 보안 토큰 관리자를 씁니다.
+2. 사용자 지정 보안 토큰 관리자를 씁니다.
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> 클래스는 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 메서드에서 전달되는 특정 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>에 대한 `CreateSecurityTokenProvider`를 만드는 데 사용됩니다. 또한 보안 토큰 관리자는 토큰 인증자와 토큰 serializer를 만드는 데 사용되지만 이 샘플에서는 설명하지 않습니다. 이 샘플에서 사용자 지정 보안 토큰 관리자는 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 클래스에서 상속되며 `CreateSecurityTokenProvider` 메서드를 재정의하여 전달된 토큰 요구 사항에서 SAML 토큰이 요청됨을 나타낼 때 사용자 지정 SAML 토큰 공급자를 반환합니다. 클라이언트 자격 증명 클래스(3단계 참조)에서 어설션을 지정하지 않은 경우에는 보안 토큰 관리자에서 적절한 인스턴스를 만듭니다.
 
@@ -228,7 +228,7 @@ ms.locfileid: "49308528"
     }
     ```
 
-3.  사용자 지정 클라이언트 자격 증명을 씁니다.
+3. 사용자 지정 클라이언트 자격 증명을 씁니다.
 
      클라이언트 자격 증명 클래스는 클라이언트 프록시에 대해 구성된 자격 증명을 나타내는 데 사용되며 토큰 인증자, 토큰 공급자 및 토큰 serializer를 가져오는 데 사용되는 보안 토큰 관리자를 만듭니다.
 
@@ -271,7 +271,7 @@ ms.locfileid: "49308528"
     }
     ```
 
-4.  사용자 지정 클라이언트 자격 증명을 사용하도록 클라이언트를 구성합니다.
+4. 사용자 지정 클라이언트 자격 증명을 사용하도록 클라이언트를 구성합니다.
 
      이 샘플에서는 기본 클라이언트 자격 증명 클래스를 삭제하고 새 클라이언트 자격 증명 클래스를 제공하여 클라이언트에서 사용자 지정 클라이언트 자격 증명을 사용할 수 있도록 합니다.
 
@@ -303,7 +303,7 @@ ms.locfileid: "49308528"
 
  아래에는 적절한 구성에서 실행할 수 있도록 배치 파일을 수정하는 데 도움이 되는 여러 관련 단원의 간략한 개요가 소개되어 있습니다.
 
--   서버 인증서 만들기
+- 서버 인증서 만들기
 
      Setup.bat 배치 파일에서 다음 행은 사용할 서버 인증서를 만듭니다. `%SERVER_NAME%`변수는 서버 이름을 지정합니다. 이 변수를 변경하여 고유의 서버 이름을 지정합니다. 이 배치 파일의 기본값은 localhost입니다.
 
@@ -319,7 +319,7 @@ ms.locfileid: "49308528"
     makecert.exe -sr LocalMachine -ss My -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치:
+- 클라이언트의 신뢰할 수 있는 인증서 저장소에 서버 인증서 설치:
 
      Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서와 같이 클라이언트가 신뢰할 수 있는 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우 클라이언트 인증서 저장소를 서버 인증서로 채우는 이 단계를 수행할 필요가 없습니다.
 
@@ -327,7 +327,7 @@ ms.locfileid: "49308528"
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r LocalMachine -s TrustedPeople
     ```
 
--   발급자 인증서 만들기:
+- 발급자 인증서 만들기:
 
      Setup.bat 배치 파일의 다음 행에서는 사용할 발급자 인증서를 만들 수 있습니다. `%USER_NAME%` 변수는 발급자 이름을 지정합니다. 이 변수를 변경하여 고유한 발급자 이름을 지정합니다. 이 배치 파일의 기본값은 Alice입니다.
 
@@ -343,7 +343,7 @@ ms.locfileid: "49308528"
     makecert.exe -sr CurrentUser -ss My -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   서버의 신뢰할 수 있는 인증서 저장소에 발급자 인증서 설치:
+- 서버의 신뢰할 수 있는 인증서 저장소에 발급자 인증서 설치:
 
      Setup.bat 배치 파일에서 다음 행은 클라이언트의 신뢰할 수 있는 사용자 저장소로 서버 인증서를 복사합니다. 이 단계는 Makecert.exe에서 생성한 인증서를 클라이언트 컴퓨터에서 절대적으로 신뢰하지는 않기 때문에 필요합니다. Microsoft에서 발급한 인증서처럼 신뢰할 수 있는 클라이언트 루트 인증서를 기반으로 하는 인증서가 이미 있는 경우에는 발급자 인증서로 서버 인증서 저장소를 채우는 이 단계를 수행할 필요가 없습니다.
 
@@ -353,50 +353,48 @@ ms.locfileid: "49308528"
 
 #### <a name="to-set-up-and-build-the-sample"></a>샘플을 설치하고 빌드하려면
 
-1.  수행 했는지 확인 합니다 [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)합니다.
+1. [Windows Communication Foundation 샘플에 대 한 일회성 설치 절차](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)를 수행 했는지 확인 합니다.
 
-2.  지침에 따라 솔루션을 빌드하려면 [Building Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)합니다.
+2. 솔루션을 빌드하려면 [Windows Communication Foundation 샘플 빌드](../../../../docs/framework/wcf/samples/building-the-samples.md)의 지침을 따르세요.
 
 > [!NOTE]
->  Svcutil.exe를 사용하여 이 샘플에 대한 구성을 다시 생성할 경우 클라이언트 구성에서 엔드포인트 이름을 클라이언트 코드와 일치하도록 수정해야 합니다.
+> Svcutil.exe를 사용하여 이 샘플에 대한 구성을 다시 생성할 경우 클라이언트 구성에서 엔드포인트 이름을 클라이언트 코드와 일치하도록 수정해야 합니다.
 
 #### <a name="to-run-the-sample-on-the-same-computer"></a>단일 컴퓨터 구성에서 샘플을 실행하려면
 
-1.  관리자 권한으로 실행 하는 Visual Studio 2012 명령 프롬프트에서 샘플 설치 폴더에서 Setup.bat를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
+1. 관리자 권한으로 실행 되는 Visual Studio 2012 명령 프롬프트 내의 샘플 설치 폴더에서 Setup.exe를 실행 합니다. 이 작업은 샘플 실행에 필요한 모든 인증서를 설치합니다.
 
     > [!NOTE]
-    >  Setup.bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 설계 되었습니다. 경로 환경 변수 집합을 Visual Studio 2012 명령 프롬프트 내에서 Setup.bat 스크립트에 필요한 실행 파일이 포함 된 디렉터리를 가리킵니다.  
+    > 설치 .bat 배치 파일은 Visual Studio 2012 명령 프롬프트에서 실행 되도록 디자인 되었습니다. Visual Studio 2012 명령 프롬프트 내에서 설정 된 PATH 환경 변수는 Setup. .bat 스크립트에 필요한 실행 파일을 포함 하는 디렉터리를 가리킵니다.  
   
-2.  service\bin에서 Service.exe를 실행합니다.  
+2. service\bin에서 Service.exe를 실행합니다.  
   
-3.  \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 응용 프로그램에 클라이언트 동작이 표시됩니다.  
+3. \client\bin에서 Client.exe를 실행합니다. 클라이언트 콘솔 애플리케이션에 클라이언트 동작이 표시됩니다.  
   
-4.  클라이언트와 서비스가 통신할 수 없는 경우 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)을 참조하세요.  
+4. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 #### <a name="to-run-the-sample-across-computers"></a>다중 컴퓨터 구성에서 샘플을 실행하려면  
   
-1.  서비스 컴퓨터에 서비스 이진 파일용 디렉터리를 만듭니다.  
+1. 서비스 컴퓨터에 서비스 이진 파일용 디렉터리를 만듭니다.  
   
-2.  서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
+2. 서비스 프로그램 파일을 서비스 컴퓨터의 서비스 디렉터리에 복사합니다. Setup.bat 및 Cleanup.bat 파일도 서비스 컴퓨터로 복사합니다.  
   
-3.  컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. 이 새로운 인증서 이름을 반영하도록 Service.exe.config 파일을 업데이트해야 합니다. Setup.bat 배치 파일을 수정하여 서버 인증서를 만들 수 있습니다. 관리자 권한으로 연 Visual Studio 명령 프롬프트 창에서 Setup.bat 파일을 실행해야 합니다. 서비스를 호스트하는 데 사용되는 컴퓨터의 정규화된 호스트 이름으로 `%SERVER_NAME%` 변수를 설정해야 합니다.  
+3. 컴퓨터의 정규화된 도메인 이름을 포함하는 주체 이름을 가진 서버 인증서가 있어야 합니다. 이 새로운 인증서 이름을 반영하도록 Service.exe.config 파일을 업데이트해야 합니다. Setup.bat 배치 파일을 수정하여 서버 인증서를 만들 수 있습니다. Setup.exe 파일은 관리자 권한으로 연 Visual Studio 용 개발자 명령 프롬프트 창에서 실행 해야 합니다. 서비스를 호스트하는 데 사용되는 컴퓨터의 정규화된 호스트 이름으로 `%SERVER_NAME%` 변수를 설정해야 합니다.  
   
-4.  서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 신뢰할 수 있는 클라이언트 발급자가 서버 인증서를 발급한 경우에는 이 단계를 수행할 필요가 없습니다.  
+4. 서버 인증서를 클라이언트의 CurrentUser-TrustedPeople 저장소에 복사합니다. 신뢰할 수 있는 클라이언트 발급자가 서버 인증서를 발급한 경우에는 이 단계를 수행할 필요가 없습니다.  
   
-5.  서비스 컴퓨터의 Service.exe.config 파일에서 기본 주소 값을 변경하여 localhost 대신 정규화된 컴퓨터 이름을 지정합니다.  
+5. 서비스 컴퓨터의 Service.exe.config 파일에서 기본 주소 값을 변경하여 localhost 대신 정규화된 컴퓨터 이름을 지정합니다.  
   
-6.  서비스 컴퓨터의 명령 프롬프트에서 Service.exe를 실행합니다.  
+6. 서비스 컴퓨터의 명령 프롬프트에서 Service.exe를 실행합니다.  
   
-7.  언어별 폴더의 \client\bin\ 폴더에서 클라이언트 프로그램 파일을 클라이언트 컴퓨터로 복사합니다.  
+7. 언어별 폴더의 \client\bin\ 폴더에서 클라이언트 프로그램 파일을 클라이언트 컴퓨터로 복사합니다.  
   
-8.  클라이언트 컴퓨터의 Client.exe.config 파일에서 끝점의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.  
+8. 클라이언트 컴퓨터의 Client.exe.config 파일에서 끝점의 주소 값을 서비스의 새 주소와 일치하도록 변경합니다.  
   
 9. 클라이언트 컴퓨터의 명령 프롬프트 창에서 `Client.exe`를 실행합니다.  
   
-10. 클라이언트와 서비스가 통신할 수 없는 경우 [Troubleshooting Tips](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)을 참조하세요.  
+10. 클라이언트와 서비스가 통신할 수 없는 경우 [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))을 참조 하세요.  
   
 #### <a name="to-clean-up-after-the-sample"></a>샘플 실행 후 정리를 수행하려면  
   
-1.  샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  
-  
-## <a name="see-also"></a>참고 항목
+1. 샘플 실행을 완료했으면 샘플 폴더에서 Cleanup.bat를 실행합니다.  

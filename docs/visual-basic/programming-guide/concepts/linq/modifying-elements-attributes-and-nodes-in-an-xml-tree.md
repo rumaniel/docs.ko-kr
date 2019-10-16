@@ -1,13 +1,13 @@
 ---
-title: 요소, 특성 및 XML Tree1에 노드를 수정합니다.
+title: 요소, 특성 및 노드를 XML Tree1에서 수정
 ms.date: 07/20/2015
 ms.assetid: 865cf54e-f8ac-4871-863b-a3e6fc61a4b9
-ms.openlocfilehash: 91a7cca2e39e5ddc62d6010fbe4efad9bd7ff3c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d548e6f5912437e5c5df27f55fcdb28990e92c8d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666146"
 ---
 # <a name="modifying-elements-attributes-and-nodes-in-an-xml-tree"></a>XML 트리에서 요소, 특성 및 노드 수정
 다음 표에는 요소, 해당 요소의 자식 요소 또는 특성을 수정하는 데 사용할 수 있는 메서드와 속성이 요약되어 있습니다.  
@@ -45,5 +45,6 @@ ms.locfileid: "33645215"
 |------------|-----------------|  
 |<xref:System.Xml.Linq.XContainer.ReplaceNodes%2A?displayProperty=nameWithType>|자식 노드를 새 내용으로 바꿉니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)
+## <a name="see-also"></a>참고자료
+
+- [XML 트리 수정 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)

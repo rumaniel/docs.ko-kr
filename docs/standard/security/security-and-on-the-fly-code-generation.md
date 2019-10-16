@@ -11,11 +11,11 @@ ms.assetid: 6d221724-bb21-4d76-90c3-0ee2a2e69be2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ffb1081c80c31353ad38080ae16ef9f8a74b5481
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45638021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860544"
 ---
 # <a name="security-and-on-the-fly-code-generation"></a>보안 및 빠른 코드 생성
 일부 라이브러리는 코드를 생성하고 실행하여 호출자에 대한 일부 작업을 수행하는 방식으로 작동합니다. 기본적인 문제는 낮은 신뢰 수준의 코드를 대신하여 코드를 생성하고 높은 신뢰 수준에서 실행하는 것입니다. 호출자가 코드 생성에 영향을 줄 수 있는 경우 문제가 더욱 악화되므로 안전하다고 생각하는 코드만 생성되도록 해야 합니다.  

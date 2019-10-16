@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4d83c690-ad2d-489e-a2e0-b85b898a672d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d1cd0b797373da4cab59484e3e6302927d821ed
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 07b5426f5af9cd6ca919d8da0de0acfed76a2e63
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47112726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954076"
 ---
 # <a name="parallel-programming-in-net"></a>.NET으로 병렬 프로그래밍
 
@@ -33,7 +33,7 @@ ms.locfileid: "47112726"
 |[병렬 프로그래밍을 위한 데이터 구조](../../../docs/standard/parallel-programming/data-structures-for-parallel-programming.md)|스레드로부터 안전한 컬렉션 클래스, 간단한 동기화 형식 및 초기화 지연 관련 형식에 대한 설명서의 링크를 제공합니다.|
 |[병렬 진단 도구](../../../docs/standard/parallel-programming/parallel-diagnostic-tools.md)|작업 및 병렬 스택의 Visual Studio 디버거 창에 대한 설명서와 [Concurrency 시각화](/visualstudio/profiling/concurrency-visualizer)에 대한 설명서로 연결되는 링크를 제공합니다.|
 |[PLINQ 및 TPL에 대한 사용자 지정 파티셔너](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md)|파티션 작동 방식 및 기본 파티션을 구성하거나 새 파티션을 만드는 방법에 대해 설명합니다.|
-|[작업 스케줄러](https://msdn.microsoft.com/library/638f8ea5-21db-47a2-a934-86e1e961bf65)|스케줄러 작동 방식 및 기본 스케줄러의 구성 방법에 대해 설명합니다.|
+|[작업 스케줄러](xref:System.Threading.Tasks.TaskScheduler)|스케줄러 작동 방식 및 기본 스케줄러의 구성 방법에 대해 설명합니다.|
 |[PLINQ 및 TPL의 람다 식](../../../docs/standard/parallel-programming/lambda-expressions-in-plinq-and-tpl.md)|C# 및 Visual Basic으로 작성된 람다 식의 간략한 개요를 제공하고, 람다 식이 PLINQ 및 작업 병렬 라이브러리에서 사용되는 방식을 보여 줍니다.|
 |[추가 정보](../../../docs/standard/parallel-programming/for-further-reading-parallel-programming.md)|.NET의 병렬 프로그래밍과 관련된 추가 정보 및 샘플 리소스에 대한 링크를 제공합니다.|
 

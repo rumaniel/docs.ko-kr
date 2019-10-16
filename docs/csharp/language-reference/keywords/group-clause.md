@@ -1,5 +1,6 @@
 ---
-title: group 절(C# 참조)
+title: group 절 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - group
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - group keyword [C#]
 - group clause [C#]
 ms.assetid: c817242e-b12c-4baa-a57e-73ee138f34d1
-ms.openlocfilehash: 8b2516b4e5b418e560d5763d8e551d2ab7646da3
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 160b25bd93f7d7c69ec104a31a0608e930e2dee3
+ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584353"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54534893"
 ---
 # <a name="group-clause-c-reference"></a>group 절(C# 참조)
 
@@ -65,9 +66,9 @@ ms.locfileid: "48584353"
 group person by new {name = person.surname, city = person.city};
 ```
 
-쿼리 변수를 다른 메서드에 전달해야 하는 경우 명명된 형식을 사용합니다. 키에 대해 자동 구현 속성을 사용하여 특수 클래스를 만든 다음 <xref:System.Object.Equals%2A> 및 <xref:System.Object.GetHashCode%2A> 메서드를 재정의합니다. 구조체를 사용할 수도 있으며, 이 경우 이러한 메서드를 엄격하게 재정의하지 않아도 됩니다. 자세한 내용은 [방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) 및 [방법: 디렉터리 트리에서 중복된 파일 쿼리](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)를 참조하세요. 두 번째 문서에는 명명된 형식과 함께 복합 키를 사용하는 방법을 보여 주는 코드 예제가 있습니다.
+쿼리 변수를 다른 메서드에 전달해야 하는 경우 명명된 형식을 사용합니다. 키에 대해 자동 구현 속성을 사용하여 특수 클래스를 만든 다음 <xref:System.Object.Equals%2A> 및 <xref:System.Object.GetHashCode%2A> 메서드를 재정의합니다. 구조체를 사용할 수도 있으며, 이 경우 이러한 메서드를 엄격하게 재정의하지 않아도 됩니다. 자세한 내용은 [방법: 자동으로 구현된 속성을 사용하여 간단한 클래스 구현](../../programming-guide/classes-and-structs/how-to-implement-a-lightweight-class-with-auto-implemented-properties.md) 및 [방법: 디렉터리 트리의 중복 파일 쿼리](../../programming-guide/concepts/linq/how-to-query-for-duplicate-files-in-a-directory-tree-linq.md)를 참조하세요. 두 번째 문서에는 명명된 형식과 함께 복합 키를 사용하는 방법을 보여 주는 코드 예제가 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 추가 쿼리 논리가 그룹에 적용되지 않는 경우 소스 데이터를 그룹으로 정렬하기 위한 표준 패턴을 보여 줍니다. 이를 비연속 그룹화라고 합니다. 문자열 배열에 있는 요소는 첫 문자에 따라 그룹화됩니다. 쿼리 결과는 그룹에 각 항목을 포함하는 공용 `Key` 속성 형식 `char` 및 <xref:System.Collections.Generic.IEnumerable%601> 컬렉션을 포함하는 <xref:System.Linq.IGrouping%602> 형식입니다.
 
@@ -75,24 +76,24 @@ group person by new {name = person.surname, city = person.city};
 
 [!code-csharp[cscsrefQueryKeywords#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#16)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 이 예제에서는 `into`와 함께 *continuation*을 사용하여 그룹을 만든 후 그룹에서 추가 논리를 수행하는 방법을 보여 줍니다. 자세한 내용은 [into](into.md)를 참조하세요. 다음 예제에서는 각 그룹을 쿼리하여 키 값이 모음인 그룹만 선택합니다.
 
 [!code-csharp[cscsrefQueryKeywords#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Group.cs#17)]
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 `group` 절은 컴파일 시간에 <xref:System.Linq.Enumerable.GroupBy%2A> 메서드 호출로 변환됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Linq.IGrouping%602>  
-- <xref:System.Linq.Enumerable.GroupBy%2A>  
-- <xref:System.Linq.Enumerable.ThenBy%2A>  
-- <xref:System.Linq.Enumerable.ThenByDescending%2A>  
-- [쿼리 키워드](query-keywords.md)  
-- [LINQ(Language-Integrated Query)](../../linq/index.md)  
-- [중첩 그룹 만들기](../../linq/create-a-nested-group.md)  
-- [쿼리 결과 그룹화](../../linq/group-query-results.md)  
+- <xref:System.Linq.IGrouping%602>
+- <xref:System.Linq.Enumerable.GroupBy%2A>
+- <xref:System.Linq.Enumerable.ThenBy%2A>
+- <xref:System.Linq.Enumerable.ThenByDescending%2A>
+- [쿼리 키워드](query-keywords.md)
+- [LINQ(Language-Integrated Query)](../../linq/index.md)
+- [중첩 그룹 만들기](../../linq/create-a-nested-group.md)
+- [쿼리 결과 그룹화](../../linq/group-query-results.md)
 - [그룹화 작업에서 하위 쿼리 수행](../../linq/perform-a-subquery-on-a-grouping-operation.md)

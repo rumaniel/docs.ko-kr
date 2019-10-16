@@ -1,15 +1,15 @@
 ---
-title: '방법: 자식 요소 (XPath 및 LINQ to XML)의 하위 항목 찾기 (Visual Basic)'
+title: '방법: 자식 요소의 하위 항목 찾기 (XPath-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: a958af40-f754-4409-85f9-7746978d4cb3
-ms.openlocfilehash: c29e8badd757b41d765e7d68f7ecd45c8dea8a14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: e5f92e645a06a93cee95d439fc858d82ebb6b240
+ms.sourcegitcommit: 9c3a4f2d3babca8919a1e490a159c1500ba7a844
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643167"
+ms.lasthandoff: 10/12/2019
+ms.locfileid: "72291677"
 ---
-# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>방법: 자식 요소 (XPath 및 LINQ to XML)의 하위 항목 찾기 (Visual Basic)
+# <a name="how-to-find-descendants-of-a-child-element-xpath-linq-to-xml-visual-basic"></a>방법: 자식 요소의 하위 항목 찾기 (XPath-LINQ to XML) (Visual Basic)
 이 항목에서는 특정 이름을 가진 자식 요소의 하위 요소를 가져오는 방법을 보여 줍니다.  
   
  XPath 식은 다음과 같습니다.  
@@ -34,7 +34,7 @@ Dim root As XElement = _
             </Annotation>  
         </Paragraph>  
         <Paragraph>  
-            <Text>  This is a second sentence.</Text>  
+            <Text>This is a second sentence.</Text>  
         </Paragraph>  
     </Root>  
   
@@ -64,10 +64,11 @@ Console.WriteLine(str2)
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```console  
 Results are identical  
 This is the start of a sentence.  This is a second sentence.  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [LINQ to XML에 대 한 XPath 사용자 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+## <a name="see-also"></a>참조
+
+- [XPath 사용자에 대 한 LINQ to XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

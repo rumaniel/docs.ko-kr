@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c9a6978f35b5ea9fb71f8e933dbc7a08b1c390ad
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: bcbe9a701b91a063e19fec5aae9cc2687b1f279f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33416503"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766139"
 ---
 # <a name="icordebugobjectvalue2getvirtualmethodandtype-method"></a>ICorDebugObjectValue2::GetVirtualMethodAndType 메서드
 이 메서드는 아직 구현되지 않았습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetVirtualMethodAndType (  
     [in] mdMemberRef          memberRef,  
     [out] ICorDebugFunction   **ppFunction,  
@@ -38,8 +38,6 @@ HRESULT GetVirtualMethodAndType (
 ```  
   
 ## <a name="remarks"></a>설명  
- 가장 많이 파생 된 메서드 및 지정 된 멤버 참조에 대 한 형식을 나타내는 "ICorDebugFunction" 및 "ICorDebugType" 인스턴스에 대 한 포인터의 인터페이스 가져옵니다.  
+ 가져옵니다 인터페이스 가장 많이 파생 된 메서드 및 지정 된 멤버 참조에 대 한 형식을 나타내는 "ICorDebugFunction" 및 "ICorDebugType" 인스턴스에 대 한 포인터입니다.  
   
-## <a name="see-also"></a>참고 항목  
-    
- 
+## <a name="see-also"></a>참고자료

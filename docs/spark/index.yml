@@ -1,0 +1,56 @@
+### YamlMime:Landing
+title: .NET for Apache Spark 설명서
+summary: .NET for Apache Spark를 사용하여 .NET 코드를 작성하는 곳 어디서나 Apache Spark로 데이터 일괄 처리, 실시간 스트림, 기계 학습 및 임시 쿼리를 처리하는 방법을 알아봅니다.
+metadata:
+  title: .NET for Apache Spark 설명서
+  description: .NET for Apache Spark를 사용하여 .NET 코드를 작성하는 곳 어디서나 Apache Spark로 데이터 일괄 처리, 실시간 스트림, 기계 학습 및 임시 쿼리를 처리하는 방법을 알아봅니다.
+  services: service
+  ms.prod: dotnet-spark
+  ms.topic: landing-page
+  ms.collection: collection
+  author: mamccrea
+  ms.author: mamccrea
+  ms.date: 09/11/2019
+  ms.openlocfilehash: bce56c20e30df1f6eb6d6be5edb7ea766a783d83
+  ms.sourcegitcommit: 8b8dd14dde727026fd0b6ead1ec1df2e9d747a48
+  ms.translationtype: HT
+  ms.contentlocale: ko-KR
+  ms.lasthandoff: 09/27/2019
+  ms.locfileid: "71332557"
+landingContent:
+- title: .NET for Apache Spark 정보
+  linkLists:
+  - linkListType: overview
+    links:
+    - text: Apache Spark용 .NET이란?
+      url: what-is-apache-spark-dotnet.md
+  - linkListType: reference
+    links:
+    - text: API 참조
+      url: /dotnet/api/?view=spark-dotnet
+    - text: GitHub
+      url: https://github.com/dotnet/spark
+- title: 시작
+  linkLists:
+  - linkListType: tutorial
+    links:
+    - text: .NET for Apache Spark 시작
+      url: tutorials/get-started.md
+  - linkListType: learn
+    links:
+    - text: Windows 또는 Linux에서 10분 안에 시작
+      url: https://dotnet.microsoft.com/learn/data/spark-tutorial/intro
+- title: .NET for Apache Spark 애플리케이션 배포
+  linkLists:
+  - linkListType: deploy
+    links:
+    - text: Azure HDInsight에 배포
+      url: tutorials/hdinsight-deployment.md
+    - text: AWS EMR Spark에 배포
+      url: tutorials/amazon-emr-spark-deployment.md
+    - text: Databricks에 배포
+      url: tutorials/databricks-deployment.md
+  - linkListType: how-to-guide
+    links:
+    - text: 애플리케이션 디버그
+      url: how-to-guides/debug.md

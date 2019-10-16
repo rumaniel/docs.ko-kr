@@ -16,33 +16,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4302a73f9f077c2e1bf4f66c2b80ab025ae4a62c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6dab5fe941fce3c23ba718906b29c80c6d257c2f
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33430585"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796775"
 ---
 # <a name="iassemblycache-interface"></a>IAssemblyCache 인터페이스
-Fusion 기술에서 사용 하기 위해 전역 어셈블리 캐시를 나타냅니다.  
+Fusion 기술에서 사용할 전역 어셈블리 캐시를 나타냅니다.  
   
 ## <a name="methods"></a>메서드  
   
-|메서드|설명|  
+|메서드|Description|  
 |------------|-----------------|  
-|[CreateAssemblyCacheItem 메서드](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblycacheitem-method.md)|새에 대 한 참조 [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)합니다.|  
-|[CreateAssemblyScavenger 메서드](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-createassemblyscavenger-method.md)|Fusion 기술에서 내부 사용을 위해 예약 되어 있습니다.|  
-|[InstallAssembly 메서드](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-installassembly-method.md)|전역 어셈블리 캐시에 지정된 된 어셈블리를 설치합니다.|  
-|[QueryAssemblyInfo 메서드](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-queryassemblyinfo-method.md)|지정된 된 어셈블리에 대 한 요청 된 데이터를 가져옵니다.|  
-|[UninstallAssembly 메서드](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-uninstallassembly-method.md)|지정된 된 어셈블리를 전역 어셈블리 캐시에서 제거합니다.|  
+|[CreateAssemblyCacheItem 메서드](iassemblycache-createassemblycacheitem-method.md)|새 [Iassemblycacheitem](iassemblycacheitem-interface.md)에 대 한 참조를 가져옵니다.|  
+|[CreateAssemblyScavenger 메서드](iassemblycache-createassemblyscavenger-method.md)|Fusion 기술에서 내부용으로 사용 하도록 예약 되어 있습니다.|  
+|[InstallAssembly 메서드](iassemblycache-installassembly-method.md)|지정 된 어셈블리를 전역 어셈블리 캐시에 설치 합니다.|  
+|[QueryAssemblyInfo 메서드](iassemblycache-queryassemblyinfo-method.md)|지정 된 어셈블리에 대 한 요청 된 데이터를 가져옵니다.|  
+|[UninstallAssembly 메서드](iassemblycache-uninstallassembly-method.md)|전역 어셈블리 캐시에서 지정 된 어셈블리를 제거 합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Fusion.h  
+ **헤더:** Fusion. h  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [Fusion 인터페이스](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)  
- [전역 어셈블리 캐시](../../../../docs/framework/app-domains/gac.md)
+## <a name="see-also"></a>참고자료
+
+- [Fusion 인터페이스](fusion-interfaces.md)
+- [전역 어셈블리 캐시](../../app-domains/gac.md)

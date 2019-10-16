@@ -2,12 +2,12 @@
 title: XAttribute 클래스 개요(C#)
 ms.date: 07/20/2015
 ms.assetid: 5a630f24-f9ad-400e-831e-c14ebfc9e142
-ms.openlocfilehash: 5619a8442fde9f4e8f612f213bde16c86ba00115
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 79ef00aa79be0c743423cfba1a911b238ff9a7ca
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529076"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69590920"
 ---
 # <a name="xattribute-class-overview-c"></a>XAttribute 클래스 개요(C#)
 특성은 요소와 연결된 이름/값 쌍입니다. <xref:System.Xml.Linq.XAttribute> 클래스는 XML 특성을 나타냅니다.  
@@ -81,4 +81,4 @@ Console.WriteLine(c);
   
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ to XML 프로그래밍 개요(C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML 프로그래밍 개요(C#)](./linq-to-xml-overview.md)

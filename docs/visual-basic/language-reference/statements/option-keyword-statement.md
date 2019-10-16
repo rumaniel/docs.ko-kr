@@ -1,19 +1,19 @@
 ---
-title: 옵션 &lt;키워드&gt; 문 (Visual Basic)
+title: 옵션 <keyword> 문 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
 - vb.option
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: f4996b0c03ee98fef31bc301dc957060afdfdac8
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 96ab02bf61f6b326c3f09615bf19f9e2ecae7e86
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784022"
 ---
-# <a name="option-ltkeywordgt-statement"></a>옵션 &lt;키워드&gt; 문
+# <a name="option-keyword-statement"></a>옵션 \<키워드 > 문
 전체 소스 파일에 적용 되는 컴파일러 옵션을 지정 하는 문을 소개 합니다.  
   
 ## <a name="remarks"></a>설명  
@@ -29,5 +29,6 @@ ms.locfileid: "48839827"
   
  [Option Strict 문](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
-## <a name="see-also"></a>참고 항목  
- [키워드](../../../visual-basic/language-reference/keywords/index.md)
+## <a name="see-also"></a>참고자료
+
+- [C++ 키워드](../../../visual-basic/language-reference/keywords/index.md)

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: fd89c54b-0290-4c50-95a3-ff17d4487a21
 ms.openlocfilehash: 4212f58c39f63be6ba20c3b79e5d9c98d0615c5e
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/15/2018
-ms.locfileid: "45649935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014208"
 ---
 # <a name="package-and-deploy-custom-my-extensions-visual-basic"></a>패키지 및 배포 사용자 지정 My 확장명 (Visual Basic)
 
@@ -60,8 +60,8 @@ CustomData 파일에는 <`VBMyExtensionTemplate>` 다음 표에 나열 된 특�
 
 |특성|설명|
 |---|---|
-|`ID`|필수. 확장에 대 한 고유 식별자입니다. 이 id는 확장 프로젝트에 이미 추가 된 경우 사용자는 다시 추가할 묻지 않습니다.|
-|`Version`|필수. 항목 템플릿에 대 한 버전 번호입니다.|
+|`ID`|필수 요소. 확장에 대 한 고유 식별자입니다. 이 id는 확장 프로젝트에 이미 추가 된 경우 사용자는 다시 추가할 묻지 않습니다.|
+|`Version`|필수 요소. 항목 템플릿에 대 한 버전 번호입니다.|
 |`AssemblyFullName`|선택 사항입니다. 어셈블리 이름입니다. 사용자를 추가 하려면 메시지가이 어셈블리에 대 한 참조를 프로젝트에 추가 되 면는 `My` 항목 템플릿을 확장 합니다.|
 
 ### <a name="add-the-customdatasignature-element-to-the-vstemplate-file"></a>추가 된 \<CustomDataSignature >.vstemplate 파일에 요소

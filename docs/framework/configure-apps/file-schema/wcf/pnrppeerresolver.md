@@ -1,27 +1,28 @@
 ---
-title: '&lt;pnrpPeerResolver&gt;'
+title: <pnrpPeerResolver>
 ms.date: 03/30/2017
 ms.assetid: c1b34f3b-68e5-4911-a367-de49fb61dbc6
-ms.openlocfilehash: f0874d38c3432f066d1bec5cc84f53e1f3730180
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: d7c6c8efa971fb60f0257cc1c74ceda72e31cb84
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32747982"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70400042"
 ---
-# <a name="ltpnrppeerresolvergt"></a>&lt;pnrpPeerResolver&gt;
+# <a name="pnrppeerresolver"></a>\<pnrpPeerResolver>
 PNRP(피어 이름 확인 프로토콜)가 확인자로 사용되도록 지정합니다. PNRP가 기본 확인자이므로 이 요소는 선택적입니다.  
   
- \<system.serviceModel>  
-\<바인딩 >  
-\<customBinding>  
-\<바인딩 >  
-\<pnrpResolver >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<바인딩 >** ](bindings.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ **\<customBinding >** ](custombinding.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<바인딩 >** \
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<pnrpResolver >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<pnrpResolver resolverType="String" />  
+<pnrpResolver resolverType="String" />
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -29,7 +30,7 @@ PNRP(피어 이름 확인 프로토콜)가 확인자로 사용되도록 지정�
   
 ### <a name="attributes"></a>특성  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
 |resolverType|사용할 확인자를 지정하는 문자열입니다. 이 특성은 선택적 요소입니다. 이 특성을 설정하지 않거나 빈 문자열로 설정하면 PNRP가 사용됩니다.|  
   
@@ -40,20 +41,21 @@ PNRP(피어 이름 확인 프로토콜)가 확인자로 사용되도록 지정�
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<binding>](../../../../../docs/framework/misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
+|[\<binding>](../../../misc/binding.md)|사용자 지정 바인딩의 모든 바인딩 기능을 정의합니다.|  
   
 ## <a name="example"></a>예제  
   
 ```xml  
-<pnrpResolver resolverType="" />  
+<pnrpResolver resolverType="String" />
 ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>  
- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>  
- <xref:System.ServiceModel.Channels.CustomBinding>  
- [바인딩](../../../../../docs/framework/wcf/bindings.md)  
- [바인딩 확장](../../../../../docs/framework/wcf/extending/extending-bindings.md)  
- [사용자 지정 바인딩](../../../../../docs/framework/wcf/extending/custom-bindings.md)  
- [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)  
- [피어 확인자](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Configuration.PnrpPeerResolverElement>
+- <xref:System.ServiceModel.Channels.PnrpPeerResolverBindingElement>
+- <xref:System.ServiceModel.Channels.CustomBinding>
+- [바인딩](../../../wcf/bindings.md)
+- [바인딩 확장](../../../wcf/extending/extending-bindings.md)
+- [사용자 지정 바인딩](../../../wcf/extending/custom-bindings.md)
+- [\<customBinding>](custombinding.md)
+- [피어 확인자](../../../wcf/feature-details/peer-resolvers.md)

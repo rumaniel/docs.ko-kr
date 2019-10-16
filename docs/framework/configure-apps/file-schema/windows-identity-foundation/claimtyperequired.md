@@ -1,21 +1,22 @@
 ---
-title: '&lt;claimTypeRequired&gt;'
+title: <claimTypeRequired>
 ms.date: 03/30/2017
 ms.assetid: c469d71f-6c77-4a24-97aa-53efa126ceef
 author: BrucePerlerMS
-ms.openlocfilehash: df4494de6b76943849db2bedef8f43ad894b6bd1
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 1c40c5e4b4a24a3c1bbd6e096f12b7b044331c88
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48837765"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252061"
 ---
-# <a name="ltclaimtyperequiredgt"></a>&lt;claimTypeRequired&gt;
+# <a name="claimtyperequired"></a>\<claimTypeRequired>
 들어오는 보안 토큰에 대 한 필수 클레임 집합을 지정 합니다.  
   
- \<system.identityModel>  
-\<identityConfiguration>  
-\<claimTypeRequired >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.identitymodel >** ](system-identitymodel.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<identityConfiguration >** ](identityconfiguration.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<claimTypeRequired >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -36,12 +37,12 @@ ms.locfileid: "48837765"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<claimType >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimtype.md)|들어오는 보안 토큰에 대 한 단일 옵션 또는 필요한 클레임을 지정합니다.|  
+|[\<claimType>](claimtype.md)|들어오는 보안 토큰에 대 한 단일 선택적 또는 필수 클레임을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|[\<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)|서비스 수준 id 설정을 지정합니다.|
+|[\<identityConfiguration>](identityconfiguration.md)|서비스 수준 id 설정을 지정 합니다.|

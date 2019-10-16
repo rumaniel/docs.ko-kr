@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: 2c6436e77753322733580acba5a20d6bb220f29c
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: d4a7912a5781fc583357affa728f7d81059b5cf9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46711092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928576"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar 및 VScrollBar 컨트롤 개요(Windows Forms)
 Windows Forms <xref:System.Windows.Forms.ScrollBar> 컨트롤은 가로로 또는 세로로 응용 프로그램 또는 컨트롤 내에서 쉽게 탐색 긴 목록 항목 또는 많은 양의 정보를 제공 하는 데 사용 됩니다. 스크롤 막대는 Windows 인터페이스의 공통 요소 이므로 <xref:System.Windows.Forms.ScrollBar> 컨트롤에서 파생 되지 않은 컨트롤을 사용 하 여 흔히는 <xref:System.Windows.Forms.ScrollableControl> 클래스입니다. 통합 하기 위해 많은 개발자 선택 마찬가지로 <xref:System.Windows.Forms.ScrollBar> 자체 사용자 정의 컨트롤을 작성 하는 경우를 제어 합니다.  
@@ -35,8 +35,8 @@ Windows Forms <xref:System.Windows.Forms.ScrollBar> 컨트롤은 가로로 또�
   
  키 또는 스크롤 막대 단추 중 하나를 클릭할 때 사용자가 누를 화살표 중 하나는 <xref:System.Windows.Forms.ScrollBar.Value%2A> 에 설정 된 값에 따라 속성 변경 내용을 <xref:System.Windows.Forms.ScrollBar.SmallChange%2A> 속성입니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.HScrollBar>  
- <xref:System.Windows.Forms.VScrollBar>  
- [.NET Framework 2.0에 대 한 Windows Forms에 대 한 추가](https://msdn.microsoft.com/library/c61a923d-3d6a-4c8c-820c-e94c83f3f9a8)  
- [Windows Forms에 사용할 수 있는 컨트롤](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.HScrollBar>
+- <xref:System.Windows.Forms.VScrollBar>
+- [Windows Forms에 사용할 수 있는 컨트롤](controls-to-use-on-windows-forms.md)

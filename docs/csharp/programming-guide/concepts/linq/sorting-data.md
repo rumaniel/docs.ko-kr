@@ -2,19 +2,19 @@
 title: 데이터 정렬(C#)
 ms.date: 07/20/2015
 ms.assetid: d93fa055-2f19-46d2-9898-e2aed628f1c9
-ms.openlocfilehash: 6a7f687895385bfb77d2a1e3e785742a794bb1b6
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 28cf4025d0b9bca841695c9873a0ff7972726b98
+ms.sourcegitcommit: 986f836f72ef10876878bd6217174e41464c145a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45749581"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69591046"
 ---
 # <a name="sorting-data-c"></a>데이터 정렬(C#)
 정렬 작업은 하나 이상의 특성을 기준으로 시퀀스의 요소를 정렬합니다. 첫 번째 정렬 기준은 요소에 대해 기본 정렬을 수행합니다. 두 번째 정렬 기준을 지정하면 각 기본 정렬 그룹 내의 요소를 정렬할 수 있습니다.  
   
- 다음 그림은 문자 시퀀스에 대한 사전순 정렬 작업의 결과를 보여 줍니다.  
+ 다음 그림은 문자 시퀀스에 대한 사전순 정렬 작업의 결과를 보여 줍니다. 
   
- ![LINQ 정렬 작업](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![사전순 정렬 작업을 보여 주는 그래픽입니다.](./media/sorting-data/alphabetical-sort-operation.png)  
   
  다음 섹션에는 데이터를 정렬하는 표준 쿼리 연산자 메서드가 나와 있습니다.  
   
@@ -128,8 +128,8 @@ foreach (string str in query)
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Linq>  
-- [표준 쿼리 연산자 개요(C#)](../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)  
-- [orderby 절](../../../../csharp/language-reference/keywords/orderby-clause.md)  
-- [방법: Join 절 결과를 순서대로 정렬](../../../../csharp/programming-guide/linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)  
-- [방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링(LINQ)(C#)](../../../../csharp/programming-guide/concepts/linq/how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)
+- <xref:System.Linq>
+- [표준 쿼리 연산자 개요(C#)](./standard-query-operators-overview.md)
+- [orderby 절](../../../language-reference/keywords/orderby-clause.md)
+- [방법: Join 절 결과를 순서대로 정렬](../../linq-query-expressions/how-to-order-the-results-of-a-join-clause.md)
+- [방법: 단어 또는 필드에 따라 텍스트 데이터 정렬 또는 필터링(LINQ)(C#)](./how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md)

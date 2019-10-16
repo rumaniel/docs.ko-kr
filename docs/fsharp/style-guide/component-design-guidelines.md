@@ -1,40 +1,40 @@
 ---
-title: 'F # 구성 요소 디자인 지침'
-description: '다른 호출자가 사용 하기 위한 F # 구성 요소를 작성 하는 것에 대 한 지침을 알아봅니다.'
+title: F#구성 요소 디자인 지침
+description: 쓰기에 대 한 지침을 알아보려면 F# 다른 호출자가 사용 하기 위한 구성 요소입니다.
 ms.date: 05/14/2018
-ms.openlocfilehash: 446cba0f810af9517b655ef5741ddf7a919676d5
-ms.sourcegitcommit: efff8f331fd9467f093f8ab8d23a203d6ecb5b60
+ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/03/2018
-ms.locfileid: "43488289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902163"
 ---
-# <a name="f-component-design-guidelines"></a>F # 구성 요소 디자인 지침
+# <a name="f-component-design-guidelines"></a>F#구성 요소 디자인 지침
 
-이 문서는 F # 프로그래밍, F # 구성 요소 디자인 지침, v14, Microsoft Research 기준에 대 한 구성 요소 디자인 지침의 집합 및 [다른 버전](https://fsharp.org/specs/component-design-guidelines/) 원래 큐 레이트 하 고 F # Software Foundation에서 유지 관리 합니다.
+이 문서에 대 한 구성 요소 디자인 지침의 집합이 F# 기반 프로그래밍을 F# 구성 요소 디자인 지침, Microsoft Research v14, 및 [다른 버전](https://fsharp.org/specs/component-design-guidelines/) 원래 큐 레이트 하 고 유지 관리 하는 F# Software Foundation입니다.
 
-이 문서에서는 F # 프로그래밍에 익숙하다고 가정 합니다. F # 커뮤니티 기여 및이 가이드의 다양 한 버전에 대 한 유용한 피드백 주신 합니다.
+이 문서에 잘 알고 있다면 가정 F# 프로그래밍입니다. 덕분에 많은 F# 이 가이드의 다양 한 버전에 대 한 유용한 피드백와 작성 글에 대 한 커뮤니티입니다.
 
 ## <a name="overview"></a>개요
 
-이 문서는 F # 구성 요소 디자인 및 코딩와 관련 된 문제 중 일부를 살펴봅니다. 구성 요소를 다음 중 하나를 의미 합니다.
+이 문서는 관련 된 문제 중 일부를 살펴보고 F# 구성 요소 디자인 및 코딩 합니다. 구성 요소를 다음 중 하나를 의미 합니다.
 
-* 해당 프로젝트 내에서 외부 소비자에 게 있는 F # 프로젝트의 계층입니다.
-* 어셈블리 경계를 넘어 F # 코드에서 사용 하기 위한 라이브러리입니다.
+* 계층에 F# 프로젝트 내에서 외부 소비자에 게 지정 된 프로젝트입니다.
+* 사용 하기 위한 라이브러리 F# 어셈블리 경계를 넘어 코드입니다.
 * 어셈블리 경계에 걸쳐 모든.NET 언어에서 사용 하기 위한 라이브러리입니다.
 * 라이브러리와 같은 패키지 리포지토리를 통해 배포를 위한 [NuGet](https://nuget.org)합니다.
 
-이 문서에 설명 된 방법에 따라 합니다 [적합 한 F # 코드의 다섯 가지 원칙](index.md#five-principles-of-good-f-code), 따라서 기능을 활용 하 고 적절 하 게 프로그래밍 개체입니다.
+이 문서에 설명 된 방법에 따라 합니다 [good의 다섯 가지 원칙 F# 코드](index.md#five-principles-of-good-f-code), 따라서 기능을 활용 하 고 적절 하 게 프로그래밍 개체입니다.
 
 방법론을에 관계 없이 구성 요소 및 라이브러리 디자이너 개발자가 가장 쉽게 사용할 수 있는 API를 작성 하려고 할 때 많은 실용적이 고 사용할 수 있는 문제를 향하도록 합니다. 에 대해 인식 하 고 응용 프로그램을 [.NET 라이브러리 디자인 지침](../../standard/design-guidelines/index.md) 일관 된 즐겁게 사용할 수 있는 Api 집합을 만들기 위한 유도 합니다.
 
 ## <a name="general-guidelines"></a>일반 지침
 
-F # 라이브러리에 라이브러리에 대 한 대상에 관계 없이 적용 되는 범용 지침 몇 가지 있습니다.
+에 적용 되는 몇 가지 유니버설 지침 F# 라이브러리를 라이브러리에 대 한 대상에 관계 없이 합니다.
 
 ### <a name="learn-the-net-library-design-guidelines"></a>.NET 라이브러리 디자인 지침에 알아봅니다.
 
-F # 수행 하는 코딩의 종류에 관계 없이 하는 것이 대해 잘 알고 있어야 합니다 [.NET 라이브러리 디자인 지침](../../standard/design-guidelines/index.md)합니다. 대부분의 다른 F # 및.NET 프로그래머에 게 이러한 지침을 잘 알고 있어야 하 고.NET 코드에 대 한 준수를 예상 됩니다.
+종류에 관계 없이 F# 코딩 수행 하는에 대 한 실무 지식이 있어야 합니다 [.NET 라이브러리 디자인 지침](../../standard/design-guidelines/index.md)합니다. 대부분의 다른 F# 를.NET 프로그래머에 게 이러한 지침을 숙지 되며.NET 코드에 대 한 준수를 예상 합니다.
 
 첫 번째는 유용한 다양 한 디자인 지침에 대 한 참조 지점.NET 라이브러리 디자인 지침을 이름, 클래스 및 인터페이스 디자인, 멤버 디자인 (속성, 메서드, 이벤트 등)에 대 한 일반적인 지침을 제공 합니다.
 
@@ -47,34 +47,34 @@ F # 수행 하는 코딩의 종류에 관계 없이 하는 것이 대해 잘 알
 type Point =
 
     /// Computes the distance between this point and another
-    member DistanceTo : otherPoint:Point -> float
+    member DistanceTo: otherPoint:Point -> float
 ```
 
 약식 XML 주석을 사용할 수 있습니다 (`/// comment`), 또는 표준 XML 주석 (`///<summary>comment</summary>`).
 
 ### <a name="consider-using-explicit-signature-files-fsi-for-stable-library-and-component-apis"></a>안정적인 라이브러리 및 Api 구성 요소에 대 한 명시적 서명 파일 (.fsi)를 사용 하는 것이 좋습니다.
 
-명시적 서명 파일을 사용 하 여 F # 라이브러리에 대 한 요약이 간결한 모두 도움이 되는 라이브러리의 전체 공개 화면을 알고 있는 것은 물론 있습니다 공개 문서 간 및 내부를 깔끔하게 분리를 제공 하도록 공용 API 구현 세부 정보입니다. 서명 파일 공용 API를 구현 및 서명 파일에 대해 적용할 변경 사항을 요구 하 여 변화 하는 마찰을 추가 하는 note 합니다. 결과적으로, 서명 파일은 일반적으로 도입 될 API 그 수에 더 이상 크게 변경 해야 하는 경우입니다.
+명시적 서명 파일을 사용 하는 F# 는 전체 공용 제공을 명확히 구분 공개 문서도 라이브러리의 노출 및 내부를 확인 하는 데 도움이 공용 API의 간결한 요약을 제공 하는 라이브러리 구현 세부 정보입니다. 서명 파일 공용 API를 구현 및 서명 파일에 대해 적용할 변경 사항을 요구 하 여 변화 하는 마찰을 추가 하는 note 합니다. 결과적으로, 서명 파일은 일반적으로 도입 될 API 그 수에 더 이상 크게 변경 해야 하는 경우입니다.
 
 ### <a name="always-follow-best-practices-for-using-strings-in-net"></a>.NET에서 문자열 사용에 대 한 모범 사례를 따르고 항상
 
 따릅니다 [.NET에서 문자열 사용에 대 한 모범 사례](../../standard/base-types/best-practices-strings.md) 지침입니다. 특히, 항상 명시적 *문화적 의도* 변환 및 문자열 비교 (있는 경우).
 
-## <a name="guidelines-for-f-facing-libraries"></a>F #에 대 한 지침-연결 라이브러리
+## <a name="guidelines-for-f-facing-libraries"></a>에 대 한 지침 F#-연결 라이브러리
 
-이 섹션에서는 공용 F #을 개발 하기 위한 권장 사항을 제공-연결 라이브러리입니다. 즉, 라이브러리를 F # 개발자가 사용할 수 있는 공용 Api를 노출 합니다. 적용할 특히 F # 라이브러리 디자인 권장 구성의 여러 가지가 있습니다. 특정 권장 사항가 없으면.NET 라이브러리 디자인 지침에는 대체 (fallback) 지침.
+이 섹션에서는 공용 개발을 위한 권장 사항 표시 F#-연결 라이브러리입니다. 사용할 수 있는 공용 Api를 노출 하는 라이브러리, 즉 F# 개발자입니다. 다양 한 라이브러리 디자인 권장 사항에 맞게 해당는 F#입니다. 특정 권장 사항가 없으면.NET 라이브러리 디자인 지침에는 대체 (fallback) 지침.
 
 ### <a name="naming-conventions"></a>명명 규칙
 
 #### <a name="use-net-naming-and-capitalization-conventions"></a>.NET 명명 및 대/소문자 규칙을 사용 하 여
 
-다음 표에서.NET 이름 지정 및 대/소문자 규칙을 따릅니다. 작은 추가 F # 구문을 포함할 수도 있습니다.
+다음 표에서.NET 이름 지정 및 대/소문자 규칙을 따릅니다. 작은 추가 포함 하는 F# 를 생성 합니다.
 
-| 구문 | Case | 파트 | 예제 | 노트 |
+| 구문 | 사례 | 파트 | 예제 | 노트 |
 |-----------|------|------|----------|-------|
-| 구체적인 형식 | PascalCase | 명사 adjective / | 목록, Double, 복잡 한 | 구체적인 형식은 구조체, 클래스, 열거형, 대리자, 레코드 및 공용 구조체입니다. 형식 이름은 일반적으로 OCaml에서 소문자 하지만 F #에 채택 형식에 대 한.NET 명명 체계입니다.
+| 구체적인 형식 | PascalCase | 명사 adjective / | 목록, Double, 복잡 한 | 구체적인 형식은 구조체, 클래스, 열거형, 대리자, 레코드 및 공용 구조체입니다. 형식 이름은 일반적으로 OCaml에서 소문자 있지만 F# 는 형식에 대 한.NET 명명 체계를 채택 했습니다.
 | DLL           | PascalCase |                 | Fabrikam.Core.dll |  |
-| 공용 구조체 태그     | PascalCase | 명사 | 일부 추가, 성공 | 공용 Api에서 접두사를 사용 하지 마세요. 필요에 따라 내부와 같은 경우에 접두사를 사용 하 여 ' ' 팀 입력 TAlpha = | TBeta | 생성 합니다. ' ' |
+| 공용 구조체 태그     | PascalCase | 명사 | 일부 추가, 성공 | 공용 Api에서 접두사를 사용 하지 마세요. 필요에 따라 내부와 같은 경우에 접두사를 사용 하 여 `type Teams = TAlpha | TBeta | TDelta.` |
 | 이벤트(event)          | PascalCase | 동사 | ValueChanged / ValueChanging |  |
 | 예외     | PascalCase |      | WebException | 이름을 "Exception" 끝나야 합니다. |
 | 필드          | PascalCase | 명사 | CurrentName  | |
@@ -82,13 +82,13 @@ type Point =
 | 메서드 |  PascalCase |  동사 | ToString | |
 | 네임스페이스 | PascalCase | | Microsoft.FSharp.Core | 일반적으로 사용 하 여 `<Organization>.<Technology>[.<Subnamespace>]`, 하지만 기술을 조직 으로부터 독립적인 경우 조직은 삭제 합니다. |
 | 매개 변수 | camelCase | 명사 |  typeName, 변환, 범위 | |
-| 값 (내부) 수 | camelCase 또는 PascalCase | 명사 / 동사 |  getValue를 myTable |
+| 값 (내부) 수 | camelCase 또는 PascalCase | 명사 / 동사 |  getValue, myTable |
 | 값 (외부)를 사용 합니다. | camelCase 또는 PascalCase | 명사/동사  | List.map Dates.Today | let 바인딩 값 기존의 함수형 디자인 패턴을 따를 경우 공용 많습니다. 그러나 일반적으로 사용 하 여 PascalCase 때 식별자는 다른.NET 언어에서 사용할 수 있습니다. |
 | 속성  | PascalCase  | 명사 adjective /  | IsEndOfFile, BackColor  | 부울 속성 일반적으로 사용할 수 있으며 긍정적인 IsEndOfFile, 없습니다 IsNotEndOfFile 같이 해야 합니다.
 
 #### <a name="avoid-abbreviations"></a>약어를 방지 합니다.
 
-.NET 지침에는 약어를 사용 하지 못하도록 (예를 들어 "사용 `OnButtonClick` 대신 `OnBtnClick`"). 일반적인 약어와 같은 `Async` "비동기"에 대 한 허용 됩니다. 이 지침은 함수형 프로그래밍;에 대 한 경우에 따라 무시 됩니다. 예를 들어 `List.iter` "반복"에 대 한 약어를 사용 합니다. 따라서 F #에서 보다 심층적 정확해 경향이 약어를 사용 하 여-에-F # 프로그래밍을 하지만 공용 구성 요소 디자인에서 일반적으로 계속 피해 야 합니다.
+.NET 지침에는 약어를 사용 하지 못하도록 (예를 들어 "사용 `OnButtonClick` 대신 `OnBtnClick`"). 일반적인 약어와 같은 `Async` "비동기"에 대 한 허용 됩니다. 이 지침은 함수형 프로그래밍;에 대 한 경우에 따라 무시 됩니다. 예를 들어 `List.iter` "반복"에 대 한 약어를 사용 합니다. 이러한 이유로 보다 심층적 정확해 경향이 약어를 사용 하 여 F#에서F# 프로그래밍, 하지만 공용 구성 요소 디자인에서 일반적으로 계속 피해 야 합니다.
 
 #### <a name="avoid-casing-name-collisions"></a>이름 충돌을 대/소문자를 방지 합니다.
 
@@ -100,9 +100,9 @@ XML과 같은 머리 글자어 약어 않으며 소문자로 시작된 양식 (X
 
 #### <a name="use-pascalcase-for-generic-parameter-names"></a>PascalCase를 사용 하 여 제네릭 매개 변수 이름에 대 한
 
-PascalCase 공용 api에서 F #을 포함 하 여 제네릭 매개 변수 이름에 사용-라이브러리를 연결 합니다. 특히과 같은 이름을 사용 하 여 `T`, `U`, `T1`, `T2` 임의의 제네릭 매개 변수 및 특정 이름을 의미가 다음 F #의 경우-연결 라이브러리와 같은 이름을 사용 하 여 `Key`, `Value`, `Arg`(하지만 하지 예를 들어 `TKey`).
+PascalCase를 사용 하 여 제네릭 매개 변수 이름에 대 한 포함 하 여 공용 Api에 대 한 수행 F#-라이브러리를 연결 합니다. 특히과 같은 이름을 사용 `T`, `U`, `T1`, `T2` 임의의 제네릭 매개 변수 및 특정 이름을 적합 한 다음에 대 한 F#-연결 라이브러리와 같은 이름을 사용 하 여 `Key`, `Value`, `Arg` (하지만 하지 예를 들어 `TKey`).
 
-#### <a name="use-either-pascalcase-or-camelcase-for-public-functions-and-values-in-f-modules"></a>PascalCase 또는 camelCase를 사용 하 여 공용 함수 및 F # 모듈의 값에 대 한
+#### <a name="use-either-pascalcase-or-camelcase-for-public-functions-and-values-in-f-modules"></a>PascalCase 또는 camelCase를 사용 하 여 공용 함수 및 값에 대 한 F# 모듈
 
 camelCase 사용할 수 있도록 설계는 공용 함수는 정규화 되지 않은 (예를 들어 `invalidArg`), (예를 들어 List.map) "표준 컬렉션 기능"입니다. 두이 경우 모두에서 함수 이름을 훨씬 언어에서 키워드 처럼 작동 합니다.
 
@@ -110,7 +110,7 @@ camelCase 사용할 수 있도록 설계는 공용 함수는 정규화 되지 �
 
 #### <a name="use-namespaces-or-modules-to-contain-your-types-and-modules"></a>네임 스페이스 또는 모듈을 사용 하 여 형식 및 모듈에 포함
 
-각 F # 파일에서 구성 요소에 네임 스페이스 선언 또는 모듈 선언 중 하나를 시작 해야 합니다.
+각 F# 구성 요소에서 파일 네임 스페이스 선언 또는 모듈 선언 중 하나를 시작 해야 합니다.
 
 ```fsharp
 namespace Fabrikam.BasicOperationsAndTypes
@@ -143,11 +143,11 @@ module CommonOperations =
 모듈 및 네임 스페이스를 사용 하 여 최상위 수준에서 코드를 구성할 수 간의 차이 다음과 같습니다.
 
 * 네임 스페이스에는 여러 파일 걸쳐 있을 수 있습니다.
-* 네임 스페이스는 내부 모듈 내에서 있지 않는 한 F # 함수를 포함할 수 없습니다.
+* 네임 스페이스를 포함할 수 없습니다 F# 는 내부 모듈 내에서 있지 않는 한 함수
 * 지정 된 모든 모듈에 대 한 코드를 단일 파일에 포함 되어야 합니다.
-* 최상위 모듈에는 F # 함수는 내부 모듈에 대 한 필요 없이 포함 될 수 있습니다.
+* 최상위 모듈에 포함 될 수 있습니다 F# 함수는 내부 모듈에 대 한 필요 없이
 
-최상위 네임 스페이스 또는 모듈 간의 선택 코드의 컴파일된 형태에 영향을 줍니다. 따라서 영향을 미칩니다 다른.NET 언어에서 보기 API 결국 사용 해야 F # 코드 외부에서.
+최상위 네임 스페이스 또는 모듈 간의 선택 코드의 컴파일된 형태에 영향을 줍니다 및 따라서는 뷰에 영향을 기타.NET 언어에서 API 결국 사용 해야 외부 F# 코드입니다.
 
 #### <a name="use-methods-and-properties-for-operations-intrinsic-to-object-types"></a>개체 형식에 내장 된 작업에 대 한 메서드 및 속성 사용
 
@@ -173,7 +173,7 @@ type HashTable<'Key,'Value>(comparer: IEqualityComparer<'Key>) =
 
 #### <a name="use-classes-to-encapsulate-mutable-state"></a>변경 가능한 상태를 캡슐화 할 클래스를 사용 합니다.
 
-F #에서는이 수행 해야 여기서 상태 클로저, 시퀀스 식, 비동기 계산 등의 다른 언어 구문에서 이미 캡슐화 되지 않습니다.
+F#에 수행할 수 있는 상태는 이미 클로저, 시퀀스 식, 비동기 계산 등의 다른 언어 구문으로 캡슐화 되지 해야 합니다.
 
 ```fsharp
 type Counter() =
@@ -191,16 +191,16 @@ type Counter() =
 
 ```fsharp
 type Serializer =
-    abstract Serialize<'T> : preserveRefEq: bool -> value: 'T -> string
-    abstract Deserialize<'T> : preserveRefEq: bool -> pickle: string -> 'T
+    abstract Serialize<'T>: preserveRefEq: bool -> value: 'T -> string
+    abstract Deserialize<'T>: preserveRefEq: bool -> pickle: string -> 'T
 ```
 
 우선적으로:
 
 ```fsharp
 type Serializer<'T> = {
-    Serialize : bool -> 'T -> string
-    Deserialize : bool -> string -> 'T
+    Serialize: bool -> 'T -> string
+    Deserialize: bool -> string -> 'T
 }
 ```
 
@@ -243,24 +243,24 @@ module CollectionType =
 경우에 따라 클래스 벡터와 같은 수학적 구문을 모델링 하는 데 사용 됩니다. 도메인 모델링 되는 잘 알려진 연산자에 있는 경우 유용 내장 함수를 클래스 멤버로 정의 합니다.
 
 ```fsharp
-type Vector(x:float) =
+type Vector(x: float) =
 
     member v.X = x
 
-    static member (*) (vector:Vector, scalar:float) = Vector(vector.X * scalar)
+    static member (*) (vector: Vector, scalar: float) = Vector(vector.X * scalar)
 
-    static member (+) (vector1:Vector, vector2:Vector) = Vector(vector1.X + vector2.X)
+    static member (+) (vector1: Vector, vector2: Vector) = Vector(vector1.X + vector2.X)
 
 let v = Vector(5.0)
 
 let u = v * 10.0
 ```
 
-이 설명서는 이러한 형식에 대 한 일반.NET 설명서에 해당합니다. 그러나 또한 F # 이러한 형식을 List.sumBy 같은 멤버 제약 조건이 있는 메서드와 함께 F # 함수에서 사용할 수 있도록 코딩 중요 수 있습니다.
+이 설명서는 이러한 형식에 대 한 일반.NET 설명서에 해당합니다. 그러나 또한에 중요할 수 있습니다 F# 이러한 형식을 함께에서 사용할 수 있도록 코딩 F# 함수와 List.sumBy 같은 멤버 제약 조건과 함께 메서드.
 
 #### <a name="consider-using-compiledname-to-provide-a-net-friendly-name-for-other-net-language-consumers"></a>CompiledName를 사용 하 여 제공 하는 합니다. 다른.NET 언어 소비자 NET 이름
 
-F # 소비자에 대 한 하나의 스타일의 이름을 하려는 경우도 있습니다 (소문자로 표시 되도록 정적 멤버와 같은 모듈 기반 함수 처럼)에 있으 나 다른 스타일 이름에 대 한 어셈블리로 컴파일할 때. 사용할 수는 `[<CompiledName>]` 비 F # 사용 하는 코드 어셈블리에 다른 스타일을 지정 하는 특성입니다.
+하나의 스타일 이름을 지정 하려는 경우에 따라 F# 소비자 (소문자로 표시 되도록 정적 멤버와 같은 모듈 기반 함수 처럼)에 있으 나 다른 스타일 이름에 대 한 어셈블리로 컴파일할 때. 사용할 수는 `[<CompiledName>]` 에 대 한 다른 스타일을 제공 하는 특성 아닌 F# 어셈블리를 사용 하는 코드입니다.
 
 ```fsharp
 type Vector(x:float, y:float) =
@@ -274,7 +274,7 @@ type Vector(x:float, y:float) =
 let v = Vector.create 5.0 3.0
 ```
 
-사용 하 여 `[<CompiledName>]`, 어셈블리의 소비자가 아닌 F #에 대 한.NET 명명 규칙을 사용할 수 있습니다.
+사용 하 여 `[<CompiledName>]`에 대 한.NET 명명 규칙을 사용할 수 있습니다 아닌 F# 어셈블리의 소비자입니다.
 
 #### <a name="use-method-overloading-for-member-functions-if-doing-so-provides-a-simpler-api"></a>이렇게 하면 간단한 API를 제공 하는 경우 멤버 함수에 대 한 메서드 오버 로드 사용
 
@@ -289,7 +289,7 @@ type Logger() =
         ...
 ```
 
-이 F #에서 인수의 형식이 아닌 개수의 인수 오버 로드에 더 일반적입니다.
+F#, 인수의 형식 보다는 수의 인수 오버 로드에 더 일반적입니다.
 
 #### <a name="hide-the-representations-of-record-and-union-types-if-the-design-of-these-types-is-likely-to-evolve"></a>이러한 종류의 디자인 변경 될 수 있으므로 공용 구조체 형식과 레코드의 표현을 숨기기
 
@@ -297,7 +297,7 @@ type Logger() =
 
 #### <a name="avoid-the-use-of-implementation-inheritance-for-extensibility"></a>확장성에 대 한 구현 상속을 사용 하지 못하도록
 
-F #에서는 구현 상속 드물게 사용 됩니다. 또한 상속 계층 구조는 종종 복잡 하 고 새 요구 사항을 도착할 때 변경 하기가 어렵습니다. 상속 구현 호환성에 있는 문제를 위한 최선의 솔루션 이지만 다형성과 같은 인터페이스 구현에 대 한 디자인 대안 기법의 F # 프로그램에서 검색 해야 하는 드문 경우 F #에서 여전히 존재 합니다.
+F#를 구현 상속은 거의 사용 되지 않습니다. 또한 상속 계층 구조는 종종 복잡 하 고 새 요구 사항을 도착할 때 변경 하기가 어렵습니다. 상속 구현에 여전히 존재 F# 호환성 및 것이 문제를 위한 최선의 솔루션 하지만 대안 기법의에서 찾아야 할 드문 경우에 F# 인터페이스와 같은 다형성을 디자인할 때 프로그램 구현입니다.
 
 ### <a name="function-and-member-signatures"></a>함수 및 멤버 시그니처
 
@@ -306,20 +306,20 @@ F #에서는 구현 상속 드물게 사용 됩니다. 또한 상속 계층 구�
 반환 형식에 튜플을 사용의 좋은 예는 다음과 같습니다.
 
 ```fsharp
-val divrem : BigInteger -> BigInteger -> BigInteger * BigInteger
+val divrem: BigInteger -> BigInteger -> BigInteger * BigInteger
 ```
 
 에 대 한 많은 구성 요소가 포함 된 형식을 반환 하거나 구성 요소 식별이 가능한 단일 엔터티를 관련 된 경우 튜플을 대신 명명 된 형식을 사용 하 여 고려해 야 합니다.
 
-#### <a name="use-asynct-for-async-programming-at-f-api-boundaries"></a>사용 하 여 `Async<T>` F # API 경계에서 비동기 프로그래밍에 대 한
+#### <a name="use-asynct-for-async-programming-at-f-api-boundaries"></a>사용 하 여 `Async<T>` 비동기 프로그래밍에 대 한 F# API 경계
 
-라는 해당 동기 작업 인지 `Operation` 반환 하는 `T`, 다음 비동기 작업 이름을 지정 해야 `AsyncOperation` 반환 하는 경우 `Async<T>` 또는 `OperationAsync` 반환 하는 경우 `Task<T>`합니다. Begin/End 메서드를 노출 하는 자주 사용 되는.NET 형식을 사용 하는 것이 좋습니다에 대 한 `Async.FromBeginEnd` .NET Api를 F # 비동기 프로그래밍 모델을 제공 하는 외관으로 확장 메서드를 작성할 수 있습니다.
+라는 해당 동기 작업 인지 `Operation` 반환 하는 `T`, 다음 비동기 작업 이름을 지정 해야 `AsyncOperation` 반환 하는 경우 `Async<T>` 또는 `OperationAsync` 반환 하는 경우 `Task<T>`합니다. Begin/End 메서드를 노출 하는 자주 사용 되는.NET 형식을 사용 하는 것이 좋습니다에 대 한 `Async.FromBeginEnd` 제공 하는 외관 확장 메서드를 작성 하는 F# .NET Api에 비동기 프로그래밍 모델입니다.
 
 ```fsharp
 type SomeType =
-    member this.Compute(x:int) : int =
+    member this.Compute(x:int): int =
         ...
-    member this.AsyncCompute(x:int) : Async<int> =
+    member this.AsyncCompute(x:int): Async<int> =
         ...
 
 type System.ServiceModel.Channels.IInputChannel with
@@ -333,9 +333,9 @@ type System.ServiceModel.Channels.IInputChannel with
 
 ### <a name="extension-members"></a>확장 멤버
 
-#### <a name="carefully-apply-f-extension-members-in-f-to-f-components"></a>F #의 확장 멤버는 F #을 신중 하 게 적용-에-F # 구성 요소
+#### <a name="carefully-apply-f-extension-members-in-f-to-f-components"></a>신중 하 게 적용 F# 에서 확장 멤버 F#에서F# 구성 요소
 
-일반적으로 대부분의 해당 모드를 사용 하 여 형식과 연결 된 기본 작업의 클로저에 작업에 대 한 F # 확장 멤버에만 사용 해야 합니다. 일반적 용도 중 하나는 다양 한.NET 형식에 대 한 F #에 더 자연 스러운 수 있는 Api를 제공 하는 것:
+F#일반적으로 대부분의 해당 모드를 사용 하 여 형식과 연결 된 기본 작업의 클로저에 작업에 대 한 확장 멤버에만 사용 해야 합니다. 일반적 용도 중 하나를 더 자연 스러운 수 있는 Api를 제공 하는 것 F# 다양 한.NET 형식:
 
 ```fsharp
 type System.ServiceModel.Channels.IInputChannel with
@@ -368,7 +368,7 @@ type BST<'T> =
 
 #### <a name="hide-the-representations-of-discriminated-unions-for-binary-compatible-apis-if-the-design-of-these-types-is-likely-to-evolve"></a>이러한 형식의 디자인 발전 시킬 가능성이 있는 경우 이진 호환 되는 Api에 대 한 구별 된 공용 구조체의 표현을 숨기기
 
-공용 구조체 형식 F # 패턴 일치에 대 한 양식을 간결한 프로그래밍 모델을 사용합니다. 이전에 설명한 대로 이러한 종류의 디자인 변경 될 수 있으므로 경우 구체적인 데이터 표현을 노출 하지 마십시오.
+공용 구조체 형식은 F# 는 간결한 프로그래밍 모델에 대 한 forms 패턴 일치 합니다. 이전에 설명한 대로 이러한 종류의 디자인 변경 될 수 있으므로 경우 구체적인 데이터 표현을 노출 하지 마십시오.
 
 예를 들어 구별 된 공용 구조체의 표시를 숨길 수 있습니다는 private 또는 internal 선언을 사용 하 여 또는 서명 파일을 사용 하 여 합니다.
 
@@ -381,13 +381,13 @@ type Union =
 
 구별 된 공용 구조체를 무차별적으로 표시 하는 경우 것 버전 하기가 라이브러리 사용자 코드를 중단 하지 않고 있습니다. 대신, 형식의 값에 대 한 패턴 일치를 허용 하도록 하나 이상의 활성 패턴을 노출 하는 것이 좋습니다.
 
-활성 패턴에는 F # 공용 구조체 형식에 직접 노출 방지 하는 동안 일치 하는 패턴을 사용 하 여 F # 소비자를 제공 하는 대체 방법을 제공 합니다.
+활성 패턴을 제공 하는 대체 방법을 제공 F# 고객에 게 노출 방지 하는 동안 일치 하는 패턴으로 F# 공용 구조체 형식을 직접.
 
 ### <a name="inline-functions-and-member-constraints"></a>인라인 함수 및 멤버 제약 조건
 
 #### <a name="define-generic-numeric-algorithms-using-inline-functions-with-implied-member-constraints-and-statically-resolved-generic-types"></a>인라인 함수를 사용 하 여 정적으로 확인 된 제네릭 형식 제약 조건이 암시적된 멤버와 일반 숫자 알고리즘을 정의
 
-산술 멤버 제약 조건 및 F # 비교 제약은 F # 프로그래밍에 대 한 표준입니다. 예를 들어, 다음 코드를 고려하세요.
+산술 멤버 제약 조건 및 F# 비교 제약 조건은 표준에 대 한 F# 프로그래밍 합니다. 예를 들어, 다음 코드를 고려하세요.
 
 ```fsharp
 let inline highestCommonFactor a b =
@@ -412,7 +412,7 @@ val inline highestCommonFactor : ^T -> ^T -> ^T
 
 #### <a name="avoid-using-member-constraints-to-simulate-type-classes-and-duck-typing"></a>형식 클래스 및 덕 형식 지정을 시뮬레이션 하기 위해 멤버 제약 조건을 사용 하지 마십시오
 
-"덕 형식 지정"을 시뮬레이션 하는 것이 불가능 F # 멤버 제약 조건을 사용 합니다. 그러나 멤버는 사용 하 여이 아닌 일반 사용할 F #-에-F # 라이브러리 디자인 합니다. 즉, 알 수 없는 또는 비표준 암시적 제약 조건을 기반으로 하는 라이브러리 디자인 고정적인 해지고 하나의 특정 프레임 워크 패턴에 연결 하는 사용자 코드를 발생 시키는 경향이 있습니다.
+"덕 형식 지정"를 사용 하 여 시뮬레이션할 수 있습니다 F# 멤버 제약 조건입니다. 그러나 멤버는 사용 하 여이 아닌 일반 사용 해야 F#에서F# 라이브러리 디자인 합니다. 즉, 알 수 없는 또는 비표준 암시적 제약 조건을 기반으로 하는 라이브러리 디자인 고정적인 해지고 하나의 특정 프레임 워크 패턴에 연결 하는 사용자 코드를 발생 시키는 경향이 있습니다.
 
 또한이 방식으로 멤버 제약 조건의 사용량이 매우 긴 컴파일 시간이 발생할 수 있는 가능성이 있습니다.
 
@@ -426,13 +426,13 @@ val inline highestCommonFactor : ^T -> ^T -> ^T
 
 ### <a name="units-of-measure"></a>측정 단위
 
-#### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>신중 하 게 측정 단위를 사용 하 여 F # 코드에 추가한 형식 안전성을 위한
+#### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>신중 하 게 측정 단위를 사용 하 여 추가 형식 안전성에 대 한 F# 코드
 
 측정 단위에 대 한 입력 추가 정보는 다른.NET 언어에서 볼 때 지워집니다. .NET 구성 요소, 도구 및 리플렉션 형식-sans-단위를 볼 수 있도록 주의 합니다. 예를 들어 C# 소비자가 표시 됩니다 `float` 대신 `float<kg>`합니다.
 
 ### <a name="type-abbreviations"></a>형식 약어
 
-#### <a name="carefully-use-type-abbreviations-to-simplify-f-code"></a>F # 코드를 단순화 하기 위해 신중 하 게 사용 하 여 형식 약어
+#### <a name="carefully-use-type-abbreviations-to-simplify-f-code"></a>신중 하 게 형식 약어를 사용 하 여 단순화 하기 위해 F# 코드
 
 .NET 구성 요소, 도구 및 리플렉션 형식에 대 한 약식된 이름이 표시 되지 않습니다. 형식 약어의 중요 한 사용 현황에 나타날 것 보다 훨씬 더 복잡할 실제로, 소비자가 혼동을 줄 수는 도메인을 만들 수도 있습니다.
 
@@ -440,7 +440,7 @@ val inline highestCommonFactor : ^T -> ^T -> ^T
 
 이 경우 약어로 중인 형식을 정의 하 고 실제 형식의 표현에 대해 너무 많이 표시 됩니다. 대신, 단일 사례 구별된 된 공용 구조체 또는 클래스 형식 약어를 래핑하는 것이 좋습니다 (또는 성능 필수 이면 약어를 래핑할 구조체 형식을 사용 하 여).
 
-예를 들어, 예를 들어 F # 맵의 특수 사례로 다중 맵을 정의 하기 쉽습니다.
+특수 사례로 다중 맵을 정의 하 고 싶어 하는 예를 들어는 F# 지도, 예를 들어:
 
 ```fsharp
 type MultiMap<'Key,'Value> = Map<'Key,'Value list>
@@ -450,7 +450,7 @@ type MultiMap<'Key,'Value> = Map<'Key,'Value list>
 
 ## <a name="guidelines-for-libraries-for-use-from-other-net-languages"></a>다른.NET 언어에서 사용 하기 위해 라이브러리에 대 한 지침
 
-다른.NET 언어에서 사용 하기 위한 라이브러리를 디자인할 때을 준수 하는 것이 중요 합니다 [.NET 라이브러리 디자인 지침](../../standard/design-guidelines/index.md)합니다. 이 문서에서는 이러한 라이브러리는 달리 F # 바닐라.NET 라이브러리로 레이블이 지정-제한 없이 생성 F #을 사용 하는 라이브러리를 연결 합니다. F #의 사용을 최소화 하 여.NET Framework의 나머지 부분과 일치 친숙 하 고 자연 스러운 Api 제공 의미 바닐라.NET 라이브러리 디자인-공용 API의 특정 구문입니다. 규칙은 다음 섹션에 설명 되어 있습니다.
+다른.NET 언어에서 사용 하기 위한 라이브러리를 디자인할 때을 준수 하는 것이 중요 합니다 [.NET 라이브러리 디자인 지침](../../standard/design-guidelines/index.md)합니다. 이 문서에서는 이러한 라이브러리는로 레이블이 지정 바닐라.NET 라이브러리와는 반대로 F#-연결 라이브러리를 사용 하는 F# 제한 없이 생성 합니다. .NET Framework의 나머지 부분과 일치 친숙 하 고 자연 스러운 Api 사용을 최소화 하 여 제공 의미 바닐라.NET 라이브러리 디자인 F#-공용 API의 특정 구문입니다. 규칙은 다음 섹션에 설명 되어 있습니다.
 
 ### <a name="namespace-and-type-design-for-libraries-for-use-from-other-net-languages"></a>Namespace 및 형식 디자인 (다른.NET 언어에서 사용 하기 위한 라이브러리)
 
@@ -468,11 +468,11 @@ type PolarCoordinate = ...
 
 #### <a name="use-namespaces-types-and-members-as-the-primary-organizational-structure-for-your-components"></a>구성 요소에 대 한 기본 조직 구조와 네임 스페이스, 형식 및 멤버를 사용 하 여
 
-로 시작 해야 공용 기능을 포함 하는 모든 파일을 `namespace` 선언 및 네임 스페이스에만 공용 엔터티 형식 이어야 합니다. F # 모듈을 사용 하지 마세요.
+로 시작 해야 공용 기능을 포함 하는 모든 파일을 `namespace` 선언 및 네임 스페이스에만 공용 엔터티 형식 이어야 합니다. 사용 하지 않는 F# 모듈.
 
 구현 코드, 형식 유틸리티 및 유틸리티 함수를 포함 하려면 public이 아닌 모듈을 사용 합니다.
 
-정적 형식은 해야 기본 모듈을 통해 F # 모듈 내에서 사용할 수 없습니다는 오버 로드 및 다른.NET API 디자인 개념을 사용 하는 API의 향후 발전을 허용 합니다.
+정적 형식은 이어야 합니다. 기본 모듈을 통해 API의 향후 진화를 위한 내에서 사용할 수 없습니다는 오버 로드 및 다른.NET API 디자인 개념을 사용할 수 있으므로 F# 모듈.
 
 예를 들어, 다음 공용 API 대신:
 
@@ -497,19 +497,19 @@ type Utilities =
     static member Add(x,y,z) = x + y + z
 ```
 
-#### <a name="use-f-record-types-in-vanilla-net-apis-if-the-design-of-the-types-wont-evolve"></a>형식의 디자인 않습니다 진화 하는 경우 바닐라.NET Api에서에서 F # 레코드 형식 사용
+#### <a name="use-f-record-types-in-vanilla-net-apis-if-the-design-of-the-types-wont-evolve"></a>사용 하 여 F# 형식의 디자인 않습니다 진화 하는 경우 바닐라.NET Api에서에서 레코드 종류
 
-F # 레코드 형식 간단한.NET 클래스를 컴파일합니다. 이러한 Api의 일부 간단 하 고 안정적인 유형에 대해 적합합니다. 사용을 고려해 야 합니다 `[<NoEquality>]` 및 `[<NoComparison>]` 특성을 인터페이스의 자동 생성 되지 않도록 합니다. 또한 공용 필드에 이러한 노출으로 한 바닐라.NET Api의에서 변경 가능한 레코드 필드를 사용 하지 마십시오. 항상 클래스는 API의 향후 진화를 위한 유연한 옵션을 제공 하는 것이 좋습니다.
+F#레코드 종류는 간단한.NET 클래스를 컴파일합니다. 이러한 Api의 일부 간단 하 고 안정적인 유형에 대해 적합합니다. 사용을 고려해 야 합니다 `[<NoEquality>]` 및 `[<NoComparison>]` 특성을 인터페이스의 자동 생성 되지 않도록 합니다. 또한 공용 필드에 이러한 노출으로 한 바닐라.NET Api의에서 변경 가능한 레코드 필드를 사용 하지 마십시오. 항상 클래스는 API의 향후 진화를 위한 유연한 옵션을 제공 하는 것이 좋습니다.
 
-예를 들어, 다음 F # 코드는 C# 소비자에 게 공용 API를 노출합니다.
+예를 들어, 다음 F# 하는 공용 API를 노출 하는 코드를 C# 소비자:
 
-F #의 경우:
+F#:
 
 ```fsharp
 [<NoEquality; NoComparison>]
 type MyRecord =
-    { FirstThing : int
-        SecondThing : string }
+    { FirstThing: int
+        SecondThing: string }
 ```
 
 C#: 
@@ -523,9 +523,9 @@ public sealed class MyRecord
 }
 ```
 
-#### <a name="hide-the-representation-of-f-union-types-in-vanilla-net-apis"></a>바닐라.NET Api에서에서 F # 공용 구조체 형식의 표현을 숨기기
+#### <a name="hide-the-representation-of-f-union-types-in-vanilla-net-apis"></a>표현의 숨기기 F# 바닐라.NET Api에서에서 공용 구조체 형식
 
-F # 공용 구조체 형식을 자주 사용 되지 않는 구성 요소 경계에 대해서도 F #-에-F # 코딩 합니다. 구성 요소 및 라이브러리 내에서 내부적으로 사용 하는 경우에 뛰어난 구현 장치 됩니다.
+F#공용 구조체 형식을 자주 사용 되지 않는 구성 요소 경계에 대해서도 F#에서F# 코딩 합니다. 구성 요소 및 라이브러리 내에서 내부적으로 사용 하는 경우에 뛰어난 구현 장치 됩니다.
 
 바닐라.NET API를 디자인할 때에 개인 선언 또는 서명 파일을 사용 하 여 공용 구조체 형식의 표현을 숨기기 하는 것이 좋습니다.
 
@@ -574,7 +574,7 @@ type MyBadType() =
     [<CLIEvent>]
     member this.MyEvent = myEv.Publish
 
-type MyEventArgs(x:int) =
+type MyEventArgs(x: int) =
     inherit System.EventArgs()
     member this.X = x
 
@@ -588,7 +588,7 @@ type MyGoodType() =
 
 #### <a name="expose-asynchronous-operations-as-methods-which-return-net-tasks"></a>.NET 작업을 반환 하는 메서드로 비동기 작업 노출
 
-작업은 활성 비동기 계산을 나타내는.NET에서 사용 됩니다. F # 보다 작은 구성 하는 일반적인 작업은 `Async<T>` "이미 실행" 작업을 나타내고 병렬 컴퍼지션을 수행 하는 또는 취소 신호 및 기타 전파를 숨기는 방식으로 함께 구성할 수 있으므로 개체 상황에 맞는 매개 변수입니다.
+작업은 활성 비동기 계산을 나타내는.NET에서 사용 됩니다. 보다 작은 구성 하는 일반적인 작업은 F# `Async<T>` 개체에 "이미 실행" 작업을 나타내며를 구성할 수 함께 수행 하는 병렬 컴퍼지션 또는 취소 신호 전파를 숨기는 방식 때문 및 다른 상황에 맞는 매개 변수입니다.
 
 그러나 그럼에도 불구 하 고, 작업을 반환 하는 메서드는.NET에서 비동기 프로그래밍의 표준 표현 합니다.
 
@@ -596,7 +596,7 @@ type MyGoodType() =
 /// A type in a component designed for use from other .NET languages
 type MyType() =
 
-    let compute (x: int) : Async<int> = async { ... }
+    let compute (x: int): Async<int> = async { ... }
 
     member this.ComputeAsync(x) = compute x |> Async.StartAsTask
 ```
@@ -606,68 +606,68 @@ type MyType() =
 ```fsharp
 /// A type in a component designed for use from other .NET languages
 type MyType() =
-    let compute(x:int) : Async<int> = async { ... }
+    let compute(x: int): Async<int> = async { ... }
     member this.ComputeAsTask(x, cancellationToken) = Async.StartAsTask(compute x, cancellationToken)
 ```
 
-#### <a name="use-net-delegate-types-instead-of-f-function-types"></a>F # 함수 형식 대신.NET 대리자 형식을 사용합니다
+#### <a name="use-net-delegate-types-instead-of-f-function-types"></a>대신.NET 대리자 형식을 사용 하 여 F# 형식 함수
 
-여기 "F # 함수 형식을" 의미와 같은 "화살표" 형식은 `int -> int`합니다.
+여기서 "F# 형식 함수"와 같은 "화살표" 형식은 의미 `int -> int`합니다.
 
 다음과 같이 변경 하는 대신
 
 ```fsharp
-member this.Transform(f:int->int) =
+member this.Transform(f: int->int) =
     ...
 ```
 
 방법
 
 ```fsharp
-member this.Transform(f:Func<int,int>) =
+member this.Transform(f: Func<int,int>) =
     ...
 ```
 
-F # 함수 형식으로 표시 됩니다. `class FSharpFunc<T,U>` 다른.NET 언어에 있으며 대리자 유형을 이해 하는 언어 기능 및 도구에 덜 적합 합니다. .NET Framework 3.5 이상을 대상으로 하는 고차 메서드를 작성할 때 합니다 `System.Func` 고 `System.Action` 대리자는.NET 개발자가 원활한 방식으로 이러한 Api를 사용할 수 있도록 게시할 오른쪽 Api. (.NET Framework 2.0을 대상으로 하는 경우 시스템에 정의 된 대리자 형식 보다 제한적인는와 같은 미리 정의 된 대리자 형식을 사용 하는 것이 좋습니다 `System.Converter<T,U>` 또는 특정 대리자 형식을 정의 합니다.)
+F# 함수 형식으로 표시 됩니다 `class FSharpFunc<T,U>` 다른.NET 언어에 있으며 대리자 유형을 이해 하는 언어 기능 및 도구에 덜 적합 합니다. .NET Framework 3.5 이상을 대상으로 하는 고차 메서드를 작성할 때 합니다 `System.Func` 고 `System.Action` 대리자는.NET 개발자가 원활한 방식으로 이러한 Api를 사용할 수 있도록 게시할 오른쪽 Api. (.NET Framework 2.0을 대상으로 하는 경우 시스템에 정의 된 대리자 형식 보다 제한적인는와 같은 미리 정의 된 대리자 형식을 사용 하는 것이 좋습니다 `System.Converter<T,U>` 또는 특정 대리자 형식을 정의 합니다.)
 
-한편,.NET의 대리자는 F #에 대 한 자연 스러운-연결 라이브러리 (F #에서 다음 섹션을 참조 하세요.-연결 라이브러리)입니다. 모든 F # 함수 형식을 사용 하 여 구현을 작성 하 고 다음 대리자를 사용 하 여 실제 F # 위에 씬 외관으로 공용 API를 만드는 일반적인 구현 전략 고차 메서드 바닐라.NET 라이브러리를 개발 하는 경우는 결과적으로, 구현입니다.
+한편,.NET의 대리자는 자연 스러운 F#-연결 라이브러리 (다음 섹션을 참조 F#-연결 라이브러리). 모든 구현을 사용 하 여를 작성 하는 고차 메서드 바닐라.NET 라이브러리를 개발 하는 경우 일반적인 구현 전략 것 결과적으로, F# 형식 함수를 만든 다음 대리자를 사용 하 여 실제 F#구현입니다.
 
-#### <a name="use-the-trygetvalue-pattern-instead-of-returning-f-option-values-and-prefer-method-overloading-to-taking-f-option-values-as-arguments"></a>F # 옵션 값을 반환 하는 대신 TryGetValue 패턴을 사용 하 고 F # 옵션 값을 인수로 하도록 메서드 오버 로드 하는 것이 좋습니다.
+#### <a name="use-the-trygetvalue-pattern-instead-of-returning-f-option-values-and-prefer-method-overloading-to-taking-f-option-values-as-arguments"></a>TryGetValue 패턴을 사용 하 여 반환 하는 대신 F# 값, 옵션 및 메서드 기록에 오버 로드 하는 것이 좋습니다. F# 값을 인수로 옵션
 
-사용 Api에서 F # 옵션 형식에 대 한 일반적인 패턴은 더 나은 바닐라에 구현 된 표준.NET을 사용 하 여.NET Api 디자인 기법입니다. F # 옵션 값을 반환 하는 대신 bool 반환 형식 및 패턴을 "TryGetValue"와 같이 out 매개 변수를 사용 하는 것이 좋습니다. 고 F # 옵션 값을 매개 변수로 대신, 메서드 오버 로드 또는 선택적 인수를 사용 하 여를 고려 합니다.
+사용에 대 한 일반적인 패턴을 F# api에서 옵션 유형을 좋음 바닐라에 구현 된 표준.NET을 사용 하 여.NET Api 디자인 기술을 합니다. 반환 하는 대신는 F# 옵션 값, bool 반환 형식 및 패턴을 "TryGetValue"와 같이 out 매개 변수를 사용 하는 것이 좋습니다. 및 수행 하는 대신 F# 옵션 값을 매개 변수로, 메서드 오버 로드 또는 선택적 인수를 사용 하는 것이 좋습니다.
 
 ```fsharp
 member this.ReturnOption() = Some 3
 
-member this.ReturnBoolAndOut(outVal : byref<int>) =
+member this.ReturnBoolAndOut(outVal: byref<int>) =
     outVal <- 3
     true
 
-member this.ParamOption(x : int, y : int option) =
+member this.ParamOption(x: int, y: int option) =
     match y with
     | Some y2 -> x + y2
     | None -> x
 
-member this.ParamOverload(x : int) = x
+member this.ParamOverload(x: int) = x
 
-member this.ParamOverload(x : int, y : int) = x + y
+member this.ParamOverload(x: int, y: int) = x + y
 ```
 
 #### <a name="use-the-net-collection-interface-types-ienumerablet-and-idictionarykeyvalue-for-parameters-and-return-values"></a>.NET 컬렉션 인터페이스를 사용 하 여 형식을 IEnumerable\<T\> 및 IDictionary\<키, 값\> 매개 변수 및 반환 값
 
-.NET 배열과 같은 구체적 컬렉션 형식의 사용을 방지 하기 `T[]`, F # 형식 `list<T>`, `Map<Key,Value>` 하 고 `Set<T>`,.NET 구체적 컬렉션 형식은 같은 및 `Dictionary<Key,Value>`합니다. .NET 라이브러리 디자인 지침과 같은 다양 한 컬렉션 형식을 사용 하는 경우에 대 한 적절 한 조언을 `IEnumerable<T>`입니다. 배열의 일부 사용 (`T[]`) 성능 기준에 일부 경우에 적합 합니다. 특히 유의 `seq<T>` 방금 F # 별칭은 `IEnumerable<T>`, 이므로 seq 종종는 바닐라.NET API에 대 한 적절 한 형식입니다.
+.NET 배열과 같은 구체적 컬렉션 형식의 사용 하지 않도록 `T[]`, F# 형식 `list<T>`, `Map<Key,Value>` 및 `Set<T>`, 및.NET 구체적 컬렉션 형식은 같은 `Dictionary<Key,Value>`. .NET 라이브러리 디자인 지침과 같은 다양 한 컬렉션 형식을 사용 하는 경우에 대 한 적절 한 조언을 `IEnumerable<T>`입니다. 배열의 일부 사용 (`T[]`) 성능 기준에 일부 경우에 적합 합니다. 특히 유의 `seq<T>` 는 F# 별칭 `IEnumerable<T>`, 이므로 seq 종종는 바닐라.NET API에 대 한 적절 한 형식입니다.
 
-F # 목록 대신:
+대신 F# 를 나열 합니다.
 
 ```fsharp
-member this.PrintNames(names : string list) =
+member this.PrintNames(names: string list) =
     ...
 ```
 
-F # 시퀀스를 사용 합니다.
+사용 하 여 F# 시퀀스:
 
 ```fsharp
-member this.PrintNames(names : seq<string>) =
+member this.PrintNames(names: seq<string>) =
     ...
 ```
 
@@ -678,18 +678,18 @@ member this.PrintNames(names : seq<string>) =
 ```fsharp
 ✔ member this.NoArguments() = 3
 
-✔ member this.ReturnVoid(x : int) = ()
+✔ member this.ReturnVoid(x: int) = ()
 ```
 
 이 잘못 되었습니다.
 
 ```fsharp
-member this.WrongUnit( x:unit, z:int) = ((), ())
+member this.WrongUnit( x: unit, z: int) = ((), ())
 ```
 
 #### <a name="check-for-null-values-on-vanilla-net-api-boundaries"></a>바닐라.NET API 경계에 null 값에 대 한 확인
 
-F # 구현 코드를 변경할 수 없는 디자인 패턴 및 F # 형식에 대 한 null 리터럴의 사용에 대 한 제한으로 인해 더 적은 수의 null 값이 있고 경향이 있습니다. 다른.NET 언어 종종 null 값으로 훨씬 더 자주 사용 합니다. 이 때문에 F # 코드는 바닐라.NET API를 노출 하는 API 경계에서 null에 대 한 매개 변수를 확인 하 고 F # 구현 코드를 자세히 흐름에서 이러한 값을 방지 해야 합니다. 합니다 `isNull` 함수나에 패턴 일치는 `null` 패턴을 사용할 수 있습니다.
+F#구현 코드를 변경할 수 없는 디자인 패턴 및 사용에 대 한 null 리터럴의 제한으로 인해 더 적은 수의 null 값이 있고 경향이 F# 형식입니다. 다른.NET 언어 종종 null 값으로 훨씬 더 자주 사용 합니다. 이 인해 F# 는 바닐라.NET API를 노출 하는 코드에서 API 경계에서 null에 대 한 매개 변수를 확인 하 고에 대 한 자세한 흐름에서 이러한 값을 방지 해야 합니다 F# 구현 코드. 합니다 `isNull` 함수나에 패턴 일치는 `null` 패턴을 사용할 수 있습니다.
 
 ```fsharp
 let checkNonNull argName (arg: obj) =
@@ -708,17 +708,17 @@ let checkNonNull` argName (arg: obj) =
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>매개 변수 (currying)를 사용 하지 않도록
 
-대신,.NET 호출 규칙을 사용 하 여 ``Method(arg1,arg2,…,argN)``입니다.
+대신,.NET 호출 규칙을 사용 하 여 `Method(arg1,arg2,…,argN)`입니다.
 
 ```fsharp
 member this.TupledArguments(str, num) = String.replicate num str
 ```
 
-팁: 모든.NET 언어에서 사용 하기 위한 라이브러리를 설계할 수 있습니다 경우 맬웨어에 실제로 일부 실험적 C# 및 Visual Basic 프로그래밍 "느낌 오른쪽" 이러한 언어에서 라이브러리 되도록 작업을 수행 하 합니다. 또한 라이브러리 및 해당 설명서 개발자에 게 예상 대로 표시 되는지 확인 하려면 Visual Studio 개체 브라우저 및.NET Reflector와 같은 도구를 사용할 수 있습니다.
+팁: 모든.NET 언어에서 사용 하기 위한 라이브러리 디자인할 경우 몇 가지 실험적 맬웨어에 실제로 작업을 수행 하는 C# 및 Visual Basic 프로그래밍 "느낌 오른쪽" 이러한 언어에서 라이브러리 되도록 합니다. 또한 라이브러리 및 해당 설명서 개발자에 게 예상 대로 표시 되는지 확인 하려면 Visual Studio 개체 브라우저 및.NET Reflector와 같은 도구를 사용할 수 있습니다.
 
 ## <a name="appendix"></a>부록
 
-### <a name="end-to-end-example-of-designing-f-code-for-use-by-other-net-languages"></a>다른.NET 언어 사용에 대 한 F # 코드를 디자인할 때의 종단 간 예제
+### <a name="end-to-end-example-of-designing-f-code-for-use-by-other-net-languages"></a>디자인의 종단 간 예제 F# 다른.NET 언어 사용에 대 한 코드
 
 다음 클래스를 고려 합니다.
 
@@ -735,7 +735,7 @@ type Point1(angle,radius) =
         [ for i in 1..n -> Point1(angle=2.0*Math.PI/float(n), radius=1.0) ]
 ```
 
-이 클래스의 유추 된 F # 형식 아래와 같습니다.
+유추 된 F# 형식의이 클래스는 다음과 같습니다.
 
 ```fsharp
 type Point1 =
@@ -748,7 +748,7 @@ type Point1 =
     member Radius : double
 ```
 
-이 F # 형식을 다른.NET 언어를 사용 하 여 프로그래머에 표시 되는 방식을 살펴보겠습니다. 예를 들어, 대략적인 C# "서명"는 다음과 같습니다.
+하는 방법에 살펴보겠습니다이 F# 형식이 다른.NET 언어를 사용 하 여 프로그래머에 나타납니다. 예를 들어, 대략적인 C# "서명"는 다음과 같습니다.
 
 ```csharp
 // C# signature for the unadjusted Point1 class
@@ -770,13 +770,13 @@ public class Point1
 }
 ```
 
-F #를 나타내는 방법을 여기 구문을 주의 해야 할 몇 가지 중요 한 사항이 있습니다. 예를 들어:
+확인 방법에 대 한 중요 한 요소가 몇 가지 F# 나타냅니다 여기 생성 합니다. 예를 들어:
 
 * 인수 이름 같은 메타 데이터 유지 되었습니다.
 
-* F # 두 개의 인수를 사용 하는 방법에는 두 개의 인수를 사용 하는 C# 메서드가 됩니다.
+* F#될 두 개의 인수를 사용 하는 메서드와 C# 메서드를 두 개의 인수를 사용 합니다.
 
-* 함수 및 목록에는 F # 라이브러리의 해당 형식에 대 한 참조 됩니다.
+* 함수 및 목록에서 해당 형식에 대 한 참조 되는 F# 라이브러리입니다.
 
 다음 코드에는 이러한 작업을 고려해 야 하는이 코드를 조정 하는 방법을 보여 줍니다.
 
@@ -809,7 +809,7 @@ type RadialPoint(angle:double, radius:double) =
                 RadialPoint(angle=2.0*Math.PI/float(count), radius=1.0) }
 ```
 
-유추 된 F # 형식의 코드는 다음과 같습니다.
+유추 된 F# 코드의 종류는 다음과 같습니다.
 
 ```fsharp
 type RadialPoint =
@@ -849,6 +849,6 @@ public class RadialPoint
 
 * 반환 형식을 사용한 `seq<RadialPoint>` 대신 `RadialPoint list` 사용 하 여 목록 생성을 변경 하 여 `[ ... ]` 사용 하 여 시퀀스 생성 `IEnumerable<RadialPoint>`합니다.
 
-* .NET 대리자 형식을 사용 `System.Func` F # 함수 형식을 대신 합니다.
+* .NET 대리자 형식을 사용한 `System.Func` 대신는 F# 함수 유형입니다.
 
 따라서 C# 코드에서 사용 하기 훨씬 편리한 있습니다.

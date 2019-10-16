@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2dd97fcce13ed1ac7baf4cd02f5881d31d7a9c4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804525"
+---
 ### <a name="xslt-forward-compat-now-works"></a>XSLT forward compat가 이제 작동합니다.
 
 |   |   |
@@ -8,4 +16,3 @@
 |버전|4.5|
 |형식|런타임|
 |영향을 받는 API|<ul><li><xref:System.Xml.Xsl.XslCompiledTransform?displayProperty=nameWithType></li></ul>|
-

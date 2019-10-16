@@ -1,8 +1,0 @@
-# [이벤트](index.md)
-## [방법: 이벤트 발생 및 사용](how-to-raise-and-consume-events.md)
-## [방법: 이벤트 속성을 사용하여 여러 이벤트 처리](how-to-handle-multiple-events-using-event-properties.md)
-## [방법: Web Forms 응용 프로그램에서 이벤트 사용](how-to-consume-events-in-a-web-forms-application.md)
-## [관찰자 디자인 패턴](observer-design-pattern.md)
-### [관찰자 디자인 패턴 유용한 정보](observer-design-pattern-best-practices.md)
-### [방법: 공급자 구현](how-to-implement-a-provider.md)
-### [방법: 관찰자 구현](how-to-implement-an-observer.md)

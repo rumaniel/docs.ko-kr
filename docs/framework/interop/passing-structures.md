@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9b92ac73-32b7-4e1b-862e-6d8d950cf169
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3764916263f6f88615d61badaf2c32807bcc09b8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: eef52827bfe36977c9c4c844f4f431e7404adc97
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33391510"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71051672"
 ---
 # <a name="passing-structures"></a>구조체 전달
 관리되지 않는 여러 함수에서는 함수, 구조체 멤버(Visual Basic의 사용자 정의 형식) 또는 관리 코드에 정의된 클래스 멤버에 매개 변수로 전달해야 합니다. 플랫폼 호출을 사용하여 구조체 또는 클래스를 비관리 코드에 전달할 때 원래 레이아웃과 맞춤을 유지하기 위해 추가 정보를 제공해야 합니다. 이 항목에서는 형식이 지정된 유형을 정의하는 데 사용하는 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 특성을 소개합니다. 관리되는 구조체와 클래스의 경우 **LayoutKind** 열거형에서 제공하는 예측 가능한 여러 레이아웃 동작 중에서 선택할 수 있습니다.  
@@ -29,16 +29,16 @@ ms.locfileid: "33391510"
   
  이 표에서는 플랫폼 호출 선언에 대한 다음과 같은 지침을 설명합니다.  
   
--   관리되지 않는 함수에서 간접 참조를 요구하지 않는 경우 값 형식으로 전달된 구조체를 사용합니다.  
+- 관리되지 않는 함수에서 간접 참조를 요구하지 않는 경우 값 형식으로 전달된 구조체를 사용합니다.  
   
--   관리되지 않는 함수에서 한 수준의 간접 참조를 요구하는 경우 참조 형식으로 전달된 구조체 또는 값 형식으로 전달된 클래스를 사용합니다.  
+- 관리되지 않는 함수에서 한 수준의 간접 참조를 요구하는 경우 참조 형식으로 전달된 구조체 또는 값 형식으로 전달된 클래스를 사용합니다.  
   
--   관리되지 않는 함수에서 두 수준의 간접 참조를 요구하는 경우 참조 형식으로 전달된 클래스를 사용합니다.  
+- 관리되지 않는 함수에서 두 수준의 간접 참조를 요구하는 경우 참조 형식으로 전달된 클래스를 사용합니다.  
   
 ## <a name="declaring-and-passing-structures"></a>구조체 선언 및 전달  
  다음 예제에서는 관리 코드에서 `Point` 및 `Rect` 구조체를 정의하고, User32.dll 파일의 **PtInRect** 함수에 매개 변수로 형식을 전달하는 방법을 보여 줍니다. **PtInRect**에는 다음과 같은 관리되지 않은 시그니처가 있습니다.  
   
-```  
+```cpp
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
@@ -59,9 +59,9 @@ Public Structure <StructLayout(LayoutKind.Explicit)> Rect
     <FieldOffset(12)> Public bottom As Integer  
 End Structure  
   
-Class Win32API      
-    Declare Auto Function PtInRect Lib "user32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
+Friend Class NativeMethods      
+    Friend Declare Auto Function PtInRect Lib "user32.dll" (
+        ByRef r As Rect, p As Point) As Boolean  
 End Class  
 ```  
   
@@ -82,25 +82,24 @@ public struct Rect {
     [FieldOffset(12)] public int bottom;  
 }     
   
-class Win32API {  
+internal static class NativeMethods
+{  
     [DllImport("User32.dll")]  
-    public static extern bool PtInRect(ref Rect r, Point p);  
+    internal static extern bool PtInRect(ref Rect r, Point p);  
 }  
 ```  
   
 ## <a name="declaring-and-passing-classes"></a>클래스 선언 및 전달  
  클래스에 고정 멤버 레이아웃이 있는 한 관리되지 않은 DLL 함수에 클래스 멤버를 전달할 수 있습니다. 다음 예제에서는 `MySystemTime` 클래스의 멤버를 전달하는 방법을 설명합니다. 이 멤버는 User32.dll 파일의 **GetSystemTime**에 순차적으로 정의됩니다. **GetSystemTime**에는 관리되지 않는 다음과 같은 시그니처가 있습니다.  
   
-```  
+```cpp
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  값 형식과 달리 클래스에는 항상 한 수준의 간접 참조가 하나 이상 있습니다.  
   
 ```vb  
-Imports System  
 Imports System.Runtime.InteropServices  
-Imports Microsoft.VisualBasic  
   
 <StructLayout(LayoutKind.Sequential)> Public Class MySystemTime  
     Public wYear As Short  
@@ -113,17 +112,17 @@ Imports Microsoft.VisualBasic
     Public wMiliseconds As Short  
 End Class  
   
-Public Class Win32  
-    Declare Auto Sub GetSystemTime Lib "Kernel32.dll"(sysTime _  
-        As MySystemTime)  
-    Declare Auto Function MessageBox Lib "User32.dll"(hWnd As IntPtr, _  
-        txt As String, caption As String, Typ As Integer) As Integer  
+Friend Class NativeMethods  
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        sysTime As MySystemTime)  
+    Friend Declare Auto Function MessageBox Lib "User32.dll" (
+        hWnd As IntPtr, lpText As String, lpCaption As String, uType As UInteger) As Integer  
 End Class  
   
 Public Class TestPlatformInvoke      
     Public Shared Sub Main()  
         Dim sysTime As New MySystemTime()  
-        Win32.GetSystemTime(sysTime)  
+        NativeMethods.GetSystemTime(sysTime)  
   
         Dim dt As String  
         dt = "System time is:" & ControlChars.CrLf & _  
@@ -131,7 +130,7 @@ Public Class TestPlatformInvoke
               ControlChars.CrLf & "Month: " & sysTime.wMonth & _  
               ControlChars.CrLf & "DayOfWeek: " & sysTime.wDayOfWeek & _  
               ControlChars.CrLf & "Day: " & sysTime.wDay  
-        Win32.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0)        
     End Sub  
 End Class  
 ```  
@@ -148,13 +147,14 @@ public class MySystemTime {
     public ushort wSecond;   
     public ushort wMilliseconds;   
 }  
-class Win32API {  
+internal static class NativeMethods
+{  
     [DllImport("Kernel32.dll")]  
-    public static extern void GetSystemTime(MySystemTime st);  
+    internal static extern void GetSystemTime(MySystemTime st);  
   
-    [DllImport("user32.dll", CharSet=CharSet.Auto)]  
-     public static extern int MessageBox(IntPtr hWnd,  
-         string text, string caption, int options);  
+    [DllImport("user32.dll", CharSet = CharSet.Auto)]  
+    internal static extern int MessageBox(
+        IntPtr hWnd, string lpText, string lpCaption, uint uType);  
 }  
   
 public class TestPlatformInvoke  
@@ -162,7 +162,7 @@ public class TestPlatformInvoke
     public static void Main()  
     {  
         MySystemTime sysTime = new MySystemTime();  
-        Win32API.GetSystemTime(sysTime);  
+        NativeMethods.GetSystemTime(sysTime);  
   
         string dt;  
         dt = "System time is: \n" +  
@@ -170,13 +170,13 @@ public class TestPlatformInvoke
               "Month: " + sysTime.wMonth + "\n" +  
               "DayOfWeek: " + sysTime.wDayOfWeek + "\n" +  
               "Day: " + sysTime.wDay;  
-        Win32API.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
+        NativeMethods.MessageBox(IntPtr.Zero, dt, "Platform Invoke Sample", 0);  
     }  
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [DLL 함수 호출](../../../docs/framework/interop/calling-a-dll-function.md)  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.StructLayoutAttribute>  
- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>
+## <a name="see-also"></a>참고 항목
+
+- [DLL 함수 호출](calling-a-dll-function.md)
+- <xref:System.Runtime.InteropServices.StructLayoutAttribute>
+- <xref:System.Runtime.InteropServices.FieldOffsetAttribute>

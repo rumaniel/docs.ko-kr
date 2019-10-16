@@ -1,5 +1,6 @@
 ---
-title: params 키워드(C# 참조)
+title: params 키워드 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - params_CSharpKeyword
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - parameters [C#], params
 - params keyword [C#]
 ms.assetid: 1690815e-b52b-4967-8380-5780aff08012
-ms.openlocfilehash: 089e31f3aad12c2303619e2a1998d0d6a5a0ad86
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 772c8da879eeccbe484c631a47de7fe8a32ec8d2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48844100"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633576"
 ---
 # <a name="params-c-reference"></a>params(C# 참조)
 
@@ -25,7 +26,7 @@ ms.locfileid: "48844100"
 
 `params` 매개 변수의 선언된 형식은 다음 예제와 같이 1차원 배열이어야 합니다. 그렇지 않으면 컴파일러 오류 [CS0225](../../misc/cs0225.md)가 발생합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 `params` 매개 변수에 인수를 보낼 수 있는 다양한 방법을 보여 줍니다.
 

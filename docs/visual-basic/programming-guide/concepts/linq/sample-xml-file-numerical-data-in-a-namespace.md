@@ -1,18 +1,18 @@
 ---
-title: '1의 샘플 XML 파일: 숫자 데이터'
+title: '샘플 XML 파일: 네임스페이스의 숫자 데이터'
 ms.date: 07/20/2015
 ms.assetid: f01cc0a1-fb55-4b42-8380-16f4be47d6f4
-ms.openlocfilehash: 71ff5229d4f2342880bdf50f288355a676b78722
-ms.sourcegitcommit: 70c76a12449439bac0f7a359866be5a0311ce960
+ms.openlocfilehash: 3a067afc6d59c76a50c7c9f91673bb631edd085b
+ms.sourcegitcommit: 9ee6cd851b6e176a5811ea28ed0d5935c71950f9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 07/25/2018
-ms.locfileid: "39244311"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68869094"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>샘플 XML 파일: 네임스페이스의 숫자 데이터
 다음 XML 파일은 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 설명서의 다양한 예제에서 사용됩니다. 이 파일에는 합계 및 평균을 구하고 그룹화할 숫자 데이터가 포함되어 있습니다. XML은 네임스페이스에 있습니다.  
   
-## <a name="data"></a>데이터  
+## <a name="data"></a>보기  
   
 ```xml  
 <Root xmlns='http://www.adatum.com'>  
@@ -55,5 +55,6 @@ ms.locfileid: "39244311"
 </Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [샘플 XML 문서(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)
+## <a name="see-also"></a>참고자료
+
+- [샘플 XML 문서(LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

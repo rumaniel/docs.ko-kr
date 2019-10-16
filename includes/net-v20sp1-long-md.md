@@ -1,1 +1,0 @@
-.NET Framework 2.0 서비스 팩 1

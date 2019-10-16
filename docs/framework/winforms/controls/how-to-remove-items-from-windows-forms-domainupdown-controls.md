@@ -9,19 +9,19 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], removing items from
 - spin button control [Windows Forms], removing items
 ms.assetid: e70f5cbc-b497-41a9-975a-344c00e56ed2
-ms.openlocfilehash: 702e5e2180148758c4b3775a5cc96a1365703166
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f56bc2b7b7b8a783ac298b220c83281f38da29da
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33532163"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662348"
 ---
 # <a name="how-to-remove-items-from-windows-forms-domainupdown-controls"></a>방법: Windows Forms DomainUpDown 컨트롤에서 항목 제거
-Windows Forms에서 항목을 제거할 수 <xref:System.Windows.Forms.DomainUpDown> 호출 하 여 컨트롤의 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> 또는 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> 의 메서드는 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> 클래스입니다. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> 메서드가 특정 항목을 제거 하는 동안는 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> 메서드 위치에 항목을 제거 합니다.  
+Windows Forms에서 항목을 제거할 수 있습니다 <xref:System.Windows.Forms.DomainUpDown> 호출 하 여 컨트롤을 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> 또는 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> 메서드를 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> 클래스입니다. <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> 메서드는 특정 항목을 제거 하는 동안는 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> 메서드 위치를 기준으로 항목을 제거 합니다.  
   
 ### <a name="to-remove-an-item"></a>항목을 제거 하려면  
   
--   사용 하 여는 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> 의 메서드는 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> 이름별으로 항목을 제거 하는 클래스입니다.  
+- 사용 합니다 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A> 메서드는 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection> 이름별으로 항목을 제거 하는 클래스입니다.  
   
     ```vb  
     DomainUpDown1.Items.Remove("noodles")  
@@ -35,9 +35,9 @@ Windows Forms에서 항목을 제거할 수 <xref:System.Windows.Forms.DomainUpD
     domainUpDown1->Items->Remove("noodles");  
     ```  
   
-     -또는-  
+     또는  
   
--   사용 하 여는 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> 메서드를 해당 위치에 항목을 제거 합니다.  
+- 사용 된 <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A> 위치를 기준으로 항목을 제거 하는 방법입니다.  
   
     ```vb  
     ' Removes the first item in the list.  
@@ -54,9 +54,10 @@ Windows Forms에서 항목을 제거할 수 <xref:System.Windows.Forms.DomainUpD
     domainUpDown1->Items->RemoveAt(0);  
     ```  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.DomainUpDown>  
- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>  
- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>  
- [DomainUpDown 컨트롤](../../../../docs/framework/winforms/controls/domainupdown-control-windows-forms.md)  
- [DomainUpDown 컨트롤 개요](../../../../docs/framework/winforms/controls/domainupdown-control-overview-windows-forms.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.DomainUpDown>
+- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.Remove%2A?displayProperty=nameWithType>
+- <xref:System.Windows.Forms.DomainUpDown.DomainUpDownItemCollection.RemoveAt%2A?displayProperty=nameWithType>
+- [DomainUpDown 컨트롤](domainupdown-control-windows-forms.md)
+- [DomainUpDown 컨트롤 개요](domainupdown-control-overview-windows-forms.md)

@@ -2,12 +2,12 @@
 title: ChannelPoolSettings
 ms.date: 03/30/2017
 ms.assetid: d3f475bd-f780-4bbe-b291-339387322964
-ms.openlocfilehash: d763be92243768bce9fdaefcd3e3575effac464b
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8900af77d0d385bb68b4b85e1d15be57bb7a8d14
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963980"
 ---
 # <a name="channelpoolsettings"></a>ChannelPoolSettings
 ChannelPoolSettings  
@@ -56,5 +56,6 @@ class ChannelPoolSettings
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.ChannelPoolSettings>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.ChannelPoolSettings>

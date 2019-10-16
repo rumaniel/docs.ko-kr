@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Visual Basic, language reference
 ms.assetid: 5c6bd31a-9542-4f3e-bfd5-e951af58f0f2
 ms.openlocfilehash: 2c0372e0176ea54a975e787631ba2849f79e5493
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47083741"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803183"
 ---
 # <a name="visual-basic-language-reference"></a>Visual Basic 언어 참조
 이 섹션에서는 Visual Basic 언어의 다양 한 측면에 대 한 참조 정보를 제공 합니다.  
@@ -27,7 +27,7 @@ ms.locfileid: "47083741"
  [Visual Basic 런타임 라이브러리 멤버](../../visual-basic/language-reference/runtime-library-members.md)  
  <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 네임스페이스의 클래스 및 모듈을 멤버 함수, 메서드, 속성, 상수, 열거형의 링크와 함께 나열합니다.  
   
- [키워드](../../visual-basic/language-reference/keywords/index.md)  
+ [C++ 키워드](../../visual-basic/language-reference/keywords/index.md)  
  모든 Visual Basic 키워드를 나열하고 추가 정보의 링크를 제공합니다.  
   
  [특성(Visual Basic)](../../visual-basic/language-reference/attributes.md)  
@@ -66,7 +66,7 @@ ms.locfileid: "47083741"
  [쿼리](../../visual-basic/language-reference/queries/index.md)  
  코드에서 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 식을 사용하는 방법에 대한 참조 정보를 제공합니다.  
   
- [문](../../visual-basic/language-reference/statements/index.md)  
+ [문(C++)](../../visual-basic/language-reference/statements/index.md)  
  Visual Basic에서 사용할 수 있는 선언 및 실행 가능 문을 설명합니다.  
   
  [XML 주석 태그](../../visual-basic/language-reference/xmldoc/index.md)  

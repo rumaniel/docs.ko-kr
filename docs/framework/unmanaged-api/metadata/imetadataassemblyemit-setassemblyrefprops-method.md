@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6667812ab7f9acff2a66e458f68d77a0d670bc2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 984ec5dea757971081ce05c858788473a0f616e7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33446911"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775278"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps 메서드
 지정된 `AssemblyRef` 메타데이터 구조를 수정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT SetAssemblyRefProps (  
     [in] mdAssemblyRef              ar,  
     [in] const void                 *pbPublicKeyOrToken,  
@@ -42,42 +42,43 @@ HRESULT SetAssemblyRefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `ar`  
- [in] 메타 데이터 토큰을 지정 하는 `AssemblyRef` 메타 데이터 구조를 수정할 수 있습니다.  
+ [in] 지정 된 메타 데이터 토큰을 `AssemblyRef` 수정할 메타 데이터 구조입니다.  
   
  `pbPublicKeyOrToken`  
  [in] 참조 된 어셈블리의 게시자의 공개 키입니다.  
   
  `cbPublicKeyOrToken`  
- [in] 바이트 크기 `pbPublicKeyOrToken`합니다.  
+ [in] 크기 (바이트) `pbPublicKeyOrToken`합니다.  
   
  `szName`  
- [in] 어셈블리의 이해 하기 쉬운 텍스트 이름입니다.  
+ [in] 어셈블리의 사람이 읽을 수 있는 텍스트 이름입니다.  
   
  `pMetaData`  
- [in] 어셈블리에 대 한 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA 인스턴스에 대 한 포인터입니다.  
+ [in] 어셈블리의 버전, 플랫폼 및 로캘 정보를 포함 하는 ASSEMBLYMETADATA 인스턴스에 대 한 포인터입니다.  
   
  `pbHashValue`  
  [in] 어셈블리와 연결 된 데이터 해시에 대 한 포인터입니다.  
   
  `cbHashValue`  
- [in] 바이트 크기 `pbHashValue`합니다.  
+ [in] 크기 (바이트) `pbHashValue`합니다.  
   
  `dwAssemblyRefFlags`  
  [in] 비트 조합 [AssemblyRefFlags](../../../../docs/framework/unmanaged-api/metadata/assemblyrefflags-enumeration.md) 참조 된 어셈블리의 특성을 지정 하는 값입니다.  
   
 ## <a name="remarks"></a>설명  
- 만들려는 `AssemblyRef` 메타 데이터 구조를 사용 하 여는 [imetadataassemblyemit:: Defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) 메서드.  
+ 만들려는 `AssemblyRef` 메타 데이터 구조를 사용 합니다 [imetadataassemblyemit:: Defineassemblyref](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-defineassemblyref-method.md) 메서드.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [IMetaDataAssemblyEmit 인터페이스](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

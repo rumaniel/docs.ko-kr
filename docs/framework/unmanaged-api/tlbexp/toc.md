@@ -1,5 +1,0 @@
-# [Tlbexp 도우미 함수](index.md)
-## [GetTypeLibInfo 함수](gettypelibinfo-function.md)
-## [LoadTypeLibWithResolver 함수](loadtypelibwithresolver-function.md)
-## [ITypeLibResolver 인터페이스](itypelibresolver-interface.md)
-### [ResolveTypeLib 메서드](resolvetypelib-method.md)

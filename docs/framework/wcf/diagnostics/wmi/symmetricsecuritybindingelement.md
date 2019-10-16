@@ -2,12 +2,12 @@
 title: SymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: b2e182b6-c041-4d80-a926-6058068d9f79
-ms.openlocfilehash: 618899c80d1b22aaabc3c13fe1079137eaf10a93
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f6effd533a205d0e8fd1421119e325f06b340dd1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50182504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956717"
 ---
 # <a name="symmetricsecuritybindingelement"></a>SymmetricSecurityBindingElement
 SymmetricSecurityBindingElement  
@@ -48,5 +48,6 @@ class SymmetricSecurityBindingElement : SecurityBindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>

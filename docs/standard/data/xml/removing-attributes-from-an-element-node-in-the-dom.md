@@ -5,33 +5,33 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 65fd6d2baae29c72241350e4568faf09b9c71f39
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: 7031d34916c520f52550d215a1a8e62880209c87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48835183"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590042"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM의 요소 노드에서 특성 제거
 여러 가지 방법으로 특성을 제거할 수 있습니다. 그 중 한 가지 방법은 특성 컬렉션에서 특성을 제거하는 것입니다. 이 방법을 사용하려면 다음 단계를 수행합니다.  
   
-1.  `XmlAttributeCollection attrs = elem.Attributes;`를 사용하여 요소에서 특성 컬렉션을 가져옵니다.  
+1. `XmlAttributeCollection attrs = elem.Attributes;`를 사용하여 요소에서 특성 컬렉션을 가져옵니다.  
   
-2.  다음 세 가지 메서드 중 하나를 사용하여 특성 컬렉션에서 특성을 제거합니다.  
+2. 다음 세 가지 메서드 중 하나를 사용하여 특성 컬렉션에서 특성을 제거합니다.  
   
-    -   특정 특성을 제거하려면 <xref:System.Xml.XmlAttributeCollection.Remove%2A>를 사용합니다.  
+    - 특정 특성을 제거하려면 <xref:System.Xml.XmlAttributeCollection.Remove%2A>를 사용합니다.  
   
-    -   컬렉션에서 모든 특성을 제거하고 특성이 없는 요소는 남겨 두려면 <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A>을 사용합니다.  
+    - 컬렉션에서 모든 특성을 제거하고 특성이 없는 요소는 남겨 두려면 <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A>을 사용합니다.  
   
-    -   인덱스 번호를 사용하여 특성 컬렉션에서 특성을 제거하려면 <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A>을 사용합니다.  
+    - 인덱스 번호를 사용하여 특성 컬렉션에서 특성을 제거하려면 <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A>을 사용합니다.  
   
  다음 메서드는 요소 노드에서 특성을 제거합니다.  
   
--   특성 컬렉션을 제거하려면 <xref:System.Xml.XmlElement.RemoveAllAttributes%2A>를 사용합니다.  
+- 특성 컬렉션을 제거하려면 <xref:System.Xml.XmlElement.RemoveAllAttributes%2A>를 사용합니다.  
   
--   컬렉션에서 이름으로 특성 하나를 제거하려면 <xref:System.Xml.XmlElement.RemoveAttribute%2A>를 사용합니다.  
+- 컬렉션에서 이름으로 특성 하나를 제거하려면 <xref:System.Xml.XmlElement.RemoveAttribute%2A>를 사용합니다.  
   
--   컬렉션에서 인덱스 번호로 특성 하나를 제거하려면 <xref:System.Xml.XmlElement.RemoveAttributeAt%2A>을 사용합니다.  
+- 컬렉션에서 인덱스 번호로 특성 하나를 제거하려면 <xref:System.Xml.XmlElement.RemoveAttributeAt%2A>을 사용합니다.  
   
  또 다른 방법은 요소를 가져오고 특성 컬렉션에서 특성을 가져온 다음 특성 노드를 직접 제거하는 것입니다. 특성 컬렉션에서 특성을 가져오려면 이름, `XmlAttribute attr = attrs["attr_name"];`, 인덱스 `XmlAttribute attr = attrs[0];`를 사용하거나 네임스페이스 `XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`로 이름을 정규화합니다.  
   

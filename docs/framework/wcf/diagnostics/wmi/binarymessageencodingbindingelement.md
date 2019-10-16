@@ -2,12 +2,12 @@
 title: BinaryMessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: e2bb3cdd-3bbd-4bb5-85fe-570457500a66
-ms.openlocfilehash: 326fe6a7ca8dc5dba0dd64b1c5fc97cec49279c7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e0551e7b4b05151490625912742aa6b26ef0216e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50180888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964101"
 ---
 # <a name="binarymessageencodingbindingelement"></a>BinaryMessageEncodingBindingElement
 BinaryMessageEncodingBindingElement  
@@ -64,5 +64,6 @@ class BinaryMessageEncodingBindingElement : MessageEncodingBindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>

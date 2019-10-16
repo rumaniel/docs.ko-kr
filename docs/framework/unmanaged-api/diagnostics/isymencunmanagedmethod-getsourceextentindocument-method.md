@@ -17,40 +17,41 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc3a986326f9b47194558ca86bcbeabb61dbaeb3
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e4948a853434b14845983addb0e6fa4012279084
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33425541"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776877"
 ---
 # <a name="isymencunmanagedmethodgetsourceextentindocument-method"></a>ISymENCUnmanagedMethod::GetSourceExtentInDocument 메서드
-가장 작은 가져옵니다 특정 문서에서 줄 및 메서드에 대 한 가장 큰 끝 줄을 시작 합니다.  
+최소 가져옵니다 특정 문서에서 줄 및 메서드에 대 한 가장 큰 끝 줄을 시작합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetSourceExtentInDocument(  
     [in]  ISymUnmanagedDocument *document,  
     [out] ULONG32* pstartLine,  
     [out] ULONG32* pendLine);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `document`  
  [in] 문서에 대 한 포인터입니다.  
   
  `pstartLine`  
- [out] 에 대 한 포인터는 `ULONG32` 시작 줄을 받는입니다.  
+ [out] 에 대 한 포인터를 `ULONG32` 시작 줄을 받는입니다.  
   
  `pendLine`  
- [out] 에 대 한 포인터는 `ULONG32` 줄 끝을 받는입니다.  
+ [out] 에 대 한 포인터를 `ULONG32` 줄 끝을 받는입니다.  
   
 ## <a name="return-value"></a>반환 값  
- 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 기타 오류 코드입니다.  
+ 메서드가 성공 하면 s_ok이 고 그렇지 않으면 E_FAIL 또는 일부 다른 오류 코드입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **Header:** CorSym.idl, CorSym.h  
+ **헤더:** CorSym.idl, CorSym.h  
   
-## <a name="see-also"></a>참고 항목  
- [ISymENCUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ISymENCUnmanagedMethod 인터페이스](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

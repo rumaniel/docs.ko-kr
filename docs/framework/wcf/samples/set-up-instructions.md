@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Samples [WCF], setup
 - Windows Communication Foundation Samples [WCF], setup
 ms.assetid: 0be7d232-485b-4f6d-9ed0-b4243c907376
-ms.openlocfilehash: b5c57b7b7fa2fe72d0fbad6d7fcf5aa17f2abad8
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: fc68759e3057b6a1fd2a2ca4e0bffe81cea5f095
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43529580"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967650"
 ---
 # <a name="set-up-instructions"></a>설치 지침
 이 항목 집합에서는 Windows Communication Foundation (WCF) 서비스를 실행 하는 데 필요한 서비스를 설정 하는 방법을 설명 합니다.  
@@ -37,11 +37,8 @@ ms.locfileid: "43529580"
  [Windows Communication Foundation 샘플 실행](../../../../docs/framework/wcf/samples/running-the-samples.md)  
  동일한 컴퓨터에서 및 컴퓨터에서 WCF 샘플을 실행 하기 위한 단계를 간략하게 설명 합니다.  
   
- [피어 투 피어 서비스 사용](https://msdn.microsoft.com/library/e7a0fcf4-b0e5-4b26-a7e3-f0f37b60a1f9)  
- 피어 투 피어 메시징 서비스용으로 기본 제공되는 확인자인 Windows 피어 투 피어 구성 요소를 설치하는 단계를 간략하게 설명합니다.  
-  
  [메시지 큐(MSMQ) 설치](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)  
  메시지 큐를 설치하는 단계를 간략하게 설명합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [문제 해결 팁](https://msdn.microsoft.com/library/8787c877-5e96-42da-8214-fa737a38f10b)
+ [WCF 샘플에 대 한 문제 해결 팁](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))

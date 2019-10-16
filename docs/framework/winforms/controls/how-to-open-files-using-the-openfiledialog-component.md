@@ -1,178 +1,46 @@
 ---
-title: '방법: OpenFileDialog 구성 요소를 사용하여 파일 열기'
-ms.date: 03/30/2017
+title: '방법: OpenFileDialog 구성 요소를 사용 하 여 열려 있는 파일'
+ms.date: 02/11/2019
 dev_langs:
 - csharp
 - vb
-- cpp
 helpviewer_keywords:
 - OpenFileDialog component [Windows Forms], opening files
 - OpenFile method [Windows Forms], OpenFileDialog component
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
-ms.openlocfilehash: d7e1ebb319576aa7a38d55d8cb9f3652626966b6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7f4e96f1714a182647665f12e29d38f2b8037478
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913460"
 ---
-# <a name="how-to-open-files-using-the-openfiledialog-component"></a>방법: OpenFileDialog 구성 요소를 사용하여 파일 열기
-<xref:System.Windows.Forms.OpenFileDialog> 구성 요소에는 사용자가 자신의 컴퓨터 또는 네트워크에 있는 모든 컴퓨터의 폴더를 탐색 하 고 하나 이상의 파일을 선택 하려면 허용 합니다. 대화 상자에서 사용자가 선택한 파일의 경로와 이름을 반환합니다.  
+# <a name="how-to-open-files-with-the-openfiledialog"></a>방법: OpenFileDialog 사용 하 여 열려 있는 파일 
+
+<xref:System.Windows.Forms.OpenFileDialog?displayProperty=nameWithType> 구성 요소 찾아보기 및 파일을 선택 하는 Windows 대화 상자가 열립니다. 열고 선택한 파일 읽기를 사용할 수 있습니다 합니다 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A?displayProperty=nameWithType> 메서드를의 인스턴스를 만들 것인지를 <xref:System.IO.StreamReader?displayProperty=nameWithType> 클래스입니다. 다음 예제에서는 두 가지 방법을 모두 보여 줍니다. 
+
+.NET framework에서 가져오거나 설정할 합니다 <xref:System.Windows.Forms.FileDialog.FileName%2A> 속성을 권한 부여 수준이 필요 하 여는 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 클래스입니다. 예제 실행을 <xref:System.Security.Permissions.FileIOPermission> 권한으로 확인 하 고 부분 신뢰 컨텍스트에서 실행 하는 경우 권한이 부족 하 여 예외를 throw 할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../misc/code-access-security-basics.md)합니다.
+
+빌드하고에서.NET Framework 앱으로 이러한 예제를 실행할 수 있습니다는 C# 또는 Visual Basic 명령줄입니다. 자세한 내용은 [csc.exe를 사용한 명령줄 빌드](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) 하거나 [명령줄에서 빌드](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)합니다. 
+
+.NET Core 3.0 부터는 수 또한 빌드 및 실행 예제에서는.NET Core 앱을 Windows로.NET Core Windows Forms에 있는 폴더에서  *\<폴더 이름 >.csproj* 프로젝트 파일입니다. 
+
+## <a name="example-read-a-file-as-a-stream-with-streamreader"></a>예제: StreamReader 사용 하 여 스트림으로 파일 읽기  
   
- 열려는 파일을 선택한 경우 파일을 여는 메커니즘에 대한 두 가지 방법이 있습니다. 파일 스트림을 사용 하는 것을 선호 하는 경우의 인스턴스를 만들 수 있습니다는 <xref:System.IO.StreamReader> 클래스입니다. 또는 사용할 수는 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 메서드 선택한 파일을 엽니다.  
-  
- 아래의 첫 번째 예는 <xref:System.Security.Permissions.FileIOPermission> 권한 검사 (하면 "보안 정보" 아래에 설명 된) 하는 대로 하지만 파일 이름에 액세스할 수 있습니다. 이 방법은 로컬 컴퓨터, 인트라넷 및 인터넷 영역에서 사용할 수 있습니다. 두 번째 방법에서는 <xref:System.Security.Permissions.FileIOPermission> 권한 검사 하지만 적합 인트라넷 또는 인터넷 영역에 응용 프로그램입니다.  
-  
-### <a name="to-open-a-file-as-a-stream-using-the-openfiledialog-component"></a>OpenFileDialog 구성 요소를 사용하여 파일을 스트림으로 열려면  
-  
-1.  **파일 열기** 대화 상자를 표시하고, 사용자가 선택한 파일을 여는 메서드를 호출합니다.  
-  
-     한 가지 방법은 사용 하는 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 파일 열기 대화 상자를 표시 하 고 인스턴스를 사용 하는 메서드는 <xref:System.IO.StreamReader> 클래스 파일을 열 수 있습니다.  
-  
-     사용 하 여 다음 예제에서는 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 이벤트 처리기의 인스턴스를 열려면는 <xref:System.Windows.Forms.OpenFileDialog> 구성 요소입니다. 파일을 선택하고 사용자가 **확인**을 클릭하면 대화 상자에서 선택한 파일이 열립니다. 이 경우 메시지 상자에 내용을 표시하여 파일 스트림을 읽었음을 보여 줍니다.  
-  
-    > [!IMPORTANT]
-    >  가져오거나 설정할는 <xref:System.Windows.Forms.FileDialog.FileName%2A> 속성, 어셈블리 권한 수준에서 부여 필요는 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 클래스입니다. 부분 신뢰 컨텍스트에서 실행하는 경우 프로세스가 권한 부족으로 인해 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../../../docs/framework/misc/code-access-security-basics.md)을 참조하세요.  
-  
-     이 예에서는 가정 폼에는 <xref:System.Windows.Forms.Button> 제어 및 <xref:System.Windows.Forms.OpenFileDialog> 구성 요소입니다.  
-  
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, _  
-       ByVal e As System.EventArgs) Handles Button1.Click  
-       If OpenFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then  
-         Dim sr As New System.IO.StreamReader(OpenFileDialog1.FileName)  
-         MessageBox.Show(sr.ReadToEnd)  
-         sr.Close()  
-       End If  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)  
-    {  
-       if(openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)  
-       {  
-          System.IO.StreamReader sr = new   
-             System.IO.StreamReader(openFileDialog1.FileName);  
-          MessageBox.Show(sr.ReadToEnd());  
-          sr.Close();  
-       }  
-    }  
-    ```  
-  
-    ```cpp  
-    private:  
-       void button1_Click(System::Object ^ sender,  
-          System::EventArgs ^ e)  
-       {  
-          if(openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)  
-          {  
-             System::IO::StreamReader ^ sr = gcnew  
-                System::IO::StreamReader(openFileDialog1->FileName);  
-             MessageBox::Show(sr->ReadToEnd());  
-             sr->Close();  
-          }  
-       }  
-    ```  
-  
-     (Visual C# 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
-  
-    ```csharp  
-    this.button1.Click += new System.EventHandler(this.button1_Click);  
-    ```  
-  
-    ```cpp  
-    this->button1->Click += gcnew  
-       System::EventHandler(this, &Form1::button1_Click);  
-    ```  
-  
-    > [!NOTE]
-    >  파일 스트림에서 읽기에 대 한 자세한 내용은 참조 <xref:System.IO.FileStream.BeginRead%2A> 및 <xref:System.IO.FileStream.Read%2A>합니다.  
-  
-### <a name="to-open-a-file-as-a-file-using-the-openfiledialog-component"></a>OpenFileDialog 구성 요소를 사용하여 파일을 파일로 열려면  
-  
-1.  사용 하 여는 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 대화 상자를 표시 하는 메서드 및 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 메서드는 파일을 엽니다.  
-  
-     <xref:System.Windows.Forms.OpenFileDialog> 구성 요소의 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 메서드는 파일을 구성 하는 바이트를 반환 합니다. 이러한 바이트는 읽을 스트림을 제공합니다. 다음 예제에는 <xref:System.Windows.Forms.OpenFileDialog> 사용자가 파일 이름 확장명의 파일만 선택할 수 있도록을 "cursor"에 대 한 필터와 구성 요소를 인스턴스화할`.cur`합니다. `.cur` 파일을 선택하면 양식의 커서가 선택한 커서로 설정됩니다.  
-  
-    > [!IMPORTANT]
-    >  호출 하 여 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 메서드, 어셈블리 권한 수준에서 부여 필요는 <xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType> 클래스. 부분 신뢰 컨텍스트에서 실행하는 경우 프로세스가 권한 부족으로 인해 예외를 throw할 수 있습니다. 자세한 내용은 [코드 액세스 보안 기본 사항](../../../../docs/framework/misc/code-access-security-basics.md)을 참조하세요.  
-  
-     이 예에서는 가정 폼에는 <xref:System.Windows.Forms.Button> 제어 합니다.  
-  
-    ```vb  
-    Private Sub Button1_Click(ByVal sender As System.Object, _  
-       ByVal e As System.EventArgs) Handles Button1.Click  
-       ' Displays an OpenFileDialog so the user can select a Cursor.  
-       Dim openFileDialog1 As New OpenFileDialog()  
-       openFileDialog1.Filter = "Cursor Files|*.cur"  
-       openFileDialog1.Title = "Select a Cursor File"  
-  
-       ' Show the Dialog.  
-       ' If the user clicked OK in the dialog and   
-       ' a .CUR file was selected, open it.  
-       If openFileDialog1.ShowDialog() = System.Windows.Forms.DialogResult.OK Then  
-         ' Assign the cursor in the Stream to the Form's Cursor property.  
-         Me.Cursor = New Cursor(openFileDialog1.OpenFile())  
-       End If  
-    End Sub  
-    ```  
-  
-    ```csharp  
-    private void button1_Click(object sender, System.EventArgs e)  
-    {  
-       // Displays an OpenFileDialog so the user can select a Cursor.  
-       OpenFileDialog openFileDialog1 = new OpenFileDialog();  
-       openFileDialog1.Filter = "Cursor Files|*.cur";  
-       openFileDialog1.Title = "Select a Cursor File";  
-  
-       // Show the Dialog.  
-       // If the user clicked OK in the dialog and  
-       // a .CUR file was selected, open it.  
-        if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)  
-       {  
-          // Assign the cursor in the Stream to the Form's Cursor property.  
-          this.Cursor = new Cursor(openFileDialog1.OpenFile());  
-       }  
-    }  
-    ```  
-  
-    ```cpp  
-    private:  
-       void button1_Click(System::Object ^ sender,  
-          System::EventArgs ^ e)  
-       {  
-          // Displays an OpenFileDialog so the user can select a Cursor.  
-          OpenFileDialog ^ openFileDialog1 = new OpenFileDialog();  
-          openFileDialog1->Filter = "Cursor Files|*.cur";  
-          openFileDialog1->Title = "Select a Cursor File";  
-  
-          // Show the Dialog.  
-          // If the user clicked OK in the dialog and  
-          // a .CUR file was selected, open it.  
-          if (openFileDialog1->ShowDialog() == System::Windows::Forms::DialogResult::OK)  
-          {  
-             // Assign the cursor in the Stream to  
-             // the Form's Cursor property.  
-             this->Cursor = gcnew  
-                System::Windows::Forms::Cursor(  
-                openFileDialog1->OpenFile());  
-          }  
-       }  
-    ```  
-  
-     (Visual C# 및 [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 이벤트 처리기를 등록 하려면 폼의 생성자에 다음 코드를 추가 합니다.  
-  
-    ```csharp  
-    this.button1.Click += new System.EventHandler(this.button1_Click);  
-    ```  
-  
-    ```cpp  
-    this->button1->Click += gcnew  
-       System::EventHandler(this, &Form1::button1_Click);  
-    ```  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.OpenFileDialog>  
- [OpenFileDialog 구성 요소](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+다음 예제에서는 Windows Forms <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 열려는 이벤트 처리기를 <xref:System.Windows.Forms.OpenFileDialog> 사용 하 여는 <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> 메서드. 사용자 파일을 선택 하 고 선택 후 **확인**의 인스턴스는 <xref:System.IO.StreamReader> 클래스 파일을 읽고 해당 내용이 양식의 텍스트 상자에 표시 됩니다. 파일 스트림에서 읽는 방법에 대 한 자세한 내용은 참조 하세요. <xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> 고 <xref:System.IO.FileStream.Read%2A?displayProperty=nameWithType>입니다.  
+
+ [!code-csharp[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/cs/Form1.cs)]
+ [!code-vb[OpenFileDialog#1](~/samples/snippets/winforms/open-files/example1/vb/Form1.vb)]  
+
+## <a name="example-open-a-file-from-a-filtered-selection-with-openfile"></a>예제: OpenFile 사용 하 여 필터링 된 선택 영역에서 파일 열기 
+
+다음 예제에서는 합니다 <xref:System.Windows.Forms.Button> 컨트롤의 <xref:System.Windows.Forms.Control.Click> 열려는 이벤트 처리기는 <xref:System.Windows.Forms.OpenFileDialog> 텍스트 파일만 표시 하는 필터를 사용 하 여 합니다. 사용자는 텍스트 파일을 선택 하 고 선택 후 **확인**, <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 메서드를 사용 하는 파일을 메모장에서 엽니다.
+
+ [!code-csharp[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/cs/Form1.cs)]
+ [!code-vb[OpenFileDialog#2](~/samples/snippets/winforms/open-files/example2/vb/Form1.vb)]  
+
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.OpenFileDialog>
+- [OpenFileDialog 구성 요소](openfiledialog-component-windows-forms.md)

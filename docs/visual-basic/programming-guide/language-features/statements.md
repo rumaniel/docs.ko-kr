@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946460"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic의 문
 
@@ -156,7 +156,7 @@ Visual Basic의 문은 전체 명령입니다. 키워드, 연산자, 변수, 상
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    자세한 내용은 [개체 이니셜라이저: 명명 된 형식과 익명 형식](./objects-and-classes/object-initializers-named-and-anonymous-types.md) 하거나 [컬렉션 이니셜라이저](./collection-initializers/index.md)합니다.
+    자세한 내용은 참조 하세요. [개체 이니셜라이저: 명명 된 형식과 익명 형식](./objects-and-classes/object-initializers-named-and-anonymous-types.md) 나 [컬렉션 이니셜라이저](./collection-initializers/index.md)합니다.
 
 - 열린 후 포함 식 (`<%=`) 또는 포함 된 식의 닫기 전에 (`%>`) XML 리터럴 내에서. 예를 들어:
 
@@ -196,7 +196,7 @@ Visual Basic의 문은 전체 명령입니다. 키워드, 연산자, 변수, 상
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   자세한 내용은 참조 하세요. [사용 하 여는 중... 문을 사용 하 여 종료](../../../visual-basic/language-reference/statements/with-end-with-statement.md) 나 [개체 이니셜라이저: 명명 된 형식과 익명 형식](./objects-and-classes/object-initializers-named-and-anonymous-types.md)합니다.
+   자세한 내용은 참조 하세요. [사용 하 여는 중... 문을 사용 하 여 종료](../../../visual-basic/language-reference/statements/with-end-with-statement.md) 또는 [개체 이니셜라이저: 명명 된 형식과 익명 형식](./objects-and-classes/object-initializers-named-and-anonymous-types.md)합니다.
 
 - XML 축 속성 한정자를 후 (`.` 나 `.@` 또는 `...`). 하지만 줄 연속 문자를 포함 해야 (`_`)를 사용 하는 경우 멤버 한정자를 지정 하면를 `With` 키워드입니다. 예를 들어:
 
@@ -247,4 +247,4 @@ Visual Basic의 문은 전체 명령입니다. 키워드, 연산자, 변수, 상
 |[할당 연산자](../../../visual-basic/language-reference/operators/assignment-operators.md)|와 같은 할당 연산자를 포함 하는 언어 참조 페이지 링크를 제공 `=`, `*=`, 및 `&=`합니다.|
 |[연산자 및 식](./operators-and-expressions/index.md)|새 값을 산출 하는 연산자를 사용 하 여 요소를 결합 하는 방법을 보여 줍니다.|
 |[방법: 코드에서 문 분리 및 결합](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|단일 문에 여러 줄으로 분할 하는 방법과 같은 줄에 여러 문 배치 하는 방법을 보여 줍니다.|
-|[방법: Label 문](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|코드 줄 레이블을 지정 하는 방법을 보여 줍니다.|
+|[방법: 레이블 문](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|코드 줄 레이블을 지정 하는 방법을 보여 줍니다.|

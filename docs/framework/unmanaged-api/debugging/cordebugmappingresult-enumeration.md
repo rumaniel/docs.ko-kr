@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ca3f5a6af6ea19ec81af3f6ac0a028440f80d56
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c2042d0936359a85d203375c42be0d8a096f004e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33407961"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739755"
 ---
 # <a name="cordebugmappingresult-enumeration"></a>CorDebugMappingResult 열거형
 IP(명령 포인터)의 값을 가져온 방법에 대한 세부 정보를 제공합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef enum CorDebugMappingResult {  
     MAPPING_PROLOG              = 0x1,  
     MAPPING_EPILOG              = 0x2,  
@@ -43,24 +43,25 @@ typedef enum CorDebugMappingResult {
   
 |멤버|설명|  
 |------------|-----------------|  
-|`MAPPING_PROLOG`|네이티브 코드는 프롤로그에 이므로 IP의 값은 0입니다.|  
-|`MAPPING_EPILOG`|네이티브 코드는 에필로그는 IP의 값은 메서드의 마지막 명령의 주소입니다.|  
-|`MAPPING_NO_INFO`|매핑 정보가 없는 방법에 대해 사용할 수 있는 이므로 IP의 값은 0입니다.|  
-|`MAPPING_UNMAPPED_ADDRESS`|메서드에 대 한 매핑 정보를는 없지만 현재 주소 Microsoft MSIL (intermediate language) 코드에 매핑할 수 없습니다. IP의 값은 0입니다.|  
-|`MAPPING_EXACT`|MSIL 코드에 정확히 메서드가 매핑되어 있거나 프레임 IP의 값은 정확 하 게 해석 되었으므로 합니다.|  
-|`MAPPING_APPROXIMATE`|메서드가 성공적으로 매핑한, 되지만 IP의 값은 근사치일 수 있습니다.|  
+|`MAPPING_PROLOG`|네이티브 코드를 프롤로그에 이므로 IP의 값은 0입니다.|  
+|`MAPPING_EPILOG`|네이티브 코드 에필로그에서 이므로 IP의 값은 메서드의 마지막 명령의 주소입니다.|  
+|`MAPPING_NO_INFO`|매핑 정보가 없는 IP의 값이 0 이므로 메서드를 사용할 수 있습니다.|  
+|`MAPPING_UNMAPPED_ADDRESS`|메서드에 대 한 매핑 정보에 경우에 현재 주소는 Microsoft intermediate language (MSIL) 코드에 매핑할 수 없습니다. IP의 값은 0입니다.|  
+|`MAPPING_EXACT`|메서드는 MSIL 코드를 정확 하 게 매핑되어 있거나 프레임 IP의 값은 정확 하 게 해석 되었으므로 합니다.|  
+|`MAPPING_APPROXIMATE`|메서드를 성공적으로 매핑되지만 IP의 값은 근사치일 수 있습니다.|  
   
 ## <a name="remarks"></a>설명  
  사용할 수는 [icordebugilframe:: Getip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-getip-method.md) 메서드 명령 포인터의 값을 가져옵니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorDebug.idl, CorDebug.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a>참고자료
+
+- [디버깅 열거형](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

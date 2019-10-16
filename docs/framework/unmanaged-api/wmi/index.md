@@ -4,19 +4,19 @@ description: WMI 및 성능 카운터 정보에 대한 .NET Framework 관리되�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
-ms.openlocfilehash: 6e105bc28b6011c3177216aba996eb85c0766ac8
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049312"
 ---
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>WMI(Windows Management Instrumentation) 및 성능 카운터(관리되지 않는 API 참조)
 
 .NET Framework WMI 및 성능 카운터 관리되지 않는 API는 [네이티브 Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi)에 대한 호출을 래핑하는 함수 집합으로 구성됩니다. 이를 통해 원격 컴퓨터 시스템을 관리하고 모니터링하는 도구와 라이브러리를 개발할 수 있습니다.
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
+
 API에는 다음 함수가 포함됩니다.
 
 | 함수 | 설명 |
@@ -33,27 +33,27 @@ API에는 다음 함수가 포함됩니다.
 | [CreateInstanceEnumWmi 함수](createinstanceenumwmi.md) | 지정된 선택 조건을 충족하는 지정된 클래스의 인스턴스를 반환하는 열거자를 반환합니다. |
 | [Delete 함수](delete.md) | 클래스 정의 및 모든 해당 한정자에서 지정된 속성을 삭제합니다. |
 | [DeleteMethod 함수](deletemethod.md) | CIM 클래스 정의에서 지정된 메서드를 삭제합니다. |
-| [EndEnumeration 함수](endenumeration.md) | 열거형 시퀀스를 종료합니다. | 
+| [EndEnumeration 함수](endenumeration.md) | 열거형 시퀀스를 종료합니다. |
 | [EndMethodEnumeration 함수](endmethodenumeration.md) | [BeginMethodEnumeration 함수](beginmethodenumeration.md)를 호출하여 시작된 열거형 시퀀스를 종료합니다. |
 | [ExecNotificationQueryWmi 함수](execnotificationquerywmi.md) | 쿼리를 실행하여 이벤트를 수신합니다. |
 | [ExecQueryWmi 함수](execquerywmi.md) | 쿼리를 실행하여 개체를 검색합니다. |
-| [FormatFromRawValue 함수](formatfromrawvalue.md) | 형식 변환이 시간 기반인 경우 하나의 원시 성능 데이터 값을 지정된 형식으로 변화하거나 두 개의 원시 성능 데이터 값으로 변환합니다. | 
+| [FormatFromRawValue 함수](formatfromrawvalue.md) | 형식 변환이 시간 기반인 경우 하나의 원시 성능 데이터 값을 지정된 형식으로 변화하거나 두 개의 원시 성능 데이터 값으로 변환합니다. |
 | [Get 함수](get.md) | 지정된 속성 값이 있으면 검색합니다. |
 | [GetCurrentApartmentType 함수](getcurrentapartmenttype.md) | 호출자가 실행 중인 아파트의 유형을 검색합니다. |
 | [GetDemultiplexedStub 함수](getdemultiplexedstub.md) | 클라이언트가 Windows 관리에서 비동기 호출을 수신하는 데 도움이 되는 개체 전달자 싱크를 만듭니다. |
-| [GetErrorInfo 함수](geterrorinfo.md) | 이전 함수 호출에서 오류 정보를 검색합니다. | 
-| [GetMethod 함수](getmethod.md) | 지정된 메서드에 대한 정보를 검색합니다. | 
+| [GetErrorInfo 함수](geterrorinfo.md) | 이전 함수 호출에서 오류 정보를 검색합니다. |
+| [GetMethod 함수](getmethod.md) | 지정된 메서드에 대한 정보를 검색합니다. |
 | [GetMethodOrigin 함수](getmethodorigin.md) | 메서드가 선언되는 클래스를 결정합니다. |
 | [GetMethodQualifierSet 함수](getmethodqualifierset.md) | 특정 메서드에 대한 한정자 집합을 검색합니다. |
 | [GetNames 함수](getnames.md) | 개체 속성의 하위 집합 또는 모든 이름을 검색합니다. |
-| [GetObjectText 함수](getobjecttext.md) | MOF 구문에서 개체의 텍스트 렌더링을 반환합니다. | 
+| [GetObjectText 함수](getobjecttext.md) | MOF 구문에서 개체의 텍스트 렌더링을 반환합니다. |
 | [GetPropertyHandle 함수](getpropertyhandle.md) | 속성을 식별하는 고유한 핸들을 반환합니다. |
 | [GetPropertyOrigin 함수](getpropertyorigin.md) | 속성이 선언되는 클래스를 결정합니다. |
 | [GetPropertyQualifierSet 함수](getpropertyqualifierset.md) | 특정 속성에 대한 한정자 집합을 검색합니다.  |
 | [GetQualifierSet 함수](getqualifierset.md) | 클래스 인스턴스 또는 클래스 정의에 대한 한정자 집합을 검색합니다. |
 | [InheritsFrom 함수](inheritsfrom.md) | 현재 클래스 또는 인스턴스가 지정된 부모 클래스에서 파생되는지 여부를 결정합니다. |
 | [Initialize 함수](initialize.md) | WMI 초기화를 수행합니다. |
-| [Next 함수](next.md) | 열거형에서 다음 속성을 검색합니다. | 
+| [Next 함수](next.md) | 열거형에서 다음 속성을 검색합니다. |
 | [NextMethod 함수](nextmethod.md) | 열거형에서 다음 메서드를 검색합니다. |
 | [Put 함수](put.md) | 명명된 속성을 새 값으로 설정합니다. |
 | [PutClassWmi 함수](putclasswmi.md) | 새 클래스를 만들거나 기존 클래스를 업데이트합니다. |
@@ -68,10 +68,11 @@ API에는 다음 함수가 포함됩니다.
 | [QualifierSet_Put 함수](qualifierset-put.md) | 명명된 한정자 및 값을 씁니다. |
 | [ResetSecurity 함수](resetsecurity.md) | 제공된 가장 토큰을 현재 스레드에 할당합니다. |
 | [SetSecurity 함수](setsecurity.md) | 현재 스레드와 연결된 가장 토큰을 검색합니다. |
-| [SpawnDerivedClass 함수](spawnderivedclass.md) | 지정된 개체에서 새로 파생된 클래스 개체를 만듭니다. | 
-| [SpawnInstance 함수](spawninstance.md) | 클래스의 새 인스턴스를 만듭니다. |   
+| [SpawnDerivedClass 함수](spawnderivedclass.md) | 지정된 개체에서 새로 파생된 클래스 개체를 만듭니다. |
+| [SpawnInstance 함수](spawninstance.md) | 클래스의 새 인스턴스를 만듭니다. |
 | [VerifyClient 함수](verifyclientkey.md) | 클라이언트 키가 올바른 보안을 유지하는지 확인합니다. |
 | [WritePropertyValue 함수](writepropertyvalue.md) | 지정된 수의 바이트를 속성 핸들로 식별되는 속성에 씁니다. |
 
- ## <a name="see-also"></a>참고 항목
-[관리되지 않는 API 참조](../index.md) 
+## <a name="see-also"></a>참고 항목
+
+- [관리되지 않는 API 참조](../index.md)

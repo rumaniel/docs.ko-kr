@@ -2,12 +2,12 @@
 title: '방법: 식 트리 실행(C#)'
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 2aad970946e417d623907c9f832e2c6e29eef912
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: 4a73201d06d21964a40fbbe57fa952da35c5942c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/16/2018
-ms.locfileid: "45641601"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69924367"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>방법: 식 트리 실행(C#)
 이 항목에서는 식 트리를 실행하는 방법을 보여 줍니다. 식 트리를 실행할 때 값이 반환될 수 있거나, 메서드 호출 등의 작업만 수행할 수도 있습니다.  
@@ -15,7 +15,7 @@ ms.locfileid: "45641601"
  람다 식을 나타내는 식 트리만 실행할 수 있습니다. 람다 식을 나타내는 식 트리는 <xref:System.Linq.Expressions.LambdaExpression> 또는 <xref:System.Linq.Expressions.Expression%601> 형식입니다. 이러한 식 트리를 실행하려면 <xref:System.Linq.Expressions.LambdaExpression.Compile%2A> 메서드를 호출하여 실행 가능한 대리자를 만든 후 대리자를 호출합니다.  
   
 > [!NOTE]
->  대리자의 형식을 알 수 없는 경우, 즉 람다 식이 <xref:System.Linq.Expressions.Expression%601> 형식이 아니라 <xref:System.Linq.Expressions.LambdaExpression> 형식인 경우 대리자를 직접 호출하는 대신 대리자의 <xref:System.Delegate.DynamicInvoke%2A> 메서드를 호출해야 합니다.  
+> 대리자의 형식을 알 수 없는 경우, 즉 람다 식이 <xref:System.Linq.Expressions.Expression%601> 형식이 아니라 <xref:System.Linq.Expressions.LambdaExpression> 형식인 경우 대리자를 직접 호출하는 대신 대리자의 <xref:System.Delegate.DynamicInvoke%2A> 메서드를 호출해야 합니다.  
   
  식 트리가 람다 식을 나타내지 않는 경우 <xref:System.Linq.Expressions.Expression.Lambda%60%601%28System.Linq.Expressions.Expression%2CSystem.Collections.Generic.IEnumerable%7BSystem.Linq.Expressions.ParameterExpression%7D%29> 메서드를 호출하여 원래 식 트리가 본문으로 포함된 새 람다 식을 만들 수 있습니다. 그런 다음 이 섹션의 앞부분에서 설명한 대로 람다 식을 실행할 수 있습니다.  
   
@@ -44,11 +44,9 @@ Console.WriteLine(result);
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
   
--   아직 참조되지 않는 경우 System.Core.dll에 대한 프로젝트 참조를 추가합니다.  
-  
--   System.Linq.Expressions 네임스페이스를 포함합니다.  
+- System.Linq.Expressions 네임스페이스를 포함합니다.  
   
 ## <a name="see-also"></a>참고 항목
 
-- [식 트리(C#)](../../../../csharp/programming-guide/concepts/expression-trees/index.md)  
-- [방법: 식 트리 수정(C#)](../../../../csharp/programming-guide/concepts/expression-trees/how-to-modify-expression-trees.md)
+- [식 트리(C#)](./index.md)
+- [방법: 식 트리 수정(C#)](./how-to-modify-expression-trees.md)

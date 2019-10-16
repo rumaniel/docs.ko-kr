@@ -2,12 +2,12 @@
 title: ConnectionOrientedTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: c1308313-f0e2-49e6-977d-6b4ce9ad35d1
-ms.openlocfilehash: 49f030c05f02280d483ac2a836cbe75716b7b5cc
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 04e6abc5941ec99769ff2c15d47881b60e81d2e0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50185056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048402"
 ---
 # <a name="connectionorientedtransportbindingelement"></a>ConnectionOrientedTransportBindingElement
 ConnectionOrientedTransportBindingElement  
@@ -96,5 +96,6 @@ class ConnectionOrientedTransportBindingElement : TransportBindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>

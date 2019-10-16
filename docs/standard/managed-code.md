@@ -1,17 +1,15 @@
 ---
 title: 관리 코드란?
 description: 관리 코드가 CLR(공용 언어 런타임) 런타임에서 해당 실행이 관리되는 코드임을 알아봅니다.
-author: blackdwarf
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 20bb7ea8-192e-4a96-8ef3-e10e1950fd3d
-ms.openlocfilehash: 268ffe9c5cbbc9490ed91f2b4c28f8f876b8ff5e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9133859bd9c999e076effcf0d4d631c59db02f33
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33574545"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678760"
 ---
 # <a name="what-is-managed-code"></a>"관리 코드"란?
 
@@ -39,6 +37,6 @@ ms.locfileid: "33574545"
 
 ## <a name="more-resources"></a>추가 리소스
 
-*   [.NET Framework 개념 개요](https://msdn.microsoft.com/library/zw4w595w.aspx)
-*   [안전하지 않은 코드 및 포인터](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
-*   [상호 운용성(C# 프로그래밍 가이드)](https://msdn.microsoft.com/library/ms173184.aspx)
+* [.NET Framework의 개요](../framework/get-started/overview.md)
+* [안전하지 않은 코드 및 포인터](../../docs/csharp/programming-guide/unsafe-code-pointers/index.md)
+* [기본 상호 운용성](./native-interop/index.md)

@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7892f87e4e4001dc6ba66a00becb0e7af2dc9cb6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2d5b3d1d39b5d4c5b7d4db073b3ffaf1c6b88373
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33459602"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70799106"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob 함수
-지정된 된 주소에서 실행 파일의 이진 표현으로 지정된 된 버퍼를 채웁니다.  
+지정된 주소에 있는 실행 파일의 이진 표현으로 지정된 버퍼를 채웁니다.  
   
- 이 함수는 더 이상 사용 되지 않습니다. 사용 하 여 [iclrstrongname:: Strongnamegetblob](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md) 메서드 대신 합니다.  
+ 이 함수는 더 이상 사용 되지 않습니다. 대신 [ICLRStrongName:: StrongNameGetBLob](../hosting/iclrstrongname-strongnamegetblob-method.md) 메서드를 사용 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 BOOLEAN StrongNameGetBlob (  
     [in]  LPCWSTR    wszFilePath,  
     [in]  BYTE       *pbBlob,  
@@ -38,32 +38,33 @@ BOOLEAN StrongNameGetBlob (
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `wszFilePath`  
- [in] 로드할 실행 파일에 유효한 경로입니다.  
+ 진행 로드할 실행 파일의 올바른 경로입니다.  
   
  `pbBlob`  
- [in] 실행 파일을 로드할 수 있는 버퍼입니다.  
+ 진행 실행 파일을 로드할 버퍼입니다.  
   
  `pcbBlob`  
- [out에서] 최대 크기를 바이트, 요청 된 `pbBlob`합니다. 반환 되 면 실제 크기를 바이트 단위로 `pbBlob`합니다.  
+ [in, out] 요청 된 최대 크기 (바이트) `pbBlob`입니다. 반환 시의 `pbBlob`실제 크기 (바이트)입니다.  
   
 ## <a name="return-value"></a>반환 값  
- `true` 성공적으로 완료 됩니다. 그렇지 않으면 `false`합니다.  
+ `true`성공적으로 완료 되 면 그렇지 않으면 `false`입니다.  
   
 ## <a name="remarks"></a>설명  
- 경우는 `StrongNameGetBlob` 함수는 성공적으로 완료를 호출 하지는 [StrongNameErrorInfo](../../../../docs/framework/unmanaged-api/strong-naming/strongnameerrorinfo-function.md) 함수를 마지막으로 생성 된 오류를 검색 합니다.  
+ `StrongNameGetBlob` 함수가 성공적으로 완료되지 않으면 [StrongNameErrorInfo](strongnameerrorinfo-function.md) 함수를 호출하여 마지막으로 생성된 오류를 검색합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** StrongName.h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [StrongNameGetBlob 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)  
- [StrongNameGetBlobFromImage 메서드](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)  
- [ICLRStrongName 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [StrongNameGetBlob 메서드](../hosting/iclrstrongname-strongnamegetblob-method.md)
+- [StrongNameGetBlobFromImage 메서드](../hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
+- [ICLRStrongName 인터페이스](../hosting/iclrstrongname-interface.md)

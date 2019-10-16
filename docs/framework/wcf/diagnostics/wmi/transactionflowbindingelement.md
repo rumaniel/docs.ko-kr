@@ -2,12 +2,12 @@
 title: TransactionFlowBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0a9656fe-2400-45ca-ad79-92715c8cf190
-ms.openlocfilehash: 027ace6ea9fc2a0e5ce63efa84e1a49c0ed2cd0a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: a58d5620abbb636480ceea3020552246ae284842
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641686"
 ---
 # <a name="transactionflowbindingelement"></a>TransactionFlowBindingElement
 TransactionFlowBindingElement  
@@ -56,5 +56,6 @@ class TransactionFlowBindingElement : BindingElement
 |---------|-----------------------------------|  
 |네임스페이스|root\ServiceModel에 정의되어 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Channels.TransactionFlowBindingElement>

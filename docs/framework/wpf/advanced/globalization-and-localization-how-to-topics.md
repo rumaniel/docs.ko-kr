@@ -7,22 +7,22 @@ helpviewer_keywords:
 - localization [WPF], features
 - globalization [WPF], features
 ms.assetid: c4b484fb-bc90-4186-a08d-f081e7109cad
-ms.openlocfilehash: 14ec1bb9ca6e6d6702818cf316e100e5bbe97e6b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a2ab04f40a3299bc0cd5a17c0f31e4f4ee0433ad
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010295"
 ---
 # <a name="globalization-and-localization-how-to-topics"></a>전역화 및 지역화 방법 항목
-이 섹션의 항목에는 지역화 대비 응용 프로그램을 개발 하는 방법을 설명 합니다.  
+이 섹션의에서 항목에서는 세계 시장 대응 응용 프로그램을 개발 하는 방법에 설명 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [응용 프로그램 지역화](../../../../docs/framework/wpf/advanced/how-to-localize-an-application.md)  
- [자동 레이아웃을 사용하여 단추 만들기](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)  
- [자동 레이아웃에 그리드 사용](../../../../docs/framework/wpf/advanced/how-to-use-a-grid-for-automatic-layout.md)  
- [ResourceDictionary를 사용하여 지역화 가능한 문자열 리소스 관리](../../../../docs/framework/wpf/advanced/how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
- [지역화할 수 있는 응용 프로그램에서 리소스 사용](../../../../docs/framework/wpf/advanced/how-to-use-resources-in-localizable-applications.md)  
+ [응용 프로그램 지역화](how-to-localize-an-application.md)  
+ [자동 레이아웃을 사용하여 단추 만들기](how-to-use-automatic-layout-to-create-a-button.md)  
+ [자동 레이아웃에 그리드 사용](how-to-use-a-grid-for-automatic-layout.md)  
+ [ResourceDictionary를 사용하여 지역화 가능한 문자열 리소스 관리](how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md)  
+ [지역화할 수 있는 애플리케이션에서 리소스 사용](how-to-use-resources-in-localizable-applications.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Globalization>  
@@ -31,6 +31,6 @@ ms.locfileid: "33544474"
   
  <xref:System.Resources.NeutralResourcesLanguageAttribute>  
   
- [XAML의 xml:lang 처리](../../../../docs/framework/xaml-services/xml-lang-handling-in-xaml.md)  
+ [XAML의 xml:lang 처리](../../xaml-services/xml-lang-handling-in-xaml.md)  
   
 ## <a name="related-sections"></a>관련 단원

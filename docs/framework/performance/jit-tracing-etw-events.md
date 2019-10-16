@@ -7,29 +7,29 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aeb0415395a59e59b4d5dc78c11d8b8f0902bad8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 145a53363c9d7aca622ee0b1ccb2700e5984397d
+ms.sourcegitcommit: 289e06e904b72f34ac717dbcc5074239b977e707
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33397561"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71046422"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 추적 ETW 이벤트
 <a name="top"></a> 이들 이벤트는 JIT(Just-In-Time) 인라인 처리 및 JIT 마무리 호출의 성공 또는 실패와 관련된 정보를 수집합니다.  
   
  JIT 추적 이벤트는 다음 두 범주로 구성됩니다.  
   
--   [JIT 인라인 처리 이벤트](#jit_inlining_events)  
+- [JIT 인라인 처리 이벤트](#jit_inlining_events)  
   
--   [JIT 마무리 호출 이벤트](#jit_tail_call_events)  
+- [JIT 마무리 호출 이벤트](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
 ## <a name="jit-inlining-events"></a>JIT 인라인 처리 이벤트  
   
 ### <a name="methodjitinliningfailed-event"></a>MethodJitInliningFailed 이벤트  
- 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)을 참조하세요.  
+ 다음 표에서는 키워드와 수준을 보여 줍니다. 자세한 내용은 [CLR ETW Keywords and Levels](clr-etw-keywords-and-levels.md)을 참조하세요.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
@@ -41,7 +41,7 @@ ms.locfileid: "33397561"
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
-|필드 이름|데이터 형식|설명|  
+|필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
 |MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
@@ -59,7 +59,7 @@ ms.locfileid: "33397561"
 ### <a name="methodjitinliningsucceeded-event"></a>MethodJitInliningSucceeded 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
@@ -71,7 +71,7 @@ ms.locfileid: "33397561"
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
-|필드 이름|데이터 형식|설명|  
+|필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
 |MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
@@ -92,7 +92,7 @@ ms.locfileid: "33397561"
 ### <a name="methodjittailcallfailed-event"></a>MethodJITTailCallFailed 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
@@ -122,7 +122,7 @@ ms.locfileid: "33397561"
 ### <a name="methodjittailcallsucceeded-event"></a>MethodJITTailCallSucceeded 이벤트  
  다음 표에서는 키워드와 수준을 보여 줍니다.  
   
-|이벤트를 발생시키기 위한 키워드|수준|  
+|이벤트를 발생시키기 위한 키워드|Level|  
 |-----------------------------------|-----------|  
 |`JITTracingKeyword` (0x10)|자세한 정보 표시(5)|  
   
@@ -134,7 +134,7 @@ ms.locfileid: "33397561"
   
  다음 표에서는 이벤트 데이터를 보여 줍니다.  
   
-|필드 이름|데이터 형식|설명|  
+|필드 이름|데이터 형식|Description|  
 |----------------|---------------|-----------------|  
 |MethodBeingCompiledNameSpace|win:UnicodeString|컴파일되는 메서드의 네임스페이스입니다.|  
 |MethodBeingCompiledName|win:UnicodeString|컴파일되는 메서드의 이름입니다.|  
@@ -149,5 +149,6 @@ ms.locfileid: "33397561"
 |TailCallType|win:UnicodeString|마무리 호출의 형식입니다.|  
 |ClrInstanceID|win:UInt16|CLR 또는 CoreCLR 인스턴스에 대한 고유 ID입니다.|  
   
-## <a name="see-also"></a>참고 항목  
- [CLR ETW 이벤트](../../../docs/framework/performance/clr-etw-events.md)
+## <a name="see-also"></a>참고자료
+
+- [CLR ETW 이벤트](clr-etw-events.md)

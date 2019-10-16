@@ -3,12 +3,12 @@ title: C# 배열 - C# 언어 둘러보기
 description: 배열은 C# 언어에서 가장 기본적인 컬렉션 형식입니다.
 ms.date: 08/10/2016
 ms.assetid: a440704c-9e88-4c75-97dd-bfe30ca0fb97
-ms.openlocfilehash: c0fe65348ab2d41852ed9150571dcb0e5b8553f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 56a053ac8525d4c6c34592d6092f3f162cb04247
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33351007"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634599"
 ---
 # <a name="arrays"></a>배열
 
@@ -44,5 +44,5 @@ new 연산자는 ***배열 이니셜라이저***를 사용하여 구분 기호 `
 [!code-csharp[ArrayAssignment](../../../samples/snippets/csharp/tour/arrays/Program.cs#L49-L53)]
 
 >[!div class="step-by-step"]
-[이전](structs.md)
-[다음](interfaces.md)
+>[이전](structs.md)
+>[다음](interfaces.md)

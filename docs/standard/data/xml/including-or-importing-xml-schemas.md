@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b26ebfa327d849f75b1ac5295b66600aeb377e1e
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47082619"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59343573"
 ---
 # <a name="including-or-importing-xml-schemas"></a>XML 스키마 포함하기 또는 가져오기
 XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소를 포함시킬 수 있습니다. 이 스키마 요소는 이를 포함하거나 가져오는 스키마의 구조를 보완하는 데 사용할 수 있는 다른 XML 스키마를 참조할 수 있습니다. SOM(스키마 개체 모델) API에서 <xref:System.Xml.Schema.XmlSchemaImport>, <xref:System.Xml.Schema.XmlSchemaInclude> 및 <xref:System.Xml.Schema.XmlSchemaRedefine> 클래스는 이러한 요소에 매핑됩니다.  
@@ -26,15 +26,15 @@ XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소�
   
  이 코드 예제에서는 다음과 같은 단계로 주소 스키마를 포함합니다.  
   
-1.  고객 스키마 및 주소 스키마를 새 <xref:System.Xml.Schema.XmlSchemaSet> 개체에 추가한 다음 컴파일합니다. 스키마를 읽거나 컴파일할 때 발생하는 모든 스키마 유효성 검사 경고 및 오류는 <xref:System.Xml.Schema.ValidationEventHandler> 대리자에서 처리됩니다.  
+1. 고객 스키마 및 주소 스키마를 새 <xref:System.Xml.Schema.XmlSchemaSet> 개체에 추가한 다음 컴파일합니다. 스키마를 읽거나 컴파일할 때 발생하는 모든 스키마 유효성 검사 경고 및 오류는 <xref:System.Xml.Schema.ValidationEventHandler> 대리자에서 처리됩니다.  
   
-2.  <xref:System.Xml.Schema.XmlSchema> 속성을 반복하여 <xref:System.Xml.Schema.XmlSchemaSet>의 고객 스키마와 주소 스키마에 대해 컴파일된 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 개체를 검색합니다. 스키마가 컴파일되므로 PSCI(Post-Schema-Compilation-Infoset) 속성에 액세스할 수 있습니다.  
+2. <xref:System.Xml.Schema.XmlSchema> 속성을 반복하여 <xref:System.Xml.Schema.XmlSchemaSet>의 고객 스키마와 주소 스키마에 대해 컴파일된 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 개체를 검색합니다. 스키마가 컴파일되므로 PSCI(Post-Schema-Compilation-Infoset) 속성에 액세스할 수 있습니다.  
   
-3.  <xref:System.Xml.Schema.XmlSchemaImport> 개체를 만들고, 가져오기의 <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> 속성을 주소 스키마의 네임스페이스로 설정하고, 가져오기의 <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> 속성을 주소 스키마의 <xref:System.Xml.Schema.XmlSchema> 개체로 설정하고, 가져오기를 고객 스키마의 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 속성에 추가합니다.  
+3. <xref:System.Xml.Schema.XmlSchemaImport> 개체를 만들고, 가져오기의 <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> 속성을 주소 스키마의 네임스페이스로 설정하고, 가져오기의 <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> 속성을 주소 스키마의 <xref:System.Xml.Schema.XmlSchema> 개체로 설정하고, 가져오기를 고객 스키마의 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 속성에 추가합니다.  
   
-4.  <xref:System.Xml.Schema.XmlSchema> 클래스의 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 및 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 사용하여 고객 스키마의 수정된 <xref:System.Xml.Schema.XmlSchemaSet> 개체를 다시 처리하고 컴파일하여 콘솔에 작성합니다.  
+4. <xref:System.Xml.Schema.XmlSchema> 클래스의 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 및 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 메서드를 사용하여 고객 스키마의 수정된 <xref:System.Xml.Schema.XmlSchemaSet> 개체를 다시 처리하고 컴파일하여 콘솔에 작성합니다.  
   
-5.  마지막으로, 고객 스키마의 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 속성을 사용하여 고객 스키마로 가져온 모든 스키마를 콘솔에 재귀적으로 작성합니다. <xref:System.Xml.Schema.XmlSchema.Includes%2A> 속성에서는 스키마에 포함하거나 가져오거나 다시 정의한 요소에 액세스할 수 있습니다.  
+5. 마지막으로, 고객 스키마의 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 속성을 사용하여 고객 스키마로 가져온 모든 스키마를 콘솔에 재귀적으로 작성합니다. <xref:System.Xml.Schema.XmlSchema.Includes%2A> 속성에서는 스키마에 포함하거나 가져오거나 다시 정의한 요소에 액세스할 수 있습니다.  
   
  다음은 전체 코드 예제 및 콘솔에 작성된 고객 스키마와 주소 스키마입니다.  
   
@@ -52,8 +52,7 @@ XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소�
         <xs:element name="FirstName" type="xs:string" />  
         <xs:element name="LastName" type="tns:LastNameType" />  
       </xs:sequence>  
-      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" /  
->  
+      <xs:attribute name="CustomerId" type="xs:positiveInteger" use="required" />  
     </xs:complexType>  
   </xs:element>  
   <xs:simpleType name="LastNameType">  
@@ -102,9 +101,9 @@ XML 스키마에 `<xs:import />`, `<xs:include />` 및 `<xs:redefine />` 요소�
   
 ## <a name="see-also"></a>참고 항목
 
-- [XML 스키마 개체 모델 개요](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)  
-- [XML 스키마 읽기 및 쓰기](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)  
-- [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md)  
-- [XML 스키마 통과](../../../../docs/standard/data/xml/traversing-xml-schemas.md)  
-- [XML 스키마 편집](../../../../docs/standard/data/xml/editing-xml-schemas.md)  
+- [XML 스키마 개체 모델 개요](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
+- [XML 스키마 읽기 및 쓰기](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [XML 스키마 빌드](../../../../docs/standard/data/xml/building-xml-schemas.md)
+- [XML 스키마 통과](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
+- [XML 스키마 편집](../../../../docs/standard/data/xml/editing-xml-schemas.md)
 - [스키마 컴파일을 위한 XmlSchemaSet](../../../../docs/standard/data/xml/xmlschemaset-for-schema-compilation.md)

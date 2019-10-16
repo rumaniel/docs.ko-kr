@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f67f3ef57b4996eb4a956c596b76fb94b1bdfd7a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404312"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738895"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent 함수
 지정된 대상 프로세스에 로드 중인 CLR(공용 언어 런타임)에서 신호를 전송할 이벤트 핸들을 만들거나 엽니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT GetStartupNotificationEvent  
     (  
     [in]  DWORD     debuggeePID,  
@@ -38,7 +38,7 @@ HRESULT GetStartupNotificationEvent
     );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `debuggeePID`  
  [in] CLR 시작 알림을 수신할 대상 프로세스의 프로세스 식별자입니다.  
   
@@ -61,7 +61,7 @@ HRESULT GetStartupNotificationEvent
  이벤트 신호를 전송한 CLR에서 관리 코드를 실행하기 전에 이벤트 신호가 전송됩니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** dbgshim.h  
   

@@ -1,5 +1,6 @@
 ---
-title: join 절(C# 참조)
+title: join 절 - C# 참조
+ms.custom: seodec18
 ms.date: 07/20/2015
 f1_keywords:
 - join
@@ -8,12 +9,12 @@ helpviewer_keywords:
 - join clause [C#]
 - join keyword [C#]
 ms.assetid: 76e9df84-092c-41a6-9537-c3f1cbd7f0fb
-ms.openlocfilehash: dee11c1ab754e515c69f330a5919776cbcb1e775
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21d4d1f9878fb7df4692fdeacd23b042680c14f1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47237165"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633617"
 ---
 # <a name="join-clause-c-reference"></a>join 절(C# 참조)
 
@@ -79,13 +80,13 @@ ms.locfileid: "47237165"
 
 복합 키를 사용하여 여러 값이 같은지 여부를 테스트할 수 있습니다. 자세한 내용은 [복합 키를 사용하여 조인](../../linq/join-by-using-composite-keys.md)을 참조하세요. 복합 키는 `group` 절에서도 사용할 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 동일한 데이터 소스에서 동일한 일치하는 키를 사용하여 내부 조인, 그룹 조인 및 왼쪽 우선 외부 조인의 결과를 비교합니다. 콘솔 디스플레이에 결과를 명확하게 나타내기 위해 이러한 예제에 몇 가지 추가 코드를 추가합니다.
 
 [!code-csharp[cscsrefQueryKeywords#23](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsCsrefQueryKeywords/CS/Join.cs#23)]
 
-## <a name="remarks"></a>설명
+## <a name="remarks"></a>주의
 
 뒤에 `into`가 오지 않는 `join` 절은 <xref:System.Linq.Enumerable.Join%2A> 메서드 호출로 변환됩니다. 뒤에 `into`가 오는 `join` 절은 <xref:System.Linq.Enumerable.GroupJoin%2A> 메서드 호출로 변환됩니다.
 

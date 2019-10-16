@@ -1,0 +1,31 @@
+- name: 관리되지 않는 API 참조
+  href: index.md
+  items:
+    - name: 공통 데이터 형식
+      href: common-data-types-unmanaged-api-reference.md
+    - name: ALink API
+      href: alink/
+    - name: Authenticode
+      href: authenticode/
+    - name: 상수
+      href: constants-unmanaged-api-reference.md
+    - name: 디버깅
+      href: debugging/
+    - name: 진단 기호 저장소
+      href: diagnostics/
+    - name: Fusion
+      href: fusion/
+    - name: 호스팅
+      href: hosting/
+    - name: 메타데이터
+      href: metadata/
+    - name: 프로파일링
+      href: profiling/
+    - name: 강력한 이름 지정
+      href: strong-naming/
+    - name: WMI 및 성능 카운터
+      href: wmi/
+    - name: Tlbexp 도우미 함수
+      href: tlbexp/
+    - name: GUID_ManagedName 특성
+      href: guid-managedname-attribute.md

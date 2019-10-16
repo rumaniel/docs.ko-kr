@@ -9,12 +9,12 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176736"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755396"
 ---
 # <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>방법: XML 요소 및 XML 특성 이름 한정
 
@@ -32,7 +32,7 @@ XML 네임스페이스는 XML 문서에서 XML 요소 및 XML 특성의 이름�
 
 3. 적절한 `System.Xml.Serialization` 특성을 <xref:System.Xml.Serialization.XmlSerializer>가 XML 문서로 serialize할 각 멤버나 클래스에 적용합니다.
 
-  사용할 수 있는 특성은 <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute> 및 <xref:System.Xml.Serialization.XmlTypeAttribute>입니다.
+    사용할 수 있는 특성은 <xref:System.Xml.Serialization.XmlAnyElementAttribute>, <xref:System.Xml.Serialization.XmlArrayAttribute>, <xref:System.Xml.Serialization.XmlArrayItemAttribute>, <xref:System.Xml.Serialization.XmlAttributeAttribute>, <xref:System.Xml.Serialization.XmlElementAttribute>, <xref:System.Xml.Serialization.XmlRootAttribute> 및 <xref:System.Xml.Serialization.XmlTypeAttribute>입니다.
 
 4. 각 특성의 `Namespace` 속성을 `XmlSerializerNamespaces`의 네임스페이스 값 중 하나로 설정합니다.
 
@@ -176,6 +176,6 @@ public class Book
 - [XML serialization 소개](introducing-xml-serialization.md)
 - [XmlSerializer 클래스](xref:System.Xml.Serialization.XmlSerializer)
 - [XML serialization을 제어하는 특성](attributes-that-control-xml-serialization.md)
-- [방법: XML 스트림의 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [방법: 개체 직렬화](how-to-serialize-an-object.md)
+- [방법: XML Stream에 대 한 대체 요소 이름 지정](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [방법: 개체 serialize](how-to-serialize-an-object.md)
 - [방법: 개체 deserialize](how-to-deserialize-an-object.md)

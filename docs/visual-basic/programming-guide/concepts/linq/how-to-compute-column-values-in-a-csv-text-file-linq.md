@@ -1,22 +1,22 @@
 ---
-title: '방법: CSV 텍스트 파일 (LINQ) (Visual Basic)의 열 값 계산'
+title: '방법: CSV 텍스트 파일의 열 값 계산 (LINQ) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 9eb0198c16efebd09af45ae26a47288b2153cf43
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c7874615d62b09f3317a3ef39c28a0e74fd349d1
+ms.sourcegitcommit: da2dd2772fcf32b44eb18b1cbe8affd17b1753c9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33643399"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71351750"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>방법: CSV 텍스트 파일 (LINQ) (Visual Basic)의 열 값 계산
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>방법: CSV 텍스트 파일의 열 값 계산 (LINQ) (Visual Basic)
 이 예제에서는 .csv 파일의 열에 대해 Sum, Average, Min 및 Max 등의 집계 계산을 수행하는 방법을 보여 줍니다. 여기 표시된 예제 원칙은 다른 형식의 구조화된 텍스트에 적용할 수 있습니다.  
   
 ### <a name="to-create-the-source-file"></a>소스 파일을 만들려면  
   
-1.  다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 첫 번째 열은 학생 ID를 나타내고 후속 열은 4개 시험의 점수를 나타낸다고 가정합니다.  
+1. 다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 첫 번째 열은 학생 ID를 나타내고 후속 열은 4개 시험의 점수를 나타낸다고 가정합니다.  
   
-    ```  
+    ```csv  
     111, 97, 92, 81, 60  
     112, 75, 84, 91, 39  
     113, 88, 94, 65, 91  
@@ -143,8 +143,9 @@ End Class
  쿼리는 <xref:System.String.Split%2A> 메서드를 사용하여 텍스트의 각 줄을 배열로 변환하는 방식으로 작동합니다. 각 배열 요소는 열을 나타냅니다. 마지막으로 각 열의 텍스트가 숫자 표현으로 변환됩니다. 탭으로 구분된 파일인 경우 `Split` 메서드의 인수를 `\t`로 업데이트하세요.  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  
- System.Core.dll에 대한 참조와 System.Linq 네임스페이스에 대한 `Imports` 문을 사용하여 .NET Framework 버전 3.5 이상을 대상으로 하는 프로젝트를 만듭니다.  
+VB.NET 콘솔 응용 프로그램 프로젝트를 만듭니다. 여기에는 system.string 네임 스페이스에 대 한 `Imports` 문이 사용 됩니다.
   
-## <a name="see-also"></a>참고 항목  
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+## <a name="see-also"></a>참조
+
+- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

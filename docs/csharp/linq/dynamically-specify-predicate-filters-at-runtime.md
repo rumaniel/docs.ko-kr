@@ -1,14 +1,14 @@
 ---
 title: 런타임에 동적으로 조건자 필터 지정(C#의 LINQ)
 description: C#에서 LINQ를 사용하여 런타임에 동적으로 조건자 필터를 지정하는 방법을 알아봅니다.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 90238470-0767-497c-916c-52d0d16845e0
-ms.openlocfilehash: 6798b80d482bd6ae2133c0bf861f30c43f6738b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 314be8f98b9ff014f14bef11a1f3581eff8574b4
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512578"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857738"
 ---
 # <a name="dynamically-specify-predicate-filters-at-runtime"></a>런타임에 동적으로 조건자 필터 지정
 
@@ -16,7 +16,7 @@ ms.locfileid: "43512578"
 
 ## <a name="to-filter-by-using-the-contains-method"></a>Contains 메서드를 사용하여 필터링하려면
 
-1. 새 콘솔 응용 프로그램을 열고 이름을 `PredicateFilters`로 지정합니다.
+1. 새 콘솔 애플리케이션을 열고 이름을 `PredicateFilters`로 지정합니다.
 
 2. [개체의 컬렉션 쿼리](query-a-collection-of-objects.md)에서 `StudentClass` 클래스를 복사하여 `Program` 클래스 아래의 `PredicateFilters` 네임스페이스에 붙여 넣습니다. `StudentClass`는 `Student` 개체 목록을 제공합니다.
 

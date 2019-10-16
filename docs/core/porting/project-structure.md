@@ -1,21 +1,21 @@
 ---
-title: .NET Framework 및 .NET Core를 지원하도록 프로젝트 구성
+title: .NET Framework 및 .NET Core용 프로젝트 구성
 description: .NET Framework 및 .NET Core에 대해 솔루션을 나란히 컴파일하려는 프로젝트 소유자를 위한 도움말입니다.
 author: conniey
-ms.author: mairaw
-ms.date: 04/06/2017
-ms.openlocfilehash: f8ca0d08c9e3802c71d53c831592ee4388ab5512
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.date: 12/07/2018
+ms.custom: seodec18
+ms.openlocfilehash: 1e120e1aee60e88ea33a8290f3bf36eb93bfc91c
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43512268"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71698928"
 ---
-# <a name="organizing-your-project-to-support-net-framework-and-net-core"></a>.NET Framework 및 .NET Core를 지원하도록 프로젝트 구성
+# <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>.NET Framework 및 .NET Core를 둘 다 지원하도록 프로젝트 구성
 
-이 문서는 .NET Framework 및 .NET Core에 대해 솔루션을 나란히 컴파일하려는 프로젝트 소유자를 위해 작성되었습니다. 개발자가 이러한 목표를 달성할 수 있도록 프로젝트를 구성하는 몇 가지 옵션이 제공됩니다. 다음 목록에서는 .NET Core를 사용하여 프로젝트 레이아웃을 설정하는 방법을 결정할 때 고려해야 할 몇 가지 일반적인 시나리오를 제공합니다. 여기에서 모든 것을 다루지는 못할 수 있습니다. 프로젝트 요구에 따라 우선 순위를 정하세요.
+.NET Framework와 .NET Core 둘 다에 대해 나란히 컴파일되는 솔루션을 만드는 방법을 알아봅니다. 이러한 목표를 달성할 수 있도록 프로젝트를 구성하는 여러 가지 옵션을 참조하세요. .NET Core를 사용하여 프로젝트 레이아웃을 설정하는 방법을 결정할 때 고려해야 할 몇 가지 일반적인 시나리오는 다음과 같습니다. 여기에서 모든 것을 다루지는 못할 수 있습니다. 프로젝트 요구에 따라 우선 순위를 정하세요.
 
-* [**기존 프로젝트와 .NET Core 프로젝트를 단일 프로젝트로 결합**][option-csproj]
+* [**기존 프로젝트와 .NET Core 프로젝트를 단일 프로젝트로 결합**](#replace-existing-projects-with-a-multi-targeted-net-core-project)
 
   *좋은 점:*
   * 각각 다른 .NET Framework 버전 또는 플랫폼을 대상으로 하는 여러 프로젝트를 컴파일하는 것이 아니라 단일 프로젝트를 컴파일함으로써 빌드 프로세스를 간소화합니다.
@@ -26,7 +26,7 @@ ms.locfileid: "43512268"
   *지원되지 않는 시나리오:*
   * 개발자가 기존 프로젝트를 열려면 Visual Studio 2017을 사용해야 합니다. Visual Studio의 이전 버전을 지원하려면 [프로젝트 파일을 서로 다른 폴더에 유지](#support-vs)하는 것이 더 낫습니다.
 
-* <a name="support-vs"></a>[**기존 프로젝트와 새로운 .NET Core 프로젝트를 별도로 유지**][option-csproj-folder]
+* <a name="support-vs"></a>[**기존 프로젝트와 새로운 .NET Core 프로젝트를 별도로 유지**](#keep-existing-projects-and-create-a-net-core-project)
 
   *좋은 점:*
   * Visual Studio 2017이 없는 개발자/참가자의 경우 업그레이드하지 않고 기존 프로젝트에 대한 개발을 계속 지원할 수 있습니다.
@@ -36,9 +36,9 @@ ms.locfileid: "43512268"
 
 아래 리포지토리를 고려하세요.
 
-![기존 프로젝트][example-initial-project]
+![기존 프로젝트](./media/project-structure/existing-project-structure.png)
 
-[**소스 코드**][example-initial-project-code]
+[**소스 코드**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/)
 
 아래에서는 기존 프로젝트의 제약 조건 및 복잡성에 따라 이 리포지토리에 대한 .NET Core 지원을 추가하는 여러 가지 방법을 설명합니다.
 
@@ -46,21 +46,21 @@ ms.locfileid: "43512268"
 
 기존 *\*.csproj* 파일을 제거하고 여러 프레임워크를 대상으로 하는 단일 *\*.csproj* 파일을 만들도록 리포지토리를 재구성합니다. 서로 다른 프레임워크에 대해 단일 프로젝트를 컴파일할 수 있으므로 이는 좋은 옵션입니다. 대상 프레임워크별로 서로 다른 컴파일 옵션 및 종속성을 처리할 수도 있습니다.
 
-![여러 프레임워크를 대상으로 하는 csproj 만들기][example-csproj]
+![여러 프레임워크를 대상으로 하는 csproj 만들기](./media/project-structure/multi-targeted-project.png)
 
-[**소스 코드**][example-csproj-code]
+[**소스 코드**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/)
 
 주목할 변경 사항은 다음과 같습니다.
 
-* *packages.config* 및 *\*.csproj*가 새로운 [.NET Core *\*.csproj*][example-csproj-netcore]로 바뀌었습니다. NuGet 패키지가 `<PackageReference> ItemGroup`을 사용하여 지정됩니다.
+* *packages.config* 및 *\*.csproj*가 새로운 [.NET Core *\*.csproj*](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj)로 바뀌었습니다. NuGet 패키지가 `<PackageReference> ItemGroup`을 사용하여 지정됩니다.
 
 ## <a name="keep-existing-projects-and-create-a-net-core-project"></a>기존 프로젝트를 유지하고 .NET Core 프로젝트 만들기
 
 이전 프레임워크를 대상으로 하는 기존 프로젝트가 있는 경우, 이러한 프로젝트는 그대로 두고 이후 프레임워크를 대상으로 하는 .NET Core를 사용할 수 있습니다.
 
-![다른 폴더에 기존 프로젝트가 있는 .NET Core 프로젝트][example-csproj-different-folder]
+![다른 폴더에 기존 프로젝트가 있는 .NET Core 프로젝트](./media/project-structure/separate-projects-same-source.png)
 
-[**소스 코드**][example-csproj-different-code]
+[**소스 코드**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/)
 
 주목할 변경 사항은 다음과 같습니다.
 
@@ -69,18 +69,4 @@ ms.locfileid: "43512268"
 
 ## <a name="see-also"></a>참고 항목
 
-* .NET Core로의 마이그레이션에 대한 자세한 지침은 [.NET Core 이식 문서][porting-doc]를 참조하세요.
-
-[porting-doc]: index.md
-[example-initial-project]: media/project-structure/project.png "기존 프로젝트"
-[example-initial-project-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/
-
-[example-csproj]: media/project-structure/project.csproj.png "여러 프레임워크를 대상으로 하는 csproj 만들기"
-[example-csproj-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/
-[example-csproj-netcore]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/src/Car/Car.csproj
-
-[example-csproj-different-folder]: media/project-structure/project.csproj.different.png "다른 폴더에 기존 PCL이 있는 .NET Core 프로젝트"
-[example-csproj-different-code]: https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/
-
-[option-csproj]: #replace-existing-projects-with-a-multi-targeted-net-core-project
-[option-csproj-folder]: #keep-existing-projects-and-create-a-net-core-project
+- [.NET Core 이식 설명서](index.md)

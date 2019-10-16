@@ -4,19 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID16
 ms.assetid: 736847d1-5e03-44c8-95e4-3ed2cef2746b
-ms.openlocfilehash: 118f567c16cde0675b73c6e1fa56c3b4cd16e664
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8973e0309fa2a54ff2155229f76cf9fdb5116f02
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33583421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665131"
 ---
 # <a name="expression-too-complex"></a>식이 너무 복잡합니다.
-부동 소수점 식에 너무 많이 중첩 된 하위 식을 포함합니다.  
+부동 소수점 식 너무 많이 중첩 된 부분식을 포함 합니다.  
   
 ## <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
--   식에서 오류가 발생 하지 않도록 설정 하려면 필요에 따라 별도 식이 나눕니다.  
+- 식 오류를 방지 하려면 필요에 따라 별도 식 나눕니다.  
   
-## <a name="see-also"></a>참고 항목  
- [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
+## <a name="see-also"></a>참고자료
+
+- [연산자 및 식](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)

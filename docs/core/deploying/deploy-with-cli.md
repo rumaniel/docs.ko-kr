@@ -1,206 +1,160 @@
 ---
-title: CLI 도구를 사용한 .NET Core 앱 배포
-description: CLI(명령줄 인터페이스) 도구를 사용한 .NET Core 앱 배포에 대해 알아봅니다.
-author: rpetrusha
-ms.author: ronpet
-ms.date: 09/05/2018
+title: CLI를 사용하여 .NET Core 앱 게시
+description: .NET Core SDK CLI(명령줄 인터페이스) 도구를 사용하여 .NET Core 앱을 게시하는 방법을 알아봅니다.
+author: thraka
+ms.author: adegeo
+ms.date: 01/16/2019
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: 6c0eb82b6be5d65c70287dd601bb97868af1c943
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.custom: seodec18
+ms.openlocfilehash: c8b4c60eb4ea09c8b10bd0b2fffc803d0a5fb6e0
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454451"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834289"
 ---
-# <a name="deploying-net-core-apps-with-command-line-interface-cli-tools"></a>CLI(명령줄 인터페이스) 도구를 사용하여 .NET Core 앱 배포
+# <a name="publish-net-core-apps-with-the-cli"></a>CLI를 사용하여 .NET Core 앱 게시
 
-.NET Core 응용 프로그램은 응용 프로그램 이진을 포함하지만 대상 시스템에 .NET Core가 있는지 여부에 따라 달라지는 *프레임워크 종속 배포* 또는 응용 프로그램과 .NET Core 이진을 모두 포함하는 *자체 포함 배포*로 배포할 수 있습니다. 개요는 [.NET Core 응용 프로그램 배포](index.md)를 참조하세요.
+이 문서에서는 명령줄에서 .NET Core 애플리케이션을 게시하는 방법을 보여줍니다. .NET Core는 애플리케이션을 게시하는 세 가지 방법을 제공합니다. 프레임워크 종속 배포는 로컬에 설치된 .NET Core 런타임을 사용하는 플랫폼 간 .dll 파일을 생성합니다. 프레임워크 종속 실행 파일은 로컬에 설치된 .NET Core 런타임을 사용하는 플랫폼별 실행 파일을 생성합니다. 자체 포함 실행 파일은 플랫폼별 실행 파일을 생성하고 .NET Core 런타임의 로컬 복사본을 포함합니다.
 
-다음 섹션에서는 [.NET Core 명령줄 인터페이스 도구](../tools/index.md)를 사용하여 다음과 같은 종류의 배포를 만드는 방법을 보여 줍니다.
+이러한 개시 모드에 대한 개요는 [.NET Core 애플리케이션 배포](index.md)를 참조하세요.
 
-- 프레임워크 종속 배포
-- 타사 종속성이 있는 프레임워크 종속 배포
-- 자체 포함 배포
-- 타사 종속성이 있는 자체 포함 배포
+CLI 사용에 대한 빠른 도움말을 찾나요? 다음 표는 앱을 게시하는 방법의 몇 가지 예를 보여줍니다. `-f <TFM>` 매개 변수를 사용하거나 프로젝트 파일을 편집하여 대상 프레임워크를 지정할 수 있습니다. 자세한 내용은 [기본 사항 게시](#publishing-basics)를 참조하세요.
 
-명령줄에서 작업하는 경우 선택한 프로그램 편집기를 사용할 수 있습니다. 프로그램 편집기가 [Visual Studio Code](https://code.visualstudio.com)인 경우 **보기** > **통합 터미널**을 선택하여 Visual Studio Code 환경 내에서 명령 콘솔을 열 수 있습니다.
+| 게시 모드 | SDK 버전 | 명령 |
+| ------------ | ----------- | ------- |
+| 프레임워크 종속 배포 | 2.x | `dotnet publish -c Release` |
+| 프레임워크 종속 실행 파일 | 2.2 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained false` |
+|                                | 3.0* | `dotnet publish -c Release` |
+| 자체 포함 배포      | 2.1 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 2.2 | `dotnet publish -c Release -r <RID> --self-contained true` |
+|                                | 3.0 | `dotnet publish -c Release -r <RID> --self-contained true` |
+
+\*SDK 버전 3.0을 사용할 경우 프레임워크 종속 실행 파일은 기본 `dotnet publish` 명령을 실행할 때 기본 게시 모드입니다. 이 내용은 **.NET Core 2.1** 또는 **.NET Core 3.0**을 대상으로 하는 프로젝트에만 적용됩니다.
+
+## <a name="publishing-basics"></a>게시 기본 사항
+
+프로젝트 파일의 `<TargetFramework>` 설정은 앱을 게시할 때 기본 대상 프레임워크를 지정합니다. 대상 프레임워크를 유효한 [TFM(대상 프레임워크 모니커)](../../standard/frameworks.md)으로 변경할 수 있습니다. 예를 들어 프로젝트에서 `<TargetFramework>netcoreapp2.2</TargetFramework>`를 사용하는 경우 .NET Core 2.2를 대상으로 하는 이진 파일이 생성됩니다. 이 설정에 지정된 TFM은 [`dotnet publish`](../tools/dotnet-publish.md) 명령에서 사용되는 기본 대상입니다.
+
+둘 이상의 프레임워크를 대상으로 하려는 경우 `<TargetFrameworks>` 설정을 세미콜론으로 구분된 둘 이상의 TFM 값으로 설정할 수 있습니다. `dotnet publish -f <TFM>` 명령을 사용하여 프레임워크 중 하나를 게시할 수 있습니다. 예를 들어 `<TargetFrameworks>netcoreapp2.1;netcoreapp2.2</TargetFrameworks>`가 있고 `dotnet publish -f netcoreapp2.1`을 실행하는 경우 .NET Core 2.1을 대상으로 하는 이진 파일이 생성됩니다.
+
+달리 설정하지 않으면 [`dotnet publish`](../tools/dotnet-publish.md) 명령의 출력 디렉터리는 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/`입니다. `-c` 매개 변수를 사용하여 변경하지 않는 한 기본 **BUILD-CONFIGURATION** 모드는 **디버그**입니다. 예를 들어 `dotnet publish -c Release -f netcoreapp2.1`은 `myfolder/bin/Release/netcoreapp2.1/publish/`에 게시합니다.
+
+.NET Core SDK 3.0을 사용하는 경우 .NET Core 버전 2.1, 2.2 또는 3.0을 대상으로 하는 앱의 기본 게시 모드는 프레임워크 종속 실행 파일입니다.
+
+.NET Core SDK 2.1을 사용하는 경우 .NET Core 버전 2.1, 2.2를 대상으로 하는 앱의 기본 게시 모드는 프레임워크 종속 배포입니다.
+
+### <a name="native-dependencies"></a>네이티브 종속성
+
+앱에 네이티브 종속성이 있는 경우 다른 운영 체제에서 실행되지 않을 수 있습니다. 예를 들어 앱이 네이티브 Windows API를 사용하는 경우 macOS 또는 Linux에서 실행되지 않습니다. 플랫폼별 코드를 제공하고 각 플랫폼에 대해 실행 파일을 컴파일해야 합니다.
+
+또한 참조한 라이브러리에 네이티브 종속성이 있는 경우 모든 플랫폼에서 앱이 실행되지 않을 수 있습니다. 그러나 참조하는 NuGet 패키지에 플랫폼별 버전이 포함되어 있어 사용자의 필수 네이티브 종속성을 처리할 수 있습니다.
+
+네이티브 종속성이 있는 앱을 배포할 때 `dotnet publish -r <RID>` 스위치를 사용하여 게시할 대상 플랫폼을 지정해야 할 수 있습니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
+
+플랫폼별 이진 파일에 대한 자세한 내용은 [프레임워크 종속 실행 파일](#framework-dependent-executable) 및 [자체 포함 배포](#self-contained-deployment) 섹션을 참조하세요.
+
+## <a name="sample-app"></a>샘플 앱
+
+다음 앱을 사용하여 게시 명령을 살펴볼 수 있습니다. 이 앱은 터미널에서 다음 명령을 실행하여 만듭니다.
+
+```dotnetcli
+mkdir apptest1
+cd apptest1
+dotnet new console
+dotnet add package Figgle
+```
+
+콘솔 템플릿에 의해 생성된 `Program.cs` 또는 `Program.vb` 파일을 다음과 같이 변경해야 합니다.
+
+```csharp
+using System;
+
+namespace apptest1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"));
+        }
+    }
+}
+```
+
+```vb
+Imports System
+
+Module Program
+    Sub Main(args As String())
+        Console.WriteLine(Figgle.FiggleFonts.Standard.Render("Hello, World!"))
+    End Sub
+End Module
+```
+
+앱([`dotnet run`](../tools/dotnet-run.md))을 실행하면 다음 출력이 표시됩니다.
+
+```terminal
+  _   _      _ _         __        __         _     _ _
+ | | | | ___| | | ___    \ \      / /__  _ __| | __| | |
+ | |_| |/ _ \ | |/ _ \    \ \ /\ / / _ \| '__| |/ _` | |
+ |  _  |  __/ | | (_) |    \ V  V / (_) | |  | | (_| |_|
+ |_| |_|\___|_|_|\___( )    \_/\_/ \___/|_|  |_|\__,_(_)
+                     |/
+```
 
 ## <a name="framework-dependent-deployment"></a>프레임워크 종속 배포
 
-타사 종속성이 없는 프레임워크 종속 배포에는 앱의 빌드, 테스트 및 게시만 포함됩니다. C#으로 작성된 간단한 예제에서는 이 프로세스를 보여 줍니다.
+.NET Core SDK 2.x CLI의 경우 FDD(프레임워크 종속 배포)가 기본 `dotnet publish` 명령의 기본 모드입니다.
 
-1. 프로젝트 디렉터리를 만듭니다.
+앱을 FDD로 게시하면 `<PROJECT-NAME>.dll` 파일이 `./bin/<BUILD-CONFIGURATION>/<TFM>/publish/` 폴더에 생성됩니다. 앱을 실행하려면 출력 폴더로 이동하여 `dotnet <PROJECT-NAME>.dll` 명령을 사용합니다.
 
-   프로젝트에 대한 디렉터리를 만들고 현재 디렉터리로 설정합니다.
+앱이 특정 버전의 .NET Core를 대상으로 구성됩니다. 대상으로 하는 .NET Core 런타임은 앱을 실행하려는 머신에 있어야 합니다. 예를 들어 앱이 .NET Core 2.2를 대상으로 하는 경우, 앱이 실행 되는 모든 머신에 .NET Core 2.2 런타임이 설치되어 있어야 합니다. [기본 사항 게시](#publishing-basics) 섹션에서 설명된 대로 프로젝트 파일을 편집하여 기본 대상 프레임워크를 변경하거나 둘 이상의 프레임워크를 대상으로 할 수 있습니다.
 
-1. 프로젝트를 만듭니다.
+FDD를 게시하면 앱을 실행하는 시스템에서 사용할 수 있는 최신 .NET Core 보안 패치로 자동으로 롤포워드하는 앱이 만들어집니다. 컴파일 시 버전 바인딩에 대한 자세한 내용은 [사용할 .NET Core 버전 선택](../versions/selection.md#framework-dependent-apps-roll-forward)을 참조하세요.
 
-   명령줄에서 [dotnet new console](../tools/dotnet-new.md)을 입력하여 새 C# 콘솔 프로젝트를 만들거나 [dotnet new console -lang vb](../tools/dotnet-new.md)를 입력하여 해당 디렉터리에 새 Visual Basic 콘솔 프로젝트를 만듭니다.
+## <a name="framework-dependent-executable"></a>프레임워크 종속 실행 파일
 
-1. 응용 프로그램의 소스 코드를 추가합니다.
+.NET Core SDK 3.x CLI의 경우 FDE(프레임워크 종속 실행 파일)가 기본 `dotnet publish` 명령의 기본 모드입니다. 현재 운영 체제를 대상으로 하는 한 다른 매개 변수를 지정할 필요가 없습니다.
 
-   편집기에서 *Program.cs* 또는 *Program.vb* 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
+이 모드에서는 플랫폼별 실행 파일 호스트가 만들어져 플랫폼 간 앱을 호스트합니다. 이 모드는 FDD에 `dotnet` 명령 형식의 호스트가 필요함으로 FDD와 유사합니다. 호스트 실행 파일 이름은 플랫폼마다 다르며 `<PROJECT-FILE>.exe`와 유사한 이름이 지정됩니다. `dotnet <PROJECT-FILE>.dll`을 호출하는 대신 이 실행 파일을 직접 실행하여 앱을 실행할 수 있습니다.
 
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
+앱이 특정 버전의 .NET Core를 대상으로 구성됩니다. 대상으로 하는 .NET Core 런타임은 앱을 실행하려는 머신에 있어야 합니다. 예를 들어 앱이 .NET Core 2.2를 대상으로 하는 경우, 앱이 실행 되는 모든 머신에 .NET Core 2.2 런타임이 설치되어 있어야 합니다. [기본 사항 게시](#publishing-basics) 섹션에서 설명된 대로 프로젝트 파일을 편집하여 기본 대상 프레임워크를 변경하거나 둘 이상의 프레임워크를 대상으로 할 수 있습니다.
 
-1. 프로젝트의 종속성 및 도구를 업데이트합니다.
+FDE를 게시하면 앱을 실행하는 시스템에서 사용할 수 있는 최신 .NET Core 보안 패치로 자동으로 롤포워드하는 앱이 만들어집니다. 컴파일 시 버전 바인딩에 대한 자세한 내용은 [사용할 .NET Core 버전 선택](../versions/selection.md#framework-dependent-apps-roll-forward)을 참조하세요.
 
-   [dotnet restore](../tools/dotnet-restore.md)([참고 참조](#dotnet-restore-note)) 명령을 실행하여 프로젝트에 지정된 종속성을 복원합니다.
+현재 플랫폼을 대상으로 할 때는 .NET Core 3.x를 제외하고 `dotnet publish` 명령과 함께 다음 스위치를 사용하여 FDE를 게시해야 합니다.
 
-1. 앱의 디버그 빌드를 만듭니다.
+- `-r <RID>` 이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
 
-   [dotnet build](../tools/dotnet-build.md) 명령을 사용하여 응용 프로그램을 빌드하거나 [dotnet run](../tools/dotnet-run.md) 명령을 사용하여 응용 프로그램을 빌드하고 실행합니다.
+- `--self-contained false` 이 스위치는 .NET Core SDK에 실행 파일을 FDE로 생성하도록 지시합니다.
 
-1. 앱을 배포합니다.
+`-r` 스위치를 사용할 때마다 출력 폴더 경로가 `./bin/<BUILD-CONFIGURATION>/<TFM>/<RID>/publish/`로 변경됩니다.
 
-   프로그램을 디버그하고 테스트한 후 다음 명령을 사용하여 배포를 만듭니다.
+[예제 앱](#sample-app)을 사용하는 경우 `dotnet publish -f netcoreapp2.2 -r win10-x64 --self-contained false`를 실행합니다. 이 명령은 `./bin/Debug/netcoreapp2.2/win10-x64/publish/apptest1.exe` 실행 파일을 만듭니다.
 
-      ```console
-      dotnet publish -f netcoreapp2.1 -c Release
-      ```
-   그러면 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 *bin* 디렉터리의 하위 디렉터리에 있는 *publish*라는 디렉터리에 배치됩니다.
+> [!NOTE]
+> **세계화 고정 모드**를 사용하여 배포의 전체 크기를 줄일 수 있습니다. 이 모드는 전역적으로 인식되지 않는 서식 지정 규칙, 대/소문자 규칙 및 문자열 비교와 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)의 정렬 순서를 사용할 수 있는 애플리케이션에 유용합니다. **세계화 고정 모드**와 이 모드를 사용하는 방법에 대한 자세한 내용은 [.NET Core 세계화 고정 모드](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)를 참조하세요.
 
-   게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 주로 예외 디버그에 유용합니다. 응용 프로그램 파일과 함께 배포하지 않도록 선택할 수 있습니다. 하지만 앱의 릴리스 빌드를 디버그하려는 경우 파일을 저장해야 합니다.
+## <a name="self-contained-deployment"></a>자체 포함 배포
 
-   응용 프로그램 파일의 전체 집합을 원하는 방식으로 배포할 수 있습니다. 예를 들어 Zip 파일로 패키지하거나, 간단한 `copy` 명령을 사용하거나, 선택한 설치 패키지와 함께 배포할 수 있습니다.
+SCD(자체 포함 배포)를 게시하면 .NET Core SDK는 플랫폼별 실행 파일을 만듭니다. SCD 게시에는 앱을 실행하는 데 필요한 모든 .NET Core 파일이 포함되지만, [.NET Core의 네이티브 종속성](https://github.com/dotnet/core/blob/master/Documentation/prereqs.md)은 포함되지 않습니다. 이러한 종속성은 앱을 실행하기 전에 시스템에 있어야 합니다.
 
-1. 앱 실행
+SCD를 게시하면 사용 가능한 최신 .NET Core 보안 패치로 롤포워드되지 않는 앱이 만들어집니다. 컴파일 시 버전 바인딩에 대한 자세한 내용은 [사용할 .NET Core 버전 선택](../versions/selection.md#self-contained-deployments-include-the-selected-runtime)을 참조하세요.
 
-   설치되고 나면 사용자가 `dotnet` 명령을 사용하고 `dotnet fdd.dll` 등의 응용 프로그램 파일 이름을 제공하여 응용 프로그램을 실행할 수 있습니다.
+SCD를 게시하려면 `dotnet publish` 명령과 함께 다음 스위치를 사용해야 합니다.
 
-   설치 관리자는 응용 프로그램 이진 외에도 공유 프레임워크 설치 관리자를 번들로 제공하거나 응용 프로그램 설치의 일부로 필수 조건을 확인해야 합니다.  공유 프레임워크 설치에는 관리자/루트 액세스 권한이 필요합니다.
+- `-r <RID>` 이 스위치는 식별자(RID)를 사용하여 대상 플랫폼을 지정합니다. 런타임 식별자 목록은 [런타임 식별자(RID) 카탈로그](../rid-catalog.md)를 참조하세요.
 
-## <a name="framework-dependent-deployment-with-third-party-dependencies"></a>타사 종속성이 있는 프레임워크 종속 배포
+- `--self-contained true` 이 스위치는 .NET Core SDK에 실행 파일을 SCD로 생성하도록 지시합니다.
 
-하나 이상의 타사 종속성이 있는 프레임워크 종속 배포를 배포하려면 프로젝트에서 해당 종속성을 사용할 수 있어야 합니다. 다음 두 가지 추가 단계를 수행해야 `dotnet restore`([참고 참조](#dotnet-restore-note)) 명령을 실행할 수 있습니다.
-
-1. 필요한 타사 라이브러리에 대한 참조를 *csproj* 파일의 `<ItemGroup>` 섹션에 추가합니다. 다음 `<ItemGroup>` 섹션에는 [Json.NET](https://www.newtonsoft.com/json)에 대한 종속성이 타사 라이브러리로 포함되어 있습니다.
-
-      ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-      ```
-
-1. 타사 종속성을 포함하는 NuGet 패키지를 아직 다운로드하지 않은 경우 다운로드합니다. 패키지를 다운로드하려면 종속성을 추가한 후 `dotnet restore`([참고 참조](#dotnet-restore-note)) 명령을 실행합니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
-
-타사 종속성이 있는 프레임워크 종속 배포는 타사 종속성만큼만 이식 가능합니다. 예를 들어 타사 라이브러리에서 macOS를 지원하는 경우 Windows 시스템에 앱을 이식할 수 없습니다. 이러한 현상은 타사 종속성 자체가 네이티브 코드에 종속된 경우에 발생합니다. 관련된 좋은 예로 [libuv](https://github.com/libuv/libuv)에 대한 기본 종속성이 필요한 [Kestrel 서버](/aspnet/core/fundamentals/servers/kestrel)가 있습니다. 이런 종류의 타사 종속성이 있는 응용 프로그램에 대해 FDD를 만들면 게시된 출력에는 기본 종속성에서 지원하고 NuGet 패키지에 있는 각 [RID(런타임 식별자)](../rid-catalog.md)에 대한 폴더가 포함됩니다.
-
-## <a name="simpleSelf"></a> 타사 종속성이 없는 자체 포함 배포
-
-타사 종속성이 없는 자체 포함 배포에는 프로젝트 만들기, *csproj* 파일 수정, 앱 빌드, 테스트 및 게시가 포함됩니다. C#으로 작성된 간단한 예제에서는 이 프로세스를 보여 줍니다. 이 예제는 명령줄에서 [dotnet 유틸리티](../tools/dotnet.md)를 사용하여 자체 포함 배포를 만드는 방법을 보여 줍니다.
-
-1. 프로젝트에 대한 디렉터리를 만듭니다.
-
-   프로젝트에 대한 디렉터리를 만들고 현재 디렉터리로 설정합니다.
-
-1. 프로젝트를 만듭니다.
-
-   명령줄에서 [dotnet new console](../tools/dotnet-new.md)을 입력하여 해당 디렉터리에 새 C# 콘솔 프로젝트를 만듭니다.
-
-1. 응용 프로그램의 소스 코드를 추가합니다.
-
-   편집기에서 *Program.cs* 파일을 열고 자동 생성된 코드를 다음 코드로 바꿉니다. 텍스트를 입력하라는 메시지가 표시된 다음 사용자가 입력한 개별 단어가 표시됩니다. 정규식 `\w+`를 사용하여 입력 테스트의 단어를 구분합니다.
-
-   [!code-csharp[deployment#1](~/samples/snippets/core/deploying/cs/deployment-example.cs)]
-   [!code-vb[deployment#1](~/samples/snippets/core/deploying/vb/deployment-example.vb)]
-1. 앱의 대상 플랫폼을 정의합니다.
-
-   *csproj* 파일의 `<PropertyGroup>` 섹션에서 앱의 대상 플랫폼을 정의하는 `<RuntimeIdentifiers>` 태그를 만들고 각 대상 플랫폼의 RID(런타임 식별자)를 지정합니다. RID를 구분하려면 세미콜론도 추가해야 합니다. 런타임 식별자 목록은 [런타임 식별자 카탈로그](../rid-catalog.md)를 참조하세요.
-
-   예를 들어 다음 `<PropertyGroup>` 섹션은 앱이 64비트 Windows 10 운영 체제 및 64비트 OS X 버전 10.11 운영 체제에서 실행됨을 나타냅니다.
-
-     ```xml
-     <PropertyGroup>
-         <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-     </PropertyGroup>
-     ```
-
-   `<RuntimeIdentifiers>` 요소는 *csproj* 파일에 있는 모든 `<PropertyGroup>`에 표시될 수 있습니다. 전체 샘플 *csproj* 파일은 이 섹션의 뒷부분에 나옵니다.
-
-1. 프로젝트의 종속성 및 도구를 업데이트합니다.
-
-   [dotnet restore](../tools/dotnet-restore.md)([참고 참조](#dotnet-restore-note)) 명령을 실행하여 프로젝트에 지정된 종속성을 복원합니다.
-
-1. 세계화 고정 모드를 사용할 것인지 여부를 결정합니다.
-
-   특히 앱이 Linux를 대상으로 하는 경우 [세계화 고정 모드](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)를 활용하여 배포의 총 크기를 줄일 수 있습니다. 세계화 고정 모드는 전역적으로 인식되지 않는 서식 지정 규칙, 대/소문자 규칙 및 문자열 비교와 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)의 정렬 순서를 사용할 수 있는 응용 프로그램에 유용합니다.
-
-   고정 모드를 사용하려면 **솔루션 탐색기**에서 프로젝트(솔루션 아님)를 마우스 오른쪽 단추로 클릭하고 **SCD.csproj 편집** 또는 **SCD.vbproj 편집**을 선택합니다. 그런 다음, 강조 표시된 다음 줄을 파일에 추가합니다.
-
- [!code-xml[globalization-invariant-mode](~/samples/snippets/core/deploying/xml/invariant.csproj)]
-
-1. 앱의 디버그 빌드를 만듭니다.
-
-   명령줄에서 [dotnet build](../tools/dotnet-build.md) 명령을 사용합니다.
-
-1. 프로그램을 디버그하고 테스트한 후에는 각 대상 플랫폼에 대해 앱과 함께 배포할 파일을 만듭니다.
-
-   다음과 같이 두 대상 플랫폼에 대해 `dotnet publish` 명령을 사용합니다.
-
-      ```console
-      dotnet publish -c Release -r win10-x64
-      dotnet publish -c Release -r osx.10.11-x64
-      ```
-
-   그러면 각 대상 플랫폼에 대해 앱의 디버그가 아닌 릴리스 버전이 만들어집니다. 결과 파일은 프로젝트 *.\bin\Release\netcoreapp2.1\<runtime_identifier>* 하위 디렉터리의 하위 디렉터리에 있는 *publish*라는 하위 디렉터리에 저장됩니다. 각 하위 디렉터리에는 앱을 시작하는 데 필요한 전체 파일 집합(앱 파일 및 모든 .NET Core 파일)이 포함됩니다.
-
-게시 프로세스에서는 응용 프로그램의 파일과 함께 앱에 대한 디버깅 정보를 포함하는 프로그램 데이터베이스(.pdb) 파일을 내보냅니다. 이 파일은 주로 예외 디버그에 유용합니다. 응용 프로그램 파일과 함께 패키지하지 않도록 선택할 수 있습니다. 하지만 앱의 릴리스 빌드를 디버그하려는 경우 파일을 저장해야 합니다.
-
-게시된 파일을 원하는 방식으로 배포합니다. 예를 들어 Zip 파일로 패키지하거나, 간단한 `copy` 명령을 사용하거나, 선택한 설치 패키지와 함께 배포할 수 있습니다.
-
-다음은 이 프로젝트에 대한 전체 *csproj* 파일입니다.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-</Project>
-```
-
-## <a name="self-contained-deployment-with-third-party-dependencies"></a>타사 종속성이 있는 자체 포함 배포
-
-하나 이상의 타사 종속성이 있는 자체 포함 배포에는 종속성 추가가 포함됩니다. 다음 두 가지 추가 단계를 수행해야 `dotnet restore`([참고 참조](#dotnet-restore-note)) 명령을 실행할 수 있습니다.
-
-1. 모든 타사 라이브러리에 대한 참조를 *csproj* 파일의 `<ItemGroup>` 섹션에 추가합니다. 다음 `<ItemGroup>` 섹션에서는 Json.NET을 타사 라이브러리로 사용합니다.
-
-    ```xml
-      <ItemGroup>
-        <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-      </ItemGroup>
-    ```
-
-1. 타사 종속성을 포함하는 NuGet 패키지를 시스템에 아직 다운로드하지 않은 경우 다운로드합니다. 앱에서 종속성을 사용할 수 있도록 하려면 종속성을 추가한 후 `dotnet restore`([참고 참조](#dotnet-restore-note)) 명령을 실행합니다. 종속성은 게시 시간에 로컬 NuGet 캐시에서 확인되므로 시스템에서 사용할 수 있어야 합니다.
-
-다음은 이 프로젝트에 대한 전체 *csproj* 파일입니다.
-
-```xml
-<Project Sdk="Microsoft.NET.Sdk">
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RuntimeIdentifiers>win10-x64;osx.10.11-x64</RuntimeIdentifiers>
-  </PropertyGroup>
-  <ItemGroup>
-    <PackageReference Include="Newtonsoft.Json" Version="10.0.2" />
-  </ItemGroup>
-</Project>
-```
-
-응용 프로그램을 배포하면 앱에서 사용된 타사 종속성도 응용 프로그램 파일에 포함됩니다. 타사 라이브러리는 앱이 실행되는 시스템에 없어도 됩니다.
-
-타사 라이브러리가 있는 자체 포함 배포는 해당 라이브러리에서 지원하는 플랫폼에만 배포할 수 있습니다. 이 배포는 기본 종속성과 함께 타사 종속성이 있는 프레임워크 종속 배포와 유사하며, 기본 종속성이 앱을 배포할 플랫폼과 호환되어야 합니다.
-
-<a name="dotnet-restore-note"></a>
-[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+> [!NOTE]
+> **세계화 고정 모드**를 사용하여 배포의 전체 크기를 줄일 수 있습니다. 이 모드는 전역적으로 인식되지 않는 서식 지정 규칙, 대/소문자 규칙 및 문자열 비교와 [고정 문화권](xref:System.Globalization.CultureInfo.InvariantCulture)의 정렬 순서를 사용할 수 있는 애플리케이션에 유용합니다. **세계화 고정 모드**와 이 모드를 사용하는 방법에 대한 자세한 내용은 [.NET Core 세계화 고정 모드](https://github.com/dotnet/corefx/blob/master/Documentation/architecture/globalization-invariant-mode.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-* [.NET Core 응용 프로그램 배포](index.md)
-* [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)
+- [.NET Core 애플리케이션 배포 개요](index.md)
+- [.NET Core RID(런타임 식별자) 카탈로그](../rid-catalog.md)

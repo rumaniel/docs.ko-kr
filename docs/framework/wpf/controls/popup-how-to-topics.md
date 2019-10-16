@@ -7,22 +7,22 @@ helpviewer_keywords:
 - Popup control [WPF], how-to topics
 - controls [WPF], Popup
 ms.assetid: 9488a245-0168-4650-b9ab-d075a108cc8f
-ms.openlocfilehash: 4b7bd1398e2630c7f2496c9cc78fe1d20c27c941
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 80f0d8bb3f78e80868d5294b5893ef409fdf478c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33553717"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770580"
 ---
 # <a name="popup-how-to-topics"></a>팝업 방법 항목
-이 섹션의 항목을 사용 하는 방법을 설명는 <xref:System.Windows.Controls.Primitives.Popup> 컨트롤을 현재 응용 프로그램 창 위에 배치 되는 별도 창에 콘텐츠를 표시 합니다.  
+이 섹션의에서 항목에서는 사용 하는 방법에 설명 합니다 <xref:System.Windows.Controls.Primitives.Popup> 현재 응용 프로그램 창 위에 떠 있는 별도 창에서 콘텐츠를 표시 하는 컨트롤입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [팝업에 애니메이션 효과 주기](../../../../docs/framework/wpf/controls/how-to-animate-a-popup.md)  
- [사용자 지정 팝업 위치 지정](../../../../docs/framework/wpf/controls/how-to-specify-a-custom-popup-position.md)  
+ [팝업에 애니메이션 효과 주기](how-to-animate-a-popup.md)  
+ [사용자 지정 팝업 위치 지정](how-to-specify-a-custom-popup-position.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>관련 단원  
- [팝업 개요](../../../../docs/framework/wpf/controls/popup-overview.md)
+ [팝업 개요](popup-overview.md)

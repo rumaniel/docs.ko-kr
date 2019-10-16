@@ -1,13 +1,14 @@
 ---
-title: protected internal(C# 참조)
+title: protected internal - C# 참조
+ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: e5763830a29d4e627dbb8efa0e86fca536bbb26c
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: ddfefa2a0bb145aa49a60f06a40725d2706cecb5
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193775"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661648"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal(C# 참조)
 
@@ -29,7 +30,7 @@ class TestAccess
 {
     void Access()
     {
-        BaseClass baseObject = new BaseClass();
+        var baseObject = new BaseClass();
         baseObject.myValue = 5;
     }
 }
@@ -42,8 +43,8 @@ class DerivedClass : BaseClass
 {
     static void Main()
     {
-        BaseClass baseObject = new BaseClass();
-        DerivedClass derivedObject = new DerivedClass();
+        var baseObject = new BaseClass();
+        var derivedObject = new DerivedClass();
 
         // Error CS1540, because myValue can only be accessed by
         // classes derived from BaseClass.
@@ -54,6 +55,7 @@ class DerivedClass : BaseClass
     }
 }
 ```
+
 이 예제에는 `Assembly1.cs` 및 `Assembly2.cs`의 두 파일이 포함되어 있습니다.
 첫 번째 파일은 공용 기본 클래스인 `BaseClass`와 다른 클래스인 `TestAccess`을 포함합니다. `BaseClass`는 `TestAccess` 형식으로 액세스되는 protected internal 멤버인 `myValue`를 소유합니다.
 두 번째 파일에서 `BaseClass`의 인스턴스를 통한 `myValue` 액세스의 시도는 오류를 생성하지만 파생된 클래스 `DerivedClass`의 인스턴스를 통한 이 멤버로의 액세스는 성공합니다.

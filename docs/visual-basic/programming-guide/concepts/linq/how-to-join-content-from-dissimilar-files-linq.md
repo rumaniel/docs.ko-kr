@@ -2,12 +2,12 @@
 title: '방법: 서로 다른 파일 (LINQ) (Visual Basic)의 콘텐츠 조인'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: d82e43449651ead5f39ec9c9442d3087b34d10ef
-ms.sourcegitcommit: 9e18e4a18284ae9e54c515e30d019c0bbff9cd37
+ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/28/2018
-ms.locfileid: "37072048"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593493"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>방법: 서로 다른 파일 (LINQ) (Visual Basic)의 콘텐츠 조인
 
@@ -15,7 +15,7 @@ ms.locfileid: "37072048"
   
 ## <a name="to-create-the-data-files"></a>데이터 파일을 만들려면
   
-1.  다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 스프레드시트 데이터를 나타냅니다. 열 1은 학생 ID이고, 열 2-5는 시험 점수입니다.  
+1. 다음 줄을 scores.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 스프레드시트 데이터를 나타냅니다. 열 1은 학생 ID이고, 열 2-5는 시험 점수입니다.  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "37072048"
     122, 94, 92, 91, 91  
     ```  
   
-2.  다음 줄을 names.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 학생의 성, 이름 및 학생 ID를 포함하는 스프레드시트를 나타냅니다.  
+2. 다음 줄을 names.csv 파일에 복사하고 파일을 프로젝트 폴더에 저장합니다. 파일은 학생의 성, 이름 및 학생 ID를 포함하는 스프레드시트를 나타냅니다.  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -49,7 +49,7 @@ ms.locfileid: "37072048"
     Tucker,Michael,122  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
 
 ```vb
 Imports System.Collections.Generic
@@ -82,8 +82,7 @@ Class JoinStrings
                             From id In scores   
                             Let n2 = id.Split(New Char() {","})   
                             Where Convert.ToInt32(n(2)) = Convert.ToInt32(n2(0))
-                            Select n(0) & "," & n(1) & "," & n2(0) & "," & n2(1) & "," &  
-                              n2(2) & "," & n2(3)  
+                            Select n(0) & "," & n2(1) & "," & n2(2) & "," & n2(3) & "," &  n2(4)
   
         ' Pass a query variable to a Sub and execute it there.  
         ' The query itself is unchanged.  
@@ -121,15 +120,7 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a>코드 컴파일
-
-만들기 하 고 다음 옵션 중 하나를 대상으로 하는 프로젝트를 컴파일하십시오.
-
-- .NET framework 버전 3.5 System.Core.dll에 대 한 참조입니다.
-- .NET framework 버전 4.0 이상이 합니다.
-- .NET core 버전 1.0 이상이 있습니다.
-  
 ## <a name="see-also"></a>참고자료
 
- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)  
- [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 및 문자열 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
+- [LINQ 및 파일 디렉터리(Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

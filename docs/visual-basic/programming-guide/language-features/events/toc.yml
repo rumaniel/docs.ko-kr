@@ -1,0 +1,13 @@
+- name: 이벤트
+  href: index.md
+  items:
+    - name: '연습: 이벤트 선언 및 발생'
+      href: walkthrough-declaring-and-raising-events.md
+    - name: '연습: 이벤트 처리'
+      href: walkthrough-handling-events.md
+    - name: '방법: 차단을 방지하는 사용자 지정 이벤트 선언'
+      href: how-to-declare-custom-events-to-avoid-blocking.md
+    - name: '방법: 메모리를 절약하는 사용자 지정 이벤트 선언'
+      href: how-to-declare-custom-events-to-conserve-memory.md
+    - name: 상속된 이벤트 처리기 관련 문제 해결
+      href: troubleshooting-inherited-event-handlers.md

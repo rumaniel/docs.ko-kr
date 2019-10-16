@@ -3,12 +3,12 @@ title: .NET Compiler Platform SDK 개념 및 개체 모델
 description: 이 개요는 .NET 컴파일러 SDK와 함께 효과적으로 작동해야 하는 배경 정보를 제공합니다. API 계층, 관련된 주요 형식 및 전체 개체 모델을 학습합니다.
 ms.date: 10/10/2017
 ms.custom: mvc
-ms.openlocfilehash: a3104313efa0110699c45a4ce7bca99aab20542a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: ee8f902bf1df8b63e229fd518e7a0c592fcd47ca
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33363690"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675708"
 ---
 # <a name="understand-the-net-compiler-platform-sdk-model"></a>.NET Compiler Platform SDK 모델 이해
 
@@ -28,7 +28,7 @@ ms.locfileid: "33363690"
 
 ![컴파일러 파이프라인의 각 단계에서 컴파일러 API에 사용할 수 있는 언어 서비스](media/compiler-api-model/compiler-pipeline-lang-svc.png)
 
-각 컴파일러는 단일 종단 간 전체로 이러한 구성 요소를 하나로 결합합니다.
+각 컴파일러는 단일 엔드투엔드 전체로 이러한 구성 요소를 하나로 결합합니다.
 
 이러한 API는 Visual Studio에서 사용하는 API와 동일합니다. 예를 들어 코드 개요 및 서식 지정 기능은 구문 트리를 사용하고, 개체 브라우저 및 탐색 기능은 기호 테이블을 사용하며, 리팩터링 및 정의로 이동은 의미 체계 모델을 사용하고, 편집하며 계속하기는 내보내기 API를 포함하여 이러한 모든 것을 사용합니다. 
 
@@ -40,7 +40,7 @@ ms.locfileid: "33363690"
 
 ### <a name="compiler-apis"></a>컴파일러 API
 
-컴파일러 계층은 구문 및 의미 체계 모두의 컴파일러 파이프라인의 각 단계에서 노출되는 정보에 해당하는 개체 모델을 포함합니다. 컴파일러 계층은 어셈블리 참조, 컴파일러 옵션 및 소스 코드 파일을 포함하는 컴파일러 단일 호출의 변경할 수 없는 스냅숏도 포함합니다. C# 언어 및 Visual Basic 언어를 나타내는 두 개의 고유한 API가 있습니다. 이러한 두 개의 API는 모양에서 유사하지만 각 개별 언어에 대한 충실도가 높도록 맞춰집니다. 이 계층에는 Visual Studio 구성 요소에 대한 종속성이 없습니다.
+컴파일러 계층은 구문 및 의미 체계 모두의 컴파일러 파이프라인의 각 단계에서 노출되는 정보에 해당하는 개체 모델을 포함합니다. 컴파일러 계층은 어셈블리 참조, 컴파일러 옵션 및 소스 코드 파일을 포함하는 컴파일러 단일 호출의 변경할 수 없는 스냅샷도 포함합니다. C# 언어 및 Visual Basic 언어를 나타내는 두 개의 고유한 API가 있습니다. 이러한 두 개의 API는 모양에서 유사하지만 각 개별 언어에 대한 충실도가 높도록 맞춰집니다. 이 계층에는 Visual Studio 구성 요소에 대한 종속성이 없습니다.
 
 ### <a name="diagnostic-apis"></a>진단 API
 

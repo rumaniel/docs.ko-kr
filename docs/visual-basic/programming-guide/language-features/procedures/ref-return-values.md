@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ref return values [Visual Basic]
 - ref returns [Visual Basic]
 ms.assetid: 5ef0cc69-eb3a-4a67-92a2-78585f223cb5
-ms.openlocfilehash: ba649c4beaf3ec70a8c118f823fe8f25651a05a7
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: d0600f7d9030324160343e800c37e0f5e68bff61
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50198304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791809"
 ---
 # <a name="support-for-reference-return-values-visual-basic"></a>참조 반환 값 (Visual Basic)에 대 한 지원
 
@@ -47,7 +47,5 @@ Visual Basic 참조를 사용 하 여 만든 메서드에 값 돌아가게 없�
 
 ## <a name="see-also"></a>참고자료
 
-[값 및 참조로 인수 전달](passing-arguments-by-value-and-by-reference.md)   
-[Visual Basic의 프로시저](index.md)   
-
-
+- [값 및 참조로 인수 전달](passing-arguments-by-value-and-by-reference.md)
+- [Visual Basic의 프로시저](index.md)

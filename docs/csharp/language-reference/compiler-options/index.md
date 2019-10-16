@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Visual C#, compiler options
 ms.assetid: d3403556-1816-4546-a782-e8223a772e44
 ms.openlocfilehash: a0affaf3691d2392c9f8d7502204d0122f2ea428
-ms.sourcegitcommit: 77d9a94dac4c05827ed0663d95e0f9ad35d6682e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
-ms.locfileid: "34472518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662831"
 ---
 # <a name="c-compiler-options"></a>C# 컴파일러 옵션
 컴파일러는 실행 파일(.exe), 동적 연결 라이브러리(.dll) 또는 코드 모듈(.netmodule)을 생성합니다.  
@@ -26,7 +26,7 @@ ms.locfileid: "34472518"
   
 ## <a name="in-this-section"></a>섹션 내용  
  [csc.exe를 사용한 명령줄 빌드](command-line-building-with-csc-exe.md)  
- 명령줄에서 Visual C# 응용 프로그램을 빌드하는 방법에 대한 정보를 제공합니다.  
+ 명령줄에서 Visual C# 애플리케이션을 빌드하는 방법에 대한 정보를 제공합니다.  
   
  [방법: Visual Studio 명령줄에 필요한 환경 변수 설정](how-to-set-environment-variables-for-the-visual-studio-command-line.md)  
  vsvars32.bat를 실행하여 명령줄 빌드를 사용하도록 하는 단계를 제공합니다.  

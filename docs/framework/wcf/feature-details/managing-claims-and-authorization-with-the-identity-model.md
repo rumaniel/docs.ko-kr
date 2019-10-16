@@ -8,29 +8,29 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 84f4485a85f83e910cc75b04282e1ad04aee72c1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74cf55ba617eee193bcf1d2454f7e26ce0ba78cb
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33497028"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960118"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>ID 모델을 사용하여 클레임 및 권한 부여 관리
-권한 부여는 컴퓨터 리소스를 변경하거나 보거나 컴퓨터 리소스에 액세스할 수 있는 사용 권한이 있는 엔터티를 확인하는 프로세스입니다. 예를 들어 비즈니스에서 관리자만 직원 파일에 액세스할 수 있습니다. Windows Communication Foundation (WCF) 권한 부여 처리를 수행 하기 위한 두 가지 메커니즘을 지원 합니다. 첫 번째 메커니즘을 사용하면 기존의 CLR(공용 언어 런타임) 구문을 사용하여 권한 부여를 제어할 수 있습니다. 두 번째는 이라는 클레임 기반 모델은 *Id 모델*합니다. WCF Id 모델을 사용 하 여 들어오는 메시지;에서 클레임을 만들려면 Id 모델 클래스를 사용자 지정 권한 부여 체계에 대 한 새로운 클레임 형식을 지원 하도록 확장할 수 있습니다. 이 항목에서는 ID 모델 기능의 주요 프로그래밍 개념에 대한 개요와 이 기능에서 사용되는 매우 중요한 클래스의 목록을 제공합니다.  
+권한 부여는 컴퓨터 리소스를 변경하거나 보거나 컴퓨터 리소스에 액세스할 수 있는 사용 권한이 있는 엔터티를 확인하는 프로세스입니다. 예를 들어 비즈니스에서 관리자만 직원 파일에 액세스할 수 있습니다. Windows Communication Foundation (WCF) 권한 부여 처리를 수행 하기 위한 두 가지 메커니즘을 지원 합니다. 첫 번째 메커니즘을 사용하면 기존의 CLR(공용 언어 런타임) 구문을 사용하여 권한 부여를 제어할 수 있습니다. 두 번째는 이라고 하는 클레임 기반 모델을 *Id 모델*합니다. WCF Id 모델을 사용 하 여 들어오는 메시지에서 클레임을 만들려면 Id 모델 클래스는 사용자 지정 권한 부여 체계에 대 한 새 클레임 형식을 지원 하도록 확장할 수 있습니다. 이 항목에서는 ID 모델 기능의 주요 프로그래밍 개념에 대한 개요와 이 기능에서 사용되는 매우 중요한 클래스의 목록을 제공합니다.  
   
 ## <a name="identity-model-scenarios"></a>ID 모델 시나리오  
  다음 시나리오에는 ID 모델 사용이 예시되어 있습니다.  
   
-### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>시나리오 1: ID, 역할 및 그룹 클레임 지원  
+### <a name="scenario-1-supporting-identity-role-and-group-claims"></a>시나리오 1: Id, 역할 및 그룹 클레임 지원  
  사용자가 메시지를 웹 서비스에 보냅니다. 웹 서비스에 대한 액세스 제어 요구 사항에는 ID, 역할 또는 그룹이 사용됩니다. 메시지 발신자가 역할 또는 그룹 집합으로 매핑됩니다. 역할 또는 그룹 정보는 액세스 확인을 수행하는 데 사용됩니다.  
   
-### <a name="scenario-2-supporting-rich-claims"></a>시나리오 2: 다양한 클레임 지원  
+### <a name="scenario-2-supporting-rich-claims"></a>시나리오 2: 다양 한 클레임 지원  
  사용자가 메시지를 웹 서비스에 보냅니다. 웹 서비스에 대한 액세스 제어 요구 사항에는 ID, 역할 또는 그룹보다 더 다양한 모델이 필요합니다. 웹 서비스는 지정된 사용자가 다양한 클레임 기반 모델을 사용하여 보호된 특정 리소스에 액세스할 수 있는지 확인합니다. 예를 들어 어떤 사용자는 급여 정보와 같이 다른 사용자에게 허용되지 않는 특정한 정보를 읽을 수 있습니다.  
   
 ### <a name="scenario-3-mapping-disparate-claims"></a>시나리오 3: 서로 다른 클레임 매핑  
- 사용자가 메시지를 웹 서비스에 보냅니다. 사용자는 X.509 인증서, 사용자 이름 토큰 또는 Kerberos 토큰 등 여러 가지 방식으로 자격 증명을 지정할 수 있습니다. 웹 서비스에서는 사용자 자격 증명 형식에 관계없이 동일한 방식으로 액세스 제어를 확인해야 합니다. 이후에 또 다른 자격 증명 형식이 지원되면 시스템도 그에 맞게 향상되어야 합니다.  
+ 사용자가 메시지를 웹 서비스에 보냅니다. 사용자는 다양 한 방법으로 여러 자격 증명을 지정할 수 있습니다. X.509 인증서, 사용자 이름 토큰 또는 Kerberos 토큰입니다. 웹 서비스에서는 사용자 자격 증명 형식에 관계없이 동일한 방식으로 액세스 제어를 확인해야 합니다. 이후에 또 다른 자격 증명 형식이 지원되면 시스템도 그에 맞게 향상되어야 합니다.  
   
-### <a name="scenario-4-determining-access-to-multiple-resources"></a>시나리오 4: 여러 리소스에 대한 액세스 확인  
+### <a name="scenario-4-determining-access-to-multiple-resources"></a>시나리오 4: 여러 리소스에 대 한 액세스 확인  
  웹 서비스에서 여러 리소스에 액세스하려고 합니다. 이 경우 서비스는 사용자와 관련된 클레임과 리소스에 액세스하는 데 필요한 클레임을 비교하여 지정된 사용자가 액세스할 수 있는 보호된 리소스를 확인합니다.  
   
 ## <a name="identity-model-terms"></a>ID 모델 용어  
@@ -80,26 +80,26 @@ ms.locfileid: "33497028"
  여러 가지 클레임 형식과 권한이 ID 모델의 일부로 정의되어 있어도, 시스템은 확장 가능하기 때문에 ID 모델 인프라의 맨 위에 빌드되는 다양한 시스템에서 필요에 따라 추가 클레임 형식과 권한을 정의할 수 있습니다.  
   
 ### <a name="identity-claims"></a>ID 클레임  
- ID를 특정 권한으로 갖는 클레임입니다. 이 권한을 가진 클레임은 엔터티의 ID에 대한 문을 만듭니다. 예를 들어, "사용자 계정 이름" 형식의 클레임 (UPN) 값이 "someone@example.com" 권한이 Id 특정 도메인의 특정 id를 나타냅니다.  
+ ID를 특정 권한으로 갖는 클레임입니다. 이 권한을 가진 클레임은 엔터티의 ID에 대한 문을 만듭니다. 예를 들어, "사용자 계정 이름" 형식의 클레임 (UPN) 값을 사용 하 여 "someone@example.com" 권한이 Id 특정 도메인의 특정 id를 나타냅니다.  
   
 #### <a name="system-identity-claim"></a>System ID 클레임  
- ID 모델은 System이라는 하나의 ID 클레임을 정의합니다. System ID 클레임은 엔터티가 현재 응용 프로그램 또는 시스템임을 나타냅니다.  
+ Id 모델 하나의 id 클레임을 정의합니다. 시스템입니다. System ID 클레임은 엔터티가 현재 애플리케이션 또는 시스템임을 나타냅니다.  
   
 ### <a name="sets-of-claims"></a>클레임 집합  
  엔터티의 개념이 결국에는 그 "자신"이 되더라도 클레임은 시스템의 일부 엔터티에 의해 항상 발급되므로, ID를 나타내는 클레임의 모델은 중요합니다. 클레임은 하나의 집합으로 서로 그룹화되며 각 집합에는 발급자가 있습니다. 발급자도 클레임 집합입니다. 이러한 재귀 관계는 결국 클레임 집합이 자신의 발급자가 되는 것으로 끝납니다.  
   
  다음 그림에 있는 세 개의 클레임 집합 예제는 한 클레임 집합이 다른 클레임 집합을 자신의 발급자로 사용하다가 결국에는 System 클레임 집합이 자신의 발급자가 되는 관계를 보여 줍니다. 따라서 클레임 집합의 계층 구조는 얼마든지 깊어질 수 있습니다.  
   
- ![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/claimshierarchy.gif "claimshierarchy")  
+ ![계층 내에서 클레임 집합이 있습니다.](./media/managing-claims-and-authorization-with-the-identity-model/claims-sets-hierarchy.gif)  
   
- 다음 그림과 같이, 여러 개의 클레임 집합에서 같은 발급 클레임 집합을 사용할 수도 있습니다.  
+ 여러 개의 클레임 집합은 같은 발급 클레임 집합, 다음 그림에 설명 된 대로 포함할 수 있습니다.
   
- ![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/multiplesetsofclaims.gif "multiplesetsofclaims")  
+ ![여러 같은 발급 클레임 집합이 클레임 집합입니다.](./media/managing-claims-and-authorization-with-the-identity-model/multiple-claim-sets-same-issuing-claim-set.gif)  
   
  자기 자신을 발급자로 사용하는 클레임 집합 이외에는 ID 모델에서 클레임 집합이 순환 관계를 형성할 수 없습니다. 따라서 A 클레임 집합이 B 클레임 집합에 의해 발급되며 B 클레임 집합이 A 클레임 집합에 의해 발급되는 상황은 발생하지 않습니다. 또한 ID 모델에서는 클레임 집합에 여러 발급자가 있을 수도 없습니다. 지정된 클레임 집합을 둘 이상의 발급자가 발급해야 하는 경우에는, 동일한 클레임이 포함되어 있지만 발급자가 각기 다른 여러 클레임 집합을 사용해야 합니다.  
   
 ### <a name="the-origin-of-claims"></a>클레임의 발단  
- 클레임은 여러 가지 소스로부터 만들어질 수 있습니다. 그 중 일반적인 한 가지 예로, 사용자가 웹 서비스에 보낸 메시지의 일부로 제공한 자격 증명을 들 수 있습니다. 이러한 클레임은 시스템에서 유효성 검사를 거친 후 해당 사용자와 관련된 클레임 집합의 일부가 됩니다. 운영 체제, 네트워크 스택, 런타임 환경 또는 응용 프로그램 등의 기타 시스템 구성 요소도 클레임의 소스가 될 수 있습니다. 그 밖에 원격 서비스도 클레임의 소스가 될 수 있습니다.  
+ 클레임은 여러 가지 소스로부터 만들어질 수 있습니다. 그 중 일반적인 한 가지 예로, 사용자가 웹 서비스에 보낸 메시지의 일부로 제공한 자격 증명을 들 수 있습니다. 이러한 클레임은 시스템에서 유효성 검사를 거친 후 해당 사용자와 관련된 클레임 집합의 일부가 됩니다. 운영 체제, 네트워크 스택, 런타임 환경 또는 애플리케이션 등의 기타 시스템 구성 요소도 클레임의 소스가 될 수 있습니다. 그 밖에 원격 서비스도 클레임의 소스가 될 수 있습니다.  
   
 ### <a name="authorization-policies"></a>권한 부여 정책  
  ID 모델에서 클레임은 권한 부여 정책 평가 프로세스의 일부로 생성됩니다. 권한 부여 정책에서는 대개 비어 있는 기존 클레임 집합을 조사하고, 기존의 클레임을 근거로 추가 클레임과 추가 정보를 임의로 추가하도록 선택할 수 있습니다. 또한 클레임 간의 매핑을 위한 기반을 제공합니다. 시스템 내 클레임이 존재하는지 유무는 다른 클레임의 추가 여부와 관련해 권한 부여 정책의 동작에 영향을 줍니다.  
@@ -125,7 +125,7 @@ ms.locfileid: "33497028"
  ![클레임 및 권한 부여 관리](../../../../docs/framework/wcf/feature-details/media/xsi-recap.gif "xsi_recap")  
   
 ## <a name="wcf-and-identity-model"></a>WCF 및 ID 모델  
- WCF는 권한 부여를 수행 하기 위한 기반으로 Id 모델 인프라를 사용 합니다. Wcf에서는 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 클래스 지정할 수 있습니다. *권한 부여* 서비스의 일부로 정책입니다. 이러한 권한 부여 정책은 라고 *외부 권한 부여 정책을*, 및 원격 서비스와 상호 작용 하 여 또는 로컬 정책에 따라 클레임 처리를 수행할 수 있습니다. 가 나타내는 권한 부여 관리자는 <xref:System.ServiceModel.ServiceAuthorizationManager> 클래스는 다양 한 자격 증명 형식 (토큰)를 인식 하는 권한 부여 정책과 함께 외부 권한 부여 정책을 평가 하 고 채웁니다는  *권한 부여 컨텍스트* 들어오는 메시지에 적절 한 클레임입니다. 권한 부여 컨텍스트는<xref:System.IdentityModel.Policy.AuthorizationContext> 클래스로 표시됩니다.  
+ WCF를 기반으로 권한 부여를 수행 하는 것에 대 한 Id 모델 인프라를 사용 합니다. Wcf에서 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 클래스를 사용 하면 지정할 수 있습니다 *권한 부여* 서비스의 일부로 정책입니다. 이러한 권한 부여 정책 이라고 *외부 권한 부여 정책을*, 및 원격 서비스와 상호 작용 하 여 또는 로컬 정책에 따라 클레임 처리를 수행할 수 있습니다. 권한 부여 관리자를 표시 합니다 <xref:System.ServiceModel.ServiceAuthorizationManager> 클래스는 다양 한 형식 (토큰)를 자격 증명을 인식 하는 권한 부여 정책과 함께 외부 권한 부여 정책을 평가 하 고 라는 것을 채웁니다는  *권한 부여 컨텍스트* 들어오는 메시지에 적합 한 클레임을 사용 하 여 합니다. 권한 부여 컨텍스트는<xref:System.IdentityModel.Policy.AuthorizationContext> 클래스로 표시됩니다.  
   
 ## <a name="identity-model-programming"></a>ID 모델 프로그래밍  
  다음 표에서는 ID 모델 확장을 프로그래밍하기 위해 사용되는 개체 모델에 대해 설명합니다. 이러한 클래스는 모두 <xref:System.IdentityModel.Policy> 또는 <xref:System.IdentityModel.Claims> 네임스페이스에 있습니다.  
@@ -133,8 +133,8 @@ ms.locfileid: "33497028"
 |클래스|설명|  
 |-----------|-----------------|  
 |권한 부여 구성 요소|<xref:System.IdentityModel.Policy.IAuthorizationComponent> 인터페이스를 구현하는 ID 모델 클래스입니다.|  
-|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|하나의 읽기 전용 문자열 속성인 Id를 제공하는 인터페이스입니다. 이 속성 값은 이 인터페이스를 구현하는 시스템의 각 인스턴스에 대해 고유합니다.|  
-|<xref:System.IdentityModel.Policy.AuthorizationContext>|*권한 부여 구성 요소* 의 집합이 포함 된 `ClaimSet` 0 개 이상의 속성을 사용 하 여 인스턴스, 하나 이상의 권한 부여 정책을 평가한 결과입니다.|  
+|<xref:System.IdentityModel.Policy.IAuthorizationComponent>|단일 읽기 전용 문자열 속성을 제공 하는 인터페이스: Id입니다. 이 속성 값은 이 인터페이스를 구현하는 시스템의 각 인스턴스에 대해 고유합니다.|  
+|<xref:System.IdentityModel.Policy.AuthorizationContext>|*권한 부여 구성 요소* 집합을 포함 하는 `ClaimSet` 0 개 이상의 속성을 사용 하 여 인스턴스, 하나 이상의 권한 부여 정책을 평가한 결과입니다.|  
 |<xref:System.IdentityModel.Claims.Claim>|클레임 형식, 권한 및 값의 조합입니다. 권한과 값 일부는 클레임 형식의 제약을 받습니다.|  
 |<xref:System.IdentityModel.Claims.ClaimSet>|추상 기본 클래스로, `Claim` 인스턴스의 컬렉션입니다.|  
 |<xref:System.IdentityModel.Claims.DefaultClaimSet>|봉인 클래스로, `ClaimSet` 클래스의 구현입니다.|  
@@ -155,27 +155,28 @@ ms.locfileid: "33497028"
   
 |멤버|설명|  
 |------------|-----------------|  
-|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|이 메서드는 서비스에서 작업을 실행하기 전에 클레임 기반의 액세스 확인을 수행하기 위해 파생 클래스에서 구현됩니다. 제공된 <xref:System.ServiceModel.OperationContext> 또는 기타 위치에 있는 모든 정보는 액세스 확인 결정을 할 때 조사할 수 있습니다. <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>에서 `true`를 반환하면 액세스 권한이 부여되어 작업을 실행할 수 있으며, `CheckAccessCore`에서 `false`를 반환하면 액세스가 거부되어 작업을 실행할 수 없습니다. 예를 들어 참조 [하는 방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)합니다.|  
+|<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>|이 메서드는 서비스에서 작업을 실행하기 전에 클레임 기반의 액세스 확인을 수행하기 위해 파생 클래스에서 구현됩니다. 제공된 <xref:System.ServiceModel.OperationContext> 또는 기타 위치에 있는 모든 정보는 액세스 확인 결정을 할 때 조사할 수 있습니다. <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>에서 `true`를 반환하면 액세스 권한이 부여되어 작업을 실행할 수 있으며, `CheckAccessCore`에서 `false`를 반환하면 액세스가 거부되어 작업을 실행할 수 없습니다. 예는 [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)합니다.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A>|서비스에 대해 <xref:System.ServiceModel.ServiceAuthorizationManager>를 반환합니다. <xref:System.ServiceModel.ServiceAuthorizationManager>는 권한 부여에 대한 결정을 합니다.|  
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|서비스에 대해 지정된 사용자 지정 권한 부여 정책의 컬렉션입니다. 들어오는 메시지의 자격 증명과 관련된 정책 외에도 이러한 정책도 평가됩니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.IdentityModel.Policy.AuthorizationContext>  
- <xref:System.IdentityModel.Claims.Claim>  
- <xref:System.IdentityModel.Policy.EvaluationContext>  
- <xref:System.IdentityModel.Policy.IAuthorizationComponent>  
- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>  
- <xref:System.IdentityModel.Claims.Rights>  
- <xref:System.IdentityModel.Claims>  
- <xref:System.IdentityModel.Policy>  
- <xref:System.IdentityModel.Tokens>  
- <xref:System.IdentityModel.Selectors>  
- [클레임 및 토큰](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)  
- [클레임 및 리소스 액세스 거부](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)  
- [클레임 만들기 및 리소스 값](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)  
- [방법: 사용자 지정 클레임 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)  
- [방법: 클레임 비교](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)  
- [방법: 사용자 지정 권한 부여 정책 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)  
- [방법: 서비스에 대한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)  
- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)  
- [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.IdentityModel.Policy.AuthorizationContext>
+- <xref:System.IdentityModel.Claims.Claim>
+- <xref:System.IdentityModel.Policy.EvaluationContext>
+- <xref:System.IdentityModel.Policy.IAuthorizationComponent>
+- <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
+- <xref:System.IdentityModel.Claims.Rights>
+- <xref:System.IdentityModel.Claims>
+- <xref:System.IdentityModel.Policy>
+- <xref:System.IdentityModel.Tokens>
+- <xref:System.IdentityModel.Selectors>
+- [클레임 및 토큰](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
+- [클레임 및 리소스 액세스 거부](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
+- [클레임 만들기 및 리소스 값](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
+- [방법: 사용자 지정 클레임 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [방법: 클레임 비교](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [방법: 사용자 지정 권한 부여 정책 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [방법: 서비스에 대 한 사용자 지정 권한 부여 관리자 만들기](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [보안 개요](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [권한 부여](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

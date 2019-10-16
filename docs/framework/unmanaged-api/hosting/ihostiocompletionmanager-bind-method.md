@@ -17,57 +17,58 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89a30cf4fa95df85e3650459e356a6a82b19bcd6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: de39de96cd7c7ba0be2dc1bea78f79cfe996575c
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33439829"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69937562"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>IHostIoCompletionManager::Bind 메서드
-지정된 된 핸들에 대 한 이전 호출에서 생성 된 I/O 완료 포트에 바인딩합니다 [CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)합니다.  
+[Createio완성도 포트](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)에 대 한 이전 호출에 의해 만들어진 i/o 완료 포트에 지정 된 핸들을 바인딩합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT Bind (  
     [in] HANDLE hPort,  
     [in] HANDLE hHandle  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `hPort`  
- [in] I/O 완료 포트를 바인딩할 `hHandle`합니다. 하는 경우의 값 `hPort` 매개 변수가 null 이면 `hHandle` 기본 I/O 완료 포트에 바인딩됩니다.  
+ 진행 바인딩할 `hHandle`i/o 완료 포트입니다. 의 `hPort` 값이 `hHandle` null 인 경우는 기본 i/o 완료 포트에 바인딩됩니다.  
   
  `hHandle`  
- [in] 운영 체제 핸들을 바인딩할 `hPort`합니다.  
+ 진행 바인딩할 운영 체제 핸들 `hPort`입니다.  
   
 ## <a name="return-value"></a>반환 값  
   
-|HRESULT|설명|  
+|HRESULT|Description|  
 |-------------|-----------------|  
-|S_OK|`Bind` 성공적으로 반환 합니다.|  
-|HOST_E_CLRNOTAVAILABLE|공용 언어 런타임 (CLR) 프로세스에 로드 되지 않았습니다 또는 CLR 중인 상태를 관리 코드를 실행 하거나 호출을 처리할 수 없습니다.|  
+|S_OK|`Bind`성공적으로 반환 되었습니다.|  
+|HOST_E_CLRNOTAVAILABLE|CLR (공용 언어 런타임)이 프로세스에 로드 되지 않았거나 CLR이 관리 코드를 실행할 수 없거나 호출을 성공적으로 처리할 수 없는 상태에 있습니다.|  
 |HOST_E_TIMEOUT|호출 시간이 초과 되었습니다.|  
-|HOST_E_NOT_OWNER|호출자에 게 잠금을 소유 하지 않습니다.|  
-|HOST_E_ABANDONED|차단 된 스레드 이벤트 취소 되었습니다 또는 파이버가 기다리던 합니다.|  
-|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환 하는 경우 CLR을 하는 프로세스 내에서 사용할 수 없습니다. 호스팅 방법에 대 한 후속 호출 HOST_E_CLRNOTAVAILABLE를 반환 합니다.|  
+|HOST_E_NOT_OWNER|호출자가 잠금을 소유 하지 않습니다.|  
+|HOST_E_ABANDONED|차단 된 스레드나 파이버에서 대기 하는 동안 이벤트를 취소 했습니다.|  
+|E_FAIL|알 수 없는 치명적인 오류가 발생 했습니다. 메서드가 E_FAIL을 반환 하는 경우 프로세스 내에서 더 이상 CLR을 사용할 수 없습니다. 호스팅 메서드에 대 한 후속 호출은 HOST_E_CLRNOTAVAILABLE을 반환 합니다.|  
   
 ## <a name="remarks"></a>설명  
- I/O 완료 포트에 대 한 호출을 사용 하 여 만들어집니다 `CreateIoCompletionPort`합니다. CLR에서는 `Bind` 에 해당 포트에 대 한 핸들을 바인딩합니다.  
+ I/o 완료 포트는를 `CreateIoCompletionPort`호출 하 여 만듭니다. CLR은를 `Bind` 호출 하 여 핸들을 해당 포트에 바인딩합니다.  
   
 > [!NOTE]
->  호스트에서는 I/O 요청이 완료 되 면 호출 하 여 [iclriocompletionmanager:: Oncomplete](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) 메서드.  
+> I/o 요청이 완료 되 면 호스트는 [IclrioOnComplete manager::](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-oncomplete-method.md) 메서드를 호출 해야 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
- **라이브러리:** MSCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICLRIoCompletionManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICLRIoCompletionManager 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclriocompletionmanager-interface.md)

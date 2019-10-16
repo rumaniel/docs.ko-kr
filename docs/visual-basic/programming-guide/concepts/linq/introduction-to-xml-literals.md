@@ -1,20 +1,20 @@
 ---
-title: 시각적 Basic2의 XML 리터럴 소개
+title: Visual Basic2의 XML 리터럴 소개
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: bac0a4a297dcecce5465e5a1a1c02e4cbc9848a7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5355a3c0f01bb247e38e52816693ee47d7d50556
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646811"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834989"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic의 XML 리터럴 소개
-이 섹션에서는 Visual Basic에서 XML 트리 만들기에 대 한 정보를 제공 합니다.  
+이 섹션에서는 Visual Basic에서 XML 트리를 만드는 방법에 대 한 정보를 제공 합니다.  
   
- XML 트리에 대 한 내용으로 LINQ 쿼리의 결과 사용 하는 방법에 대 한 정보를 참조 하십시오. [함수 생성 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)합니다.  
+ LINQ 쿼리의 결과를 XML 트리의 콘텐츠로 사용 하는 방법에 대 한 자세한 내용은 [함수 생성 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/functional-construction-linq-to-xml.md)을 참조 하세요.  
   
- Visual basic에서 XML 리터럴에 대 한 자세한 내용은 참조 하십시오. [개요의 LINQ to XML Visual Basic의](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)합니다.  
+ Visual Basic의 XML 리터럴에 대 한 자세한 내용은 Visual Basic의 [LINQ to XML 개요](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)를 참조 하세요.  
   
 ## <a name="creating-xml-trees"></a>XML 트리 만들기  
  다음 예제에서는 <xref:System.Xml.Linq.XElement>(이 경우에는 `contacts`)를 만드는 방법을 보여 줍니다.  
@@ -190,10 +190,11 @@ Console.WriteLine("Child2 was {0}", _
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```console  
 Child1 was cloned  
 Child2 was attached  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)
+## <a name="see-also"></a>참조
+
+- [XML 트리 만들기 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

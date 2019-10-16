@@ -16,21 +16,21 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d3e2535851d39be642de56a86b78c328ecaf446
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8aa2d174200db76f5c7a6db43e14bb6904604226
+ms.sourcegitcommit: d2e1dfa7ef2d4e9ffae3d431cf6a4ffd9c8d378f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33432003"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70796334"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx 함수
-어셈블리에 대 한 사후 정책 표시 이름을 가져옵니다.  
+어셈블리의 정책 후 표시 이름을 가져옵니다.  
   
- 이 함수는.NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용할 수 없습니다.  
+ 이 함수는 .NET Framework 인프라를 지원 하며 사용자 코드에서 직접 사용 하기 위한 것이 아닙니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT PreBindAssemblyEx (  
     [in]  IApplicationContext *pAppCtx,  
     [in]  IAssemblyName       *pName,  
@@ -41,36 +41,37 @@ HRESULT PreBindAssemblyEx (
  );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `pAppCtx`  
- [in] 응용 프로그램 컨텍스트를 식별합니다.  
+ 진행 응용 프로그램 컨텍스트를 식별 합니다.  
   
  `pName`  
- [in] 어셈블리 이름을 식별합니다.  
+ 진행 어셈블리 이름을 식별 합니다.  
   
  `pAsmParent`  
- [in] 부모 어셈블리를 식별합니다. 이 매개 변수는 무시됩니다.  
+ 진행 부모 어셈블리를 식별 합니다. 이 매개 변수는 무시됩니다.  
   
  `pwzRuntimeVersion`  
- [in] 런타임 버전을 식별합니다.  
+ 진행 런타임 버전을 식별 합니다.  
   
  `ppNamePostPolicy`  
- [out] 사후 정책 표시 이름을 포함합니다.  
+ 제한이 사후 정책 표시 이름을 포함 합니다.  
   
  `pvReserved`  
- [in] 다음 버전의 확장에 대 한 예약 되어 있습니다. `pvReserved` null 참조 여야 합니다.  
+ 진행 향후 확장성을 위해 예약 되었습니다. `pvReserved`는 null 참조 여야 합니다.  
   
 ## <a name="remarks"></a>설명  
- `ppNamePostPolicy` 함수 FUSION_E_REF_DEF_MISMATCH HRESULT를 반환 하는 경우에 출력 매개 변수가 설정 됩니다. 그렇지 않으면 null입니다.  
+ `ppNamePostPolicy` 출력 매개 변수는 함수가 HRESULT FUSION_E_REF_DEF_MISMATCH을 반환 하는 경우에만 설정 됩니다. 그렇지 않으면 null입니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼** [시스템 요구 사항](../../get-started/system-requirements.md)을 참조하십시오.  
   
- **헤더:** Fusion.h  
+ **헤더:** Fusion. h  
   
- **라이브러리:** MsCorEE.dll에 리소스로 포함  
+ **라이브러리** Mscoree.dll에 리소스로 포함 됩니다.  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [Fusion 전역 정적 함수](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
+## <a name="see-also"></a>참고자료
+
+- [Fusion 전역 정적 함수](fusion-global-static-functions.md)

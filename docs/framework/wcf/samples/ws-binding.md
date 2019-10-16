@@ -3,14 +3,14 @@ title: WS 바인딩
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
 ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949905"
 ---
 # <a name="ws-binding"></a>WS 바인딩
-이 섹션에는 Windows Communication Foundation (WCF)에서 Windows 서비스 바인딩을 보여 주는 샘플이 포함 되어 있습니다.  
+이 섹션에는 Windows Communication Foundation (WCF)에서 Windows 서비스 바인딩을 보여 주는 샘플이 들어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [WS 트랜잭션 흐름](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  

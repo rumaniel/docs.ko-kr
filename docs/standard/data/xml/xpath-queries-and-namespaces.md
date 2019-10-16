@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b11ac80b671c345768da23d2b51d2333c228aaeb
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46003735"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615345"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath 쿼리 및 네임스페이스
 XPath 쿼리는 XML 문서에서 네임스페이스를 인식하며 네임스페이스 접두사를 사용하여 요소 및 특성 이름을 정규화할 수 있습니다. 네임스페이스 접두사로 요소 및 특성 이름을 정규화하면 XPath 쿼리에 의해 반환되는 노드가 특정 네임스페이스에 속한 노드로만 제한됩니다.  
@@ -25,23 +25,23 @@ XPath 쿼리는 XML 문서에서 네임스페이스를 인식하며 네임스페
   
  다음과 같은 방법으로 쿼리에서 <xref:System.Xml.XmlNamespaceManager> 개체를 사용할 수 있습니다.  
   
--   <xref:System.Xml.XmlNamespaceManager> 개체의 <xref:System.Xml.XPath.XPathExpression> 메서드를 사용하여 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 개체를 기존 <xref:System.Xml.XPath.XPathExpression> 개체와 연결합니다. 또한 XPath 식을 나타내는 문자열과 <xref:System.Xml.XPath.XPathExpression> 개체를 매개 변수로 사용하며 새 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 개체를 반환하는 정적<xref:System.Xml.XmlNamespaceManager> 메서드를 사용하여 새 <xref:System.Xml.XPath.XPathExpression> 개체를 컴파일할 수 있습니다.  
+- <xref:System.Xml.XmlNamespaceManager> 개체의 <xref:System.Xml.XPath.XPathExpression> 메서드를 사용하여 <xref:System.Xml.XPath.XPathExpression.SetContext%2A> 개체를 기존 <xref:System.Xml.XPath.XPathExpression> 개체와 연결합니다. 또한 XPath 식을 나타내는 문자열과 <xref:System.Xml.XPath.XPathExpression> 개체를 매개 변수로 사용하며 새 <xref:System.Xml.XPath.XPathExpression.Compile%2A> 개체를 반환하는 정적<xref:System.Xml.XmlNamespaceManager> 메서드를 사용하여 새 <xref:System.Xml.XPath.XPathExpression> 개체를 컴파일할 수 있습니다.  
   
--   <xref:System.Xml.XmlNamespaceManager> 개체 자체는 XPath 식을 나타내는 문자열과 함께 허용되는 <xref:System.Xml.XPath.XPathNavigator> 클래스 메서드에 매개 변수로 전달됩니다.  
+- <xref:System.Xml.XmlNamespaceManager> 개체 자체는 XPath 식을 나타내는 문자열과 함께 허용되는 <xref:System.Xml.XPath.XPathNavigator> 클래스 메서드에 매개 변수로 전달됩니다.  
   
  다음은 <xref:System.Xml.XPath.XPathNavigator> 인터페이스에서 파생된 개체를 매개 변수로 사용할 수 있는 <xref:System.Xml.IXmlNamespaceResolver> 클래스의 메서드입니다.  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>기본 네임스페이스  
  다음 XML 문서에서는 빈 접두사가 있는 기본 네임스페이스를 사용하여 `http://www.contoso.com/books` 네임스페이스를 선언합니다.  
   
 ```xml  
-<books xmlns="http://www.example.com/books">  
+<books xmlns="http://www.contoso.com/books">  
     <book>  
         <title>Title</title>  
         <author>Author Name</author>  
@@ -80,12 +80,12 @@ XPathNodeIterator nodes = navigator.Select(query);
   
 ## <a name="see-also"></a>참고 항목
 
-- <xref:System.Xml.XmlDocument>  
-- <xref:System.Xml.XPath.XPathDocument>  
-- <xref:System.Xml.XPath.XPathNavigator>  
-- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)  
-- [XPathNavigator를 사용하여 XML 데이터 선택](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)  
-- [XPathNavigator를 사용하여 XPath 식 계산](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)  
-- [XPathNavigator를 사용하여 노드 일치시키기](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)  
-- [XPath 쿼리에서 인식하는 노드 형식](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)  
+- <xref:System.Xml.XmlDocument>
+- <xref:System.Xml.XPath.XPathDocument>
+- <xref:System.Xml.XPath.XPathNavigator>
+- [XPath 데이터 모델을 사용하여 XML 데이터 처리](../../../../docs/standard/data/xml/process-xml-data-using-the-xpath-data-model.md)
+- [XPathNavigator를 사용하여 XML 데이터 선택](../../../../docs/standard/data/xml/select-xml-data-using-xpathnavigator.md)
+- [XPathNavigator를 사용하여 XPath 식 계산](../../../../docs/standard/data/xml/evaluate-xpath-expressions-using-xpathnavigator.md)
+- [XPathNavigator를 사용하여 노드 일치시키기](../../../../docs/standard/data/xml/matching-nodes-using-xpathnavigator.md)
+- [XPath 쿼리에서 인식하는 노드 형식](../../../../docs/standard/data/xml/node-types-recognized-with-xpath-queries.md)
 - [컴파일된 XPath 식](../../../../docs/standard/data/xml/compiled-xpath-expressions.md)

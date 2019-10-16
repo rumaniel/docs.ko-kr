@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecf6bff10e98ab7f008cfd176f59687f34d89553
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: ec893c898a6cd4abffd525056ed0d0169fcbb288
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44216466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700730"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost 인터페이스
 시작 하 고 만들고 기본 도메인에 액세스 하 고 프로세스에서 실행 되는 모든 도메인을 열거 하는 데 응용 프로그램 도메인을 구성 하는 CLR (공용 언어 런타임)을 명시적으로 중지할 호스트를 사용할 수 있는 메서드를 제공 합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "44216466"
 |[UnloadDomain 메서드](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-unloaddomain-method.md)|현재 프로세스에서 지정 된 응용 프로그램 도메인을 언로드합니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하세요.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** MSCorEE.h  
   
@@ -61,10 +61,11 @@ ms.locfileid: "44216466"
   
  **.NET framework 버전:** 1.0, 1.1  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.AppDomain>  
- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)  
- [ICLRRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)  
- [런타임 호스트](https://msdn.microsoft.com/library/99d9246a-b994-4fe5-985c-8588d1d59998)  
- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)  
- [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)
+## <a name="see-also"></a>참고자료
+
+- <xref:System.AppDomain>
+- [호스팅](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ICLRRuntimeHost 인터페이스](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [런타임 호스트](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
+- [호스팅 인터페이스](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+- [CorRuntimeHost Coclass](../../../../docs/framework/unmanaged-api/hosting/corruntimehost-coclass.md)

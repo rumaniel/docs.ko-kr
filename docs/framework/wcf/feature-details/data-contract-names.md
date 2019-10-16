@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857286"
 ---
 # <a name="data-contract-names"></a>데이터 계약 이름
 
@@ -64,7 +64,7 @@ ms.locfileid: "47196696"
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>제네릭 형식에 대 한 사용자 지정 데이터 계약 이름
 
-위에서 설명한 것과 같이 제네릭 형식에 대해 생성된 데이터 계약 이름이 허용되지 않는 경우도 있습니다. 예를 들어 이름 충돌이 발생하지 않도록 하려면 해시를 제거해야 할 수 있습니다. 이 경우에는 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 특성의 `DataContractAttribute` 속성을 사용하여 이름을 생성하는 여러 가지 방법을 지정할 수 있습니다. 제네릭 매개 변수의 데이터 계약 이름을 참조하기 위해 `Name` 속성 내에서 중괄호 안에 숫자를 사용할 수 있습니다. 예를 들어 0은 첫 번째 매개 변수를 참조하고, 1은 두 번째 매개 변수를 참조합니다. 해시를 참조하기 위해 중괄호 안에 숫자(#) 기호를 사용할 수 있습니다. 이러한 각각의 참조를 여러 번 사용하거나 전혀 사용하지 않을 수 있습니다.
+위에서 설명한 것과 같이 제네릭 형식에 대해 생성된 데이터 계약 이름이 허용되지 않는 경우도 있습니다. 예를 들어 이름 충돌이 발생하지 않도록 하려면 해시를 제거해야 할 수 있습니다. 이 경우 사용할 수 있습니다는 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType> 이름을 생성 하는 다른 방법을 지정 하는 속성입니다. 제네릭 매개 변수의 데이터 계약 이름을 참조하기 위해 `Name` 속성 내에서 중괄호 안에 숫자를 사용할 수 있습니다. 예를 들어 0은 첫 번째 매개 변수를 참조하고, 1은 두 번째 매개 변수를 참조합니다. 해시를 참조하기 위해 중괄호 안에 숫자(#) 기호를 사용할 수 있습니다. 이러한 각각의 참조를 여러 번 사용하거나 전혀 사용하지 않을 수 있습니다.
 
 예를 들어 이전 제네릭 `Drawing` 형식은 다음 예제와 같이 선언되었을 수 있습니다.
 

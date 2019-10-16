@@ -2,16 +2,16 @@
 title: 방법 문서(C# 가이드)
 description: 유용한 팁 및 간단하고 집중된 코드 샘플의 컬렉션
 ms.date: 12/20/2017
-ms.openlocfilehash: 9326235341ee38e46f4204b7b3d7f67cae2774af
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: f764bd0183e3881bfb81ebda7d3c7dd49a4cbdde
+ms.sourcegitcommit: 35da8fb45b4cca4e59cc99a5c56262c356977159
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260193"
+ms.lasthandoff: 09/28/2019
+ms.locfileid: "71591604"
 ---
 # <a name="how-to-c"></a>방법(C#)
 
-C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변을 찾을 수 있습니다. 경우에 따라 문서는 여러 섹션에 나타날 수 있습니다. 여러 검색 경로를 쉽게 찾을 수 있도록 했습니다. 
+C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변을 찾을 수 있습니다. 경우에 따라 문서는 여러 섹션에 나타날 수 있습니다. 여러 검색 경로를 쉽게 찾을 수 있도록 했습니다.
 
 ## <a name="general-c-concepts"></a>일반 C# 개념
 
@@ -19,9 +19,7 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 
 - [개체 이니셜라이저를 사용하여 개체를 초기화합니다](../programming-guide/classes-and-structs/how-to-initialize-objects-by-using-an-object-initializer.md).
 - [메서드에 구조체를 전달하는 것과 클래스를 전달하는 것의 차이점에 대해 알아보세요](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md).
-- [람다 식을 사용하는 방법입니다](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md).
-- [전역 네임스페이스 별칭을 사용하여 형식 이름 충돌을 해결합니다](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md).
-- [연산자 오버로드를 사용합니다](../language-reference/keywords/operator.md).
+- [연산자 오버로드를 사용합니다](../language-reference/operators/operator-overloading.md).
 - [사용자 지정 확장 메서드를 구현하고 호출합니다](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md).
 - C# 프로그래머조차도 [VB에서 `My` 네임스페이스를 사용](../programming-guide/namespaces/how-to-use-the-my-namespace.md)하려 할 수 있습니다.
 - [확장 메서드를 사용하여 `enum` 형식에 대해 새 메서드를 만듭니다](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md).
@@ -66,9 +64,9 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 - [바이트 배열을 정수로 변환합니다](../programming-guide/types/how-to-convert-a-byte-array-to-an-int.md).
 - [문자열을 숫자로 변환합니다](../programming-guide/types/how-to-convert-a-string-to-a-number.md).
 - [패턴 일치, `as` 및 `is` 연산자를 사용하여 안전하게 다른 형식으로 캐스팅합니다](../how-to/safely-cast-using-pattern-matching-is-and-as-operators.md).
-- [`struct` 형식에 대한 변환 연산자를 정의합니다](../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md).
+- [사용자 지정 형식 변환을 정의합니다](../language-reference/operators/user-defined-conversion-operators.md).
 - [형식이 nullable 값 형식인지 여부를 확인합니다](../programming-guide/nullable-types/how-to-identify-a-nullable-type.md).
-- [nullable과 비 nullable 값 형식 사이를 변환합니다](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-type-to-an-underlying-type).
+- [nullable과 비 nullable 값 형식 사이를 변환합니다](../programming-guide/nullable-types/using-nullable-types.md#conversion-from-a-nullable-value-type-to-an-underlying-type).
 
 ## <a name="equality-and-ordering-comparisons"></a>같음 및 순서 비교
 
@@ -98,7 +96,6 @@ C# 가이드의 방법 섹션에서 일반적인 질문에 대한 빠른 답변�
 - [인터페이스에서 선언된 이벤트를 구현합니다](../programming-guide/events/how-to-implement-interface-events.md).
 - [코드가 이벤트를 게시할 때 .NET Framework 지침을 준수합니다](../programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md).
 - [파생된 클래스로부터 기본 클래스에서 정의된 이벤트를 발생시킵니다](../programming-guide/events/how-to-raise-base-class-events-in-derived-classes.md).
-- [사전에 인스턴스를 저장합니다](../programming-guide/events/how-to-use-a-dictionary-to-store-event-instances.md).
 - [사용자 지정 이벤트 접근자를 구현합니다](../programming-guide/events/how-to-implement-custom-event-accessors.md).
 
 ## <a name="linq-practices"></a>LINQ 사례
@@ -113,7 +110,7 @@ LINQ를 사용하면 LINQ 쿼리 식 패턴을 지원하는 데이터 소스를 
 - [데이터 원본의 요소를 정렬합니다](../programming-guide/concepts/linq/how-to-sort-elements.md).
 - [여러 키로 요소를 정렬합니다](../programming-guide/concepts/linq/how-to-sort-elements-on-multiple-keys.md).
 - [프로젝션 형식을 제어합니다](../programming-guide/concepts/linq/how-to-control-the-type-of-a-projection.md).
-- [소스 시퀀스에서 값 발생 수를 카운트합니다](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
+- [소스 시퀀스에서 값의 발생 수를 카운트합니다](../programming-guide/concepts/linq/how-to-count-occurrences-of-a-word-in-a-string-linq.md).
 - [중간 값을 계산합니다](../programming-guide/concepts/linq/how-to-calculate-intermediate-values.md).
 - [여러 원본의 데이터를 병합합니다](../programming-guide/concepts/linq/how-to-populate-object-collections-from-multiple-sources-linq.md).
 - [두 시퀀스 간의 차집합을 반환합니다](../programming-guide/concepts/linq/how-to-find-the-set-difference-between-two-lists-linq.md).
@@ -133,4 +130,3 @@ LINQ를 사용하면 LINQ 쿼리 식 패턴을 지원하는 데이터 소스를 
 일반적으로 C# 프로그램에는 명령줄 인수가 있습니다. 이 문서에서는 이러한 명령줄 인수를 액세스하고 처리하는 방법을 배울 수 있습니다.
 
 - [`for`가 포함된 모든 명령줄 인수를 검색합니다](../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md).
-- [`foreach`가 포함된 모든 명령줄 인수를 검색합니다](../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md).

@@ -2,12 +2,12 @@
 title: '방법: 트리의 모든 노드 나열(C#)'
 ms.date: 07/20/2015
 ms.assetid: 3e934371-f4c6-458b-9f6b-f9061b596f5b
-ms.openlocfilehash: e014de90935830df3ea5454dcd4d5a840f4d04ad
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: a6c50bba528dd250195edea80bcaebea08fa701c
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43513686"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70253563"
 ---
 # <a name="how-to-list-all-nodes-in-a-tree-c"></a>방법: 트리의 모든 노드 나열(C#)
 경우에 따라 트리의 모든 노드를 나열하는 것이 유용합니다. 이것은 메서드나 속성이 트리에 미치는 영향을 정확히 확인할 때 유용할 수 있습니다. 텍스트 형식으로 모든 노드를 나열하는 한 가지 방법은 트리의 노드를 정확하고 특정하게 식별하는 XPath 식을 생성하는 것입니다.  
@@ -39,7 +39,7 @@ ms.locfileid: "43513686"
   
  XPath 식으로 표현된, XML 트리 위의 노드 목록은 다음과 같습니다.  
   
-```  
+```text  
 /processing-instruction()  
 /Root  
 /Root/@AttName  
@@ -317,7 +317,7 @@ class Program
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>  
 <?target data?>  
 <Root AttName="An Attribute" xmlns:aw="http://www.adventure-works.com">  
@@ -348,6 +348,3 @@ class Program
 /Root/aw:ElementInNamespace/aw:ChildInNamespace  
 ```  
   
-## <a name="see-also"></a>참고 항목
-
-- [고급 쿼리 기술(LINQ to XML)(C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

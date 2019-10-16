@@ -3,11 +3,11 @@ title: 114 - WorkflowInstanceRecordWithId
 ms.date: 03/30/2017
 ms.assetid: 2bd8b4a1-b210-4c07-8156-f19392318c08
 ms.openlocfilehash: 739b86a0c7c64ebc17cbbc882576788fe0e4bb9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923970"
 ---
 # <a name="114---workflowinstancerecordwithid"></a>114 - WorkflowInstanceRecordWithId
 ## <a name="properties"></a>속성  
@@ -17,10 +17,10 @@ ms.locfileid: "33512794"
 |ID|114|  
 |키워드|HealthMonitoring, WFTracking|  
 |수준|정보|  
-|채널|Microsoft-Windows-응용 프로그램 서버-응용 프로그램/분석|  
+|채널|Microsoft-Windows-애플리케이션 서버-애플리케이션/분석|  
   
 ## <a name="description"></a>설명  
- 워크플로 인스턴스가 Started, Resumed, Persisted, Idle, Deleted, Completed, Canceled, Unloaded, Unsuspended 등의 워크플로 상태에 대한 WorkflowInstanceRecord를 내보내면 ETW 추적 참가자가 이 이벤트를 내보냅니다.  
+ 워크플로 인스턴스가 워크플로 상태의 workflowinstancerecord를 내보내면 ETW 추적 참가자가이 이벤트를 내보냅니다. 시작, Resumed, Persisted, 유휴 상태, 삭제, 완료, 취소, 언로드, 일시 중단을 해제 합니다.  
   
 ## <a name="message"></a>메시지  
  TrackRecord= WorkflowInstanceRecord, InstanceID = %1, RecordNumber = %2, EventTime = %3, ActivityDefinitionId = %4, State = %5, Annotations = %6, ProfileName = %7, WorkflowDefinitionIdentity = %8  
@@ -34,7 +34,7 @@ ms.locfileid: "33512794"
 |EventTime|xs:dateTime|이벤트를 내보낸 시간(UTC)|  
 |ActivityDefinitionId|xs:string|워크플로의 루트 활동 이름|  
 |상태|xs:string|워크플로의 현재 상태|  
-|주석|xs:string|이 이벤트에 추가된 주석입니다. 값 형식으로 xml 요소에 저장 됩니다 \<항목 >\< 항목 이름 = "annotationName" type = "> annotationValue\<항목/>\<항목/>입니다. 주석을 지정 하지 않으면 문자열을 포함 하는 경우 \<항목 / >입니다. ETW 이벤트 크기는 ETW 버퍼 크기 또는 ETW 이벤트의 최대 페이로드에 따라 제한됩니다. 이벤트 크기가 ETW 제한을 초과 하면 주석을 삭제 하 고 주석 값으로 바꿔 이벤트 잘립니다 경우 \<항목 >... \<항목/>입니다.|  
+|주석|xs:string|이 이벤트에 추가된 주석입니다. 값 형식으로 xml 요소에 저장 됩니다 \<항목 >\< 항목 이름 = "annotationName" type = "> annotationValue\</> \< />입니다. 주석을 지정 하지 않으면 문자열을 포함 하는 경우 \<항목 / >입니다. ETW 이벤트 크기는 ETW 버퍼 크기 또는 ETW 이벤트의 최대 페이로드에 따라 제한됩니다. 이벤트 크기가 ETW 제한을 초과 하면 주석을 삭제 하 고 주석 값을 대체 하 여 이벤트 잘립니다 경우 \<항목 >...  \< />입니다.|  
 |ProfileName|xs:string|이 이벤트를 내보낸 이름 또는 추적 프로필|  
 |WorkflowDefinitionIdentity|xs:string|워크플로 정의 ID입니다.|  
 |AppDomain|xs:string|AppDomain.CurrentDomain.FriendlyName에서 반환되는 문자열입니다.|

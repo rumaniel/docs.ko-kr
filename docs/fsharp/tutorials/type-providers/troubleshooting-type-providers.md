@@ -1,13 +1,13 @@
 ---
 title: 형식 공급자 문제 해결
-description: 'F # 형식 공급자를 사용 하는 경우 발생할 수 있는 문제에 대 한 잠재적인 솔루션을 검색 합니다.'
+description: 사용 하는 경우 발생할 수 있는 문제 형식에서 공급자에 대 한 잠재적인 솔루션을 검색 F#입니다.
 ms.date: 05/16/2016
 ms.openlocfilehash: f3b8ffdaf615563305b7b84b45a9ed1e066d0dcc
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873218"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645044"
 ---
 # <a name="troubleshooting-type-providers"></a>형식 공급자 문제 해결
 

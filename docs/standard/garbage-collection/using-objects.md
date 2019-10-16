@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: 81b2cdb5-c91a-4a31-9c83-eadc52da5cf0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70955d496f5cf9e3bf44b9bc03a054d1c96efe98
-ms.sourcegitcommit: 4b6490b2529707627ad77c3a43fbe64120397175
+ms.openlocfilehash: 9f165ab5b79abbc2b5464f40a27a580d26af163a
+ms.sourcegitcommit: 6f28b709592503d27077b16fff2e2eacca569992
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44260021"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70106946"
 ---
 # <a name="using-objects-that-implement-idisposable"></a>IDisposable을 구현하는 개체 사용
 
 공용 언어 런타임의 가비지 수집기는 관리되는 개체에서 사용하는 메모리를 회수하지만, 관리되지 않는 리소스를 사용하는 유형에서는 관리되지 않는 이러한 리소스에 할당된 메모리를 회수할 수 있게 하는 <xref:System.IDisposable> 인터페이스를 구현합니다. <xref:System.IDisposable>을 구현하는 개체의 사용을 마치면 해당 개체의 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 구현을 호출해야 합니다. 이 작업은 다음 두 가지 방법 중 하나로 수행할 수 있습니다.  
   
-* C# `using` 문 또는 Visual Basic `Using` 문 사용  
+- C# `using` 문 또는 Visual Basic `Using` 문 사용  
   
-* `try/finally` 블록 구현  
+- `try/finally` 블록 구현  
 
 ## <a name="the-using-statement"></a>using 문
 
@@ -49,9 +49,9 @@ C#의 `using` 문과 Visual Basic의 `Using` 문은 개체를 만들고 정리�
 
 `using` 문에서 `try/finally` 블록을 래핑하는 대신 `try/finally` 블록을 직접 구현하도록 선택할 수 있습니다. 개인적인 코딩 스타일에 따라서 또는 다음 이유 중 하나로 인해 이를 수행할 수 있습니다.  
   
-* `catch` 블록에서 throw된 모든 예외를 처리하기 위해 `try` 블록을 포함하려는 경우 그렇지 않으면, `using` 문에서 throw된 예외가 `try/catch` 블록이 없는 경우 `using` 블록 내에 throw되는 예외와 마찬가지로 처리됩니다.  
+- `catch` 블록에서 throw된 모든 예외를 처리하기 위해 `try` 블록을 포함하려는 경우 그렇지 않으면, `using` 문에서 throw된 예외가 `try/catch` 블록이 없는 경우 `using` 블록 내에 throw되는 예외와 마찬가지로 처리됩니다.  
   
-* 범위가 선언된 범위 내의 블록에 대해 로컬이 아닌 <xref:System.IDisposable>을 구현하는 개체를 인스턴스화하려는 경우  
+- 범위가 선언된 범위 내의 블록에 대해 로컬이 아닌 <xref:System.IDisposable>을 구현하는 개체를 인스턴스화하려는 경우  
   
 `try/catch/finally` 블록을 사용하여 <xref:System.IO.StreamReader> 개체를 인스턴스화, 사용 및 삭제하고 <xref:System.IO.StreamReader> 생성자 및 해당 <xref:System.IO.StreamReader.ReadToEnd%2A> 메서드에서 throw된 예외를 처리한다는 점을 제외하면 다음 예제는 이전 예제와 유사합니다. `finally` 블록의 코드가 <xref:System.IDisposable> 메서드를 호출하기 전에 `null`을 구현하는 개체가 <xref:System.IDisposable.Dispose%2A>이 아닌지 확인합니다. 이렇게 하지 않으면 런타임에 <xref:System.NullReferenceException> 예외가 발생할 수 있습니다.  
   
@@ -62,6 +62,6 @@ C#의 `using` 문과 Visual Basic의 `Using` 문은 개체를 만들고 정리�
   
 ## <a name="see-also"></a>참고 항목
 
-* [관리되지 않는 리소스 정리](../../../docs/standard/garbage-collection/unmanaged.md)   
-* [using 문(C# 참조)](~/docs/csharp/language-reference/keywords/using-statement.md)   
-* [Using 문(Visual Basic)](~/docs/visual-basic/language-reference/statements/using-statement.md)
+- [관리되지 않는 리소스 정리](../../../docs/standard/garbage-collection/unmanaged.md)
+- [using 문(C# 참조)](../../csharp/language-reference/keywords/using-statement.md)
+- [Using 문(Visual Basic)](../../visual-basic/language-reference/statements/using-statement.md)

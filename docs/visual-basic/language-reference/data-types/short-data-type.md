@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Short data type
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
-ms.openlocfilehash: c8085c0911cfe83a3ca56c03cfda5689b9338680
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: eedc2804652fb6f2f73e7288d6db830a6f4bd98a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50193515"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647017"
 ---
 # <a name="short-data-type-visual-basic"></a>Short 데이터 형식 (Visual Basic)
 부호 있는 16 비트 (2 바이트) 정수 값 범위에 있는-32,768부터 32,767 까지의 저장 합니다.  
@@ -54,7 +54,7 @@ Dim number As Short = &H_3264
 
 [!INCLUDE [supporting-underscores](../../../../includes/vb-separator-langversion.md)]
 
-숫자 리터럴을 포함할 수도 있습니다는 `S` [문자를 입력](../../programming-guide\language-features\data-types/type-characters.md) 나타내기 위해는 `Short` 다음 예제와 같이 데이터 형식입니다.
+숫자 리터럴을 포함할 수도 있습니다는 `S` [문자를 입력](../../programming-guide/language-features/data-types/type-characters.md) 나타내기 위해는 `Short` 다음 예제와 같이 데이터 형식입니다.
 
 ```vb
 Dim number = &H_3264S
@@ -62,18 +62,18 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>프로그래밍 팁
 
--   **확대 합니다.** `Short` 데이터 형식으로 확장 되는지를 `Integer`를 `Long`, `Decimal`를 `Single`, 또는 `Double`합니다. 이는 `Short` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
+- **확대 합니다.** `Short` 데이터 형식으로 확장 되는지를 `Integer`를 `Long`, `Decimal`를 `Single`, 또는 `Double`합니다. 이는 `Short` 오류 발생 없이 <xref:System.OverflowException?displayProperty=nameWithType>를 이러한 형식 중 하나로 변환할 수 있음을 의미합니다.  
   
--   **형식 문자입니다.** 리터럴 형식 문자 `S`를 리터럴에 추가하면 `Short` 데이터 형식이 됩니다. `Short` 에 식별자 형식 문자가 없습니다.  
+- **형식 문자입니다.** 리터럴 형식 문자 `S`를 리터럴에 추가하면 `Short` 데이터 형식이 됩니다. `Short` 에 식별자 형식 문자가 없습니다.  
   
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Int16?displayProperty=nameWithType> 구조체입니다.  
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Int16?displayProperty=nameWithType> 구조체입니다.  
   
 ## <a name="see-also"></a>참고자료
 
- <xref:System.Int16?displayProperty=nameWithType>  
- [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)  
- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [Integer 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)  
- [Long 데이터 형식](../../../visual-basic/language-reference/data-types/long-data-type.md)  
- [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Int16?displayProperty=nameWithType>
+- [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
+- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [Integer 데이터 형식](../../../visual-basic/language-reference/data-types/integer-data-type.md)
+- [Long 데이터 형식](../../../visual-basic/language-reference/data-types/long-data-type.md)
+- [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

@@ -1,0 +1,89 @@
+- name: WCF 개발자를 위한 gRPC
+  href: index.md
+  items:
+    - name: 소개
+      href: introduction.md
+    - name: gRPC 개요
+      href: grpc-overview.md
+      items:
+        - name: gRPC의 RPC 접근 방법
+          href: approach.md
+        - name: IDL(Interface Definition Language)
+          href: interface-definition-language.md
+        - name: 네트워크 프로토콜
+          href: network-protocols.md
+        - name: gRPC가 WCF 개발자에게 권장되는 이유
+          href: Why-grpc.md
+    - name: 프로토콜 버퍼
+      href: protocol-buffers.md
+      items:
+        - name: Protobuf 메시지
+          href: protobuf-messages.md
+        - name: Protobuf 스칼라 데이터 형식
+          href: protobuf-data-types.md
+        - name: Protobuf 중첩 형식
+          href: protobuf-nested-types.md
+        - name: 목록 및 배열을 위한 반복 필드
+          href: protobuf-repeated.md
+        - name: Protobuf 예약된 필드
+          href: protobuf-reserved.md
+        - name: 변형 형식을 위한 Protobuf Any 및 OneOf 필드
+          href: protobuf-any-oneof.md
+        - name: Protobuf 열거형
+          href: protobuf-enums.md
+        - name: 사전용 Protobuf 맵
+          href: protobuf-maps.md
+    - name: WCF 서비스와 gRPC 비교
+      href: wcf-services-to-grpc-comparison.md
+      items:
+        - name: WCF 엔드포인트 및 gRPC 메서드
+          href: wcf-endpoints-grpc-methods.md
+        - name: WCF 바인딩 및 전송
+          href: wcf-bindings.md
+        - name: RPC 형식
+          href: rpc-types.md
+        - name: 메타데이터
+          href: metadata.md
+        - name: 오류 처리
+          href: error-handling.md
+        - name: WS-* 프로토콜
+          href: ws-protocols.md
+    - name: GRPC로 WCF 솔루션 마이그레이션
+      href: migrate-wcf-to-grpc.md
+      items:
+        - name: 새 ASP.NET Core gRPC 프로젝트 만들기
+          href: create-project.md
+        - name: gRPC로 WCF 요청-회신 서비스 마이그레이션
+          href: migrate-request-reply.md
+        - name: gRPC로 WCF 이중 서비스 마이그레이션
+          href: migrate-duplex-services.md
+        - name: gRPC 스트리밍 서비스 vs 반복 필드
+          href: streaming-versus-repeated.md
+        - name: 클라이언트 라이브러리
+          href: client-libraries.md
+    - name: gRPC 애플리케이션의 보안
+      href: security.md
+      items:
+        - name: 호출 자격 증명
+          href: call-credentials.md
+        - name: 채널 자격 증명
+          href: channel-credentials.md
+        - name: 암호화
+          href: encryption.md
+    - name: 프로덕션 환경의 gRPC
+      href: grpc-in-production.md
+      items:
+        - name: 자체 호스팅 애플리케이션
+          href: self-hosted.md
+        - name: Docker
+          href: docker.md
+        - name: Kubernetes
+          href: kubernetes.md
+        - name: gRPC 및 서비스 메시
+          href: service-mesh.md
+        - name: 부하 분산
+          href: load-balancing.md
+        - name: 애플리케이션 성능 관리
+          href: application-performance-management.md
+    - name: 부록
+      href: appendix.md

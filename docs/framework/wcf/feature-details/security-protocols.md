@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 5adacbc0332d104d025ea1b888b580d34fee804e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 6212fd911bd5b255347459a1b5a7b2f46e31963e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200981"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425080"
 ---
 # <a name="security-protocols"></a>보안 프로토콜
 Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징 보안 요구 사항을 포함하는 Web Services Security 메커니즘을 제공합니다. 이 섹션에서는 Windows Communication Foundation (WCF) 세부 정보를 설명 합니다. (에서 구현 되는 <xref:System.ServiceModel.Channels.SecurityBindingElement>) 다음 Web services security 프로토콜에 대 한 합니다.  
@@ -17,28 +17,28 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 |사양/문서|링크|  
 |-|-|  
 |WSS: SOAP Message Security 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0.pdf|  
-|WSS: Username Token Profile 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: X509 Token Profile 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
-|WSS: SAML 1.1 Token Profile 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
-|WSS: SOAP Message Security 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
+|WSS: 사용자 이름 토큰 프로필 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
+|WSS: X509 토큰 프로필 1.0|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0.pdf|  
+|WSS: SAML 1.1 토큰 프로필 1.0|http://docs.oasis-open.org/wss/oasis-wss-saml-token-profile-1.0.pdf|  
+|WSS: SOAP 메시지 보안 1.1|http://www.oasis-open.org/committees/download.php/16790/wss-v1.1-spec-os-SOAPMessageSecurity.pdf|  
 |WSS Username Token Profile 1.1|http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0.pdf|  
-|WSS: X.509 Token Profile 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
-|WSS: Kerberos Token Profile 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
-|WSS: SAML 1.1 Token Profile 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
+|WSS: X.509 토큰 프로필 1.1|http://www.oasis-open.org/committees/download.php/16785/wss-v1.1-spec-os-x509TokenProfile.pdf|  
+|WSS: Kerberos 토큰 프로필 1.1|http://www.oasis-open.org/committees/download.php/16788/wss-v1.1-spec-os-KerberosTokenProfile.pdf|  
+|WSS: SAML 1.1 토큰 프로필 1.1|http://www.oasis-open.org/committees/download.php/16768/wss-v1.1-spec-os-SAMLTokenProfile.pdf|  
 |WS-Secure Conversation 1.3|http://docs.oasis-open.org/ws-sx/ws-secureconversation/200512/ws-secureconversation-1.3-os.pdf|  
-|Ws-trust 1.3|http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf|  
-|응용 프로그램 참고:<br /><br /> WS-Trust for TLS Handshake 사용|게시 예정|  
-|응용 프로그램 참고:<br /><br /> WS-Trust for SPNEGO 사용|게시 예정|  
-|응용 프로그램 참고:<br /><br /> Web Services Addressing 엔드포인트 참조 및 ID|게시 예정|  
+|WS-Trust 1.3|http://docs.oasis-open.org/ws-sx/ws-trust/200512/ws-trust-1.3-os.pdf|  
+|애플리케이션 참고:<br /><br /> WS-Trust for TLS Handshake 사용|게시 예정|  
+|애플리케이션 참고:<br /><br /> WS-Trust for SPNEGO 사용|게시 예정|  
+|애플리케이션 참고:<br /><br /> Web Services Addressing 엔드포인트 참조 및 ID|게시 예정|  
 |WS-SecurityPolicy 1.2(2007/04)|http://www.oasis-open.org/committees/download.php/23821/ws-securitypolicy-1.2-spec-cs.pdf|  
   
  WCF에서 버전 1에서는 Web services security 구성에 대 한 기준으로 사용할 수 있는 17 가지 인증 모드를 제공 합니다. 각 모드는 다음과 같은 공통 배포 요구 사항에 대해 최적화된 것입니다.  
   
--   클라이언트와 서비스를 인증하는 데 사용되는 자격 증명  
+- 클라이언트와 서비스를 인증하는 데 사용되는 자격 증명  
   
--   메시지 또는 전송 보안 보호 메커니즘  
+- 메시지 또는 전송 보안 보호 메커니즘  
   
--   메시지 교환 패턴  
+- 메시지 교환 패턴  
   
 |인증 모드|클라이언트 인증|서버 인증|모드|  
 |-------------------------|---------------------------|---------------------------|----------|  
@@ -70,7 +70,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
 |접두사|네임스페이스|  
 |------------|---------------|  
-|s|http://www.w3.org/2003/05/soap-envelope|  
+|초|http://www.w3.org/2003/05/soap-envelope|  
 |sp|http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702|  
 |a|http://www.w3.org/2005/08/addressing|  
 |wsse|TBD – OASIS WSS 1.0 URI|  
@@ -118,7 +118,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  R1204 X509TokenProfile1.1이 사용 중인 경우 X509 보안 토큰에 대한 외부 참조에는 WS-Security 1.1을 통해 추가된 지문을 사용해야 합니다.  
   
- WCF는에서는 X509IssuerSerial을 지원 합니다. 그러나 X509IssuerSerial 사용 하 여 상호 운용성 문제는: WCF 문자열로 사용 하 여 X509IssuerSerial의 두 값을 비교 합니다. 따라서 주체 이름의 구성 요소를 다시 정렬 하나 인증서에 대 한 참조를 WCF 서비스에 전송 하는 경우이 없을 수 있습니다.  
+ WCF는에서는 X509IssuerSerial을 지원 합니다. 그러나 X509IssuerSerial의 상호 운용성 문제가 있습니다. WCF는 문자열을 사용 하 여 X509IssuerSerial의 두 값을 비교 합니다. 따라서 주체 이름의 구성 요소를 다시 정렬 하나 인증서에 대 한 참조를 WCF 서비스에 전송 하는 경우이 없을 수 있습니다.  
   
 ### <a name="13-kerberos-token"></a>1.3 Kerberos 토큰  
  WCF는 다음과 같은 제약 조건 사용 하 여 Windows 인증을 위해 KerberosTokenProfile1.1을 지원합니다.  
@@ -131,7 +131,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
  WCF는 SAML v1.1 토큰 용 WSS SAML Token profiles 1.0 및 1.1을 지원합니다. 또한 다른 버전의 SAML 토큰 형식을 구현할 수 있습니다.  
   
 ### <a name="15-security-context-token"></a>1.5 보안 컨텍스트 토큰  
- WCF 보안 컨텍스트 토큰 (SCT) Ws-securecoversation에 도입 된 지원 합니다. SCT는 아래에 설명하는 이진 협상 프로토콜 TLS 및 SSPI를 비롯하여 SecureConversation에 설정된 보안 컨텍스트를 나타내는 데 사용됩니다.  
+ WCF 보안 컨텍스트 토큰 (SCT) Ws-secureconversation에 도입 된 지원 합니다. SCT는 아래에 설명하는 이진 협상 프로토콜 TLS 및 SSPI를 비롯하여 SecureConversation에 설정된 보안 컨텍스트를 나타내는 데 사용됩니다.  
   
 ## <a name="2-common-message-security-parameters"></a>2. 일반 메시지 보안 매개 변수  
   
@@ -159,7 +159,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 |||  
 |-|-|  
 |Strict|"사용 전 선언"의 일반 원칙에 따라 보안 정책 7.7.1 단원에 설명된 번호가 매겨진 레이아웃 규칙을 따르는 보안 헤더에 항목이 추가됩니다.|  
-|Lax|WSS: SOAP 메시지 보안에 따른 순서로 보안 헤더에 항목이 추가됩니다.|  
+|Lax|항목은 순서에 관계 없이 WSS 따르는 보안 헤더에 추가 됩니다. SOAP 메시지 보안입니다.|  
 |LaxTimestampFirst|보안 헤더의 첫 번째 항목이 wsse:Timestamp여야 한다는 점을 제외하고 Lax와 동일합니다.|  
 |LaxTimestampLast|보안 헤더의 마지막 항목이 wsse:Timestamp여야 한다는 점을 제외하고 lax와 동일합니다.|  
   
@@ -181,7 +181,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  보안 헤더 레이아웃: Strict  
   
- 알고리즘 모음: Basic256  
+ 알고리즘 제품군입니다. Basic256  
   
 #### <a name="311-usernameovertransport"></a>3.1.1 UsernameOverTransport  
  이 인증 모드에서 클라이언트는 항상 개시자로부터 수신자로 전송되는 서명된 지원 토큰으로 SOAP 계층에 표시되는 사용자 이름 토큰을 사용하여 인증합니다. 서비스는 전송 계층에서 X.509 인증서를 사용하여 인증됩니다. 사용되는 바인딩은 전송 바인딩입니다.  
@@ -285,7 +285,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="security-header-examples"></a>보안 헤더 예제  
- WS-Trust 이진 협상을 사용하여 SPNEGO 핸드셰이크를 통해 보안 컨텍스트 토큰을 설정한 경우, 응용 프로그램 메시지에 다음과 같은 구조의 보안 헤더가 있습니다.  
+ WS-Trust 이진 협상을 사용하여 SPNEGO 핸드셰이크를 통해 보안 컨텍스트 토큰을 설정한 경우, 애플리케이션 메시지에 다음과 같은 구조의 보안 헤더가 있습니다.  
   
  요청  
   
@@ -300,7 +300,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ```  
   
 ### <a name="32-using-x509-certificates-for-service-authentication"></a>3.2 X.509 인증서를 사용 하 여 서비스 인증  
- 이 단원에서는 MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate 및 IssuedTokenForCertificate 인증 모드에 대해 설명합니다.  
+ 이 섹션에서는 다음 인증 모드를 설명합니다. MutualCertificate WSS1.0, Mutual CertificateDuplex, MutualCertificate WSS1.1, AnonymousForCertificate, UserNameForCertificate 및 IssuedTokenForCertificate 합니다.  
   
 #### <a name="321-mutualcertificate-wss10"></a>3.2.1 MutualCertificate WSS1.0  
  이 인증 모드에서 클라이언트는 SOAP 계층에 개시자 토큰으로 표시되는 X.509 인증서를 사용하여 인증합니다. 서비스도 X.509 인증서를 사용하여 인증됩니다. SOAP 헤더와 SOAP 본문이 둘 다 서명됩니다. 대칭 키가 만들어지고 받는 사람에 대한 전송 인증서를 사용하여 암호화됩니다.  
@@ -309,7 +309,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  개시자 토큰: 포함 모드가 .../IncludeToken/AlwaysToRecipient로 설정된 클라이언트의 X.509 인증서  
   
- 수신자 토큰: 포함 모드가 .../IncludeToken/Never로 설정된 서버의 X.509 인증서  
+ 수신자 토큰: 서버의 X.509 인증서 포함 모드가..../IncludeToken/Never 설정 된  
   
  토큰 보호: False  
   
@@ -317,7 +317,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  보호 순서: SignBeforeEncrypt  
   
- 서명 암호화: True  
+ 서명을 암호화 합니다. True  
   
  정책  
   
@@ -362,9 +362,9 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  사용되는 바인딩은 다음과 같은 속성 값을 가진 비대칭 바인딩입니다.  
   
- 개시자 토큰: 포함 모드가 .../IncludeToken/AlwaysToRecipient로 설정된 클라이언트의 X.509 인증서  
+ 개시자 토큰: 클라이언트의 X509 인증서를 포함 모드.../IncludeToken/AlwaysToRecipient으로 설정 된  
   
- 수신자 토큰: 포함 모드가 .../IncludeToken/AlwaysToInitiator로 설정된 서버의 X.509 인증서  
+ 수신자 토큰: 서버의 X509 인증서를 포함 모드가.../IncludeToken/AlwaysToInitiator로 설정 됩니다  
   
  토큰 보호: False  
   
@@ -372,7 +372,7 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  보호 순서: SignBeforeEncrypt  
   
- 서명 암호화: True  
+ 서명을 암호화 합니다. True  
   
  정책  
   
@@ -407,14 +407,14 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  AnonymousForCertificate, UsernameForCertificate, MutualCertificate WSS11 및 IssuedTokenForCertificate 인증 모드는 모두 다음 속성 값을 가진 비슷한 sp:SymmetricBinding 인스턴스를 사용합니다.  
   
- 보호 토큰: 포함 모드가 …/IncludeToken/Never로 설정된 서버의 X509 인증서  
+ 보호 토큰: 서버의 X509 인증서를 포함 모드.../IncludeToken/Never로 설정 된  
 토큰 보호: False  
   
  전체 헤더 및 본문 서명: True  
   
  보호 순서: SignBeforeEncrypt  
   
- 서명 암호화: True  
+ 서명을 암호화 합니다. True  
   
  위의 인증 모드는 사용하는 지원 토큰만 다릅니다. AnonymousForCertificate의 경우 토큰이 없으며, MutualCertificate WSS 1.1의 경우 클라이언트의 X509 인증서를 보증 지원 토큰으로 사용하고, UserNameForCertificate의 경우 사용자 이름 토큰을 서명된 지원 토큰으로 사용하고, IssuedTokenForCertificate의 경우 발급된 토큰을 보증 지원 토큰으로 사용합니다.  
   
@@ -585,14 +585,14 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ## <a name="33-kerberos"></a>3.3 Kerberos  
  이 인증 모드에서 클라이언트는 Kerberos 티켓을 사용하여 서비스를 인증합니다. 동일한 티켓에서 서버 인증을 제공합니다. 사용되는 바인딩은 다음과 같은 속성을 가진 대칭 바인딩입니다.  
   
- 보호 토큰: 포함 모드가 .../IncludeToken/Once로 설정된 Kerberos 티켓  
+ 보호 토큰: Kerberos 티켓을 포함 모드가.../IncludeToken/Once로 설정 된  
 토큰 보호: False  
   
  전체 헤더 및 본문 서명: True  
   
  보호 순서: SignBeforeEncrypt  
   
- 서명 암호화: True  
+ 서명을 암호화 합니다. True  
   
  정책  
   
@@ -635,14 +635,14 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 #### <a name="34-issuedtoken"></a>3.4 IssuedToken  
  이 인증 모드에서 클라이언트는 서비스를 인증하지 않고 대신 STS에서 발급한 토큰을 제공하고 공유 키에 대해 알고 있음을 증명합니다. 서비스가 클라이언트에 인증되지 않습니다. 대신 STS에서 공유 키를 발급된 토큰의 일부로 암호화하여 서비스에서만 키를 해독할 수 있게 합니다. 사용되는 바인딩은 다음과 같은 속성을 가진 대칭 바인딩입니다.  
   
- 보호 토큰: 포함 모드가 .../IncludeToken/AlwaysToRecipient로 설정된 발급된 토큰  
+ 보호 토큰: 발급 된 토큰 포함 모드.../IncludeToken/AlwaysToRecipient으로 설정 된  
 토큰 보호: False  
   
  전체 헤더 및 본문 서명: True  
   
  보호 순서: SignBeforeEncrypt  
   
- 서명 암호화: True  
+ 서명을 암호화 합니다. True  
   
  정책  
   
@@ -687,14 +687,14 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
   
  사용되는 바인딩은 다음과 같은 속성을 가진 대칭 바인딩입니다.  
   
- 보호 토큰: 포함 모드가 .../IncludeToken/Never로 설정된 SslContextToken  
+ 보호 토큰: 포함 모드.../IncludeToken/Never로 설정 된 SslContextToken  
 토큰 보호: False  
   
  전체 헤더 및 본문 서명: True  
   
  보호 순서: SignBeforeEncrypt  
   
- 서명 암호화: True  
+ 서명을 암호화 합니다. True  
   
 #### <a name="351-policy-for-sslnegotiated-service-authentication"></a>3.5.1 SslNegotiated 서비스 인증 정책  
  이 단원의 모든 인증 모드에 대한 정책은 비슷하며 사용되는 특정 서명된 지원 토큰과 보증 토큰만 다릅니다.  
@@ -866,14 +866,14 @@ Web Services Security 프로토콜은 모든 기존 엔터프라이즈 메시징
 ### <a name="36-sspinegotiated"></a>3.6 SspiNegotiated  
  이 인증 모드에서는 협상 프로토콜을 사용하여 클라이언트 및 서버 인증을 수행합니다. 가능하면 Kerberos를 사용하고, 그렇지 않으면 NTLM을 사용합니다. 사용되는 바인딩은 다음과 같은 속성을 가진 대칭 바인딩입니다.  
   
- 보호 토큰: 포함 모드가 .../IncludeToken/AlwaysToRecipient로 설정된 SpnegoContextToken  
+ 보호 토큰: 포함 모드.../IncludeToken/AlwaysToRecipient으로 설정 된 SpnegoContextToken  
 토큰 보호: False  
   
  전체 헤더 및 본문 서명: True  
   
  보호 순서: SignBeforeEncrypt  
   
- 서명 암호화: True  
+ 서명을 암호화 합니다. True  
   
  정책  
   

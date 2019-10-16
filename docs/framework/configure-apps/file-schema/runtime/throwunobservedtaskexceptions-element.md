@@ -1,5 +1,5 @@
 ---
-title: '&lt;ThrowUnobservedTaskExceptions&gt; 요소'
+title: <ThrowUnobservedTaskExceptions> 요소
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f72bedbaaf0b15ade7ff6b7b8c3edcdfd3fda6d
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.openlocfilehash: 3ed1e66c4aadab656455686a7a1e5028b035676a
+ms.sourcegitcommit: 4e2d355baba82814fa53efd6b8bbb45bfe054d11
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32749428"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70252261"
 ---
-# <a name="ltthrowunobservedtaskexceptionsgt-element"></a>&lt;ThrowUnobservedTaskExceptions&gt; 요소
+# <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 요소
 작업 예외가 처리되지 않으면 실행 중인 프로세스를 종료할지를 지정합니다.  
   
- \<configuration>  
-\<runtime>  
-\<ThrowUnobservedTaskExceptions >  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<런타임 >** ](runtime-element.md)\
+&nbsp;&nbsp;&nbsp;&nbsp; **\<ThrowUnobservedTaskExceptions>**  
   
 ## <a name="syntax"></a>구문  
   
@@ -38,14 +38,14 @@ ms.locfileid: "32749428"
   
 |특성|설명|  
 |---------------|-----------------|  
-|`enabled`|필수 특성입니다.<br /><br /> 예외 처리 되지 않은 작업 실행 중인 프로세스를 종료 해야 하는지 여부를 지정 합니다.|  
+|`enabled`|필수 특성입니다.<br /><br /> 처리 되지 않은 태스크 예외가 실행 중인 프로세스를 종료할지 여부를 지정 합니다.|  
   
 ## <a name="enabled-attribute"></a>enabled 특성  
   
 |값|설명|  
 |-----------|-----------------|  
 |`false`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 하지 않습니다. 이 값이 기본값입니다.|  
-|`true`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료합니다.|  
+|`true`|처리 되지 않은 작업 예외에 대 한 실행 중인 프로세스를 종료 합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  
@@ -54,27 +54,27 @@ ms.locfileid: "32749428"
   
 |요소|설명|  
 |-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
 |`runtime`|런타임 초기화 옵션에 대한 정보를 포함합니다.|  
 |||  
   
 ## <a name="remarks"></a>설명  
- 예외와 연결 된 경우는 <xref:System.Threading.Tasks.Task> 지켜지지 않았습니다는 없는 <xref:System.Threading.Tasks.Task.Wait%2A> 부모 작업에 연결 되어 있지 않습니다 및 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 속성 작업 예외가 관찰 되지 것으로 간주 됩니다 읽지 못했습니다.  
+ 와 <xref:System.Threading.Tasks.Task> 연결 된 예외가 관찰 되지 않은 경우에는 작업이 없으며 <xref:System.Threading.Tasks.Task.Wait%2A> , 부모가 연결 <xref:System.Threading.Tasks.Task.Exception%2A?displayProperty=nameWithType> 되지 않으며, 속성을 읽지 않은 경우 태스크 예외가 관찰 되지 않은으로 간주 됩니다.  
   
- 에 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)], 만든 사람 경우 기본값는 <xref:System.Threading.Tasks.Task> 는 관찰 되지 않은 예외는 가비지 수집, 종료자 예외를 throw 하 고 프로세스를 종료 합니다. 프로세스의 종료는 가비지 수집 및 종료 시기에 따라 결정 됩니다.  
+ .NET Framework 4에서는 기본적으로 관찰 되지 않은 예외가 있는이 가비지 <xref:System.Threading.Tasks.Task> 수집 되는 경우 종료자는 예외를 throw 하 고 프로세스를 종료 합니다. 프로세스 종료는 가비지 수집 및 종료 시간에 따라 결정 됩니다.  
   
- 작업 기반 비동기 코드를 작성 하 고 개발자가 쉽게 수행할 수 있도록는 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 관찰 되지 않은 예외에 대 한이 기본 동작을 변경 합니다. 관찰 되지 않은 예외 때문에 발생할 수는 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> 이벤트를 발생 수 있지만 기본적으로 프로세스 종료 되지는 않습니다. 대신 예외는 이벤트 처리기에서 예외를 관찰 하는 여부에 관계 없이, 이벤트가 발생 한 후 무시 됩니다.  
+ 개발자가 작업을 기반으로 비동기 코드를 보다 쉽게 작성할 수 있도록 .NET Framework 4.5은 관찰 되지 않은 예외에 대 한이 기본 동작을 변경 합니다. 관찰 되지 않은 예외는 <xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException> 여전히 이벤트를 발생 시킵니다. 하지만 기본적으로이 프로세스는 종료 되지 않습니다. 대신, 이벤트 처리기가 예외를 준수 하는지 여부에 관계 없이 이벤트가 발생 한 후 예외가 무시 됩니다.  
   
- 에 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)], 사용할 수 있습니다는 [ \<ThrowUnobservedTaskExceptions > 요소](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md) 사용할 수 있도록 응용 프로그램 구성 파일에는 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] 동작 예외를 throw 합니다.  
+ .NET Framework 4.5에서는 응용 프로그램 구성 파일에서 [ \<ThrowUnobservedTaskExceptions > 요소](throwunobservedtaskexceptions-element.md) 를 사용 하 여 예외를 throw 하는 .NET Framework 4 동작을 사용 하도록 설정할 수 있습니다.  
   
- 또한 다음과 같은 방법 중 하나에서 예외 동작을 지정할 수 있습니다.  
+ 다음 방법 중 하나로 예외 동작을 지정할 수도 있습니다.  
   
--   환경 변수를 설정 하 여 `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`).  
+- 환경 변수 `COMPlus_ThrowUnobservedTaskExceptions` (`set COMPlus_ThrowUnobservedTaskExceptions=1`)를 설정 합니다.  
   
--   DWORD 레지스트리 설정 하 여 ThrowUnobservedTaskExceptions 값 = 1에서 찾아를\\합니다. NETFramework 키입니다.  
+- HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\에서 레지스트리 DWORD 값 ThrowUnobservedTaskExceptions = 1을 설정 합니다. NETFramework 키입니다.  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 응용 프로그램 구성 파일을 사용 하 여 작업의 예외를 throw를 사용 하도록 설정 하는 방법을 보여 줍니다.  
+ 다음 예제에서는 응용 프로그램 구성 파일을 사용 하 여 작업에서 예외를 throw 하도록 설정 하는 방법을 보여 줍니다.  
   
 ```xml  
 <configuration>   
@@ -85,11 +85,12 @@ ms.locfileid: "32749428"
 ```  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 작업에서 관찰 되지 않은 예외가 throw 됩니다는 방법을 보여 줍니다. 코드가 제대로 작동 하려면 릴리스된 프로그램으로 실행 되어야 합니다.  
+ 다음 예제에서는 작업에서 관찰 되지 않은 예외가 throw 되는 방법을 보여 줍니다. 제대로 작동 하려면 코드가 릴리스 된 프로그램으로 실행 되어야 합니다.  
   
  [!code-csharp[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/csharp/VS_Snippets_CLR/throwunobservedtaskexceptions/cs/program.cs#1)]
  [!code-vb[ThrowUnobservedTaskExceptions#1](../../../../../samples/snippets/visualbasic/VS_Snippets_CLR/throwunobservedtaskexceptions/vb/program.vb#1)]  
   
-## <a name="see-also"></a>참고 항목  
- [런타임 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)  
- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)
+## <a name="see-also"></a>참고자료
+
+- [런타임 설정 스키마](index.md)
+- [구성 파일 스키마](../index.md)

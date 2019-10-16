@@ -1,15 +1,13 @@
 ---
-title: dotnet tool update 명령 - .NET Core CLI
+title: dotnet tool update 명령
 description: dotnet tool update 명령은 컴퓨터에 지정된 .NET Core Global Tool을 업데이트합니다.
-author: mairaw
-ms.author: mairaw
 ms.date: 05/29/2018
-ms.openlocfilehash: 90b0dc91f74d890420dc7185642aa89100cadba8
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: b10ce39c8b9d4df23243bcf672454a455e34eec1
+ms.sourcegitcommit: a4b10e1f2a8bb4e8ff902630855474a0c4f1b37a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44069395"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71117539"
 ---
 # <a name="dotnet-tool-update"></a>dotnet tool update
 
@@ -21,7 +19,7 @@ ms.locfileid: "44069395"
 
 ## <a name="synopsis"></a>개요
 
-```console
+```dotnetcli
 dotnet tool update <PACKAGE_NAME> <-g|--global> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <PACKAGE_NAME> <--tool-path> [--configfile] [--framework] [-v|--verbosity]
 dotnet tool update <-h|--help>
@@ -83,4 +81,4 @@ Global Tool이 설치되는 위치를 지정합니다. PATH는 절대적이거�
 
 ## <a name="see-also"></a>참고 항목
 
-* [.NET Core Global Tool](global-tools.md)
+- [.NET Core Global Tool](global-tools.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], basic programming
 - Windows Communication Foundation [WCF], programming
 ms.assetid: 3ae3d498-f43c-4ecc-8cc0-6cbe36b62593
-ms.openlocfilehash: 7095784c2c9e2dc3c0ebafe84b89f9657321e1c5
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
+ms.openlocfilehash: c4c8529eb477b31eba464c9b156569819ec22941
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45609804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000118"
 ---
 # <a name="basic-wcf-programming"></a>기본 WCF 프로그래밍
 이 섹션에서는 Windows Communication Foundation (WCF) 응용 프로그램을 만들기 위한 기초를 제공 합니다.  
@@ -29,7 +29,7 @@ ms.locfileid: "45609804"
  계약 요구 사항을 지원 하 고 로컬 런타임 동작을 사용자 지정 서비스를 게시할 주소를 지정 하는 WCF 서비스를 구성 하는 방법을 설명 합니다.  
   
  [서비스 호스팅](../../../docs/framework/wcf/hosting-services.md)  
- 응용 프로그램의 기본적인 호스팅 서비스에 대해 설명합니다.  
+ 애플리케이션의 기본적인 호스팅 서비스에 대해 설명합니다.  
   
  [클라이언트 빌드](../../../docs/framework/wcf/building-clients.md)  
  서비스에서 메타 데이터 가져오기, WCF 클라이언트 코드를 변환 하는, 보안 문제를 처리 하 고 빌드, 구성 및 WCF 클라이언트를 호스트 하는 방법을 설명 합니다.  
@@ -61,7 +61,7 @@ ms.locfileid: "45609804"
   
  [Windows Communication Foundation 도구](../../../docs/framework/wcf/tools.md)  
   
- [Windows Communication Foundation 샘플](https://msdn.microsoft.com/library/8ec9d192-5d81-4f64-bfd3-90c5e5858c91)  
+ [Windows Communication Foundation (WCF) 샘플](./samples/index.md)  
   
  [시작](../../../docs/framework/wcf/samples/getting-started-sample.md)  
   

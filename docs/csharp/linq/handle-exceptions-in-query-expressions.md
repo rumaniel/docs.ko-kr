@@ -1,14 +1,14 @@
 ---
 title: 쿼리 식의 예외 처리(C#의 LINQ)
 description: C#에서 LINQ 쿼리 식의 예외를 처리하는 방법을 알아봅니다.
-ms.date: 12/1/2016
+ms.date: 12/01/2016
 ms.assetid: 2bf0c397-13fb-4f68-bc2b-531c6c88a167
-ms.openlocfilehash: 5ad98565a74a96ac18829eb87f13eb398aa72967
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: f900669412026e69598d3939c51ff8208b51b7ec
+ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43528475"
+ms.lasthandoff: 01/24/2019
+ms.locfileid: "54857504"
 ---
 # <a name="handle-exceptions-in-query-expressions"></a>쿼리 식의 예외 처리
 
@@ -16,13 +16,13 @@ ms.locfileid: "43528475"
 
 마지막 예제에서는 쿼리 실행 중에 예외를 throw해야 할 경우 사례를 처리하는 방법을 보여 줍니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 예외 처리 코드를 쿼리 식 외부로 이동하는 방법을 보여 줍니다. 이 작업은 메서드가 쿼리에 로컬인 변수에 의존하지 않는 경우에만 가능합니다.
 
 [!code-csharp[csProgGuideLINQ#10](~/samples/snippets/csharp/concepts/linq/how-to-handle-exceptions-in-query-expressions_1.cs)]
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 몇몇 경우에는 쿼리 내에서 throw된 예외에 대한 가장 좋은 응답은 쿼리 실행을 즉시 중지하는 것입니다. 다음 예제에서는 쿼리 본문 내부에서 throw된 예외를 처리하는 방법을 보여 줍니다. `SomeMethodThatMightThrow`가 잠재적으로 쿼리 실행을 중지해야 하는 예외를 일으킬 수 있다고 가정합니다.
 
@@ -32,4 +32,4 @@ ms.locfileid: "43528475"
 
 ## <a name="see-also"></a>참고 항목
 
-- [LINQ(Language-Integrated Query)](index.md)  
+- [LINQ(Language-Integrated Query)](index.md)

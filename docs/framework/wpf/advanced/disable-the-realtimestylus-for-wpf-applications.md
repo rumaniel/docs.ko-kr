@@ -1,23 +1,23 @@
 ---
-title: WPF 응용 프로그램에 대해 RealTimeStylus를 사용하지 않도록 설정
+title: WPF 애플리케이션에 대해 RealTimeStylus를 사용하지 않도록 설정
 ms.date: 03/30/2017
 ms.assetid: e0525309-5ede-4782-837d-dbf6e5554859
-ms.openlocfilehash: ddf4a7f4488f957b2f413d61ad02aa59beba30f6
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: acae177e1c49a6a1161bcf48f8e2e8ac1bfe13b8
+ms.sourcegitcommit: 005980b14629dfc193ff6cdc040800bc75e0a5a5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33545664"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70991847"
 ---
-# <a name="disable-the-realtimestylus-for-wpf-applications"></a>WPF 응용 프로그램에 대해 RealTimeStylus를 사용하지 않도록 설정
-Windows Presentation Foundation (WPF) 기본적으로 지 원하는 Windows 7 터치식 입력을 처리 합니다. 지원 제공으로 태블릿 플랫폼의 실시간 스타일러스 입력을 통해 <xref:System.Windows.UIElement.OnStylusDown%2A>, <xref:System.Windows.UIElement.OnStylusUp%2A>, 및 <xref:System.Windows.UIElement.OnStylusMove%2A> 이벤트입니다. 또한 Windows 7으로 Win32 WM_TOUCH 창 메시지 멀티 터치 입력을 제공합니다. 이러한 두 Api는 같은 HWND에서 함께 사용할 수 없습니다. 사용 하지 않도록 설정 WM_TOUCH 메시지 태블릿 플랫폼 (WPF 응용 프로그램에 대 한 기본값)을 통해 터치 입력 합니다. 결과적으로, WM_TOUCH WPF 창에서 터치 메시지를 받을 사용 하려면 WPF의 기본 제공 스타일러스 지원이 해제 해야 합니다. WM_TOUCH를 사용 하는 구성 요소를 호스팅하는 WPF 창과 같은 시나리오에서 적용 됩니다.  
+# <a name="disable-the-realtimestylus-for-wpf-applications"></a>WPF 애플리케이션에 대해 RealTimeStylus를 사용하지 않도록 설정
+WPF (Windows Presentation Foundation)는 Windows 7 touch 입력 처리를 기본적으로 지원 합니다. 지원은 태블릿 플랫폼의 실시간 스타일러스 입력을 <xref:System.Windows.UIElement.OnStylusDown%2A> <xref:System.Windows.UIElement.OnStylusUp%2A>통해, 및 <xref:System.Windows.UIElement.OnStylusMove%2A> 이벤트로 제공 됩니다. 또한 Windows 7은 Win32 WM_TOUCH 창 메시지로 다중 터치 입력을 제공 합니다. 이러한 두 Api는 동일한 HWND에서 함께 사용할 수 없습니다. 태블릿 플랫폼 (WPF 응용 프로그램의 경우 기본값)을 통해 터치식 입력을 사용 하면 WM_TOUCH 메시지를 사용할 수 없습니다. 따라서 WPF 창에서 WM_TOUCH를 사용 하 여 터치 메시지를 받으려면 WPF에서 기본 제공 스타일러스 지원을 사용 하지 않도록 설정 해야 합니다. 이는 WM_TOUCH를 사용 하는 구성 요소를 호스팅하는 WPF 창과 같은 시나리오에서 적용 됩니다.  
   
- 스타일러스 입력을 수신 대기 하는 WPF를 사용 하지 않도록 하려면 WPF 창에 추가 된 태블릿 지원을 제거 합니다.  
+ 스타일러스 입력을 수신 하는 WPF를 사용 하지 않도록 설정 하려면 WPF 창에 의해 추가 된 태블릿 지원을 제거 합니다.  
   
 ## <a name="example"></a>예제  
- 다음 샘플 코드는 리플렉션을 사용 하 여 기본 태블릿 플랫폼 지원을 제거 하는 방법을 보여 줍니다.  
+ 다음 샘플 코드에서는 리플렉션을 사용 하 여 기본 태블릿 플랫폼 지원을 제거 하는 방법을 보여 줍니다.  
   
-```  
+```csharp  
 public static void DisableWPFTabletSupport()  
 {  
     // Get a collection of the tablet devices for this window.    
@@ -52,5 +52,6 @@ public static void DisableWPFTabletSupport()
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [스타일러스에서 입력 가로채기](../../../../docs/framework/wpf/advanced/intercepting-input-from-the-stylus.md)
+## <a name="see-also"></a>참고자료
+
+- [스타일러스에서 입력 가로채기](intercepting-input-from-the-stylus.md)

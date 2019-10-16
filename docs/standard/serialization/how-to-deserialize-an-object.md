@@ -1,5 +1,5 @@
 ---
-title: '방법: 개체 Deserialize'
+title: '방법: 개체 deserialize'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - deserializing objects
 - objects, deserializing steps
 ms.assetid: 287129c8-035a-4fea-b7b3-4790057ca076
-ms.openlocfilehash: 6da8ec2b78066cd251e4ad492afd2d9d37f7b965
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: e1a960d39319beee1c3c257fcd3ade207de11010
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43863241"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881134"
 ---
-# <a name="how-to-deserialize-an-object"></a>방법: 개체 Deserialize
+# <a name="how-to-deserialize-an-object"></a>방법: 개체 deserialize
 개체를 deserialize할 때는 전송 형식에 따라 스트림을 만들지 파일 개체를 만들지 여부가 결정됩니다. 전송 형식이 결정된 뒤에는 필요에 따라 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 또는 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 호출할 수 있습니다.  
   
 ### <a name="to-deserialize-an-object"></a>개체를 deserialize하려면  
   
-1.  deserialize할 개체의 형식을 사용하여 <xref:System.Xml.Serialization.XmlSerializer>를 생성합니다.  
+1. deserialize할 개체의 형식을 사용하여 <xref:System.Xml.Serialization.XmlSerializer>를 생성합니다.  
   
-2.  개체의 복제본을 생성할 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 호출합니다. deserialize할 때는 개체를 파일로 deserialize하는(스트림으로 deserialize할 수도 있음) 다음 예제처럼, 반환된 개체를 원래의 형식으로 캐스팅해야 합니다.  
+2. 개체의 복제본을 생성할 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 메서드를 호출합니다. 를 역직렬화 하는 경우 (하지만 해당 스트림에서 deserialize 할 수도) 파일에서 개체를 deserialize 하는 다음 예제와 같이 원래 형식으로 반환된 된 개체를 캐스팅 해야 합니다.  
   
     ```vb  
     Dim myObject As MySerializableClass  
@@ -53,5 +53,5 @@ ms.locfileid: "43863241"
   
 ## <a name="see-also"></a>참고자료
 
-- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)  
-- [방법: 개체 직렬화](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [XML serialization 소개](../../../docs/standard/serialization/introducing-xml-serialization.md)
+- [방법: 개체 serialize](../../../docs/standard/serialization/how-to-serialize-an-object.md)

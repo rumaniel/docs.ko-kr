@@ -2,12 +2,12 @@
 title: 연결 쿼리 예제(C#)
 ms.date: 07/20/2015
 ms.assetid: abbca162-d95e-43af-b92c-e46e6aa2540e
-ms.openlocfilehash: 864d7ed34957defdedf21ccb1671d49c48913d88
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 45e3a4f341ca8eb06ff0f553e0f933956e6c6546
+ms.sourcegitcommit: 2d792961ed48f235cf413d6031576373c3050918
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43739928"
+ms.lasthandoff: 08/31/2019
+ms.locfileid: "70205424"
 ---
 # <a name="chaining-queries-example-c"></a>연결 쿼리 예제(C#)
 이 예제에서는 이전 예제를 기반으로 하며 지연된 실행과 지연 계산을 모두 사용하는 두 쿼리를 연결할 때 발생하는 상황을 보여 줍니다.  
@@ -64,7 +64,7 @@ class Program
   
  이 예제는 다음과 같은 출력을 생성합니다.  
   
-```  
+```output  
 ToUpper: source >abc<  
 AppendString: source >ABC<  
 Main: str >ABC!!!<  
@@ -84,8 +84,8 @@ Main: str >GHI!!!<
   
  이 자습서의 다음 항목에서는 중간 구체화를 보여 줍니다.  
   
--   [중간 구체화(C#)](../../../../csharp/programming-guide/concepts/linq/intermediate-materialization.md)  
+- [중간 구체화(C#)](./intermediate-materialization.md)  
   
 ## <a name="see-also"></a>참고 항목
 
-- [자습서: 여러 쿼리 연결(C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)
+- [자습서: 여러 쿼리 연결(C#)](./deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)

@@ -1,12 +1,12 @@
 ---
 title: 특성(C#)
 ms.date: 04/26/2018
-ms.openlocfilehash: c33d93a4af91e0c61546e8d51ab470f2889c095c
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 7b78d5832c15d3d1142b80d2ccb96a72e4e20390
+ms.sourcegitcommit: c70542d02736e082e8dac67dad922c19249a8893
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44214149"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70374377"
 ---
 # <a name="attributes-c"></a>특성(C#)
 
@@ -14,14 +14,14 @@ ms.locfileid: "44214149"
 
 특성에는 다음과 같은 속성이 있습니다.
 
-- 특성은 프로그램에 메타데이터를 추가합니다. *메타데이터*는 프로그램에 정의된 형식에 대한 정보입니다. 모든 .NET 어셈블리에는 어셈블리에 정의된 형식 및 형식 멤버를 설명하는 지정된 메타데이터 집합이 포함됩니다. 필요한 추가 정보를 지정하는 사용자 지정 특성을 추가할 수 있습니다. 자세한 내용은 [사용자 지정 특성 만들기(C#)](creating-custom-attributes.md)를 참조하세요.
+- 특성은 프로그램에 메타데이터를 추가합니다. *메타데이터*는 프로그램에 정의된 형식에 대한 정보를 의미합니다. 모든 .NET 어셈블리에는 어셈블리에 정의된 형식 및 형식 멤버를 설명하는 지정된 메타데이터 집합이 포함됩니다. 필요한 추가 정보를 지정하는 사용자 지정 특성을 추가할 수 있습니다. 자세한 내용은 [사용자 지정 특성 만들기(C#)](creating-custom-attributes.md)를 참조하세요.
 - 전체 어셈블리, 모듈 또는 좀 더 작은 프로그램 요소(예: 클래스 및 속성)에 하나 이상의 특성을 적용할 수 있습니다.
 - 메서드 및 속성의 경우와 같은 방식으로 특성은 인수를 수락할 수 있습니다.
 - 프로그램은 리플렉션을 사용하여 자체 메타데이터 또는 다른 프로그램의 메타데이터를 검사할 수 있습니다. 자세한 내용은 [리플렉션을 사용하여 특성 액세스(C#)](accessing-attributes-by-using-reflection.md)를 참조하세요.
 
 ## <a name="using-attributes"></a>특성 사용
 
-특정 특성이 유효한 선언 형식을 제한할 수  있지만 거의 모든 선언에 특성을 사용할 수 있습니다. C#에서 특성 이름을 대괄호([])로 묶어 적용하는 엔터티의 선언 위에 배치하여 특성을 지정합니다.
+특정 특성은 유효한 선언 형식이 제한적일 수 있지만 거의 모든 선언에 특성을 사용할 수 있습니다. C#에서는 특성 이름을 대괄호([])로 묶어 적용하고자 하는 엔터티의 선언 위에 배치하여 특성을 지정합니다.
 
 이 예제에서 <xref:System.SerializableAttribute> 특성은 클래스에 특정 특성을 적용하는 데 사용됩니다.
 
@@ -41,7 +41,7 @@ ms.locfileid: "44214149"
 [!code-csharp[Using the conditional attribute](../../../../../samples/snippets/csharp/attributes/AttributesOverview.cs#5)]
 
 > [!NOTE]
-> 규칙에 따라 모든 특성 이름은 .NET 라이브러리의 다른 항목과 구분하기 위해 단어 "Attribute"로 끝납니다. 그러나 코드에서 특성을 사용하는 경우 특성 접미사를 지정할 필요가 없습니다. 예를 들어 `[DllImport]`는 `[DllImportAttribute]`와 같지만 `DllImportAttribute`는 .NET Framework 클래스 라이브러리에서 특성의 실제 이름입니다.
+> 규칙에 따라 모든 특성 이름은 .NET 라이브러리의 다른 항목과 구분하기 위해 "Attribute" 단어로 끝납니다. 그러나 코드에서 특성을 사용하는 경우 특성 접미사를 지정할 필요가 없습니다. 예를 들어 `[DllImport]`는 `[DllImportAttribute]`와 같지만 `DllImportAttribute`는 .NET Framework 클래스 라이브러리에서 특성의 실제 이름입니다.
 
 ### <a name="attribute-parameters"></a>특성 매개 변수
 
@@ -57,7 +57,7 @@ ms.locfileid: "44214149"
 
 ### <a name="attribute-targets"></a>특성 대상
 
-특성의 *대상*은 특성이 적용되는 엔터티입니다. 예를 들어 특성은 클래스, 특정 메서드 또는 전체 어셈블리에 적용될 수 있습니다. 기본적으로 특성은 그 앞에 오는 요소에 적용됩니다. 하지만 특성이 메서드, 해당 매개 변수 또는 해당 반환 값 중 어디에 적용될지를 명시적으로 확인할 수 있습니다.
+특성의 *대상*은 특성이 적용되는 엔터티입니다. 예를 들어 특성은 클래스, 특정 메서드 또는 전체 어셈블리에 적용될 수 있습니다. 기본적으로 특성은 그 뒤에 오는 요소에 적용됩니다. 하지만 특성이 메서드, 해당 매개 변수 또는 해당 반환 값 중 어디에 적용될지를 명시적으로 지정할 수 있습니다.
 
 특성 대상을 명시적으로 식별하려면 다음 구문을 사용합니다.
 
@@ -72,7 +72,7 @@ ms.locfileid: "44214149"
 |`assembly`|전체 어셈블리|
 |`module`|현재 어셈블리 모듈|
 |`field`|클래스 또는 구조체의 필드|
-|`event`|이벤트(event)|
+|`event`|이벤트|
 |`method`|메서드 또는 `get` 및 `set` 속성 접근자|
 |`param`|메서드 매개 변수 또는 `set` 속성 접근자 매개 변수|
 |`property`|속성|
@@ -125,7 +125,7 @@ using System.Reflection;
 
 ## <a name="see-also"></a>참고 항목
 
-- [C# 프로그래밍 가이드](../../index.md)  
-- [리플렉션(C#)](../reflection.md)  
-- [특성](../../../../standard/attributes/index.md)  
-- [C#에서 특성 사용](../../../tutorials/attributes.md)  
+- [C# 프로그래밍 가이드](../../index.md)
+- [리플렉션(C#)](../reflection.md)
+- [특성](../../../../standard/attributes/index.md)
+- [C#에서 특성 사용](../../../tutorials/attributes.md)

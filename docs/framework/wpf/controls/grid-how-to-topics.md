@@ -7,24 +7,24 @@ helpviewer_keywords:
 - Grid control [WPF], how-to topics
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
-ms.openlocfilehash: ec9ee608b939c10db295c7b6c37442ef6085f194
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911536"
 ---
 # <a name="grid-how-to-topics"></a>Grid 방법 항목
-이 섹션의 항목 사용 하 여 요소를 배치 하는 방법에 설명 된 <xref:System.Windows.Controls.Grid> 요소입니다.  
+이 섹션의에서 항목에서는 사용 하 여 요소를 배치 하는 방법에 설명 합니다 <xref:System.Windows.Controls.Grid> 요소입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [Grid를 사용하여 표준 UI 대화 상자 빌드](../../../../docs/framework/wpf/controls/how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
- [복잡한 모눈 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-complex-grid.md)  
- [Grid 요소 만들기](../../../../docs/framework/wpf/controls/how-to-create-a-grid-element.md)  
- [GridLengthConverter 개체 만들기 및 사용](../../../../docs/framework/wpf/controls/how-to-create-and-use-a-gridlengthconverter-object.md)  
- [ColumnDefinitionsCollections 및 RowDefinitionsCollections를 사용하여 열 및 행 조작](../../../../docs/framework/wpf/controls/manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
- [Grid의 자식 요소 위치 지정](../../../../docs/framework/wpf/controls/how-to-position-the-child-elements-of-a-grid.md)  
- [모눈 간 크기 조정 속성 공유](../../../../docs/framework/wpf/controls/how-to-share-sizing-properties-between-grids.md)  
+ [Grid를 사용하여 표준 UI 대화 상자 빌드](how-to-build-a-standard-ui-dialog-box-by-using-grid.md)  
+ [복잡한 모눈 만들기](how-to-create-a-complex-grid.md)  
+ [Grid 요소 만들기](how-to-create-a-grid-element.md)  
+ [GridLengthConverter 개체 만들기 및 사용](how-to-create-and-use-a-gridlengthconverter-object.md)  
+ [ColumnDefinitionsCollections 및 RowDefinitionsCollections를 사용하여 열 및 행 조작](manipulate-columns-and-rows-by-using-columndefinitionscollections.md)  
+ [Grid의 자식 요소 위치 지정](how-to-position-the-child-elements-of-a-grid.md)  
+ [모눈 간 크기 조정 속성 공유](how-to-share-sizing-properties-between-grids.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Panel>  
@@ -42,8 +42,8 @@ ms.locfileid: "33550367"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>관련 단원  
- [레이아웃](../../../../docs/framework/wpf/advanced/layout.md)  
+ [레이아웃](../advanced/layout.md)  
   
- [연습: 내 첫 WPF 데스크톱 응용 프로그램](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [연습: 내 첫 WPF 데스크톱 애플리케이션](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 개요](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 개요](scrollviewer-overview.md)

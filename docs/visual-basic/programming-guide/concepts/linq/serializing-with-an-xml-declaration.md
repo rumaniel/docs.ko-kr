@@ -2,12 +2,12 @@
 title: XML 선언 (Visual Basic)으로 직렬화 하는 작업
 ms.date: 07/20/2015
 ms.assetid: 8726f79e-2bb0-4ba0-969d-197cca591647
-ms.openlocfilehash: 6b7351d85dab997ba6cb0ef023972e9e4e4fca14
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: f51dacb0f89e1042ba9875bec10a0cb1fe25f889
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33645290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786440"
 ---
 # <a name="serializing-with-an-xml-declaration-visual-basic"></a>XML 선언 (Visual Basic)으로 직렬화 하는 작업
 이 항목에서는 serialization을 통해 XML 선언이 생성되는지 여부를 제어하는 방법에 대해 설명합니다.  
@@ -61,5 +61,6 @@ Console.WriteLine(sb.ToString())
 <Root><Child>child content</Child></Root>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [XML 트리 (Visual Basic)를 직렬화 하는 작업](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)
+## <a name="see-also"></a>참고자료
+
+- [직렬화 XML 트리 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/serializing-xml-trees.md)

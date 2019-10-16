@@ -3,12 +3,12 @@ title: 기본 형식 - C# 가이드
 description: 모든 C# 프로그램의 핵심 형식(숫자, 문자열 및 개체)을 알아봅니다.
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: dc91452bb261b7c799cf3b69cab5b33175148b8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: b65e6ba61bd8886223403f869aa301703f89e8ba
+ms.sourcegitcommit: 8a0fe8a2227af612f8b8941bdb8b19d6268748e7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508048"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71834243"
 ---
 # <a name="types-variables-and-values"></a>형식, 변수 및 값
 
@@ -16,7 +16,7 @@ C#은 강력한 형식의 언어입니다. 모든 변수 및 상수에는 값으
   
 형식에 저장된 정보에는 다음이 포함될 수 있습니다.  
   
-- 형식 변수에 필요한 저장소 공간.  
+- 형식 변수에 필요한 스토리지 공간.  
   
 - 형식이 나타낼 수 있는 최대값 및 최소값.  
   
@@ -28,12 +28,12 @@ C#은 강력한 형식의 언어입니다. 모든 변수 및 상수에는 값으
   
 - 허용되는 작업 유형.  
   
-컴파일러는 형식 정보를 사용하여 코드에서 수행되는 모든 작업이 *형식이 안전*한지 확인합니다. 예를 들어 [int](language-reference/keywords/int.md) 형식의 변수를 선언할 경우 컴파일러를 통해 더하기 및 빼기 작업에서 변수를 사용할 수 있습니다. [bool](language-reference/keywords/bool.md) 형식의 변수에 대해 같은 작업을 수행하려고 하면 컴파일러는 다음 예제와 같이 오류를 생성합니다.  
+컴파일러는 형식 정보를 사용하여 코드에서 수행되는 모든 작업이 *형식이 안전*한지 확인합니다. 예를 들어 [int](language-reference/builtin-types/integral-numeric-types.md) 형식의 변수를 선언할 경우 컴파일러를 통해 더하기 및 빼기 작업에서 변수를 사용할 수 있습니다. [bool](language-reference/keywords/bool.md) 형식의 변수에 대해 같은 작업을 수행하려고 하면 컴파일러는 다음 예제와 같이 오류를 생성합니다.  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> C 및 C++ 개발자는 C#에서 [bool](language-reference/keywords/bool.md)이 [int](language-reference/keywords/int.md)로 변환될 수 없음을 알고 있습니다.  
+> C 및 C++ 개발자는 C#에서 [bool](language-reference/keywords/bool.md)이 [int](language-reference/builtin-types/integral-numeric-types.md)로 변환될 수 없음을 알고 있습니다.  
   
 컴파일러는 형식 정보를 실행 파일에 메타데이터로 포함합니다. CLR(공용 언어 런타임)는 런타임에 이 메타데이터를 사용하여 메모리를 할당 및 회수할 때 형식 안정성을 추가로 보장합니다.  
 
@@ -43,21 +43,21 @@ C#은 강력한 형식의 언어입니다. 모든 변수 및 상수에는 값으
   
 [!code-csharp[Variable Declaration](../../samples/snippets/csharp/concepts/basic-types/variable-declaration.cs)]  
   
-메서드 매개 변수 및 반환 값의 형식은 메서드 시그니처에서 지정됩니다. 다음 시그니처는 입력 인수로 [int](language-reference/keywords/int.md)가 필요하고 문자열을 반환하는 메서드를 보여 줍니다.  
+메서드 매개 변수 및 반환 값의 형식은 메서드 시그니처에서 지정됩니다. 다음 시그니처는 입력 인수로 [int](language-reference/builtin-types/integral-numeric-types.md)가 필요하고 문자열을 반환하는 메서드를 보여 줍니다.  
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-변수가 선언된 후에는 새 형식으로 다시 선언될 수 없고 선언된 형식과 호환되지 않는 값이 할당될 수 없습니다. 예를 들어 [int](language-reference/keywords/int.md)를 선언하고 [true](language-reference/keywords/true.md)의 부울 값을 여기에 할당할 수 있습니다. 그러나 값은 새 변수에 할당되거나 메서드 인수로 전달될 경우 다른 형식으로 변환할 수 있습니다. 데이터 손실을 일으키지 않는 *형식 변환*은 컴파일러에서 자동으로 수행됩니다. 데이터 손실을 일으킬 수 있는 변환의 경우 소스 코드에 *캐스트*가 있어야 합니다.
+변수가 선언된 후에는 새 형식으로 다시 선언될 수 없고 선언된 형식과 호환되지 않는 값이 할당될 수 없습니다. 예를 들어 [int](language-reference/builtin-types/integral-numeric-types.md)를 선언하고 [true](language-reference/keywords/true-literal.md)의 부울 값을 여기에 할당할 수 있습니다. 그러나 값은 새 변수에 할당되거나 메서드 인수로 전달될 경우 다른 형식으로 변환할 수 있습니다. 데이터 손실을 일으키지 않는 *형식 변환*은 컴파일러에서 자동으로 수행됩니다. 데이터 손실을 일으킬 수 있는 변환의 경우 소스 코드에 *캐스트*가 있어야 합니다.
 
 자세한 내용은 [캐스팅 및 형식 변환](programming-guide/types/casting-and-type-conversions.md)을 참조하세요.
 
 ## <a name="built-in-types"></a>기본 제공 형식
 
-C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수 값 및 기타 데이터 형식을 표현하는 기본 제공 숫자 형식의 표준 집합을 제공합니다. 기본 제공 **string** 및 **object** 형식도 있습니다. 이러한 형식을 모든 C# 프로그램에서 사용할 수 있습니다. 기본 제공 형식에 대한 자세한 내용은 [형식 참조 테이블](language-reference/keywords/reference-tables-for-types.md)을 참조하세요.  
+C#에서는 정수, 부동 소수점 값, 부울 식, 텍스트 문자, 10진수 값 및 기타 데이터 형식을 표현하는 기본 제공 숫자 형식의 표준 집합을 제공합니다. 기본 제공 **string** 및 **object** 형식도 있습니다. 이러한 형식을 모든 C# 프로그램에서 사용할 수 있습니다. 기본 제공 형식에 대한 자세한 내용은 [기본 제공 형식에 대한 참조 테이블](language-reference/keywords/built-in-types-table.md)을 참조하세요.  
   
 ## <a name="custom-types"></a>사용자 지정 형식
 
-[struct](language-reference/keywords/class.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) 및 [enum](language-reference/keywords/enum.md) 구문을 사용하여 자체 사용자 지정 형식을 만듭니다. .NET Framework 클래스 라이브러리 자체는 자체 응용 프로그램에서 사용할 수 있는 Microsoft에서 제공되는 사용자 지정 형식의 컬렉션입니다. 기본적으로 클래스 라이브러리의 가장 자주 사용되는 형식을 모든 C# 프로그램에서 사용할 수 있습니다. 기타 형식은 정의되어 있는 어셈블리에 대한 프로젝트 참조를 명시적으로 추가할 경우에만 사용할 수 있습니다. 컴파일러에 어셈블리에 대한 참조가 포함된 후에는 소스 코드에서 해당 어셈블리에 선언된 형식의 변수(및 상수)를 선언할 수 있습니다.
+[struct](language-reference/keywords/class.md), [class](language-reference/keywords/class.md), [interface](language-reference/keywords/interface.md) 및 [enum](language-reference/keywords/enum.md) 구문을 사용하여 자체 사용자 지정 형식을 만듭니다. .NET Framework 클래스 라이브러리 자체는 자체 애플리케이션에서 사용할 수 있는 Microsoft에서 제공되는 사용자 지정 형식의 컬렉션입니다. 기본적으로 클래스 라이브러리의 가장 자주 사용되는 형식을 모든 C# 프로그램에서 사용할 수 있습니다. 기타 형식은 정의되어 있는 어셈블리에 대한 프로젝트 참조를 명시적으로 추가할 경우에만 사용할 수 있습니다. 컴파일러에 어셈블리에 대한 참조가 포함된 후에는 소스 코드에서 해당 어셈블리에 선언된 형식의 변수(및 상수)를 선언할 수 있습니다.
   
 ## <a name="generic-types"></a>제네릭 형식
 

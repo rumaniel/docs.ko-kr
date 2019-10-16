@@ -8,18 +8,18 @@ helpviewer_keywords:
 - controls [WPF], Border
 - Border control [WPF]
 ms.assetid: 51739f83-b5a2-489b-854b-30607e74a502
-ms.openlocfilehash: 0ee7ae6598feacee282cc283b82e20390418b4c9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 922b4b90f3f8bc74d0465691386fa1a2422c6573
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912472"
 ---
 # <a name="border"></a>테두리
-다음 예제에서는 속성을 동적으로 변경 하는 <xref:System.Windows.Controls.Border> 요소입니다.  
+다음 샘플의 속성을 동적으로 변경 하는 방법에 설명 합니다 <xref:System.Windows.Controls.Border> 요소입니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
- [BorderThickness 값에 애니메이션 효과 주기](../../../../docs/framework/wpf/controls/how-to-animate-a-borderthickness-value.md)  
+ [BorderThickness 값에 애니메이션 효과 주기](how-to-animate-a-borderthickness-value.md)  
   
 ## <a name="reference"></a>참조  
  <xref:System.Windows.Controls.Decorator>  
@@ -27,6 +27,6 @@ ms.locfileid: "33551069"
  <xref:System.Windows.Controls.Border>  
   
 ## <a name="related-sections"></a>관련 단원  
- [패널 개요](../../../../docs/framework/wpf/controls/panels-overview.md)  
+ [패널 개요](panels-overview.md)  
   
- [맞춤, 여백 및 안쪽 여백 개요](../../../../docs/framework/wpf/advanced/alignment-margins-and-padding-overview.md)
+ [맞춤, 여백 및 안쪽 여백 개요](../advanced/alignment-margins-and-padding-overview.md)

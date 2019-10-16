@@ -1,5 +1,5 @@
 ---
-title: '&lt;mscorlib&gt; 암호화 설정에 대 한 요소'
+title: 암호화 설정에 대한 <mscorlib> 요소
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#mscorlib
@@ -8,20 +8,18 @@ helpviewer_keywords:
 - mscorlib element
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
-author: mcleblanc
-ms.author: markl
-ms.openlocfilehash: 6a8a589077aba413fa89518e560373df816f8943
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4e2159cda5f35b5795804dede09ec17d07d71b23
+ms.sourcegitcommit: 3094dcd17141b32a570a82ae3f62a331616e2c9c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50187847"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71699741"
 ---
-# <a name="ltmscorlibgt-element-for-cryptography-settings"></a>&lt;mscorlib&gt; 암호화 설정에 대 한 요소
-포함 된 [ \<cryptographySettings > 요소](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)합니다.  
+# <a name="mscorlib-element-for-cryptography-settings"></a>암호화 설정에 대 한 \<mscorlib > 요소
+[@No__t-1cryptographySettings > 요소](cryptographysettings-element.md)를 포함 합니다.  
   
- \<configuration>  
-\<mscorlib >  
+[ **\<configuration>** ](../configuration-element.md)  
+&nbsp; @ no__t **\<mscorlib >**  
   
 ## <a name="syntax"></a>구문  
   
@@ -46,10 +44,10 @@ ms.locfileid: "50187847"
   
 |요소|설명|  
 |-------------|-----------------|  
-|`configuration`|공용 언어 런타임 및 .NET Framework 응용 프로그램에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
+|`configuration`|공용 언어 런타임 및 .NET Framework 애플리케이션에서 사용하는 모든 구성 파일의 루트 요소입니다.|  
   
 ## <a name="example"></a>예제  
- 다음 예제에서는 사용 하는 방법을 보여 줍니다 합니다  **\<mscorlib >** 암호화 클래스를 참조 하 고 런타임 구성 요소입니다. "RSA" 문자열을 전달할 수 있습니다는 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드 및 사용법을 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 반환 하는 방법을 `MyCryptoRSAClass` 개체입니다.  
+ 다음 예제에서는 **\<mscorlib >** 요소를 사용 하 여 암호화 클래스를 참조 하 고 런타임을 구성 하는 방법을 보여 줍니다. 그런 다음 <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType> 메서드에 "RSA" 문자열을 전달 하 고 <xref:System.Security.Cryptography.AsymmetricAlgorithm.Create%2A> 메서드를 사용 하 여 `MyCryptoRSAClass` 개체를 반환할 수 있습니다.  
   
 ```xml  
 <configuration>  
@@ -70,10 +68,11 @@ ms.locfileid: "50187847"
 </configuration>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
-- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>  
-- <xref:System.Security.Cryptography>  
-- [구성 파일 스키마](../../../../../docs/framework/configure-apps/file-schema/index.md)  
-- [암호화 설정 스키마](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)  
-- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)  
-- [암호화 클래스 구성](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)
+## <a name="see-also"></a>참조
+
+- <xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A>
+- <xref:System.Security.Cryptography>
+- [구성 파일 스키마](../index.md)
+- [암호화 설정 스키마](index.md)
+- [Cryptographic Services](../../../../standard/security/cryptographic-services.md)
+- [암호화 클래스 구성](../../configure-cryptography-classes.md)

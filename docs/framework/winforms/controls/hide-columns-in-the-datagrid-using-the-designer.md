@@ -7,35 +7,33 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column hiding
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
-ms.openlocfilehash: 0187d85a639fc446f207a7b532fecc5ee707ae55
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 35aa1cdeef919d4267cb27da79f183c4c52aefa2
+ms.sourcegitcommit: 68653db98c5ea7744fd438710248935f70020dfb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "44041517"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69916389"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 숨기기
-Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에서 사용할 수 있는 열 중 일부만 표시하려는 경우도 있습니다. 직원을 표시 하려는 하는 예를 들어, 다른 사용자 로부터 숨기고 관리 자격 증명이 있는 사용자에 게 급여 열입니다. 또는 다음 중에서 일부만 표시 하려는 많은 열이 포함 된 데이터 원본에 컨트롤을 바인딩하는 것이 좋습니다. 이 경우 숨기기 보다는 표시 하는 데 관심이 없는 열은 일반적으로 제거 합니다. 자세한 내용은 [방법: 열 추가 및 제거에 Windows Forms DataGridView 컨트롤 디자이너를 사용 하는](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)합니다.  
-  
- 다음 절차를 수행 하려면을 **Windows 응용 프로그램** 포함 하는 양식을 사용 하 여 프로젝트를 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 이러한 프로젝트 설정에 대 한 자세한 내용은 [방법: Windows 응용 프로그램 프로젝트를 만듭니다](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa) 및 [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)합니다.  
-  
-> [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](/visualstudio/ide/personalizing-the-visual-studio-ide)을 참조하세요.  
-  
-### <a name="to-hide-a-column-using-the-designer"></a>디자이너를 사용 하 여 열을 숨기려면  
-  
-1.  스마트 태그 문자 모양을 클릭 (![스마트 태그 문자 모양](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))의 오른쪽 위 모서리에는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 선택한 후 **열 편집**합니다.  
-  
-2.  열을 선택 합니다 **선택한 열** 목록입니다.  
-  
-3.  에 **열 속성** 표에서 설정 합니다 <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> 속성을 `false`입니다.  
-  
+Windows Forms <xref:System.Windows.Forms.DataGridView> 컨트롤에서 사용할 수 있는 열 중 일부만 표시하려는 경우도 있습니다. 예를 들어 관리 자격 증명이 있는 사용자에 게 직원 급여 열을 표시 하 고 다른 사용자는 숨길 수 있습니다. 또는 많은 열을 포함 하는 데이터 소스에 컨트롤을 바인딩할 수 있습니다. 이러한 열 중 일부만 표시 하려는 경우가 있습니다. 이 경우 일반적으로 표시 되지 않는 열은 숨기는 대신 제거 합니다. 자세한 내용은 [방법: 디자이너](add-and-remove-columns-in-the-datagrid-using-the-designer.md)를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열을 추가 및 제거 합니다.
+
+ 다음 절차에는 <xref:System.Windows.Forms.DataGridView> 컨트롤을 포함 하는 폼을 포함 하는 **Windows 응용 프로그램** 프로젝트가 필요 합니다. 이러한 프로젝트 [를 설정 하는 방법에 대 한 자세한 내용은 방법: Windows Forms 응용 프로그램 프로젝트](/visualstudio/ide/step-1-create-a-windows-forms-application-project) [를 만들고 방법: Windows Forms](how-to-add-controls-to-windows-forms.md)에 컨트롤을 추가 합니다.
+
+## <a name="to-hide-a-column-using-the-designer"></a>디자이너를 사용 하 여 열을 숨기려면
+
+1. <xref:System.Windows.Forms.DataGridView> 컨트롤의 오른쪽 위 모퉁이에 있는 스마트 태그 문자 모양 (![스마트 태그 문자 모양](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))을 클릭 한 다음 **열 편집**을 선택 합니다.
+
+2. **선택한 열** 목록에서 열을 선택 합니다.
+
+3. **열 속성** 표에서 <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A> 속성을로 `false`설정 합니다.
+
     > [!NOTE]
-    >  선택을 취소 하 여 추가 하는 경우 열을 숨길 수도 있습니다는 **Visible** 확인란 합니다 **열 추가** 대화 상자.  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:System.Windows.Forms.DataGridView>  
- <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>  
- [방법: 디자이너를 사용하여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거](../../../../docs/framework/winforms/controls/add-and-remove-columns-in-the-datagrid-using-the-designer.md)  
- [방법: Windows 응용 프로그램 프로젝트 만들기](https://msdn.microsoft.com/library/b2f93fed-c635-4705-8d0e-cf079a264efa)  
- [방법: Windows Forms에 컨트롤 추가](../../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)
+    > 열 **추가** 대화 상자에서 **표시** 확인란의 선택을 취소 하 여 열을 추가할 때 열을 숨길 수도 있습니다.
+
+## <a name="see-also"></a>참고자료
+
+- <xref:System.Windows.Forms.DataGridView>
+- <xref:System.Windows.Forms.DataGridViewColumn.Visible%2A?displayProperty=nameWithType>
+- [방법: 디자이너를 사용 하 여 Windows Forms DataGridView 컨트롤에서 열 추가 및 제거](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [방법: Windows Forms 애플리케이션 프로젝트 만들기](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [방법: Windows Forms에 컨트롤 추가](how-to-add-controls-to-windows-forms.md)

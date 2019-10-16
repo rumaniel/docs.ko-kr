@@ -3,14 +3,14 @@ title: 배포 확장성 샘플
 ms.date: 03/30/2017
 ms.assetid: b2c34ae5-62ed-4c2d-b2fa-2d4d0802099c
 ms.openlocfilehash: 998db813316acc5e26d2313f47dacd79df160534
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33501251"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923047"
 ---
 # <a name="syndication-extensibility-samples"></a>배포 확장성 샘플
-이 섹션에는 Windows Communication Foundation (WCF)에서 사용자 지정 배포를 보여 주는 샘플이 포함 되어 있습니다.  
+이 섹션에는 Windows Communication Foundation (WCF)에서 사용자 지정 배포를 보여 주는 샘플이 들어 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [강력한 형식 확장명](../../../../docs/framework/wcf/samples/strongly-typed-extensions-sample.md)  

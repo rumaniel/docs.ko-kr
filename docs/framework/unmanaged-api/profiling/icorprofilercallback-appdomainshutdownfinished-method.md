@@ -17,44 +17,45 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9f8925630933e2247726f92a93cac67bdc55ca
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e214af178972623bad3536565aa9bc51edc97260
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33450491"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763102"
 ---
 # <a name="icorprofilercallbackappdomainshutdownfinished-method"></a>ICorProfilerCallback::AppDomainShutdownFinished 메서드
-응용 프로그램 도메인 프로세스에서 로드 되었음을 프로파일러에 알립니다.  
+응용 프로그램 도메인을 프로세스에서 로드 되었음을 프로파일러에 알립니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 HRESULT AppDomainShutdownFinished(  
     [in] AppDomainID appDomainId,  
     [in] HRESULT     hrStatus);  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `appDomainId`  
- [in] 응용 프로그램의 어셈블리가 저장 되는 도메인을 식별 합니다.  
+ [in] 응용 프로그램의 어셈블리 저장 되는 도메인을 식별 합니다.  
   
  `hrStatus`  
- [in] 응용 프로그램 도메인이 로드 되었는지 여부를 하지 성공적으로 여부를 나타내는 HRESULT입니다.  
+ [in] 여부를 응용 프로그램 도메인 언로드 했습니다 나타내는 HRESULT입니다.  
   
 ## <a name="remarks"></a>설명  
- 값 `appDomainId` 후 정보 요청에 유효 하지는 [icorprofilercallback:: Appdomainshutdownstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) 메서드 반환 합니다.  
+ 값 `appDomainId` 후 정보 요청에 대해 올바르지 않습니다 합니다 [icorprofilercallback:: Appdomainshutdownstarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-appdomainshutdownstarted-method.md) 메서드 반환 합니다.  
   
- 일부 응용 프로그램 도메인 언로드 후 계속 사용할 수는 `AppDomainCreationFinished` 콜백 합니다. 실패 HRESULT에서 `hrStatus` 오류가 발생 했음을 나타냅니다. 그러나 성공 HRESULT에서 `hrStatus` 응용 프로그램 도메인 언로드 작업의 첫 번째 부분 성공 했다는 것만 나타냅니다.  
+ 일부 응용 프로그램 도메인 언로드 후 계속 사용할 수는 `AppDomainCreationFinished` 콜백 합니다. 오류 HRESULT에서 `hrStatus` 오류가 발생 했음을 나타냅니다. 그러나 성공 HRESULT에서 `hrStatus` 응용 프로그램 도메인 언로드에 대 한 첫 번째 부분 성공 했다는 것만 나타냅니다.  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** CorProf.idl, CorProf.h  
   
  **라이브러리:** CorGuids.lib  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a>참고자료
+
+- [ICorProfilerCallback 인터페이스](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

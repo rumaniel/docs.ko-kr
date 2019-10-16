@@ -1,5 +1,5 @@
 ---
-title: '&lt;목록&gt; (Visual Basic)'
+title: <list> (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - listheader XML tag
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - item XML tag
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
-ms.openlocfilehash: 98c3b8bd809ac550468a5d80e01e6fd16e6d96ea
-ms.sourcegitcommit: 412bbc2e43c3b6ca25b358cdf394be97336f0c24
+ms.openlocfilehash: 7d7b85867f4c701322c5e6c31f2d89ab38fad05d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 08/25/2018
-ms.locfileid: "42924936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940882"
 ---
-# <a name="ltlistgt-visual-basic"></a>&lt;목록&gt; (Visual Basic)
+# <a name="list-visual-basic"></a>\<목록 > (Visual Basic)
 목록 또는 테이블을 정의합니다.  
   
 ## <a name="syntax"></a>구문  
@@ -38,7 +38,7 @@ ms.locfileid: "42924936"
 </list>  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+## <a name="parameters"></a>매개 변수  
  `type`  
  형식 목록입니다. 글머리 기호 목록, 번호 매기기 목록 또는 "table" 2 열 테이블에 대 한 "number"에 대 한 "bullet" 여야 합니다.  
   
@@ -57,10 +57,11 @@ ms.locfileid: "42924936"
   
  [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)로 컴파일하여 문서 주석을 파일로 처리합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 `<list>` 주의 섹션의 글머리 기호 목록을 정의 하는 태그입니다.  
   
- [!code-vb[VbVbcnXmlDocComments#5](../../../visual-basic/language-reference/xmldoc/codesnippet/VisualBasic/list_1.vb)]  
+ [!code-vb[VbVbcnXmlDocComments#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnXmlDocComments/VB/Class1.vb#5)]  
   
-## <a name="see-also"></a>참고 항목  
- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)
+## <a name="see-also"></a>참고자료
+
+- [XML 주석 태그](../../../visual-basic/language-reference/xmldoc/index.md)

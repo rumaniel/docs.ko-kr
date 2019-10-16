@@ -1,25 +1,28 @@
 ---
-title: '&lt;allowAccounts&gt;'
+title: <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 166923a9-a8ac-478f-92f9-529d9667f3a6
-ms.openlocfilehash: 097112a8b54467843554047882e55b62d7813c0c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 74b9d51b7400469c96fc9c8b36e4b0fb1d46969b
+ms.sourcegitcommit: 093571de904fc7979e85ef3c048547d0accb1d8a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33352879"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70398412"
 ---
-# <a name="ltallowaccountsgt"></a>&lt;allowAccounts&gt;
-해당 호스트 Windows Communication Foundation (WCF) 서비스, 프로세스에 대 한 계정 사용자를 지정 하 고 공유 서비스에 대 한 연결 액세스가 부여 된 하는 구성 요소의 컬렉션을 포함 합니다.  
+# <a name="allowaccounts"></a>\<allowAccounts>
+Windows Communication Foundation (WCF) 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스의 사용자 계정을 지정 하는 구성 요소 컬렉션을 포함 합니다.  
   
- \<system.serviceModel.activation>  
+[ **\<configuration>** ](../configuration-element.md)\
+&nbsp;&nbsp;[ **\<System.servicemodel >** ](system-servicemodel-activation.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;[ **\<net.pipe >** ](net-pipe.md)\
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **\<allowAccounts >**  
   
 ## <a name="syntax"></a>구문  
   
 ```xml  
-<allowAccounts>  
-   <add securityIdentifier="String"/>  
-</allowAccounts>  
+<allowAccounts>
+  <add securityIdentifier="String" />
+</allowAccounts>
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
@@ -30,18 +33,19 @@ ms.locfileid: "33352879"
   
 ### <a name="child-elements"></a>자식 요소  
   
-|특성|설명|  
+|특성|Description|  
 |---------------|-----------------|  
-|[\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowaccounts.md)|WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스를 부여 하는 프로세스에 대 한 사용자 계정을 추가 합니다.|  
+|[\<add>](add-of-allowaccounts.md)|WCF 서비스를 호스팅하고 공유 서비스에 대 한 연결 액세스 권한이 부여 된 프로세스에 대 한 사용자 계정을 추가 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
-|요소|설명|  
+|요소|Description|  
 |-------------|-----------------|  
-|[\<net.pipe >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-pipe.md) 또는 [ \<net.tcp >](../../../../../docs/framework/configure-apps/file-schema/wcf/net-tcp.md)|Net Pipe 또는 TCP 공유 서비스의 구성 설정을 지정합니다.|  
+|net.pipe > 또는 [ \<](net-pipe.md) [ net.tcp>\<](net-tcp.md)|Net Pipe 또는 TCP 공유 서비스의 구성 설정을 지정합니다.|  
   
-## <a name="see-also"></a>참고 항목  
- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>  
- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>  
- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>  
- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElement>
+## <a name="see-also"></a>참고자료
+
+- <xref:System.ServiceModel.Activation.Configuration.NetTcpSection.AllowAccounts%2A>
+- <xref:System.ServiceModel.Activation.Configuration.NetPipeSection.AllowAccounts%2A>
+- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElementCollection>
+- <xref:System.ServiceModel.Activation.Configuration.SecurityIdentifierElement>

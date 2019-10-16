@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Byte data type
 - data types [Visual Basic], assigning
 ms.assetid: eed44dff-eaee-4937-a89f-444e418e74f6
-ms.openlocfilehash: 70e1028042807eb77fc74b30174e1962bc00f4c0
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e1725b709c03b0d77cf7e28761396236b5ef1a00
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192397"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622438"
 ---
 # <a name="byte-data-type-visual-basic"></a>Byte 데이터 형식 (Visual Basic)
 값 범위에 있는 0에서 255 까지의 부호 없는 8 비트 (1 바이트) 정수를 보유 합니다.
@@ -48,26 +48,26 @@ Dim number As Byte = &H_6A
 
 ## <a name="programming-tips"></a>프로그래밍 팁
 
--   **음수를 사용할 수 있습니다.** 때문에 `Byte` 부호 없는 형식에는 음수를 나타낼 수 없습니다. 단항 빼기를 사용 하는 경우 (`-`) 형식으로 계산 되는 식에 연산자 `Byte`, Visual Basic 변환 식이 `Short` 첫 번째입니다.
+- **음수를 사용할 수 있습니다.** 때문에 `Byte` 부호 없는 형식에는 음수를 나타낼 수 없습니다. 단항 빼기를 사용 하는 경우 (`-`) 형식으로 계산 되는 식에 연산자 `Byte`, Visual Basic 변환 식이 `Short` 첫 번째입니다.
   
--   **형식 변환 합니다.** Visual Basic을 읽거나 파일을 작성 하는 경우, Dll, 메서드 및 속성을 호출할 때 자동 데이터 형식 간에 변환할 수 있습니다. 에 저장 된 이진 데이터 `Byte` 변수 및 배열 이러한 형식으로 변환 하는 동안 유지 됩니다. 사용 하지 않아야는 `String` 의 내용이 ANSI 및 유니코드 형식 간에 변환 하는 동안 손상 될 수 있으므로 이진 데이터에 대 한 변수입니다.
+- **형식 변환 합니다.** Visual Basic을 읽거나 파일을 작성 하는 경우, Dll, 메서드 및 속성을 호출할 때 자동 데이터 형식 간에 변환할 수 있습니다. 에 저장 된 이진 데이터 `Byte` 변수 및 배열 이러한 형식으로 변환 하는 동안 유지 됩니다. 사용 하지 않아야는 `String` 의 내용이 ANSI 및 유니코드 형식 간에 변환 하는 동안 손상 될 수 있으므로 이진 데이터에 대 한 변수입니다.
 
--   **확대 합니다.** `Byte` 데이터 형식으로 확장 되는지를 `Short`, `UShort`, `Integer`, `UInteger`를 `Long`, `ULong`, `Decimal`, `Single`, 또는 `Double`합니다. 즉, 변환할 수 있습니다 `Byte` 발생 없이 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.
+- **확대 합니다.** `Byte` 데이터 형식으로 확장 되는지를 `Short`, `UShort`, `Integer`, `UInteger`를 `Long`, `ULong`, `Decimal`, `Single`, 또는 `Double`합니다. 즉, 변환할 수 있습니다 `Byte` 발생 없이 이러한 형식 중 하나에 <xref:System.OverflowException?displayProperty=nameWithType> 오류입니다.
   
--   **형식 문자입니다.** `Byte` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
+- **형식 문자입니다.** `Byte` 에 리터럴 형식 문자 또는 식별자 형식 문자가 없습니다.
 
--   **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Byte?displayProperty=nameWithType> 구조체입니다.
+- **Framework 형식입니다.** .NET Framework에서 해당하는 형식은 <xref:System.Byte?displayProperty=nameWithType> 구조체입니다.
 
 ## <a name="example"></a>예제
 
  다음 예에서 `b` 되는 `Byte` 변수입니다. 문은 변수의 범위 및 비트 시프트 연산자의 응용 프로그램을 보여 줍니다.
 
-[!code-vb[VbVbalrDataTypes#16](../../../visual-basic/language-reference/data-types/codesnippet/VisualBasic/byte-data-type_1.vb)]  
+ [!code-vb[VbVbalrDataTypes#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDataTypes/VB/Class1.vb#16)]  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
- <xref:System.Byte?displayProperty=nameWithType>  
- [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)  
- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)  
- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)  
- [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)
+- <xref:System.Byte?displayProperty=nameWithType>
+- [데이터 형식](../../../visual-basic/language-reference/data-types/index.md)
+- [형식 변환 함수](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [변환 요약](../../../visual-basic/language-reference/keywords/conversion-summary.md)
+- [데이터 형식의 효율적 사용](../../../visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md)

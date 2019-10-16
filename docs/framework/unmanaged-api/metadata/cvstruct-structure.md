@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 195f311d58f2169d715bb33986ee6e591622f377
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b3e35cea4601c8e51eb3021dc9f598ddb881afe0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33445045"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750712"
 ---
 # <a name="cvstruct-structure"></a>CVStruct 구조체
 모듈 또는 합성 이미지를 설치할 때 사용되는 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 typedef struct {  
     short Major;  
     short Minor;  
@@ -41,19 +41,20 @@ typedef struct {
   
 |멤버|설명|  
 |------------|-----------------|  
-|주요함|주 버전 빌드 번호입니다.|  
-|부|부 버전 빌드 번호입니다.|  
+|최대|주 버전 빌드 번호입니다.|  
+|최소|부 버전 빌드 번호입니다.|  
 |Sub|하위 빌드 번호입니다.|  
 |빌드|빌드 번호입니다.|  
   
 ## <a name="requirements"></a>요구 사항  
- **플랫폼:** 참조 [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)합니다.  
+ **플랫폼:** [시스템 요구 사항](../../../../docs/framework/get-started/system-requirements.md)을 참조하십시오.  
   
  **헤더:** Cor.h  
   
  **라이브러리:** MsCorEE.dll에서 리소스로 사용  
   
- **.NET framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 버전:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a>참고 항목  
- [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
+## <a name="see-also"></a>참고자료
+
+- [메타데이터 구조체](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
